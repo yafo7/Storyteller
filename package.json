@@ -1,0 +1,10 @@
+{
+  "name": "storyteller-interactive-stage",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node server.mjs",
+    "check": "node --check src/runtime.js && node --check src/game.js && node tests/project-contract.mjs"
+  }
+}

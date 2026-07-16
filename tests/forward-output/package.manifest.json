@@ -1,0 +1,11 @@
+{
+  "format": "interactive-stage-content-package",
+  "formatVersion": 1,
+  "productionEntry": "production.json",
+  "sourceEntries": ["source.txt"],
+  "runtimeContract": {
+    "productionSchema": "interactive-stage-production/v1",
+    "cueDsl": "1.0.0",
+    "saveState": ["beat", "flags", "knownFacts", "propStates", "placements"]
+  }
+}

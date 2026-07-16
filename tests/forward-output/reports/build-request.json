@@ -1,0 +1,21 @@
+{
+  "sources": [
+    "D:/workshop/developer_learn/3js_project/storyteller/tests/fixtures/one-room-play.txt"
+  ],
+  "packagedSources": ["source.txt"],
+  "sourceOrder": "explicit",
+  "language": "en",
+  "adaptationMode": "faithful-stage",
+  "playerRole": "witness",
+  "targetMinutes": 3,
+  "targetRuntime": "existing",
+  "runtimeAi": false,
+  "assetPolicy": "existing-first",
+  "contentLimits": [],
+  "assumptions": [
+    "The deliverable is a data-only production for a compatible interactive-stage-production/v1 interpreter.",
+    "The player witnesses fixed events and selects which source-authorized open ending is staged; the player does not change established canon.",
+    "Core progression must remain deterministic and offline.",
+    "No external media is required; a host may render the declared semantic anchors and placeholder prop prototypes geometrically."
+  ]
+}

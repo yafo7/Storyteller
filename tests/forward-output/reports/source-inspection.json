@@ -1,0 +1,36 @@
+{
+  "reportVersion": 1,
+  "source": {
+    "path": "D:\\workshop\\developer_learn\\3js_project\\storyteller\\tests\\fixtures\\one-room-play.txt",
+    "bytes": 819,
+    "sha256": "673fe8b33bfafa343518a5ca8f6cc1527062f5dfaabc0c6f9103faa6e2ffc8f6",
+    "normalizedSha256": "673fe8b33bfafa343518a5ca8f6cc1527062f5dfaabc0c6f9103faa6e2ffc8f6",
+    "utf8Bom": false,
+    "lineEndings": "lf"
+  },
+  "detectedFormat": "prose",
+  "requestedFormat": "auto",
+  "counts": {
+    "lines": 22,
+    "nonEmptyLines": 11,
+    "wordsApproximate": 142,
+    "characters": 819,
+    "sceneHeadings": 1,
+    "timestamps": 0,
+    "speakerCandidates": 0,
+    "tabs": 0
+  },
+  "samples": {
+    "sceneHeadings": [
+      {
+        "line": 3,
+        "text": "INT. RAILWAY WAITING ROOM - NIGHT"
+      }
+    ],
+    "timestamps": [],
+    "speakers": [],
+    "longLines": [],
+    "tabLines": []
+  },
+  "warnings": []
+}

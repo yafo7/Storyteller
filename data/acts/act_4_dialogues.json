@@ -1,0 +1,75 @@
+{
+  "actNum": 4,
+  "narrations": [
+    "Mrs. Mills 伸手从椅子旁拿出一本旧相册。封面的皮革已经龟裂成地图般的纹路，边角磨损，露出内里的硬纸板。",
+    "她轻轻翻开。页边的铜扣发出干燥的响声——在这个鸦雀无声的房间里，它像是一记老钟的敲响。",
+    "烛焰不安地跳动。相册里的人脸在晃动的光线中看起来像在呼吸——或者正准备睁开眼睛。",
+    "空气变得更冷了。你呼出的气在空中凝成淡白色的雾。没人说话，但似乎每个人都知道这本相册意味着什么。"
+  ],
+  "dialogues": [
+    {
+      "speakerId": "mills",
+      "text": "这是一本……很老的东西。十九世纪末的。",
+      "emotion": "mysterious",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "mills",
+      "text": "那时候的人相信——给死去的人拍照，可以让灵魂留在肖像里。所以你看——他们闭着眼睛。不是睡着了。",
+      "emotion": "calm",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "lydia",
+      "text": "（她的手指剧烈颤抖，指向照片上的一个女人——嘴唇翕动，然后迅速缩回去，像被烫伤了一样）",
+      "emotion": "fearful",
+      "technique": "沉默"
+    },
+    {
+      "speakerId": "anne",
+      "text": "这照片上的人……Mrs. Mills——她是谁？",
+      "emotion": "fearful",
+      "technique": "追问"
+    },
+    {
+      "speakerId": "mills",
+      "text": "上一任女主人。和她的两个孩子。",
+      "emotion": "calm",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "nicholas",
+      "text": "（用力摇头——像要甩掉什么看不见的东西）够了。够了。我不想看。",
+      "emotion": "angry",
+      "technique": "打断"
+    },
+    {
+      "speakerId": "mills",
+      "text": "（将相册推到他面前）Nicholas，有些事——不看不会消失。",
+      "emotion": "gentle",
+      "technique": "补充"
+    },
+    {
+      "speakerId": "anne",
+      "text": "（声音微小得几乎被壁炉的木柴声盖过）我们……是不是也……",
+      "emotion": "sad",
+      "technique": "正叙"
+    }
+  ],
+  "playerPrompts": [],
+  "freeTalk": {
+    "mills": [
+      { "text": "这些照片上的人，大多还在这宅子里。只是方式和你想的不一样。", "reveals": "死者仍在此处" },
+      { "text": "你仔细看——每一张脸。是不是有些眼熟？", "reveals": "暗示活人中有人已死" }
+    ],
+    "lydia": [
+      { "text": "（她用力在桌布上划着——指甲留下白色的痕迹。她写的字几乎看不清，但你认出了一个——'死'。）", "reveals": "Lydia 知道真相" }
+    ],
+    "anne": [
+      { "text": "那个问题我刚才没说出口——但你懂的。对吧？", "reveals": "Anne 怀疑自己已死" }
+    ],
+    "nicholas": [
+      { "text": "（紧紧抓着桌布边缘）那不是真的。那不是真的。那不是真的。", "reveals": "Nicholas 在自欺" }
+    ]
+  }
+}

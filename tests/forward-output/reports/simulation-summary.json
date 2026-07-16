@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "command": "node C:/Users/yafo777/.codex/skills/build-interactive-stage-game/scripts/simulate-playthrough.mjs D:/workshop/developer_learn/3js_project/storyteller/tests/forward-output/production.json --strict",
+  "exitCode": 0,
+  "statesExplored": 8,
+  "beatsReached": 8,
+  "beatsDeclared": 8,
+  "endingsReached": 2,
+  "endingsDeclared": 2,
+  "output": "PASSED: explored 8 state(s), reached 8/8 beat(s) and 2/2 ending(s)."
+}

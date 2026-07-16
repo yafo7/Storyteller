@@ -1,0 +1,51 @@
+{
+  "actNum": 7,
+  "narrations": [
+    "Marlish 一家离开了。门在身后轻轻合上——铰链没有发出一点声音。",
+    "烛火开始变暗。一支接一支——不是被吹灭的，只是自然而然地、温柔地、不再需要照亮什么了。",
+    "窗外，浓雾中隐约可见三个影子。一个高的。两个矮的——手拉着手。他们站得很近，但始终没有走进来。",
+    "桌上，Mills 已经泡好了最后一壶茶。热气升起来，在空中飘成一个问号，然后散了。"
+  ],
+  "dialogues": [
+    {
+      "speakerId": "anne",
+      "text": "他们走了。",
+      "emotion": "gentle",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "nicholas",
+      "text": "太阳——不会再伤到我们了。对不对？",
+      "emotion": "sad",
+      "technique": "追问"
+    },
+    {
+      "speakerId": "anne",
+      "text": "不会了。再也不会了。",
+      "emotion": "gentle",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "mills",
+      "text": "新的住客会来。旧的人会走。这是这座宅邸的规律。但有些人——会选择留下来。",
+      "emotion": "calm",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "anne",
+      "text": "（转头看向你——眼神清澈，没有悲伤）谢谢你。你是第一个真正听我们说话的人。",
+      "emotion": "gentle",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "anne",
+      "text": "这房子是我们的。一直都是。",
+      "emotion": "calm",
+      "technique": "正叙"
+    }
+  ],
+  "playerPrompts": [],
+  "freeTalk": {},
+  "isEnding": true,
+  "endingText": "烛火熄灭。会客厅沉入静默。\n你起身——推开大门。\n雾依然那么浓。\n但你已经知道——\n你走出去了。"
+}

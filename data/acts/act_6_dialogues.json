@@ -1,0 +1,101 @@
+{
+  "actNum": 6,
+  "narrations": [
+    "沉默压了很久——久到你以为这幕戏已经结束了。",
+    "然后 Lydia 突然站了起来。椅子向后滑出——那声音像一把钝刀划过大理石。",
+    "她张开嘴。喉结上下动了动——像在往喉咙深处推一块石头。",
+    "她发出的第一个音节是哑的。像是锈掉的铰链第一次被转动。然后是第二个。第三个。",
+    "所有人的目光都钉在她身上。连烛火都忘了跳动。",
+    "紧接着——会客厅另一端的门被推开了。不是风吹的。是人的手。",
+    "三个陌生的身影跨过门槛。他们看不见桌旁这些人——但你能看见。你同时看见了两个世界。"
+  ],
+  "dialogues": [
+    {
+      "speakerId": "lydia",
+      "text": "我——看见了。",
+      "emotion": "fearful",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "lydia",
+      "text": "她用枕头——捂住了他们的脸。一个一个。然后她举起枪。对着自己。",
+      "emotion": "sad",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "mills",
+      "text": "Lydia 说的每一个字都是真的。Grace Stewart——我们的女主人——在很久以前，杀死了她的两个孩子，然后结束了自己的生命。",
+      "emotion": "calm",
+      "technique": "补充"
+    },
+    {
+      "speakerId": "mills",
+      "text": "我和 Tuttle、Lydia——在她们来之前就已经死了。肺结核。那是更早以前的事。",
+      "emotion": "calm",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "anne",
+      "text": "（眼泪顺着脸颊淌下来——但她的声音出奇地平静，像是终于可以放下举了一生的重物）所以我们都在这里。一直都在。等别人——发现我们。",
+      "emotion": "sad",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "victor",
+      "text": "（对着 Anne 空无一人的位置——但他确实看着她）你们还在吗？Anne？",
+      "emotion": "fearful",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "mrs_marlish",
+      "text": "（打了个寒颤，双臂抱住自己）这里冷得不正常。跟冰窖一样。",
+      "emotion": "fearful",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "mr_marlish",
+      "text": "我们请人做过降神会。他们告诉我们——这宅邸里有三位常住居民。一个母亲，两个孩子。",
+      "emotion": "calm",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "mrs_marlish",
+      "text": "你疯了！那个女人杀死了自己的孩子！我们不能跟这种东西住在一起！",
+      "emotion": "angry",
+      "technique": "打断"
+    },
+    {
+      "speakerId": "victor",
+      "text": "（坚定地——对着 Anne 的方向）你们不是怪物。你们只是回不了家。",
+      "emotion": "gentle",
+      "technique": "补充"
+    },
+    {
+      "speakerId": "mr_marlish",
+      "text": "（叹了口气）明天早上我们就搬走。这房子……是他们的。一直都是。",
+      "emotion": "calm",
+      "technique": "正叙"
+    }
+  ],
+  "playerPrompts": [],
+  "freeTalk": {
+    "lydia": [
+      { "text": "很久很久——我终于可以说出来了。", "reveals": "Lydia 沉默了数十年" }
+    ],
+    "anne": [
+      { "text": "我不恨妈妈。她只是太累了。战争、父亲、这个家——所有这些压在她肩上。", "reveals": "Anne 理解 Grace" }
+    ],
+    "mills": [
+      { "text": "很多年前我来这里的时候，我就知道了。但我不能说——他们得自己发现。", "reveals": "Mills 的叙事哲学" }
+    ],
+    "victor": [
+      { "text": "你是唯一一个既能看见他们——又能看见我们的人。对吧？", "reveals": "玩家的特殊身份——连接生死" }
+    ],
+    "mrs_marlish": [
+      { "text": "我不是怕鬼——我是怕知道自己可能和鬼没什么区别。", "reveals": "" }
+    ],
+    "mr_marlish": [
+      { "text": "活着和死去的区别——可能比我们以为的要小得多。", "reveals": "哲学总结" }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "command": "node C:/Users/yafo777/.codex/skills/build-interactive-stage-game/scripts/validate-production.mjs D:/workshop/developer_learn/3js_project/storyteller/tests/forward-output/production.json --strict",
+  "exitCode": 0,
+  "errors": 0,
+  "warnings": 0,
+  "output": "PASSED: 0 error(s), 0 warning(s) (strict)."
+}

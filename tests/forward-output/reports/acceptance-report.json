@@ -1,0 +1,180 @@
+{
+  "scope": "Data-only playable production package; runtime rendering and viewport QA are outside this fixture build.",
+  "result": "pass",
+  "failures": [],
+  "waivers": [],
+  "sections": {
+    "sourceAndAdaptation": [
+      {
+        "item": "Every immutable fact has at least one valid source span.",
+        "score": "pass",
+        "evidence": "Strict validation passed; each immutable fact in production.json has a source.main line span."
+      },
+      {
+        "item": "Every low-confidence claim that could change the plot remains unresolved or reviewed.",
+        "score": "pass",
+        "evidence": "reports/unresolved-claims.json excludes Elias's unproven letter knowledge from canon."
+      },
+      {
+        "item": "The adaptation mode and player agency contract are explicit.",
+        "score": "pass",
+        "evidence": "production.json and reports/build-request.json declare faithful-stage and witness."
+      },
+      {
+        "item": "Every material invention or compression appears in the adaptation ledger.",
+        "score": "pass",
+        "evidence": "The sole mechanic translation, staging the open ending as a bounded choice, is recorded."
+      },
+      {
+        "item": "No character states knowledge they cannot possess at that beat.",
+        "score": "pass",
+        "evidence": "Elias is not assigned knowledge of the accident letter; facts are revealed in source order."
+      },
+      {
+        "item": "No UI, optional dialogue, asset label, or objective leaks a gated reveal.",
+        "score": "pass",
+        "evidence": "Action labels mention only already-visible actions; required facts reveal at or after earliestReveal."
+      }
+    ],
+    "contentModel": [
+      {
+        "item": "validate-production.mjs --strict passes.",
+        "score": "pass",
+        "evidence": "reports/validation-summary.json records 0 errors and 0 warnings."
+      },
+      {
+        "item": "IDs and references are stable, unique in scope, and resolvable.",
+        "score": "pass",
+        "evidence": "Strict validation passed."
+      },
+      {
+        "item": "Every required fact has a reachable acquisition route.",
+        "score": "pass",
+        "evidence": "Strict simulation reached both endings without a missing required fact."
+      },
+      {
+        "item": "Every scene uses valid stages, actors, anchors, props, flags, and facts.",
+        "score": "pass",
+        "evidence": "Strict validation passed all cross-reference checks."
+      },
+      {
+        "item": "Human overrides survive regeneration.",
+        "score": "not-applicable",
+        "evidence": "This minimal one-shot package has no regeneration pipeline or human override layer."
+      }
+    ],
+    "playability": [
+      {
+        "item": "simulate-playthrough.mjs --strict reaches at least one ending.",
+        "score": "pass",
+        "evidence": "The simulator reached 2/2 endings."
+      },
+      {
+        "item": "Every reachable branch can reach an ending; no reachable route deadlocks or traps.",
+        "score": "pass",
+        "evidence": "Strict simulation explored all eight states and completed both routes."
+      },
+      {
+        "item": "Every declared ending and required beat is reachable, or is explicitly marked optional.",
+        "score": "pass",
+        "evidence": "The simulator reached 8/8 beats and 2/2 endings."
+      },
+      {
+        "item": "Blocking movement, audio, camera, dialogue, and interaction cues have fallbacks.",
+        "score": "pass",
+        "evidence": "Both blocking actor cues have positive 4000 ms timeouts and snap fallbacks; all other cues are nonblocking or bounded waits."
+      },
+      {
+        "item": "A full playthrough succeeds without network access or runtime AI.",
+        "score": "pass",
+        "evidence": "The deterministic local simulator completed every route and assets is empty."
+      },
+      {
+        "item": "Save/resume restores beat, flags, known facts, prop states, and player/NPC placement.",
+        "score": "not-applicable",
+        "evidence": "The manifest declares the required save-state contract, but no host runtime was in scope to exercise persistence."
+      }
+    ],
+    "interactionAndUi": [
+      {
+        "item": "Context focus chooses the object the player reasonably intends.",
+        "score": "not-applicable",
+        "evidence": "Focus selection belongs to the host renderer; this package provides semantic interaction anchors only."
+      },
+      {
+        "item": "Every interaction displays a concrete verb and feedback.",
+        "score": "pass",
+        "evidence": "All player actions use Continue or Inspect and apply visible state or progression effects."
+      },
+      {
+        "item": "The player can distinguish performance from exploration and can find the continue action.",
+        "score": "pass",
+        "evidence": "Beat modes distinguish performance, conversation, exploration, and transition; actions explicitly label Continue or Inspect."
+      },
+      {
+        "item": "Dialogue, transcript, choices, journal, pause, errors, and ending screens fit target viewports.",
+        "score": "not-applicable",
+        "evidence": "No renderer or viewport is part of the requested data-only package."
+      },
+      {
+        "item": "Keyboard-only play and promised accessibility settings work.",
+        "score": "not-applicable",
+        "evidence": "Keyboard bindings and accessibility preferences are declared, but runtime input behavior is outside this package."
+      }
+    ],
+    "stagingAndPresentation": [
+      {
+        "item": "Actors do not overlap important props, leave the walkable area, or block all routes.",
+        "score": "not-applicable",
+        "evidence": "Coordinates and navigation belong to the host adapter by schema design."
+      },
+      {
+        "item": "Entrances, exits, gaze, lighting, sound, and prop state changes match cue intent.",
+        "score": "pass",
+        "evidence": "Semantic cues reproduce Elias's entrance, the timetable flip, suitcase reveal, door unlock, Mara's exit, and lamp-lit ending."
+      },
+      {
+        "item": "Required visual and audio clues remain perceptible with accessibility alternatives.",
+        "score": "pass",
+        "evidence": "Every required clue also becomes a text fact; progression does not depend solely on light, sound, color, or timing."
+      },
+      {
+        "item": "Placeholder art is coherent, labeled in the asset report, and free of license ambiguity.",
+        "score": "pass",
+        "evidence": "reports/asset-license-report.json records generated geometric placeholder semantics and no third-party media."
+      },
+      {
+        "item": "Representative screenshots show no clipping, unreadable text, or unintended empty stage.",
+        "score": "not-applicable",
+        "evidence": "The requested deliverable has no renderer, so no screenshots can be produced."
+      }
+    ],
+    "engineeringAndDelivery": [
+      {
+        "item": "Runtime code is story-agnostic; switching a supported production does not require core runtime edits.",
+        "score": "not-applicable",
+        "evidence": "No runtime code is included; production.json targets the reusable interactive-stage-production/v1 contract."
+      },
+      {
+        "item": "Client code contains no secret keys and renders source/model text safely.",
+        "score": "pass",
+        "evidence": "No client code, network dependency, secret, or executable source markup is present."
+      },
+      {
+        "item": "Errors name the scene, beat, cue, and fallback outcome.",
+        "score": "not-applicable",
+        "evidence": "Runtime logging behavior is outside the data-only package."
+      },
+      {
+        "item": "Package hashes are reproducible for unchanged input.",
+        "score": "pass",
+        "evidence": "The packaged source hash exactly matches the source inspection, and two consecutive pack runs produced identical content and archive SHA-256 values."
+      },
+      {
+        "item": "Delivery includes source inspection, adaptation ledger, unresolved claims, validation summary, simulation summary, asset/license report, and run instructions supplied by the host project.",
+        "score": "pass",
+        "evidence": "All named reports and README.md are included."
+      }
+    ]
+  }
+}

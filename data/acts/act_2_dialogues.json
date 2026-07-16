@@ -1,0 +1,73 @@
+{
+  "actNum": 2,
+  "narrations": [
+    "壁炉里的火小声地啪了一下。外面的雾气似乎更浓了——玻璃上凝了一层细密的水珠。",
+    "Anne 直起身子，像是终于忍不住要说了。她的手指在桌布下绞在一起，指节发白。",
+    "烛火闪了一闪。一瞬的黑暗中，仿佛能看到她眼里有种不属于这个年龄的疲倦。",
+    "她开口。声音不大，但每个字都像刀尖划过玻璃——清晰、锋利、不容忽视。"
+  ],
+  "dialogues": [
+    {
+      "speakerId": "anne",
+      "text": "有一件事，我一直想说。这个房间里——不止我们。",
+      "emotion": "mysterious",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "anne",
+      "text": "在走廊那边，有一个男孩。叫 Victor。还有他的父母。他们住在楼上。他们说——这房子是他们的。",
+      "emotion": "fearful",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "nicholas",
+      "text": "（猛地拍了一下桌子，银器发出刺耳的响声）Anne！别说了。那不是真的。",
+      "emotion": "angry",
+      "technique": "打断"
+    },
+    {
+      "speakerId": "anne",
+      "text": "怎么不是真的！Victor 就在我房间——他说那床是他的。他还碰了你的脸——你感觉到了！",
+      "emotion": "angry",
+      "technique": "质疑"
+    },
+    {
+      "speakerId": "nicholas",
+      "text": "我什么都没感觉到。",
+      "emotion": "fearful",
+      "technique": "谎言"
+    },
+    {
+      "speakerId": "mills",
+      "text": "（平静地放下茶杯——陶瓷碰在托盘上，声音格外清脆）孩子，你没必要撒谎。有时候孩子的眼睛，比大人看得更清楚。",
+      "emotion": "calm",
+      "technique": "补充"
+    },
+    {
+      "speakerId": "anne",
+      "text": "Victor 说，要把窗帘都扯下来。他的母亲每天都在说——这宅邸是他们的。",
+      "emotion": "fearful",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "tuttle",
+      "text": "（突然抬起头——手里的茶杯停在了半空）窗帘？你刚才说窗帘？",
+      "emotion": "mysterious",
+      "technique": "追问"
+    }
+  ],
+  "playerPrompts": [],
+  "freeTalk": {
+    "anne": [
+      { "text": "Victor 不是什么鬼魂——他比我们更'真'。你懂我的意思吗？", "reveals": "Victor 才是活人" },
+      { "text": "没有人相信我。从来没有。", "reveals": "Anne 的孤独" }
+    ],
+    "nicholas": [
+      { "text": "我不想说那天的事。求你了。", "reveals": "" },
+      { "text": "Anne 说的是真的。我都知道。但我不能说。", "reveals": "Nicholas 知情但沉默" }
+    ],
+    "mills": [
+      { "text": "这房子里，死人和活人——有时候很难分辨。尤其是天黑以后。", "reveals": "暗示生死交织" }
+    ]
+  }
+}

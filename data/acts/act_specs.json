@@ -1,0 +1,96 @@
+{
+  "scriptTitle": "小岛惊魂",
+  "totalActs": 8,
+  "acts": [
+    {
+      "actNum": 0,
+      "actName": "序章：受邀而至",
+      "narrativeGoal": "引入玩家进入游戏世界。玩家穿过浓雾来到庄园。管家安排玩家入座。NPC 陆续登场。",
+      "mode": "playback",
+      "durationEstimate": "60-90秒",
+      "narrativeTechnique": "正叙 + 画外音",
+      "npcJoinOrder": ["mills", "tuttle", "lydia", "anne", "nicholas", "charles"],
+      "keyReveals": [],
+      "transitionTo": 1
+    },
+    {
+      "actNum": 1,
+      "actName": "第一幕：雾中宅邸",
+      "narrativeGoal": "6个角色全部入座。建立压抑神秘的基调。Mills 暗示这座宅邸不太寻常。",
+      "mode": "playback_then_free",
+      "durationEstimate": "90-120秒",
+      "narrativeTechnique": "正叙 + 打断 + 补充",
+      "npcPresent": ["mills", "tuttle", "lydia", "anne", "nicholas", "charles"],
+      "keyReveals": ["庄园与世隔绝已有数十年", "每个人似乎都不是第一次来到这座宅邸"],
+      "freeRoamHint": "和他们谈谈。每个人好像都藏着话。"
+    },
+    {
+      "actNum": 2,
+      "actName": "第二幕：孩子的秘密",
+      "narrativeGoal": "Anne 透露她能看到'别人'——一个叫 Victor 的男孩和他的家人。Nicholas 打断她。Mills 意味深长地暗示 Anne 说的可能是真的。",
+      "mode": "playback_then_free",
+      "durationEstimate": "90-120秒",
+      "narrativeTechnique": "正叙 + 打断 + 质疑 + 补充",
+      "npcPresent": ["anne", "nicholas", "mills"],
+      "keyReveals": ["Anne能看到不可见的人", "有一个叫Victor的男孩'住在'这里"],
+      "freeRoamHint": "问问 Anne——她说的'别人'是谁？"
+    },
+    {
+      "actNum": 3,
+      "actName": "第三幕：入侵者",
+      "narrativeGoal": "Tuttle 说窗帘不见了。有人进入了宅邸——不是他们中的任何一个。'入侵者'的概念正式建立。",
+      "mode": "playback_then_free",
+      "durationEstimate": "90-120秒",
+      "narrativeTechnique": "正叙 + 打断 + 质疑 + 谎言",
+      "npcPresent": ["tuttle", "anne", "charles", "mills"],
+      "keyReveals": ["窗帘被外人扯掉了", "Charles暗示'战争没有结束'——他在说另一场战争"],
+      "freeRoamHint": "Charles 看起来不像活人。去问问他。"
+    },
+    {
+      "actNum": 4,
+      "actName": "第四幕：死者之书",
+      "narrativeGoal": "Mills 拿出一本旧相册——里面全是死人的照片。暗示有些人可能已经不在人世。Lydia 颤抖着指向照片。",
+      "mode": "playback_then_free",
+      "durationEstimate": "90-120秒",
+      "narrativeTechnique": "正叙 + 补充 + 沉默 + 质疑",
+      "npcPresent": ["mills", "lydia", "anne", "nicholas"],
+      "keyReveals": ["死人相册", "Lydia似乎认识照片里的人"],
+      "freeRoamHint": "那本相册……里面是不是有这房间里的人？"
+    },
+    {
+      "actNum": 5,
+      "actName": "第五幕：三座墓碑",
+      "narrativeGoal": "Tuttle 透露花园深处有三座墓碑。一座大的，两座小的。Nicholas 崩溃。Charles 做最后的告别。",
+      "mode": "playback_then_free",
+      "durationEstimate": "90-120秒",
+      "narrativeTechnique": "正叙 + 打断 + 追问 + 补充",
+      "npcPresent": ["tuttle", "anne", "nicholas", "charles", "mills"],
+      "keyReveals": ["三座墓碑", "Nicholas崩溃——'是我们吗？'"],
+      "freeRoamHint": "Nicholas 在发抖。也许你该过去。"
+    },
+    {
+      "actNum": 6,
+      "actName": "第六幕：真相",
+      "narrativeGoal": "Lydia 第一次开口说出真相。Mills 摊牌——他们都是鬼魂。Marlish 一家从另一扇门进入（反转出现）。两个世界的对话交错进行。",
+      "mode": "playback_then_free",
+      "durationEstimate": "120-150秒",
+      "narrativeTechnique": "正叙 + 打断 + 补充 + 沉默 → 反转",
+      "npcPresent": ["lydia", "anne", "mills", "tuttle", "victor", "mrs_marlish", "mr_marlish"],
+      "keyReveals": ["Lydia开口:亲眼看见Grace用枕头杀死孩子然后自杀",
+                    "Mills:50年前死于肺结核——大家都是鬼魂",
+                    "Marlish一家出现——他们才是活人"],
+      "freeRoamHint": "所有人都在这里。现在你知道真相了。最后再和他们说句话。"
+    },
+    {
+      "actNum": 7,
+      "actName": "第七幕：此屋归我",
+      "narrativeGoal": "收束。Marlish 离开。死者接受自己的命运。玩家起身离开。窗外可见灵魂。",
+      "mode": "playback",
+      "durationEstimate": "60-90秒",
+      "narrativeTechnique": "正叙 + 画外音",
+      "npcPresent": ["anne", "nicholas", "mills", "tuttle", "lydia"],
+      "keyReveals": ["活人离开，死者留下", "Anne:这房子是我们的"],
+      "isEnding": true
+    }
+  ]
+}

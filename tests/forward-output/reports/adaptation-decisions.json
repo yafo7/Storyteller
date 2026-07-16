@@ -1,0 +1,36 @@
+{
+  "mode": "faithful-stage",
+  "playerAgency": "witness",
+  "targetMinutes": 3,
+  "playerMayChange": [
+    "which of the two explicitly source-authorized ending possibilities is performed"
+  ],
+  "playerMayNotChange": [
+    "character identity",
+    "event chronology",
+    "the timetable reveal",
+    "the suitcase evidence",
+    "the accidental cause of the fire",
+    "the departure door unlocking"
+  ],
+  "ledger": [
+    {
+      "id": "decision.stage-open-ending",
+      "kind": "mechanic-translation",
+      "sourceRefs": [
+        {
+          "sourceId": "source.main",
+          "startLine": 21,
+          "endLine": 21,
+          "confidence": 1
+        }
+      ],
+      "original": "The source leaves Mara's departure or continued lamp-keeping open.",
+      "adapted": "A witness selects which of the two source-authorized outcomes the stage performs.",
+      "reason": "Preserve the unresolved ending while providing a bounded playable choice.",
+      "mode": "faithful-stage",
+      "affectsImmutableFact": false,
+      "authorizedBy": "mode-policy"
+    }
+  ]
+}

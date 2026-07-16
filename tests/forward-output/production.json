@@ -1,0 +1,648 @@
+{
+  "$schema": "interactive-stage-production/v1",
+  "schemaVersion": "1.0.0",
+  "id": "production.the-last-lamp",
+  "title": "The Last Lamp",
+  "language": "en",
+  "adaptation": {
+    "mode": "faithful-stage",
+    "playerAgency": "witness",
+    "targetMinutes": 3
+  },
+  "sources": [
+    {
+      "id": "source.main",
+      "path": "source.txt",
+      "kind": "prose",
+      "sha256": "673fe8b33bfafa343518a5ca8f6cc1527062f5dfaabc0c6f9103faa6e2ffc8f6"
+    }
+  ],
+  "flags": [
+    { "id": "flag.opening-complete", "initial": false },
+    { "id": "flag.arrival-complete", "initial": false },
+    { "id": "flag.midnight-complete", "initial": false },
+    { "id": "flag.return-complete", "initial": false },
+    { "id": "flag.suitcase-open", "initial": false }
+  ],
+  "story": {
+    "facts": [
+      {
+        "id": "fact.last-train-testimony",
+        "text": "Mara says the last train left twenty years ago.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.opening",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 7, "endLine": 7, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.elias-brings-suitcase",
+        "text": "Elias enters carrying a sealed red suitcase.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.arrival",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 9, "endLine": 9, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.mara-hides-key",
+        "text": "Mara keeps the departure key hidden in her glove.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.return",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 13, "endLine": 13, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.mara-suspects-elias",
+        "text": "Mara believes Elias caused the old station fire, although she has never seen proof.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.return",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 13, "endLine": 13, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.timetable-names-mara",
+        "text": "At midnight the timetable flips by itself and displays Mara's name.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.midnight",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 15, "endLine": 15, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.suitcase-was-fathers",
+        "text": "Elias says Mara's father pulled him from the fire and the suitcase belonged to her father.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.return",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 17, "endLine": 17, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.fire-was-accident",
+        "text": "The letter in the suitcase proves the station fire was an accident.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.open-suitcase",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 19, "endLine": 19, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.badge-in-suitcase",
+        "text": "Mara's father's conductor badge is inside the suitcase.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.open-suitcase",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 19, "endLine": 19, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.door-unlocks",
+        "text": "The departure door unlocks after the suitcase is opened.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.door-unlocks",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 19, "endLine": 21, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.choice-remains-open",
+        "text": "Mara may leave or remain to keep the lamp lit for the next lost passenger.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.door-unlocks",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 21, "endLine": 21, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.mara-leaves",
+        "text": "Mara chooses to leave through the departure door.",
+        "immutable": false,
+        "required": false,
+        "earliestReveal": "beat.ending-leave",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 21, "endLine": 21, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "fact.mara-stays",
+        "text": "Mara chooses to remain and keep the lamp lit.",
+        "immutable": false,
+        "required": false,
+        "earliestReveal": "beat.ending-stay",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 21, "endLine": 21, "confidence": 1 }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "character.mara",
+        "name": "Mara",
+        "knowledge": [
+          "fact.last-train-testimony",
+          "fact.mara-hides-key",
+          "fact.mara-suspects-elias"
+        ],
+        "beliefs": [
+          { "factId": "fact.mara-suspects-elias", "stance": "accepts" },
+          { "factId": "fact.fire-was-accident", "stance": "unaware" }
+        ]
+      },
+      {
+        "id": "character.elias",
+        "name": "Elias",
+        "knowledge": [
+          "fact.elias-brings-suitcase",
+          "fact.suitcase-was-fathers"
+        ],
+        "beliefs": [
+          { "factId": "fact.suitcase-was-fathers", "stance": "accepts" },
+          { "factId": "fact.fire-was-accident", "stance": "uncertain" }
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "evidence.conductor-badge",
+        "label": "Mara's father's conductor badge",
+        "supports": ["fact.suitcase-was-fathers"],
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 19, "endLine": 19, "confidence": 1 }
+        ]
+      },
+      {
+        "id": "evidence.accident-letter",
+        "label": "Letter proving the fire was an accident",
+        "supports": ["fact.fire-was-accident"],
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 19, "endLine": 19, "confidence": 1 }
+        ]
+      }
+    ],
+    "adaptationLedger": [
+      {
+        "id": "decision.stage-open-ending",
+        "kind": "mechanic-translation",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 21, "endLine": 21, "confidence": 1 }
+        ],
+        "original": "The source leaves Mara's departure or continued lamp-keeping open.",
+        "adapted": "A witness selects which of the two source-authorized outcomes the stage performs.",
+        "reason": "Preserve the unresolved ending while providing a bounded playable choice.",
+        "mode": "faithful-stage",
+        "affectsImmutableFact": false,
+        "authorizedBy": "mode-policy"
+      }
+    ]
+  },
+  "world": {
+    "stages": [
+      {
+        "id": "stage.waiting-room",
+        "label": "Railway waiting room at night",
+        "anchors": [
+          { "id": "anchor.entrance", "kind": "entrance" },
+          { "id": "anchor.mara", "kind": "focus" },
+          { "id": "anchor.center", "kind": "focus" },
+          { "id": "anchor.departure-door", "kind": "exit" },
+          { "id": "anchor.lamp", "kind": "prop" },
+          { "id": "anchor.timetable", "kind": "interaction" },
+          { "id": "anchor.suitcase", "kind": "interaction" }
+        ]
+      }
+    ],
+    "actors": [
+      {
+        "id": "actor.mara",
+        "characterId": "character.mara",
+        "stageId": "stage.waiting-room",
+        "anchorId": "anchor.mara"
+      },
+      {
+        "id": "actor.elias",
+        "characterId": "character.elias",
+        "stageId": "stage.waiting-room",
+        "anchorId": "anchor.entrance"
+      }
+    ],
+    "props": [
+      {
+        "id": "prop.departure-door",
+        "prototype": "door",
+        "stageId": "stage.waiting-room",
+        "anchorId": "anchor.departure-door",
+        "initialState": "locked",
+        "states": ["locked", "unlocked", "open"]
+      },
+      {
+        "id": "prop.lamp",
+        "prototype": "switch",
+        "stageId": "stage.waiting-room",
+        "anchorId": "anchor.lamp",
+        "initialState": "flickering",
+        "states": ["flickering", "lit"]
+      },
+      {
+        "id": "prop.timetable",
+        "prototype": "readable",
+        "stageId": "stage.waiting-room",
+        "anchorId": "anchor.timetable",
+        "initialState": "unchanged",
+        "states": ["unchanged", "mara-name"]
+      },
+      {
+        "id": "prop.departure-key",
+        "prototype": "key",
+        "stageId": "stage.waiting-room",
+        "anchorId": "anchor.mara",
+        "initialState": "hidden",
+        "states": ["hidden"]
+      },
+      {
+        "id": "prop.suitcase",
+        "prototype": "container",
+        "stageId": "stage.waiting-room",
+        "anchorId": "anchor.suitcase",
+        "initialState": "sealed",
+        "states": ["sealed", "open"]
+      },
+      {
+        "id": "prop.conductor-badge",
+        "prototype": "evidence",
+        "stageId": "stage.waiting-room",
+        "anchorId": "anchor.suitcase",
+        "initialState": "inside",
+        "states": ["inside", "visible"]
+      },
+      {
+        "id": "prop.accident-letter",
+        "prototype": "evidence",
+        "stageId": "stage.waiting-room",
+        "anchorId": "anchor.suitcase",
+        "initialState": "inside",
+        "states": ["inside", "visible"]
+      }
+    ]
+  },
+  "performance": {
+    "entryBeat": "beat.opening",
+    "scenes": [
+      {
+        "id": "scene.waiting-room",
+        "label": "The Last Lamp",
+        "stageId": "stage.waiting-room",
+        "entryBeat": "beat.opening",
+        "required": true
+      }
+    ],
+    "beats": [
+      {
+        "id": "beat.opening",
+        "sceneId": "scene.waiting-room",
+        "stageId": "stage.waiting-room",
+        "mode": "performance",
+        "cues": [
+          {
+            "id": "cue.lamp-flickers",
+            "type": "light.flicker"
+          },
+          {
+            "id": "cue.mara-last-train",
+            "type": "dialogue.say",
+            "actorId": "actor.mara",
+            "text": "The last train left twenty years ago."
+          },
+          {
+            "id": "cue.reveal-last-train-testimony",
+            "type": "fact.reveal",
+            "factId": "fact.last-train-testimony"
+          }
+        ],
+        "actions": [
+          {
+            "id": "action.continue-from-opening",
+            "label": "Continue the performance",
+            "verb": "Continue",
+            "effects": { "setFlags": ["flag.opening-complete"] }
+          }
+        ],
+        "next": [
+          {
+            "to": "beat.arrival",
+            "kind": "auto",
+            "priority": 100,
+            "when": { "flagsAll": ["flag.opening-complete"] }
+          }
+        ]
+      },
+      {
+        "id": "beat.arrival",
+        "sceneId": "scene.waiting-room",
+        "stageId": "stage.waiting-room",
+        "mode": "performance",
+        "cues": [
+          {
+            "id": "cue.elias-enters",
+            "type": "actor.enter",
+            "actorId": "actor.elias",
+            "targetAnchor": "anchor.entrance",
+            "blocking": true,
+            "timeoutMs": 4000,
+            "fallback": { "strategy": "snap" }
+          },
+          {
+            "id": "cue.reveal-elias-suitcase",
+            "type": "fact.reveal",
+            "factId": "fact.elias-brings-suitcase"
+          },
+          {
+            "id": "cue.elias-timetable-question",
+            "type": "dialogue.say",
+            "actorId": "actor.elias",
+            "text": "Then why does the timetable still change every midnight?"
+          }
+        ],
+        "actions": [
+          {
+            "id": "action.wait-for-midnight",
+            "label": "Wait for midnight",
+            "verb": "Continue",
+            "effects": { "setFlags": ["flag.arrival-complete"] }
+          }
+        ],
+        "next": [
+          {
+            "to": "beat.midnight",
+            "kind": "auto",
+            "priority": 100,
+            "when": { "flagsAll": ["flag.arrival-complete"] }
+          }
+        ]
+      },
+      {
+        "id": "beat.midnight",
+        "sceneId": "scene.waiting-room",
+        "stageId": "stage.waiting-room",
+        "mode": "performance",
+        "cues": [
+          {
+            "id": "cue.clock-strikes-midnight",
+            "type": "wait.duration",
+            "durationMs": 1000
+          },
+          {
+            "id": "cue.timetable-flips",
+            "type": "prop.set",
+            "propId": "prop.timetable",
+            "state": "mara-name",
+            "effects": {
+              "setProps": [
+                { "propId": "prop.timetable", "state": "mara-name" }
+              ]
+            }
+          },
+          {
+            "id": "cue.reveal-timetable-names-mara",
+            "type": "fact.reveal",
+            "factId": "fact.timetable-names-mara"
+          }
+        ],
+        "actions": [
+          {
+            "id": "action.turn-to-elias",
+            "label": "Watch Mara turn to Elias",
+            "verb": "Continue",
+            "effects": { "setFlags": ["flag.midnight-complete"] }
+          }
+        ],
+        "next": [
+          {
+            "to": "beat.return",
+            "kind": "auto",
+            "priority": 100,
+            "when": { "flagsAll": ["flag.midnight-complete"] }
+          }
+        ]
+      },
+      {
+        "id": "beat.return",
+        "sceneId": "scene.waiting-room",
+        "stageId": "stage.waiting-room",
+        "mode": "conversation",
+        "cues": [
+          {
+            "id": "cue.mara-guards-key",
+            "type": "actor.gesture",
+            "actorId": "actor.mara"
+          },
+          {
+            "id": "cue.reveal-mara-key",
+            "type": "fact.reveal",
+            "factId": "fact.mara-hides-key"
+          },
+          {
+            "id": "cue.reveal-mara-suspicion",
+            "type": "fact.reveal",
+            "factId": "fact.mara-suspects-elias"
+          },
+          {
+            "id": "cue.elias-returns-suitcase",
+            "type": "dialogue.say",
+            "actorId": "actor.elias",
+            "text": "I came to return this. Your father pulled me out of the fire. The suitcase was his."
+          },
+          {
+            "id": "cue.reveal-suitcase-owner",
+            "type": "fact.reveal",
+            "factId": "fact.suitcase-was-fathers"
+          }
+        ],
+        "actions": [
+          {
+            "id": "action-continue-to-suitcase",
+            "label": "Let Mara examine the suitcase",
+            "verb": "Continue",
+            "effects": { "setFlags": ["flag.return-complete"] }
+          }
+        ],
+        "next": [
+          {
+            "to": "beat.open-suitcase",
+            "kind": "auto",
+            "priority": 100,
+            "when": { "flagsAll": ["flag.return-complete"] }
+          }
+        ]
+      },
+      {
+        "id": "beat.open-suitcase",
+        "sceneId": "scene.waiting-room",
+        "stageId": "stage.waiting-room",
+        "mode": "exploration",
+        "cues": [],
+        "actions": [
+          {
+            "id": "action.open-suitcase",
+            "label": "Open the sealed red suitcase",
+            "verb": "Inspect",
+            "effects": {
+              "setFlags": ["flag.suitcase-open"],
+              "revealFacts": [
+                "fact.fire-was-accident",
+                "fact.badge-in-suitcase"
+              ],
+              "setProps": [
+                { "propId": "prop.suitcase", "state": "open" },
+                { "propId": "prop.conductor-badge", "state": "visible" },
+                { "propId": "prop.accident-letter", "state": "visible" }
+              ]
+            }
+          }
+        ],
+        "next": [
+          {
+            "to": "beat.door-unlocks",
+            "kind": "auto",
+            "priority": 100,
+            "when": {
+              "flagsAll": ["flag.suitcase-open"],
+              "factsAll": ["fact.fire-was-accident", "fact.badge-in-suitcase"],
+              "propStates": [
+                { "propId": "prop.suitcase", "state": "open" }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "beat.door-unlocks",
+        "sceneId": "scene.waiting-room",
+        "stageId": "stage.waiting-room",
+        "mode": "transition",
+        "cues": [
+          {
+            "id": "cue.door-unlocks",
+            "type": "prop.set",
+            "propId": "prop.departure-door",
+            "state": "unlocked",
+            "effects": {
+              "setProps": [
+                { "propId": "prop.departure-door", "state": "unlocked" }
+              ]
+            }
+          },
+          {
+            "id": "cue.reveal-door-unlocks",
+            "type": "fact.reveal",
+            "factId": "fact.door-unlocks"
+          },
+          {
+            "id": "cue.reveal-open-choice",
+            "type": "fact.reveal",
+            "factId": "fact.choice-remains-open"
+          }
+        ],
+        "actions": [],
+        "next": [
+          {
+            "to": "beat.ending-leave",
+            "label": "Watch Mara leave",
+            "kind": "choice"
+          },
+          {
+            "to": "beat.ending-stay",
+            "label": "Watch Mara remain with the lamp",
+            "kind": "choice"
+          }
+        ]
+      },
+      {
+        "id": "beat.ending-leave",
+        "sceneId": "scene.waiting-room",
+        "stageId": "stage.waiting-room",
+        "mode": "transition",
+        "cues": [
+          {
+            "id": "cue.reveal-mara-leaves",
+            "type": "fact.reveal",
+            "factId": "fact.mara-leaves"
+          },
+          {
+            "id": "cue.mara-exits",
+            "type": "actor.exit",
+            "actorId": "actor.mara",
+            "targetAnchor": "anchor.departure-door",
+            "blocking": true,
+            "timeoutMs": 4000,
+            "fallback": { "strategy": "snap" }
+          }
+        ],
+        "actions": [],
+        "next": [],
+        "terminal": true,
+        "endingId": "ending.mara-leaves"
+      },
+      {
+        "id": "beat.ending-stay",
+        "sceneId": "scene.waiting-room",
+        "stageId": "stage.waiting-room",
+        "mode": "transition",
+        "cues": [
+          {
+            "id": "cue.lamp-becomes-steady",
+            "type": "prop.set",
+            "propId": "prop.lamp",
+            "state": "lit",
+            "effects": {
+              "setProps": [
+                { "propId": "prop.lamp", "state": "lit" }
+              ]
+            }
+          },
+          {
+            "id": "cue.reveal-mara-stays",
+            "type": "fact.reveal",
+            "factId": "fact.mara-stays"
+          }
+        ],
+        "actions": [],
+        "next": [],
+        "terminal": true,
+        "endingId": "ending.mara-stays"
+      }
+    ],
+    "endings": [
+      { "id": "ending.mara-leaves", "label": "The Open Door" },
+      { "id": "ending.mara-stays", "label": "The Last Lamp" }
+    ]
+  },
+  "ui": {
+    "controls": [
+      { "action": "interact", "bindings": ["KeyE", "Enter"], "label": "Interact / Continue" },
+      { "action": "pause", "bindings": ["Escape"], "label": "Pause" }
+    ],
+    "accessibility": {
+      "captions": true,
+      "directionalSoundCaptions": true,
+      "reducedMotion": false,
+      "cameraShake": false,
+      "flashes": false,
+      "highContrastFocus": true,
+      "keyboardOnly": true
+    }
+  },
+  "assets": []
+}

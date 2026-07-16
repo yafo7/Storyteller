@@ -1,0 +1,16 @@
+{
+  "requiredExternalAssets": [],
+  "declaredProductionAssets": [],
+  "placeholderPolicy": {
+    "manifest": "build-interactive-stage-game/assets/placeholder-stage-kit/manifest.json",
+    "style": "flat theatrical blocking placeholders",
+    "license": "Generated geometric placeholders; no third-party media.",
+    "usedSemantics": ["entrance", "exit", "focus", "prop", "interaction"],
+    "usedPropPrototypes": ["door", "switch", "readable", "key", "container", "evidence"]
+  },
+  "licenseGaps": [],
+  "notes": [
+    "The production contains no media paths and requires no network retrieval.",
+    "A compatible host may render semantic stage elements with its own licensed assets or generated geometric placeholders."
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "actNum": 3,
+  "narrations": [
+    "一阵冷风不知从哪扇窗缝钻进来。烛火集体晃了一下——像是有看不见的手拂过每一朵火焰。",
+    "Tuttle 放下手中的杯子。他的手指粗糙——那是挖了几十年土的手。指甲缝里嵌着永远洗不掉的黑泥。",
+    "他环顾了一圈。每个人都在等他开口。",
+    "窗外的雾翻涌得比刚才更厉害了——灰白的涡流贴着玻璃，仿佛想挤进来。",
+    "这座宅邸不再安静了。每一个角落都藏着呼吸——你不知道是人，还是别的什么。"
+  ],
+  "dialogues": [
+    {
+      "speakerId": "tuttle",
+      "text": "窗帘。全没了。",
+      "emotion": "mysterious",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "tuttle",
+      "text": "我早上去花园的时候发现的。从上到下，所有房间——窗帘都被扯掉了。不是风吹的。是有人干的。",
+      "emotion": "angry",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "anne",
+      "text": "（猛地抓紧桌沿）我就知道！我就知道！他们要把光放进来——光会……",
+      "emotion": "fearful",
+      "technique": "补充"
+    },
+    {
+      "speakerId": "nicholas",
+      "text": "（用力抓住 Anne 的手腕）别说了！求你——别说了！",
+      "emotion": "angry",
+      "technique": "打断"
+    },
+    {
+      "speakerId": "charles",
+      "text": "（轻声地，像对自己说——又像对某个不在场的人说）光。他们也怕光。和我一样。",
+      "emotion": "mysterious",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "mills",
+      "text": "Charles 先生——你说的'他们'，是谁？",
+      "emotion": "calm",
+      "technique": "追问"
+    },
+    {
+      "speakerId": "charles",
+      "text": "（沉默了很久——久到壁炉里的木头都塌了一块）战场上的人。还有……这里的人。有时候是同一类。",
+      "emotion": "sad",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "mills",
+      "text": "入侵者总是会来的。新的住客、新的主人。但他们迟早会发现——这房子不会让任何人待太久。",
+      "emotion": "mysterious",
+      "technique": "补充"
+    }
+  ],
+  "playerPrompts": [],
+  "freeTalk": {
+    "anne": [
+      { "text": "没人信我——但你们很快会看到。光照进来的时候，一切都会改变。", "reveals": "光=死亡/真相" }
+    ],
+    "charles": [
+      { "text": "你不觉得奇怪吗——我们为什么能在黑暗里看得这么清楚？", "reveals": "暗示他们已适应黑暗" },
+      { "text": "我走了很远的路来这里。但我不确定——我是不是真的'到了'。", "reveals": "Charles 的迷茫" }
+    ],
+    "tuttle": [
+      { "text": "窗帘不是风暴吹掉的。是人手。活人的手。", "reveals": "入侵者是活人" }
+    ],
+    "mills": [
+      { "text": "你不需要怕光。至少现在不需要。", "reveals": "暗示玩家身份特殊" }
+    ]
+  }
+}

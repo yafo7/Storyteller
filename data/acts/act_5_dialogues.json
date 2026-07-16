@@ -1,0 +1,90 @@
+{
+  "actNum": 5,
+  "narrations": [
+    "Tuttle 站了起来。椅子在大理石地板上擦出刺耳的声响。他的手扶着桌沿——你可以看到那些指甲缝里的泥土，比任何时候都黑。",
+    "整个房间都安静了。连壁炉里的火都不敢响，只敢轻轻地、一下一下地喘着。",
+    "烛油滴在银盘上，发出细微的滋滋声。没人去擦。所有目光都钉在 Tuttle 身上——像是在看一个即将宣判的人。",
+    "房间里回荡着一种低沉的嗡嗡声——不知道是从墙壁传出来的，还是从你自己的胸腔。"
+  ],
+  "dialogues": [
+    {
+      "speakerId": "tuttle",
+      "text": "花园深处。雾最浓的那个角落——",
+      "emotion": "calm",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "tuttle",
+      "text": "有三座墓碑。一座大的。两座小的。并排。碑上的字快磨平了，但还在。",
+      "emotion": "sad",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "anne",
+      "text": "（倒吸一口气——那声音像溺水的人）碑上……写了什么？",
+      "emotion": "fearful",
+      "technique": "追问"
+    },
+    {
+      "speakerId": "tuttle",
+      "text": "大的那座上写着——Grace Stewart。",
+      "emotion": "calm",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "nicholas",
+      "text": "（猛地站起来，椅子向后翻倒砸在地上）不——不——那是妈妈——那是妈妈的名字——",
+      "emotion": "fearful",
+      "technique": "打断"
+    },
+    {
+      "speakerId": "anne",
+      "text": "（抓住 Nicholas 的手，眼泪无声地淌下）冷静。Nicholas——看着我。看着我。",
+      "emotion": "sad",
+      "technique": "打断"
+    },
+    {
+      "speakerId": "tuttle",
+      "text": "两座小的。Anne Stewart。Nicholas Stewart。",
+      "emotion": "sad",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "nicholas",
+      "text": "（声音碎成一片片——像是玻璃从高处坠下）是我们吗？那是我们？我们——我们死了吗？",
+      "emotion": "fearful",
+      "technique": "追问"
+    },
+    {
+      "speakerId": "charles",
+      "text": "（缓缓站起来——披风滑落，露出军服上暗色的血迹。在烛光里，他的身形看起来几乎——透明）",
+      "emotion": "sad",
+      "technique": "补充"
+    },
+    {
+      "speakerId": "charles",
+      "text": "我该走了。我只是回来……说再见。",
+      "emotion": "gentle",
+      "technique": "正叙"
+    }
+  ],
+  "playerPrompts": [],
+  "freeTalk": {
+    "nicholas": [
+      { "text": "我不想死。我还不确定我准备好死了。", "reveals": "Nicholas 的心理崩溃" },
+      { "text": "妈妈那天……她不是故意的。她只是太累了。", "reveals": "Grace 杀死孩子" }
+    ],
+    "tuttle": [
+      { "text": "我挖了那些坑。亲手填的土。那是很久以前的事了。", "reveals": "Tuttle 是掘墓人" }
+    ],
+    "anne": [
+      { "text": "我终于明白了。不是我特别——是我们才是……", "reveals": "Anne 理解自己的死亡" }
+    ],
+    "charles": [
+      { "text": "再见。如果可以——告诉他们我爱你。一直都爱。", "reveals": "Charles 的告别" }
+    ],
+    "mills": [
+      { "text": "我说过——有些事，需要时间来消化。现在时候到了。", "reveals": "Mills 一直知道真相" }
+    ]
+  }
+}

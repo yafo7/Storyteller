@@ -1,0 +1,42 @@
+{
+  "claims": [
+    {
+      "id": "claim.mara-final-choice",
+      "statement": "Which final option Mara ultimately chooses is not fixed by the source.",
+      "confidence": 1,
+      "sourceRefs": [
+        {
+          "sourceId": "source.main",
+          "startLine": 21,
+          "endLine": 21,
+          "confidence": 1
+        }
+      ],
+      "alternatives": [
+        "Mara leaves through the departure door.",
+        "Mara remains to keep the lamp lit."
+      ],
+      "impact": "Changes only the final emotional image; all preceding facts and reveals remain fixed.",
+      "treatment": "Preserved as two reachable source-authorized endings."
+    },
+    {
+      "id": "claim.elias-letter-knowledge",
+      "statement": "Elias knew the letter's contents before Mara opened the suitcase.",
+      "confidence": 0.3,
+      "sourceRefs": [
+        {
+          "sourceId": "source.main",
+          "startLine": 17,
+          "endLine": 19,
+          "confidence": 0.3
+        }
+      ],
+      "alternatives": [
+        "Elias knew the letter proved the fire was an accident.",
+        "Elias knew only that the suitcase belonged to Mara's father."
+      ],
+      "impact": "Would alter Elias's pre-reveal knowledge and dialogue authority.",
+      "treatment": "Excluded from canon; Elias is not assigned knowledge of the accident before the suitcase reveal."
+    }
+  ]
+}

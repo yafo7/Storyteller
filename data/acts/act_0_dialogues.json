@@ -1,0 +1,63 @@
+{
+  "actNum": 0,
+  "narrations": [
+    "你收到了一封没有署名的请柬。纸张很旧，墨迹有些晕开，像是被潮湿的手指捏过很多次。",
+    "穿过浓密得几乎凝固的雾，一座灰色的庄园在尽头浮现——它的轮廓忽隐忽现，像是一张正在被人反复描摹的铅笔画。",
+    "门虚掩着。里面漏出的不是灯光——是烛光。温暖但微弱，像这宅邸正在用力呼吸。",
+    "你推开门。会客厅里很安静。壁炉的火噼啪响了一下，像是在跟你打招呼。",
+    "桌上已经摆好了七副餐具。银质刀叉在烛火下泛着幽光。空气里有一股潮湿的旧木头味道，混合着快要燃尽的蜂蜡。",
+    "你听到脚步声。先是稳健的、然后是一轻一重的、然后是几乎听不见的——他们正从不同方向走来。"
+  ],
+  "dialogues": [
+    {
+      "speakerId": "mills",
+      "text": "请进。所有人都在等你了。",
+      "emotion": "calm",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "mills",
+      "text": "我叫 Bertha Mills。管家——很久以前就是了。请坐，晚宴很快开始。",
+      "emotion": "gentle",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "tuttle",
+      "text": "（走进来，拉开椅子坐下）雾从来不会散。我在这里那么多年，没有一天不是这样的。",
+      "emotion": "calm",
+      "technique": "补充"
+    },
+    {
+      "speakerId": "lydia",
+      "text": "（轻轻推开椅子，安静坐下。她看着你——嘴唇微微翕动，但最终什么也没说。）",
+      "emotion": "calm",
+      "technique": "沉默"
+    },
+    {
+      "speakerId": "anne",
+      "text": "（快步走进来，目光扫过整个房间——在你身上停了一下）又见面了。",
+      "emotion": "mysterious",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "nicholas",
+      "text": "（跟在 Anne 身后，低着头，避开所有人的目光，闷声坐下）……你好。",
+      "emotion": "fearful",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "charles",
+      "text": "（最后走进来，脚步轻得不真实。环视一圈，微笑）好久不见。所有人都在。",
+      "emotion": "gentle",
+      "technique": "正叙"
+    },
+    {
+      "speakerId": "mills",
+      "text": "现在，我们可以开始了。这一夜很长——但不用担心。我们有足够的时间。",
+      "emotion": "calm",
+      "technique": "正叙"
+    }
+  ],
+  "playerPrompts": [],
+  "freeTalk": {}
+}
