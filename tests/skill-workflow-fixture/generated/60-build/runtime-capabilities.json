@@ -1,0 +1,7 @@
+{
+  "$schema": "script-game-runtime-capabilities/v1",
+  "schemaVersion": "1.0.0",
+  "runtime": "fixture",
+  "verbs": ["open"],
+  "effects": ["portal", "world-layer"]
+}

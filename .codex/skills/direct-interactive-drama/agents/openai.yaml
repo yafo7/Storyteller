@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interactive Drama Direction"
+  short_description: "Design onboarding, beats, dialogue, and dramatic pacing"
+  default_prompt: "Use $direct-interactive-drama to turn this story model into paced interactive drama."

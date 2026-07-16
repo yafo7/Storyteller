@@ -1,0 +1,17 @@
+{
+  "$schema": "script-game-performance-plan/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "playerKnowledgeAtStart": {"role": "host"},
+  "onboarding": {"steps": ["open the shutter"]},
+  "beats": [
+    {
+      "id": "beat.first-light",
+      "playerQuestion": "Why is the room sealed?",
+      "turn": "The opened view belongs to another time.",
+      "consequence": "A new route appears.",
+      "intensity": 2,
+      "exitGate": "The player crosses the revealed threshold."
+    }
+  ]
+}

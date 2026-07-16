@@ -1,0 +1,27 @@
+{
+  "$schema": "script-game-production-charter/v1",
+  "schemaVersion": "1.0.0",
+  "status": "draft",
+  "title": "",
+  "sourcePaths": [],
+  "language": "zh-CN",
+  "adaptationMode": "faithful-stage",
+  "playerAgency": "actor-role",
+  "targetMinutes": 45,
+  "runtimeProfile": "offline-2d-narrative-stage",
+  "assetPolicy": "ai-original-plus-licensed-generic",
+  "autonomy": {
+    "choosePerGameCreativeDetails": true,
+    "askOnlyForBlockingAuthority": true
+  },
+  "qualityBars": {
+    "storyDerivedCoreMechanics": 1,
+    "worldTransformingMechanics": 1,
+    "requiredInteractionConsequences": 2,
+    "requiredEndingCoverage": 1,
+    "placeholderAssetsAllowedAtAcceptance": false
+  },
+  "sourceHash": "",
+  "decisions": [],
+  "unresolved": []
+}

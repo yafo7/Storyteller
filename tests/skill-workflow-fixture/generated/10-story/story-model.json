@@ -1,0 +1,10 @@
+{
+  "$schema": "script-game-story-model/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "playerRole": {"characterId": "character.host"},
+  "facts": [],
+  "characters": [],
+  "reveals": [],
+  "motifs": ["motif.shutter"]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stage and Level Design"
+  short_description: "Build stateful maps, staging, navigation, and blocking"
+  default_prompt: "Use $design-stage-and-levels to turn this game design into playable stages and maps."

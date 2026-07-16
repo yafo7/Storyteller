@@ -1,0 +1,9 @@
+{
+  "$schema": "script-game-asset-manifest/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "assets": [
+    {"id": "asset.room.closed", "generationMethod": "ai", "status": "approved", "license": "project-generated"},
+    {"id": "asset.room.open", "generationMethod": "ai", "status": "approved", "license": "project-generated"}
+  ]
+}

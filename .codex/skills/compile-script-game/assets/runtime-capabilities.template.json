@@ -1,0 +1,26 @@
+{
+  "$schema": "script-game-runtime-capabilities/v1",
+  "schemaVersion": "1.0.0",
+  "runtime": "",
+  "verbs": [],
+  "effects": [
+    "fact",
+    "flag",
+    "inventory",
+    "entity-state",
+    "collision",
+    "portal",
+    "zone-visibility",
+    "actor-state",
+    "actor-schedule",
+    "light",
+    "audio",
+    "world-layer",
+    "beat-transition",
+    "map-transition"
+  ],
+  "presentation": [],
+  "saveFields": [],
+  "accessibility": [],
+  "limits": []
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "script-game-stage-plan/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "maps": ["map.room"],
+  "portals": ["portal.threshold"],
+  "stateVariants": [
+    {"id": "state.shutter-open", "baseMap": "map.room", "portalDeltas": ["portal.threshold"]}
+  ]
+}

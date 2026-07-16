@@ -1,0 +1,4 @@
+interface:
+  display_name: "Story Analysis for Games"
+  short_description: "Turn narrative sources into a game-ready story model"
+  default_prompt: "Use $analyze-story-for-game to extract a canon-safe story model from this script."

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#090c12">
+  <title>Interactive Stage Starter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="game-shell" aria-label="Interactive stage game">
+    <div id="stage-frame">
+      <canvas id="stage-canvas" width="1280" height="720" tabindex="0" aria-label="Playable stage"></canvas>
+      <div class="stage-grain" aria-hidden="true"></div>
+      <div class="stage-vignette" aria-hidden="true"></div>
+
+      <header id="stage-header" class="hud-layer">
+        <div class="production-mark"><span class="eyebrow">INTERACTIVE THEATRE</span><strong id="hud-title">Stage Starter</strong></div>
+        <div id="chapter-indicator" aria-live="polite">Prologue</div>
+        <nav class="utility-actions" aria-label="Game tools">
+          <button id="journal-button" class="icon-button" type="button">Journal <kbd>Tab</kbd></button>
+          <button id="history-button" class="icon-button" type="button">Lines</button>
+          <button id="pause-button" class="icon-button" type="button">Pause <kbd>Esc</kbd></button>
+        </nav>
+      </header>
+
+      <section id="objective-panel" class="hud-card objective-card" aria-live="polite">
+        <span class="eyebrow">CURRENT ACTION</span>
+        <p id="objective-text" data-role="objective">Waiting for the stage…</p>
+        <div id="objective-progress" class="discovery-progress" data-role="progress" aria-hidden="true"><span></span></div>
+      </section>
+
+      <button id="interaction-prompt" class="interaction-prompt" type="button" aria-live="polite"></button>
+
+      <section id="dialogue-panel" class="dialogue-panel" aria-live="polite" aria-atomic="true">
+        <div class="speaker-column"><div id="speaker-sigil" aria-hidden="true"></div><span id="speaker-name">Narrator</span></div>
+        <div class="line-column"><p id="dialogue-text"></p><button id="advance-button" type="button">Space · Continue</button></div>
+      </section>
+
+      <section id="scene-card" class="scene-card" aria-live="assertive">
+        <span id="scene-kicker" class="eyebrow">ACT I</span>
+        <h2 id="scene-title" class="scene-title" data-role="title">The stage</h2>
+        <p id="scene-subtitle" class="scene-subtitle" data-role="subtitle">A reusable starting point.</p>
+      </section>
+
+      <section id="title-screen" class="full-screen title-screen visible" aria-labelledby="game-title">
+        <div class="title-copy">
+          <span class="eyebrow">A DATA-DRIVEN PRODUCTION</span>
+          <h1 id="game-title" data-role="title">Interactive Stage Starter</h1>
+          <p class="title-en" data-role="subtitle">REPLACE THIS PRODUCTION</p>
+          <p class="lede">A minimal offline Canvas stage. Replace only the production package to adapt a new script.</p>
+          <div class="title-actions">
+            <button id="start-button" class="primary-button" type="button">Begin</button>
+            <button id="continue-button" class="secondary-button" type="button">Continue</button>
+          </div>
+          <div class="control-strip" aria-label="Controls">
+            <span><kbd>WASD</kbd> Move</span><span><kbd>E</kbd> Interact</span><span><kbd>Space</kbd> Advance</span><span><kbd>Tab</kbd> Journal</span>
+          </div>
+        </div>
+        <div class="title-visual" aria-hidden="true">
+          <div class="house-silhouette"><i></i><i></i><i></i><i></i><i></i></div><div class="fog fog-a"></div><div class="fog fog-b"></div>
+        </div>
+      </section>
+
+      <section id="loading-screen" class="full-screen loading-screen" aria-live="polite"><div class="loader"></div><p data-role="text">Raising the curtain…</p></section>
+
+      <aside id="journal-panel" class="drawer drawer-left" aria-labelledby="journal-title">
+        <header><div><span class="eyebrow">DISCOVERIES</span><h2 id="journal-title">Journal</h2></div><button id="journal-close" class="close-button" type="button" aria-label="Close journal">×</button></header>
+        <p class="drawer-intro">Facts discovered during play.</p><ul id="journal-list" class="journal-list"></ul>
+      </aside>
+
+      <aside id="history-panel" class="drawer drawer-right" aria-labelledby="history-title">
+        <header><div><span class="eyebrow">TRANSCRIPT</span><h2 id="history-title">Line history</h2></div><button id="history-close" class="close-button" type="button" aria-label="Close line history">×</button></header>
+        <ul id="history-list" class="history-list"></ul>
+      </aside>
+
+      <section id="pause-menu" class="modal-card" aria-labelledby="pause-title">
+        <span class="eyebrow">INTERMISSION</span><h2 id="pause-title">Paused</h2>
+        <div class="setting-row"><label for="text-speed">Text speed</label><select id="text-speed"><option value="slow">Slow</option><option value="normal" selected>Normal</option><option value="fast">Fast</option></select></div>
+        <div class="setting-row"><label for="high-contrast">High contrast</label><input id="high-contrast" type="checkbox"></div>
+        <div class="modal-actions">
+          <button id="resume-button" class="primary-button" type="button">Resume</button><button id="skip-scene-button" class="secondary-button" type="button">Skip scene</button><button id="pause-scene-select-button" class="secondary-button" type="button">Scene select</button><button id="restart-button" class="secondary-button" type="button">Restart</button>
+        </div>
+      </section>
+
+      <section id="ending-screen" class="full-screen ending-screen" aria-labelledby="ending-title">
+        <div class="ending-copy"><span class="eyebrow">CURTAIN CALL</span><h2 id="ending-title">Curtain</h2><p id="ending-text"></p><div id="ending-stats" class="ending-stats"></div><div class="title-actions"><button id="replay-button" class="primary-button" type="button">Play again</button><button id="scene-select-button" class="secondary-button" type="button">Scene select</button></div></div>
+      </section>
+
+      <section id="scene-select-panel" class="modal-card chapter-menu" role="dialog" aria-modal="true" aria-labelledby="scene-select-title" hidden>
+        <header><div><span class="eyebrow">SCENE INDEX</span><h2 id="scene-select-title">Scene select</h2></div><button id="scene-select-close" class="close-button" type="button" aria-label="Close scene select">×</button></header><div id="scene-select-list" class="chapter-list"></div>
+      </section>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </div>
+    <footer class="app-footer"><span>Offline Canvas Stage Runtime</span><span id="connection-status">LOCAL</span></footer>
+  </main>
+  <noscript>This stage requires JavaScript.</noscript>
+  <script src="src/runtime.js" defer></script>
+  <script src="src/game.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Art Direction"
+  short_description: "Plan, source, generate, and validate coherent game art"
+  default_prompt: "Use $art-direct-game-assets to create a coherent visual production plan and asset set."

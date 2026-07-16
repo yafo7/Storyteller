@@ -1,0 +1,4 @@
+interface:
+  display_name: "Narrative Gameplay Design"
+  short_description: "Derive meaningful game mechanics from story themes"
+  default_prompt: "Use $design-narrative-gameplay to design systemic gameplay from this story model."

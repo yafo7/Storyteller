@@ -1,0 +1,4 @@
+interface:
+  display_name: "Script Game Compiler"
+  short_description: "Compile approved narrative designs into a playable runtime"
+  default_prompt: "Use $compile-script-game to compile these approved artifacts into a playable game."

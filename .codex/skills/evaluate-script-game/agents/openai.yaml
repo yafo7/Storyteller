@@ -1,0 +1,4 @@
+interface:
+  display_name: "Script Game Evaluation"
+  short_description: "Test routes, pacing, visuals, and interaction quality"
+  default_prompt: "Use $evaluate-script-game to test this generated narrative game and route failures."

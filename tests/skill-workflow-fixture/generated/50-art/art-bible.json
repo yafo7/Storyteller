@@ -1,0 +1,9 @@
+{
+  "$schema": "script-game-art-bible/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "style": {"medium": "painted 2D"},
+  "palette": {"dark": "#17202a"},
+  "characterRules": {},
+  "environmentRules": {}
+}
