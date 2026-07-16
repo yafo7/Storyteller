@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "assets": [
+    { "id": "asset.tileset.test", "kind": "tileset", "status": "approved", "pixelSpec": { "nativeDimensions": [256, 256], "nearestNeighbor": true, "tileSize": 16 } },
+    { "id": "asset.sprite.player", "kind": "four-direction-sprite", "status": "approved", "pixelSpec": { "nativeDimensions": [64, 96], "nearestNeighbor": true, "frameSize": [16, 24] } }
+  ]
+}

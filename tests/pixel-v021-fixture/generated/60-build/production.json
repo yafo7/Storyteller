@@ -1,0 +1,12 @@
+{
+  "$schema": "script-game-production/v1",
+  "schemaVersion": "1.0.0",
+  "rendererProfile": {
+    "mode": "top-down-tilemap",
+    "logicalResolution": [320, 180],
+    "tileSize": 16,
+    "movement": "four-direction",
+    "sampling": "nearest-neighbor",
+    "cameraSnap": "integer-pixel"
+  }
+}

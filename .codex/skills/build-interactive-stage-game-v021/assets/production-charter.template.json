@@ -1,0 +1,44 @@
+{
+  "$schema": "script-game-production-charter/v1",
+  "schemaVersion": "1.0.0",
+  "status": "draft",
+  "title": "",
+  "sourcePaths": [],
+  "language": "zh-CN",
+  "adaptationMode": "faithful-spatial",
+  "playerAgency": "actor-role",
+  "targetMinutes": 45,
+  "runtimeProfile": "offline-top-down-pixel-narrative",
+  "visualProfile": "original-classic-handheld-pixel-rpg",
+  "cameraProfile": "orthographic-top-down-with-frontal-faces",
+  "gridProfile": {
+    "logicalResolution": [320, 180],
+    "tileSize": 16,
+    "integerScaleOnly": true,
+    "movement": "four-direction",
+    "interaction": "facing-tile"
+  },
+  "assetPolicy": "ai-original-anchors-plus-pixel-native-production",
+  "originalityPolicy": {
+    "allowBroadEraGrammar": true,
+    "allowFranchiseAssetImitation": false,
+    "requireOriginalCharactersMapsTilesUi": true
+  },
+  "autonomy": {
+    "choosePerGameCreativeDetails": true,
+    "askOnlyForBlockingAuthority": true
+  },
+  "qualityBars": {
+    "storyDerivedCoreMechanics": 1,
+    "worldTransformingMechanics": 1,
+    "requiredInteractionConsequences": 2,
+    "requiredEndingCoverage": 1,
+    "placeholderAssetsAllowedAtAcceptance": false,
+    "nativeResolutionReadable": true,
+    "collisionOverlayRequired": true,
+    "integerScaleScreenshotsRequired": true
+  },
+  "sourceHash": "",
+  "decisions": [],
+  "unresolved": []
+}

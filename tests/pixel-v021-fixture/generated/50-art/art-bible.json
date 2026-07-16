@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "pixelRules": {
+    "nativeTileSize": 16,
+    "actorFrame": [16, 24],
+    "paletteBudget": 24,
+    "nearestNeighbor": true,
+    "integerScale": true,
+    "prohibited": ["smoothing", "subpixel placement", "mixed pixel density"]
+  }
+}

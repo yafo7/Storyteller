@@ -5,7 +5,8 @@
   "type": "commonjs",
   "scripts": {
     "dev": "node server.mjs",
-    "check": "node --check src/runtime.js && node --check src/game.js && node tests/project-contract.mjs && node tests/v02-contract.mjs",
-    "check:v02": "node tests/v02-contract.mjs"
+    "check": "node --check src/runtime.js && node --check src/game.js && node tests/project-contract.mjs && node tests/v02-contract.mjs && node .codex/skills/build-interactive-stage-game-v021/scripts/validate-pixel-profile.mjs tests/pixel-v021-fixture --strict",
+    "check:v02": "node tests/v02-contract.mjs",
+    "check:v021-skill": "node .codex/skills/build-interactive-stage-game-v021/scripts/validate-pixel-profile.mjs tests/pixel-v021-fixture --strict"
   }
 }

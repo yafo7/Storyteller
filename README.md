@@ -52,3 +52,5 @@ node C:\Users\yafo777\.codex\skills\build-interactive-stage-game\scripts\simulat
 - 0.2 总导演工作流版：<http://127.0.0.1:5175/v02/>
 
 0.1 的工作流保存在 `.codex/skills/build-interactive-stage-game-v01/`；0.2 总导演与分工 Skill 保存在 `.codex/skills/`。两个游戏使用独立存档键，可以同时游玩而不会互相覆盖进度。
+
+0.21 的俯视角像素游戏工作流保存在 `.codex/skills/build-interactive-stage-game-v021/`。它继承 0.2 的专业分工与验收流程，但强制使用原创掌机时代像素 RPG 语法、瓦片地图、四向角色、碰撞层和整数缩放，不覆盖 0.2。

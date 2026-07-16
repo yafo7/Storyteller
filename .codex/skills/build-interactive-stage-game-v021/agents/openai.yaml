@@ -1,0 +1,4 @@
+interface:
+  display_name: "Autonomous Top-Down Pixel Game Studio 0.21"
+  short_description: "Turn scripts into validated top-down pixel narrative games"
+  default_prompt: "Use $build-interactive-stage-game-v021 to turn this script into a complete top-down pixel narrative game."

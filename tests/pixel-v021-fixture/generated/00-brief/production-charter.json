@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "runtimeProfile": "offline-top-down-pixel-narrative",
+  "visualProfile": "original-classic-handheld-pixel-rpg",
+  "cameraProfile": "orthographic-top-down-with-frontal-faces",
+  "gridProfile": { "logicalResolution": [320, 180], "tileSize": 16, "integerScaleOnly": true, "movement": "four-direction", "interaction": "facing-tile" },
+  "originalityPolicy": { "allowBroadEraGrammar": true, "allowFranchiseAssetImitation": false, "requireOriginalCharactersMapsTilesUi": true }
+}

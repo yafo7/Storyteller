@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "renderProfile": { "view": "orthographic-top-down", "logicalResolution": [320, 180], "tileSize": 16, "integerScale": true, "cameraSnap": "integer-pixel" },
+  "maps": [
+    {
+      "id": "map.test-room",
+      "tileGrid": { "tileSize": 16, "width": 20, "height": 12 },
+      "tileLayers": ["ground", "terrain", "structure", "props", "overhead", "lighting"],
+      "logicLayers": ["collision", "portals", "triggers", "interaction", "spawns", "npc-routes"]
+    }
+  ]
+}
