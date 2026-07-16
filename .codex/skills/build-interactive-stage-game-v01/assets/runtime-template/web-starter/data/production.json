@@ -1,0 +1,244 @@
+{
+  "$schema": "interactive-stage-production/v1",
+  "schemaVersion": "1.0.0",
+  "id": "production.web-starter",
+  "title": "The First Cue",
+  "language": "en",
+  "adaptation": {
+    "mode": "faithful-stage",
+    "playerAgency": "actor-role",
+    "targetMinutes": 2
+  },
+  "sources": [
+    { "id": "source.main", "path": "data/source.txt", "kind": "outline" }
+  ],
+  "flags": [
+    { "id": "flag.letter-read", "initial": false }
+  ],
+  "story": {
+    "facts": [
+      {
+        "id": "fact.first-cue",
+        "text": "Every finished story begins with one deliberate action.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.explore",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 3, "endLine": 3, "confidence": 1 }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "character.guide",
+        "name": "Guide",
+        "knowledge": ["fact.first-cue"],
+        "beliefs": [{ "factId": "fact.first-cue", "stance": "accepts" }]
+      },
+      {
+        "id": "character.visitor",
+        "name": "Visitor",
+        "knowledge": [],
+        "beliefs": [{ "factId": "fact.first-cue", "stance": "unaware" }]
+      }
+    ],
+    "evidence": [],
+    "adaptationLedger": []
+  },
+  "world": {
+    "stages": [
+      {
+        "id": "stage.room",
+        "label": "Bare rehearsal room",
+        "anchors": [
+          { "id": "anchor.visitor", "kind": "entrance" },
+          { "id": "anchor.guide", "kind": "focus" },
+          { "id": "anchor.letter", "kind": "prop" }
+        ]
+      }
+    ],
+    "actors": [
+      { "id": "actor.guide", "characterId": "character.guide", "stageId": "stage.room", "anchorId": "anchor.guide" },
+      { "id": "actor.visitor", "characterId": "character.visitor", "stageId": "stage.room", "anchorId": "anchor.visitor" }
+    ],
+    "props": [
+      {
+        "id": "prop.letter",
+        "prototype": "readable",
+        "stageId": "stage.room",
+        "anchorId": "anchor.letter",
+        "initialState": "sealed",
+        "states": ["sealed", "read"]
+      }
+    ]
+  },
+  "performance": {
+    "entryBeat": "beat.explore",
+    "scenes": [
+      { "id": "scene.first-cue", "label": "The First Cue", "stageId": "stage.room", "entryBeat": "beat.explore", "required": true }
+    ],
+    "beats": [
+      {
+        "id": "beat.explore",
+        "sceneId": "scene.first-cue",
+        "stageId": "stage.room",
+        "mode": "exploration",
+        "cues": [
+          { "id": "cue.guide-welcome", "type": "dialogue.say", "actorId": "actor.guide", "text": "Welcome. Read the letter when you are ready." }
+        ],
+        "actions": [
+          {
+            "id": "action.read-letter",
+            "label": "Read the sealed letter",
+            "verb": "Read",
+            "effects": {
+              "setFlags": ["flag.letter-read"],
+              "revealFacts": ["fact.first-cue"],
+              "setProps": [{ "propId": "prop.letter", "state": "read" }]
+            }
+          }
+        ],
+        "next": [
+          { "to": "beat.ending", "kind": "auto", "when": { "flagsAll": ["flag.letter-read"] } }
+        ]
+      },
+      {
+        "id": "beat.ending",
+        "sceneId": "scene.first-cue",
+        "stageId": "stage.room",
+        "mode": "transition",
+        "cues": [],
+        "actions": [],
+        "next": [],
+        "terminal": true,
+        "endingId": "ending.curtain"
+      }
+    ],
+    "endings": [
+      { "id": "ending.curtain", "label": "Curtain" }
+    ]
+  },
+  "ui": {
+    "controls": [
+      { "action": "interact", "bindings": ["KeyE"], "label": "Interact" },
+      { "action": "pause", "bindings": ["Escape"], "label": "Pause" },
+      { "action": "move", "bindings": ["KeyW", "KeyA", "KeyS", "KeyD"], "label": "Move" },
+      { "action": "advance", "bindings": ["Space"], "label": "Advance dialogue" }
+    ],
+    "accessibility": { "captions": true, "reducedMotion": false, "highContrastFocus": true }
+  },
+  "assets": [],
+
+  "version": "1.0.0",
+  "meta": {
+    "id": "production.web-starter",
+    "title": "The First Cue",
+    "subtitle": "A minimal interactive stage",
+    "sourceTitle": "Starter outline",
+    "epilogue": "The stage is ready for a new script.",
+    "ending": { "title": "Curtain", "text": "One action has turned a script into a playable scene." }
+  },
+  "settings": {
+    "initialSceneId": "scene-first-cue",
+    "finalSceneId": "scene-first-cue",
+    "playerActor": "visitor",
+    "playerSpeed": 220,
+    "interactionDistance": 120,
+    "interactionKey": "E",
+    "masterVolume": 0.25,
+    "ui": {
+      "loading": "Raising the curtain…",
+      "start": "Begin the scene",
+      "continue": "Continue",
+      "continuePerformance": "Return to the performance",
+      "discoveries": "Discovered",
+      "interactionTemplate": "[{key}] {label}",
+      "ending": "Curtain",
+      "noSave": "No saved performance yet.",
+      "error": "The production package could not be loaded."
+    },
+    "lightPresets": {
+      "rehearsal": { "intensity": 0.72, "color": "#d8c49a" }
+    }
+  },
+  "actors": {
+    "guide": { "name": "Guide", "role": "Stage guide", "color": "#d7c7ad", "accent": "#b9965b", "shape": "adult", "layer": "default" },
+    "visitor": { "name": "Visitor", "role": "Player", "color": "#b8cbe0", "accent": "#6d91b8", "shape": "adult", "layer": "default" }
+  },
+  "facts": {
+    "first-cue": { "title": "The first cue", "summary": "Every finished story begins with one deliberate action.", "category": "message" }
+  },
+  "maps": {
+    "rehearsal-room": {
+      "name": "Bare rehearsal room",
+      "width": 960,
+      "height": 620,
+      "spawn": { "x": 300, "y": 360 },
+      "background": "#171b25",
+      "anchors": {
+        "visitor_start": { "x": 300, "y": 360 },
+        "guide_center": { "x": 590, "y": 300 },
+        "letter_table": { "x": 390, "y": 360 },
+        "resume": { "x": 300, "y": 360 }
+      },
+      "obstacles": [
+        { "x": 0, "y": 0, "w": 960, "h": 45 },
+        { "x": 0, "y": 575, "w": 960, "h": 45 },
+        { "x": 0, "y": 0, "w": 45, "h": 620 },
+        { "x": 915, "y": 0, "w": 45, "h": 620 }
+      ],
+      "props": [
+        { "id": "letter", "type": "readable", "label": "Sealed letter", "anchor": "letter_table", "state": "sealed", "solid": false, "color": "#d8caa8" }
+      ],
+      "ambient": { "color": "#273044", "intensity": 0.72, "light": "rehearsal", "weather": "still", "sounds": [] }
+    }
+  },
+  "scenes": [
+    {
+      "id": "scene-first-cue",
+      "index": 1,
+      "kicker": "ACT I",
+      "title": "The First Cue",
+      "subtitle": "A letter waits on a bare stage.",
+      "mapId": "rehearsal-room",
+      "playerActor": "visitor",
+      "actors": [
+        { "actorId": "visitor", "anchor": "visitor_start", "visible": true },
+        { "actorId": "guide", "anchor": "guide_center", "visible": true }
+      ],
+      "worldState": { "light": { "preset": "rehearsal", "intensity": 0.72, "color": "#d8c49a" }, "layers": { "default": true }, "flags": [] },
+      "cues": [
+        { "type": "title", "text": "The First Cue", "subtitle": "A reusable one-scene production", "duration": 900 },
+        { "type": "say", "actorId": "guide", "text": "Welcome. Walk to the sealed letter and press E when you are ready.", "duration": 2600 },
+        { "type": "explore", "action": "open" },
+        { "type": "say", "actorId": "guide", "text": "Good. One deliberate action is enough to begin.", "duration": 2200 },
+        { "type": "end", "title": "Curtain", "text": "The starter has completed performance, exploration, interaction, and ending states." }
+      ],
+      "exploration": {
+        "objective": "Inspect the sealed letter, then press E again to resume.",
+        "minDiscoveries": 1,
+        "requiredFlags": ["letter-read"],
+        "resumeAnchor": "resume",
+        "resumeDistance": 100,
+        "progressTemplate": "{current}/{minimum} interactions",
+        "interactions": [
+          {
+            "id": "read-letter",
+            "targetType": "prop",
+            "targetId": "letter",
+            "label": "Read the sealed letter",
+            "once": true,
+            "dialogue": [
+              { "actorId": "visitor", "text": "Every finished story begins with one deliberate action.", "emotion": "thoughtful", "duration": 2200 }
+            ],
+            "revealFacts": ["first-cue"],
+            "setFlags": ["letter-read"],
+            "propState": { "propId": "letter", "state": "read" }
+          }
+        ]
+      },
+      "skipEffects": { "revealFacts": ["first-cue"], "setFlags": ["letter-read"], "propStates": [{ "propId": "letter", "state": "read" }] },
+      "ending": { "title": "Curtain", "text": "The stage is ready for a new production." }
+    }
+  ]
+}

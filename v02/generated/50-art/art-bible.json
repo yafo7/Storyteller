@@ -1,0 +1,18 @@
+{
+  "$schema": "script-game-art-bible/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "sourceHash": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5",
+  "style": {"medium": "手绘舞台绘景与剪纸人物结合的 2D 哥特绘本", "finish": "可读的块面、有限纹理、电影式景深但不追求真人照片", "period": "1945 年海峡群岛宅邸"},
+  "palette": {"ink": "#090d16", "navy": "#142238", "candle": "#d3a75d", "fog": "#8ea0ad", "daylight": "#d9d7c8", "danger": "#b85a54", "memory": "#6f7898"},
+  "characterRules": {"Grace": "深色高领长裙、盘发、锐利而疲惫；不参照具体演员", "Anne": "白色睡裙、短发、警觉直视", "Nicholas": "深色背心、收肩、常靠近 Anne", "Mills": "维多利亚遗风黑裙、帽饰、沉静", "Charles": "褪色军装、被雾侵蚀的边缘", "Victor": "较现代的浅色毛衣，轮廓比鬼宅人物更清晰"},
+  "environmentRules": {"architecture": "深木护墙、厚门、窄窗、衰败织物", "stage": "所有地图保留一条清晰的横向前景行动带", "layers": "另一个世界用双重轮廓、错位家具和声音波纹表现，不使用俗套白床单鬼魂"},
+  "compositionRules": {"background": "16:9、角色站立区位于下三分之一、顶部留 HUD、底部留对白", "portraits": "肩部以上、统一视线高度、六个等宽栏位、无文字"},
+  "lightingRules": {"dark": "烛光集中、边缘深蓝", "light": "冷白斜切光柱，不代表纯粹安全或邪恶", "overlap": "暖冷双曝光但保持交互物可读"},
+  "uiRules": {"materials": "墨蓝半透明玻璃、黄铜细线、奶油色文字", "focus": "交互物使用呼吸式黄铜轮廓和具体动词"},
+  "motionRules": {"curtains": "0.8 秒分层滑动", "worldLayer": "1.2 秒双曝光溶解", "portraits": "轻微呼吸位移而非嘴型动画"},
+  "accessibilityRules": {"contrast": "正文不低于 4.5:1", "sound": "调谐方向同时显示字幕箭头", "motion": "可关闭视差、抖动和闪烁"},
+  "prohibitedDrift": ["复刻电影演员面容", "现代电器", "高饱和奇幻魔法", "血腥尸体", "背景内文字", "随机改变房间透视", "把另一个世界表现成传统白床单幽灵"],
+  "decisions": [{"id": "art.original-cast", "reason": "使用原创人物设计，避免依赖电影演员肖像。"}],
+  "unresolved": []
+}

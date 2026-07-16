@@ -1,0 +1,21 @@
+{
+  "$schema": "script-game-production-charter/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "title": "雾宅回声 0.2",
+  "sourcePaths": ["../data/script.txt"],
+  "language": "zh-CN",
+  "adaptationMode": "faithful-stage",
+  "playerAgency": "actor-role",
+  "targetMinutes": 38,
+  "runtimeProfile": "offline-2d-narrative-stage-v02",
+  "assetPolicy": "ai-original-plus-code-native-ui",
+  "autonomy": {"choosePerGameCreativeDetails": true, "askOnlyForBlockingAuthority": true},
+  "qualityBars": {"storyDerivedCoreMechanics": 1, "worldTransformingMechanics": 1, "requiredInteractionConsequences": 2, "requiredEndingCoverage": 1, "placeholderAssetsAllowedAtAcceptance": false},
+  "sourceHash": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5",
+  "decisions": [
+    {"id": "decision.player-grace", "kind": "player-role", "reason": "Grace 的知识局限、控制欲与行动能力共同形成最强的戏剧限制。"},
+    {"id": "decision.six-chapters", "kind": "compression", "reason": "将剧本事件压缩为六段可玩认知转折，同时保持真相揭示顺序。"}
+  ],
+  "unresolved": []
+}

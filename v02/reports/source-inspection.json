@@ -1,0 +1,68 @@
+{
+  "reportVersion": 1,
+  "source": {
+    "path": "D:\\workshop\\developer_learn\\3js_project\\storyteller\\data\\script.txt",
+    "bytes": 42785,
+    "sha256": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5",
+    "normalizedSha256": "27cdcb18f5aa326a5847f6b9ed7fcea52a164296f724bd8363110807a8fc0099",
+    "utf8Bom": false,
+    "lineEndings": "crlf"
+  },
+  "detectedFormat": "stage-play",
+  "requestedFormat": "auto",
+  "counts": {
+    "lines": 1988,
+    "nonEmptyLines": 1988,
+    "wordsApproximate": 8102,
+    "characters": 40798,
+    "sceneHeadings": 0,
+    "timestamps": 0,
+    "speakerCandidates": 9,
+    "tabs": 0
+  },
+  "samples": {
+    "sceneHeadings": [],
+    "timestamps": [],
+    "speakers": [
+      {
+        "label": "MRS MILLS",
+        "occurrences": 15
+      },
+      {
+        "label": "GRACE",
+        "occurrences": 7
+      },
+      {
+        "label": "ANNE",
+        "occurrences": 5
+      },
+      {
+        "label": "NICHOLAS",
+        "occurrences": 4
+      },
+      {
+        "label": "CHAPLES",
+        "occurrences": 2
+      },
+      {
+        "label": "MP TUTTLE",
+        "occurrences": 2
+      },
+      {
+        "label": "CHILDPEN",
+        "occurrences": 1
+      },
+      {
+        "label": "VICTOR",
+        "occurrences": 1
+      },
+      {
+        "label": "WOMAN",
+        "occurrences": 1
+      }
+    ],
+    "longLines": [],
+    "tabLines": []
+  },
+  "warnings": []
+}

@@ -43,3 +43,12 @@ node C:\Users\yafo777\.codex\skills\build-interactive-stage-game\scripts\simulat
 ## 内容提示
 
 包含儿童死亡、家庭暴力、自杀回忆、幽灵与降灵会主题。
+
+## 版本对照
+
+启动一次 `npm run dev` 后，可在同一端口同时打开：
+
+- 0.1 原始互动舞台：<http://127.0.0.1:5175/v01/>
+- 0.2 总导演工作流版：<http://127.0.0.1:5175/v02/>
+
+0.1 的工作流保存在 `.codex/skills/build-interactive-stage-game-v01/`；0.2 总导演与分工 Skill 保存在 `.codex/skills/`。两个游戏使用独立存档键，可以同时游玩而不会互相覆盖进度。

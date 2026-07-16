@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interactive Stage Game Builder 0.1"
+  short_description: "Preserve the original script-to-stage workflow"
+  default_prompt: "Use $build-interactive-stage-game-v01 to reproduce the original 0.1 interactive stage workflow."

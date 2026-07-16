@@ -1,0 +1,16 @@
+{
+  "$schema": "script-game-runtime-capabilities/v1",
+  "schemaVersion": "1.0.0",
+  "runtime": "storyteller-dom-stage-0.2",
+  "verbs": ["move", "open", "close", "cross", "listen", "tune", "switch-layer", "take", "inspect", "place"],
+  "effects": ["entity-state", "portal", "collision", "light", "actor-state", "world-layer", "zone-visibility", "audio", "inventory", "fact", "beat-transition"],
+  "features": {
+    "keyboard": true,
+    "pointer": true,
+    "saveResume": true,
+    "offlineAfterLoad": true,
+    "runtimeAI": false,
+    "reducedMotion": true,
+    "deterministicEnding": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "script-game-build-report/v1",
+  "schemaVersion": "1.0.0",
+  "status": "pass",
+  "buildId": "others-v02",
+  "buildHash": "c98f5d23406b96e7b6c4d60b2a9f2271551578bca4b57f859b18b3c6a82e6df8",
+  "entrypoint": "../../index.html",
+  "serveUrl": "http://127.0.0.1:5175/v02/",
+  "comparisonUrl": "http://127.0.0.1:5175/v01/",
+  "inputs": [
+    "../00-brief/production-charter.json",
+    "../10-story/story-model.json",
+    "../20-design/gameplay-design.json",
+    "../30-performance/performance-plan.json",
+    "../40-world/stage-plan.json",
+    "../50-art/art-bible.json",
+    "../50-art/asset-manifest.json"
+  ],
+  "outputs": ["../../index.html", "../../styles.css", "../../src/game.js", "../../data/production.json"],
+  "capabilityNegotiation": "pass",
+  "networkDependenciesAtRuntime": [],
+  "saveKey": "storyteller-v02-save",
+  "notes": [
+    "The final reveal is gated behind letter, album and grave-rubbing placement.",
+    "The 0.1 application is frozen under /v01 and does not share save state with 0.2.",
+    "All visual assets are bundled locally."
+  ]
+}

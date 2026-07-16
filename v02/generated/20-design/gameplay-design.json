@@ -1,0 +1,51 @@
+{
+  "$schema": "script-game-gameplay-design/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "sourceHash": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5",
+  "experienceGoals": [
+    {"id": "experience.control", "goal": "先因掌控门窗而安心，再因规则失效而不安。", "evidence": "玩家亲手开关窗帘与门，并看到通路、光与角色反应改变。"},
+    {"id": "experience.overlap", "goal": "把另一个家庭感受为同一空间中的邻近存在。", "evidence": "聆听与调谐会让同一房间切换热点、人物与出口。"},
+    {"id": "experience.doubt", "goal": "让玩家在揭底前主动质疑 Grace 的解释。", "evidence": "招聘信、画像、墓碑和光照结果形成可操作的矛盾链。"},
+    {"id": "experience.acceptance", "goal": "结局由控制转向承认未知。", "evidence": "最终操作不是驱逐，而是把三件证物放上桌并走入晨光。"}
+  ],
+  "candidateMechanics": [
+    {"id": "candidate.threshold", "label": "门窗阈值编舞", "scores": {"storyRelevance": 5, "causalClarity": 5, "spatialImpact": 5, "expressiveChoice": 4, "reuse": 5, "feasibility": 5, "accessibility": 4, "novelty": 4, "revealSafety": 5}, "selected": true},
+    {"id": "candidate.frequency", "label": "声音调谐世界层", "scores": {"storyRelevance": 5, "causalClarity": 4, "spatialImpact": 4, "expressiveChoice": 3, "reuse": 4, "feasibility": 4, "accessibility": 3, "novelty": 5, "revealSafety": 4}, "selected": true, "role": "supporting"},
+    {"id": "candidate.stealth", "label": "躲避幽灵追逐", "scores": {"storyRelevance": 2, "causalClarity": 3, "spatialImpact": 4, "expressiveChoice": 2, "reuse": 2, "feasibility": 3, "accessibility": 2, "novelty": 2, "revealSafety": 2}, "selected": false, "rejection": "把相互误认压扁成敌人追逐，并破坏揭示顺序。"}
+  ],
+  "coreLoop": {
+    "id": "loop.threshold-memory",
+    "steps": ["观察当前光与门的状态", "配置门窗以获得安全通路", "进入新空间并聆听异常", "切换叠层或取得证物", "返回家庭空间观察后果", "用新证据重新解释规则"]
+  },
+  "mechanics": [
+    {"id": "mechanic.threshold", "storyBasis": ["motif.threshold", "motif.light"], "playerFantasy": "像舞台监督一样控制宅邸的光与门。", "verbs": ["open", "close", "cross"], "stateDimensions": ["access", "topology", "danger", "actor-behavior", "audiovisual-state"], "teachingSequence": ["关闭育儿室窗帘", "关闭身后门再开启走廊门", "用光揭示新热点", "面对无法再关闭的窗帘"], "escalations": ["单一门窗", "互斥门链", "地图出口改变", "规则永久失效"], "failureRecovery": "危险光照以警告和退回安全锚点处理，不造成不可恢复死亡。"},
+    {"id": "mechanic.tuning", "storyBasis": ["motif.voice"], "playerFantasy": "在同一房间中调谐另一个家庭的痕迹。", "verbs": ["listen", "tune", "switch-layer"], "stateDimensions": ["world-layer", "topology", "actor-behavior", "audiovisual-state"], "teachingSequence": ["听见墙后的哭声", "在钢琴旁调谐", "在降灵桌主动保持重叠"], "escalations": ["声音提示", "热点替换", "通路替换", "完整活人层"], "failureRecovery": "随时用相同动作回到 Grace 层；最终重叠由剧情锁定。"},
+    {"id": "mechanic.evidence-tableau", "storyBasis": ["motif.portrait"], "playerFantasy": "用相互矛盾的物件拼出宅邸的真实时间。", "verbs": ["take", "inspect", "place"], "stateDimensions": ["inventory", "knowledge", "world-layer"], "teachingSequence": ["取得未寄出的信", "取得死者肖像", "制作墓碑拓片", "在降灵桌放置三件证物"], "escalations": ["一件矛盾", "两种时间", "姓名与死亡日期", "记忆回归"], "failureRecovery": "关键证物不可丢弃；场景转换自动保留。"}
+  ],
+  "verbGrammar": ["移动", "查看", "开", "关", "聆听", "调谐", "拿取", "放置", "交谈", "进入"],
+  "worldState": {
+    "dimensions": ["currentMap", "lightState", "activeDoor", "worldLayer", "inventory", "knownFacts", "actorMood", "curtainsRemoved"],
+    "invariants": ["关键证物取得后不可丢失", "最终揭示前 worldLayer 只能短暂切换且不命名生死", "危险光照永远有安全退路", "门链不会同时封死当前房间的所有出口"]
+  },
+  "inventoryRules": ["未寄出的信、死者肖像、墓碑拓片为关键证物", "证物跨地图保留", "降灵桌放置不消耗证物，只改变展示状态"],
+  "interactionTransactions": [
+    {"id": "interaction.close-nursery-shutter", "mechanicId": "mechanic.threshold", "preconditions": ["shutter=open"], "affordance": "漏光的百叶窗", "performance": ["拉下百叶", "光柱收束", "孩子停止喘息"], "effects": ["shutter=closed", "light=safe", "portal.hall=enabled", "anneMood=calmer"], "feedback": ["画面由冷白转为烛光", "出现安全通路"], "consequenceChannels": ["access", "danger", "actor-behavior", "audiovisual-state"], "reversible": true, "reversalEffects": ["shutter=open", "portal.hall=disabled"], "recovery": "光照警告后可立即重新关闭。", "storyRefs": ["fact.children-light"]},
+    {"id": "interaction.door-chain", "mechanicId": "mechanic.threshold", "preconditions": ["previousDoor=closed"], "affordance": "黄铜门把", "performance": ["关门声", "下一门锁舌弹开"], "effects": ["activeDoor=target", "previousDoor=closed", "portal.target=enabled"], "feedback": ["门链 UI 更新", "声音方向改变"], "consequenceChannels": ["access", "topology", "audiovisual-state"], "reversible": true, "reversalEffects": ["returnPortal=enabled"], "recovery": "当前房间始终保留返回门。", "storyRefs": ["fact.door-rule"]},
+    {"id": "interaction.take-letter", "mechanicId": "mechanic.evidence-tableau", "preconditions": ["letter=unread"], "affordance": "信箱中的招聘信", "performance": ["展开信纸", "Mills 走近"], "effects": ["inventory+=letter", "fact.letter-unposted=known", "millsMood=watchful"], "feedback": ["证物栏新增信件", "Mills 改变站位"], "consequenceChannels": ["possession", "knowledge", "actor-behavior"], "reversible": false, "reversalEffects": [], "recovery": "证物自动保留。", "storyRefs": ["fact.letter-unposted"]},
+    {"id": "interaction.open-curtain-victor", "mechanicId": "mechanic.threshold", "preconditions": ["reveal.letter=known"], "affordance": "自行颤动的窗帘", "performance": ["窗帘被拉开", "冷光切入", "另一张床短暂重叠"], "effects": ["worldLayer=echo", "hotspot.victor=enabled", "portal.music=enabled"], "feedback": ["背景状态变化", "Victor 剪影出现", "地图开放音乐室"], "consequenceChannels": ["world-layer", "access", "actor-behavior", "audiovisual-state"], "reversible": true, "reversalEffects": ["worldLayer=grace", "hotspot.victor=disabled"], "recovery": "再次拉帘可回到原层。", "storyRefs": ["fact.victor-seen"]},
+    {"id": "interaction.tune-piano", "mechanicId": "mechanic.tuning", "preconditions": ["map=music"], "affordance": "自行发声的旧钢琴", "performance": ["按住琴键聆听", "两个房间频率对齐"], "effects": ["worldLayer=overlap", "portraitAlbum=visible", "charlesEcho=enabled"], "feedback": ["墙纸与家具出现双重轮廓", "新热点显现"], "consequenceChannels": ["world-layer", "knowledge", "actor-behavior", "audiovisual-state"], "reversible": true, "reversalEffects": ["worldLayer=grace"], "recovery": "松开调谐即可回层。", "storyRefs": ["fact.worlds-overlap", "fact.charles-dead"]},
+    {"id": "interaction.take-album", "mechanicId": "mechanic.evidence-tableau", "preconditions": ["worldLayer=overlap"], "affordance": "死者肖像册", "performance": ["翻开肖像", "人物眼睛随光变化"], "effects": ["inventory+=album", "reveal.overlap=known", "portal.garden=enabled"], "feedback": ["证物栏新增肖像", "花园出口亮起"], "consequenceChannels": ["possession", "knowledge", "access"], "reversible": false, "reversalEffects": [], "recovery": "证物自动保留。", "storyRefs": ["fact.worlds-overlap"]},
+    {"id": "interaction.remove-curtains", "mechanicId": "mechanic.threshold", "preconditions": ["inventory contains album"], "affordance": "空荡的窗钩", "performance": ["全宅窗帘消失", "晨光灌入", "孩子没有受伤"], "effects": ["curtainsRemoved=true", "light=day", "portal.garden=enabled", "danger.light=false"], "feedback": ["所有地图切换日光变体", "花园路径打开", "孩子走入光斑"], "consequenceChannels": ["danger", "access", "topology", "actor-behavior", "audiovisual-state"], "reversible": false, "reversalEffects": [], "recovery": "剧情永久状态，不允许恢复窗帘。", "storyRefs": ["fact.curtains-removed", "fact.light-safe-now"]},
+    {"id": "interaction.rub-graves", "mechanicId": "mechanic.evidence-tableau", "preconditions": ["map=garden", "curtainsRemoved=true"], "affordance": "三块带姓名的墓碑", "performance": ["逐一拓印姓名与日期", "Mills 从雾中现身"], "effects": ["inventory+=grave-rubbing", "fact.servants-dead=known", "portal.seance=enabled"], "feedback": ["证物栏新增拓片", "宅邸上层出口出现"], "consequenceChannels": ["possession", "knowledge", "access", "actor-behavior"], "reversible": false, "reversalEffects": [], "recovery": "已拓印墓碑持续高亮。", "storyRefs": ["fact.servants-dead"]},
+    {"id": "interaction.place-evidence", "mechanicId": "mechanic.evidence-tableau", "preconditions": ["inventory contains letter, album, grave-rubbing"], "affordance": "降灵桌上的三个空位", "performance": ["依次放置信、肖像、拓片", "活人声音与房间对齐", "枕头记忆显现"], "effects": ["worldLayer=living", "fact.family-dead=known", "ending=unlocked"], "feedback": ["画面切换活人视角", "Grace 记忆独白", "晨光出口开放"], "consequenceChannels": ["world-layer", "knowledge", "access", "audiovisual-state"], "reversible": false, "reversalEffects": [], "recovery": "最终演出可从检查点重播。", "storyRefs": ["fact.family-dead"]}
+  ],
+  "onboardingRequirements": ["30 秒内说明 Grace 是母亲且孩子怕光", "90 秒内完成关闭百叶窗", "首次操作同时改变光、孩子反应与门的可用性", "门链规则通过实际过门教学"],
+  "runtimeRequirements": [
+    {"id": "runtime.threshold", "requiredVerbs": ["open", "close", "cross"], "requiredEffects": ["entity-state", "portal", "collision", "light", "actor-state"]},
+    {"id": "runtime.layer", "requiredVerbs": ["listen", "tune", "switch-layer"], "requiredEffects": ["world-layer", "zone-visibility", "audio", "portal"]},
+    {"id": "runtime.evidence", "requiredVerbs": ["take", "inspect", "place"], "requiredEffects": ["inventory", "fact", "entity-state", "beat-transition"]}
+  ],
+  "decisions": [],
+  "unresolved": []
+}

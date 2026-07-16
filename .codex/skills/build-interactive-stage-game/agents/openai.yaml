@@ -1,4 +1,4 @@
 interface:
-  display_name: "Autonomous Script Game Studio"
-  short_description: "Orchestrate a complete game from script to tested build"
+  display_name: "Autonomous Script Game Studio 0.2"
+  short_description: "Run the 0.2 specialist workflow from script to tested build"
   default_prompt: "Use $build-interactive-stage-game to autonomously produce and validate a complete playable game from this script."

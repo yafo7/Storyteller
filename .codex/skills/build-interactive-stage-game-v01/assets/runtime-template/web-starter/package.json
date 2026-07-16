@@ -1,0 +1,9 @@
+{
+  "name": "interactive-stage-web-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.mjs",
+    "check": "node --check server.mjs && node --check src/runtime.js && node --check src/game.js"
+  }
+}

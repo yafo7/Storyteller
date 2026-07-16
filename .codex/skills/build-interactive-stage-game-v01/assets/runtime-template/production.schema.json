@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "interactive-stage-production/v1",
+  "title": "Interactive Stage Production",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "id",
+    "title",
+    "language",
+    "adaptation",
+    "sources",
+    "flags",
+    "story",
+    "world",
+    "performance",
+    "ui",
+    "assets"
+  ],
+  "properties": {
+    "$schema": { "const": "interactive-stage-production/v1" },
+    "schemaVersion": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "title": { "type": "string", "minLength": 1 },
+    "language": { "type": "string", "minLength": 1 },
+    "adaptation": { "type": "object" },
+    "sources": { "type": "array", "minItems": 1 },
+    "flags": { "type": "array" },
+    "story": { "type": "object" },
+    "world": { "type": "object" },
+    "performance": { "type": "object" },
+    "ui": { "type": "object" },
+    "assets": { "type": "array" }
+  },
+  "$comment": "Use scripts/validate-production.mjs for semantic and cross-reference validation."
+}

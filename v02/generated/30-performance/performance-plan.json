@@ -1,0 +1,40 @@
+{
+  "$schema": "script-game-performance-plan/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "sourceHash": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5",
+  "playerKnowledgeAtStart": {"identity": "Grace，两个孩子的母亲", "place": "战后海岛上的封闭宅邸", "immediateNeed": "在晨光增强前遮住育儿室", "belief": "光会杀死孩子", "unknown": ["新仆人为何到来", "Victor 是谁", "谁才是入侵者"]},
+  "onboarding": {
+    "steps": [
+      {"id": "teach.move", "instruction": "A/D 或方向键移动", "context": "走向漏光的窗边", "completion": "玩家进入窗帘交互范围"},
+      {"id": "teach.interact", "instruction": "E 处理眼前目标", "context": "关闭百叶窗", "completion": "光线、孩子状态与出口同时改变"},
+      {"id": "teach.door", "instruction": "先关身后的门", "context": "离开育儿室", "completion": "走廊门解锁"}
+    ],
+    "completionEvidence": ["shutter=closed", "door.nursery=closed", "portal.hall=enabled"]
+  },
+  "intensityCurve": [1, 2, 1, 3, 2, 4, 2, 4, 5, 2],
+  "scenes": [
+    {"id": "scene.rules", "label": "第一章：别让光进来", "purpose": "通过行动建立角色、家庭与保护规则。"},
+    {"id": "scene.letter", "label": "第二章：没有寄出的信", "purpose": "让玩家第一次发现因果矛盾。"},
+    {"id": "scene.victor", "label": "第三章：同一间房", "purpose": "把异常转化为另一个家庭的空间痕迹。"},
+    {"id": "scene.echo", "label": "第四章：雾中的归人", "purpose": "通过调谐与肖像建立生死世界重叠理论。"},
+    {"id": "scene.graves", "label": "第五章：窗帘之后", "purpose": "让保护规则永久失效，并用墓碑证实仆人死亡。"},
+    {"id": "scene.seance", "label": "终章：这房子是我们的", "purpose": "让玩家亲手把证物组合成最终身份反转。"}
+  ],
+  "beats": [
+    {"id": "beat.wake", "sceneId": "scene.rules", "mode": "performance", "intention": "把玩家放进一个正在失效的日常秩序。", "playerQuestion": "为什么孩子不能见光？", "objective": "检查孩子并走向漏光窗户。", "obstacle": "房间陌生且 Anne 正在喘息。", "actorTactics": ["Grace 用命令掩盖恐惧", "Anne 指向光柱"], "requiredActions": ["移动到窗边"], "reveals": [], "turn": "光不是背景，而是立即改变孩子和出口的状态。", "consequence": "玩家理解自己必须主动管理空间。", "intensity": 1, "breath": "关闭窗帘后保留片刻安静。", "exitGate": "玩家进入窗帘交互范围。", "estimatedSeconds": 55},
+    {"id": "beat.first-shutter", "sceneId": "scene.rules", "mode": "exploration", "intention": "把保护规则教成有后果的动作。", "playerQuestion": "关闭窗帘真的让一切安全吗？", "objective": "关闭百叶并安全离开。", "obstacle": "走廊门在育儿室门敞开时锁死。", "actorTactics": ["Nicholas 请求不要分开"], "requiredActions": ["关闭百叶", "关闭育儿室门", "打开走廊门"], "reveals": ["fact.door-rule", "fact.children-light"], "turn": "安全也意味着把家锁成一连串小房间。", "consequence": "门厅开放。", "intensity": 2, "breath": "进入门厅后目标更新，不立刻播放长对白。", "exitGate": "portal.hall=enabled 且玩家进入门厅。", "estimatedSeconds": 120},
+    {"id": "beat.letter", "sceneId": "scene.letter", "mode": "exploration", "intention": "让玩家主动建立仆人到来的矛盾。", "playerQuestion": "他们如何知道这里需要仆人？", "objective": "检查信箱并与 Mills 对质。", "obstacle": "门链限制厨房和信箱不能同时开放。", "actorTactics": ["Mills 先顺从，再坦白熟悉宅邸"], "requiredActions": ["取得招聘信", "调整门链走到 Mills 身边"], "reveals": ["reveal.letter"], "turn": "Mills 不是收到招聘而来，她曾在这里生活。", "consequence": "玩家获得第一件证物，育儿室开始传出哭声。", "intensity": 1, "breath": "允许查看信件与人物手记。", "exitGate": "inventory contains letter 且完成 Mills 对话。", "estimatedSeconds": 240},
+    {"id": "beat.victor", "sceneId": "scene.victor", "mode": "exploration", "intention": "让另一个家庭第一次改变地图。", "playerQuestion": "Anne 看到的男孩如何穿过锁门？", "objective": "回到育儿室并找到哭声来源。", "obstacle": "窗帘开合会交替改变安全与可见通路。", "actorTactics": ["Anne 坚持 Victor 就在床边", "Victor 争夺房间"], "requiredActions": ["拉开窗帘", "调谐哭声", "穿过显现的音乐室入口"], "reveals": ["reveal.victor"], "turn": "同一间育儿室短暂出现另一张床和另一个男孩。", "consequence": "音乐室成为可达地图。", "intensity": 3, "breath": "进入音乐室后声音暂时停止。", "exitGate": "portal.music=enabled 且玩家进入音乐室。", "estimatedSeconds": 300},
+    {"id": "beat.piano", "sceneId": "scene.echo", "mode": "exploration", "intention": "把世界重叠从鬼故事变成可操纵的系统。", "playerQuestion": "是谁在演奏没有人的钢琴？", "objective": "在钢琴旁调谐另一个房间。", "obstacle": "调谐时家具、出口和人物热点会替换。", "actorTactics": ["Mills 给出两个世界的理论", "Grace 用圣经否认"], "requiredActions": ["调谐钢琴", "在重叠层取得死者肖像"], "reveals": ["reveal.overlap"], "turn": "画像记录的不是睡眠，而是死亡。", "consequence": "玩家获得第二件证物，花园门解锁。", "intensity": 2, "breath": "允许在壁炉旁翻看肖像。", "exitGate": "inventory contains album。", "estimatedSeconds": 280},
+    {"id": "beat.charles", "sceneId": "scene.echo", "mode": "performance", "intention": "让 Grace 的私人记忆先于真相出现裂缝。", "playerQuestion": "Charles 为什么像仍在战争里？", "objective": "沿雾声找到 Charles 的回声。", "obstacle": "Charles 回避时间与去向。", "actorTactics": ["Grace 把归来解释为祈祷应验", "Charles 只请求告别"], "requiredActions": ["触碰雾中军装"], "reveals": [], "turn": "Charles 再次离开，战争对他从未结束。", "consequence": "Grace 的记忆层出现枕头与枪声碎片，但尚不可解释。", "intensity": 4, "breath": "返回门厅后只保留脚步与雾。", "exitGate": "charlesEcho=completed。", "estimatedSeconds": 180},
+    {"id": "beat.daylight", "sceneId": "scene.graves", "mode": "performance", "intention": "摧毁最初建立的安全规则。", "playerQuestion": "没有窗帘，孩子为什么没有受伤？", "objective": "检查 Anne 与 Nicholas。", "obstacle": "全宅切换日光状态，旧安全提示失效。", "actorTactics": ["Grace 命令寻找窗帘", "Mills 平静指出情况已经改变"], "requiredActions": ["走入育儿室光斑", "确认孩子无伤"], "reveals": ["reveal.curtains"], "turn": "光不再造成伤害，却打开了通往墓地的路径。", "consequence": "危险状态取消，花园拓扑开放。", "intensity": 2, "breath": "让玩家自由在白昼宅邸来回切图。", "exitGate": "curtainsRemoved=true 且 checkedChildren=true。", "estimatedSeconds": 220},
+    {"id": "beat.graves", "sceneId": "scene.graves", "mode": "exploration", "intention": "证实死者存在但保留主角反转。", "playerQuestion": "如果仆人已经死了，谁在宅邸里？", "objective": "找到并拓印三名仆人的墓碑。", "obstacle": "浓雾遮挡墓地，需用肖像的反光定位。", "actorTactics": ["Mills 请求 Grace 接受新处境"], "requiredActions": ["使用肖像驱散墓地雾层", "拓印三块墓碑"], "reveals": ["reveal.servants"], "turn": "Mills 承认三人死于半世纪前。", "consequence": "上层降灵室入口显现。", "intensity": 4, "breath": "回宅路上没有对白，只显示三个人名。", "exitGate": "inventory contains grave-rubbing。", "estimatedSeconds": 300},
+    {"id": "beat.seance", "sceneId": "scene.seance", "mode": "exploration", "intention": "让玩家主动完成身份反转，而非被动听答案。", "playerQuestion": "三件证物共同说明哪一个家庭属于过去？", "objective": "把信、肖像与拓片放上降灵桌。", "obstacle": "每放一件，房间更接近活人视角，Grace 的控制提示逐步消失。", "actorTactics": ["灵媒追问枕头", "Anne 试图回答", "Grace 的记忆抵抗"], "requiredActions": ["放置信件", "放置肖像", "放置墓碑拓片"], "reveals": ["reveal.family"], "turn": "Grace 记起自己闷死孩子后自杀。", "consequence": "活人离开，晨光出口开放。", "intensity": 5, "breath": "真相后停留在没有目标文字的静默画面。", "exitGate": "evidencePlaced=3 且 memoryRestored=true。", "estimatedSeconds": 360},
+    {"id": "beat.morning", "sceneId": "scene.seance", "mode": "transition", "intention": "把结局从占有欲转成对未知的诚实接受。", "playerQuestion": "死后他们还能怎样生活？", "objective": "与孩子一起走进晨光。", "obstacle": "Grace 无法再用教义解释一切。", "actorTactics": ["Nicholas 询问灵薄狱", "Grace 承认自己不知道"], "requiredActions": ["牵起孩子", "进入光斑"], "reveals": ["fact.light-safe-now"], "turn": "Grace 不再关闭光，而是说出爱与家的选择。", "consequence": "完成演出。", "intensity": 2, "breath": "字幕前保留晨光和空宅声音。", "exitGate": "ending=true。", "estimatedSeconds": 180}
+  ],
+  "dialogueIntents": ["Grace 的命令应逐章减少", "Anne 的台词从求信任变成提供观察", "Mills 只在玩家已有证物后推进解释", "最终独白保留原作事件，不提前复述"],
+  "accessibilityNotes": ["声音调谐同时用屏幕边缘波纹和字幕箭头表示", "光照危险不用颜色单独编码", "所有计时表现都可暂停且不阻断选择", "目标与已学操作可随时打开"],
+  "decisions": [],
+  "unresolved": []
+}

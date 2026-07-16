@@ -1,0 +1,7279 @@
+{
+  "$schema": "interactive-stage-production/v1",
+  "schemaVersion": "1.0.0",
+  "id": "the-others-faithful-stage-zh",
+  "title": "雾宅回声",
+  "language": "zh-CN",
+  "adaptation": {
+    "mode": "faithful-stage",
+    "playerAgency": "actor-role",
+    "targetMinutes": 32
+  },
+  "sources": [
+    {
+      "id": "source.main",
+      "path": "data/script.txt",
+      "kind": "screenplay-transcript",
+      "sha256": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5"
+    }
+  ],
+  "flags": [
+    {
+      "id": "accepted-future-intruders",
+      "initial": false
+    },
+    {
+      "id": "answered-limbo-honestly",
+      "initial": false
+    },
+    {
+      "id": "apologized-to-anne",
+      "initial": false
+    },
+    {
+      "id": "checked-children-in-light",
+      "initial": false
+    },
+    {
+      "id": "checked-nursery-curtain",
+      "initial": false
+    },
+    {
+      "id": "confirmed-curtains-deliberately-removed",
+      "initial": false
+    },
+    {
+      "id": "fog-loop-confirmed",
+      "initial": false
+    },
+    {
+      "id": "heard-new-situation",
+      "initial": false
+    },
+    {
+      "id": "heard-overlapping-rooms",
+      "initial": false
+    },
+    {
+      "id": "held-rosary",
+      "initial": false
+    },
+    {
+      "id": "inspected-charles-pack",
+      "initial": false
+    },
+    {
+      "id": "noticed-fog-loop",
+      "initial": false
+    },
+    {
+      "id": "noticed-lydia-knows-house",
+      "initial": false
+    },
+    {
+      "id": "noticed-piano",
+      "initial": false
+    },
+    {
+      "id": "noticed-unposted-letter",
+      "initial": false
+    },
+    {
+      "id": "opened-dead-album",
+      "initial": false
+    },
+    {
+      "id": "questioned-anne-about-victor",
+      "initial": false
+    },
+    {
+      "id": "read-lydia-grave",
+      "initial": false
+    },
+    {
+      "id": "read-mills-grave",
+      "initial": false
+    },
+    {
+      "id": "read-seance-slate",
+      "initial": false
+    },
+    {
+      "id": "read-tuttle-grave",
+      "initial": false
+    },
+    {
+      "id": "reassured-nicholas",
+      "initial": false
+    },
+    {
+      "id": "recognized-medium",
+      "initial": false
+    },
+    {
+      "id": "reconciled-with-anne",
+      "initial": false
+    },
+    {
+      "id": "respected-lydia-silence",
+      "initial": false
+    },
+    {
+      "id": "spoke-to-charles",
+      "initial": false
+    },
+    {
+      "id": "stood-in-sunlight",
+      "initial": false
+    },
+    {
+      "id": "stored-communion-dress",
+      "initial": false
+    },
+    {
+      "id": "studied-anne-drawing",
+      "initial": false
+    },
+    {
+      "id": "studied-keyring",
+      "initial": false
+    },
+    {
+      "id": "touched-memory-pillow",
+      "initial": false
+    },
+    {
+      "id": "understood-victor-perspective",
+      "initial": false
+    }
+  ],
+  "story": {
+    "facts": [
+      {
+        "id": "house-door-rule",
+        "text": "任何一扇门打开前，上一扇必须关好；孩子绝不能接触强光。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-01-arrival",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 106,
+            "endLine": 122,
+            "confidence": 1
+          },
+          {
+            "sourceId": "source.main",
+            "startLine": 205,
+            "endLine": 220,
+            "confidence": 1
+          }
+        ],
+        "label": "门与光的规矩",
+        "category": "rule",
+        "spoiler": "none"
+      },
+      {
+        "id": "servant-letter-unposted",
+        "text": "求仆广告五天前就留在信箱里，从未刊登；三名仆人却恰好上门。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-01-arrival",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 262,
+            "endLine": 284,
+            "confidence": 1
+          }
+        ],
+        "label": "没有寄出的广告",
+        "category": "contradiction",
+        "spoiler": "none"
+      },
+      {
+        "id": "servants-worked-here",
+        "text": "Mills 承认三人多年前曾在这座宅邸工作。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-01-arrival",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 288,
+            "endLine": 314,
+            "confidence": 1
+          }
+        ],
+        "label": "旧日雇员",
+        "category": "testimony",
+        "spoiler": "none"
+      },
+      {
+        "id": "anne-warns-of-incident",
+        "text": "Anne 暗示旧仆离开后发生过可怕的事，并说母亲曾经失控。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-02-victor",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 238,
+            "endLine": 253,
+            "confidence": 1
+          }
+        ],
+        "label": "Anne 的半句话",
+        "category": "testimony",
+        "spoiler": "minor"
+      },
+      {
+        "id": "victor-seen-by-anne",
+        "text": "Anne 坚称一个叫 Victor 的男孩进入过锁住的房间。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-02-victor",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 529,
+            "endLine": 592,
+            "confidence": 1
+          }
+        ],
+        "label": "名叫 Victor 的男孩",
+        "category": "testimony",
+        "spoiler": "none"
+      },
+      {
+        "id": "victor-family-in-house",
+        "text": "Anne 说 Victor 的父母和一位老妇人正在参观房子，还认为房子属于他们。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-02-victor",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 568,
+            "endLine": 582,
+            "confidence": 1
+          },
+          {
+            "sourceId": "source.main",
+            "startLine": 857,
+            "endLine": 890,
+            "confidence": 1
+          }
+        ],
+        "label": "看不见的一家人",
+        "category": "testimony",
+        "spoiler": "minor"
+      },
+      {
+        "id": "intruders-plan-curtains",
+        "text": "Anne 听见那些看不见的人声称房子属于他们，并计划拆掉窗帘。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-03-haunting",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 857,
+            "endLine": 868,
+            "confidence": 1
+          }
+        ],
+        "label": "他们要拆窗帘",
+        "category": "threat",
+        "spoiler": "minor"
+      },
+      {
+        "id": "anne-four-person-drawing",
+        "text": "Anne 画下 Victor、他的父母与一位出现次数最多的老妇人。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-03-haunting",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 882,
+            "endLine": 917,
+            "confidence": 1
+          }
+        ],
+        "label": "四人画",
+        "category": "evidence",
+        "spoiler": "none"
+      },
+      {
+        "id": "dead-portrait-album",
+        "text": "阁楼藏着维多利亚时代的死者肖像；Mills 说人们曾希望借照片留住灵魂。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-03-haunting",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 972,
+            "endLine": 1009,
+            "confidence": 1
+          }
+        ],
+        "label": "死者相册",
+        "category": "evidence",
+        "spoiler": "minor"
+      },
+      {
+        "id": "worlds-can-overlap",
+        "text": "Mills 相信活人与死者的世界有时会重叠，但没有说明谁属于哪一边。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-03-haunting",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1119,
+            "endLine": 1154,
+            "confidence": 1
+          }
+        ],
+        "label": "两个世界",
+        "category": "theory",
+        "spoiler": "minor"
+      },
+      {
+        "id": "charles-returns-through-fog",
+        "text": "失踪已久的 Charles 从浓雾中归来，却虚弱、恍惚，只说一直在寻找家。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-04-charles",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1219,
+            "endLine": 1258,
+            "confidence": 1
+          }
+        ],
+        "label": "雾中的 Charles",
+        "category": "event",
+        "spoiler": "minor"
+      },
+      {
+        "id": "charles-is-disoriented",
+        "text": "Charles 对时间和处境反应迟钝，仿佛仍身处战场。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-04-charles",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1240,
+            "endLine": 1246,
+            "confidence": 1
+          },
+          {
+            "sourceId": "source.main",
+            "startLine": 1517,
+            "endLine": 1527,
+            "confidence": 1
+          }
+        ],
+        "label": "迷失的归人",
+        "category": "contradiction",
+        "spoiler": "minor"
+      },
+      {
+        "id": "old-woman-overlays-anne",
+        "text": "Grace 一度在 Anne 身上看见老妇人的面孔与动作，Anne 却坚持自己从未变成别人。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-05-curtains",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1367,
+            "endLine": 1449,
+            "confidence": 1
+          }
+        ],
+        "label": "圣餐裙里的老妇人",
+        "category": "perception",
+        "spoiler": "major"
+      },
+      {
+        "id": "charles-leaves-again",
+        "text": "Charles 说自己只是回来告别，并坚持战争还没有结束，随后离开。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-05-curtains",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1517,
+            "endLine": 1554,
+            "confidence": 1
+          }
+        ],
+        "label": "再次告别",
+        "category": "event",
+        "spoiler": "major"
+      },
+      {
+        "id": "curtains-removed",
+        "text": "宅邸窗帘一夜之间全被取下，强光涌入儿童房。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-05-curtains",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1556,
+            "endLine": 1619,
+            "confidence": 1
+          }
+        ],
+        "label": "消失的窗帘",
+        "category": "event",
+        "spoiler": "major"
+      },
+      {
+        "id": "daylight-fails-to-harm",
+        "text": "窗帘消失后，孩子暴露在日光中却没有出现过去所说的伤害。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-05-curtains",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1566,
+            "endLine": 1626,
+            "confidence": 1
+          }
+        ],
+        "label": "没有灼伤",
+        "category": "contradiction",
+        "spoiler": "major"
+      },
+      {
+        "id": "three-servant-graves",
+        "text": "花园墓碑上的名字正是 Bertha Mills、Edmund Tuttle 与 Lydia。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-06-graves",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1702,
+            "endLine": 1750,
+            "confidence": 1
+          }
+        ],
+        "label": "三名仆人的墓碑",
+        "category": "evidence",
+        "spoiler": "major"
+      },
+      {
+        "id": "servants-died-of-tuberculosis",
+        "text": "Mills 承认三名仆人早在半个多世纪前死于肺结核。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-06-graves",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1745,
+            "endLine": 1750,
+            "confidence": 1
+          }
+        ],
+        "label": "半世纪前的肺结核",
+        "category": "truth",
+        "spoiler": "major"
+      },
+      {
+        "id": "intruders-are-another-world",
+        "text": "Mills 说所谓入侵者与 Grace 一家处于彼此交叠的另一重世界。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-06-graves",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1766,
+            "endLine": 1799,
+            "confidence": 1
+          }
+        ],
+        "label": "入侵者确实存在",
+        "category": "truth",
+        "spoiler": "major"
+      },
+      {
+        "id": "seance-names-mother-and-children",
+        "text": "灵媒与宅邸的新住户称接触到一位母亲和两个孩子，并追问儿童房里发生过什么。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-07-seance",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1824,
+            "endLine": 1879,
+            "confidence": 1
+          }
+        ],
+        "label": "降灵会的三个人",
+        "category": "reveal",
+        "spoiler": "final"
+      },
+      {
+        "id": "marlish-family-is-living",
+        "text": "Victor 与父母是搬入宅邸的活人；他们一直把 Grace 一家当作不肯离去的幽灵。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-07-seance",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1871,
+            "endLine": 1917,
+            "confidence": 1
+          }
+        ],
+        "label": "Victor 一家",
+        "category": "reveal",
+        "spoiler": "final"
+      },
+      {
+        "id": "pillow-and-rifle-accusation",
+        "text": "活人一家得知旧宅女主人曾用枕头闷死两个孩子，再开枪自杀。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-07-seance",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1892,
+            "endLine": 1898,
+            "confidence": 1
+          }
+        ],
+        "label": "枕头与步枪",
+        "category": "reveal",
+        "spoiler": "final"
+      },
+      {
+        "id": "grace-remembers-murder-suicide",
+        "text": "Grace 亲口回忆自己闷死 Anne 与 Nicholas，随后用步枪朝自己开枪。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-08-ending",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1920,
+            "endLine": 1947,
+            "confidence": 1
+          }
+        ],
+        "label": "Grace 的完整记忆",
+        "category": "truth",
+        "spoiler": "final"
+      },
+      {
+        "id": "lydia-silence-after-death",
+        "text": "Lydia 在意识到自己和 Mills、Tuttle 已死后停止说话；她并非谋杀的目击者。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-08-ending",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1949,
+            "endLine": 1956,
+            "confidence": 1
+          }
+        ],
+        "label": "Lydia 为何沉默",
+        "category": "truth",
+        "spoiler": "final"
+      },
+      {
+        "id": "charles-died-in-war",
+        "text": "Nicholas 终于问出 Charles 已战死，Grace 予以确认。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-08-ending",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1966,
+            "endLine": 1971,
+            "confidence": 1
+          }
+        ],
+        "label": "Charles 没有归来",
+        "category": "truth",
+        "spoiler": "final"
+      },
+      {
+        "id": "house-belongs-to-family",
+        "text": "Grace 与孩子接受未知的死后状态，决定继续守住这座宅邸。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-08-ending",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1972,
+            "endLine": 1987,
+            "confidence": 1
+          }
+        ],
+        "label": "这房子是我们的",
+        "category": "resolution",
+        "spoiler": "final"
+      },
+      {
+        "id": "sunlight-no-longer-hurts",
+        "text": "Anne 站进晨光，确认阳光已经不会伤害他们。",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.scene-08-ending",
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1984,
+            "endLine": 1987,
+            "confidence": 1
+          }
+        ],
+        "label": "晨光",
+        "category": "resolution",
+        "spoiler": "final"
+      }
+    ],
+    "characters": [
+      {
+        "id": "grace",
+        "name": "Grace",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "母亲／玩家"
+      },
+      {
+        "id": "anne",
+        "name": "Anne",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "女儿"
+      },
+      {
+        "id": "nicholas",
+        "name": "Nicholas",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "儿子"
+      },
+      {
+        "id": "mills",
+        "name": "Bertha Mills",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "管家"
+      },
+      {
+        "id": "tuttle",
+        "name": "Edmund Tuttle",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "园丁"
+      },
+      {
+        "id": "lydia",
+        "name": "Lydia",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "沉默的女仆"
+      },
+      {
+        "id": "charles",
+        "name": "Charles",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "Grace 的丈夫"
+      },
+      {
+        "id": "victor",
+        "name": "Victor Marlish",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "宅邸中的男孩"
+      },
+      {
+        "id": "medium",
+        "name": "老灵媒",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "降灵会主持者"
+      },
+      {
+        "id": "mr_marlish",
+        "name": "Mr Marlish",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "Victor 的父亲"
+      },
+      {
+        "id": "mrs_marlish",
+        "name": "Mrs Marlish",
+        "knowledge": [],
+        "beliefs": [],
+        "role": "Victor 的母亲"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "evidence.servant-letter-unposted",
+        "label": "没有寄出的广告",
+        "supports": [
+          "servant-letter-unposted"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 262,
+            "endLine": 284,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.servants-worked-here",
+        "label": "旧日雇员",
+        "supports": [
+          "servants-worked-here"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 288,
+            "endLine": 314,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.anne-warns-of-incident",
+        "label": "Anne 的半句话",
+        "supports": [
+          "anne-warns-of-incident"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 238,
+            "endLine": 253,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.victor-seen-by-anne",
+        "label": "名叫 Victor 的男孩",
+        "supports": [
+          "victor-seen-by-anne"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 529,
+            "endLine": 592,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.victor-family-in-house",
+        "label": "看不见的一家人",
+        "supports": [
+          "victor-family-in-house"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 568,
+            "endLine": 582,
+            "confidence": 1
+          },
+          {
+            "sourceId": "source.main",
+            "startLine": 857,
+            "endLine": 890,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.anne-four-person-drawing",
+        "label": "四人画",
+        "supports": [
+          "anne-four-person-drawing"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 882,
+            "endLine": 917,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.dead-portrait-album",
+        "label": "死者相册",
+        "supports": [
+          "dead-portrait-album"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 972,
+            "endLine": 1009,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.charles-is-disoriented",
+        "label": "迷失的归人",
+        "supports": [
+          "charles-is-disoriented"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1240,
+            "endLine": 1246,
+            "confidence": 1
+          },
+          {
+            "sourceId": "source.main",
+            "startLine": 1517,
+            "endLine": 1527,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.daylight-fails-to-harm",
+        "label": "没有灼伤",
+        "supports": [
+          "daylight-fails-to-harm"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1566,
+            "endLine": 1626,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.three-servant-graves",
+        "label": "三名仆人的墓碑",
+        "supports": [
+          "three-servant-graves"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1702,
+            "endLine": 1750,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.seance-names-mother-and-children",
+        "label": "降灵会的三个人",
+        "supports": [
+          "seance-names-mother-and-children"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1824,
+            "endLine": 1879,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.marlish-family-is-living",
+        "label": "Victor 一家",
+        "supports": [
+          "marlish-family-is-living"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1871,
+            "endLine": 1917,
+            "confidence": 1
+          }
+        ]
+      },
+      {
+        "id": "evidence.pillow-and-rifle-accusation",
+        "label": "枕头与步枪",
+        "supports": [
+          "pillow-and-rifle-accusation"
+        ],
+        "sourceRefs": [
+          {
+            "sourceId": "source.main",
+            "startLine": 1892,
+            "endLine": 1898,
+            "confidence": 1
+          }
+        ]
+      }
+    ],
+    "adaptationLedger": []
+  },
+  "world": {
+    "stages": [
+      {
+        "id": "hall",
+        "label": "宅邸公共区",
+        "anchors": [
+          {
+            "id": "grace_start",
+            "kind": "focus"
+          },
+          {
+            "id": "front_door",
+            "kind": "entrance"
+          },
+          {
+            "id": "entry_inside",
+            "kind": "entrance"
+          },
+          {
+            "id": "mills_entry",
+            "kind": "entrance"
+          },
+          {
+            "id": "tuttle_entry",
+            "kind": "entrance"
+          },
+          {
+            "id": "lydia_entry",
+            "kind": "entrance"
+          },
+          {
+            "id": "hall_center",
+            "kind": "focus"
+          },
+          {
+            "id": "key_table",
+            "kind": "prop"
+          },
+          {
+            "id": "letter_table",
+            "kind": "prop"
+          },
+          {
+            "id": "dining_table",
+            "kind": "prop"
+          },
+          {
+            "id": "hearth",
+            "kind": "focus"
+          },
+          {
+            "id": "music_door",
+            "kind": "entrance"
+          },
+          {
+            "id": "piano",
+            "kind": "focus"
+          },
+          {
+            "id": "curtain_wall",
+            "kind": "prop"
+          },
+          {
+            "id": "stairs",
+            "kind": "focus"
+          },
+          {
+            "id": "charles_rest",
+            "kind": "focus"
+          }
+        ]
+      },
+      {
+        "id": "upstairs",
+        "label": "儿童房与楼上走廊",
+        "anchors": [
+          {
+            "id": "landing",
+            "kind": "entrance"
+          },
+          {
+            "id": "grace_door",
+            "kind": "entrance"
+          },
+          {
+            "id": "nursery_center",
+            "kind": "focus"
+          },
+          {
+            "id": "anne_desk",
+            "kind": "prop"
+          },
+          {
+            "id": "nicholas_bed",
+            "kind": "prop"
+          },
+          {
+            "id": "anne_bed",
+            "kind": "prop"
+          },
+          {
+            "id": "mills_door",
+            "kind": "entrance"
+          },
+          {
+            "id": "nursery_door",
+            "kind": "entrance"
+          },
+          {
+            "id": "curtain_left",
+            "kind": "prop"
+          },
+          {
+            "id": "curtain_right",
+            "kind": "prop"
+          },
+          {
+            "id": "bible_stand",
+            "kind": "focus"
+          },
+          {
+            "id": "rosary_hook",
+            "kind": "focus"
+          },
+          {
+            "id": "drawing_floor",
+            "kind": "focus"
+          },
+          {
+            "id": "attic_door",
+            "kind": "entrance"
+          },
+          {
+            "id": "attic_shadow",
+            "kind": "concealment"
+          },
+          {
+            "id": "album_table",
+            "kind": "prop"
+          },
+          {
+            "id": "mirror",
+            "kind": "focus"
+          },
+          {
+            "id": "communion_dress",
+            "kind": "focus"
+          },
+          {
+            "id": "charles_landing",
+            "kind": "entrance"
+          },
+          {
+            "id": "safe_corner",
+            "kind": "concealment"
+          }
+        ]
+      },
+      {
+        "id": "garden",
+        "label": "雾中花园与墓地",
+        "anchors": [
+          {
+            "id": "house_steps",
+            "kind": "entrance"
+          },
+          {
+            "id": "garden_path",
+            "kind": "focus"
+          },
+          {
+            "id": "fog_turn",
+            "kind": "concealment"
+          },
+          {
+            "id": "fog_bank",
+            "kind": "concealment"
+          },
+          {
+            "id": "garden_gate",
+            "kind": "entrance"
+          },
+          {
+            "id": "charles_appear",
+            "kind": "focus"
+          },
+          {
+            "id": "charles_rest",
+            "kind": "focus"
+          },
+          {
+            "id": "tuttle_work",
+            "kind": "focus"
+          },
+          {
+            "id": "mills_watch",
+            "kind": "focus"
+          },
+          {
+            "id": "lydia_watch",
+            "kind": "focus"
+          },
+          {
+            "id": "graves_edge",
+            "kind": "prop"
+          },
+          {
+            "id": "grave_mills",
+            "kind": "prop"
+          },
+          {
+            "id": "grave_tuttle",
+            "kind": "prop"
+          },
+          {
+            "id": "grave_lydia",
+            "kind": "prop"
+          },
+          {
+            "id": "anne_grave",
+            "kind": "prop"
+          },
+          {
+            "id": "nicholas_grave",
+            "kind": "prop"
+          },
+          {
+            "id": "woods",
+            "kind": "focus"
+          },
+          {
+            "id": "path_marker",
+            "kind": "focus"
+          }
+        ]
+      },
+      {
+        "id": "seance",
+        "label": "降灵会双现实舞台",
+        "anchors": [
+          {
+            "id": "grace_entry",
+            "kind": "entrance"
+          },
+          {
+            "id": "anne_hide",
+            "kind": "concealment"
+          },
+          {
+            "id": "nicholas_hide",
+            "kind": "concealment"
+          },
+          {
+            "id": "family_center",
+            "kind": "focus"
+          },
+          {
+            "id": "seance_table",
+            "kind": "prop"
+          },
+          {
+            "id": "medium_chair",
+            "kind": "focus"
+          },
+          {
+            "id": "mr_marlish",
+            "kind": "focus"
+          },
+          {
+            "id": "mrs_marlish",
+            "kind": "focus"
+          },
+          {
+            "id": "victor_door",
+            "kind": "entrance"
+          },
+          {
+            "id": "shared_door",
+            "kind": "entrance"
+          },
+          {
+            "id": "window",
+            "kind": "prop"
+          },
+          {
+            "id": "pillow",
+            "kind": "prop"
+          },
+          {
+            "id": "rifle",
+            "kind": "prop"
+          },
+          {
+            "id": "slate",
+            "kind": "prop"
+          },
+          {
+            "id": "sun_patch",
+            "kind": "focus"
+          },
+          {
+            "id": "house_sign",
+            "kind": "prop"
+          },
+          {
+            "id": "mills_entry",
+            "kind": "entrance"
+          },
+          {
+            "id": "tuttle_entry",
+            "kind": "entrance"
+          },
+          {
+            "id": "lydia_entry",
+            "kind": "entrance"
+          }
+        ]
+      }
+    ],
+    "actors": [
+      {
+        "id": "grace",
+        "characterId": "grace",
+        "stageId": "hall",
+        "anchorId": "grace_start"
+      },
+      {
+        "id": "anne",
+        "characterId": "anne",
+        "stageId": "upstairs",
+        "anchorId": "anne_desk"
+      },
+      {
+        "id": "nicholas",
+        "characterId": "nicholas",
+        "stageId": "upstairs",
+        "anchorId": "nicholas_bed"
+      },
+      {
+        "id": "mills",
+        "characterId": "mills",
+        "stageId": "hall",
+        "anchorId": "mills_entry"
+      },
+      {
+        "id": "tuttle",
+        "characterId": "tuttle",
+        "stageId": "hall",
+        "anchorId": "tuttle_entry"
+      },
+      {
+        "id": "lydia",
+        "characterId": "lydia",
+        "stageId": "hall",
+        "anchorId": "lydia_entry"
+      },
+      {
+        "id": "charles",
+        "characterId": "charles",
+        "stageId": "garden",
+        "anchorId": "charles_appear"
+      },
+      {
+        "id": "victor",
+        "characterId": "victor",
+        "stageId": "upstairs",
+        "anchorId": "anne_bed"
+      },
+      {
+        "id": "medium",
+        "characterId": "medium",
+        "stageId": "upstairs",
+        "anchorId": "mirror"
+      },
+      {
+        "id": "mr_marlish",
+        "characterId": "mr_marlish",
+        "stageId": "seance",
+        "anchorId": "mr_marlish"
+      },
+      {
+        "id": "mrs_marlish",
+        "characterId": "mrs_marlish",
+        "stageId": "seance",
+        "anchorId": "mrs_marlish"
+      }
+    ],
+    "props": [
+      {
+        "id": "front_door",
+        "prototype": "door",
+        "stageId": "hall",
+        "anchorId": "front_door",
+        "initialState": "closed",
+        "states": [
+          "closed",
+          "open"
+        ]
+      },
+      {
+        "id": "keyring",
+        "prototype": "key",
+        "stageId": "hall",
+        "anchorId": "key_table",
+        "initialState": "resting",
+        "states": [
+          "resting",
+          "assigned-to-mills",
+          "examined"
+        ]
+      },
+      {
+        "id": "servant_letter",
+        "prototype": "readable",
+        "stageId": "hall",
+        "anchorId": "letter_table",
+        "initialState": "sealed",
+        "states": [
+          "sealed",
+          "opened"
+        ]
+      },
+      {
+        "id": "piano",
+        "prototype": "instrument",
+        "stageId": "hall",
+        "anchorId": "piano",
+        "initialState": "silent",
+        "states": [
+          "silent",
+          "forbidden"
+        ]
+      },
+      {
+        "id": "hall_curtains",
+        "prototype": "curtain",
+        "stageId": "hall",
+        "anchorId": "curtain_wall",
+        "initialState": "closed",
+        "states": [
+          "closed"
+        ]
+      },
+      {
+        "id": "dining_table",
+        "prototype": "furniture",
+        "stageId": "hall",
+        "anchorId": "dining_table",
+        "initialState": "set",
+        "states": [
+          "set"
+        ]
+      },
+      {
+        "id": "fireplace",
+        "prototype": "light",
+        "stageId": "hall",
+        "anchorId": "hearth",
+        "initialState": "embers",
+        "states": [
+          "embers"
+        ]
+      },
+      {
+        "id": "music_door",
+        "prototype": "door",
+        "stageId": "hall",
+        "anchorId": "music_door",
+        "initialState": "locked",
+        "states": [
+          "locked"
+        ]
+      },
+      {
+        "id": "nursery_door",
+        "prototype": "door",
+        "stageId": "upstairs",
+        "anchorId": "nursery_door",
+        "initialState": "locked",
+        "states": [
+          "locked"
+        ]
+      },
+      {
+        "id": "nursery_curtains",
+        "prototype": "curtain",
+        "stageId": "upstairs",
+        "anchorId": "curtain_left",
+        "initialState": "closed",
+        "states": [
+          "closed",
+          "disturbed",
+          "removed"
+        ]
+      },
+      {
+        "id": "bible",
+        "prototype": "readable",
+        "stageId": "upstairs",
+        "anchorId": "bible_stand",
+        "initialState": "open",
+        "states": [
+          "open",
+          "lesson-six"
+        ]
+      },
+      {
+        "id": "rosary",
+        "prototype": "inspectable",
+        "stageId": "upstairs",
+        "anchorId": "rosary_hook",
+        "initialState": "hanging",
+        "states": [
+          "hanging",
+          "held"
+        ]
+      },
+      {
+        "id": "anne_drawing",
+        "prototype": "readable",
+        "stageId": "upstairs",
+        "anchorId": "drawing_floor",
+        "initialState": "hidden",
+        "states": [
+          "hidden",
+          "visible",
+          "examined"
+        ]
+      },
+      {
+        "id": "attic_door",
+        "prototype": "door",
+        "stageId": "upstairs",
+        "anchorId": "attic_door",
+        "initialState": "closed",
+        "states": [
+          "closed",
+          "echoing"
+        ]
+      },
+      {
+        "id": "dead_album",
+        "prototype": "readable",
+        "stageId": "upstairs",
+        "anchorId": "album_table",
+        "initialState": "hidden",
+        "states": [
+          "hidden",
+          "visible-open",
+          "examined"
+        ]
+      },
+      {
+        "id": "communion_dress",
+        "prototype": "inspectable",
+        "stageId": "upstairs",
+        "anchorId": "communion_dress",
+        "initialState": "hidden",
+        "states": [
+          "hidden",
+          "worn-by-anne",
+          "folded"
+        ]
+      },
+      {
+        "id": "curtain_rail",
+        "prototype": "inspectable",
+        "stageId": "upstairs",
+        "anchorId": "curtain_right",
+        "initialState": "hidden",
+        "states": [
+          "hidden",
+          "visible-bare",
+          "examined"
+        ]
+      },
+      {
+        "id": "fog_bank",
+        "prototype": "barrier",
+        "stageId": "garden",
+        "anchorId": "fog_bank",
+        "initialState": "dense",
+        "states": [
+          "dense",
+          "impenetrable"
+        ]
+      },
+      {
+        "id": "garden_gate",
+        "prototype": "door",
+        "stageId": "garden",
+        "anchorId": "garden_gate",
+        "initialState": "lost-in-fog",
+        "states": [
+          "lost-in-fog",
+          "loops-back"
+        ]
+      },
+      {
+        "id": "charles_pack",
+        "prototype": "inspectable",
+        "stageId": "garden",
+        "anchorId": "charles_rest",
+        "initialState": "hidden",
+        "states": [
+          "hidden",
+          "visible",
+          "examined"
+        ]
+      },
+      {
+        "id": "path_marker",
+        "prototype": "inspectable",
+        "stageId": "garden",
+        "anchorId": "path_marker",
+        "initialState": "wet",
+        "states": [
+          "wet",
+          "marked"
+        ]
+      },
+      {
+        "id": "grave_mills",
+        "prototype": "readable",
+        "stageId": "garden",
+        "anchorId": "grave_mills",
+        "initialState": "overgrown",
+        "states": [
+          "overgrown",
+          "uncovered",
+          "read"
+        ]
+      },
+      {
+        "id": "grave_tuttle",
+        "prototype": "readable",
+        "stageId": "garden",
+        "anchorId": "grave_tuttle",
+        "initialState": "overgrown",
+        "states": [
+          "overgrown",
+          "uncovered",
+          "read"
+        ]
+      },
+      {
+        "id": "grave_lydia",
+        "prototype": "readable",
+        "stageId": "garden",
+        "anchorId": "grave_lydia",
+        "initialState": "overgrown",
+        "states": [
+          "overgrown",
+          "uncovered",
+          "read"
+        ]
+      },
+      {
+        "id": "shovel",
+        "prototype": "inspectable",
+        "stageId": "garden",
+        "anchorId": "tuttle_work",
+        "initialState": "resting",
+        "states": [
+          "resting"
+        ]
+      },
+      {
+        "id": "seance_table",
+        "prototype": "furniture",
+        "stageId": "seance",
+        "anchorId": "seance_table",
+        "initialState": "prepared",
+        "states": [
+          "prepared"
+        ]
+      },
+      {
+        "id": "seance_slate",
+        "prototype": "readable",
+        "stageId": "seance",
+        "anchorId": "slate",
+        "initialState": "blank",
+        "states": [
+          "blank",
+          "writing-mother-two-children",
+          "read"
+        ]
+      },
+      {
+        "id": "seance_curtains",
+        "prototype": "curtain",
+        "stageId": "seance",
+        "anchorId": "window",
+        "initialState": "open",
+        "states": [
+          "open"
+        ]
+      },
+      {
+        "id": "memory_pillow",
+        "prototype": "inspectable",
+        "stageId": "seance",
+        "anchorId": "pillow",
+        "initialState": "hidden",
+        "states": [
+          "hidden",
+          "flickering-visible",
+          "held-in-memory",
+          "solid-memory"
+        ]
+      },
+      {
+        "id": "memory_rifle",
+        "prototype": "inspectable",
+        "stageId": "seance",
+        "anchorId": "rifle",
+        "initialState": "hidden",
+        "states": [
+          "hidden",
+          "solid-memory"
+        ]
+      },
+      {
+        "id": "sunlit_window",
+        "prototype": "light",
+        "stageId": "seance",
+        "anchorId": "window",
+        "initialState": "night",
+        "states": [
+          "night",
+          "dawn-open",
+          "family-in-light"
+        ]
+      },
+      {
+        "id": "house_sign",
+        "prototype": "readable",
+        "stageId": "seance",
+        "anchorId": "house_sign",
+        "initialState": "hidden",
+        "states": [
+          "hidden",
+          "ready-for-sale",
+          "visible-through-layer",
+          "seen-through-layer"
+        ]
+      }
+    ]
+  },
+  "performance": {
+    "entryBeat": "beat.scene-01-arrival",
+    "scenes": [
+      {
+        "id": "scene-01-arrival",
+        "label": "第一场：门与光",
+        "stageId": "hall",
+        "entryBeat": "beat.scene-01-arrival",
+        "required": true
+      },
+      {
+        "id": "scene-02-victor",
+        "label": "第二场：锁门里的男孩",
+        "stageId": "upstairs",
+        "entryBeat": "beat.scene-02-victor",
+        "required": true
+      },
+      {
+        "id": "scene-03-haunting",
+        "label": "第三场：楼上的脚步",
+        "stageId": "upstairs",
+        "entryBeat": "beat.scene-03-haunting",
+        "required": true
+      },
+      {
+        "id": "scene-04-charles",
+        "label": "第四场：雾中归人",
+        "stageId": "garden",
+        "entryBeat": "beat.scene-04-charles",
+        "required": true
+      },
+      {
+        "id": "scene-05-curtains",
+        "label": "第五场：没有窗帘的清晨",
+        "stageId": "upstairs",
+        "entryBeat": "beat.scene-05-curtains",
+        "required": true
+      },
+      {
+        "id": "scene-06-graves",
+        "label": "第六场：墓碑上的名字",
+        "stageId": "garden",
+        "entryBeat": "beat.scene-06-graves",
+        "required": true
+      },
+      {
+        "id": "scene-07-seance",
+        "label": "第七场：桌子的两边",
+        "stageId": "seance",
+        "entryBeat": "beat.scene-07-seance",
+        "required": true
+      },
+      {
+        "id": "scene-08-ending",
+        "label": "第八场：这房子是我们的",
+        "stageId": "seance",
+        "entryBeat": "beat.scene-08-ending",
+        "required": true
+      }
+    ],
+    "beats": [
+      {
+        "id": "beat.scene-01-arrival",
+        "sceneId": "scene-01-arrival",
+        "stageId": "hall",
+        "mode": "exploration",
+        "cues": [
+          {
+            "id": "cue.stage.scene-01-arrival",
+            "type": "dialogue.silence",
+            "durationMs": 0
+          },
+          {
+            "id": "cue.fact.house-door-rule",
+            "type": "fact.reveal",
+            "factId": "house-door-rule"
+          },
+          {
+            "id": "cue.fact.servant-letter-unposted",
+            "type": "fact.reveal",
+            "factId": "servant-letter-unposted"
+          },
+          {
+            "id": "cue.fact.servants-worked-here",
+            "type": "fact.reveal",
+            "factId": "servants-worked-here"
+          }
+        ],
+        "actions": [],
+        "next": [
+          {
+            "to": "beat.scene-02-victor",
+            "kind": "auto"
+          }
+        ],
+        "runtimeSceneId": "scene-01-arrival",
+        "runtimeCueCount": 26,
+        "runtimeInteractionCount": 4
+      },
+      {
+        "id": "beat.scene-02-victor",
+        "sceneId": "scene-02-victor",
+        "stageId": "upstairs",
+        "mode": "exploration",
+        "cues": [
+          {
+            "id": "cue.stage.scene-02-victor",
+            "type": "dialogue.silence",
+            "durationMs": 0
+          },
+          {
+            "id": "cue.fact.anne-warns-of-incident",
+            "type": "fact.reveal",
+            "factId": "anne-warns-of-incident"
+          },
+          {
+            "id": "cue.fact.victor-seen-by-anne",
+            "type": "fact.reveal",
+            "factId": "victor-seen-by-anne"
+          },
+          {
+            "id": "cue.fact.victor-family-in-house",
+            "type": "fact.reveal",
+            "factId": "victor-family-in-house"
+          }
+        ],
+        "actions": [],
+        "next": [
+          {
+            "to": "beat.scene-03-haunting",
+            "kind": "auto"
+          }
+        ],
+        "runtimeSceneId": "scene-02-victor",
+        "runtimeCueCount": 24,
+        "runtimeInteractionCount": 4
+      },
+      {
+        "id": "beat.scene-03-haunting",
+        "sceneId": "scene-03-haunting",
+        "stageId": "upstairs",
+        "mode": "exploration",
+        "cues": [
+          {
+            "id": "cue.stage.scene-03-haunting",
+            "type": "dialogue.silence",
+            "durationMs": 0
+          },
+          {
+            "id": "cue.fact.intruders-plan-curtains",
+            "type": "fact.reveal",
+            "factId": "intruders-plan-curtains"
+          },
+          {
+            "id": "cue.fact.anne-four-person-drawing",
+            "type": "fact.reveal",
+            "factId": "anne-four-person-drawing"
+          },
+          {
+            "id": "cue.fact.dead-portrait-album",
+            "type": "fact.reveal",
+            "factId": "dead-portrait-album"
+          },
+          {
+            "id": "cue.fact.worlds-can-overlap",
+            "type": "fact.reveal",
+            "factId": "worlds-can-overlap"
+          }
+        ],
+        "actions": [],
+        "next": [
+          {
+            "to": "beat.scene-04-charles",
+            "kind": "auto"
+          }
+        ],
+        "runtimeSceneId": "scene-03-haunting",
+        "runtimeCueCount": 23,
+        "runtimeInteractionCount": 4
+      },
+      {
+        "id": "beat.scene-04-charles",
+        "sceneId": "scene-04-charles",
+        "stageId": "garden",
+        "mode": "exploration",
+        "cues": [
+          {
+            "id": "cue.stage.scene-04-charles",
+            "type": "dialogue.silence",
+            "durationMs": 0
+          },
+          {
+            "id": "cue.fact.charles-returns-through-fog",
+            "type": "fact.reveal",
+            "factId": "charles-returns-through-fog"
+          },
+          {
+            "id": "cue.fact.charles-is-disoriented",
+            "type": "fact.reveal",
+            "factId": "charles-is-disoriented"
+          }
+        ],
+        "actions": [],
+        "next": [
+          {
+            "to": "beat.scene-05-curtains",
+            "kind": "auto"
+          }
+        ],
+        "runtimeSceneId": "scene-04-charles",
+        "runtimeCueCount": 24,
+        "runtimeInteractionCount": 4
+      },
+      {
+        "id": "beat.scene-05-curtains",
+        "sceneId": "scene-05-curtains",
+        "stageId": "upstairs",
+        "mode": "exploration",
+        "cues": [
+          {
+            "id": "cue.stage.scene-05-curtains",
+            "type": "dialogue.silence",
+            "durationMs": 0
+          },
+          {
+            "id": "cue.fact.old-woman-overlays-anne",
+            "type": "fact.reveal",
+            "factId": "old-woman-overlays-anne"
+          },
+          {
+            "id": "cue.fact.charles-leaves-again",
+            "type": "fact.reveal",
+            "factId": "charles-leaves-again"
+          },
+          {
+            "id": "cue.fact.curtains-removed",
+            "type": "fact.reveal",
+            "factId": "curtains-removed"
+          },
+          {
+            "id": "cue.fact.daylight-fails-to-harm",
+            "type": "fact.reveal",
+            "factId": "daylight-fails-to-harm"
+          }
+        ],
+        "actions": [],
+        "next": [
+          {
+            "to": "beat.scene-06-graves",
+            "kind": "auto"
+          }
+        ],
+        "runtimeSceneId": "scene-05-curtains",
+        "runtimeCueCount": 36,
+        "runtimeInteractionCount": 4
+      },
+      {
+        "id": "beat.scene-06-graves",
+        "sceneId": "scene-06-graves",
+        "stageId": "garden",
+        "mode": "exploration",
+        "cues": [
+          {
+            "id": "cue.stage.scene-06-graves",
+            "type": "dialogue.silence",
+            "durationMs": 0
+          },
+          {
+            "id": "cue.fact.three-servant-graves",
+            "type": "fact.reveal",
+            "factId": "three-servant-graves"
+          },
+          {
+            "id": "cue.fact.servants-died-of-tuberculosis",
+            "type": "fact.reveal",
+            "factId": "servants-died-of-tuberculosis"
+          },
+          {
+            "id": "cue.fact.intruders-are-another-world",
+            "type": "fact.reveal",
+            "factId": "intruders-are-another-world"
+          }
+        ],
+        "actions": [],
+        "next": [
+          {
+            "to": "beat.scene-07-seance",
+            "kind": "auto"
+          }
+        ],
+        "runtimeSceneId": "scene-06-graves",
+        "runtimeCueCount": 27,
+        "runtimeInteractionCount": 4
+      },
+      {
+        "id": "beat.scene-07-seance",
+        "sceneId": "scene-07-seance",
+        "stageId": "seance",
+        "mode": "exploration",
+        "cues": [
+          {
+            "id": "cue.stage.scene-07-seance",
+            "type": "dialogue.silence",
+            "durationMs": 0
+          },
+          {
+            "id": "cue.fact.seance-names-mother-and-children",
+            "type": "fact.reveal",
+            "factId": "seance-names-mother-and-children"
+          },
+          {
+            "id": "cue.fact.marlish-family-is-living",
+            "type": "fact.reveal",
+            "factId": "marlish-family-is-living"
+          },
+          {
+            "id": "cue.fact.pillow-and-rifle-accusation",
+            "type": "fact.reveal",
+            "factId": "pillow-and-rifle-accusation"
+          }
+        ],
+        "actions": [],
+        "next": [
+          {
+            "to": "beat.scene-08-ending",
+            "kind": "auto"
+          }
+        ],
+        "runtimeSceneId": "scene-07-seance",
+        "runtimeCueCount": 26,
+        "runtimeInteractionCount": 4
+      },
+      {
+        "id": "beat.scene-08-ending",
+        "sceneId": "scene-08-ending",
+        "stageId": "seance",
+        "mode": "exploration",
+        "cues": [
+          {
+            "id": "cue.stage.scene-08-ending",
+            "type": "dialogue.silence",
+            "durationMs": 0
+          },
+          {
+            "id": "cue.fact.grace-remembers-murder-suicide",
+            "type": "fact.reveal",
+            "factId": "grace-remembers-murder-suicide"
+          },
+          {
+            "id": "cue.fact.lydia-silence-after-death",
+            "type": "fact.reveal",
+            "factId": "lydia-silence-after-death"
+          },
+          {
+            "id": "cue.fact.charles-died-in-war",
+            "type": "fact.reveal",
+            "factId": "charles-died-in-war"
+          },
+          {
+            "id": "cue.fact.house-belongs-to-family",
+            "type": "fact.reveal",
+            "factId": "house-belongs-to-family"
+          },
+          {
+            "id": "cue.fact.sunlight-no-longer-hurts",
+            "type": "fact.reveal",
+            "factId": "sunlight-no-longer-hurts"
+          }
+        ],
+        "actions": [],
+        "next": [],
+        "terminal": true,
+        "endingId": "ending.curtain",
+        "runtimeSceneId": "scene-08-ending",
+        "runtimeCueCount": 42,
+        "runtimeInteractionCount": 4
+      }
+    ],
+    "endings": [
+      {
+        "id": "ending.curtain",
+        "label": "演出终了"
+      }
+    ]
+  },
+  "ui": {
+    "controls": [
+      {
+        "action": "move",
+        "bindings": [
+          "KeyW",
+          "KeyA",
+          "KeyS",
+          "KeyD"
+        ],
+        "label": "移动"
+      },
+      {
+        "action": "interact",
+        "bindings": [
+          "KeyE"
+        ],
+        "label": "互动／继续"
+      },
+      {
+        "action": "pause",
+        "bindings": [
+          "Escape"
+        ],
+        "label": "暂停"
+      },
+      {
+        "action": "journal",
+        "bindings": [
+          "KeyJ"
+        ],
+        "label": "调查手记"
+      },
+      {
+        "action": "history",
+        "bindings": [
+          "KeyH"
+        ],
+        "label": "台词回看"
+      }
+    ],
+    "accessibility": {
+      "captions": true,
+      "reducedMotion": false,
+      "highContrastFocus": true,
+      "textSpeed": 32
+    }
+  },
+  "assets": [],
+  "version": "1.0.0",
+  "meta": {
+    "id": "the-others-faithful-stage-zh",
+    "title": "雾宅回声",
+    "sourceTitle": "The Others / 小岛惊魂",
+    "sourcePath": "data/script.txt",
+    "language": "zh-CN",
+    "adaptationMode": "faithful-stage",
+    "targetMinutes": 32,
+    "playerRole": "Grace",
+    "premise": "1945 年，Grace 与一双畏光的孩子困守雾中的宅邸。新来的仆人、看不见的访客与逐渐失控的光，迫使她重新理解这座房子。",
+    "ending": {
+      "title": "这房子是我们的",
+      "text": "晨光第一次穿过敞开的窗。活人离去，雾宅留下；Grace 与孩子们终于不再把真相关在门外。"
+    },
+    "contentWarnings": [
+      "儿童死亡主题",
+      "家庭暴力回忆",
+      "自杀回忆",
+      "幽灵与降灵会"
+    ],
+    "invariants": [
+      "Grace 始终是玩家角色与主观视角中心",
+      "Anne 与 Nicholas 始终是儿童",
+      "Lydia 在全剧中不说话，也不是谋杀目击者",
+      "墓碑只属于 Mills、Tuttle 与 Lydia，三人死于肺结核",
+      "Grace 在终幕亲自回忆用枕头杀死孩子、再用步枪自杀",
+      "scene-07 之前不得明确揭露 Grace、Anne 与 Nicholas 已死"
+    ]
+  },
+  "settings": {
+    "initialSceneId": "scene-01-arrival",
+    "finalSceneId": "scene-08-ending",
+    "runtimeAI": false,
+    "autoPlay": true,
+    "interactionKey": "E",
+    "moveKeys": [
+      "W",
+      "A",
+      "S",
+      "D"
+    ],
+    "playerSpeed": 230,
+    "textSpeed": 32,
+    "saveMode": "scene-and-cue",
+    "revealPolicy": "gated",
+    "ui": {
+      "loading": "正在升起幕布……",
+      "start": "开始演出",
+      "continue": "继续游戏",
+      "interact": "E 互动",
+      "continuePerformance": "返回演出",
+      "objective": "当前调查",
+      "discoveries": "已发现",
+      "journal": "调查手记",
+      "history": "台词回看",
+      "paused": "演出暂停",
+      "ending": "演出终了",
+      "noSave": "尚无存档",
+      "error": "舞台装置发生错误"
+    }
+  },
+  "maps": {
+    "hall": {
+      "name": "宅邸公共区",
+      "width": 1400,
+      "height": 900,
+      "spawn": {
+        "x": 360,
+        "y": 470
+      },
+      "background": "#171b25",
+      "anchors": {
+        "grace_start": {
+          "x": 360,
+          "y": 470
+        },
+        "front_door": {
+          "x": 135,
+          "y": 450
+        },
+        "entry_inside": {
+          "x": 245,
+          "y": 450
+        },
+        "mills_entry": {
+          "x": 255,
+          "y": 390
+        },
+        "tuttle_entry": {
+          "x": 255,
+          "y": 470
+        },
+        "lydia_entry": {
+          "x": 255,
+          "y": 550
+        },
+        "hall_center": {
+          "x": 650,
+          "y": 470
+        },
+        "key_table": {
+          "x": 500,
+          "y": 300
+        },
+        "letter_table": {
+          "x": 610,
+          "y": 300
+        },
+        "dining_table": {
+          "x": 780,
+          "y": 620
+        },
+        "hearth": {
+          "x": 1020,
+          "y": 650
+        },
+        "music_door": {
+          "x": 1125,
+          "y": 285
+        },
+        "piano": {
+          "x": 1190,
+          "y": 455
+        },
+        "curtain_wall": {
+          "x": 700,
+          "y": 120
+        },
+        "stairs": {
+          "x": 1050,
+          "y": 190
+        },
+        "charles_rest": {
+          "x": 870,
+          "y": 500
+        }
+      },
+      "obstacles": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1400,
+          "h": 70
+        },
+        {
+          "x": 0,
+          "y": 830,
+          "w": 1400,
+          "h": 70
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 70,
+          "h": 900
+        },
+        {
+          "x": 1330,
+          "y": 0,
+          "w": 70,
+          "h": 900
+        },
+        {
+          "x": 690,
+          "y": 545,
+          "w": 250,
+          "h": 130
+        },
+        {
+          "x": 1110,
+          "y": 365,
+          "w": 180,
+          "h": 120
+        },
+        {
+          "x": 950,
+          "y": 610,
+          "w": 170,
+          "h": 130
+        }
+      ],
+      "props": [
+        {
+          "id": "front_door",
+          "type": "door",
+          "label": "前门",
+          "anchor": "front_door",
+          "state": "closed",
+          "layer": "family",
+          "color": "#5c4638"
+        },
+        {
+          "id": "keyring",
+          "type": "key",
+          "label": "十五把钥匙",
+          "anchor": "key_table",
+          "state": "resting",
+          "layer": "family",
+          "color": "#c5a457"
+        },
+        {
+          "id": "servant_letter",
+          "type": "readable",
+          "label": "未寄出的求仆信",
+          "anchor": "letter_table",
+          "state": "sealed",
+          "layer": "family",
+          "color": "#d7c9aa"
+        },
+        {
+          "id": "piano",
+          "type": "instrument",
+          "label": "旧钢琴",
+          "anchor": "piano",
+          "state": "silent",
+          "layer": "shared",
+          "color": "#33261f"
+        },
+        {
+          "id": "hall_curtains",
+          "type": "curtain",
+          "label": "厚重窗帘",
+          "anchor": "curtain_wall",
+          "state": "closed",
+          "layer": "shared",
+          "color": "#3c314e"
+        },
+        {
+          "id": "dining_table",
+          "type": "furniture",
+          "label": "餐桌",
+          "anchor": "dining_table",
+          "state": "set",
+          "layer": "shared",
+          "color": "#604532"
+        },
+        {
+          "id": "fireplace",
+          "type": "light",
+          "label": "壁炉",
+          "anchor": "hearth",
+          "state": "embers",
+          "layer": "shared",
+          "color": "#d08048"
+        },
+        {
+          "id": "music_door",
+          "type": "door",
+          "label": "音乐室门",
+          "anchor": "music_door",
+          "state": "locked",
+          "layer": "shared",
+          "color": "#473629"
+        }
+      ],
+      "ambient": {
+        "color": "#252b38",
+        "light": "candle-dim",
+        "music": "low-strings",
+        "weather": "fog-outside",
+        "sounds": [
+          "wind-distant",
+          "timber-creak",
+          "clock-soft"
+        ]
+      }
+    },
+    "upstairs": {
+      "name": "儿童房与楼上走廊",
+      "width": 1400,
+      "height": 900,
+      "spawn": {
+        "x": 520,
+        "y": 690
+      },
+      "background": "#141823",
+      "anchors": {
+        "landing": {
+          "x": 510,
+          "y": 700
+        },
+        "grace_door": {
+          "x": 480,
+          "y": 565
+        },
+        "nursery_center": {
+          "x": 720,
+          "y": 470
+        },
+        "anne_desk": {
+          "x": 850,
+          "y": 350
+        },
+        "nicholas_bed": {
+          "x": 1040,
+          "y": 500
+        },
+        "anne_bed": {
+          "x": 900,
+          "y": 545
+        },
+        "mills_door": {
+          "x": 560,
+          "y": 565
+        },
+        "nursery_door": {
+          "x": 620,
+          "y": 580
+        },
+        "curtain_left": {
+          "x": 720,
+          "y": 160
+        },
+        "curtain_right": {
+          "x": 980,
+          "y": 160
+        },
+        "bible_stand": {
+          "x": 710,
+          "y": 345
+        },
+        "rosary_hook": {
+          "x": 650,
+          "y": 360
+        },
+        "drawing_floor": {
+          "x": 900,
+          "y": 420
+        },
+        "attic_door": {
+          "x": 270,
+          "y": 235
+        },
+        "attic_shadow": {
+          "x": 330,
+          "y": 300
+        },
+        "album_table": {
+          "x": 350,
+          "y": 510
+        },
+        "mirror": {
+          "x": 1100,
+          "y": 330
+        },
+        "communion_dress": {
+          "x": 1080,
+          "y": 380
+        },
+        "charles_landing": {
+          "x": 470,
+          "y": 640
+        },
+        "safe_corner": {
+          "x": 570,
+          "y": 740
+        }
+      },
+      "obstacles": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1400,
+          "h": 70
+        },
+        {
+          "x": 0,
+          "y": 830,
+          "w": 1400,
+          "h": 70
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 70,
+          "h": 900
+        },
+        {
+          "x": 1330,
+          "y": 0,
+          "w": 70,
+          "h": 900
+        },
+        {
+          "x": 850,
+          "y": 480,
+          "w": 290,
+          "h": 145
+        },
+        {
+          "x": 650,
+          "y": 295,
+          "w": 130,
+          "h": 100
+        },
+        {
+          "x": 285,
+          "y": 455,
+          "w": 150,
+          "h": 100
+        }
+      ],
+      "props": [
+        {
+          "id": "nursery_door",
+          "type": "door",
+          "label": "儿童房门",
+          "anchor": "nursery_door",
+          "state": "locked",
+          "layer": "shared",
+          "color": "#4f3c31"
+        },
+        {
+          "id": "nursery_curtains",
+          "type": "curtain",
+          "label": "儿童房窗帘",
+          "anchor": "curtain_left",
+          "state": "closed",
+          "layer": "shared",
+          "color": "#403653"
+        },
+        {
+          "id": "bible",
+          "type": "readable",
+          "label": "课本与圣经",
+          "anchor": "bible_stand",
+          "state": "open",
+          "layer": "family",
+          "color": "#9a815a"
+        },
+        {
+          "id": "rosary",
+          "type": "inspectable",
+          "label": "念珠",
+          "anchor": "rosary_hook",
+          "state": "hanging",
+          "layer": "family",
+          "color": "#c6b78d"
+        },
+        {
+          "id": "anne_drawing",
+          "type": "readable",
+          "label": "Anne 的四人画",
+          "anchor": "drawing_floor",
+          "state": "hidden",
+          "layer": "family",
+          "color": "#d8d0ba"
+        },
+        {
+          "id": "attic_door",
+          "type": "door",
+          "label": "杂物间门",
+          "anchor": "attic_door",
+          "state": "closed",
+          "layer": "shared",
+          "color": "#49392f"
+        },
+        {
+          "id": "dead_album",
+          "type": "readable",
+          "label": "死者相册",
+          "anchor": "album_table",
+          "state": "hidden",
+          "layer": "family",
+          "color": "#29231f"
+        },
+        {
+          "id": "communion_dress",
+          "type": "inspectable",
+          "label": "初领圣餐裙",
+          "anchor": "communion_dress",
+          "state": "hidden",
+          "layer": "family",
+          "color": "#d9d5cb"
+        },
+        {
+          "id": "curtain_rail",
+          "type": "inspectable",
+          "label": "空窗帘杆",
+          "anchor": "curtain_right",
+          "state": "hidden",
+          "layer": "shared",
+          "color": "#8f806b"
+        }
+      ],
+      "ambient": {
+        "color": "#202536",
+        "light": "shuttered-day",
+        "music": "single-cello",
+        "weather": "fog-outside",
+        "sounds": [
+          "floorboard-creak",
+          "cloth-rustle",
+          "room-tone"
+        ]
+      }
+    },
+    "garden": {
+      "name": "雾中花园与墓地",
+      "width": 1500,
+      "height": 920,
+      "spawn": {
+        "x": 240,
+        "y": 470
+      },
+      "background": "#182126",
+      "anchors": {
+        "house_steps": {
+          "x": 210,
+          "y": 470
+        },
+        "garden_path": {
+          "x": 470,
+          "y": 470
+        },
+        "fog_turn": {
+          "x": 730,
+          "y": 400
+        },
+        "fog_bank": {
+          "x": 900,
+          "y": 280
+        },
+        "garden_gate": {
+          "x": 1270,
+          "y": 440
+        },
+        "charles_appear": {
+          "x": 850,
+          "y": 470
+        },
+        "charles_rest": {
+          "x": 630,
+          "y": 520
+        },
+        "tuttle_work": {
+          "x": 520,
+          "y": 690
+        },
+        "mills_watch": {
+          "x": 390,
+          "y": 650
+        },
+        "lydia_watch": {
+          "x": 330,
+          "y": 700
+        },
+        "graves_edge": {
+          "x": 940,
+          "y": 650
+        },
+        "grave_mills": {
+          "x": 1080,
+          "y": 650
+        },
+        "grave_tuttle": {
+          "x": 1190,
+          "y": 650
+        },
+        "grave_lydia": {
+          "x": 1300,
+          "y": 650
+        },
+        "anne_grave": {
+          "x": 1010,
+          "y": 560
+        },
+        "nicholas_grave": {
+          "x": 920,
+          "y": 580
+        },
+        "woods": {
+          "x": 1190,
+          "y": 250
+        },
+        "path_marker": {
+          "x": 680,
+          "y": 570
+        }
+      },
+      "obstacles": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1500,
+          "h": 65
+        },
+        {
+          "x": 0,
+          "y": 855,
+          "w": 1500,
+          "h": 65
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 70,
+          "h": 920
+        },
+        {
+          "x": 1430,
+          "y": 0,
+          "w": 70,
+          "h": 920
+        },
+        {
+          "x": 760,
+          "y": 180,
+          "w": 170,
+          "h": 150
+        },
+        {
+          "x": 1030,
+          "y": 610,
+          "w": 330,
+          "h": 100
+        }
+      ],
+      "props": [
+        {
+          "id": "fog_bank",
+          "type": "barrier",
+          "label": "浓雾",
+          "anchor": "fog_bank",
+          "state": "dense",
+          "layer": "shared",
+          "color": "#b9c1bd"
+        },
+        {
+          "id": "garden_gate",
+          "type": "door",
+          "label": "花园门",
+          "anchor": "garden_gate",
+          "state": "lost-in-fog",
+          "layer": "shared",
+          "color": "#4a514d"
+        },
+        {
+          "id": "charles_pack",
+          "type": "inspectable",
+          "label": "Charles 的军用背包",
+          "anchor": "charles_rest",
+          "state": "hidden",
+          "layer": "family",
+          "color": "#5f624f"
+        },
+        {
+          "id": "path_marker",
+          "type": "inspectable",
+          "label": "重复出现的路标",
+          "anchor": "path_marker",
+          "state": "wet",
+          "layer": "shared",
+          "color": "#685746"
+        },
+        {
+          "id": "grave_mills",
+          "type": "readable",
+          "label": "Bertha Mills 墓碑",
+          "anchor": "grave_mills",
+          "state": "overgrown",
+          "layer": "shared",
+          "color": "#69716e"
+        },
+        {
+          "id": "grave_tuttle",
+          "type": "readable",
+          "label": "Edmund Tuttle 墓碑",
+          "anchor": "grave_tuttle",
+          "state": "overgrown",
+          "layer": "shared",
+          "color": "#69716e"
+        },
+        {
+          "id": "grave_lydia",
+          "type": "readable",
+          "label": "Lydia 墓碑",
+          "anchor": "grave_lydia",
+          "state": "overgrown",
+          "layer": "shared",
+          "color": "#69716e"
+        },
+        {
+          "id": "shovel",
+          "type": "inspectable",
+          "label": "沾着新土的铁锹",
+          "anchor": "tuttle_work",
+          "state": "resting",
+          "layer": "threshold",
+          "color": "#777a73"
+        }
+      ],
+      "ambient": {
+        "color": "#2a3538",
+        "light": "fog-diffused",
+        "music": "distant-horn",
+        "weather": "heavy-fog",
+        "sounds": [
+          "wind-through-yew",
+          "wet-steps",
+          "seagull-distant"
+        ]
+      }
+    },
+    "seance": {
+      "name": "降灵会双现实舞台",
+      "width": 1400,
+      "height": 900,
+      "spawn": {
+        "x": 420,
+        "y": 660
+      },
+      "background": "#11131b",
+      "anchors": {
+        "grace_entry": {
+          "x": 410,
+          "y": 650
+        },
+        "anne_hide": {
+          "x": 560,
+          "y": 570
+        },
+        "nicholas_hide": {
+          "x": 500,
+          "y": 630
+        },
+        "family_center": {
+          "x": 570,
+          "y": 480
+        },
+        "seance_table": {
+          "x": 900,
+          "y": 420
+        },
+        "medium_chair": {
+          "x": 900,
+          "y": 330
+        },
+        "mr_marlish": {
+          "x": 1050,
+          "y": 430
+        },
+        "mrs_marlish": {
+          "x": 1030,
+          "y": 530
+        },
+        "victor_door": {
+          "x": 1190,
+          "y": 310
+        },
+        "shared_door": {
+          "x": 230,
+          "y": 450
+        },
+        "window": {
+          "x": 700,
+          "y": 130
+        },
+        "pillow": {
+          "x": 650,
+          "y": 350
+        },
+        "rifle": {
+          "x": 330,
+          "y": 300
+        },
+        "slate": {
+          "x": 900,
+          "y": 490
+        },
+        "sun_patch": {
+          "x": 700,
+          "y": 260
+        },
+        "house_sign": {
+          "x": 1160,
+          "y": 720
+        },
+        "mills_entry": {
+          "x": 270,
+          "y": 550
+        },
+        "tuttle_entry": {
+          "x": 260,
+          "y": 620
+        },
+        "lydia_entry": {
+          "x": 250,
+          "y": 690
+        }
+      },
+      "obstacles": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1400,
+          "h": 70
+        },
+        {
+          "x": 0,
+          "y": 830,
+          "w": 1400,
+          "h": 70
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 70,
+          "h": 900
+        },
+        {
+          "x": 1330,
+          "y": 0,
+          "w": 70,
+          "h": 900
+        },
+        {
+          "x": 810,
+          "y": 365,
+          "w": 200,
+          "h": 150
+        },
+        {
+          "x": 590,
+          "y": 300,
+          "w": 170,
+          "h": 105
+        }
+      ],
+      "props": [
+        {
+          "id": "seance_table",
+          "type": "furniture",
+          "label": "降灵会圆桌",
+          "anchor": "seance_table",
+          "state": "prepared",
+          "layer": "living",
+          "color": "#4e3c31"
+        },
+        {
+          "id": "seance_slate",
+          "type": "readable",
+          "label": "自动书写石板",
+          "anchor": "slate",
+          "state": "blank",
+          "layer": "living",
+          "color": "#2f3337"
+        },
+        {
+          "id": "seance_curtains",
+          "type": "curtain",
+          "label": "活人家的新窗帘",
+          "anchor": "window",
+          "state": "open",
+          "layer": "living",
+          "color": "#687071"
+        },
+        {
+          "id": "memory_pillow",
+          "type": "inspectable",
+          "label": "记忆中的枕头",
+          "anchor": "pillow",
+          "state": "hidden",
+          "layer": "memory",
+          "color": "#d4cec1"
+        },
+        {
+          "id": "memory_rifle",
+          "type": "inspectable",
+          "label": "记忆中的步枪",
+          "anchor": "rifle",
+          "state": "hidden",
+          "layer": "memory",
+          "color": "#443c33"
+        },
+        {
+          "id": "sunlit_window",
+          "type": "light",
+          "label": "晨光中的窗",
+          "anchor": "window",
+          "state": "night",
+          "layer": "shared",
+          "color": "#cbd8d0"
+        },
+        {
+          "id": "house_sign",
+          "type": "readable",
+          "label": "宅邸出售牌",
+          "anchor": "house_sign",
+          "state": "hidden",
+          "layer": "living",
+          "color": "#d1c7ad"
+        }
+      ],
+      "ambient": {
+        "color": "#171927",
+        "light": "seance-candle",
+        "music": "heartbeat-drone",
+        "weather": "fog-lifting",
+        "sounds": [
+          "whisper-overlap",
+          "pencil-scratch",
+          "breath-close"
+        ]
+      }
+    }
+  },
+  "actors": {
+    "grace": {
+      "name": "Grace",
+      "role": "母亲／玩家",
+      "color": "#e7d8c8",
+      "accent": "#b86f65",
+      "layer": "family",
+      "shape": "adult"
+    },
+    "anne": {
+      "name": "Anne",
+      "role": "女儿",
+      "color": "#d7bca8",
+      "accent": "#d18a72",
+      "layer": "family",
+      "shape": "child"
+    },
+    "nicholas": {
+      "name": "Nicholas",
+      "role": "儿子",
+      "color": "#b8c6d9",
+      "accent": "#6f8aac",
+      "layer": "family",
+      "shape": "child"
+    },
+    "mills": {
+      "name": "Bertha Mills",
+      "role": "管家",
+      "color": "#b8b09b",
+      "accent": "#77816e",
+      "layer": "threshold",
+      "shape": "adult"
+    },
+    "tuttle": {
+      "name": "Edmund Tuttle",
+      "role": "园丁",
+      "color": "#9e927d",
+      "accent": "#6f685a",
+      "layer": "threshold",
+      "shape": "adult"
+    },
+    "lydia": {
+      "name": "Lydia",
+      "role": "沉默的女仆",
+      "color": "#c1b9b1",
+      "accent": "#7b7680",
+      "layer": "threshold",
+      "shape": "silent"
+    },
+    "charles": {
+      "name": "Charles",
+      "role": "Grace 的丈夫",
+      "color": "#8f9a91",
+      "accent": "#5f695f",
+      "layer": "memory",
+      "shape": "adult"
+    },
+    "victor": {
+      "name": "Victor Marlish",
+      "role": "宅邸中的男孩",
+      "color": "#c2bea7",
+      "accent": "#83938a",
+      "layer": "living",
+      "shape": "child"
+    },
+    "medium": {
+      "name": "老灵媒",
+      "role": "降灵会主持者",
+      "color": "#a59c91",
+      "accent": "#715f70",
+      "layer": "living",
+      "shape": "adult"
+    },
+    "mr_marlish": {
+      "name": "Mr Marlish",
+      "role": "Victor 的父亲",
+      "color": "#9da8ae",
+      "accent": "#65747d",
+      "layer": "living",
+      "shape": "adult"
+    },
+    "mrs_marlish": {
+      "name": "Mrs Marlish",
+      "role": "Victor 的母亲",
+      "color": "#c2a9a2",
+      "accent": "#8d6665",
+      "layer": "living",
+      "shape": "adult"
+    }
+  },
+  "facts": {
+    "house-door-rule": {
+      "id": "house-door-rule",
+      "title": "门与光的规矩",
+      "summary": "任何一扇门打开前，上一扇必须关好；孩子绝不能接触强光。",
+      "category": "rule",
+      "spoiler": "none",
+      "sourceRefs": [
+        "data/script.txt:106-122",
+        "data/script.txt:205-220"
+      ]
+    },
+    "servant-letter-unposted": {
+      "id": "servant-letter-unposted",
+      "title": "没有寄出的广告",
+      "summary": "求仆广告五天前就留在信箱里，从未刊登；三名仆人却恰好上门。",
+      "category": "contradiction",
+      "spoiler": "none",
+      "sourceRefs": [
+        "data/script.txt:262-284"
+      ]
+    },
+    "servants-worked-here": {
+      "id": "servants-worked-here",
+      "title": "旧日雇员",
+      "summary": "Mills 承认三人多年前曾在这座宅邸工作。",
+      "category": "testimony",
+      "spoiler": "none",
+      "sourceRefs": [
+        "data/script.txt:288-314"
+      ]
+    },
+    "anne-warns-of-incident": {
+      "id": "anne-warns-of-incident",
+      "title": "Anne 的半句话",
+      "summary": "Anne 暗示旧仆离开后发生过可怕的事，并说母亲曾经失控。",
+      "category": "testimony",
+      "spoiler": "minor",
+      "sourceRefs": [
+        "data/script.txt:238-253"
+      ]
+    },
+    "victor-seen-by-anne": {
+      "id": "victor-seen-by-anne",
+      "title": "名叫 Victor 的男孩",
+      "summary": "Anne 坚称一个叫 Victor 的男孩进入过锁住的房间。",
+      "category": "testimony",
+      "spoiler": "none",
+      "sourceRefs": [
+        "data/script.txt:529-592"
+      ]
+    },
+    "victor-family-in-house": {
+      "id": "victor-family-in-house",
+      "title": "看不见的一家人",
+      "summary": "Anne 说 Victor 的父母和一位老妇人正在参观房子，还认为房子属于他们。",
+      "category": "testimony",
+      "spoiler": "minor",
+      "sourceRefs": [
+        "data/script.txt:568-582",
+        "data/script.txt:857-890"
+      ]
+    },
+    "intruders-plan-curtains": {
+      "id": "intruders-plan-curtains",
+      "title": "他们要拆窗帘",
+      "summary": "Anne 听见那些看不见的人声称房子属于他们，并计划拆掉窗帘。",
+      "category": "threat",
+      "spoiler": "minor",
+      "sourceRefs": [
+        "data/script.txt:857-868"
+      ]
+    },
+    "anne-four-person-drawing": {
+      "id": "anne-four-person-drawing",
+      "title": "四人画",
+      "summary": "Anne 画下 Victor、他的父母与一位出现次数最多的老妇人。",
+      "category": "evidence",
+      "spoiler": "none",
+      "sourceRefs": [
+        "data/script.txt:882-917"
+      ]
+    },
+    "dead-portrait-album": {
+      "id": "dead-portrait-album",
+      "title": "死者相册",
+      "summary": "阁楼藏着维多利亚时代的死者肖像；Mills 说人们曾希望借照片留住灵魂。",
+      "category": "evidence",
+      "spoiler": "minor",
+      "sourceRefs": [
+        "data/script.txt:972-1009"
+      ]
+    },
+    "worlds-can-overlap": {
+      "id": "worlds-can-overlap",
+      "title": "两个世界",
+      "summary": "Mills 相信活人与死者的世界有时会重叠，但没有说明谁属于哪一边。",
+      "category": "theory",
+      "spoiler": "minor",
+      "sourceRefs": [
+        "data/script.txt:1119-1154"
+      ]
+    },
+    "charles-returns-through-fog": {
+      "id": "charles-returns-through-fog",
+      "title": "雾中的 Charles",
+      "summary": "失踪已久的 Charles 从浓雾中归来，却虚弱、恍惚，只说一直在寻找家。",
+      "category": "event",
+      "spoiler": "minor",
+      "sourceRefs": [
+        "data/script.txt:1219-1258"
+      ]
+    },
+    "charles-is-disoriented": {
+      "id": "charles-is-disoriented",
+      "title": "迷失的归人",
+      "summary": "Charles 对时间和处境反应迟钝，仿佛仍身处战场。",
+      "category": "contradiction",
+      "spoiler": "minor",
+      "sourceRefs": [
+        "data/script.txt:1240-1246",
+        "data/script.txt:1517-1527"
+      ]
+    },
+    "old-woman-overlays-anne": {
+      "id": "old-woman-overlays-anne",
+      "title": "圣餐裙里的老妇人",
+      "summary": "Grace 一度在 Anne 身上看见老妇人的面孔与动作，Anne 却坚持自己从未变成别人。",
+      "category": "perception",
+      "spoiler": "major",
+      "sourceRefs": [
+        "data/script.txt:1367-1449"
+      ]
+    },
+    "charles-leaves-again": {
+      "id": "charles-leaves-again",
+      "title": "再次告别",
+      "summary": "Charles 说自己只是回来告别，并坚持战争还没有结束，随后离开。",
+      "category": "event",
+      "spoiler": "major",
+      "sourceRefs": [
+        "data/script.txt:1517-1554"
+      ]
+    },
+    "curtains-removed": {
+      "id": "curtains-removed",
+      "title": "消失的窗帘",
+      "summary": "宅邸窗帘一夜之间全被取下，强光涌入儿童房。",
+      "category": "event",
+      "spoiler": "major",
+      "sourceRefs": [
+        "data/script.txt:1556-1619"
+      ]
+    },
+    "daylight-fails-to-harm": {
+      "id": "daylight-fails-to-harm",
+      "title": "没有灼伤",
+      "summary": "窗帘消失后，孩子暴露在日光中却没有出现过去所说的伤害。",
+      "category": "contradiction",
+      "spoiler": "major",
+      "sourceRefs": [
+        "data/script.txt:1566-1626"
+      ]
+    },
+    "three-servant-graves": {
+      "id": "three-servant-graves",
+      "title": "三名仆人的墓碑",
+      "summary": "花园墓碑上的名字正是 Bertha Mills、Edmund Tuttle 与 Lydia。",
+      "category": "evidence",
+      "spoiler": "major",
+      "sourceRefs": [
+        "data/script.txt:1702-1750"
+      ]
+    },
+    "servants-died-of-tuberculosis": {
+      "id": "servants-died-of-tuberculosis",
+      "title": "半世纪前的肺结核",
+      "summary": "Mills 承认三名仆人早在半个多世纪前死于肺结核。",
+      "category": "truth",
+      "spoiler": "major",
+      "sourceRefs": [
+        "data/script.txt:1745-1750"
+      ]
+    },
+    "intruders-are-another-world": {
+      "id": "intruders-are-another-world",
+      "title": "入侵者确实存在",
+      "summary": "Mills 说所谓入侵者与 Grace 一家处于彼此交叠的另一重世界。",
+      "category": "truth",
+      "spoiler": "major",
+      "sourceRefs": [
+        "data/script.txt:1766-1799"
+      ]
+    },
+    "seance-names-mother-and-children": {
+      "id": "seance-names-mother-and-children",
+      "title": "降灵会的三个人",
+      "summary": "灵媒与宅邸的新住户称接触到一位母亲和两个孩子，并追问儿童房里发生过什么。",
+      "category": "reveal",
+      "spoiler": "final",
+      "sourceRefs": [
+        "data/script.txt:1824-1879"
+      ]
+    },
+    "marlish-family-is-living": {
+      "id": "marlish-family-is-living",
+      "title": "Victor 一家",
+      "summary": "Victor 与父母是搬入宅邸的活人；他们一直把 Grace 一家当作不肯离去的幽灵。",
+      "category": "reveal",
+      "spoiler": "final",
+      "sourceRefs": [
+        "data/script.txt:1871-1917"
+      ]
+    },
+    "pillow-and-rifle-accusation": {
+      "id": "pillow-and-rifle-accusation",
+      "title": "枕头与步枪",
+      "summary": "活人一家得知旧宅女主人曾用枕头闷死两个孩子，再开枪自杀。",
+      "category": "reveal",
+      "spoiler": "final",
+      "sourceRefs": [
+        "data/script.txt:1892-1898"
+      ]
+    },
+    "grace-remembers-murder-suicide": {
+      "id": "grace-remembers-murder-suicide",
+      "title": "Grace 的完整记忆",
+      "summary": "Grace 亲口回忆自己闷死 Anne 与 Nicholas，随后用步枪朝自己开枪。",
+      "category": "truth",
+      "spoiler": "final",
+      "sourceRefs": [
+        "data/script.txt:1920-1947"
+      ]
+    },
+    "lydia-silence-after-death": {
+      "id": "lydia-silence-after-death",
+      "title": "Lydia 为何沉默",
+      "summary": "Lydia 在意识到自己和 Mills、Tuttle 已死后停止说话；她并非谋杀的目击者。",
+      "category": "truth",
+      "spoiler": "final",
+      "sourceRefs": [
+        "data/script.txt:1949-1956"
+      ]
+    },
+    "charles-died-in-war": {
+      "id": "charles-died-in-war",
+      "title": "Charles 没有归来",
+      "summary": "Nicholas 终于问出 Charles 已战死，Grace 予以确认。",
+      "category": "truth",
+      "spoiler": "final",
+      "sourceRefs": [
+        "data/script.txt:1966-1971"
+      ]
+    },
+    "house-belongs-to-family": {
+      "id": "house-belongs-to-family",
+      "title": "这房子是我们的",
+      "summary": "Grace 与孩子接受未知的死后状态，决定继续守住这座宅邸。",
+      "category": "resolution",
+      "spoiler": "final",
+      "sourceRefs": [
+        "data/script.txt:1972-1987"
+      ]
+    },
+    "sunlight-no-longer-hurts": {
+      "id": "sunlight-no-longer-hurts",
+      "title": "晨光",
+      "summary": "Anne 站进晨光，确认阳光已经不会伤害他们。",
+      "category": "resolution",
+      "spoiler": "final",
+      "sourceRefs": [
+        "data/script.txt:1984-1987"
+      ]
+    }
+  },
+  "scenes": [
+    {
+      "id": "scene-01-arrival",
+      "index": 1,
+      "title": "第一场：门与光",
+      "subtitle": "新仆抵达，宅邸的规矩被一把把钥匙锁紧。",
+      "mapId": "hall",
+      "playerActor": "grace",
+      "actors": [
+        {
+          "actorId": "grace",
+          "anchor": "grace_start",
+          "visible": true
+        },
+        {
+          "actorId": "mills",
+          "anchor": "mills_entry",
+          "visible": false
+        },
+        {
+          "actorId": "tuttle",
+          "anchor": "tuttle_entry",
+          "visible": false
+        },
+        {
+          "actorId": "lydia",
+          "anchor": "lydia_entry",
+          "visible": false
+        }
+      ],
+      "worldState": {
+        "time": "morning",
+        "light": "candle-dim",
+        "weather": "fog",
+        "layers": {
+          "family": true,
+          "threshold": true,
+          "living": false,
+          "memory": false
+        },
+        "flags": []
+      },
+      "cues": [
+        {
+          "type": "title",
+          "text": "第一场　门与光",
+          "subtitle": "1945 年，雾封宅邸",
+          "duration": 2600,
+          "sourceRefs": [
+            "data/script.txt:1-33"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "shuttered-morning",
+          "intensity": 0.42,
+          "duration": 1800,
+          "sourceRefs": [
+            "data/script.txt:142-168"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "three-knocks",
+          "action": "play",
+          "volume": 0.85,
+          "sourceRefs": [
+            "data/script.txt:29-33"
+          ]
+        },
+        {
+          "type": "face",
+          "actorId": "grace",
+          "targetAnchor": "front_door",
+          "sourceRefs": [
+            "data/script.txt:29-34"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "grace",
+          "anchor": "front_door",
+          "speed": "brisk",
+          "sourceRefs": [
+            "data/script.txt:29-34"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "front_door",
+          "state": "open",
+          "sourceRefs": [
+            "data/script.txt:31-33"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "mills",
+          "anchor": "mills_entry",
+          "sourceRefs": [
+            "data/script.txt:35-41"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "tuttle",
+          "anchor": "tuttle_entry",
+          "sourceRefs": [
+            "data/script.txt:35-41"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "lydia",
+          "anchor": "lydia_entry",
+          "sourceRefs": [
+            "data/script.txt:35-50"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mills",
+          "text": "我是 Bertha Mills。这位是园丁 Edmund Tuttle，姑娘叫 Lydia。我们是来应聘的。",
+          "emotion": "courteous",
+          "duration": 4200,
+          "sourceRefs": [
+            "data/script.txt:35-47"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "Lydia，你会熨衣服吗？为什么不回答？",
+          "emotion": "guarded",
+          "duration": 3000,
+          "sourceRefs": [
+            "data/script.txt:42-50"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mills",
+          "text": "她不会说话，夫人。但她干活很好。",
+          "emotion": "protective",
+          "duration": 3000,
+          "sourceRefs": [
+            "data/script.txt:50-55"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "front_door",
+          "state": "closed",
+          "sourceRefs": [
+            "data/script.txt:59-66"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "grace",
+          "anchor": "hall_center",
+          "speed": "walk",
+          "sourceRefs": [
+            "data/script.txt:59-91"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "mills",
+          "anchor": "key_table",
+          "speed": "walk",
+          "sourceRefs": [
+            "data/script.txt:91-123"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "tuttle",
+          "anchor": "hearth",
+          "speed": "walk",
+          "sourceRefs": [
+            "data/script.txt:91-123"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "lydia",
+          "anchor": "curtain_wall",
+          "speed": "quiet",
+          "sourceRefs": [
+            "data/script.txt:161-168"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "记住：打开下一扇门前，必须关好上一扇。十五把钥匙管着五十道门，绝不能弄错。",
+          "emotion": "strict",
+          "duration": 5200,
+          "sourceRefs": [
+            "data/script.txt:106-123"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "keyring",
+          "state": "assigned-to-mills",
+          "sourceRefs": [
+            "data/script.txt:115-123"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "keyring-chime",
+          "action": "play",
+          "volume": 0.7,
+          "sourceRefs": [
+            "data/script.txt:115-123"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetAnchor": "curtain_wall",
+          "zoom": 1.12,
+          "duration": 1500,
+          "sourceRefs": [
+            "data/script.txt:142-168"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "我的孩子受不了强光。窗帘必须全部合上；这所房子也不需要电话、收音机或电。",
+          "emotion": "controlled-fear",
+          "duration": 5600,
+          "sourceRefs": [
+            "data/script.txt:124-168",
+            "data/script.txt:202-220"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "house-door-rule",
+            "servants-worked-here"
+          ],
+          "sourceRefs": [
+            "data/script.txt:106-123",
+            "data/script.txt:288-314"
+          ]
+        },
+        {
+          "type": "explore",
+          "action": "open",
+          "sourceRefs": [
+            "data/script.txt:124-168",
+            "data/script.txt:262-314"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "好吧，你们可以留下。但在这里，规矩不是礼节，是孩子的性命。",
+          "emotion": "decisive",
+          "duration": 3600,
+          "sourceRefs": [
+            "data/script.txt:315-336"
+          ]
+        },
+        {
+          "type": "transition",
+          "sceneId": "scene-02-victor",
+          "sourceRefs": [
+            "data/script.txt:337-356"
+          ]
+        }
+      ],
+      "exploration": {
+        "objective": "查明这三人为何在广告刊登前出现，并熟悉宅邸规矩。",
+        "minDiscoveries": 2,
+        "requiredFlags": [
+          "noticed-unposted-letter"
+        ],
+        "resumeAnchor": "hall_center",
+        "interactions": [
+          {
+            "id": "inspect-unposted-letter",
+            "targetType": "prop",
+            "targetId": "servant_letter",
+            "label": "检查未寄出的求仆信",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "封口还在，邮差根本没取走它。既然广告没有刊登，他们又怎么知道？",
+                "emotion": "suspicious",
+                "sourceRefs": [
+                  "data/script.txt:262-277"
+                ]
+              },
+              {
+                "actorId": "mills",
+                "text": "我们只是碰碰运气。这样的老宅总需要懂行的人。",
+                "emotion": "even",
+                "sourceRefs": [
+                  "data/script.txt:278-303"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "servant-letter-unposted"
+            ],
+            "setFlags": [
+              "noticed-unposted-letter"
+            ],
+            "propState": {
+              "propId": "servant_letter",
+              "state": "opened"
+            },
+            "sourceRefs": [
+              "data/script.txt:262-303"
+            ]
+          },
+          {
+            "id": "inspect-keyring",
+            "targetType": "prop",
+            "targetId": "keyring",
+            "label": "试着辨认十五把钥匙",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "每一把只管一个区域。开错门，就可能让光穿过整条走廊。",
+                "emotion": "anxious",
+                "sourceRefs": [
+                  "data/script.txt:106-123"
+                ]
+              },
+              {
+                "actorId": "mills",
+                "text": "我会记住，夫人。门后还有门。",
+                "emotion": "knowing",
+                "sourceRefs": [
+                  "data/script.txt:106-123"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "house-door-rule"
+            ],
+            "setFlags": [
+              "studied-keyring"
+            ],
+            "propState": {
+              "propId": "keyring",
+              "state": "examined"
+            },
+            "sourceRefs": [
+              "data/script.txt:106-123"
+            ]
+          },
+          {
+            "id": "inspect-piano",
+            "targetType": "prop",
+            "targetId": "piano",
+            "label": "查看旧钢琴",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "它在我们搬来前就在这里。谁也不准碰——一点噪音都会引发我的偏头痛。",
+                "emotion": "irritated",
+                "sourceRefs": [
+                  "data/script.txt:124-141"
+                ]
+              }
+            ],
+            "revealFacts": [],
+            "setFlags": [
+              "noticed-piano"
+            ],
+            "propState": {
+              "propId": "piano",
+              "state": "forbidden"
+            },
+            "sourceRefs": [
+              "data/script.txt:124-141"
+            ]
+          },
+          {
+            "id": "observe-lydia",
+            "targetType": "actor",
+            "targetId": "lydia",
+            "label": "尝试和 Lydia 沟通",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "她听得懂，只是不回答。",
+                "emotion": "softening",
+                "sourceRefs": [
+                  "data/script.txt:47-58"
+                ]
+              },
+              {
+                "actorId": "mills",
+                "text": "请给她一点时间，夫人。她会把该做的事都做好。",
+                "emotion": "protective",
+                "sourceRefs": [
+                  "data/script.txt:50-55"
+                ]
+              }
+            ],
+            "revealFacts": [],
+            "setFlags": [
+              "respected-lydia-silence"
+            ],
+            "sourceRefs": [
+              "data/script.txt:47-58"
+            ]
+          }
+        ]
+      },
+      "skipEffects": {
+        "revealFacts": [
+          "house-door-rule",
+          "servants-worked-here",
+          "servant-letter-unposted"
+        ],
+        "setFlags": [
+          "noticed-unposted-letter"
+        ],
+        "propStates": [
+          {
+            "propId": "front_door",
+            "state": "closed"
+          },
+          {
+            "propId": "keyring",
+            "state": "assigned-to-mills"
+          }
+        ]
+      },
+      "nextSceneId": "scene-02-victor"
+    },
+    {
+      "id": "scene-02-victor",
+      "index": 2,
+      "title": "第二场：锁门里的男孩",
+      "subtitle": "Anne 说，有个叫 Victor 的孩子刚刚离开。",
+      "mapId": "upstairs",
+      "playerActor": "grace",
+      "actors": [
+        {
+          "actorId": "grace",
+          "anchor": "nursery_center",
+          "visible": true
+        },
+        {
+          "actorId": "anne",
+          "anchor": "anne_desk",
+          "visible": true
+        },
+        {
+          "actorId": "nicholas",
+          "anchor": "nicholas_bed",
+          "visible": true
+        },
+        {
+          "actorId": "mills",
+          "anchor": "mills_door",
+          "visible": true
+        },
+        {
+          "actorId": "victor",
+          "anchor": "anne_bed",
+          "visible": false
+        }
+      ],
+      "worldState": {
+        "time": "late-morning",
+        "light": "shuttered-day",
+        "weather": "fog",
+        "layers": {
+          "family": true,
+          "threshold": true,
+          "living": false,
+          "memory": false
+        },
+        "flags": []
+      },
+      "cues": [
+        {
+          "type": "title",
+          "text": "第二场　锁门里的男孩",
+          "subtitle": "儿童房",
+          "duration": 2500,
+          "sourceRefs": [
+            "data/script.txt:337-356"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "nursery-amber",
+          "intensity": 0.34,
+          "duration": 1400,
+          "sourceRefs": [
+            "data/script.txt:473-477"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "clock-and-pencil",
+          "action": "play",
+          "volume": 0.55,
+          "sourceRefs": [
+            "data/script.txt:337-356"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "bible",
+          "state": "lesson-six",
+          "sourceRefs": [
+            "data/script.txt:337-435"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "诚实比保住性命更重要。谎言会把灵魂永远留在黑暗里。翻到第六课。",
+          "emotion": "severe",
+          "duration": 4700,
+          "sourceRefs": [
+            "data/script.txt:337-435"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "可我会假装顺从，心里仍相信自己。这样至少不会被砍头。",
+          "emotion": "defiant",
+          "duration": 3600,
+          "sourceRefs": [
+            "data/script.txt:357-425"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "nicholas",
+          "anchor": "nicholas_bed",
+          "speed": "reluctant",
+          "sourceRefs": [
+            "data/script.txt:426-463"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "anne",
+          "anchor": "anne_desk",
+          "speed": "stomping",
+          "sourceRefs": [
+            "data/script.txt:426-478"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "你们分开学习。Anne 去那边，Nicholas 留在这里。",
+          "emotion": "strict",
+          "duration": 3000,
+          "sourceRefs": [
+            "data/script.txt:426-478"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "unseen-child-cry",
+          "action": "play",
+          "volume": 0.62,
+          "sourceRefs": [
+            "data/script.txt:526-560"
+          ]
+        },
+        {
+          "type": "wait",
+          "duration": 900,
+          "sourceRefs": [
+            "data/script.txt:526-535"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetActorId": "anne",
+          "zoom": 1.18,
+          "duration": 1200,
+          "sourceRefs": [
+            "data/script.txt:535-560"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "grace",
+          "anchor": "anne_desk",
+          "speed": "brisk",
+          "sourceRefs": [
+            "data/script.txt:535-560"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "Anne，刚才是谁在哭？",
+          "emotion": "concerned",
+          "duration": 2200,
+          "sourceRefs": [
+            "data/script.txt:529-553"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "不是我，是 Victor。他说我们必须离开；他的父亲是钢琴家。",
+          "emotion": "certain",
+          "duration": 4000,
+          "sourceRefs": [
+            "data/script.txt:552-576"
+          ]
+        },
+        {
+          "type": "layer",
+          "layerId": "living",
+          "visible": false,
+          "opacity": 0,
+          "sourceRefs": [
+            "data/script.txt:576-592"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "victor",
+          "anchor": "anne_bed",
+          "sourceRefs": [
+            "data/script.txt:552-588"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "curtain-ring-slide",
+          "action": "play",
+          "volume": 0.72,
+          "sourceRefs": [
+            "data/script.txt:656-700"
+          ]
+        },
+        {
+          "type": "face",
+          "actorId": "anne",
+          "targetAnchor": "curtain_left",
+          "sourceRefs": [
+            "data/script.txt:656-700"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "门一直锁着。一个男孩不可能凭空进出这个房间。",
+          "emotion": "disbelieving",
+          "duration": 3500,
+          "sourceRefs": [
+            "data/script.txt:583-605"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "victor-seen-by-anne",
+            "anne-warns-of-incident"
+          ],
+          "sourceRefs": [
+            "data/script.txt:238-253",
+            "data/script.txt:529-592"
+          ]
+        },
+        {
+          "type": "explore",
+          "action": "open",
+          "sourceRefs": [
+            "data/script.txt:583-700"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "不管是谁动了窗帘，从现在起，每一道门都必须按规矩锁好。",
+          "emotion": "frightened-authority",
+          "duration": 3800,
+          "sourceRefs": [
+            "data/script.txt:593-625"
+          ]
+        },
+        {
+          "type": "transition",
+          "sceneId": "scene-03-haunting",
+          "sourceRefs": [
+            "data/script.txt:768-804"
+          ]
+        }
+      ],
+      "exploration": {
+        "objective": "核对 Anne 对 Victor 的描述，并检查锁门与窗帘。",
+        "minDiscoveries": 2,
+        "requiredFlags": [
+          "questioned-anne-about-victor"
+        ],
+        "resumeAnchor": "nursery_center",
+        "interactions": [
+          {
+            "id": "question-anne-victor",
+            "targetType": "actor",
+            "targetId": "anne",
+            "label": "追问 Victor 的家人",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "除了那个男孩，你还看见了谁？",
+                "emotion": "probing",
+                "sourceRefs": [
+                  "data/script.txt:568-582"
+                ]
+              },
+              {
+                "actorId": "anne",
+                "text": "他的父亲，还有其他人在大厅里看房子。Victor 说这里是他的房间。",
+                "emotion": "insistent",
+                "sourceRefs": [
+                  "data/script.txt:568-582",
+                  "data/script.txt:677-700"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "victor-family-in-house"
+            ],
+            "setFlags": [
+              "questioned-anne-about-victor"
+            ],
+            "sourceRefs": [
+              "data/script.txt:568-582",
+              "data/script.txt:677-700"
+            ]
+          },
+          {
+            "id": "inspect-nursery-curtain",
+            "targetType": "prop",
+            "targetId": "nursery_curtains",
+            "label": "检查自己滑动的窗帘",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "anne",
+                "text": "Victor 整夜都在动它。我让他停下，可他不听。",
+                "emotion": "uneasy",
+                "sourceRefs": [
+                  "data/script.txt:653-681"
+                ]
+              },
+              {
+                "actorId": "grace",
+                "text": "窗帘环还是冷的，像刚被谁碰过。",
+                "emotion": "unsettled",
+                "sourceRefs": [
+                  "data/script.txt:653-681"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "victor-seen-by-anne"
+            ],
+            "setFlags": [
+              "checked-nursery-curtain"
+            ],
+            "propState": {
+              "propId": "nursery_curtains",
+              "state": "disturbed"
+            },
+            "sourceRefs": [
+              "data/script.txt:653-681"
+            ]
+          },
+          {
+            "id": "hold-rosary",
+            "targetType": "prop",
+            "targetId": "rosary",
+            "label": "握住念珠",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "害怕时握紧它，念一遍主祷文。只要信仰在，就没有理由害怕。",
+                "emotion": "self-reassuring",
+                "sourceRefs": [
+                  "data/script.txt:478-496"
+                ]
+              }
+            ],
+            "revealFacts": [],
+            "setFlags": [
+              "held-rosary"
+            ],
+            "propState": {
+              "propId": "rosary",
+              "state": "held"
+            },
+            "sourceRefs": [
+              "data/script.txt:478-496"
+            ]
+          },
+          {
+            "id": "reassure-nicholas",
+            "targetType": "actor",
+            "targetId": "nicholas",
+            "label": "安抚 Nicholas",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "nicholas",
+                "text": "如果他是鬼呢？",
+                "emotion": "afraid",
+                "sourceRefs": [
+                  "data/script.txt:444-455",
+                  "data/script.txt:632-650"
+                ]
+              },
+              {
+                "actorId": "grace",
+                "text": "看见什么就说声你好，然后继续念书。",
+                "emotion": "forced-calm",
+                "sourceRefs": [
+                  "data/script.txt:444-455"
+                ]
+              }
+            ],
+            "revealFacts": [],
+            "setFlags": [
+              "reassured-nicholas"
+            ],
+            "sourceRefs": [
+              "data/script.txt:444-455"
+            ]
+          }
+        ]
+      },
+      "skipEffects": {
+        "revealFacts": [
+          "victor-seen-by-anne",
+          "victor-family-in-house",
+          "anne-warns-of-incident"
+        ],
+        "setFlags": [
+          "questioned-anne-about-victor"
+        ],
+        "propStates": [
+          {
+            "propId": "nursery_curtains",
+            "state": "disturbed"
+          }
+        ]
+      },
+      "nextSceneId": "scene-03-haunting"
+    },
+    {
+      "id": "scene-03-haunting",
+      "index": 3,
+      "title": "第三场：楼上的脚步",
+      "subtitle": "看不见的人穿过房间，一本相册从旧日灰尘中醒来。",
+      "mapId": "upstairs",
+      "playerActor": "grace",
+      "actors": [
+        {
+          "actorId": "grace",
+          "anchor": "landing",
+          "visible": true
+        },
+        {
+          "actorId": "anne",
+          "anchor": "anne_desk",
+          "visible": true
+        },
+        {
+          "actorId": "nicholas",
+          "anchor": "nicholas_bed",
+          "visible": true
+        },
+        {
+          "actorId": "mills",
+          "anchor": "mills_door",
+          "visible": true
+        },
+        {
+          "actorId": "lydia",
+          "anchor": "attic_shadow",
+          "visible": true
+        },
+        {
+          "actorId": "victor",
+          "anchor": "anne_bed",
+          "visible": false
+        }
+      ],
+      "worldState": {
+        "time": "evening",
+        "light": "candle-night",
+        "weather": "thick-fog",
+        "layers": {
+          "family": true,
+          "threshold": true,
+          "living": false,
+          "memory": false
+        },
+        "flags": []
+      },
+      "cues": [
+        {
+          "type": "title",
+          "text": "第三场　楼上的脚步",
+          "subtitle": "三天后",
+          "duration": 2500,
+          "sourceRefs": [
+            "data/script.txt:768-804"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "candle-night",
+          "intensity": 0.28,
+          "duration": 1600,
+          "sourceRefs": [
+            "data/script.txt:768-804"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "running-overhead",
+          "action": "play",
+          "volume": 0.78,
+          "sourceRefs": [
+            "data/script.txt:805-824"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "Mills，叫 Lydia 别再楼上来回跑。我的头顶像有三个人。",
+          "emotion": "irritated",
+          "duration": 4000,
+          "sourceRefs": [
+            "data/script.txt:805-824"
+          ]
+        },
+        {
+          "type": "face",
+          "actorId": "lydia",
+          "targetAnchor": "attic_door",
+          "sourceRefs": [
+            "data/script.txt:805-840"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "attic-furniture-drag",
+          "action": "play",
+          "volume": 0.85,
+          "sourceRefs": [
+            "data/script.txt:825-853"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "grace",
+          "anchor": "attic_door",
+          "speed": "brisk",
+          "sourceRefs": [
+            "data/script.txt:825-853"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetAnchor": "attic_door",
+          "zoom": 1.22,
+          "duration": 1400,
+          "sourceRefs": [
+            "data/script.txt:839-865"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "他们刚从这里过去。一个男孩、两个女人，到处都是。他们说房子属于他们。",
+          "emotion": "frightened",
+          "duration": 4700,
+          "sourceRefs": [
+            "data/script.txt:842-890"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "anne_drawing",
+          "state": "visible",
+          "sourceRefs": [
+            "data/script.txt:882-917"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "这是父亲、母亲、Victor，还有那个总在问我问题的老妇人。数字是我看见他们的次数。",
+          "emotion": "earnest",
+          "duration": 5000,
+          "sourceRefs": [
+            "data/script.txt:882-917"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "overlapping-whispers",
+          "action": "play",
+          "volume": 0.52,
+          "sourceRefs": [
+            "data/script.txt:857-880"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "search-flicker",
+          "intensity": 0.48,
+          "duration": 1100,
+          "sourceRefs": [
+            "data/script.txt:921-928"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "mills",
+          "anchor": "album_table",
+          "speed": "walk",
+          "sourceRefs": [
+            "data/script.txt:972-1009"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "dead_album",
+          "state": "visible-open",
+          "sourceRefs": [
+            "data/script.txt:972-1009"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mills",
+          "text": "他们不是睡着了，夫人。这是死者相册。过去的人以为肖像能让灵魂继续存在。",
+          "emotion": "measured",
+          "duration": 5200,
+          "sourceRefs": [
+            "data/script.txt:972-1009"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "intruders-plan-curtains",
+            "anne-four-person-drawing",
+            "dead-portrait-album"
+          ],
+          "sourceRefs": [
+            "data/script.txt:857-917",
+            "data/script.txt:972-1009"
+          ]
+        },
+        {
+          "type": "explore",
+          "action": "open",
+          "sourceRefs": [
+            "data/script.txt:857-1009"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "piano-single-chord",
+          "action": "play",
+          "volume": 0.9,
+          "sourceRefs": [
+            "data/script.txt:1102-1124"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "音乐室明明空着，却有人弹了琴。这房子里有东西，没有得到安息。",
+          "emotion": "shaken",
+          "duration": 4300,
+          "sourceRefs": [
+            "data/script.txt:1102-1127"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mills",
+          "text": "有时，死者与活人的世界会混在一起。并不是每件事都有答案。",
+          "emotion": "careful",
+          "duration": 4000,
+          "sourceRefs": [
+            "data/script.txt:1119-1154"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "worlds-can-overlap"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1119-1154"
+          ]
+        },
+        {
+          "type": "transition",
+          "sceneId": "scene-04-charles",
+          "sourceRefs": [
+            "data/script.txt:1155-1219"
+          ]
+        }
+      ],
+      "exploration": {
+        "objective": "检查 Anne 的画、杂物间与死者相册，判断脚步声来自何处。",
+        "minDiscoveries": 2,
+        "requiredFlags": [
+          "opened-dead-album"
+        ],
+        "resumeAnchor": "landing",
+        "interactions": [
+          {
+            "id": "inspect-four-person-drawing",
+            "targetType": "prop",
+            "targetId": "anne_drawing",
+            "label": "细看 Anne 的四人画",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "老妇人旁边的数字最高。她出现得最频繁，也最令 Anne 害怕。",
+                "emotion": "uneasy",
+                "sourceRefs": [
+                  "data/script.txt:882-917"
+                ]
+              },
+              {
+                "actorId": "anne",
+                "text": "她像没在看我，却什么都能看见。她总叫我跟她走。",
+                "emotion": "afraid",
+                "sourceRefs": [
+                  "data/script.txt:907-917"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "anne-four-person-drawing",
+              "victor-family-in-house"
+            ],
+            "setFlags": [
+              "studied-anne-drawing"
+            ],
+            "propState": {
+              "propId": "anne_drawing",
+              "state": "examined"
+            },
+            "sourceRefs": [
+              "data/script.txt:882-917"
+            ]
+          },
+          {
+            "id": "open-dead-album",
+            "targetType": "prop",
+            "targetId": "dead_album",
+            "label": "翻阅死者相册",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "大人、孩子，甚至整家人都被摆成睡着的样子。",
+                "emotion": "repulsed",
+                "sourceRefs": [
+                  "data/script.txt:982-1006"
+                ]
+              },
+              {
+                "actorId": "mills",
+                "text": "悲痛会让人做出许多奇怪的事。",
+                "emotion": "somber",
+                "sourceRefs": [
+                  "data/script.txt:986-1006"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "dead-portrait-album"
+            ],
+            "setFlags": [
+              "opened-dead-album"
+            ],
+            "propState": {
+              "propId": "dead_album",
+              "state": "examined"
+            },
+            "sourceRefs": [
+              "data/script.txt:982-1009"
+            ]
+          },
+          {
+            "id": "listen-at-attic-door",
+            "targetType": "prop",
+            "targetId": "attic_door",
+            "label": "贴近杂物间门倾听",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "脚步在门后分开，又像从楼下同时传来。",
+                "emotion": "alarmed",
+                "sourceRefs": [
+                  "data/script.txt:839-880"
+                ]
+              },
+              {
+                "actorId": "anne",
+                "text": "他们到处都是，还说要把窗帘拆掉。",
+                "emotion": "urgent",
+                "sourceRefs": [
+                  "data/script.txt:857-868"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "intruders-plan-curtains"
+            ],
+            "setFlags": [
+              "heard-overlapping-rooms"
+            ],
+            "propState": {
+              "propId": "attic_door",
+              "state": "echoing"
+            },
+            "sourceRefs": [
+              "data/script.txt:839-880"
+            ]
+          },
+          {
+            "id": "observe-lydia-at-attic",
+            "targetType": "actor",
+            "targetId": "lydia",
+            "label": "观察 Lydia 的反应",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "她没有发出那些脚步声。她一直站在门外，像是在等屋里的人安静下来。",
+                "emotion": "confused",
+                "sourceRefs": [
+                  "data/script.txt:805-853"
+                ]
+              },
+              {
+                "actorId": "mills",
+                "text": "别逼她回答，夫人。她已经很久不开口了。",
+                "emotion": "guarded",
+                "sourceRefs": [
+                  "data/script.txt:511-525",
+                  "data/script.txt:1056-1069"
+                ]
+              }
+            ],
+            "revealFacts": [],
+            "setFlags": [
+              "noticed-lydia-knows-house"
+            ],
+            "sourceRefs": [
+              "data/script.txt:511-525",
+              "data/script.txt:805-853"
+            ]
+          }
+        ]
+      },
+      "skipEffects": {
+        "revealFacts": [
+          "intruders-plan-curtains",
+          "anne-four-person-drawing",
+          "dead-portrait-album",
+          "worlds-can-overlap"
+        ],
+        "setFlags": [
+          "opened-dead-album"
+        ],
+        "propStates": [
+          {
+            "propId": "anne_drawing",
+            "state": "examined"
+          },
+          {
+            "propId": "dead_album",
+            "state": "examined"
+          }
+        ]
+      },
+      "nextSceneId": "scene-04-charles"
+    },
+    {
+      "id": "scene-04-charles",
+      "index": 4,
+      "title": "第四场：雾中归人",
+      "subtitle": "Grace 去找神父，浓雾却把丈夫送回家门。",
+      "mapId": "garden",
+      "playerActor": "grace",
+      "actors": [
+        {
+          "actorId": "grace",
+          "anchor": "house_steps",
+          "visible": true
+        },
+        {
+          "actorId": "mills",
+          "anchor": "mills_watch",
+          "visible": true
+        },
+        {
+          "actorId": "tuttle",
+          "anchor": "tuttle_work",
+          "visible": true
+        },
+        {
+          "actorId": "lydia",
+          "anchor": "lydia_watch",
+          "visible": true
+        },
+        {
+          "actorId": "charles",
+          "anchor": "charles_appear",
+          "visible": false
+        }
+      ],
+      "worldState": {
+        "time": "early-morning",
+        "light": "fog-diffused",
+        "weather": "heavy-fog",
+        "layers": {
+          "family": true,
+          "threshold": true,
+          "living": false,
+          "memory": true
+        },
+        "flags": []
+      },
+      "cues": [
+        {
+          "type": "title",
+          "text": "第四场　雾中归人",
+          "subtitle": "通往村庄的路",
+          "duration": 2500,
+          "sourceRefs": [
+            "data/script.txt:1155-1219"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "fog-diffused",
+          "intensity": 0.46,
+          "duration": 1800,
+          "sourceRefs": [
+            "data/script.txt:1155-1208"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "fog-wind",
+          "action": "play",
+          "volume": 0.65,
+          "sourceRefs": [
+            "data/script.txt:1155-1208"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "我要去村里把神父带回来。今天必须为每个房间祝福。",
+          "emotion": "resolved",
+          "duration": 4000,
+          "sourceRefs": [
+            "data/script.txt:1155-1178"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mills",
+          "text": "等天气好些吧，夫人。雾不会让人走得太远。",
+          "emotion": "warning",
+          "duration": 3500,
+          "sourceRefs": [
+            "data/script.txt:1162-1208"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "grace",
+          "anchor": "fog_turn",
+          "speed": "determined",
+          "sourceRefs": [
+            "data/script.txt:1155-1208"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetAnchor": "fog_bank",
+          "zoom": 1.08,
+          "duration": 1600,
+          "sourceRefs": [
+            "data/script.txt:1201-1219"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "fog_bank",
+          "state": "impenetrable",
+          "sourceRefs": [
+            "data/script.txt:1201-1208"
+          ]
+        },
+        {
+          "type": "wait",
+          "duration": 1100,
+          "sourceRefs": [
+            "data/script.txt:1201-1219"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "soldier-steps",
+          "action": "play",
+          "volume": 0.76,
+          "sourceRefs": [
+            "data/script.txt:1219-1246"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "charles",
+          "anchor": "charles_appear",
+          "sourceRefs": [
+            "data/script.txt:1219-1246"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetActorId": "charles",
+          "zoom": 1.24,
+          "duration": 1500,
+          "sourceRefs": [
+            "data/script.txt:1219-1246"
+          ]
+        },
+        {
+          "type": "face",
+          "actorId": "grace",
+          "targetActorId": "charles",
+          "sourceRefs": [
+            "data/script.txt:1219-1236"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "grace",
+          "anchor": "charles_appear",
+          "speed": "run",
+          "sourceRefs": [
+            "data/script.txt:1219-1236"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "Charles！他们让我放弃希望，可你回来了。孩子们的父亲回来了。",
+          "emotion": "overwhelmed",
+          "duration": 4700,
+          "sourceRefs": [
+            "data/script.txt:1219-1239"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "charles",
+          "text": "我一直在外面……寻找我的家。",
+          "emotion": "distant",
+          "duration": 3200,
+          "sourceRefs": [
+            "data/script.txt:1240-1246"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "charles",
+          "anchor": "charles_rest",
+          "speed": "weary",
+          "sourceRefs": [
+            "data/script.txt:1240-1257"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "charles_pack",
+          "state": "visible",
+          "sourceRefs": [
+            "data/script.txt:1240-1257"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "charles-returns-through-fog"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1219-1258"
+          ]
+        },
+        {
+          "type": "explore",
+          "action": "open",
+          "sourceRefs": [
+            "data/script.txt:1219-1271"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "回家吧。Anne 和 Nicholas 等着见你。",
+          "emotion": "hopeful",
+          "duration": 3000,
+          "sourceRefs": [
+            "data/script.txt:1252-1271"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "charles",
+          "anchor": "house_steps",
+          "speed": "weary",
+          "sourceRefs": [
+            "data/script.txt:1252-1271"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "grace",
+          "anchor": "house_steps",
+          "speed": "walk",
+          "sourceRefs": [
+            "data/script.txt:1252-1271"
+          ]
+        },
+        {
+          "type": "transition",
+          "sceneId": "scene-05-curtains",
+          "sourceRefs": [
+            "data/script.txt:1258-1354"
+          ]
+        }
+      ],
+      "exploration": {
+        "objective": "确认 Charles 的状态，并寻找一条能穿过浓雾的路。",
+        "minDiscoveries": 2,
+        "requiredFlags": [
+          "spoke-to-charles"
+        ],
+        "resumeAnchor": "charles_rest",
+        "interactions": [
+          {
+            "id": "speak-charles-return",
+            "targetType": "actor",
+            "targetId": "charles",
+            "label": "问 Charles 去了哪里",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "战争已经结束。你为什么现在才回来？",
+                "emotion": "aching",
+                "sourceRefs": [
+                  "data/script.txt:1224-1246"
+                ]
+              },
+              {
+                "actorId": "charles",
+                "text": "结束？我只记得雾、流血，还有一条一直找不到家的路。",
+                "emotion": "disoriented",
+                "sourceRefs": [
+                  "data/script.txt:1240-1246",
+                  "data/script.txt:1519-1527"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "charles-is-disoriented"
+            ],
+            "setFlags": [
+              "spoke-to-charles"
+            ],
+            "sourceRefs": [
+              "data/script.txt:1224-1246",
+              "data/script.txt:1519-1527"
+            ]
+          },
+          {
+            "id": "inspect-charles-pack",
+            "targetType": "prop",
+            "targetId": "charles_pack",
+            "label": "检查军用背包",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "布满湿泥，却没有食物、信件或归程车票，仿佛他直接从战场走进了花园。",
+                "emotion": "uneasy",
+                "sourceRefs": [
+                  "data/script.txt:1240-1257"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "charles-is-disoriented"
+            ],
+            "setFlags": [
+              "inspected-charles-pack"
+            ],
+            "propState": {
+              "propId": "charles_pack",
+              "state": "examined"
+            },
+            "sourceRefs": [
+              "data/script.txt:1240-1257"
+            ]
+          },
+          {
+            "id": "test-garden-gate",
+            "targetType": "prop",
+            "targetId": "garden_gate",
+            "label": "摸索花园门",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "门就在眼前，可跨过去又回到了同一段石路。",
+                "emotion": "frustrated",
+                "sourceRefs": [
+                  "data/script.txt:1155-1208"
+                ]
+              },
+              {
+                "actorId": "mills",
+                "text": "我说过，雾不会让您走远。",
+                "emotion": "quiet",
+                "sourceRefs": [
+                  "data/script.txt:1201-1208"
+                ]
+              }
+            ],
+            "revealFacts": [],
+            "setFlags": [
+              "fog-loop-confirmed"
+            ],
+            "propState": {
+              "propId": "garden_gate",
+              "state": "loops-back"
+            },
+            "sourceRefs": [
+              "data/script.txt:1155-1208"
+            ]
+          },
+          {
+            "id": "inspect-path-marker",
+            "targetType": "prop",
+            "targetId": "path_marker",
+            "label": "检查重复的路标",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "同一道刮痕出现了三次。不是我迷路，是道路把我送了回来。",
+                "emotion": "unsettled",
+                "sourceRefs": [
+                  "data/script.txt:1201-1208"
+                ]
+              }
+            ],
+            "revealFacts": [],
+            "setFlags": [
+              "noticed-fog-loop"
+            ],
+            "propState": {
+              "propId": "path_marker",
+              "state": "marked"
+            },
+            "sourceRefs": [
+              "data/script.txt:1201-1208"
+            ]
+          }
+        ]
+      },
+      "skipEffects": {
+        "revealFacts": [
+          "charles-returns-through-fog",
+          "charles-is-disoriented"
+        ],
+        "setFlags": [
+          "spoke-to-charles"
+        ],
+        "propStates": [
+          {
+            "propId": "fog_bank",
+            "state": "impenetrable"
+          },
+          {
+            "propId": "charles_pack",
+            "state": "examined"
+          }
+        ]
+      },
+      "nextSceneId": "scene-05-curtains"
+    },
+    {
+      "id": "scene-05-curtains",
+      "index": 5,
+      "title": "第五场：没有窗帘的清晨",
+      "subtitle": "一张脸借 Anne 的声音出现；随后，整座宅邸失去遮光之物。",
+      "mapId": "upstairs",
+      "playerActor": "grace",
+      "actors": [
+        {
+          "actorId": "grace",
+          "anchor": "nursery_center",
+          "visible": true
+        },
+        {
+          "actorId": "anne",
+          "anchor": "communion_dress",
+          "visible": true
+        },
+        {
+          "actorId": "nicholas",
+          "anchor": "nicholas_bed",
+          "visible": true
+        },
+        {
+          "actorId": "mills",
+          "anchor": "mills_door",
+          "visible": true
+        },
+        {
+          "actorId": "lydia",
+          "anchor": "attic_shadow",
+          "visible": true
+        },
+        {
+          "actorId": "charles",
+          "anchor": "charles_landing",
+          "visible": true
+        },
+        {
+          "actorId": "medium",
+          "anchor": "mirror",
+          "visible": false
+        }
+      ],
+      "worldState": {
+        "time": "night-to-dawn",
+        "light": "candle-warm",
+        "weather": "fog-thinning",
+        "layers": {
+          "family": true,
+          "threshold": true,
+          "living": false,
+          "memory": true
+        },
+        "flags": []
+      },
+      "cues": [
+        {
+          "type": "title",
+          "text": "第五场　没有窗帘的清晨",
+          "subtitle": "归来之后",
+          "duration": 2600,
+          "sourceRefs": [
+            "data/script.txt:1355-1388"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "communion-candle",
+          "intensity": 0.4,
+          "duration": 1600,
+          "sourceRefs": [
+            "data/script.txt:1367-1388"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "communion_dress",
+          "state": "worn-by-anne",
+          "sourceRefs": [
+            "data/script.txt:1367-1388"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "anne",
+          "anchor": "mirror",
+          "speed": "playful",
+          "sourceRefs": [
+            "data/script.txt:1367-1407"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "多漂亮的女儿。袖口还要收短，初领圣餐前绝不能弄脏。",
+          "emotion": "tender",
+          "duration": 3900,
+          "sourceRefs": [
+            "data/script.txt:1367-1388"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "music-box-dance",
+          "action": "play",
+          "volume": 0.55,
+          "sourceRefs": [
+            "data/script.txt:1389-1403"
+          ]
+        },
+        {
+          "type": "layer",
+          "layerId": "living",
+          "visible": true,
+          "opacity": 0.46,
+          "sourceRefs": [
+            "data/script.txt:1402-1449"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "medium",
+          "anchor": "mirror",
+          "sourceRefs": [
+            "data/script.txt:1402-1449"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetAnchor": "mirror",
+          "zoom": 1.3,
+          "duration": 1200,
+          "sourceRefs": [
+            "data/script.txt:1402-1449"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "voice-double",
+          "action": "play",
+          "volume": 0.74,
+          "sourceRefs": [
+            "data/script.txt:1402-1449"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "我的女儿在哪里？你穿着她的裙子，用着她的声音！",
+          "emotion": "terrified",
+          "duration": 4200,
+          "sourceRefs": [
+            "data/script.txt:1402-1423"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "我就是你的女儿！",
+          "emotion": "panicked",
+          "duration": 2200,
+          "sourceRefs": [
+            "data/script.txt:1413-1427"
+          ]
+        },
+        {
+          "type": "despawn",
+          "actorId": "medium",
+          "sourceRefs": [
+            "data/script.txt:1424-1449"
+          ]
+        },
+        {
+          "type": "layer",
+          "layerId": "living",
+          "visible": false,
+          "opacity": 0,
+          "sourceRefs": [
+            "data/script.txt:1424-1449"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "mills",
+          "anchor": "nursery_center",
+          "speed": "brisk",
+          "sourceRefs": [
+            "data/script.txt:1424-1460"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mills",
+          "text": "Anne 还是 Anne，夫人。您需要休息。把屋里的事交给我们。",
+          "emotion": "steady",
+          "duration": 4300,
+          "sourceRefs": [
+            "data/script.txt:1424-1463"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "old-woman-overlays-anne"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1367-1449"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetActorId": "charles",
+          "zoom": 1.12,
+          "duration": 1100,
+          "sourceRefs": [
+            "data/script.txt:1479-1527"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "charles",
+          "text": "Anne 告诉了我那一天的事。我回来只是为了向妻子和孩子告别。现在必须回前线。",
+          "emotion": "hollow",
+          "duration": 5300,
+          "sourceRefs": [
+            "data/script.txt:1479-1527"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "战争已经结束。你不能再把我们丢在这座黑暗的房子里！",
+          "emotion": "desperate",
+          "duration": 4300,
+          "sourceRefs": [
+            "data/script.txt:1523-1554"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "charles",
+          "anchor": "landing",
+          "speed": "fading",
+          "sourceRefs": [
+            "data/script.txt:1517-1555"
+          ]
+        },
+        {
+          "type": "despawn",
+          "actorId": "charles",
+          "sourceRefs": [
+            "data/script.txt:1517-1555"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "charles-leaves-again"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1517-1555"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "all-curtains-ripped",
+          "action": "play",
+          "volume": 1,
+          "sourceRefs": [
+            "data/script.txt:1556-1609"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "nursery_curtains",
+          "state": "removed",
+          "sourceRefs": [
+            "data/script.txt:1556-1619"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "curtain_rail",
+          "state": "visible-bare",
+          "sourceRefs": [
+            "data/script.txt:1556-1619"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "violent-dawn",
+          "intensity": 1,
+          "duration": 850,
+          "sourceRefs": [
+            "data/script.txt:1556-1619"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "children-cry-out",
+          "action": "play",
+          "volume": 0.9,
+          "sourceRefs": [
+            "data/script.txt:1556-1577"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "grace",
+          "anchor": "safe_corner",
+          "speed": "run",
+          "sourceRefs": [
+            "data/script.txt:1556-1577"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "anne",
+          "anchor": "safe_corner",
+          "speed": "run",
+          "sourceRefs": [
+            "data/script.txt:1556-1577"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "nicholas",
+          "anchor": "safe_corner",
+          "speed": "run",
+          "sourceRefs": [
+            "data/script.txt:1556-1577"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "让我看看你们！没有水疱，也没有窒息……可是谁拿走了窗帘？",
+          "emotion": "panicked-confusion",
+          "duration": 5000,
+          "sourceRefs": [
+            "data/script.txt:1566-1619"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "curtains-removed",
+            "daylight-fails-to-harm"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1556-1626"
+          ]
+        },
+        {
+          "type": "explore",
+          "action": "open",
+          "sourceRefs": [
+            "data/script.txt:1556-1657"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "把钥匙给我。你们早就知道这一切；现在离开我的房子！",
+          "emotion": "furious",
+          "duration": 4200,
+          "sourceRefs": [
+            "data/script.txt:1633-1657"
+          ]
+        },
+        {
+          "type": "transition",
+          "sceneId": "scene-06-graves",
+          "sourceRefs": [
+            "data/script.txt:1658-1703"
+          ]
+        }
+      ],
+      "exploration": {
+        "objective": "确认孩子是否受伤，并检查老妇人错视与窗帘消失留下的痕迹。",
+        "minDiscoveries": 2,
+        "requiredFlags": [
+          "checked-children-in-light"
+        ],
+        "resumeAnchor": "safe_corner",
+        "interactions": [
+          {
+            "id": "check-nicholas-in-light",
+            "targetType": "actor",
+            "targetId": "nicholas",
+            "label": "检查 Nicholas 的皮肤与呼吸",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "睁开眼让我看。皮肤完好，呼吸也没有变弱。",
+                "emotion": "disbelieving-relief",
+                "sourceRefs": [
+                  "data/script.txt:1566-1626"
+                ]
+              },
+              {
+                "actorId": "nicholas",
+                "text": "光很亮，可它没有烧我。",
+                "emotion": "bewildered",
+                "sourceRefs": [
+                  "data/script.txt:1566-1626"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "daylight-fails-to-harm"
+            ],
+            "setFlags": [
+              "checked-children-in-light"
+            ],
+            "sourceRefs": [
+              "data/script.txt:1566-1626"
+            ]
+          },
+          {
+            "id": "inspect-bare-curtain-rail",
+            "targetType": "prop",
+            "targetId": "curtain_rail",
+            "label": "检查空窗帘杆",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "挂钩被逐个取下，不是风吹落的。有人耐心地拆掉了整屋窗帘。",
+                "emotion": "angry",
+                "sourceRefs": [
+                  "data/script.txt:1566-1619"
+                ]
+              },
+              {
+                "actorId": "mills",
+                "text": "也许有人只是想让日光进来。",
+                "emotion": "deliberate",
+                "sourceRefs": [
+                  "data/script.txt:1591-1626"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "curtains-removed"
+            ],
+            "setFlags": [
+              "confirmed-curtains-deliberately-removed"
+            ],
+            "propState": {
+              "propId": "curtain_rail",
+              "state": "examined"
+            },
+            "sourceRefs": [
+              "data/script.txt:1566-1626"
+            ]
+          },
+          {
+            "id": "question-anne-old-woman",
+            "targetType": "actor",
+            "targetId": "anne",
+            "label": "问 Anne 刚才看见了什么",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "anne",
+                "text": "我一直是我。你抓痛了我，还说我是那个老妇人。",
+                "emotion": "hurt",
+                "sourceRefs": [
+                  "data/script.txt:1413-1449"
+                ]
+              },
+              {
+                "actorId": "grace",
+                "text": "我看见的是她的脸，却听见你的声音。",
+                "emotion": "shaken",
+                "sourceRefs": [
+                  "data/script.txt:1413-1449"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "old-woman-overlays-anne"
+            ],
+            "setFlags": [
+              "apologized-to-anne"
+            ],
+            "sourceRefs": [
+              "data/script.txt:1413-1449"
+            ]
+          },
+          {
+            "id": "inspect-communion-dress",
+            "targetType": "prop",
+            "targetId": "communion_dress",
+            "label": "收起初领圣餐裙",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "裙子上没有陌生人的痕迹。变化只发生在我看向 Anne 的那一刻。",
+                "emotion": "uncertain",
+                "sourceRefs": [
+                  "data/script.txt:1367-1449"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "old-woman-overlays-anne"
+            ],
+            "setFlags": [
+              "stored-communion-dress"
+            ],
+            "propState": {
+              "propId": "communion_dress",
+              "state": "folded"
+            },
+            "sourceRefs": [
+              "data/script.txt:1367-1449"
+            ]
+          }
+        ]
+      },
+      "skipEffects": {
+        "revealFacts": [
+          "old-woman-overlays-anne",
+          "charles-leaves-again",
+          "curtains-removed",
+          "daylight-fails-to-harm"
+        ],
+        "setFlags": [
+          "checked-children-in-light"
+        ],
+        "propStates": [
+          {
+            "propId": "nursery_curtains",
+            "state": "removed"
+          },
+          {
+            "propId": "curtain_rail",
+            "state": "visible-bare"
+          },
+          {
+            "propId": "communion_dress",
+            "state": "folded"
+          }
+        ]
+      },
+      "nextSceneId": "scene-06-graves"
+    },
+    {
+      "id": "scene-06-graves",
+      "index": 6,
+      "title": "第六场：墓碑上的名字",
+      "subtitle": "孩子逃进花园，旧仆站在自己的墓前。",
+      "mapId": "garden",
+      "playerActor": "grace",
+      "actors": [
+        {
+          "actorId": "grace",
+          "anchor": "house_steps",
+          "visible": true
+        },
+        {
+          "actorId": "anne",
+          "anchor": "anne_grave",
+          "visible": true
+        },
+        {
+          "actorId": "nicholas",
+          "anchor": "nicholas_grave",
+          "visible": true
+        },
+        {
+          "actorId": "mills",
+          "anchor": "grave_mills",
+          "visible": false
+        },
+        {
+          "actorId": "tuttle",
+          "anchor": "grave_tuttle",
+          "visible": false
+        },
+        {
+          "actorId": "lydia",
+          "anchor": "grave_lydia",
+          "visible": false
+        }
+      ],
+      "worldState": {
+        "time": "night",
+        "light": "moon-through-fog",
+        "weather": "cold-fog",
+        "layers": {
+          "family": true,
+          "threshold": true,
+          "living": false,
+          "memory": false
+        },
+        "flags": []
+      },
+      "cues": [
+        {
+          "type": "title",
+          "text": "第六场　墓碑上的名字",
+          "subtitle": "夜里的花园",
+          "duration": 2500,
+          "sourceRefs": [
+            "data/script.txt:1658-1703"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "moon-through-fog",
+          "intensity": 0.31,
+          "duration": 1500,
+          "sourceRefs": [
+            "data/script.txt:1671-1703"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "children-climb-down",
+          "action": "play",
+          "volume": 0.72,
+          "sourceRefs": [
+            "data/script.txt:1671-1688"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "anne",
+          "anchor": "graves_edge",
+          "speed": "sneaking",
+          "sourceRefs": [
+            "data/script.txt:1671-1703"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "nicholas",
+          "anchor": "nicholas_grave",
+          "speed": "fearful",
+          "sourceRefs": [
+            "data/script.txt:1683-1703"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "我们还没走出花园。看，那些像是墓碑。",
+          "emotion": "brave-front",
+          "duration": 3300,
+          "sourceRefs": [
+            "data/script.txt:1690-1713"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "nicholas",
+          "text": "别靠近。要是有鬼从里面跳出来呢？",
+          "emotion": "terrified",
+          "duration": 3200,
+          "sourceRefs": [
+            "data/script.txt:1690-1713"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "ivy-torn-from-stone",
+          "action": "play",
+          "volume": 0.8,
+          "sourceRefs": [
+            "data/script.txt:1702-1717"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "grave_mills",
+          "state": "uncovered",
+          "sourceRefs": [
+            "data/script.txt:1702-1750"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "grave_tuttle",
+          "state": "uncovered",
+          "sourceRefs": [
+            "data/script.txt:1702-1750"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "grave_lydia",
+          "state": "uncovered",
+          "sourceRefs": [
+            "data/script.txt:1702-1750"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "mills",
+          "anchor": "grave_mills",
+          "sourceRefs": [
+            "data/script.txt:1713-1750"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "tuttle",
+          "anchor": "grave_tuttle",
+          "sourceRefs": [
+            "data/script.txt:1713-1750"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "lydia",
+          "anchor": "grave_lydia",
+          "sourceRefs": [
+            "data/script.txt:1713-1750"
+          ]
+        },
+        {
+          "type": "face",
+          "actorId": "lydia",
+          "targetAnchor": "grave_lydia",
+          "sourceRefs": [
+            "data/script.txt:1713-1750"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetAnchor": "grave_mills",
+          "zoom": 1.2,
+          "duration": 1200,
+          "sourceRefs": [
+            "data/script.txt:1702-1750"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "Mills、Tuttle、Lydia……是他们的名字。他们站在自己的墓碑旁！",
+          "emotion": "horrified",
+          "duration": 4200,
+          "sourceRefs": [
+            "data/script.txt:1709-1740"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "grace",
+          "anchor": "graves_edge",
+          "speed": "run",
+          "sourceRefs": [
+            "data/script.txt:1740-1757"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "离我的孩子远一点！",
+          "emotion": "protective-rage",
+          "duration": 2200,
+          "sourceRefs": [
+            "data/script.txt:1740-1757"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mills",
+          "text": "别费力了，夫人。肺结核在半个多世纪前就结束了我们三个人的生命。",
+          "emotion": "plain",
+          "duration": 4800,
+          "sourceRefs": [
+            "data/script.txt:1745-1750"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "three-servant-graves",
+            "servants-died-of-tuberculosis"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1702-1750"
+          ]
+        },
+        {
+          "type": "explore",
+          "action": "open",
+          "sourceRefs": [
+            "data/script.txt:1702-1774"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mills",
+          "text": "我们一直想让您明白新的处境：活人和死者必须学着共处。",
+          "emotion": "firm-gentle",
+          "duration": 4400,
+          "sourceRefs": [
+            "data/script.txt:1766-1774"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "tuttle",
+          "text": "拆窗帘的正是那些入侵者。现在，他们已经在屋里找到孩子了。",
+          "emotion": "warning",
+          "duration": 4500,
+          "sourceRefs": [
+            "data/script.txt:1783-1823"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "intruders-are-another-world"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1766-1799"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "seance-prayer-through-wall",
+          "action": "play",
+          "volume": 0.68,
+          "sourceRefs": [
+            "data/script.txt:1809-1839"
+          ]
+        },
+        {
+          "type": "transition",
+          "sceneId": "scene-07-seance",
+          "sourceRefs": [
+            "data/script.txt:1809-1839"
+          ]
+        }
+      ],
+      "exploration": {
+        "objective": "亲自核对三块墓碑的姓名与年代。",
+        "minDiscoveries": 3,
+        "requiredFlags": [
+          "read-mills-grave",
+          "read-tuttle-grave",
+          "read-lydia-grave"
+        ],
+        "resumeAnchor": "graves_edge",
+        "interactions": [
+          {
+            "id": "read-mills-grave",
+            "targetType": "prop",
+            "targetId": "grave_mills",
+            "label": "擦净 Bertha Mills 的墓碑",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "Bertha Mills。死亡年代在我们来到这里的半个世纪以前。",
+                "emotion": "stunned",
+                "sourceRefs": [
+                  "data/script.txt:1702-1750"
+                ]
+              },
+              {
+                "actorId": "mills",
+                "text": "是我，夫人。",
+                "emotion": "calm",
+                "sourceRefs": [
+                  "data/script.txt:1713-1750"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "three-servant-graves"
+            ],
+            "setFlags": [
+              "read-mills-grave"
+            ],
+            "propState": {
+              "propId": "grave_mills",
+              "state": "read"
+            },
+            "sourceRefs": [
+              "data/script.txt:1702-1750"
+            ]
+          },
+          {
+            "id": "read-tuttle-grave",
+            "targetType": "prop",
+            "targetId": "grave_tuttle",
+            "label": "读 Edmund Tuttle 的墓碑",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "Edmund Tuttle。同一段年月，同一场肺病。",
+                "emotion": "stunned",
+                "sourceRefs": [
+                  "data/script.txt:1702-1750"
+                ]
+              },
+              {
+                "actorId": "tuttle",
+                "text": "这片园子认得我们，比活着的人更早。",
+                "emotion": "somber",
+                "sourceRefs": [
+                  "data/script.txt:1745-1750"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "three-servant-graves",
+              "servants-died-of-tuberculosis"
+            ],
+            "setFlags": [
+              "read-tuttle-grave"
+            ],
+            "propState": {
+              "propId": "grave_tuttle",
+              "state": "read"
+            },
+            "sourceRefs": [
+              "data/script.txt:1702-1750"
+            ]
+          },
+          {
+            "id": "read-lydia-grave",
+            "targetType": "prop",
+            "targetId": "grave_lydia",
+            "label": "拨开 Lydia 墓碑上的藤蔓",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "Lydia。她也在这里，和他们死于同一场肺结核。",
+                "emotion": "hushed",
+                "sourceRefs": [
+                  "data/script.txt:1702-1750"
+                ]
+              },
+              {
+                "actorId": "mills",
+                "text": "我们三个是彼此仅剩的家人。",
+                "emotion": "protective",
+                "sourceRefs": [
+                  "data/script.txt:511-515",
+                  "data/script.txt:1745-1750"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "three-servant-graves",
+              "servants-died-of-tuberculosis"
+            ],
+            "setFlags": [
+              "read-lydia-grave"
+            ],
+            "propState": {
+              "propId": "grave_lydia",
+              "state": "read"
+            },
+            "sourceRefs": [
+              "data/script.txt:511-515",
+              "data/script.txt:1702-1750"
+            ]
+          },
+          {
+            "id": "question-mills-new-situation",
+            "targetType": "actor",
+            "targetId": "mills",
+            "label": "追问“新的处境”",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "既然你们死了，为什么还在我的房子里？",
+                "emotion": "defensive",
+                "sourceRefs": [
+                  "data/script.txt:1751-1778"
+                ]
+              },
+              {
+                "actorId": "mills",
+                "text": "离开并不总意味着能走远。有时我们会感觉到另一边的人，有时不会。",
+                "emotion": "careful",
+                "sourceRefs": [
+                  "data/script.txt:1766-1799",
+                  "data/script.txt:1959-1964"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "intruders-are-another-world"
+            ],
+            "setFlags": [
+              "heard-new-situation"
+            ],
+            "sourceRefs": [
+              "data/script.txt:1766-1799"
+            ]
+          }
+        ]
+      },
+      "skipEffects": {
+        "revealFacts": [
+          "three-servant-graves",
+          "servants-died-of-tuberculosis",
+          "intruders-are-another-world"
+        ],
+        "setFlags": [
+          "read-mills-grave",
+          "read-tuttle-grave",
+          "read-lydia-grave"
+        ],
+        "propStates": [
+          {
+            "propId": "grave_mills",
+            "state": "read"
+          },
+          {
+            "propId": "grave_tuttle",
+            "state": "read"
+          },
+          {
+            "propId": "grave_lydia",
+            "state": "read"
+          }
+        ]
+      },
+      "nextSceneId": "scene-07-seance"
+    },
+    {
+      "id": "scene-07-seance",
+      "index": 7,
+      "title": "第七场：桌子的两边",
+      "subtitle": "同一间房里，两家人把彼此称作幽灵。",
+      "mapId": "seance",
+      "playerActor": "grace",
+      "actors": [
+        {
+          "actorId": "grace",
+          "anchor": "grace_entry",
+          "visible": true
+        },
+        {
+          "actorId": "anne",
+          "anchor": "anne_hide",
+          "visible": true
+        },
+        {
+          "actorId": "nicholas",
+          "anchor": "nicholas_hide",
+          "visible": true
+        },
+        {
+          "actorId": "medium",
+          "anchor": "medium_chair",
+          "visible": true
+        },
+        {
+          "actorId": "mr_marlish",
+          "anchor": "mr_marlish",
+          "visible": true
+        },
+        {
+          "actorId": "mrs_marlish",
+          "anchor": "mrs_marlish",
+          "visible": true
+        },
+        {
+          "actorId": "victor",
+          "anchor": "victor_door",
+          "visible": true
+        }
+      ],
+      "worldState": {
+        "time": "night",
+        "light": "seance-candle",
+        "weather": "fog-lifting",
+        "layers": {
+          "family": true,
+          "threshold": false,
+          "living": false,
+          "memory": false
+        },
+        "flags": []
+      },
+      "cues": [
+        {
+          "type": "title",
+          "text": "第七场　桌子的两边",
+          "subtitle": "儿童房／降灵会，同一时刻",
+          "duration": 2800,
+          "sourceRefs": [
+            "data/script.txt:1809-1840"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "seance-candle",
+          "intensity": 0.26,
+          "duration": 1700,
+          "sourceRefs": [
+            "data/script.txt:1824-1840"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "prayer-and-pencil",
+          "action": "play",
+          "volume": 0.68,
+          "sourceRefs": [
+            "data/script.txt:1824-1840"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "anne",
+          "anchor": "family_center",
+          "speed": "drawn-forward",
+          "sourceRefs": [
+            "data/script.txt:1811-1845"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "nicholas",
+          "anchor": "anne_hide",
+          "speed": "clinging",
+          "sourceRefs": [
+            "data/script.txt:1800-1846"
+          ]
+        },
+        {
+          "type": "layer",
+          "layerId": "living",
+          "visible": true,
+          "opacity": 0.18,
+          "sourceRefs": [
+            "data/script.txt:1811-1845"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetAnchor": "seance_table",
+          "zoom": 1.12,
+          "duration": 1500,
+          "sourceRefs": [
+            "data/script.txt:1824-1845"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "medium",
+          "text": "孩子们，为什么害怕？请告诉我，这个房间里发生了什么。",
+          "emotion": "trance",
+          "duration": 4300,
+          "sourceRefs": [
+            "data/script.txt:1834-1853"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "nicholas",
+          "text": "不要告诉她！",
+          "emotion": "terrified",
+          "duration": 1800,
+          "sourceRefs": [
+            "data/script.txt:1840-1847"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "如果说出来，也许他们会让我们安静。",
+          "emotion": "shaking",
+          "duration": 3100,
+          "sourceRefs": [
+            "data/script.txt:1840-1847"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "seance_slate",
+          "state": "writing-mother-two-children",
+          "sourceRefs": [
+            "data/script.txt:1840-1879"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "pencil-scratch-fast",
+          "action": "play",
+          "volume": 0.9,
+          "sourceRefs": [
+            "data/script.txt:1840-1879"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "medium",
+          "text": "一位母亲，两个孩子……枕头。是她用枕头杀了你们吗？你们为何还留在这里？",
+          "emotion": "strained",
+          "duration": 5600,
+          "sourceRefs": [
+            "data/script.txt:1848-1869"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "我们没有死！",
+          "emotion": "desperate",
+          "duration": 2000,
+          "sourceRefs": [
+            "data/script.txt:1854-1869"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "nicholas",
+          "text": "我们没有死！",
+          "emotion": "desperate",
+          "duration": 2000,
+          "sourceRefs": [
+            "data/script.txt:1854-1869"
+          ]
+        },
+        {
+          "type": "layer",
+          "layerId": "living",
+          "visible": true,
+          "opacity": 1,
+          "sourceRefs": [
+            "data/script.txt:1870-1917"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetActorId": "mrs_marlish",
+          "zoom": 1.16,
+          "duration": 1200,
+          "sourceRefs": [
+            "data/script.txt:1870-1917"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mr_marlish",
+          "text": "她接触到了三个人：母亲和两个孩子。",
+          "emotion": "awed",
+          "duration": 3300,
+          "sourceRefs": [
+            "data/script.txt:1870-1881"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mrs_marlish",
+          "text": "够了。这些存在不想让我们住下。旧宅的女人闷死孩子，再开枪自杀；Victor 也一直看见那个女孩。",
+          "emotion": "terrified",
+          "duration": 6100,
+          "sourceRefs": [
+            "data/script.txt:1882-1908"
+          ]
+        },
+        {
+          "type": "layer",
+          "layerId": "memory",
+          "visible": true,
+          "opacity": 0.72,
+          "sourceRefs": [
+            "data/script.txt:1850-1854",
+            "data/script.txt:1892-1898"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "memory_pillow",
+          "state": "flickering-visible",
+          "sourceRefs": [
+            "data/script.txt:1850-1854",
+            "data/script.txt:1892-1898"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "seance-names-mother-and-children",
+            "marlish-family-is-living",
+            "pillow-and-rifle-accusation"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1824-1917"
+          ]
+        },
+        {
+          "type": "explore",
+          "action": "open",
+          "sourceRefs": [
+            "data/script.txt:1824-1917"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mr_marlish",
+          "text": "我们明早离开。",
+          "emotion": "decisive",
+          "duration": 2300,
+          "sourceRefs": [
+            "data/script.txt:1908-1917"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "house_sign",
+          "state": "ready-for-sale",
+          "sourceRefs": [
+            "data/script.txt:1908-1917",
+            "data/script.txt:1959-1964"
+          ]
+        },
+        {
+          "type": "transition",
+          "sceneId": "scene-08-ending",
+          "sourceRefs": [
+            "data/script.txt:1918-1927"
+          ]
+        }
+      ],
+      "exploration": {
+        "objective": "在两层现实间核对降灵会记录，并触碰唤醒记忆的枕头。",
+        "minDiscoveries": 2,
+        "requiredFlags": [
+          "read-seance-slate",
+          "touched-memory-pillow"
+        ],
+        "resumeAnchor": "family_center",
+        "interactions": [
+          {
+            "id": "read-seance-slate",
+            "targetType": "prop",
+            "targetId": "seance_slate",
+            "label": "读取石板上的自动书写",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "母亲。两个孩子。枕头。字迹跟着 Anne 的声音出现——他们写的是我们。",
+                "emotion": "horrified-realization",
+                "sourceRefs": [
+                  "data/script.txt:1840-1879"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "seance-names-mother-and-children"
+            ],
+            "setFlags": [
+              "read-seance-slate"
+            ],
+            "propState": {
+              "propId": "seance_slate",
+              "state": "read"
+            },
+            "sourceRefs": [
+              "data/script.txt:1840-1879"
+            ]
+          },
+          {
+            "id": "observe-medium",
+            "targetType": "actor",
+            "targetId": "medium",
+            "label": "观察老妇人的脸",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "圣餐裙里出现的就是这张脸。她没有占据 Anne；她一直在桌子另一边寻找 Anne。",
+                "emotion": "realizing",
+                "sourceRefs": [
+                  "data/script.txt:1402-1449",
+                  "data/script.txt:1834-1879"
+                ]
+              },
+              {
+                "actorId": "medium",
+                "text": "为什么留在这所房子里？",
+                "emotion": "trance",
+                "sourceRefs": [
+                  "data/script.txt:1855-1869"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "old-woman-overlays-anne",
+              "marlish-family-is-living"
+            ],
+            "setFlags": [
+              "recognized-medium"
+            ],
+            "sourceRefs": [
+              "data/script.txt:1402-1449",
+              "data/script.txt:1834-1879"
+            ]
+          },
+          {
+            "id": "listen-to-marlish-about-victor",
+            "targetType": "actor",
+            "targetId": "victor",
+            "label": "倾听 Victor 一家",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "mrs_marlish",
+                "text": "Victor 会做噩梦。他一直说看见一个女孩；我们以为她才是闯入者。",
+                "emotion": "afraid",
+                "sourceRefs": [
+                  "data/script.txt:1899-1908"
+                ]
+              },
+              {
+                "actorId": "grace",
+                "text": "Victor 不是穿墙而来的幽灵。我们才是闯进他房间的影子。",
+                "emotion": "shattered",
+                "sourceRefs": [
+                  "data/script.txt:1871-1917"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "marlish-family-is-living"
+            ],
+            "setFlags": [
+              "understood-victor-perspective"
+            ],
+            "sourceRefs": [
+              "data/script.txt:1871-1917"
+            ]
+          },
+          {
+            "id": "touch-memory-pillow",
+            "targetType": "prop",
+            "targetId": "memory_pillow",
+            "label": "触碰记忆中的枕头",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "我记得它在手里。记得孩子不再动。可我还没有勇气看见记忆的下一步。",
+                "emotion": "breaking",
+                "sourceRefs": [
+                  "data/script.txt:1920-1930"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "pillow-and-rifle-accusation"
+            ],
+            "setFlags": [
+              "touched-memory-pillow"
+            ],
+            "propState": {
+              "propId": "memory_pillow",
+              "state": "held-in-memory"
+            },
+            "sourceRefs": [
+              "data/script.txt:1920-1930"
+            ]
+          }
+        ]
+      },
+      "skipEffects": {
+        "revealFacts": [
+          "seance-names-mother-and-children",
+          "marlish-family-is-living",
+          "pillow-and-rifle-accusation"
+        ],
+        "setFlags": [
+          "read-seance-slate",
+          "touched-memory-pillow"
+        ],
+        "propStates": [
+          {
+            "propId": "seance_slate",
+            "state": "read"
+          },
+          {
+            "propId": "memory_pillow",
+            "state": "held-in-memory"
+          },
+          {
+            "propId": "house_sign",
+            "state": "ready-for-sale"
+          }
+        ]
+      },
+      "nextSceneId": "scene-08-ending"
+    },
+    {
+      "id": "scene-08-ending",
+      "index": 8,
+      "title": "第八场：这房子是我们的",
+      "subtitle": "记忆归位，晨光第一次落在孩子脸上。",
+      "mapId": "seance",
+      "playerActor": "grace",
+      "actors": [
+        {
+          "actorId": "grace",
+          "anchor": "family_center",
+          "visible": true
+        },
+        {
+          "actorId": "anne",
+          "anchor": "anne_hide",
+          "visible": true
+        },
+        {
+          "actorId": "nicholas",
+          "anchor": "nicholas_hide",
+          "visible": true
+        },
+        {
+          "actorId": "mills",
+          "anchor": "mills_entry",
+          "visible": false
+        },
+        {
+          "actorId": "tuttle",
+          "anchor": "tuttle_entry",
+          "visible": false
+        },
+        {
+          "actorId": "lydia",
+          "anchor": "lydia_entry",
+          "visible": false
+        },
+        {
+          "actorId": "medium",
+          "anchor": "medium_chair",
+          "visible": true
+        },
+        {
+          "actorId": "mr_marlish",
+          "anchor": "mr_marlish",
+          "visible": true
+        },
+        {
+          "actorId": "mrs_marlish",
+          "anchor": "mrs_marlish",
+          "visible": true
+        },
+        {
+          "actorId": "victor",
+          "anchor": "victor_door",
+          "visible": true
+        }
+      ],
+      "worldState": {
+        "time": "dawn",
+        "light": "memory-dark",
+        "weather": "fog-clearing",
+        "layers": {
+          "family": true,
+          "threshold": false,
+          "living": true,
+          "memory": true
+        },
+        "flags": []
+      },
+      "cues": [
+        {
+          "type": "title",
+          "text": "第八场　这房子是我们的",
+          "subtitle": "记起之后",
+          "duration": 2700,
+          "sourceRefs": [
+            "data/script.txt:1920-1947"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "memory-dark",
+          "intensity": 0.2,
+          "duration": 1300,
+          "sourceRefs": [
+            "data/script.txt:1920-1933"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "heartbeat-slow",
+          "action": "play",
+          "volume": 0.72,
+          "sourceRefs": [
+            "data/script.txt:1920-1933"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "memory_pillow",
+          "state": "solid-memory",
+          "sourceRefs": [
+            "data/script.txt:1920-1928"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetAnchor": "pillow",
+          "zoom": 1.28,
+          "duration": 1400,
+          "sourceRefs": [
+            "data/script.txt:1920-1928"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "起初我不明白枕头为什么在手里，也不明白你们为什么一动不动。然后我知道了：是我杀了自己的孩子。",
+          "emotion": "confession",
+          "duration": 6500,
+          "sourceRefs": [
+            "data/script.txt:1920-1928"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "memory_rifle",
+          "state": "solid-memory",
+          "sourceRefs": [
+            "data/script.txt:1927-1933"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "rifle-shot-memory",
+          "action": "play",
+          "volume": 0.92,
+          "sourceRefs": [
+            "data/script.txt:1927-1933"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "我拿起步枪，对准额头扣下扳机。之后却又听见你们在卧室笑，便以为上帝给了我第二次机会。",
+          "emotion": "grief",
+          "duration": 6500,
+          "sourceRefs": [
+            "data/script.txt:1927-1947"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "那我们现在在哪里？",
+          "emotion": "small-voice",
+          "duration": 2300,
+          "sourceRefs": [
+            "data/script.txt:1945-1948"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "grace-remembers-murder-suicide"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1920-1947"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "mills",
+          "anchor": "mills_entry",
+          "sourceRefs": [
+            "data/script.txt:1949-1964"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "tuttle",
+          "anchor": "tuttle_entry",
+          "sourceRefs": [
+            "data/script.txt:1949-1964"
+          ]
+        },
+        {
+          "type": "spawn",
+          "actorId": "lydia",
+          "anchor": "lydia_entry",
+          "sourceRefs": [
+            "data/script.txt:1949-1964"
+          ]
+        },
+        {
+          "type": "face",
+          "actorId": "mills",
+          "targetActorId": "lydia",
+          "sourceRefs": [
+            "data/script.txt:1949-1956"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "mills",
+          "text": "Lydia 发现我们三个人已经死去时，也问过同样的问题。那是她最后一次开口；此前我不能告诉您。",
+          "emotion": "gentle",
+          "duration": 5600,
+          "sourceRefs": [
+            "data/script.txt:1949-1956"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "lydia-silence-after-death"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1949-1956"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "nicholas",
+          "text": "爸爸也死在战争里了，对吗？我们还会见到他吗？",
+          "emotion": "sad",
+          "duration": 3500,
+          "sourceRefs": [
+            "data/script.txt:1966-1971"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "是的。他死了。至于还能不能相见，我不知道。",
+          "emotion": "honest",
+          "duration": 3500,
+          "sourceRefs": [
+            "data/script.txt:1966-1975"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "charles-died-in-war"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1966-1971"
+          ]
+        },
+        {
+          "type": "layer",
+          "layerId": "living",
+          "visible": true,
+          "opacity": 0.22,
+          "sourceRefs": [
+            "data/script.txt:1959-1964"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "mr_marlish",
+          "anchor": "shared_door",
+          "speed": "leaving",
+          "sourceRefs": [
+            "data/script.txt:1908-1917",
+            "data/script.txt:1959-1964"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "mrs_marlish",
+          "anchor": "shared_door",
+          "speed": "leaving",
+          "sourceRefs": [
+            "data/script.txt:1908-1917",
+            "data/script.txt:1959-1964"
+          ]
+        },
+        {
+          "type": "move",
+          "actorId": "victor",
+          "anchor": "shared_door",
+          "speed": "leaving",
+          "sourceRefs": [
+            "data/script.txt:1908-1917",
+            "data/script.txt:1984-1988"
+          ]
+        },
+        {
+          "type": "despawn",
+          "actorId": "medium",
+          "sourceRefs": [
+            "data/script.txt:1908-1917"
+          ]
+        },
+        {
+          "type": "despawn",
+          "actorId": "mr_marlish",
+          "sourceRefs": [
+            "data/script.txt:1908-1917",
+            "data/script.txt:1959-1964"
+          ]
+        },
+        {
+          "type": "despawn",
+          "actorId": "mrs_marlish",
+          "sourceRefs": [
+            "data/script.txt:1908-1917",
+            "data/script.txt:1959-1964"
+          ]
+        },
+        {
+          "type": "despawn",
+          "actorId": "victor",
+          "sourceRefs": [
+            "data/script.txt:1908-1917",
+            "data/script.txt:1984-1988"
+          ]
+        },
+        {
+          "type": "layer",
+          "layerId": "living",
+          "visible": false,
+          "opacity": 0,
+          "sourceRefs": [
+            "data/script.txt:1959-1964"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "sunlit_window",
+          "state": "dawn-open",
+          "sourceRefs": [
+            "data/script.txt:1984-1987"
+          ]
+        },
+        {
+          "type": "light",
+          "preset": "clear-dawn",
+          "intensity": 0.88,
+          "duration": 3200,
+          "sourceRefs": [
+            "data/script.txt:1972-1987"
+          ]
+        },
+        {
+          "type": "sound",
+          "soundId": "fog-lifts-birds",
+          "action": "play",
+          "volume": 0.58,
+          "sourceRefs": [
+            "data/script.txt:1959-1987"
+          ]
+        },
+        {
+          "type": "prop",
+          "propId": "house_sign",
+          "state": "visible-through-layer",
+          "sourceRefs": [
+            "data/script.txt:1959-1964"
+          ]
+        },
+        {
+          "type": "layer",
+          "layerId": "living",
+          "visible": true,
+          "opacity": 0.14,
+          "sourceRefs": [
+            "data/script.txt:1959-1964"
+          ]
+        },
+        {
+          "type": "explore",
+          "action": "open",
+          "sourceRefs": [
+            "data/script.txt:1972-1987"
+          ]
+        },
+        {
+          "type": "camera",
+          "targetAnchor": "sun_patch",
+          "zoom": 1.08,
+          "duration": 1800,
+          "sourceRefs": [
+            "data/script.txt:1976-1987"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "我不知道有没有灵薄狱，也不知道我们究竟在哪里。但我知道我爱你们。",
+          "emotion": "clear",
+          "duration": 4800,
+          "sourceRefs": [
+            "data/script.txt:1972-1978"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "grace",
+          "text": "这房子是我们的。",
+          "emotion": "resolved",
+          "duration": 2600,
+          "sourceRefs": [
+            "data/script.txt:1978-1983"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "anne",
+          "text": "这房子是我们的。看，阳光已经不疼了。",
+          "emotion": "wonder",
+          "duration": 3600,
+          "sourceRefs": [
+            "data/script.txt:1978-1987"
+          ]
+        },
+        {
+          "type": "say",
+          "actorId": "nicholas",
+          "text": "这房子是我们的。",
+          "emotion": "steadier",
+          "duration": 2500,
+          "sourceRefs": [
+            "data/script.txt:1978-1983"
+          ]
+        },
+        {
+          "type": "reveal",
+          "factIds": [
+            "house-belongs-to-family",
+            "sunlight-no-longer-hurts"
+          ],
+          "sourceRefs": [
+            "data/script.txt:1972-1987"
+          ]
+        },
+        {
+          "type": "end",
+          "sourceRefs": [
+            "data/script.txt:1976-1988"
+          ]
+        }
+      ],
+      "exploration": {
+        "objective": "在离开演出前，与孩子接受真相，并走进晨光。",
+        "minDiscoveries": 2,
+        "requiredFlags": [
+          "stood-in-sunlight"
+        ],
+        "resumeAnchor": "sun_patch",
+        "interactions": [
+          {
+            "id": "comfort-anne",
+            "targetType": "actor",
+            "targetId": "anne",
+            "label": "向 Anne 道歉并拥抱她",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "grace",
+                "text": "你一直在说真话。是我因为害怕而不肯听。",
+                "emotion": "remorseful",
+                "sourceRefs": [
+                  "data/script.txt:238-253",
+                  "data/script.txt:1945-1978"
+                ]
+              },
+              {
+                "actorId": "anne",
+                "text": "我知道你爱我们。",
+                "emotion": "forgiving",
+                "sourceRefs": [
+                  "data/script.txt:1571-1576",
+                  "data/script.txt:1976-1978"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "grace-remembers-murder-suicide"
+            ],
+            "setFlags": [
+              "reconciled-with-anne"
+            ],
+            "sourceRefs": [
+              "data/script.txt:1945-1978"
+            ]
+          },
+          {
+            "id": "answer-nicholas-limbo",
+            "targetType": "actor",
+            "targetId": "nicholas",
+            "label": "回答 Nicholas 关于灵薄狱的问题",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "nicholas",
+                "text": "如果我们死了，灵薄狱在哪里？",
+                "emotion": "searching",
+                "sourceRefs": [
+                  "data/script.txt:1972-1975"
+                ]
+              },
+              {
+                "actorId": "grace",
+                "text": "我不知道它是否存在。我不再假装比你更明白。",
+                "emotion": "honest",
+                "sourceRefs": [
+                  "data/script.txt:1972-1976"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "house-belongs-to-family"
+            ],
+            "setFlags": [
+              "answered-limbo-honestly"
+            ],
+            "sourceRefs": [
+              "data/script.txt:1972-1976"
+            ]
+          },
+          {
+            "id": "stand-in-sunlight",
+            "targetType": "prop",
+            "targetId": "sunlit_window",
+            "label": "和孩子走进晨光",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "anne",
+                "text": "妈妈，看。它不疼了。",
+                "emotion": "wonder",
+                "sourceRefs": [
+                  "data/script.txt:1984-1987"
+                ]
+              },
+              {
+                "actorId": "grace",
+                "text": "没有灼伤，没有窒息。我们终于不必再把光关在门外。",
+                "emotion": "released",
+                "sourceRefs": [
+                  "data/script.txt:1984-1987"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "sunlight-no-longer-hurts"
+            ],
+            "setFlags": [
+              "stood-in-sunlight"
+            ],
+            "propState": {
+              "propId": "sunlit_window",
+              "state": "family-in-light"
+            },
+            "sourceRefs": [
+              "data/script.txt:1984-1987"
+            ]
+          },
+          {
+            "id": "watch-house-sign",
+            "targetType": "prop",
+            "targetId": "house_sign",
+            "label": "看活人留下的出售牌",
+            "once": true,
+            "dialogue": [
+              {
+                "actorId": "mills",
+                "text": "这一家会离开，别的人还会来。有时我们能感觉到他们，有时不能。",
+                "emotion": "matter-of-fact",
+                "sourceRefs": [
+                  "data/script.txt:1959-1964"
+                ]
+              },
+              {
+                "actorId": "grace",
+                "text": "无论谁来，都不能让我们离开。",
+                "emotion": "resolved",
+                "sourceRefs": [
+                  "data/script.txt:1978-1987"
+                ]
+              }
+            ],
+            "revealFacts": [
+              "house-belongs-to-family"
+            ],
+            "setFlags": [
+              "accepted-future-intruders"
+            ],
+            "propState": {
+              "propId": "house_sign",
+              "state": "seen-through-layer"
+            },
+            "sourceRefs": [
+              "data/script.txt:1959-1964",
+              "data/script.txt:1978-1987"
+            ]
+          }
+        ]
+      },
+      "skipEffects": {
+        "revealFacts": [
+          "grace-remembers-murder-suicide",
+          "lydia-silence-after-death",
+          "charles-died-in-war",
+          "house-belongs-to-family",
+          "sunlight-no-longer-hurts"
+        ],
+        "setFlags": [
+          "stood-in-sunlight"
+        ],
+        "propStates": [
+          {
+            "propId": "memory_pillow",
+            "state": "solid-memory"
+          },
+          {
+            "propId": "memory_rifle",
+            "state": "solid-memory"
+          },
+          {
+            "propId": "sunlit_window",
+            "state": "family-in-light"
+          }
+        ]
+      },
+      "nextSceneId": null
+    }
+  ]
+}

@@ -5,6 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "dev": "node server.mjs",
-    "check": "node --check src/runtime.js && node --check src/game.js && node tests/project-contract.mjs"
+    "check": "node --check src/runtime.js && node --check src/game.js && node tests/project-contract.mjs && node tests/v02-contract.mjs",
+    "check:v02": "node tests/v02-contract.mjs"
   }
 }

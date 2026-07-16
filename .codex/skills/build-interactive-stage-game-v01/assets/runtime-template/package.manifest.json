@@ -1,0 +1,21 @@
+{
+  "format": "interactive-stage-runtime-template",
+  "formatVersion": 1,
+  "productionEntry": "production.json",
+  "productionSchema": "production.schema.json",
+  "webStarter": {
+    "path": "web-starter",
+    "entry": "index.html",
+    "productionEntry": "data/production.json",
+    "server": "server.mjs",
+    "defaultPort": 5175,
+    "portArgument": "node server.mjs <port>",
+    "dependencies": []
+  },
+  "runtimeContract": {
+    "productionSchema": "interactive-stage-production/v1",
+    "cueDsl": "1.0.0",
+    "saveState": ["beat", "flags", "knownFacts", "propStates", "placements"],
+    "webProductionShape": "dual-layer: canonical IR plus Canvas runtime maps/actors/facts/scenes"
+  }
+}

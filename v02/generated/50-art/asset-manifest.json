@@ -1,0 +1,103 @@
+{
+  "$schema": "script-game-asset-manifest/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "artBible": "./art-bible.json",
+  "policy": {
+    "rightsMode": "project-generated",
+    "likenessRule": "All characters are original designs and must not resemble film actors.",
+    "externalAssets": false
+  },
+  "assets": [
+    {
+      "id": "asset.bg.nursery-dark",
+      "type": "background",
+      "path": "../../assets/bg-nursery-dark.png",
+      "status": "approved",
+      "generationMethod": "ai-generated",
+      "source": "OpenAI built-in image generation",
+      "license": "project-generated",
+      "sha256": "a6ce87045e063f5b5f02efa2e0f4a6b9c253c183e1c7efa1244ecdc9e9617f94",
+      "promptBrief": "Shuttered 1945 gothic nursery, side-view stage, safe sprite lane.",
+      "qa": ["16:9 composition", "walkable foreground clear", "shutter and beds readable", "no text or likeness"]
+    },
+    {
+      "id": "asset.bg.nursery-light",
+      "type": "state-variant",
+      "path": "../../assets/bg-nursery-light.png",
+      "status": "approved",
+      "generationMethod": "ai-generated-edit",
+      "source": "OpenAI built-in image generation; edited from asset.bg.nursery-dark",
+      "license": "project-generated",
+      "sha256": "42139dd50dec07b4c779d84d067fa18561cb2cf2a5ab848fd03320e1f55aba90",
+      "variantOf": "asset.bg.nursery-dark",
+      "promptBrief": "Preserve nursery geometry; open shutters, dawn wash, faint third-bed overlap.",
+      "qa": ["camera and geometry matched", "light-state contrast clear", "memory layer subtle", "no characters"]
+    },
+    {
+      "id": "asset.bg.hall",
+      "type": "background",
+      "path": "../../assets/bg-hall.png",
+      "status": "approved",
+      "generationMethod": "ai-generated",
+      "source": "OpenAI built-in image generation",
+      "license": "project-generated",
+      "sha256": "d8443c56eeac94fbee4bd734ed327c9b8c9fc89aaaf5bd21206154388c8597c5",
+      "promptBrief": "Three-door mansion hub with nursery, music and garden silhouettes.",
+      "qa": ["three thresholds distinct", "letter slot readable", "hub path clear", "UI safe areas"]
+    },
+    {
+      "id": "asset.bg.music",
+      "type": "background",
+      "path": "../../assets/bg-music.png",
+      "status": "approved",
+      "generationMethod": "ai-generated",
+      "source": "OpenAI built-in image generation",
+      "license": "project-generated",
+      "sha256": "db3718aebe32d6fac7fa1c936c4ad52acbde5d566d4de17f6f9e4f42f67ed8be",
+      "promptBrief": "Piano and portrait album anchors with architectural double exposure.",
+      "qa": ["piano and album distinct", "overlap motif visible", "exit clear", "no readable sheet text"]
+    },
+    {
+      "id": "asset.bg.garden",
+      "type": "background",
+      "path": "../../assets/bg-garden.png",
+      "status": "approved",
+      "generationMethod": "ai-generated",
+      "source": "OpenAI built-in image generation",
+      "license": "project-generated",
+      "sha256": "bd6fbadff1aba8e2f681c9e9b88d2bc83c8382e3d28032499e5a003cc8b08eb3",
+      "promptBrief": "Fog garden with exactly three blank gravestones and return gate.",
+      "qa": ["three graves visible", "return route clear", "dawn direction readable", "inscriptions blank"]
+    },
+    {
+      "id": "asset.bg.seance",
+      "type": "background",
+      "path": "../../assets/bg-seance.png",
+      "status": "approved",
+      "generationMethod": "ai-generated",
+      "source": "OpenAI built-in image generation",
+      "license": "project-generated",
+      "sha256": "9749340d9f6634566d9e8f162746b87dd4facaf2a1a0f9d18ec327a72a4b337d",
+      "promptBrief": "Séance room with three evidence positions, living-room echo and dawn window.",
+      "qa": ["three slots legible", "final window readable", "world overlap visible", "no occult text"]
+    },
+    {
+      "id": "asset.characters.cast-sheet",
+      "type": "character-sheet",
+      "path": "../../assets/characters-sheet.png",
+      "status": "approved",
+      "generationMethod": "ai-generated",
+      "source": "OpenAI built-in image generation",
+      "license": "project-generated",
+      "sha256": "b71cdfe90149c5ceae642fc4930700be9eaab75c23266657668a90945f7c6d91",
+      "promptBrief": "Six original equal-panel portraits: Grace, Anne, Nicholas, Mills, Charles, Victor.",
+      "qa": ["six identities distinct", "consistent eye line and palette", "thumbnail expressions readable", "no actor likeness or labels"]
+    }
+  ],
+  "visualValidation": {
+    "method": "Local image inspection plus in-browser screenshots at 1050x900",
+    "result": "pass",
+    "notes": ["Hotspots remain visible against every background.", "Dialogue portraits preserve correct aspect ratio after CSS crop correction.", "No asset contains visible text, logo, watermark or third-party character likeness."]
+  }
+}

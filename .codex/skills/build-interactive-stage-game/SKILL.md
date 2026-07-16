@@ -3,7 +3,9 @@ name: build-interactive-stage-game
 description: Orchestrate the autonomous production of a complete, playable 2D narrative stage game from a screenplay, transcript, subtitle file, prose scene, or story outline. Use when Codex must coordinate canon analysis, gameplay design, interactive drama, stage and level design, art production, compilation, route simulation, browser QA, and packaging through specialist skills and typed handoff artifacts.
 ---
 
-# Build an Interactive Stage Game
+# Build an Interactive Stage Game — 0.2
+
+This is the 0.2 production-director workflow. Preserve the original monolithic workflow under `$build-interactive-stage-game-v01`; never overwrite that archive when extending this workflow.
 
 Act as the production director. Coordinate specialist skills through files; do not improvise every discipline inside one pass. Keep core progression deterministic and playable without a model or network connection.
 

@@ -1,0 +1,28 @@
+{
+  "format": "interactive-stage-placeholder-kit",
+  "formatVersion": 1,
+  "style": "flat theatrical blocking placeholders",
+  "palette": {
+    "stage": "#20222a",
+    "walkable": "#30343f",
+    "actor": "#d8c9a7",
+    "interactive": "#d8a657",
+    "focus": "#8fc7ff"
+  },
+  "actorShapes": ["circle-head", "rect-body", "facing-marker"],
+  "stageSemantics": ["entrance", "exit", "focus", "seat", "prop", "interaction"],
+  "propPrototypes": [
+    "door",
+    "key",
+    "readable",
+    "inspectable",
+    "pickup",
+    "container",
+    "evidence",
+    "seat",
+    "switch",
+    "instrument",
+    "scene-exit"
+  ],
+  "license": "Generated geometric placeholders; no third-party media."
+}

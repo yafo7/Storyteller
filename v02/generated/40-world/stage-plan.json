@@ -1,0 +1,90 @@
+{
+  "$schema": "script-game-stage-plan/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "sourceHash": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5",
+  "maps": [
+    {"id": "map.nursery", "label": "育儿室", "zones": ["zone.nursery.window", "zone.nursery.beds", "zone.nursery.door"], "camera": "side-stage", "baseState": "nursery.dark"},
+    {"id": "map.hall", "label": "门厅", "zones": ["zone.hall.mail", "zone.hall.mills", "zone.hall.nursery-door", "zone.hall.music-door", "zone.hall.garden-door"], "camera": "wide-stage", "baseState": "hall.candle"},
+    {"id": "map.music", "label": "音乐室", "zones": ["zone.music.piano", "zone.music.album", "zone.music.fog"], "camera": "side-stage", "baseState": "music.silent"},
+    {"id": "map.garden", "label": "花园墓地", "zones": ["zone.garden.path", "zone.garden.graves", "zone.garden.house"], "camera": "wide-stage", "baseState": "garden.fog"},
+    {"id": "map.seance", "label": "重叠的降灵室", "zones": ["zone.seance.table", "zone.seance.memory", "zone.seance.light"], "camera": "center-stage", "baseState": "seance.grace"}
+  ],
+  "zones": [
+    {"id": "zone.nursery.window", "mapId": "map.nursery", "purpose": "教学光与窗帘"},
+    {"id": "zone.hall.mail", "mapId": "map.hall", "purpose": "取得招聘信"},
+    {"id": "zone.music.piano", "mapId": "map.music", "purpose": "调谐世界层"},
+    {"id": "zone.garden.graves", "mapId": "map.garden", "purpose": "取得墓碑拓片"},
+    {"id": "zone.seance.table", "mapId": "map.seance", "purpose": "放置三件证物"}
+  ],
+  "portals": [
+    {"id": "portal.nursery-hall", "from": "map.nursery", "to": "map.hall", "conditions": ["shutter=closed", "door.nursery=closed"], "feedback": "走廊门锁舌亮起", "spawn": "anchor.hall.nursery"},
+    {"id": "portal.hall-nursery", "from": "map.hall", "to": "map.nursery", "conditions": [], "feedback": "育儿室传来声音", "spawn": "anchor.nursery.door"},
+    {"id": "portal.hall-music", "from": "map.hall", "to": "map.music", "conditions": ["flag.victor-layer-seen"], "feedback": "钢琴音从门后传来", "spawn": "anchor.music.door"},
+    {"id": "portal.hall-garden", "from": "map.hall", "to": "map.garden", "conditions": ["flag.curtains-removed", "inventory.album"], "feedback": "日光照亮花园门", "spawn": "anchor.garden.house"},
+    {"id": "portal.hall-seance", "from": "map.hall", "to": "map.seance", "conditions": ["inventory.grave-rubbing"], "feedback": "楼上传来灵媒的声音", "spawn": "anchor.seance.door"}
+  ],
+  "anchors": [
+    {"id": "anchor.nursery.window", "mapId": "map.nursery", "x": 78, "kind": "interaction"},
+    {"id": "anchor.nursery.beds", "mapId": "map.nursery", "x": 38, "kind": "actor"},
+    {"id": "anchor.nursery.door", "mapId": "map.nursery", "x": 8, "kind": "exit"},
+    {"id": "anchor.hall.mail", "mapId": "map.hall", "x": 22, "kind": "interaction"},
+    {"id": "anchor.hall.mills", "mapId": "map.hall", "x": 49, "kind": "actor"},
+    {"id": "anchor.hall.nursery", "mapId": "map.hall", "x": 10, "kind": "exit"},
+    {"id": "anchor.hall.music", "mapId": "map.hall", "x": 72, "kind": "exit"},
+    {"id": "anchor.hall.garden", "mapId": "map.hall", "x": 92, "kind": "exit"},
+    {"id": "anchor.music.piano", "mapId": "map.music", "x": 55, "kind": "interaction"},
+    {"id": "anchor.music.album", "mapId": "map.music", "x": 78, "kind": "interaction"},
+    {"id": "anchor.garden.graves", "mapId": "map.garden", "x": 64, "kind": "interaction"},
+    {"id": "anchor.seance.table", "mapId": "map.seance", "x": 52, "kind": "interaction"},
+    {"id": "anchor.seance.light", "mapId": "map.seance", "x": 84, "kind": "ending"}
+  ],
+  "stateVariants": [
+    {"id": "state.nursery.dark", "baseMap": "map.nursery", "activatingConditions": ["shutter=closed"], "reversible": true, "visualDeltas": ["background=asset.bg.nursery-dark", "light=warm-low"], "collisionDeltas": [], "portalDeltas": ["portal.nursery-hall enabled when door closed"], "actorDeltas": ["anne=calm"], "interactionDeltas": ["window verb=open"], "reversalState": "state.nursery.open"},
+    {"id": "state.nursery.open", "baseMap": "map.nursery", "activatingConditions": ["shutter=open"], "reversible": true, "visualDeltas": ["background=asset.bg.nursery-light", "light=cold-beam"], "collisionDeltas": ["hall exit blocked before first close"], "portalDeltas": ["portal.nursery-hall disabled"], "actorDeltas": ["anne=distressed"], "interactionDeltas": ["window verb=close"], "reversalState": "state.nursery.dark"},
+    {"id": "state.nursery.echo", "baseMap": "map.nursery", "activatingConditions": ["worldLayer=echo"], "reversible": true, "visualDeltas": ["living bed overlay", "victor silhouette", "desaturated blue"], "collisionDeltas": [], "portalDeltas": ["portal.hall-music enabled"], "actorDeltas": ["victor=visible"], "interactionDeltas": ["crying hotspot enabled"], "reversalState": "state.nursery.dark"},
+    {"id": "state.music.overlap", "baseMap": "map.music", "activatingConditions": ["worldLayer=overlap"], "reversible": true, "visualDeltas": ["double furniture edges", "portrait album visible", "fog soldier visible"], "collisionDeltas": [], "portalDeltas": [], "actorDeltas": ["charles=echo"], "interactionDeltas": ["album enabled"], "reversalState": "state.music.silent"},
+    {"id": "state.house.day", "baseMap": "map.hall", "activatingConditions": ["curtainsRemoved=true"], "reversible": false, "visualDeltas": ["background=asset.bg.hall-day", "light=day"], "collisionDeltas": ["garden path opened"], "portalDeltas": ["portal.hall-garden enabled"], "actorDeltas": ["children=in-light"], "interactionDeltas": ["curtain controls disabled"], "reversalState": null},
+    {"id": "state.garden.graves", "baseMap": "map.garden", "activatingConditions": ["inventory.album"], "reversible": false, "visualDeltas": ["grave names visible", "fog thinned"], "collisionDeltas": ["grave zone reachable"], "portalDeltas": [], "actorDeltas": ["mills=visible after rubbing"], "interactionDeltas": ["grave rubbing enabled"], "reversalState": null},
+    {"id": "state.seance.living", "baseMap": "map.seance", "activatingConditions": ["evidencePlaced=3"], "reversible": false, "visualDeltas": ["background=asset.bg.seance", "living family silhouettes", "memory pillow overlay"], "collisionDeltas": ["morning light zone reachable"], "portalDeltas": ["ending light enabled"], "actorDeltas": ["medium=visible", "marlish=visible"], "interactionDeltas": ["table locked", "light enabled"], "reversalState": null}
+  ],
+  "interactionPlacements": [
+    {"interactionId": "interaction.close-nursery-shutter", "anchorId": "anchor.nursery.window", "focusPriority": 10},
+    {"interactionId": "interaction.take-letter", "anchorId": "anchor.hall.mail", "focusPriority": 8},
+    {"interactionId": "interaction.open-curtain-victor", "anchorId": "anchor.nursery.window", "focusPriority": 10},
+    {"interactionId": "interaction.tune-piano", "anchorId": "anchor.music.piano", "focusPriority": 10},
+    {"interactionId": "interaction.take-album", "anchorId": "anchor.music.album", "focusPriority": 9},
+    {"interactionId": "interaction.rub-graves", "anchorId": "anchor.garden.graves", "focusPriority": 10},
+    {"interactionId": "interaction.place-evidence", "anchorId": "anchor.seance.table", "focusPriority": 10}
+  ],
+  "actorBlocking": [
+    {"beatId": "beat.wake", "actors": [{"characterId": "character.anne", "anchor": "anchor.nursery.beds"}], "focus": "anchor.nursery.window", "safePlayerX": 28},
+    {"beatId": "beat.letter", "actors": [{"characterId": "character.mills", "anchor": "anchor.hall.mills"}], "focus": "anchor.hall.mail", "safePlayerX": 35},
+    {"beatId": "beat.piano", "actors": [{"characterId": "character.mills", "anchor": "anchor.music.piano"}], "focus": "anchor.music.piano", "safePlayerX": 30},
+    {"beatId": "beat.graves", "actors": [{"characterId": "character.mills", "anchor": "anchor.garden.graves"}], "focus": "anchor.garden.graves", "safePlayerX": 35}
+  ],
+  "cameraLighting": [
+    {"mapId": "map.nursery", "framing": "窗户右、孩子左、中央留玩家行动区", "uiSafeArea": "top 18%, bottom 28%"},
+    {"mapId": "map.hall", "framing": "三扇门形成横向阅读，Mills 不遮挡中门", "uiSafeArea": "top 20%, bottom 25%"},
+    {"mapId": "map.music", "framing": "钢琴居中偏右，肖像在调谐后成为第二焦点", "uiSafeArea": "top 18%, bottom 28%"},
+    {"mapId": "map.garden", "framing": "墓碑在中右景，宅门保留左侧返回线", "uiSafeArea": "top 18%, bottom 25%"},
+    {"mapId": "map.seance", "framing": "圆桌中央，右侧晨光作为结局出口", "uiSafeArea": "top 18%, bottom 30%"}
+  ],
+  "navigationChecks": [
+    {"id": "nav.nursery-recovery", "result": "pass", "evidence": "窗边至安全床区和门区均为连续前景带。"},
+    {"id": "nav.door-chain", "result": "pass", "evidence": "每次互斥只影响目标门，当前地图返回交互始终存在。"},
+    {"id": "nav.layer-return", "result": "pass", "evidence": "调谐动作本身可逆，不依赖另一热点。"},
+    {"id": "nav.final", "result": "pass", "evidence": "三件证物均为不可丢失，最终桌面不会缺件。"}
+  ],
+  "assetRequirements": [
+    {"assetId": "asset.bg.nursery-dark", "kind": "background", "ownerId": "map.nursery", "state": "dark", "aspectRatio": "16:9", "transparency": false, "focalSafeArea": "center-bottom", "narrativePurpose": "建立遮光保护与压迫。"},
+    {"assetId": "asset.bg.nursery-light", "kind": "background", "ownerId": "map.nursery", "state": "light", "aspectRatio": "16:9", "transparency": false, "focalSafeArea": "center-bottom", "narrativePurpose": "表现光柱改变安全、热点与房间归属。"},
+    {"assetId": "asset.bg.hall", "kind": "background", "ownerId": "map.hall", "state": "candle-and-day-overlay", "aspectRatio": "16:9", "transparency": false, "focalSafeArea": "center-bottom", "narrativePurpose": "让门成为主要构图与通路语言。"},
+    {"assetId": "asset.bg.music", "kind": "background", "ownerId": "map.music", "state": "overlap-ready", "aspectRatio": "16:9", "transparency": false, "focalSafeArea": "left-bottom", "narrativePurpose": "提供钢琴调谐与 Charles 回声舞台。"},
+    {"assetId": "asset.bg.garden", "kind": "background", "ownerId": "map.garden", "state": "fog-graves", "aspectRatio": "16:9", "transparency": false, "focalSafeArea": "left-bottom", "narrativePurpose": "墓碑证据与仆人揭示。"},
+    {"assetId": "asset.bg.seance", "kind": "background", "ownerId": "map.seance", "state": "living-overlap", "aspectRatio": "16:9", "transparency": false, "focalSafeArea": "right-bottom", "narrativePurpose": "最终证物桌、活人层与晨光出口。"},
+    {"assetId": "asset.characters.sheet", "kind": "character-sheet", "ownerId": "production", "state": "six-portraits", "aspectRatio": "16:9", "transparency": false, "focalSafeArea": "six-equal-columns", "narrativePurpose": "统一 Grace、Anne、Nicholas、Mills、Charles、Victor 的身份与舞台头像。"}
+  ],
+  "decisions": [],
+  "unresolved": []
+}

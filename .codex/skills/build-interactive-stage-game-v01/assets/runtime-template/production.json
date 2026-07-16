@@ -1,0 +1,153 @@
+{
+  "$schema": "interactive-stage-production/v1",
+  "schemaVersion": "1.0.0",
+  "id": "production.starter",
+  "title": "Starter Stage",
+  "language": "en",
+  "adaptation": {
+    "mode": "faithful-stage",
+    "playerAgency": "witness",
+    "targetMinutes": 3
+  },
+  "sources": [
+    {
+      "id": "source.main",
+      "path": "source.txt",
+      "kind": "outline"
+    }
+  ],
+  "flags": [
+    { "id": "flag.ready-to-end", "initial": false }
+  ],
+  "story": {
+    "facts": [
+      {
+        "id": "fact.welcome",
+        "text": "The host welcomes the witness.",
+        "immutable": true,
+        "required": true,
+        "earliestReveal": "beat.opening",
+        "sourceRefs": [
+          { "sourceId": "source.main", "startLine": 1, "endLine": 1, "confidence": 1 }
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "id": "character.host",
+        "name": "Host",
+        "knowledge": ["fact.welcome"],
+        "beliefs": [
+          { "factId": "fact.welcome", "stance": "accepts" }
+        ]
+      }
+    ],
+    "evidence": [],
+    "adaptationLedger": []
+  },
+  "world": {
+    "stages": [
+      {
+        "id": "stage.room",
+        "label": "Bare room",
+        "anchors": [
+          { "id": "anchor.entrance", "kind": "entrance" },
+          { "id": "anchor.center", "kind": "focus" },
+          { "id": "anchor.table", "kind": "prop" }
+        ]
+      }
+    ],
+    "actors": [
+      {
+        "id": "actor.host",
+        "characterId": "character.host",
+        "stageId": "stage.room",
+        "anchorId": "anchor.center"
+      }
+    ],
+    "props": [
+      {
+        "id": "prop.letter",
+        "prototype": "readable",
+        "stageId": "stage.room",
+        "anchorId": "anchor.table",
+        "initialState": "closed",
+        "states": ["closed", "open"]
+      }
+    ]
+  },
+  "performance": {
+    "entryBeat": "beat.opening",
+    "scenes": [
+      {
+        "id": "scene.welcome",
+        "label": "Welcome",
+        "stageId": "stage.room",
+        "entryBeat": "beat.opening",
+        "required": true
+      }
+    ],
+    "beats": [
+      {
+        "id": "beat.opening",
+        "sceneId": "scene.welcome",
+        "stageId": "stage.room",
+        "mode": "performance",
+        "cues": [
+          {
+            "id": "cue.reveal-welcome",
+            "type": "fact.reveal",
+            "factId": "fact.welcome"
+          },
+          {
+            "id": "cue.host-welcome",
+            "type": "dialogue.say",
+            "actorId": "actor.host",
+            "text": "Welcome. The stage is ready."
+          }
+        ],
+        "actions": [
+          {
+            "id": "action.continue",
+            "label": "Continue the performance",
+            "verb": "Continue",
+            "effects": { "setFlags": ["flag.ready-to-end"] }
+          }
+        ],
+        "next": [
+          {
+            "to": "beat.ending",
+            "kind": "auto",
+            "when": { "flagsAll": ["flag.ready-to-end"] }
+          }
+        ]
+      },
+      {
+        "id": "beat.ending",
+        "sceneId": "scene.welcome",
+        "stageId": "stage.room",
+        "mode": "transition",
+        "cues": [],
+        "actions": [],
+        "next": [],
+        "terminal": true,
+        "endingId": "ending.complete"
+      }
+    ],
+    "endings": [
+      { "id": "ending.complete", "label": "Curtain" }
+    ]
+  },
+  "ui": {
+    "controls": [
+      { "action": "interact", "bindings": ["KeyE"], "label": "Interact" },
+      { "action": "pause", "bindings": ["Escape"], "label": "Pause" }
+    ],
+    "accessibility": {
+      "captions": true,
+      "reducedMotion": false,
+      "highContrastFocus": true
+    }
+  },
+  "assets": []
+}

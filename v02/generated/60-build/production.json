@@ -1,0 +1,58 @@
+{
+  "$schema": "https://storyteller.local/schemas/production-0.2.json",
+  "schemaVersion": "0.2.0",
+  "build": {
+    "id": "others-v02",
+    "title": "雾宅回声",
+    "subtitle": "小岛惊魂 · 总导演工作流 0.2",
+    "source": "../../data/script.txt",
+    "sourceSha256": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5",
+    "playerRole": "grace",
+    "language": "zh-CN"
+  },
+  "chapters": [
+    { "id": 1, "title": "规则", "promise": "先保护孩子，再弄清这栋房子如何运作。" },
+    { "id": 2, "title": "未寄出的信", "promise": "执行门的规则，寻找与外界失联的原因。" },
+    { "id": 3, "title": "光中的男孩", "promise": "主动让光进入，验证孩子们口中的闯入者。" },
+    { "id": 4, "title": "重叠的房间", "promise": "调谐声音，让两个时空短暂占据同一地点。" },
+    { "id": 5, "title": "墓碑", "promise": "把佣人熟悉房子的秘密带回屋内。" },
+    { "id": 6, "title": "降神会", "promise": "用三件证据重建记忆，并决定是否接受真相。" }
+  ],
+  "assets": {
+    "nurseryDark": "./assets/bg-nursery-dark.png",
+    "nurseryLight": "./assets/bg-nursery-light.png",
+    "hall": "./assets/bg-hall.png",
+    "music": "./assets/bg-music.png",
+    "garden": "./assets/bg-garden.png",
+    "seance": "./assets/bg-seance.png",
+    "characters": "./assets/characters-sheet.png"
+  },
+  "characters": {
+    "grace": { "name": "格蕾丝", "portrait": "actor-grace", "role": "你：守宅的母亲" },
+    "anne": { "name": "安妮", "portrait": "actor-anne", "role": "看见得太多的女儿" },
+    "nicholas": { "name": "尼古拉斯", "portrait": "actor-nicholas", "role": "畏惧光的儿子" },
+    "mills": { "name": "米尔斯太太", "portrait": "actor-mills", "role": "知道房屋规则的女管家" },
+    "charles": { "name": "查尔斯", "portrait": "actor-charles", "role": "从战争归来的丈夫" },
+    "victor": { "name": "维克多", "portrait": "actor-victor", "role": "另一个世界的男孩" },
+    "medium": { "name": "灵媒", "portrait": "actor-medium", "role": "活人世界的声音" },
+    "narrator": { "name": "舞台提示", "portrait": "actor-grace", "role": "总导演 0.2" }
+  },
+  "rooms": {
+    "nursery": { "name": "儿童房", "asset": "nurseryDark", "connections": ["hall"] },
+    "hall": { "name": "中央走廊", "asset": "hall", "connections": ["nursery", "music", "garden", "seance"] },
+    "music": { "name": "音乐室", "asset": "music", "connections": ["hall"] },
+    "garden": { "name": "雾园与墓地", "asset": "garden", "connections": ["hall"] },
+    "seance": { "name": "降神室", "asset": "seance", "connections": ["hall"] }
+  },
+  "evidence": {
+    "letter": { "name": "未寄出的信", "meaning": "格蕾丝以为自己仍能向外界求援。" },
+    "album": { "name": "死者相册", "meaning": "逝者曾被拍下，房子也保存着死后的面孔。" },
+    "rubbing": { "name": "三座墓碑拓片", "meaning": "米尔斯、塔特尔与莉迪亚早已葬在花园。" }
+  },
+  "runtime": {
+    "verbs": ["move", "inspect", "close", "open", "take", "tune", "place", "cross"],
+    "effects": ["setFlag", "addEvidence", "changeRoom", "changeLayer", "unlockPortal", "queueDialogue", "save"],
+    "saveKey": "storyteller-v02-save",
+    "requiredEndingEvidence": ["letter", "album", "rubbing"]
+  }
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#081116" />
+    <title>雾宅回声 · 0.2 总导演版</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app" aria-label="雾宅回声游戏">
+      <section id="title-screen" class="screen title-screen">
+        <div class="title-fog"></div>
+        <div class="title-card">
+          <p class="eyebrow">AUTONOMOUS DIRECTOR WORKFLOW · 0.2</p>
+          <h1>雾宅回声</h1>
+          <p class="subtitle">门必须依次关闭。光会改变一切。</p>
+          <p class="premise">泽西岛，1945。战争已经结束，而你守着一栋从不肯安静下来的房子——以及两个不能见光的孩子。</p>
+          <div class="title-actions">
+            <button id="new-game" class="primary">开始扮演格蕾丝</button>
+            <button id="continue-game" class="secondary" hidden>继续上次进度</button>
+          </div>
+          <div class="title-links">
+            <a href="../v01/" target="_blank">打开 0.1 版对照</a>
+            <button id="title-help" class="link-button">操作说明</button>
+          </div>
+          <p class="adaptation-note">根据本地剧本进行的非商业交互改编 · 画面为原创 AI 美术，不复刻电影演员</p>
+        </div>
+      </section>
+
+      <section id="game-screen" class="screen game-screen" hidden>
+        <header class="hud" aria-label="游戏状态">
+          <div class="hud-brand"><span>雾宅回声</span><small>0.2</small></div>
+          <div class="objective-wrap">
+            <span id="chapter-label" class="chapter-label">第一幕</span>
+            <strong id="objective-label">先让孩子避开光。</strong>
+          </div>
+          <div class="hud-actions">
+            <button id="map-button" aria-label="地图">地图 <kbd>M</kbd></button>
+            <button id="journal-button" aria-label="线索簿">线索 <kbd>J</kbd></button>
+            <button id="sound-button" aria-label="声音">声音：开</button>
+          </div>
+        </header>
+
+        <section id="stage" class="stage" tabindex="0" aria-label="舞台场景">
+          <img id="scene-bg" class="scene-bg" alt="" />
+          <div id="world-shift" class="world-shift"></div>
+          <div class="scene-vignette"></div>
+          <div id="room-label" class="room-label"></div>
+          <div id="hotspot-layer" class="hotspot-layer"></div>
+          <div id="actor-layer" class="actor-layer"></div>
+          <div id="player" class="player" aria-label="格蕾丝">
+            <div class="paper-actor actor-grace"></div>
+            <span class="actor-name">格蕾丝</span>
+          </div>
+          <div id="interaction-prompt" class="interaction-prompt" hidden>
+            <kbd>E</kbd><span id="interaction-text">互动</span>
+          </div>
+          <div class="control-hint">← A&nbsp;&nbsp;移动&nbsp;&nbsp;D →　·　E 互动</div>
+        </section>
+
+        <footer class="evidence-bar" aria-label="证据与世界状态">
+          <div class="state-pill"><span>世界状态</span><strong id="layer-label">暗室</strong></div>
+          <div id="inventory" class="inventory"></div>
+          <div class="state-pill right"><span>门的规则</span><strong id="door-label">尚未掌握</strong></div>
+        </footer>
+      </section>
+
+      <section id="dialogue" class="dialogue" hidden aria-live="polite">
+        <div id="dialogue-portrait" class="portrait actor-grace"></div>
+        <div class="dialogue-copy">
+          <div class="dialogue-head">
+            <strong id="dialogue-speaker">格蕾丝</strong>
+            <span id="dialogue-intent"></span>
+          </div>
+          <p id="dialogue-text"></p>
+          <span class="dialogue-next">Space / Enter 继续</span>
+        </div>
+      </section>
+
+      <section id="modal" class="modal" hidden role="dialog" aria-modal="true">
+        <div class="modal-card">
+          <button id="modal-close" class="modal-close" aria-label="关闭">×</button>
+          <div id="modal-content"></div>
+        </div>
+      </section>
+
+      <section id="tuning" class="modal" hidden role="dialog" aria-modal="true">
+        <div class="modal-card tuning-card">
+          <p class="eyebrow">频率调谐</p>
+          <h2>让两个房间短暂重合</h2>
+          <p>墙里传来三个敲击：<em>中音 · 低音 · 高音</em>。按同样次序回应。</p>
+          <div id="tuning-progress" class="tuning-progress">○ ○ ○</div>
+          <div class="piano-keys">
+            <button data-note="low">低音 <kbd>1</kbd></button>
+            <button data-note="mid">中音 <kbd>2</kbd></button>
+            <button data-note="high">高音 <kbd>3</kbd></button>
+          </div>
+          <p id="tuning-feedback" class="tuning-feedback">先听，再回答。</p>
+          <button id="tuning-exit" class="secondary">暂时离开</button>
+        </div>
+      </section>
+
+      <section id="ending" class="screen ending" hidden>
+        <div class="ending-light"></div>
+        <div class="ending-card">
+          <p class="eyebrow">第六幕 · 接受</p>
+          <h2>这就是我们的房子。</h2>
+          <p>门不再把世界分开，光也不再伤害谁。格蕾丝牵住孩子的手，终于停止把记忆锁在暗处。</p>
+          <p class="ending-line">屋外，一辆车经过；屋内，窗帘缓慢落下。两个世界同时继续生活。</p>
+          <div class="ending-stats" id="ending-stats"></div>
+          <div class="title-actions">
+            <button id="restart-game" class="primary">重新演出</button>
+            <a class="secondary button-link" href="../v01/" target="_blank">体验 0.1 版</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+{
+  "$schema": "script-game-acceptance-report/v1",
+  "schemaVersion": "1.0.0",
+  "status": "pass",
+  "buildHash": "c98f5d23406b96e7b6c4d60b2a9f2271551578bca4b57f859b18b3c6a82e6df8",
+  "gates": [
+    {
+      "id": "source.provenance",
+      "category": "source-and-adaptation",
+      "status": "pass",
+      "requirement": "Canon facts retain source spans and the family-death reveal occurs only at the séance.",
+      "evidence": ["reports/source-inspection.json", "generated/10-story/story-model.json", "Browser route contains no family-death language before the third evidence placement."],
+      "ownerSkill": "analyze-story-for-game",
+      "repairInstruction": ""
+    },
+    {
+      "id": "onboarding.role",
+      "category": "performance",
+      "status": "pass",
+      "requirement": "A new player learns who Grace is, why light matters and what to do before free exploration.",
+      "evidence": ["Five-line contextual prologue", "First HUD objective names the shutter", "A/D, E and dialogue controls appear in context"],
+      "ownerSkill": "direct-interactive-drama",
+      "repairInstruction": ""
+    },
+    {
+      "id": "gameplay.world-transformation",
+      "category": "gameplay",
+      "status": "pass",
+      "requirement": "Core interactions change at least two consequence channels and alter navigation or world layer.",
+      "evidence": ["Door sequence resets on error", "Piano exposes album and overlap layer", "Album permanently enables daylight and garden", "Graves enable séance"],
+      "ownerSkill": "design-narrative-gameplay",
+      "repairInstruction": ""
+    },
+    {
+      "id": "gameplay.route-reachability",
+      "category": "playability",
+      "status": "pass",
+      "requirement": "The required route reaches the ending with no deadlock and retains return paths.",
+      "evidence": ["Browser-run route completed in 24 interactions", "All five maps retain a return-to-hall route until the final action"],
+      "ownerSkill": "evaluate-script-game",
+      "repairInstruction": ""
+    },
+    {
+      "id": "save.resume",
+      "category": "playability",
+      "status": "pass",
+      "requirement": "Reload restores map, flags, evidence, door sequence and player position.",
+      "evidence": ["Reloaded after Victor reveal; Continue restored chapter 4, nursery state, evidence and objective"],
+      "ownerSkill": "compile-script-game",
+      "repairInstruction": ""
+    },
+    {
+      "id": "ui.guidance",
+      "category": "interaction-and-ui",
+      "status": "pass",
+      "requirement": "Every phase exposes a concrete current objective and every hotspot names a verb.",
+      "evidence": ["Six chapter objectives observed during route", "Hotspots use 关上、确认、调谐、拿走、擦净、放置、走进"],
+      "ownerSkill": "direct-interactive-drama",
+      "repairInstruction": ""
+    },
+    {
+      "id": "ui.keyboard",
+      "category": "accessibility",
+      "status": "pass",
+      "requirement": "The complete interaction grammar has a keyboard path and motion can be reduced.",
+      "evidence": ["A/D and arrows move; E interacts; Enter/Space advances; 1/2/3 tunes; M/J open tools", "prefers-reduced-motion disables transitions and animation"],
+      "ownerSkill": "compile-script-game",
+      "repairInstruction": ""
+    },
+    {
+      "id": "art.coherence",
+      "category": "staging-and-presentation",
+      "status": "pass",
+      "requirement": "All required stages, state variants and cast identities use one coherent visual language.",
+      "evidence": ["Seven locally bundled generated assets", "Child-room light variant preserves camera and geometry", "Six-panel original cast sheet", "generated/50-art/asset-manifest.json"],
+      "ownerSkill": "art-direct-game-assets",
+      "repairInstruction": ""
+    },
+    {
+      "id": "art.rights",
+      "category": "staging-and-presentation",
+      "status": "pass",
+      "requirement": "No external or actor-likeness asset enters the build without provenance.",
+      "evidence": ["All manifest entries are project-generated", "Prompts prohibit actor likeness, text, logos and watermarks"],
+      "ownerSkill": "art-direct-game-assets",
+      "repairInstruction": ""
+    },
+    {
+      "id": "runtime.offline",
+      "category": "engineering-and-delivery",
+      "status": "pass",
+      "requirement": "Core play requires no runtime model, secret or remote asset.",
+      "evidence": ["No network dependencies in build report", "Browser console contains no application errors", "All assets served from /v02/assets"],
+      "ownerSkill": "compile-script-game",
+      "repairInstruction": ""
+    },
+    {
+      "id": "comparison.parallel",
+      "category": "engineering-and-delivery",
+      "status": "pass",
+      "requirement": "Versions 0.1 and 0.2 are independently playable on one local port.",
+      "evidence": ["HTTP 200 at /v01/ and /v02/", "Two in-app browser tabs opened", "Distinct localStorage keys"],
+      "ownerSkill": "build-interactive-stage-game",
+      "repairInstruction": ""
+    }
+  ],
+  "routeCoverage": {
+    "requiredRoutes": 1,
+    "completedRoutes": 1,
+    "endingReached": "acceptance",
+    "mapsVisited": ["nursery", "hall", "music", "garden", "seance"],
+    "requiredTransactions": ["close shutter", "complete door order", "take letter", "open curtain", "tune piano", "take album", "read graves", "place three evidence", "walk into dawn"]
+  },
+  "visualEvidence": [
+    { "path": "ending.png", "state": "ending.acceptance", "result": "pass", "notes": "No clipping; hierarchy and both version actions remain readable at 1050x900." },
+    { "state": "nursery.dark", "result": "pass", "notes": "Dark background, actor cutouts, hotspots, objective and evidence bar remain legible." },
+    { "state": "music.overlap", "result": "pass", "notes": "World-layer status, piano, album and ghost actor are distinguishable." }
+  ],
+  "pacingEvidence": [
+    "Opening uses five player-paced lines before the first action.",
+    "Agency and performance alternate across nine consequential transactions.",
+    "The final truth is distributed over three evidence placements rather than one exposition block."
+  ],
+  "accessibilityEvidence": [
+    "Keyboard-only route supported.",
+    "Hotspots have accessible names with concrete verbs.",
+    "Audio puzzle duplicates its pattern in visible text and numbered keys.",
+    "Reduced-motion media query supplied."
+  ],
+  "failuresByOwner": {},
+  "waivers": [],
+  "unresolved": []
+}
