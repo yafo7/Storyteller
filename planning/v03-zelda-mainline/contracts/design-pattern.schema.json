@@ -1,0 +1,352 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/schemas/v03/design-pattern.schema.json",
+  "title": "V0.3 callable design pattern draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "patternId", "patternVersion", "name", "kind", "status", "supportClass", "autoSelectable", "flavorClass", "intent", "selection", "effectPrimitives", "hooks", "departmentContracts", "development", "implementation", "composition", "originality", "provenance", "tests", "governance"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "patternId": { "type": "string", "pattern": "^pattern\\.[a-z0-9.-]+$" },
+    "patternVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "name": { "type": "string", "minLength": 3 },
+    "kind": { "enum": ["atomic-mechanic", "interaction-prop", "world-state-rule", "spatial-level", "puzzle-information", "exploration-reward", "combat-boss", "npc-quest", "tutorial-feedback", "performance-camera", "pacing-macro", "orchestration"] },
+    "status": { "enum": ["candidate", "reviewed", "released", "deprecated"] },
+    "supportClass": { "enum": ["cross-title", "single-title-research-only", "cross-pack-core"] },
+    "autoSelectable": { "type": "boolean" },
+    "flavorClass": { "enum": ["zelda-discriminative", "adventure-generic", "uncertain"] },
+    "intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["designProblem", "experienceGoals", "principle"],
+      "properties": {
+        "designProblem": { "type": "string", "minLength": 20 },
+        "experienceGoals": { "type": "array", "items": { "type": "string", "pattern": "^experience\\." }, "minItems": 1, "uniqueItems": true },
+        "principle": { "type": "string", "minLength": 20 }
+      }
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["storySignals", "spatialSignals", "prerequisites", "contraindications", "abstainWhen"],
+      "properties": {
+        "storySignals": { "type": "array", "items": { "$ref": "#/$defs/detectRule" }, "minItems": 1 },
+        "spatialSignals": { "type": "array", "items": { "$ref": "#/$defs/detectRule" } },
+        "prerequisites": { "type": "array", "items": { "type": "string" } },
+        "contraindications": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "abstainWhen": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "effectPrimitives": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["effectId", "kind", "preconditions", "parameters", "postconditions", "observableFeedback", "rollback"],
+        "properties": {
+          "effectId": { "type": "string", "pattern": "^effect\\." },
+          "kind": { "enum": ["set-fact", "clear-fact", "grant-item", "consume-item", "toggle-map-layer", "unlock-route", "lock-route", "spawn-actor", "despawn-actor", "move-actor", "set-npc-state", "set-dialogue-gate", "emit-performance-cue", "set-checkpoint", "map-transition", "camera-transition"] },
+          "preconditions": { "type": "array", "items": { "type": "string" } },
+          "parameters": { "type": "array", "items": { "type": "string", "pattern": "^parameter\\." }, "uniqueItems": true },
+          "postconditions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "observableFeedback": { "type": "array", "items": { "enum": ["visual", "audio", "animation", "camera", "ui", "dialogue", "navigation", "haptics"] }, "minItems": 1, "uniqueItems": true },
+          "rollback": { "enum": ["reversible", "checkpoint-only", "irreversible-after-gate"] }
+        }
+      }
+    },
+    "hooks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["detect", "score", "instantiate", "emit", "validate"],
+      "properties": {
+        "detect": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["rules", "minimumMatches"],
+          "properties": {
+            "rules": { "type": "array", "items": { "$ref": "#/$defs/detectRule" }, "minItems": 1 },
+            "minimumMatches": { "type": "integer", "minimum": 1 }
+          }
+        },
+        "score": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["criteria", "hardVetoes"],
+          "properties": {
+            "criteria": { "type": "array", "items": { "$ref": "#/$defs/scoreCriterion" }, "minItems": 1 },
+            "hardVetoes": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+          }
+        },
+        "instantiate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["parameters", "minimumTransformationAxes"],
+          "properties": {
+            "parameters": { "type": "array", "items": { "$ref": "#/$defs/parameterBinding" }, "minItems": 1 },
+            "minimumTransformationAxes": { "type": "integer", "minimum": 3 }
+          }
+        },
+        "emit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mappings"],
+          "properties": {
+            "mappings": { "type": "array", "items": { "$ref": "#/$defs/emitMapping" }, "minItems": 4 }
+          }
+        },
+        "validate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["assertionRefs"],
+          "properties": {
+            "assertionRefs": { "type": "array", "items": { "type": "string", "pattern": "^assertion\\." }, "minItems": 1, "uniqueItems": true }
+          }
+        }
+      }
+    },
+    "departmentContracts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gameplay", "performance", "stage", "evaluation"],
+      "properties": {
+        "gameplay": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["playerVerbs", "effectRefs", "canonInvariants"],
+          "properties": {
+            "playerVerbs": { "type": "array", "items": { "type": "string", "pattern": "^verb\\." }, "uniqueItems": true },
+            "effectRefs": { "type": "array", "items": { "type": "string", "pattern": "^effect\\." }, "minItems": 1, "uniqueItems": true },
+            "canonInvariants": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+          }
+        },
+        "performance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["revealConstraints", "npcTactics", "interactionWindows", "cueIntents", "skipReplayAccessibility"],
+          "properties": {
+            "revealConstraints": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+            "npcTactics": { "type": "array", "items": { "type": "string" } },
+            "interactionWindows": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+            "cueIntents": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+            "skipReplayAccessibility": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+          }
+        },
+        "stage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["topologyChanges", "actorBlocking", "cameraTransitions", "navigationInvariants"],
+          "properties": {
+            "topologyChanges": { "type": "array", "items": { "type": "string" } },
+            "actorBlocking": { "type": "array", "items": { "type": "string" } },
+            "cameraTransitions": { "type": "array", "items": { "type": "string" } },
+            "navigationInvariants": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+          }
+        },
+        "evaluation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["observableAssertionRefs", "routeRequirements", "cloneRiskChecks"],
+          "properties": {
+            "observableAssertionRefs": { "type": "array", "items": { "type": "string", "pattern": "^assertion\\." }, "minItems": 1, "uniqueItems": true },
+            "routeRequirements": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+            "cloneRiskChecks": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+          }
+        }
+      }
+    },
+    "development": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["teach", "practice", "variation", "combineOrReverse", "exam"],
+      "properties": {
+        "teach": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "practice": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "variation": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "combineOrReverse": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "exam": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "implementation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runtimeCapabilities", "perspectiveAdapters", "productionCost", "fallbacks", "accessibility"],
+      "properties": {
+        "runtimeCapabilities": { "type": "array", "items": { "type": "string", "pattern": "^capability\\." }, "minItems": 1, "uniqueItems": true },
+        "perspectiveAdapters": { "type": "array", "items": { "type": "string", "pattern": "^adapter\\." }, "minItems": 1, "uniqueItems": true },
+        "productionCost": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["design", "code", "art", "qa"],
+          "properties": {
+            "design": { "enum": ["low", "medium", "high"] },
+            "code": { "enum": ["low", "medium", "high"] },
+            "art": { "enum": ["low", "medium", "high"] },
+            "qa": { "enum": ["low", "medium", "high"] }
+          }
+        },
+        "fallbacks": { "type": "array", "items": { "type": "string" } },
+        "accessibility": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dependencies", "synergies", "conflicts", "failureModes", "recoveryRules"],
+      "properties": {
+        "dependencies": { "type": "array", "items": { "type": "string", "pattern": "^pattern\\." }, "uniqueItems": true },
+        "synergies": { "type": "array", "items": { "type": "string", "pattern": "^pattern\\." }, "uniqueItems": true },
+        "conflicts": { "type": "array", "items": { "type": "string", "pattern": "^pattern\\." }, "uniqueItems": true },
+        "failureModes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "recoveryRules": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "originality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["retainedPrinciples", "forbiddenSurfaceTransfers", "requiredTransformationAxes", "structuralDeltaAxes", "sourceFingerprintRefs", "blindSourceAttributionRequired", "cloneRiskChecks"],
+      "properties": {
+        "retainedPrinciples": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "forbiddenSurfaceTransfers": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "requiredTransformationAxes": { "type": "array", "items": { "$ref": "#/$defs/transformationAxis" }, "minItems": 3, "uniqueItems": true },
+        "structuralDeltaAxes": { "type": "array", "items": { "enum": ["topology-graph", "object-role-graph", "action-sequence", "feedback-signature", "narrative-function"] }, "minItems": 3, "uniqueItems": true },
+        "sourceFingerprintRefs": { "type": "array", "items": { "type": "string", "pattern": "^fingerprint\\." }, "minItems": 1, "uniqueItems": true },
+        "blindSourceAttributionRequired": { "const": true },
+        "cloneRiskChecks": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["originPackRefs", "observationRefs", "supportingWorkRefs", "counterEvidenceRefs", "confidence"],
+      "properties": {
+        "originPackRefs": { "type": "array", "items": { "type": "string", "pattern": "^pack\\." }, "minItems": 1, "uniqueItems": true },
+        "observationRefs": { "type": "array", "items": { "type": "string", "pattern": "^observation\\." }, "minItems": 1, "uniqueItems": true },
+        "supportingWorkRefs": { "type": "array", "items": { "type": "string", "pattern": "^work\\." }, "minItems": 1, "uniqueItems": true },
+        "counterEvidenceRefs": { "type": "array", "items": { "type": "string", "pattern": "^(observation|claim)\\." }, "uniqueItems": true },
+        "confidence": { "enum": ["low", "medium", "high"] }
+      }
+    },
+    "tests": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["testId", "kind", "inputFixtureRef", "expectedOutputRefs", "assertions"],
+        "properties": {
+          "testId": { "type": "string", "pattern": "^test\\." },
+          "kind": { "enum": ["schema", "selection", "composition", "runtime", "route", "originality", "experience"] },
+          "inputFixtureRef": { "type": "string", "pattern": "^fixture\\." },
+          "expectedOutputRefs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "assertions": { "type": "array", "items": { "$ref": "#/$defs/assertion" }, "minItems": 1 }
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "reviewers", "changelog", "supersedes", "deprecatedBy"],
+      "properties": {
+        "owner": { "type": "string", "minLength": 1 },
+        "reviewers": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "changelog": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "supersedes": { "type": "array", "items": { "type": "string", "pattern": "^pattern\\." } },
+        "deprecatedBy": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "$defs": {
+    "detectRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ruleId", "sourcePath", "operator", "valueType", "expected"],
+      "properties": {
+        "ruleId": { "type": "string", "pattern": "^rule\\." },
+        "sourcePath": { "type": "string", "minLength": 1 },
+        "operator": { "enum": ["exists", "equals", "not-equals", "contains", "intersects", "greater-than", "less-than"] },
+        "valueType": { "enum": ["string", "number", "boolean", "string-array", "object"] },
+        "expected": {}
+      }
+    },
+    "scoreCriterion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["criterionId", "weight", "evidencePath"],
+      "properties": {
+        "criterionId": { "type": "string", "pattern": "^criterion\\." },
+        "weight": { "type": "number", "minimum": 0, "maximum": 1 },
+        "evidencePath": { "type": "string", "minLength": 1 }
+      }
+    },
+    "parameterBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parameterId", "valueType", "bindFrom", "sourcePath", "required"],
+      "properties": {
+        "parameterId": { "type": "string", "pattern": "^parameter\\." },
+        "valueType": { "enum": ["actor-ref", "prop-ref", "location-ref", "fact-ref", "beat-ref", "capability-ref", "string", "number", "boolean"] },
+        "bindFrom": { "enum": ["story-model", "production-charter", "runtime-capabilities", "designer-decision"] },
+        "sourcePath": { "type": "string", "minLength": 1 },
+        "required": { "type": "boolean" }
+      }
+    },
+    "emitMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mappingId", "owner", "contractRef", "targetPath", "effectRefs", "constraintRefs"],
+      "properties": {
+        "mappingId": { "type": "string", "pattern": "^mapping\\." },
+        "owner": { "enum": ["gameplay", "performance", "stage", "compile", "evaluation"] },
+        "contractRef": { "type": "string", "minLength": 1 },
+        "targetPath": { "type": "string", "minLength": 1 },
+        "effectRefs": { "type": "array", "items": { "type": "string", "pattern": "^effect\\." }, "uniqueItems": true },
+        "constraintRefs": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "assertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assertionId", "evidencePath", "operator", "expected", "hardGate"],
+      "properties": {
+        "assertionId": { "type": "string", "pattern": "^assertion\\." },
+        "evidencePath": { "type": "string", "minLength": 1 },
+        "operator": { "enum": ["equals", "not-equals", "contains", "not-contains", "greater-or-equal", "less-or-equal", "exists", "unique", "reachable"] },
+        "expected": {},
+        "hardGate": { "type": "boolean" }
+      }
+    },
+    "transformationAxis": {
+      "enum": ["worldbuilding", "characters", "objects", "topology", "feedback", "narrative-causality", "timing", "visual-language", "audio-language", "control-language"]
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "supportClass": { "const": "single-title-research-only" } }, "required": ["supportClass"] },
+      "then": {
+        "properties": {
+          "autoSelectable": { "const": false },
+          "status": { "enum": ["candidate", "reviewed", "deprecated"] }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "status": { "const": "released" } }, "required": ["status"] },
+      "then": { "properties": { "autoSelectable": { "const": true } } }
+    },
+    {
+      "if": { "properties": { "supportClass": { "enum": ["cross-title", "cross-pack-core"] } }, "required": ["supportClass"] },
+      "then": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "observationRefs": { "minItems": 2 },
+              "supportingWorkRefs": { "minItems": 2 },
+              "counterEvidenceRefs": { "minItems": 1 }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

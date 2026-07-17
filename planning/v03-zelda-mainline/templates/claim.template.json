@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "claimId": "claim.placeholder-stable-id",
+  "claimType": "fact",
+  "criticality": "critical",
+  "minimumSourceTier": "A",
+  "statement": "__PARAPHRASED, TESTABLE STATEMENT; KEEP FACT SEPARATE FROM INTERPRETATION__",
+  "workRefs": ["work.placeholder-stable-id"],
+  "versionRefs": ["version.placeholder-primary"],
+  "evidence": [
+    {
+      "sourceRef": "source.placeholder-stable-id",
+      "locator": "__PRECISE LOCATOR__",
+      "relation": "supports"
+    }
+  ],
+  "confidence": "low",
+  "status": "draft",
+  "review": {
+    "author": "__AUTHOR__",
+    "reviewer": "__INDEPENDENT REVIEWER__",
+    "notes": []
+  }
+}

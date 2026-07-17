@@ -1,0 +1,82 @@
+{
+  "lockVersion": "1.0.0",
+  "capturedAt": "2026-07-17",
+  "sourceCommit": "8cf00461ab6732f520ce5d4625233bcef6dca384",
+  "algorithm": "canonical-tree-sha256/v1: committed regular-file bytes; NFC POSIX paths; ordinal path sort; sha256(file + NUL + path + NUL + byteLength + NUL + fileSha256 + LF); ignore empty directories and permissions; working drift checked with Git filters plus untracked-file scan",
+  "canonicalizationVersion": "1",
+  "policy": "These hashes protect 0.1, 0.2, 0.21 and shared specialist behavior while 0.3 is developed.",
+  "entries": [
+    {
+      "path": ".codex/skills/analyze-story-for-game",
+      "kind": "shared-specialist-skill",
+      "fileCount": 3,
+      "treeSha256": "383ce720ca59a5afb9d1b76975c31e68eadbe03a80e7b8e8be90a28f8c95bb48"
+    },
+    {
+      "path": ".codex/skills/art-direct-game-assets",
+      "kind": "shared-specialist-skill",
+      "fileCount": 5,
+      "treeSha256": "d1bf28cc332a89c1e52ac81f031415d50c24c7402ced4607560fef623208f8db"
+    },
+    {
+      "path": ".codex/skills/build-interactive-stage-game",
+      "kind": "orchestrator-v02",
+      "fileCount": 29,
+      "treeSha256": "db7d51d84d3f6c191e34ef5c0c2c0373e3058cac79b8288ab8d5bcee6c5e7982"
+    },
+    {
+      "path": ".codex/skills/build-interactive-stage-game-v01",
+      "kind": "orchestrator-v01",
+      "fileCount": 25,
+      "treeSha256": "f7f4cf6455bd1d95958e0306a2ae9d72890cb4aa713e1670632c209d35b31cb7"
+    },
+    {
+      "path": ".codex/skills/build-interactive-stage-game-v021",
+      "kind": "orchestrator-v021",
+      "fileCount": 20,
+      "treeSha256": "a05554dafde406fcc26bfa568bb5171029ca4dbed4ae83e6d7648737568b6449"
+    },
+    {
+      "path": ".codex/skills/compile-script-game",
+      "kind": "shared-specialist-skill",
+      "fileCount": 5,
+      "treeSha256": "0fa20d6f1a97b349274758f00349fc466d3f42c1d0c8b22bb4870b3d36724a79"
+    },
+    {
+      "path": ".codex/skills/design-narrative-gameplay",
+      "kind": "shared-specialist-skill",
+      "fileCount": 4,
+      "treeSha256": "7893f8ee72675e626ab16bf99f218f7160e3dfcac44f73d552ce89398d00ea36"
+    },
+    {
+      "path": ".codex/skills/design-stage-and-levels",
+      "kind": "shared-specialist-skill",
+      "fileCount": 4,
+      "treeSha256": "64dc2ce947a62013e5b6fd171404eb94cd730b3cb00490b6e5b0ac2776a2b625"
+    },
+    {
+      "path": ".codex/skills/direct-interactive-drama",
+      "kind": "shared-specialist-skill",
+      "fileCount": 4,
+      "treeSha256": "4425b1ad930d9896c38d0cbac6eb25b4da31dad589111b40d5e6e8e6a33c42f3"
+    },
+    {
+      "path": ".codex/skills/evaluate-script-game",
+      "kind": "shared-specialist-skill",
+      "fileCount": 5,
+      "treeSha256": "9f8e5c830456acdd233228698adc4cdee9686a5b84cd1229e0f1dac52209e858"
+    },
+    {
+      "path": "v01",
+      "kind": "game-v01",
+      "fileCount": 5,
+      "treeSha256": "340cc9fb62974dee9fdc4481266795fa22c4a1cda0798155d8021115c0196d4f"
+    },
+    {
+      "path": "v02",
+      "kind": "game-v02",
+      "fileCount": 24,
+      "treeSha256": "a0a95c167c76f3f5cd2898551115ae5687c1fc04ee038247a341a865fd435aeb"
+    }
+  ]
+}

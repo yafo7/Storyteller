@@ -1,0 +1,175 @@
+{
+  "schemaVersion": "1.0.0",
+  "patternId": "pattern.placeholder-generic-id",
+  "patternVersion": "0.0.0",
+  "name": "__GENERIC NAME WITHOUT PROPRIETARY TERMS__",
+  "kind": "world-state-rule",
+  "status": "candidate",
+  "supportClass": "single-title-research-only",
+  "autoSelectable": false,
+  "flavorClass": "uncertain",
+  "intent": {
+    "designProblem": "__THE GENERAL DESIGN PROBLEM, NOT A SOURCE GAME SUMMARY__",
+    "experienceGoals": ["experience.placeholder-goal"],
+    "principle": "__WHY THE PATTERN WORKS ACROSS DIFFERENT SURFACE EXPRESSIONS__"
+  },
+  "selection": {
+    "storySignals": [
+      {
+        "ruleId": "rule.placeholder-story-signal",
+        "sourcePath": "storyModel.dramaticSpine",
+        "operator": "exists",
+        "valueType": "object",
+        "expected": true
+      }
+    ],
+    "spatialSignals": [],
+    "prerequisites": [],
+    "contraindications": ["__WHEN THIS WOULD HARM THE STORY OR EXPERIENCE__"],
+    "abstainWhen": ["__WHEN THE SELECTOR SHOULD NOT FORCE A MATCH__"]
+  },
+  "effectPrimitives": [
+    {
+      "effectId": "effect.placeholder-state-change",
+      "kind": "toggle-map-layer",
+      "preconditions": ["__BOUND PRECONDITION__"],
+      "parameters": ["parameter.placeholder-location"],
+      "postconditions": ["__PERSISTENT, TESTABLE CONSEQUENCE__"],
+      "observableFeedback": ["visual", "navigation"],
+      "rollback": "reversible"
+    }
+  ],
+  "hooks": {
+    "detect": {
+      "rules": [
+        {
+          "ruleId": "rule.placeholder-detect",
+          "sourcePath": "storyModel.interactionOpportunities",
+          "operator": "exists",
+          "valueType": "object",
+          "expected": true
+        }
+      ],
+      "minimumMatches": 1
+    },
+    "score": {
+      "criteria": [
+        {
+          "criterionId": "criterion.story-relevance",
+          "weight": 1,
+          "evidencePath": "query.storySignals"
+        }
+      ],
+      "hardVetoes": ["canon conflict", "runtime impossible", "clone risk"]
+    },
+    "instantiate": {
+      "parameters": [
+        {
+          "parameterId": "parameter.placeholder-location",
+          "valueType": "location-ref",
+          "bindFrom": "story-model",
+          "sourcePath": "locations[0].id",
+          "required": true
+        }
+      ],
+      "minimumTransformationAxes": 3
+    },
+    "emit": {
+      "mappings": [
+        { "mappingId": "mapping.placeholder-gameplay", "owner": "gameplay", "contractRef": "gameplay-design/v03", "targetPath": "patternApplications", "effectRefs": ["effect.placeholder-state-change"], "constraintRefs": ["canon invariants"] },
+        { "mappingId": "mapping.placeholder-performance", "owner": "performance", "contractRef": "performance-plan/v03", "targetPath": "patternApplications", "effectRefs": ["effect.placeholder-state-change"], "constraintRefs": ["reveal constraints"] },
+        { "mappingId": "mapping.placeholder-stage", "owner": "stage", "contractRef": "stage-plan/v03", "targetPath": "patternApplications", "effectRefs": ["effect.placeholder-state-change"], "constraintRefs": ["navigation invariants"] },
+        { "mappingId": "mapping.placeholder-evaluation", "owner": "evaluation", "contractRef": "acceptance/v03", "targetPath": "patternEvidence", "effectRefs": ["effect.placeholder-state-change"], "constraintRefs": ["observable assertions"] }
+      ]
+    },
+    "validate": {
+      "assertionRefs": ["assertion.placeholder-state-visible"]
+    }
+  },
+  "departmentContracts": {
+    "gameplay": {
+      "playerVerbs": ["verb.placeholder-interact"],
+      "effectRefs": ["effect.placeholder-state-change"],
+      "canonInvariants": ["__DO NOT ALTER APPROVED FACTS OR REVEAL ORDER__"]
+    },
+    "performance": {
+      "revealConstraints": ["__REVEAL ONLY AFTER THE APPROVED STORY GATE__"],
+      "npcTactics": ["__ACTOR INTENT, NOT SOURCE DIALOGUE__"],
+      "interactionWindows": ["__PLAYER MAY ACT BETWEEN THESE BEATS__"],
+      "cueIntents": ["__SHOW THE STATE CHANGE THROUGH ACTION AND FEEDBACK__"],
+      "skipReplayAccessibility": ["__SKIP PRESERVES STATE; REPLAY DOES NOT REAPPLY EFFECTS__"]
+    },
+    "stage": {
+      "topologyChanges": ["__MAP LAYER CHANGE BOUND TO EFFECT__"],
+      "actorBlocking": ["__ACTOR POSITION SUPPORTS THE REVEAL__"],
+      "cameraTransitions": ["__CAMERA MAKES THE CONSEQUENCE LEGIBLE__"],
+      "navigationInvariants": ["__A RETURN OR RECOVERY ROUTE ALWAYS EXISTS__"]
+    },
+    "evaluation": {
+      "observableAssertionRefs": ["assertion.placeholder-state-visible"],
+      "routeRequirements": ["__REQUIRED ROUTE REACHES THE POST-STATE__"],
+      "cloneRiskChecks": ["__INDEPENDENT REVIEWER CANNOT IDENTIFY A SPECIFIC SOURCE ROOM__"]
+    }
+  },
+  "development": {
+    "teach": ["__SAFE INTRODUCTION__"],
+    "practice": ["__LOW-COST REPETITION__"],
+    "variation": ["__ONE VARIABLE CHANGES__"],
+    "combineOrReverse": ["__COMBINATION OR REVERSAL__"],
+    "exam": ["__FINAL APPLICATION WITHOUT NEW RULES__"]
+  },
+  "implementation": {
+    "runtimeCapabilities": ["capability.placeholder-state-layer"],
+    "perspectiveAdapters": ["adapter.2d-topdown.placeholder-pattern"],
+    "productionCost": { "design": "medium", "code": "medium", "art": "medium", "qa": "medium" },
+    "fallbacks": [],
+    "accessibility": ["__NON-TEXT FEEDBACK HAS A REDUNDANT CUE__"]
+  },
+  "composition": {
+    "dependencies": [],
+    "synergies": [],
+    "conflicts": [],
+    "failureModes": ["__HOW THIS PATTERN BECOMES SHALLOW OR CONFUSING__"],
+    "recoveryRules": ["__HOW TO PREVENT OR RECOVER FROM FAILURE__"]
+  },
+  "originality": {
+    "retainedPrinciples": ["__ABSTRACT PRINCIPLE ONLY__"],
+    "forbiddenSurfaceTransfers": ["__NO SOURCE NAMES, MAPS, STEPS, UI, AUDIO OR ICONOGRAPHY__"],
+    "requiredTransformationAxes": ["worldbuilding", "objects", "topology"],
+    "structuralDeltaAxes": ["topology-graph", "object-role-graph", "action-sequence"],
+    "sourceFingerprintRefs": ["fingerprint.placeholder-source-structure"],
+    "blindSourceAttributionRequired": true,
+    "cloneRiskChecks": ["__COULD A REVIEWER NAME ONE SPECIFIC SOURCE ROOM OR PUZZLE?__"]
+  },
+  "provenance": {
+    "originPackRefs": ["pack.zelda-mainline"],
+    "observationRefs": ["observation.placeholder-candidate"],
+    "supportingWorkRefs": ["work.placeholder-candidate"],
+    "counterEvidenceRefs": [],
+    "confidence": "low"
+  },
+  "tests": [
+    {
+      "testId": "test.placeholder-observable-consequence",
+      "kind": "experience",
+      "inputFixtureRef": "fixture.placeholder-pattern-input",
+      "expectedOutputRefs": ["generated/20-gameplay/gameplay-design.json"],
+      "assertions": [
+        {
+          "assertionId": "assertion.placeholder-state-visible",
+          "evidencePath": "runtime.worldState.placeholder",
+          "operator": "exists",
+          "expected": true,
+          "hardGate": true
+        }
+      ]
+    }
+  ],
+  "governance": {
+    "owner": "__DISTILLER__",
+    "reviewers": ["__INDEPENDENT ORIGINALITY REVIEWER__"],
+    "changelog": ["0.0.0 planning candidate"],
+    "supersedes": [],
+    "deprecatedBy": null
+  }
+}

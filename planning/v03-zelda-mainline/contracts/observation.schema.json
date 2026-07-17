@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/schemas/v03/observation.schema.json",
+  "title": "V0.3 atomic design observation draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "observationId", "workId", "versionId", "dimensionIds", "context", "preconditions", "playerInput", "stateTransition", "feedback", "consequences", "factualDescription", "factClaimRefs", "interpretation", "interpretationClaimRefs", "confidence", "disposition", "status"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "observationId": { "type": "string", "pattern": "^observation\\.[a-z0-9.-]+$" },
+    "workId": { "type": "string", "pattern": "^work\\." },
+    "versionId": { "type": "string", "pattern": "^version\\." },
+    "dimensionIds": { "type": "array", "items": { "type": "string", "pattern": "^dimension\\." }, "minItems": 1, "uniqueItems": true },
+    "context": { "type": "string", "minLength": 10 },
+    "preconditions": { "type": "array", "items": { "type": "string" } },
+    "playerInput": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "stateTransition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["before", "action", "after"],
+      "properties": {
+        "before": { "type": "array", "items": { "type": "string" } },
+        "action": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "after": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "feedback": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "consequences": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "factualDescription": { "type": "string", "minLength": 20 },
+    "interpretation": { "type": "string", "minLength": 20 },
+    "factClaimRefs": { "type": "array", "items": { "type": "string", "pattern": "^claim\\." }, "minItems": 1, "uniqueItems": true },
+    "interpretationClaimRefs": { "type": "array", "items": { "type": "string", "pattern": "^claim\\." }, "minItems": 1, "uniqueItems": true },
+    "confidence": { "enum": ["low", "medium", "high"] },
+    "disposition": { "enum": ["portable-candidate", "single-title", "counterexample", "deferred"] },
+    "status": { "enum": ["draft", "reviewed", "verified", "superseded"] },
+    "reviewNotes": { "type": "array", "items": { "type": "string" } }
+  }
+}

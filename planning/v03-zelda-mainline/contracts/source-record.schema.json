@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/schemas/v03/source-record.schema.json",
+  "title": "V0.3 evidence source record draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "sourceId", "tier", "kind", "title", "publisher", "urlOrArchive", "locator", "accessedAt", "usePolicy", "rightsNote", "contentHash", "status"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "sourceId": { "type": "string", "pattern": "^source\\.[a-z0-9.-]+$" },
+    "tier": { "enum": ["A", "B", "C", "D"] },
+    "kind": { "enum": ["game", "official-manual", "official-site", "developer-interview", "developer-talk", "technical-document", "academic", "book", "professional-analysis", "community-lead", "other"] },
+    "title": { "type": "string", "minLength": 1 },
+    "publisher": { "type": "string", "minLength": 1 },
+    "authors": { "type": "array", "items": { "type": "string" } },
+    "publishedAt": { "type": ["string", "null"] },
+    "urlOrArchive": { "type": "string", "minLength": 3 },
+    "locator": { "type": "string", "minLength": 3 },
+    "accessedAt": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "versionScope": { "type": "array", "items": { "type": "string", "pattern": "^version\\." } },
+    "usePolicy": { "const": "paraphrase-and-structured-observation-only" },
+    "rightsNote": { "type": "string", "minLength": 10 },
+    "contentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "status": { "enum": ["candidate", "verified", "superseded", "unavailable", "rejected"] }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "enum": ["game", "official-manual", "official-site"] } }, "required": ["kind"] },
+      "then": { "properties": { "tier": { "const": "A" } } }
+    },
+    {
+      "if": { "properties": { "kind": { "enum": ["developer-interview", "developer-talk", "technical-document"] } }, "required": ["kind"] },
+      "then": { "properties": { "tier": { "enum": ["A", "B"] } } }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "community-lead" } }, "required": ["kind"] },
+      "then": { "properties": { "tier": { "const": "D" } } }
+    }
+  ]
+}

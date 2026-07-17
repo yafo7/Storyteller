@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "migrationId": "migration.placeholder",
+  "kind": "schema",
+  "fromVersion": "0.0.0",
+  "toVersion": "0.0.1",
+  "status": "draft",
+  "changes": [
+    {
+      "operation": "add",
+      "fromPath": null,
+      "toPath": "__TARGET FIELD PATH__",
+      "transformer": "__DETERMINISTIC TRANSFORMER ID__",
+      "reversible": true
+    }
+  ],
+  "fixtures": [
+    {
+      "inputRef": "fixture.placeholder-before",
+      "expectedOutputRef": "fixture.placeholder-after",
+      "expectedHash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "rollback": {
+    "supported": true,
+    "procedure": "__RESTORE THE PREVIOUS IMMUTABLE RELEASE AND LOCK__",
+    "dataLossRisk": "none"
+  },
+  "approvedBy": ["__SCHEMA OWNER__"]
+}

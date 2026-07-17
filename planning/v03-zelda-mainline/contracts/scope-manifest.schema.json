@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/schemas/v03/scope-manifest.schema.json",
+  "title": "V0.3 corpus scope manifest draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "scopeId", "scopeVersion", "status", "policy", "authoritySnapshots", "candidates", "reconciliation", "decisions"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "scopeId": { "type": "string", "pattern": "^scope\\.[a-z0-9-]+$" },
+    "scopeVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "status": { "enum": ["draft", "frozen", "superseded"] },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authorityRule", "releaseGroupingRule", "variantRule", "borderlineRule", "changeRule"],
+      "properties": {
+        "authorityRule": { "type": "string", "minLength": 20 },
+        "releaseGroupingRule": { "type": "string", "minLength": 20 },
+        "variantRule": { "type": "string", "minLength": 20 },
+        "borderlineRule": { "type": "string", "minLength": 20 },
+        "changeRule": { "type": "string", "minLength": 20 }
+      }
+    },
+    "authoritySnapshots": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["snapshotId", "sourceRefs", "capturedAt", "contentHash", "candidateWorkIds"],
+        "properties": {
+          "snapshotId": { "type": "string", "pattern": "^scope-snapshot\\." },
+          "sourceRefs": { "type": "array", "items": { "type": "string", "pattern": "^source\\." }, "minItems": 1, "uniqueItems": true },
+          "capturedAt": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "contentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "candidateWorkIds": { "type": "array", "items": { "type": "string", "pattern": "^work\\." }, "minItems": 1, "uniqueItems": true }
+        }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["workId", "decision", "rationale", "sourceRefs"],
+        "properties": {
+          "workId": { "type": "string", "pattern": "^work\\.[a-z0-9-]+$" },
+          "decision": { "enum": ["included", "excluded", "review"] },
+          "rationale": { "type": "string", "minLength": 10 },
+          "sourceRefs": { "type": "array", "items": { "type": "string", "pattern": "^source\\." }, "minItems": 1, "uniqueItems": true }
+        }
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["decisionId", "question", "resolution", "sourceRefs"],
+        "properties": {
+          "decisionId": { "type": "string", "pattern": "^scope-decision\\." },
+          "question": { "type": "string", "minLength": 5 },
+          "resolution": { "type": "string", "minLength": 10 },
+          "sourceRefs": { "type": "array", "items": { "type": "string", "pattern": "^source\\." }, "minItems": 1 }
+        }
+      }
+    },
+    "reconciliation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authorityUnionCount", "registeredCandidateCount", "missingFromRegistry", "notInAuthorityUnion", "unresolvedReviewCount"],
+      "properties": {
+        "authorityUnionCount": { "type": "integer", "minimum": 0 },
+        "registeredCandidateCount": { "type": "integer", "minimum": 0 },
+        "missingFromRegistry": { "type": "array", "items": { "type": "string", "pattern": "^work\\." }, "uniqueItems": true },
+        "notInAuthorityUnion": { "type": "array", "items": { "type": "string", "pattern": "^work\\." }, "uniqueItems": true },
+        "unresolvedReviewCount": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "supersedes": { "type": ["string", "null"] }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "frozen" } }, "required": ["status"] },
+      "then": {
+        "properties": {
+          "candidates": { "items": { "properties": { "decision": { "enum": ["included", "excluded"] } } } },
+          "reconciliation": {
+            "properties": {
+              "missingFromRegistry": { "maxItems": 0 },
+              "unresolvedReviewCount": { "const": 0 }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/schemas/v03/relation.schema.json",
+  "title": "V0.3 design-library relation draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "relationId", "fromId", "type", "toId", "rationale", "evidenceRefs", "confidence", "status"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "relationId": { "type": "string", "pattern": "^relation\\." },
+    "fromId": { "type": "string", "minLength": 3 },
+    "type": { "enum": ["same-as", "variant-of", "specializes", "generalizes", "composed-of", "synergizes-with", "conflicts-with", "perspective-adaptation-of", "analogous-to", "evolved-from", "supersedes", "deprecated-by"] },
+    "toId": { "type": "string", "minLength": 3 },
+    "rationale": { "type": "string", "minLength": 20 },
+    "evidenceRefs": { "type": "array", "items": { "type": "string", "pattern": "^(source|claim|observation)\\." }, "minItems": 1, "uniqueItems": true },
+    "confidence": { "enum": ["low", "medium", "high"] },
+    "status": { "enum": ["candidate", "reviewed", "released", "deprecated"] }
+  }
+}

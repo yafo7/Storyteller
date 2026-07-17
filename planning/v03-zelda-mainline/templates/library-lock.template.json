@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "lockId": "lock.placeholder-production",
+  "productionId": "production.__id__",
+  "hashPolicy": {
+    "algorithm": "canonical-tree-sha256/v1",
+    "canonicalizationVersion": "1",
+    "fileManifestHash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "input": {
+    "scriptHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "storyModelHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "productionCharterHash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "orchestrator": {
+    "id": "build-interactive-stage-game-v03",
+    "version": "0.3.0",
+    "path": ".codex/skills/build-interactive-stage-game-v03",
+    "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "specialistSkills": [
+    {
+      "id": "__SPECIALIST__",
+      "version": "__VERSION__",
+      "path": "__PATH__",
+      "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "library": {
+    "id": "game-design-library",
+    "version": "0.0.0",
+    "manifestHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "contentHash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "packs": [],
+  "provenancePolicy": {
+    "enabledPackIds": [],
+    "blockedPackIds": ["pack.zelda-mainline"],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "schemas": [
+    {
+      "id": "design-pattern-schema",
+      "version": "1.0.0",
+      "path": "design-library/schemas/design-pattern.schema.json",
+      "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "resolvedPatterns": [],
+  "adapters": [
+    {
+      "id": "adapter.2d-topdown",
+      "version": "0.0.0",
+      "path": "design-library/core/perspective-adapters/2d-topdown",
+      "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "productProfile": {
+    "id": "product-profile.v021-topdown-pixel",
+    "version": "0.21.0",
+    "path": ".codex/skills/build-interactive-stage-game-v021/references/top-down-pixel-profile.md",
+    "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "runtimeCapabilities": {
+    "id": "runtime-capabilities.__production__",
+    "version": "1.0.0",
+    "path": "__PRODUCTION PATH__",
+    "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "invalidationPolicyVersion": "1.0.0",
+  "createdAt": "__ISO TIMESTAMP__",
+  "toolchain": {}
+}

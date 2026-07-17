@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "taxonomyId": "taxonomy.placeholder",
+  "taxonomyVersion": "0.0.0",
+  "status": "draft",
+  "terms": [
+    {
+      "termId": "dimension.placeholder",
+      "label": "__CONTROLLED LABEL__",
+      "definition": "__PRECISE DEFINITION WITH INCLUSION AND EXCLUSION BOUNDARIES__",
+      "status": "active",
+      "aliases": [],
+      "supersedes": []
+    }
+  ],
+  "governance": {
+    "owner": "__TAXONOMY OWNER__",
+    "changePolicy": "__SEMANTIC CHANGES REQUIRE A VERSION AND MACHINE-READABLE MIGRATION__",
+    "migrationRefs": []
+  }
+}

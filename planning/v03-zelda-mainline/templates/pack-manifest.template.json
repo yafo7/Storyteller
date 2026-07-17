@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "packId": "pack.zelda-mainline",
+  "packVersion": "0.0.0",
+  "status": "alpha",
+  "hashPolicy": {
+    "algorithm": "canonical-tree-sha256/v1",
+    "canonicalizationVersion": "1"
+  },
+  "scope": {
+    "scopeId": "scope.zelda-mainline",
+    "scopeVersion": "0.0.0",
+    "scopeHash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "schemaVersions": {
+    "work": "1.0.0",
+    "source": "1.0.0",
+    "claim": "1.0.0",
+    "observation": "1.0.0",
+    "dossier": "1.0.0",
+    "relation": "1.0.0",
+    "pattern": "1.0.0",
+    "selection": "1.0.0",
+    "lock": "1.0.0",
+    "benchmark": "1.0.0",
+    "pack": "1.0.0",
+    "scope": "1.0.0",
+    "taxonomy": "1.0.0",
+    "adapter": "1.0.0",
+    "migration": "1.0.0",
+    "libraryRelease": "1.0.0"
+  },
+  "content": {
+    "works": 0,
+    "sources": 0,
+    "observations": 0,
+    "claims": 0,
+    "dossiers": 0,
+    "patterns": 0,
+    "relations": 0,
+    "adapters": 0,
+    "benchmarks": 0
+  },
+  "coverage": {
+    "scopeCoverage": 0,
+    "workCoverage": 0,
+    "dimensionCoverage": 0,
+    "evidenceClosure": 0,
+    "observationDisposition": 0,
+    "patternReadiness": 0
+  },
+  "governance": {
+    "evidencePolicyVersion": "0.0.0",
+    "originalityPolicyVersion": "0.0.0",
+    "mergePolicyVersion": "0.0.0",
+    "migrationRefs": [],
+    "releaseNotes": "__PLANNING PLACEHOLDER; ZERO COUNTS CANNOT BE RELEASED__"
+  },
+  "fileManifest": [
+    {
+      "path": "__PLANNING PLACEHOLDER FILE__",
+      "kind": "governance",
+      "bytes": 1,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

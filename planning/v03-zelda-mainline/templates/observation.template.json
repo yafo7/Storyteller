@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "observationId": "observation.placeholder-work-context-sequence",
+  "workId": "work.placeholder-stable-id",
+  "versionId": "version.placeholder-primary",
+  "dimensionIds": ["dimension.player-fantasy"],
+  "context": "__WHERE AND UNDER WHAT PLAYER KNOWLEDGE THIS OCCURS__",
+  "preconditions": ["__BEFORE STATE__"],
+  "playerInput": ["__OBSERVABLE PLAYER ACTION__"],
+  "stateTransition": {
+    "before": ["__STATE BEFORE__"],
+    "action": ["__TRANSACTION__"],
+    "after": ["__STATE AFTER__"]
+  },
+  "feedback": ["__WHAT THE PLAYER CAN PERCEIVE__"],
+  "consequences": ["__SHORT- AND LONG-TERM CONSEQUENCE__"],
+  "factualDescription": "__SOURCE-SUPPORTED PARAPHRASE OF WHAT THE WORK DOES__",
+  "factClaimRefs": ["claim.placeholder-fact"],
+  "interpretation": "__ANALYST EXPLANATION, EXPLICITLY SEPARATE FROM FACT__",
+  "interpretationClaimRefs": ["claim.placeholder-interpretation"],
+  "confidence": "low",
+  "disposition": "deferred",
+  "status": "draft",
+  "reviewNotes": []
+}

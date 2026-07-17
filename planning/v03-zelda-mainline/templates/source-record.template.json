@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceId": "source.placeholder-stable-id",
+  "tier": "A",
+  "kind": "official-site",
+  "title": "__SOURCE TITLE__",
+  "publisher": "__PUBLISHER__",
+  "authors": [],
+  "publishedAt": null,
+  "urlOrArchive": "__URL OR ARCHIVE IDENTIFIER__",
+  "locator": "__SECTION, PAGE, TIMESTAMP OR GAME STATE__",
+  "accessedAt": "2026-07-17",
+  "versionScope": ["version.placeholder-primary"],
+  "usePolicy": "paraphrase-and-structured-observation-only",
+  "rightsNote": "__RIGHTS AND USAGE NOTE__",
+  "contentHash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "status": "candidate"
+}

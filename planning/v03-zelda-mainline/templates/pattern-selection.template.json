@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.__id__",
+  "storyModelHash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "libraryLockRef": "lock.__production__",
+  "provenancePolicy": {
+    "enabledPackIds": [],
+    "blockedPackIds": ["pack.zelda-mainline"],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": ["__STORY-DERIVED SIGNAL__"],
+    "experienceGoals": ["experience.__controlled-id__"],
+    "spatialConstraints": [],
+    "runtimeCapabilities": ["capability.__controlled-id__"],
+    "budget": {
+      "design": "medium",
+      "code": "medium",
+      "art": "medium",
+      "qa": "medium"
+    },
+    "negativeSignals": []
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.placeholder-candidate-a",
+      "patternVersion": "0.0.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 0,
+        "systemicDepth": 0,
+        "stateCausality": 0,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 0,
+        "originalityMargin": 0,
+        "weightedTotal": 0
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": ["__EVALUATE, DO NOT ASSUME__"]
+    },
+    {
+      "patternId": "pattern.placeholder-candidate-b",
+      "patternVersion": "0.0.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 0,
+        "systemicDepth": 0,
+        "stateCausality": 0,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 0,
+        "originalityMargin": 0,
+        "weightedTotal": 0
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": ["__EVALUATE, DO NOT ASSUME__"]
+    },
+    {
+      "patternId": "pattern.placeholder-candidate-c",
+      "patternVersion": "0.0.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 0,
+        "systemicDepth": 0,
+        "stateCausality": 0,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 0,
+        "originalityMargin": 0,
+        "weightedTotal": 0
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": ["__EVALUATE, DO NOT ASSUME__"]
+    }
+  ],
+  "selectedApplications": [],
+  "composition": {
+    "corePatternRef": null,
+    "supportPatternRefs": [],
+    "sharedExperienceAxis": "",
+    "conflictsResolved": [],
+    "developmentArc": []
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": ["worldbuilding", "objects", "narrative-causality"],
+    "structuralDeltas": ["topology-graph", "object-role-graph", "action-sequence"],
+    "forbiddenTransfers": ["__NO PROPRIETARY SURFACE EXPRESSION__"],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": ["__CHECK FOR RECOGNIZABLE SOURCE PUZZLE OR MAP__"]
+  },
+  "abstention": {
+    "abstained": true,
+    "reason": "__PLANNING TEMPLATE DEMONSTRATES A LEGAL ABSTENTION__"
+  },
+  "handoffs": [
+    { "handoffId": "handoff.placeholder-gameplay", "owner": "gameplay", "contractRef": "gameplay-design/v03", "applicationRefs": [], "requirements": { "abstained": true }, "validationRefs": ["assertion.placeholder-abstention"] },
+    { "handoffId": "handoff.placeholder-performance", "owner": "performance", "contractRef": "performance-plan/v03", "applicationRefs": [], "requirements": { "abstained": true }, "validationRefs": ["assertion.placeholder-abstention"] },
+    { "handoffId": "handoff.placeholder-stage", "owner": "stage", "contractRef": "stage-plan/v03", "applicationRefs": [], "requirements": { "abstained": true }, "validationRefs": ["assertion.placeholder-abstention"] },
+    { "handoffId": "handoff.placeholder-evaluation", "owner": "evaluation", "contractRef": "acceptance/v03", "applicationRefs": [], "requirements": { "abstained": true }, "validationRefs": ["assertion.placeholder-abstention"] }
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "relationId": "relation.placeholder-stable-id",
+  "fromId": "pattern.placeholder-source",
+  "type": "analogous-to",
+  "toId": "pattern.placeholder-target",
+  "rationale": "__EXPLAIN STRUCTURAL SIMILARITY WITHOUT CLAIMING HISTORICAL LINEAGE__",
+  "evidenceRefs": ["observation.placeholder-evidence"],
+  "confidence": "low",
+  "status": "candidate"
+}

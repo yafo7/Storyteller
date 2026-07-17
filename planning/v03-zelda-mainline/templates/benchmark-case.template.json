@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "benchmarkId": "benchmark.__category-id__",
+  "category": "negative-control",
+  "inputFixture": {
+    "path": "design-library/benchmarks/story-fixtures/__fixture__.json",
+    "hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "originalityStatement": "__CONFIRM THIS FIXTURE WAS WRITTEN FOR TESTING AND DOES NOT COPY A SOURCE WORK__"
+  },
+  "productProfile": "product-profile.v021-topdown-pixel",
+  "runtimeCapabilities": ["capability.__controlled-id__"],
+  "expectedProperties": ["__PROPERTY, NOT A FORCED PATTERN ID__"],
+  "forbiddenProperties": ["__KNOWN BAD OR IRRELEVANT SELECTION__"],
+  "abstentionExpectation": "must-abstain",
+  "seeds": [101, 202, 303],
+  "metrics": [
+    {
+      "metricId": "metric.hard-veto-count",
+      "comparator": "equals",
+      "threshold": 0,
+      "unit": "count",
+      "hardGate": true
+    }
+  ],
+  "status": "draft",
+  "failureOwner": "select-game-design-patterns"
+}

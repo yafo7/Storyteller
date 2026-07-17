@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "dossierId": "dossier.placeholder-work",
+  "workId": "work.placeholder-stable-id",
+  "scopeVersion": "0.0.0",
+  "status": "draft",
+  "dimensions": [
+    { "dimensionId": "dimension.player-fantasy", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.core-loop", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.verbs", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.world-state", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.topology", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.gating-revisit", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.puzzle-information", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.dungeon-structure", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.exploration-reward", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.growth-economy", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.combat-boss", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.npc-quest", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.narrative-performance", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.camera-blocking", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.teaching-feedback", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.ui-input", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.recovery-accessibility", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.perspective-implementation", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.hardware-multiplayer", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] },
+    { "dimensionId": "dimension.production-runtime", "coverage": "needs-review", "summary": "", "observationRefs": [], "gaps": ["__RESEARCH REQUIRED__"] }
+  ],
+  "contributionHypotheses": [],
+  "uniqueOrNonportable": [],
+  "openQuestions": [],
+  "review": {
+    "author": "__TITLE ANALYST__",
+    "reviewer": "__INDEPENDENT REVIEWER__",
+    "reviewedAt": null
+  }
+}

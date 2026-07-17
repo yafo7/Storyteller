@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "scopeId": "scope.zelda-mainline",
+  "scopeVersion": "0.0.0",
+  "status": "draft",
+  "policy": {
+    "authorityRule": "__DEFINE WHICH TRACEABLE OFFICIAL CLASSIFICATION CONTROLS INCLUSION__",
+    "releaseGroupingRule": "__DEFINE HOW PORTS AND REGIONAL RELEASES SHARE A WORK ID__",
+    "variantRule": "__DEFINE WHEN A REMAKE OR EXPANSION RECEIVES A DELTA DOSSIER__",
+    "borderlineRule": "__DEFINE HOW MULTIPLAYER AND DISPUTED WORKS ARE REVIEWED__",
+    "changeRule": "__DEFINE VERSIONING WHEN LATER EVIDENCE CHANGES THE SCOPE__"
+  },
+  "authoritySnapshots": [
+    {
+      "snapshotId": "scope-snapshot.placeholder",
+      "sourceRefs": ["source.scope-authority-placeholder"],
+      "capturedAt": "2026-07-17",
+      "contentHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "candidateWorkIds": ["work.placeholder-candidate"]
+    }
+  ],
+  "candidates": [
+    {
+      "workId": "work.placeholder-candidate",
+      "decision": "review",
+      "rationale": "__NO TITLE IS INCLUDED UNTIL THIS RATIONALE AND ITS SOURCE ARE VERIFIED__",
+      "sourceRefs": ["source.scope-authority-placeholder"]
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "scope-decision.placeholder-edge-case",
+      "question": "__SCOPE QUESTION__",
+      "resolution": "__REVIEWED RESOLUTION WITH NO SILENT ASSUMPTIONS__",
+      "sourceRefs": ["source.scope-authority-placeholder"]
+    }
+  ],
+  "reconciliation": {
+    "authorityUnionCount": 1,
+    "registeredCandidateCount": 1,
+    "missingFromRegistry": [],
+    "notInAuthorityUnion": [],
+    "unresolvedReviewCount": 1
+  },
+  "supersedes": null
+}

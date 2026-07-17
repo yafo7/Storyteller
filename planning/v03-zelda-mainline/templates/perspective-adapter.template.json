@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0.0",
+  "adapterId": "adapter.2d-topdown.placeholder",
+  "adapterVersion": "0.0.0",
+  "status": "draft",
+  "targetProfile": "product-profile.v021-topdown-pixel",
+  "supportedPatternKinds": ["world-state-rule"],
+  "requiredCapabilities": ["capability.placeholder-map-layer"],
+  "mappings": [
+    {
+      "mappingId": "adapter-mapping.placeholder-layer",
+      "abstractPath": "effect.toggle-map-layer",
+      "runtimePrimitive": "__RUNTIME PRIMITIVE AFTER CAPABILITY NEGOTIATION__",
+      "cost": "medium",
+      "fallback": null,
+      "observableResult": "__PLAYER CAN SEE AND NAVIGATE THE NEW MAP STATE__"
+    }
+  ],
+  "constraints": {
+    "camera": ["__TOP-DOWN CAMERA KEEPS THE CHANGED AREA LEGIBLE__"],
+    "navigation": ["__GRID AND COLLISION REMAIN REACHABLE__"],
+    "readability": ["__STATE VARIANTS DIFFER AT GAME SCALE__"],
+    "accessibility": ["__STATE CHANGE HAS REDUNDANT NON-COLOR CUE__"]
+  },
+  "tests": ["test.placeholder-adapter-route"],
+  "governance": {
+    "owner": "__ADAPTER OWNER__",
+    "reviewers": ["__RUNTIME REVIEWER__"],
+    "changelog": ["0.0.0 planning placeholder"]
+  }
+}

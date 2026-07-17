@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.0",
+  "workId": "work.placeholder-stable-id",
+  "canonicalTitle": "__OFFICIAL TITLE AFTER G0__",
+  "aliases": [],
+  "scopeDecision": "review",
+  "inclusionBasis": "__TRACEABLE RATIONALE; DO NOT INFER FROM MEMORY__",
+  "releaseFamily": {
+    "primaryVersionId": "version.placeholder-primary",
+    "versions": [
+      {
+        "versionId": "version.placeholder-primary",
+        "relationship": "original",
+        "researchTreatment": "primary",
+        "platforms": ["__PLATFORM AFTER SOURCE VERIFICATION__"],
+        "releaseDate": null,
+        "deltaFrom": null,
+        "notes": "__VERSION AND PLATFORM SCOPE__"
+      }
+    ]
+  },
+  "perspectiveTags": ["mixed"],
+  "researchStatus": "unresearched",
+  "dimensionCoverage": {
+    "dimension.player-fantasy": "unknown",
+    "dimension.core-loop": "unknown",
+    "dimension.verbs": "unknown",
+    "dimension.world-state": "unknown",
+    "dimension.topology": "unknown",
+    "dimension.gating-revisit": "unknown",
+    "dimension.puzzle-information": "unknown",
+    "dimension.dungeon-structure": "unknown",
+    "dimension.exploration-reward": "unknown",
+    "dimension.growth-economy": "unknown",
+    "dimension.combat-boss": "unknown",
+    "dimension.npc-quest": "unknown",
+    "dimension.narrative-performance": "unknown",
+    "dimension.camera-blocking": "unknown",
+    "dimension.teaching-feedback": "unknown",
+    "dimension.ui-input": "unknown",
+    "dimension.recovery-accessibility": "unknown",
+    "dimension.perspective-implementation": "unknown",
+    "dimension.hardware-multiplayer": "unknown",
+    "dimension.production-runtime": "unknown"
+  },
+  "sourceRefs": [],
+  "openQuestions": [],
+  "lastReviewedAt": null
+}

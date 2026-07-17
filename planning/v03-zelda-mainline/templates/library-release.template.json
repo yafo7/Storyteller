@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "libraryId": "library.game-design",
+  "libraryVersion": "0.0.0",
+  "status": "alpha",
+  "hashPolicy": {
+    "algorithm": "canonical-tree-sha256/v1",
+    "canonicalizationVersion": "1",
+    "treeHash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "schemaVersions": {
+    "scope": "1.0.0",
+    "work": "1.0.0",
+    "source": "1.0.0",
+    "claim": "1.0.0",
+    "observation": "1.0.0",
+    "dossier": "1.0.0",
+    "relation": "1.0.0",
+    "pattern": "1.0.0",
+    "selection": "1.0.0",
+    "lock": "1.0.0",
+    "benchmark": "1.0.0",
+    "pack": "1.0.0",
+    "taxonomy": "1.0.0",
+    "adapter": "1.0.0",
+    "migration": "1.0.0",
+    "library-release": "1.0.0"
+  },
+  "packs": [
+    {
+      "packId": "pack.zelda-mainline",
+      "version": "0.0.0",
+      "manifestHash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "core": {
+    "patternRefs": [],
+    "adapterRefs": ["adapter.2d-topdown.placeholder"],
+    "compositionRuleRefs": [],
+    "provenanceIndexHash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "indexes": [
+    {
+      "indexId": "index.placeholder-faceted",
+      "version": "0.0.0",
+      "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "migrations": [],
+  "qualityEvidence": ["G0"],
+  "fileManifest": [
+    {
+      "path": "__PLANNING PLACEHOLDER FILE__",
+      "bytes": 1,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

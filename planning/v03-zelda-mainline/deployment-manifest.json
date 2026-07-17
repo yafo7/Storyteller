@@ -1,0 +1,179 @@
+{
+  "manifestVersion": "0.1.0",
+  "planId": "storyteller-v03-zelda-mainline",
+  "title": "Storyteller 0.3 × Zelda Mainline pre-production deployment",
+  "status": "P0_PLANNING_FREEZE",
+  "createdAt": "2026-07-17",
+  "lifecycle": {
+    "currentPhase": "P0",
+    "transitionPolicy": "A phase change is atomic: update phase statuses and flags, create only newly admitted paths, then pass the phase-aware deployment validator.",
+    "flags": {
+      "scopeDefinitionStarted": { "value": false, "introducedInPhase": "P1" },
+      "observationCollectionStarted": { "value": false, "introducedInPhase": "P2" },
+      "corpusCoverageStarted": { "value": false, "introducedInPhase": "P3" },
+      "crossTitleDistillationStarted": { "value": false, "introducedInPhase": "P4" },
+      "libraryReleaseStarted": { "value": false, "introducedInPhase": "P5" },
+      "skillDevelopmentStarted": { "value": false, "introducedInPhase": "P6" },
+      "gameExperimentStarted": { "value": false, "introducedInPhase": "P7" },
+      "stableReleaseStarted": { "value": false, "introducedInPhase": "P8" }
+    }
+  },
+  "architecture": {
+    "storySemantics": "canon-first story model produced before any pattern retrieval",
+    "productProfile": "versioned presentation and runtime profile; first controlled experiment uses v0.21 top-down pixel",
+    "inspirationPack": "versioned evidence-backed design pack; first pack is zelda-mainline",
+    "knowledgeRoot": "design-library",
+    "principle": "Skills operate the library; they do not contain the research corpus."
+  },
+  "plannedFormalPaths": [
+    { "path": "design-library", "introducedInPhase": "P1", "requiredWhenAdmitted": true },
+    { "path": ".codex/skills/curate-game-design-library", "introducedInPhase": "P6", "requiredWhenAdmitted": true },
+    { "path": ".codex/skills/select-game-design-patterns", "introducedInPhase": "P6", "requiredWhenAdmitted": true },
+    { "path": ".codex/skills/build-interactive-stage-game-v03", "introducedInPhase": "P6", "requiredWhenAdmitted": true },
+    { "path": "v03", "introducedInPhase": "P7", "requiredWhenAdmitted": true }
+  ],
+  "legacyBaseline": {
+    "sourceCommit": "8cf00461ab6732f520ce5d4625233bcef6dca384",
+    "lockFile": "planning/v03-zelda-mainline/baseline/legacy-skill-lock.json",
+    "policy": "Do not update hashes to hide drift; version any behavior-changing integration.",
+    "protectedPaths": [
+      ".codex/skills/analyze-story-for-game",
+      ".codex/skills/art-direct-game-assets",
+      ".codex/skills/build-interactive-stage-game",
+      ".codex/skills/build-interactive-stage-game-v01",
+      ".codex/skills/build-interactive-stage-game-v021",
+      ".codex/skills/compile-script-game",
+      ".codex/skills/design-narrative-gameplay",
+      ".codex/skills/design-stage-and-levels",
+      ".codex/skills/direct-interactive-drama",
+      ".codex/skills/evaluate-script-game",
+      "v01",
+      "v02"
+    ]
+  },
+  "plannedSkills": [
+    {
+      "name": "curate-game-design-library",
+      "lifecycle": "maintenance",
+      "responsibility": "evidence, corpus, distillation, governance and library release"
+    },
+    {
+      "name": "select-game-design-patterns",
+      "lifecycle": "production",
+      "responsibility": "retrieval, scoring, abstention, composition, originality and handoff"
+    },
+    {
+      "name": "build-interactive-stage-game-v03",
+      "lifecycle": "production",
+      "responsibility": "version locking and end-to-end orchestration"
+    }
+  ],
+  "phases": [
+    {
+      "id": "P0",
+      "name": "Planning Freeze",
+      "manifestStatus": "P0_PLANNING_FREEZE",
+      "status": "completed",
+      "exitGates": []
+    },
+    {
+      "id": "P1",
+      "name": "Scope and Contract Freeze",
+      "manifestStatus": "P1_SCOPE_AND_CONTRACT",
+      "status": "pending",
+      "exitGates": ["G0"]
+    },
+    {
+      "id": "P2",
+      "name": "Calibration Pilot",
+      "manifestStatus": "P2_CALIBRATION",
+      "status": "pending",
+      "exitGates": ["G1", "G2", "G3"]
+    },
+    {
+      "id": "P3",
+      "name": "Corpus Coverage",
+      "manifestStatus": "P3_CORPUS_COVERAGE",
+      "status": "pending",
+      "exitGates": ["G1", "G2"]
+    },
+    {
+      "id": "P4",
+      "name": "Cross-title Distillation",
+      "manifestStatus": "P4_DISTILLATION",
+      "status": "pending",
+      "exitGates": ["G3", "G4", "G5"]
+    },
+    {
+      "id": "P5",
+      "name": "Library Alpha and Beta",
+      "manifestStatus": "P5_LIBRARY_RELEASE",
+      "status": "pending",
+      "exitGates": ["G3", "G4", "G5", "G13"]
+    },
+    {
+      "id": "P6",
+      "name": "Skill Integration",
+      "manifestStatus": "P6_SKILL_INTEGRATION",
+      "status": "pending",
+      "exitGates": ["G6", "G7", "G8", "G9", "G13"]
+    },
+    {
+      "id": "P7",
+      "name": "Controlled Game Experiment",
+      "manifestStatus": "P7_GAME_EXPERIMENT",
+      "status": "pending",
+      "exitGates": ["G5", "G7", "G8", "G9", "G10", "G11", "G13"]
+    },
+    {
+      "id": "P8",
+      "name": "Release Candidate and Stable",
+      "manifestStatus": "P8_RELEASE",
+      "status": "pending",
+      "exitGates": ["G0", "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "G10", "G11", "G12", "G13", "G14"]
+    }
+  ],
+  "qualityGates": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9",
+    "G10",
+    "G11",
+    "G12",
+    "G13",
+    "G14"
+  ],
+  "contractTemplateMap": [
+    { "contract": "scope-manifest.schema.json", "template": "scope-manifest.template.json" },
+    { "contract": "work.schema.json", "template": "work.template.json" },
+    { "contract": "source-record.schema.json", "template": "source-record.template.json" },
+    { "contract": "claim.schema.json", "template": "claim.template.json" },
+    { "contract": "observation.schema.json", "template": "observation.template.json" },
+    { "contract": "title-dossier.schema.json", "template": "title-dossier.template.json" },
+    { "contract": "relation.schema.json", "template": "relation.template.json" },
+    { "contract": "design-pattern.schema.json", "template": "design-pattern.template.json" },
+    { "contract": "pack-manifest.schema.json", "template": "pack-manifest.template.json" },
+    { "contract": "pattern-selection.schema.json", "template": "pattern-selection.template.json" },
+    { "contract": "library-lock.schema.json", "template": "library-lock.template.json" },
+    { "contract": "benchmark-case.schema.json", "template": "benchmark-case.template.json" },
+    { "contract": "taxonomy.schema.json", "template": "taxonomy.template.json" },
+    { "contract": "perspective-adapter.schema.json", "template": "perspective-adapter.template.json" },
+    { "contract": "migration.schema.json", "template": "migration.template.json" },
+    { "contract": "library-release.schema.json", "template": "library-release.template.json" }
+  ],
+  "contractFreezeBlockers": [
+    "All draft schemas must pass an independent Draft 2020-12 meta-validator before P1 exits.",
+    "A semantic reference validator must enforce unique controlled dimensions, primary-version linkage, candidate-selection-lock closure and provenance filtering.",
+    "A provisional pattern must complete detect-score-instantiate-emit-validate end to end before P3 starts.",
+    "Coverage numbers must be derived from the frozen taxonomy and reference graph, never accepted as self-reported release evidence.",
+    "Hash manifests must use canonical-tree-sha256/v1 and enumerate every released file."
+  ],
+  "nextAuthorizedAction": "Review this planning package; only then start P1 scope and contract work."
+}
