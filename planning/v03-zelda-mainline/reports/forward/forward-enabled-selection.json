@@ -1,0 +1,597 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.benchmark.selector.forward-unseen",
+  "storyModelHash": "6119ed1e020a5f7be801bf8bdf263935caed9c8a395b63b433fc0b1812f21c8e",
+  "libraryLockRef": "lock.forward-unseen.enabled",
+  "provenancePolicy": {
+    "enabledPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "blockedPackIds": [],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": [
+      "signal.hidden-causal-rule",
+      "signal.revisited-place",
+      "signal.relationship-memory",
+      "signal.transformable-environment",
+      "signal.landmark-mystery",
+      "signal.embodied-secret"
+    ],
+    "experienceGoals": [
+      "experience.self-directed-discovery",
+      "experience.social-recognition",
+      "experience.world-recontextualization"
+    ],
+    "spatialConstraints": [
+      "signal.revisited-place",
+      "signal.transformable-environment",
+      "signal.landmark-mystery"
+    ],
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.inventory",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.portal-transitions",
+      "capability.grid-collision",
+      "capability.spatial-query",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.route-simulation",
+      "capability.telemetry"
+    ],
+    "budget": {
+      "design": "medium",
+      "code": "medium",
+      "art": "medium",
+      "qa": "high"
+    },
+    "negativeSignals": []
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.28
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.27
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 4,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.98
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.schedule-clock"
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.853
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.713
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "manual-binding-incomplete"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Reward 2.0 manual binding closure is incomplete: exactly one explicit acquisition transaction is required; the acquisition transaction must declare an atomic commit; one or more explicit persistent state refs are required; at least two explicit reward functions are required; reward functions must span at least two distinct functional dimensions; an explicit economy rule ref is required; a passed, evidenced protected-story-order check is required."
+      ]
+    },
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.663
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 4,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.563
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.553
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.003
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.save-migration"
+      ]
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.937
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.887
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.737
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    }
+  ],
+  "selectedApplications": [
+    {
+      "applicationId": "application.selector.forward-unseen.1",
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "role": "core",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.facts",
+        "storyModel.locations",
+        "storyModel.revealOrder",
+        "storyModel.protectedCanon"
+      ],
+      "retainedPrinciples": [
+        "Treat a player-completed world-state transition as one atomic change: stage a coordinated before-and-after cue and make at least one affected navigation, actor, or interaction state observable in subsequent play."
+      ],
+      "adaptationSummary": "Instantiate Embodied world-change reveal from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "source light-dark or corruption-restoration cosmology",
+        "source milestone cast and location sequence",
+        "source transition camera, music, and reward cadence"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "storyModel",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.embodied-world-change-reveal",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.0.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.embodied-reveal.selection",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.embodied-reveal.commit-transition",
+          "parameterBindings": {
+            "parameter.embodied-reveal.transition-fact": "fact.former-keeper-left-voluntarily",
+            "parameter.embodied-reveal.before-variant": "map-state-variant-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.after-variant": "map-state-variant-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.performance-cue": "performance-sequence-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.changed-states": "state-delta-ref-array.embodied-world-change-reveal.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.world.activeFactRef must satisfy equals-ref against reference parameter.embodied-reveal.transition-fact before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract.",
+            "$.world.activeVariant must satisfy equals-ref against reference parameter.embodied-reveal.after-variant before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract.",
+            "$.world.changedStates must satisfy contains-all-ref against reference parameter.embodied-reveal.changed-states before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract.",
+            "$.world.transitionTransactionComplete must satisfy equals against true before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract.",
+            "$.routes.requiredRecovery must satisfy reachable against true before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.embodied-reveal.stage-before-after-cue",
+          "parameterBindings": {
+            "parameter.embodied-reveal.transition-fact": "fact.former-keeper-left-voluntarily",
+            "parameter.embodied-reveal.before-variant": "map-state-variant-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.after-variant": "map-state-variant-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.performance-cue": "performance-sequence-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.changed-states": "state-delta-ref-array.embodied-world-change-reveal.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.performance.completedCue must satisfy equals-ref against reference parameter.embodied-reveal.performance-cue before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract.",
+            "$.performance.cueStateMatchesWorld must satisfy equals against true before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract."
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.world-facts",
+        "capability.map-layers",
+        "capability.performance-cues",
+        "capability.camera-cues",
+        "capability.checkpoints",
+        "capability.route-simulation"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    }
+  ],
+  "composition": {
+    "corePatternRef": "pattern.embodied-world-change-reveal",
+    "supportPatternRefs": [],
+    "sharedExperienceAxis": "experience.world-recontextualization",
+    "conflictsResolved": [
+      "Removed candidates that conflict with the selected core or duplicate an already represented pattern kind."
+    ],
+    "developmentArc": [
+      "teach",
+      "practice",
+      "variation",
+      "combine-or-reverse",
+      "exam"
+    ]
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "structuralDeltas": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "forbiddenTransfers": [
+      "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+    ],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": [
+      "A reviewer cannot reliably attribute the instance to one source encounter",
+      "At least four transformation axes materially change",
+      "Protected canon and reveal order remain unchanged"
+    ]
+  },
+  "abstention": {
+    "abstained": false,
+    "reason": null
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.selector.forward-unseen.gameplay",
+      "owner": "gameplay",
+      "contractRef": "gameplay-design/v03",
+      "applicationRefs": [
+        "application.selector.forward-unseen.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.embodied-world-change-reveal",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.embodied-world-change-reveal.selection.1",
+        "assertion.embodied-world-change-reveal.selection.2",
+        "assertion.embodied-world-change-reveal.selection.3",
+        "assertion.embodied-world-change-reveal.runtime.1",
+        "assertion.embodied-world-change-reveal.runtime.2",
+        "assertion.embodied-world-change-reveal.runtime.3",
+        "assertion.embodied-world-change-reveal.runtime.4",
+        "assertion.embodied-world-change-reveal.runtime.5",
+        "assertion.embodied-world-change-reveal.runtime.6",
+        "assertion.embodied-world-change-reveal.route.1",
+        "assertion.embodied-world-change-reveal.route.2",
+        "assertion.embodied-world-change-reveal.route.3",
+        "assertion.embodied-world-change-reveal.originality.1",
+        "assertion.embodied-world-change-reveal.originality.2",
+        "assertion.embodied-world-change-reveal.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.forward-unseen.performance",
+      "owner": "performance",
+      "contractRef": "performance-design/v03",
+      "applicationRefs": [
+        "application.selector.forward-unseen.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.embodied-world-change-reveal",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.embodied-world-change-reveal.selection.1",
+        "assertion.embodied-world-change-reveal.selection.2",
+        "assertion.embodied-world-change-reveal.selection.3",
+        "assertion.embodied-world-change-reveal.runtime.1",
+        "assertion.embodied-world-change-reveal.runtime.2",
+        "assertion.embodied-world-change-reveal.runtime.3",
+        "assertion.embodied-world-change-reveal.runtime.4",
+        "assertion.embodied-world-change-reveal.runtime.5",
+        "assertion.embodied-world-change-reveal.runtime.6",
+        "assertion.embodied-world-change-reveal.route.1",
+        "assertion.embodied-world-change-reveal.route.2",
+        "assertion.embodied-world-change-reveal.route.3",
+        "assertion.embodied-world-change-reveal.originality.1",
+        "assertion.embodied-world-change-reveal.originality.2",
+        "assertion.embodied-world-change-reveal.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.forward-unseen.stage",
+      "owner": "stage",
+      "contractRef": "stage-plan/v03",
+      "applicationRefs": [
+        "application.selector.forward-unseen.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.embodied-world-change-reveal",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.embodied-world-change-reveal.selection.1",
+        "assertion.embodied-world-change-reveal.selection.2",
+        "assertion.embodied-world-change-reveal.selection.3",
+        "assertion.embodied-world-change-reveal.runtime.1",
+        "assertion.embodied-world-change-reveal.runtime.2",
+        "assertion.embodied-world-change-reveal.runtime.3",
+        "assertion.embodied-world-change-reveal.runtime.4",
+        "assertion.embodied-world-change-reveal.runtime.5",
+        "assertion.embodied-world-change-reveal.runtime.6",
+        "assertion.embodied-world-change-reveal.route.1",
+        "assertion.embodied-world-change-reveal.route.2",
+        "assertion.embodied-world-change-reveal.route.3",
+        "assertion.embodied-world-change-reveal.originality.1",
+        "assertion.embodied-world-change-reveal.originality.2",
+        "assertion.embodied-world-change-reveal.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.forward-unseen.evaluation",
+      "owner": "evaluation",
+      "contractRef": "acceptance/v03",
+      "applicationRefs": [
+        "application.selector.forward-unseen.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.embodied-world-change-reveal",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.embodied-world-change-reveal.selection.1",
+        "assertion.embodied-world-change-reveal.selection.2",
+        "assertion.embodied-world-change-reveal.selection.3",
+        "assertion.embodied-world-change-reveal.runtime.1",
+        "assertion.embodied-world-change-reveal.runtime.2",
+        "assertion.embodied-world-change-reveal.runtime.3",
+        "assertion.embodied-world-change-reveal.runtime.4",
+        "assertion.embodied-world-change-reveal.runtime.5",
+        "assertion.embodied-world-change-reveal.runtime.6",
+        "assertion.embodied-world-change-reveal.route.1",
+        "assertion.embodied-world-change-reveal.route.2",
+        "assertion.embodied-world-change-reveal.route.3",
+        "assertion.embodied-world-change-reveal.originality.1",
+        "assertion.embodied-world-change-reveal.originality.2",
+        "assertion.embodied-world-change-reveal.originality.3"
+      ]
+    }
+  ],
+  "status": "draft"
+}

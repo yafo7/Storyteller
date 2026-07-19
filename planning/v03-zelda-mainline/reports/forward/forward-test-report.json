@@ -1,0 +1,400 @@
+{
+  "reportVersion": "1.0.0",
+  "reportId": "report.p6.forward-held-out",
+  "generatedAt": "2026-07-18",
+  "fixture": {
+    "fixtureId": "fixture.selector.forward-unseen",
+    "sha256": "bb919335fb348f4b855fd40dbae1dfff182eaffb7bb31b74408de85c71935b7c",
+    "intendedPatternIdsStored": false
+  },
+  "locks": {
+    "enabled": {
+      "path": "planning/v03-zelda-mainline/fixtures/forward-enabled-lock.json",
+      "lockId": "lock.forward-unseen.enabled"
+    },
+    "blocked": {
+      "path": "planning/v03-zelda-mainline/fixtures/forward-blocked-lock.json",
+      "lockId": "lock.forward-unseen.blocked"
+    },
+    "negativeAudits": [
+      {
+        "auditId": "tampered-hash",
+        "rejected": true,
+        "errorCode": "LIBRARY_LOCK_INVALID",
+        "reason": "Library release manifest hash drift"
+      },
+      {
+        "auditId": "latest-version",
+        "rejected": true,
+        "errorCode": "LIBRARY_LOCK_INVALID",
+        "reason": "library.version must be an exact semantic version; received \"latest\""
+      },
+      {
+        "auditId": "floating-version",
+        "rejected": true,
+        "errorCode": "LIBRARY_LOCK_INVALID",
+        "reason": "Skill curate-game-design-library must lock the current 0.3.0 interface"
+      },
+      {
+        "auditId": "enabled-blocked-overlap",
+        "rejected": true,
+        "errorCode": "LIBRARY_LOCK_INVALID",
+        "reason": "Enabled and blocked Pack IDs overlap"
+      }
+    ]
+  },
+  "enabledResult": {
+    "path": "planning/v03-zelda-mainline/reports/forward/forward-enabled-selection.json",
+    "status": "draft",
+    "abstained": false,
+    "corePatternRef": "pattern.embodied-world-change-reveal",
+    "supportPatternRefs": []
+  },
+  "blockedResult": {
+    "path": "planning/v03-zelda-mainline/reports/forward/forward-blocked-selection.json",
+    "status": "rejected",
+    "abstained": true,
+    "blockedPackIds": [
+      "pack.zelda-mainline"
+    ]
+  },
+  "checks": [
+    {
+      "checkId": "forward.schema-enabled",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "checkId": "forward.schema-blocked",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "checkId": "forward.output-boundary",
+      "result": "pass",
+      "evidence": [
+        "planning/v03-zelda-mainline/reports/forward/forward-enabled-selection.json",
+        "planning/v03-zelda-mainline/reports/forward/forward-blocked-selection.json",
+        "planning/v03-zelda-mainline/reports/forward/forward-test-report.json"
+      ]
+    },
+    {
+      "checkId": "forward.fixture-held-out",
+      "result": "pass",
+      "evidence": "The input stores no intended pattern IDs."
+    },
+    {
+      "checkId": "forward.fixture-original",
+      "result": "pass",
+      "evidence": "A held-out original story fixture authored for forward evaluation; no intended pattern IDs are stored with the input."
+    },
+    {
+      "checkId": "forward.lock-enabled-ref",
+      "result": "pass",
+      "evidence": {
+        "expected": "lock.forward-unseen.enabled",
+        "actual": "lock.forward-unseen.enabled"
+      }
+    },
+    {
+      "checkId": "forward.lock-blocked-ref",
+      "result": "pass",
+      "evidence": {
+        "expected": "lock.forward-unseen.blocked",
+        "actual": "lock.forward-unseen.blocked"
+      }
+    },
+    {
+      "checkId": "forward.lock-enabled-provenance",
+      "result": "pass",
+      "evidence": {
+        "enabledPackIds": [
+          "pack.zelda-mainline"
+        ],
+        "blockedPackIds": [],
+        "allowCorePromotedFromBlockedPack": false
+      }
+    },
+    {
+      "checkId": "forward.lock-blocked-provenance",
+      "result": "pass",
+      "evidence": {
+        "enabledPackIds": [],
+        "blockedPackIds": [
+          "pack.zelda-mainline"
+        ],
+        "allowCorePromotedFromBlockedPack": false
+      }
+    },
+    {
+      "checkId": "forward.skill-chain-locked",
+      "result": "pass",
+      "evidence": {
+        "required": [
+          "analyze-story-for-game",
+          "art-direct-game-assets",
+          "compile-script-game",
+          "curate-game-design-library",
+          "design-narrative-gameplay",
+          "design-stage-and-levels",
+          "direct-interactive-drama",
+          "evaluate-script-game",
+          "select-game-design-patterns"
+        ],
+        "enabled": [
+          "analyze-story-for-game",
+          "art-direct-game-assets",
+          "compile-script-game",
+          "curate-game-design-library",
+          "design-narrative-gameplay",
+          "design-stage-and-levels",
+          "direct-interactive-drama",
+          "evaluate-script-game",
+          "select-game-design-patterns"
+        ],
+        "blocked": [
+          "analyze-story-for-game",
+          "art-direct-game-assets",
+          "compile-script-game",
+          "curate-game-design-library",
+          "design-narrative-gameplay",
+          "design-stage-and-levels",
+          "direct-interactive-drama",
+          "evaluate-script-game",
+          "select-game-design-patterns"
+        ]
+      }
+    },
+    {
+      "checkId": "forward.lock-rejects-tampered-hash",
+      "result": "pass",
+      "evidence": {
+        "auditId": "tampered-hash",
+        "rejected": true,
+        "errorCode": "LIBRARY_LOCK_INVALID",
+        "reason": "Library release manifest hash drift"
+      }
+    },
+    {
+      "checkId": "forward.lock-rejects-latest-version",
+      "result": "pass",
+      "evidence": {
+        "auditId": "latest-version",
+        "rejected": true,
+        "errorCode": "LIBRARY_LOCK_INVALID",
+        "reason": "library.version must be an exact semantic version; received \"latest\""
+      }
+    },
+    {
+      "checkId": "forward.lock-rejects-floating-version",
+      "result": "pass",
+      "evidence": {
+        "auditId": "floating-version",
+        "rejected": true,
+        "errorCode": "LIBRARY_LOCK_INVALID",
+        "reason": "Skill curate-game-design-library must lock the current 0.3.0 interface"
+      }
+    },
+    {
+      "checkId": "forward.lock-rejects-enabled-blocked-overlap",
+      "result": "pass",
+      "evidence": {
+        "auditId": "enabled-blocked-overlap",
+        "rejected": true,
+        "errorCode": "LIBRARY_LOCK_INVALID",
+        "reason": "Enabled and blocked Pack IDs overlap"
+      }
+    },
+    {
+      "checkId": "forward.composition",
+      "result": "pass",
+      "evidence": {
+        "core": [
+          "pattern.embodied-world-change-reveal"
+        ],
+        "supports": []
+      }
+    },
+    {
+      "checkId": "forward.runtime-fit",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "checkId": "forward.no-hard-veto",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "checkId": "forward.shared-experience-axis",
+      "result": "pass",
+      "evidence": {
+        "axis": "experience.world-recontextualization",
+        "violations": []
+      }
+    },
+    {
+      "checkId": "forward.development-arc",
+      "result": "pass",
+      "evidence": [
+        "teach",
+        "practice",
+        "variation",
+        "combine-or-reverse",
+        "exam"
+      ]
+    },
+    {
+      "checkId": "forward.typed-handoffs",
+      "result": "pass",
+      "evidence": [
+        "gameplay",
+        "performance",
+        "stage",
+        "evaluation"
+      ]
+    },
+    {
+      "checkId": "forward.required-bindings",
+      "result": "pass",
+      "evidence": [
+        {
+          "patternId": "pattern.embodied-world-change-reveal",
+          "requiredBindings": [
+            "parameter.embodied-reveal.transition-fact",
+            "parameter.embodied-reveal.before-variant",
+            "parameter.embodied-reveal.after-variant",
+            "parameter.embodied-reveal.performance-cue",
+            "parameter.embodied-reveal.changed-states"
+          ],
+          "boundBindings": [
+            "parameter.embodied-reveal.transition-fact",
+            "parameter.embodied-reveal.before-variant",
+            "parameter.embodied-reveal.after-variant",
+            "parameter.embodied-reveal.performance-cue",
+            "parameter.embodied-reveal.changed-states"
+          ],
+          "unresolvedBindings": []
+        }
+      ]
+    },
+    {
+      "checkId": "forward.status-draft",
+      "result": "pass",
+      "evidence": "draft"
+    },
+    {
+      "checkId": "forward.originality-plan",
+      "result": "pass",
+      "evidence": {
+        "transformationAxes": [
+          "worldbuilding",
+          "characters",
+          "objects",
+          "topology",
+          "feedback",
+          "narrative-causality"
+        ],
+        "structuralDeltas": [
+          "topology-graph",
+          "object-role-graph",
+          "action-sequence",
+          "feedback-signature",
+          "narrative-function"
+        ],
+        "forbiddenTransfers": [
+          "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+        ],
+        "blindSourceAttributionReview": "required",
+        "reviewChecks": [
+          "A reviewer cannot reliably attribute the instance to one source encounter",
+          "At least four transformation axes materially change",
+          "Protected canon and reveal order remain unchanged"
+        ]
+      }
+    },
+    {
+      "checkId": "forward.canon-hash",
+      "result": "pass",
+      "evidence": "6119ed1e020a5f7be801bf8bdf263935caed9c8a395b63b433fc0b1812f21c8e"
+    },
+    {
+      "checkId": "forward.blocked-pack-abstains",
+      "result": "pass",
+      "evidence": {
+        "abstained": true,
+        "reason": "The requested inspiration pack is blocked by the production provenance policy."
+      }
+    },
+    {
+      "checkId": "forward.blocked-status-rejected",
+      "result": "pass",
+      "evidence": "rejected"
+    },
+    {
+      "checkId": "forward.index-first-codepath",
+      "result": "pass",
+      "evidence": "Retrieval index is opened before full pattern records; evidence corpus files are absent from the selector."
+    }
+  ],
+  "gateSummary": [
+    {
+      "gateId": "G6-selection",
+      "result": "pass",
+      "checkRefs": [
+        "forward.schema-enabled",
+        "forward.no-hard-veto",
+        "forward.status-draft"
+      ]
+    },
+    {
+      "gateId": "G7-composition",
+      "result": "pass",
+      "checkRefs": [
+        "forward.composition",
+        "forward.shared-experience-axis",
+        "forward.development-arc"
+      ]
+    },
+    {
+      "gateId": "G8-canon-lock",
+      "result": "pass",
+      "checkRefs": [
+        "forward.canon-hash",
+        "forward.lock-enabled-ref",
+        "forward.lock-blocked-ref",
+        "forward.lock-rejects-tampered-hash",
+        "forward.lock-rejects-latest-version",
+        "forward.lock-rejects-floating-version",
+        "forward.lock-rejects-enabled-blocked-overlap"
+      ]
+    },
+    {
+      "gateId": "G9-runtime",
+      "result": "pass",
+      "checkRefs": [
+        "forward.runtime-fit",
+        "forward.required-bindings",
+        "forward.typed-handoffs"
+      ]
+    },
+    {
+      "gateId": "P6-forward-boundary",
+      "result": "pass",
+      "checkRefs": [
+        "forward.output-boundary",
+        "forward.fixture-held-out",
+        "forward.blocked-pack-abstains",
+        "forward.index-first-codepath",
+        "forward.skill-chain-locked"
+      ]
+    }
+  ],
+  "summary": {
+    "passedChecks": 27,
+    "failedChecks": 0,
+    "passedGates": 5,
+    "failedGates": 0,
+    "adjudication": "pass"
+  }
+}

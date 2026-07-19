@@ -1,0 +1,4 @@
+interface:
+  display_name: "Select Game Design Patterns"
+  short_description: "Select and originalize story-fit game design patterns"
+  default_prompt: "Use $select-game-design-patterns to choose a canon-safe core pattern and up to three supports from the locked library."

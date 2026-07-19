@@ -1,0 +1,223 @@
+{
+  "schemaVersion": "1.0.0",
+  "hashPolicy": {
+    "algorithm": "canonical-tree-sha256/v1",
+    "canonicalizationVersion": "1",
+    "fileManifestHash": "ec216aaa8fd3a1af69c656405dd8003f4460f533e655eaeca498ebcd1cb218e6"
+  },
+  "input": {
+    "scriptHash": "bb919335fb348f4b855fd40dbae1dfff182eaffb7bb31b74408de85c71935b7c",
+    "storyModelHash": "6119ed1e020a5f7be801bf8bdf263935caed9c8a395b63b433fc0b1812f21c8e",
+    "productionCharterHash": "90afe808386ee8c24fd867f569a8c036863d672c284f8589eaaea69b2cb658c7"
+  },
+  "orchestrator": {
+    "id": "build-interactive-stage-game-v03",
+    "version": "0.3.0",
+    "path": ".codex/skills/build-interactive-stage-game-v03",
+    "hash": "d3d7e3f46089634463804366c951ed5b1eb69b657e3b7c49edcbe283112da8d6"
+  },
+  "specialistSkills": [
+    {
+      "id": "curate-game-design-library",
+      "version": "0.3.0",
+      "path": ".codex/skills/curate-game-design-library",
+      "hash": "51ba29da19887ea0b7270a021004f749a9409d7dff6a587d5f76e2b92b279b05"
+    },
+    {
+      "id": "select-game-design-patterns",
+      "version": "0.3.0",
+      "path": ".codex/skills/select-game-design-patterns",
+      "hash": "9a7c8160c3ca59f6f3a7fc6c6b8a362ea357291731dfc8e0cf43725d05d799b6"
+    },
+    {
+      "id": "analyze-story-for-game",
+      "version": "0.0.0+baseline.8cf00461ab67",
+      "path": ".codex/skills/analyze-story-for-game",
+      "hash": "8267cb9669fd8a756f2acc22b770e9244fcb26636d8ae487fc1fc424927a8289"
+    },
+    {
+      "id": "design-narrative-gameplay",
+      "version": "0.0.0+baseline.8cf00461ab67",
+      "path": ".codex/skills/design-narrative-gameplay",
+      "hash": "3f878f430eca8a69350ac8d8ff69d2cb10fdbdfacb80313b43a723e8808c8c92"
+    },
+    {
+      "id": "direct-interactive-drama",
+      "version": "0.0.0+baseline.8cf00461ab67",
+      "path": ".codex/skills/direct-interactive-drama",
+      "hash": "464471d4c692acdf29f05e9560d187edf9cfca09463e1f7887418c8077bb722f"
+    },
+    {
+      "id": "design-stage-and-levels",
+      "version": "0.0.0+baseline.8cf00461ab67",
+      "path": ".codex/skills/design-stage-and-levels",
+      "hash": "39c912a6f8b66a9e6ef5a8728fca575a6e5995303e541c154876a2f482c0e868"
+    },
+    {
+      "id": "art-direct-game-assets",
+      "version": "0.0.0+baseline.8cf00461ab67",
+      "path": ".codex/skills/art-direct-game-assets",
+      "hash": "10175fb74d50e794238e10a569392447a63504604c2b07626a988b8350fc4575"
+    },
+    {
+      "id": "compile-script-game",
+      "version": "0.0.0+baseline.8cf00461ab67",
+      "path": ".codex/skills/compile-script-game",
+      "hash": "ffab2a6ea11f93ee56d7513aedf77bf11fb3960ba05a46079afe0751261cc603"
+    },
+    {
+      "id": "evaluate-script-game",
+      "version": "0.0.0+baseline.8cf00461ab67",
+      "path": ".codex/skills/evaluate-script-game",
+      "hash": "7d9c0ddc57e372495c21e2fb1328111f1395429f8bbd722a2270ff81a961368b"
+    }
+  ],
+  "library": {
+    "id": "library.storyteller-game-design",
+    "version": "0.3.0",
+    "manifestHash": "378578203006d571a9df20e1b6bc577f2e50c462556809bf9c95514af19ef435",
+    "contentHash": "ec216aaa8fd3a1af69c656405dd8003f4460f533e655eaeca498ebcd1cb218e6"
+  },
+  "schemas": [
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/benchmark-case.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/benchmark-case.schema.json",
+      "hash": "0a8a42f684a456c7f2a216f1455de83b06a7b99eeb697f7ef5e35faed09c86ed"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/claim.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/claim.schema.json",
+      "hash": "d5f89299b6967bc21c107ffa077ca6f0aadc80b1db9e5d845f03e1a346038215"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/design-pattern.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/design-pattern.schema.json",
+      "hash": "218fb55a546dca8a76b3b7e851960171c20a4317755232923fa00086f365ccdd"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/library-lock.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/library-lock.schema.json",
+      "hash": "860bce0b0f27607a48500edc09016d2b89da84181e9a501b975f4e09140bcb22"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/library-release.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/library-release.schema.json",
+      "hash": "c62777273ef081891b951c7114ed7aaca68a76d9262cbaf989997b7ef14aedfd"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/migration.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/migration.schema.json",
+      "hash": "ac2015bf3f888177c40386db59b0b19542bb78a875d0d6f27f104c0748ca316d"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/observation.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/observation.schema.json",
+      "hash": "1652c50459f266ec0a9eef2ac870e1f1e0bef4925ac17264d63eb28a63f43a4e"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/pack-manifest.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/pack-manifest.schema.json",
+      "hash": "a3f6777b03e0895c4ad59fa52584165c6c36b4dd60e696cc0b5c95144cc154dc"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/pattern-selection.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/pattern-selection.schema.json",
+      "hash": "f8c6dd32cfdac5d83f4c3c7ce9e1b3488a6a5b2472a2833fd2d05cf78cdb9594"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/perspective-adapter.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/perspective-adapter.schema.json",
+      "hash": "dfd67c31d77b04bad301fa09cd2e81d17ece3f75995eefb18d4df6114bfc6aa3"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/relation.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/relation.schema.json",
+      "hash": "34815c2f35f4088f6be4fcf3044630e6971c368723cf72c963df30b418f2190a"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/scope-manifest.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/scope-manifest.schema.json",
+      "hash": "f4c8f169051b08b337b8cabaf101b56dfb406cf1d571f7487428480dd1d5a82e"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/source-record.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/source-record.schema.json",
+      "hash": "404b209f564c1ca36300a8ff86d877726eb72a22d10544d5c1284f1c9f289b9d"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/taxonomy.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/taxonomy.schema.json",
+      "hash": "1526e8fafe82b2d6c7d290f9fbab9fc5537be9bcf775ff6cb1dca31b0e0ee074"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/title-dossier.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/title-dossier.schema.json",
+      "hash": "4bd862976a68042f9049f7028904f242d6addddeedd1e83ae3652b3bccadca64"
+    },
+    {
+      "id": "https://storyteller.local/design-library/schemas/1.0.0/work.schema.json",
+      "version": "1.0.0",
+      "path": "design-library/schemas/work.schema.json",
+      "hash": "6b2edcd15c4a2a3ebc79c1db34b133bbb01a92f5903a00d5365df25d3adb7f51"
+    }
+  ],
+  "resolvedPatterns": [],
+  "adapters": [
+    {
+      "id": "adapter.2d-topdown-v021",
+      "version": "0.3.1",
+      "path": "design-library/core/perspective-adapters/2d-topdown-v021.json",
+      "hash": "2838345b8a3f2d378c42f2a9e917be2c85310d5034c6962ae60597add25a9add"
+    }
+  ],
+  "productProfile": {
+    "id": "product-profile.v021-topdown-pixel",
+    "version": "0.21.0",
+    "path": ".codex/skills/build-interactive-stage-game-v021/references/top-down-pixel-profile.md",
+    "hash": "61cd950de9bce82bcdae02175d0003e3eabd22babd3e805b7e93abc4f13a50de"
+  },
+  "runtimeCapabilities": {
+    "id": "taxonomy.runtime-capabilities",
+    "version": "1.0.0",
+    "path": "design-library/taxonomies/runtime-capabilities.json",
+    "hash": "62561df4267e90284b100e71f81414c4716df615cf9e570ab4e1cd15903a55a5"
+  },
+  "invalidationPolicyVersion": "1.0.0",
+  "createdAt": "2026-07-18T00:00:00Z",
+  "toolchain": {
+    "node": "v24.15.0"
+  },
+  "lockId": "lock.forward-unseen.enabled",
+  "productionId": "production.forward-unseen.enabled",
+  "packs": [
+    {
+      "id": "pack.zelda-mainline",
+      "version": "0.3.0",
+      "manifestHash": "077dda95d52c5bf38bd9faa32a035b0d66377dcf275e3ee8f374431f75cfd94f",
+      "contentHash": "888ff93a0897083efec9a76ff1394cabfb20a0a355506fdd4f4059818ed3b590",
+      "enabled": true
+    }
+  ],
+  "provenancePolicy": {
+    "enabledPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "blockedPackIds": [],
+    "allowCorePromotedFromBlockedPack": false
+  }
+}

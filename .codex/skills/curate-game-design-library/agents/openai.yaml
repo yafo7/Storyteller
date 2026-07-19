@@ -1,0 +1,4 @@
+interface:
+  display_name: "Curate Game Design Library"
+  short_description: "Research and release evidence-backed design libraries"
+  default_prompt: "Use $curate-game-design-library to maintain an auditable design library and publish a validated release."

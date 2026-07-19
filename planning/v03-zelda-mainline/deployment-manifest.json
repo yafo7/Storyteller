@@ -2,10 +2,10 @@
   "manifestVersion": "0.1.0",
   "planId": "storyteller-v03-zelda-mainline",
   "title": "Storyteller 0.3 × Zelda Mainline Skill Beta deployment",
-  "status": "P5_LIBRARY_RELEASE",
+  "status": "P6_SKILL_INTEGRATION",
   "createdAt": "2026-07-17",
   "lifecycle": {
-    "currentPhase": "P5",
+    "currentPhase": "P6",
     "transitionPolicy": "A phase change is atomic: update phase statuses and flags, create only newly admitted paths, then pass the phase-aware deployment validator.",
     "flags": {
       "scopeDefinitionStarted": { "value": true, "introducedInPhase": "P1" },
@@ -13,7 +13,7 @@
       "corpusCoverageStarted": { "value": true, "introducedInPhase": "P3" },
       "crossTitleDistillationStarted": { "value": true, "introducedInPhase": "P4" },
       "libraryReleaseStarted": { "value": true, "introducedInPhase": "P5" },
-      "skillDevelopmentStarted": { "value": false, "introducedInPhase": "P6" },
+      "skillDevelopmentStarted": { "value": true, "introducedInPhase": "P6" },
       "gameExperimentStarted": { "value": false, "introducedInPhase": "P7" },
       "stableReleaseStarted": { "value": false, "introducedInPhase": "P8" }
     }
@@ -115,7 +115,7 @@
       "id": "P6",
       "name": "Complete Skills and Resumable Workflow",
       "manifestStatus": "P6_SKILL_INTEGRATION",
-      "status": "pending",
+      "status": "completed",
       "exitGates": ["G5", "G6", "G7", "G8", "G9", "G13"]
     },
     {
@@ -175,5 +175,5 @@
     "Coverage numbers must be derived from the frozen taxonomy and reference graph, never accepted as self-reported release evidence.",
     "Hash manifests must use canonical-tree-sha256/v1 and enumerate every released file."
   ],
-  "nextAuthorizedAction": "Integrate all director, knowledge, and production Skills with exact locks, resumable checkpoints, invalidation, and a held-out workflow fixture in P6."
+  "nextAuthorizedAction": "Start P7 autonomous game generation from the approved script and high-level product constraints; do not ask the user to design individual mechanics, scenes, puzzles, staging, or assets."
 }

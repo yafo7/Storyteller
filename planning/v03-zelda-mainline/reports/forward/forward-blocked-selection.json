@@ -1,0 +1,405 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.benchmark.selector.forward-unseen",
+  "storyModelHash": "6119ed1e020a5f7be801bf8bdf263935caed9c8a395b63b433fc0b1812f21c8e",
+  "libraryLockRef": "lock.forward-unseen.blocked",
+  "provenancePolicy": {
+    "enabledPackIds": [],
+    "blockedPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": [
+      "signal.hidden-causal-rule",
+      "signal.revisited-place",
+      "signal.relationship-memory",
+      "signal.transformable-environment",
+      "signal.landmark-mystery",
+      "signal.embodied-secret"
+    ],
+    "experienceGoals": [
+      "experience.self-directed-discovery",
+      "experience.social-recognition",
+      "experience.world-recontextualization"
+    ],
+    "spatialConstraints": [
+      "signal.revisited-place",
+      "signal.transformable-environment",
+      "signal.landmark-mystery"
+    ],
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.inventory",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.portal-transitions",
+      "capability.grid-collision",
+      "capability.spatial-query",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.route-simulation",
+      "capability.telemetry"
+    ],
+    "budget": {
+      "design": "medium",
+      "code": "medium",
+      "art": "medium",
+      "qa": "high"
+    },
+    "negativeSignals": []
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.28
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.27
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 4,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.98
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.853
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.713
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "manual-binding-incomplete"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.663
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 4,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.563
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.553
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.003
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.937
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.887
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.737
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "The Zelda-derived pack is disabled by provenance policy."
+      ]
+    }
+  ],
+  "selectedApplications": [],
+  "composition": {
+    "corePatternRef": null,
+    "supportPatternRefs": [],
+    "sharedExperienceAxis": "",
+    "conflictsResolved": [],
+    "developmentArc": []
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "structuralDeltas": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "forbiddenTransfers": [
+      "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+    ],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": [
+      "A reviewer cannot reliably attribute the instance to one source encounter",
+      "At least four transformation axes materially change",
+      "Protected canon and reveal order remain unchanged"
+    ]
+  },
+  "abstention": {
+    "abstained": true,
+    "reason": "The requested inspiration pack is blocked by the production provenance policy."
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.selector.forward-unseen.gameplay",
+      "owner": "gameplay",
+      "contractRef": "gameplay-design/v03",
+      "applicationRefs": [],
+      "requirements": {
+        "abstained": true,
+        "useStoryDerivedNoPackDesign": true
+      },
+      "validationRefs": [
+        "assertion.selection.abstained"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.forward-unseen.performance",
+      "owner": "performance",
+      "contractRef": "performance-design/v03",
+      "applicationRefs": [],
+      "requirements": {
+        "abstained": true,
+        "useStoryDerivedNoPackDesign": true
+      },
+      "validationRefs": [
+        "assertion.selection.abstained"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.forward-unseen.stage",
+      "owner": "stage",
+      "contractRef": "stage-plan/v03",
+      "applicationRefs": [],
+      "requirements": {
+        "abstained": true,
+        "useStoryDerivedNoPackDesign": true
+      },
+      "validationRefs": [
+        "assertion.selection.abstained"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.forward-unseen.evaluation",
+      "owner": "evaluation",
+      "contractRef": "acceptance/v03",
+      "applicationRefs": [],
+      "requirements": {
+        "abstained": true,
+        "useStoryDerivedNoPackDesign": true
+      },
+      "validationRefs": [
+        "assertion.selection.abstained"
+      ]
+    }
+  ],
+  "status": "rejected"
+}

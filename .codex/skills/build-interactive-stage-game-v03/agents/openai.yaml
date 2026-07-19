@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Interactive Stage Game 0.3"
+  short_description: "Direct a resumable canon-safe autonomous game production"
+  default_prompt: "Use $build-interactive-stage-game-v03 to autonomously turn this script into a resumable playable candidate through the locked canon-first 0.3 workflow."

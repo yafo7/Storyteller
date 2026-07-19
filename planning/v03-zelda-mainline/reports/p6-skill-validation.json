@@ -1,0 +1,181 @@
+{
+  "reportVersion": "1.0.0",
+  "reportId": "report.p6.skill-validation",
+  "generatedAt": "2026-07-18",
+  "skillCreatorValidator": [
+    {
+      "skillName": "curate-game-design-library",
+      "result": "pass",
+      "output": "Skill is valid!"
+    },
+    {
+      "skillName": "select-game-design-patterns",
+      "result": "pass",
+      "output": "Skill is valid!"
+    },
+    {
+      "skillName": "build-interactive-stage-game-v03",
+      "result": "pass",
+      "output": "Skill is valid!"
+    }
+  ],
+  "checks": [
+    {
+      "checkId": "curate-game-design-library.layout",
+      "result": "pass",
+      "detail": "6 files; no unexpected top-level entries"
+    },
+    {
+      "checkId": "curate-game-design-library.frontmatter",
+      "result": "pass",
+      "detail": "name and trigger description are valid (331 chars)"
+    },
+    {
+      "checkId": "curate-game-design-library.content",
+      "result": "pass",
+      "detail": "96 lines; no unresolved placeholders"
+    },
+    {
+      "checkId": "curate-game-design-library.references",
+      "result": "pass",
+      "detail": "2 declared references exist"
+    },
+    {
+      "checkId": "curate-game-design-library.agent-interface",
+      "result": "pass",
+      "detail": "display name, concise description, and explicit $skill default prompt are valid"
+    },
+    {
+      "checkId": "curate-game-design-library.scripts",
+      "result": "pass",
+      "detail": "2 helper scripts pass node --check"
+    },
+    {
+      "checkId": "curate-game-design-library.no-readme",
+      "result": "pass",
+      "detail": "no redundant README.md"
+    },
+    {
+      "checkId": "select-game-design-patterns.layout",
+      "result": "pass",
+      "detail": "6 files; no unexpected top-level entries"
+    },
+    {
+      "checkId": "select-game-design-patterns.frontmatter",
+      "result": "pass",
+      "detail": "name and trigger description are valid (350 chars)"
+    },
+    {
+      "checkId": "select-game-design-patterns.content",
+      "result": "pass",
+      "detail": "113 lines; no unresolved placeholders"
+    },
+    {
+      "checkId": "select-game-design-patterns.references",
+      "result": "pass",
+      "detail": "2 declared references exist"
+    },
+    {
+      "checkId": "select-game-design-patterns.agent-interface",
+      "result": "pass",
+      "detail": "display name, concise description, and explicit $skill default prompt are valid"
+    },
+    {
+      "checkId": "select-game-design-patterns.scripts",
+      "result": "pass",
+      "detail": "2 helper scripts pass node --check"
+    },
+    {
+      "checkId": "select-game-design-patterns.no-readme",
+      "result": "pass",
+      "detail": "no redundant README.md"
+    },
+    {
+      "checkId": "build-interactive-stage-game-v03.layout",
+      "result": "pass",
+      "detail": "8 files; no unexpected top-level entries"
+    },
+    {
+      "checkId": "build-interactive-stage-game-v03.frontmatter",
+      "result": "pass",
+      "detail": "name and trigger description are valid (397 chars)"
+    },
+    {
+      "checkId": "build-interactive-stage-game-v03.content",
+      "result": "pass",
+      "detail": "113 lines; no unresolved placeholders"
+    },
+    {
+      "checkId": "build-interactive-stage-game-v03.references",
+      "result": "pass",
+      "detail": "3 declared references exist"
+    },
+    {
+      "checkId": "build-interactive-stage-game-v03.agent-interface",
+      "result": "pass",
+      "detail": "display name, concise description, and explicit $skill default prompt are valid"
+    },
+    {
+      "checkId": "build-interactive-stage-game-v03.scripts",
+      "result": "pass",
+      "detail": "3 helper scripts pass node --check"
+    },
+    {
+      "checkId": "build-interactive-stage-game-v03.no-readme",
+      "result": "pass",
+      "detail": "no redundant README.md"
+    },
+    {
+      "checkId": "build-interactive-stage-game-v03.resume-contract",
+      "result": "pass",
+      "detail": "V0.3 production run-state self-test passed: 38 assertions; crash recovery, invalidation, P7 freeze, and P8 gates verified."
+    },
+    {
+      "checkId": "build-interactive-stage-game-v03.program-boundaries",
+      "result": "pass",
+      "detail": "P1-P6 Skill Beta, complete specialist chain, autonomous P7 candidate, and independent P8 Stable gates are explicit"
+    },
+    {
+      "checkId": "skill-creator.quick-validate",
+      "result": "pass",
+      "detail": "all three packages pass the installed skill-creator validator"
+    }
+  ],
+  "componentLocks": [
+    {
+      "id": "curate-game-design-library",
+      "version": "0.3.0",
+      "path": ".codex/skills/curate-game-design-library",
+      "algorithm": "canonical-tree-sha256/v1",
+      "fileCount": 6,
+      "treeSha256": "51ba29da19887ea0b7270a021004f749a9409d7dff6a587d5f76e2b92b279b05"
+    },
+    {
+      "id": "select-game-design-patterns",
+      "version": "0.3.0",
+      "path": ".codex/skills/select-game-design-patterns",
+      "algorithm": "canonical-tree-sha256/v1",
+      "fileCount": 6,
+      "treeSha256": "9a7c8160c3ca59f6f3a7fc6c6b8a362ea357291731dfc8e0cf43725d05d799b6"
+    },
+    {
+      "id": "build-interactive-stage-game-v03",
+      "version": "0.3.0",
+      "path": ".codex/skills/build-interactive-stage-game-v03",
+      "algorithm": "canonical-tree-sha256/v1",
+      "fileCount": 8,
+      "treeSha256": "d3d7e3f46089634463804366c951ed5b1eb69b657e3b7c49edcbe283112da8d6"
+    }
+  ],
+  "legacyProtection": {
+    "validator": "planning/v03-zelda-mainline/scripts/validate-deployment.mjs",
+    "result": "delegated-hard-gate"
+  },
+  "summary": {
+    "skills": 3,
+    "passedChecks": 24,
+    "failedChecks": 0,
+    "adjudication": "pass",
+    "blockers": []
+  }
+}
