@@ -1,0 +1,11 @@
+{
+  "ruleId":"composition-rule.one-core-up-to-three-supports",
+  "ruleVersion":"1.0.0",
+  "status":"released",
+  "constraints":{"coreCount":1,"minimumSupportCount":0,"maximumSupportCount":3,"abstentionAllowed":true,"duplicateKindPolicy":"allow-only-with-explicit-synergy"},
+  "developmentRequirement":["teach","practice","variation","combine-or-reverse","exam"],
+  "worldRequirement":"At least one selected application must change the future meaning or affordance of an earlier place, object, fact, or relationship.",
+  "finaleRequirement":"The final use recombines rules that the player has actually operated before; it may not introduce an untelegraphed mandatory rule.",
+  "conflictPolicy":"A declared conflict, canon veto, runtime gap, clone risk, or unrecoverable route risk removes the candidate regardless of weighted score.",
+  "overloadRecovery":"Remove the lowest-value support pattern before reducing the teaching or consequence depth of the core pattern."
+}

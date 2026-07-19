@@ -1,0 +1,662 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.benchmark.calibration.hidden-room",
+  "storyModelHash": "77131477b56138fbfbe9df79b953409078bca45a7035be7f48cdaa6b54b9b9f2",
+  "libraryLockRef": "lock.storyteller-v03-beta1",
+  "provenancePolicy": {
+    "enabledPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "blockedPackIds": [],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": [
+      "signal.hidden-causal-rule",
+      "signal.parallel-state",
+      "signal.revisited-place",
+      "signal.confined-stage",
+      "signal.embodied-secret"
+    ],
+    "experienceGoals": [
+      "experience.rule-mastery",
+      "experience.world-recontextualization",
+      "experience.embodied-revelation"
+    ],
+    "spatialConstraints": [
+      "signal.parallel-state",
+      "signal.revisited-place",
+      "signal.confined-stage"
+    ],
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.context-interaction",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "budget": {
+      "design": "low",
+      "code": "medium",
+      "art": "medium",
+      "qa": "high"
+    },
+    "negativeSignals": []
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 5,
+        "systemicDepth": 3.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 4.02
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.save-migration"
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 4.003
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.knowledge-gated-revisit",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 1,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 3.83
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.dialogue-gates, capability.hint-ladder"
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 5,
+        "systemicDepth": 4.4,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 3,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 3.793
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.dialogue-gates"
+      ]
+    },
+    {
+      "patternId": "pattern.perspective-shift-reframes-space",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 3,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 3.703
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.spatial-query"
+      ]
+    },
+    {
+      "patternId": "pattern.final-exam-recombination",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 4,
+        "systemicDepth": 5,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 3.467
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.dungeon-macro-state-machine",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 3.453
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 3.353
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.dialogue-gates"
+      ]
+    },
+    {
+      "patternId": "pattern.agency-performance-breathing",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 3.353
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.dialogue-gates"
+      ]
+    },
+    {
+      "patternId": "pattern.asymmetric-screen-information",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 4.2,
+        "stateCausality": 3,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 3.113
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.telemetry"
+      ]
+    },
+    {
+      "patternId": "pattern.reversible-reset-knowledge-retention",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 1,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 3.053
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.save-migration, capability.schedule-clock"
+      ]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "patternVersion": "1.0.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 3.037
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    }
+  ],
+  "selectedApplications": [
+    {
+      "applicationId": "application.calibration.hidden-room.1",
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.0.0",
+      "role": "core",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.premise",
+        "storyModel.storySignals",
+        "storyModel.protectedCanon"
+      ],
+      "retainedPrinciples": [
+        "Expose one legible state axis whose consistent environmental consequences open some routes while closing or changing others."
+      ],
+      "adaptationSummary": "Instantiate State axis rewrites routes from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "Source names, characters, lore, dialogue, maps, room layouts, puzzle steps, item silhouettes, UI, music, sound cues, and boss scripts"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "storyModel",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.state-axis-rewrites-routes",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.0.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.state-axis-rewrites-routes.selection-and-emission",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.state-axis-rewrites-routes.1",
+          "parameterBindings": {
+            "parameter.state-axis-rewrites-routes.location": "storyModel.locations[0]",
+            "parameter.state-axis-rewrites-routes.fact": "storyModel.protectedCanon[0]"
+          },
+          "expectedPostconditions": [
+            "A typed toggle-map-layer transaction changes an approved story-derived state and is visible to the player"
+          ]
+        },
+        {
+          "effectRef": "effect.state-axis-rewrites-routes.2",
+          "parameterBindings": {
+            "parameter.state-axis-rewrites-routes.location": "storyModel.locations[0]",
+            "parameter.state-axis-rewrites-routes.fact": "storyModel.protectedCanon[0]"
+          },
+          "expectedPostconditions": [
+            "A typed unlock-route transaction changes an approved story-derived state and is visible to the player"
+          ]
+        },
+        {
+          "effectRef": "effect.state-axis-rewrites-routes.3",
+          "parameterBindings": {
+            "parameter.state-axis-rewrites-routes.location": "storyModel.locations[0]",
+            "parameter.state-axis-rewrites-routes.fact": "storyModel.protectedCanon[0]"
+          },
+          "expectedPostconditions": [
+            "A typed lock-route transaction changes an approved story-derived state and is visible to the player"
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.world-facts",
+        "capability.map-layers",
+        "capability.route-gates",
+        "capability.checkpoints"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    },
+    {
+      "applicationId": "application.calibration.hidden-room.2",
+      "patternId": "pattern.dungeon-macro-state-machine",
+      "patternVersion": "1.0.0",
+      "role": "support",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.premise",
+        "storyModel.storySignals",
+        "storyModel.protectedCanon"
+      ],
+      "retainedPrinciples": [
+        "Give the whole bounded space one inspectable state variable whose manipulation changes routes, clues, and local challenges across multiple zones."
+      ],
+      "adaptationSummary": "Instantiate Bounded challenge as macro state machine from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "Source names, characters, lore, dialogue, maps, room layouts, puzzle steps, item silhouettes, UI, music, sound cues, and boss scripts"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.1.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.1.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "storyModel",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.1.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.dungeon-macro-state-machine",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.1.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.dungeon-macro-state-machine.selection-and-emission",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.1.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.dungeon-macro-state-machine.1",
+          "parameterBindings": {
+            "parameter.dungeon-macro-state-machine.location": "storyModel.locations[0]",
+            "parameter.dungeon-macro-state-machine.fact": "storyModel.protectedCanon[0]"
+          },
+          "expectedPostconditions": [
+            "A typed toggle-map-layer transaction changes an approved story-derived state and is visible to the player"
+          ]
+        },
+        {
+          "effectRef": "effect.dungeon-macro-state-machine.2",
+          "parameterBindings": {
+            "parameter.dungeon-macro-state-machine.location": "storyModel.locations[0]",
+            "parameter.dungeon-macro-state-machine.fact": "storyModel.protectedCanon[0]"
+          },
+          "expectedPostconditions": [
+            "A typed unlock-route transaction changes an approved story-derived state and is visible to the player"
+          ]
+        },
+        {
+          "effectRef": "effect.dungeon-macro-state-machine.3",
+          "parameterBindings": {
+            "parameter.dungeon-macro-state-machine.location": "storyModel.locations[0]",
+            "parameter.dungeon-macro-state-machine.fact": "storyModel.protectedCanon[0]"
+          },
+          "expectedPostconditions": [
+            "A typed lock-route transaction changes an approved story-derived state and is visible to the player"
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.map-layers",
+        "capability.route-gates",
+        "capability.world-facts",
+        "capability.route-simulation"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    }
+  ],
+  "composition": {
+    "corePatternRef": "pattern.state-axis-rewrites-routes",
+    "supportPatternRefs": [
+      "pattern.dungeon-macro-state-machine"
+    ],
+    "sharedExperienceAxis": "experience.rule-mastery",
+    "conflictsResolved": [
+      "Removed candidates that conflict with the selected core or duplicate an already represented pattern kind."
+    ],
+    "developmentArc": [
+      "teach",
+      "practice",
+      "variation",
+      "combine-or-reverse",
+      "exam"
+    ]
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "structuralDeltas": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "forbiddenTransfers": [
+      "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+    ],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": [
+      "A reviewer cannot reliably attribute the instance to one source encounter",
+      "At least four transformation axes materially change",
+      "Protected canon and reveal order remain unchanged"
+    ]
+  },
+  "abstention": {
+    "abstained": false,
+    "reason": null
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.calibration.hidden-room.gameplay",
+      "owner": "gameplay",
+      "contractRef": "gameplay-design/v03",
+      "applicationRefs": [
+        "application.calibration.hidden-room.1",
+        "application.calibration.hidden-room.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.state-axis-rewrites-routes",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.state-axis-rewrites-routes.effect-observable",
+        "assertion.state-axis-rewrites-routes.canon-safe",
+        "assertion.state-axis-rewrites-routes.clone-safe",
+        "assertion.dungeon-macro-state-machine.effect-observable",
+        "assertion.dungeon-macro-state-machine.canon-safe",
+        "assertion.dungeon-macro-state-machine.clone-safe"
+      ]
+    },
+    {
+      "handoffId": "handoff.calibration.hidden-room.performance",
+      "owner": "performance",
+      "contractRef": "performance-design/v03",
+      "applicationRefs": [
+        "application.calibration.hidden-room.1",
+        "application.calibration.hidden-room.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.state-axis-rewrites-routes",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.state-axis-rewrites-routes.effect-observable",
+        "assertion.state-axis-rewrites-routes.canon-safe",
+        "assertion.state-axis-rewrites-routes.clone-safe",
+        "assertion.dungeon-macro-state-machine.effect-observable",
+        "assertion.dungeon-macro-state-machine.canon-safe",
+        "assertion.dungeon-macro-state-machine.clone-safe"
+      ]
+    },
+    {
+      "handoffId": "handoff.calibration.hidden-room.stage",
+      "owner": "stage",
+      "contractRef": "stage-plan/v03",
+      "applicationRefs": [
+        "application.calibration.hidden-room.1",
+        "application.calibration.hidden-room.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.state-axis-rewrites-routes",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.state-axis-rewrites-routes.effect-observable",
+        "assertion.state-axis-rewrites-routes.canon-safe",
+        "assertion.state-axis-rewrites-routes.clone-safe",
+        "assertion.dungeon-macro-state-machine.effect-observable",
+        "assertion.dungeon-macro-state-machine.canon-safe",
+        "assertion.dungeon-macro-state-machine.clone-safe"
+      ]
+    },
+    {
+      "handoffId": "handoff.calibration.hidden-room.evaluation",
+      "owner": "evaluation",
+      "contractRef": "acceptance/v03",
+      "applicationRefs": [
+        "application.calibration.hidden-room.1",
+        "application.calibration.hidden-room.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.state-axis-rewrites-routes",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.state-axis-rewrites-routes.effect-observable",
+        "assertion.state-axis-rewrites-routes.canon-safe",
+        "assertion.state-axis-rewrites-routes.clone-safe",
+        "assertion.dungeon-macro-state-machine.effect-observable",
+        "assertion.dungeon-macro-state-machine.canon-safe",
+        "assertion.dungeon-macro-state-machine.clone-safe"
+      ]
+    }
+  ],
+  "status": "approved"
+}

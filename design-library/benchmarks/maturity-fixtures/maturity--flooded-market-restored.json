@@ -1,0 +1,45 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.flooded-market-restored",
+  "patternId": "pattern.npc-reacts-to-world-state",
+  "testId": "test.npc-state.selection",
+  "kind": "selection",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "selection contract fixture for pattern.npc-reacts-to-world-state; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "situated-social-reflection",
+    "selectionRole": "supporting",
+    "requiredRuntimeCapabilities": [
+      "capability.actor-memory",
+      "capability.world-facts",
+      "capability.dialogue-conditions",
+      "capability.actor-schedules",
+      "capability.performance-cues",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Persist knowledge provenance",
+      "Route actor to fallback anchor",
+      "Provide neutral access alternative when social branch closes"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.selection.characterConsequenceCandidateSelected",
+      "operator": "equals",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.selection.environmentOnlyMutationAbstains",
+      "operator": "equals",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

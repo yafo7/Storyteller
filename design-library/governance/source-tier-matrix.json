@@ -1,0 +1,12 @@
+{
+  "matrixVersion": "1.0.0",
+  "rules": [
+    {"kinds":["game","official-manual","official-site"],"allowedTiers":["A"]},
+    {"kinds":["developer-interview","developer-talk","technical-document"],"allowedTiers":["A","B"]},
+    {"kinds":["academic","book","professional-analysis"],"allowedTiers":["C"]},
+    {"kinds":["community-lead"],"allowedTiers":["D"]},
+    {"kinds":["other"],"allowedTiers":["C","D"]}
+  ],
+  "criticalClaimRule": "At least one supporting evidence source must be tier A or B.",
+  "intentRule": "A design-intent claim requires an attributable developer interview, developer talk, or technical document; game observation alone supports behavior, not creator intent."
+}

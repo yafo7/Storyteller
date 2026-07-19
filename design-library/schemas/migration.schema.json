@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/design-library/schemas/1.0.0/migration.schema.json",
+  "title": "V0.3 library migration draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "migrationId", "kind", "fromVersion", "toVersion", "status", "changes", "fixtures", "rollback", "approvedBy"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "migrationId": { "type": "string", "pattern": "^migration\\." },
+    "kind": { "enum": ["schema", "library", "pack", "pattern", "taxonomy", "adapter"] },
+    "fromVersion": { "type": "string", "minLength": 1 },
+    "toVersion": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["draft", "verified", "released", "failed", "superseded"] },
+    "changes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["operation", "fromPath", "toPath", "transformer", "reversible"],
+        "properties": {
+          "operation": { "enum": ["add", "rename", "deprecate", "transform", "split", "merge"] },
+          "fromPath": { "type": ["string", "null"] },
+          "toPath": { "type": ["string", "null"] },
+          "transformer": { "type": "string", "minLength": 1 },
+          "reversible": { "type": "boolean" }
+        }
+      }
+    },
+    "fixtures": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["inputRef", "expectedOutputRef", "expectedHash"],
+        "properties": {
+          "inputRef": { "type": "string", "minLength": 1 },
+          "expectedOutputRef": { "type": "string", "minLength": 1 },
+          "expectedHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    },
+    "rollback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["supported", "procedure", "dataLossRisk"],
+      "properties": {
+        "supported": { "type": "boolean" },
+        "procedure": { "type": "string", "minLength": 10 },
+        "dataLossRisk": { "enum": ["none", "documented", "unacceptable"] }
+      }
+    },
+    "approvedBy": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+  }
+}

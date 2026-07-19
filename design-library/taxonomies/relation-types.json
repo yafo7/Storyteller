@@ -1,0 +1,18 @@
+{
+  "schemaVersion":"1.0.0","taxonomyId":"taxonomy.relation-types","taxonomyVersion":"1.0.0","status":"frozen",
+  "terms":[
+    {"termId":"same-as","label":"Same as","definition":"Two identifiers denote the same design entity and one will be normalized or deprecated.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"variant-of","label":"Variant of","definition":"The source specializes implementation details while preserving the target pattern's core invariant.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"specializes","label":"Specializes","definition":"The source adds conditions or behavior to a more general target without contradicting it.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"generalizes","label":"Generalizes","definition":"The source abstracts across the target and at least one additional supported design instance.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"composed-of","label":"Composed of","definition":"The source orchestration explicitly depends on the target as one of its constituent patterns.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"synergizes-with","label":"Synergizes with","definition":"Using both patterns can reinforce a shared experience goal under documented constraints.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"conflicts-with","label":"Conflicts with","definition":"Using both patterns creates a known contradiction, overload, or incompatible state assumption.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"perspective-adaptation-of","label":"Perspective adaptation of","definition":"The source translates a target pattern into another camera, control, or spatial representation.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"analogous-to","label":"Analogous to","definition":"Evidence supports structural resemblance but does not establish historical derivation or influence.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"evolved-from","label":"Evolved from","definition":"Attributable development evidence supports a historical design lineage from target to source.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"supersedes","label":"Supersedes","definition":"The source replaces the target for future use while retaining a migration path and history.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"deprecated-by","label":"Deprecated by","definition":"The source is retired and points to the target as its supported successor.","status":"active","aliases":[],"supersedes":[]}
+  ],
+  "governance":{"owner":"Schema tool engineer","changePolicy":"Relation semantics change only with graph migration and cycle-validation fixture updates.","migrationRefs":[]}
+}

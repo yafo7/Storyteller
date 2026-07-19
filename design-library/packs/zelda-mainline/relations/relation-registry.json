@@ -1,0 +1,139 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "relationId": "relation.pattern.1",
+    "fromId": "pattern.capability-recontextualizes-old-space",
+    "type": "synergizes-with",
+    "toId": "pattern.landmark-promises-future-use",
+    "rationale": "Capability recontextualizes old space and Landmark promises future use retain an explicitly reviewed composition relation; production use still obeys dependencies, exclusions, and originality vetoes.",
+    "evidenceRefs": [
+      "observation.a-link-to-the-past.paired-world-coordinate-reframe",
+      "observation.breath-of-the-wild.landmark-climb-creates-self-route"
+    ],
+    "confidence": "high",
+    "status": "released"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "relationId": "relation.pattern.2",
+    "fromId": "pattern.state-axis-rewrites-routes",
+    "type": "synergizes-with",
+    "toId": "pattern.parallel-state-comparison",
+    "rationale": "State axis rewrites routes and Parallel-state comparison retain an explicitly reviewed composition relation; production use still obeys dependencies, exclusions, and originality vetoes.",
+    "evidenceRefs": [
+      "observation.oracle-of-seasons.seasonal-comparison-solves-blocked-screen",
+      "observation.a-link-to-the-past.paired-world-coordinate-reframe"
+    ],
+    "confidence": "high",
+    "status": "released"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "relationId": "relation.pattern.3",
+    "fromId": "pattern.safe-rule-experiment",
+    "type": "specializes",
+    "toId": "pattern.local-rule-development-arc",
+    "rationale": "Safe rule experiment and Local rule development arc retain an explicitly reviewed composition relation; production use still obeys dependencies, exclusions, and originality vetoes.",
+    "evidenceRefs": [
+      "observation.a-link-to-the-past.dungeon-tool-closes-local-dependency"
+    ],
+    "confidence": "medium",
+    "status": "reviewed"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "relationId": "relation.pattern.4",
+    "fromId": "pattern.local-rule-development-arc",
+    "type": "synergizes-with",
+    "toId": "pattern.boss-rule-synthesis",
+    "rationale": "Local rule development arc and Boss as rule synthesis retain an explicitly reviewed composition relation; production use still obeys dependencies, exclusions, and originality vetoes.",
+    "evidenceRefs": [
+      "observation.a-link-to-the-past.dungeon-tool-closes-local-dependency",
+      "observation.ocarina-of-time.boss-recombines-readable-rule-under-risk"
+    ],
+    "confidence": "medium",
+    "status": "reviewed"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "relationId": "relation.pattern.5",
+    "fromId": "pattern.npc-reacts-to-world-state",
+    "type": "synergizes-with",
+    "toId": "pattern.embodied-world-change-reveal",
+    "rationale": "NPC reacts to world state and Embodied world-change reveal retain an explicitly reviewed composition relation; production use still obeys dependencies, exclusions, and originality vetoes.",
+    "evidenceRefs": [
+      "observation.twilight-princess.province-restoration-reframes-known-space"
+    ],
+    "confidence": "high",
+    "status": "released"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "relationId": "relation.pattern.6",
+    "fromId": "pattern.final-exam-recombination",
+    "type": "composed-of",
+    "toId": "pattern.local-rule-development-arc",
+    "rationale": "Final exam recombines familiar rules and Local rule development arc retain an explicitly reviewed composition relation; production use still obeys dependencies, exclusions, and originality vetoes.",
+    "evidenceRefs": [
+      "observation.ocarina-of-time.boss-recombines-readable-rule-under-risk",
+      "observation.a-link-to-the-past.dungeon-tool-closes-local-dependency"
+    ],
+    "confidence": "medium",
+    "status": "reviewed"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "relationId": "relation.pattern.7",
+    "fromId": "pattern.systemic-verb-toolkit",
+    "type": "synergizes-with",
+    "toId": "pattern.multi-solution-state-graph",
+    "rationale": "Small systemic verb toolkit and Multi-solution state graph retain an explicitly reviewed composition relation; production use still obeys dependencies, exclusions, and originality vetoes.",
+    "evidenceRefs": [
+      "observation.tears-of-the-kingdom.ultrahand-builds-local-solution",
+      "observation.breath-of-the-wild.environmental-property-changes-plan"
+    ],
+    "confidence": "medium",
+    "status": "reviewed"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "relationId": "relation.pattern.8",
+    "fromId": "pattern.constrained-vehicle-route",
+    "type": "conflicts-with",
+    "toId": "pattern.dense-overworld-as-challenge-space",
+    "rationale": "Constrained vehicle route and Dense overworld as challenge space retain an explicitly reviewed composition relation; production use still obeys dependencies, exclusions, and originality vetoes.",
+    "evidenceRefs": [
+      "observation.the-wind-waker.horizon-curiosity-drives-the-travel-loop",
+      "observation.skyward-sword.revisited-landform-receives-a-new-rule"
+    ],
+    "confidence": "high",
+    "status": "released"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "relationId": "relation.pattern.9",
+    "fromId": "pattern.action-first-onboarding",
+    "type": "synergizes-with",
+    "toId": "pattern.safe-rule-experiment",
+    "rationale": "Action-first onboarding and Safe rule experiment retain an explicitly reviewed composition relation; production use still obeys dependencies, exclusions, and originality vetoes.",
+    "evidenceRefs": [
+      "observation.a-link-to-the-past.storm-rescue-teaches-action-chain",
+      "observation.a-link-to-the-past.dungeon-tool-closes-local-dependency"
+    ],
+    "confidence": "medium",
+    "status": "reviewed"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "relationId": "relation.pattern.10",
+    "fromId": "pattern.finite-schedule-loop",
+    "type": "synergizes-with",
+    "toId": "pattern.reversible-reset-knowledge-retention",
+    "rationale": "Finite schedule loop and Reversible reset with knowledge retention retain an explicitly reviewed composition relation; production use still obeys dependencies, exclusions, and originality vetoes.",
+    "evidenceRefs": [
+      "observation.majoras-mask.knowledge-converts-failed-cycle-into-progress"
+    ],
+    "confidence": "medium",
+    "status": "reviewed"
+  }
+]

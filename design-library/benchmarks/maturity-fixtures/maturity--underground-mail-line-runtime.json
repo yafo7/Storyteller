@@ -1,0 +1,45 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.underground-mail-line-runtime",
+  "patternId": "pattern.constrained-vehicle-route",
+  "testId": "test.vehicle-route.runtime",
+  "kind": "runtime",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "runtime contract fixture for pattern.constrained-vehicle-route; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "route-bound-local-agency",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.portal-transitions",
+      "capability.route-gates",
+      "capability.performance-cues",
+      "capability.spatial-query",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Stop-based checkpoints",
+      "Reroute edge after missed branch",
+      "Restore vehicle and hazard state atomically"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.travel.activeInputRatio",
+      "operator": "greater-or-equal",
+      "expected": 0.3
+    },
+    {
+      "evidencePath": "$.network.mapPhysicalAgreement",
+      "operator": "equals",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

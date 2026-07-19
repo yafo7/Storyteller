@@ -1,0 +1,121 @@
+{
+  "workId": "work.the-minish-cap",
+  "author": "Early Corpus Analyst Cedar",
+  "reviewer": "Independent Reviewer Juniper",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player becomes a scale-shifting craft hero who notices hidden communities and transforms ordinary objects into large navigational problems by becoming tiny.",
+    "dimension.core-loop": "The cadence returns through a lively town hub, follows elemental dungeon goals, acquires tools and sword powers, shifts scale, and resolves optional Kinstone opportunities.",
+    "dimension.verbs": "Sword actions, rolling, lifting, shrinking and growing, item tools, gliding, digging, swimming, vacuuming, and temporary duplication support dense top-down interaction.",
+    "dimension.world-state": "Scale, fused Kinstone pairs, opened remote events, restored sword powers, dungeon completion, NPC services, shortcuts, and collectibles persist or trigger visible changes.",
+    "dimension.topology": "A compact overworld and central town contain layered human-scale and Minish-scale routes; portals convert familiar props, cracks, and interiors into a second local topology.",
+    "dimension.gating-revisit": "Shrink portals, new tools, sword techniques, elemental progression, and Kinstone outcomes reopen cracks, water, soil, wind routes, simultaneous switches, and town interiors.",
+    "dimension.puzzle-information": "Scale contrast, matching Kinstone shapes, repeated tool targets, clone panels, and room geometry communicate rule hypotheses through visible compatibility.",
+    "dimension.dungeon-structure": "Elemental dungeons use room dependencies, a signature item, traversal escalation, a boss, and an element reward that upgrades the campaign's central sword objective.",
+    "dimension.exploration-reward": "Small passages, Kinstone fusions, figurines, heart pieces, shells, sword teachers, caves, and changed remote locations make social and spatial curiosity materially productive.",
+    "dimension.growth-economy": "Heart capacity, rupees, shells, Kinstone pieces, item upgrades, bottles, sword techniques, and equipment improvements create several collectible and capability tracks.",
+    "dimension.combat-boss": "Top-down combat combines sword timing with tool effects and movement, while bosses use scale, arena state, or recently practiced item behavior as readable constraints.",
+    "dimension.npc-quest": "Town residents and hidden Minish provide services, requests, clues, instruction, and Kinstone fusion partners whose matched pieces can cause events elsewhere.",
+    "dimension.narrative-performance": "A cursed companion cap comments during travel, while festival framing, scale reveals, elemental milestones, and sword restoration connect character scenes to acquired abilities.",
+    "dimension.camera-blocking": "Top-down rooms keep interactions readable; shrinking effects, zoomed scale cues, doorway cuts, and remote-event glimpses stage how the same world changes in size or state.",
+    "dimension.teaching-feedback": "Early scale portals place an obvious tiny route beside an impossible human-scale obstacle, and each tool or fusion produces an immediate animation plus a visible consequence.",
+    "dimension.ui-input": "Two assignable item buttons, a context action, roll and sword controls, inventory screens, Kinstone bag, and collectible displays organize a large verb set on Game Boy Advance.",
+    "dimension.recovery-accessibility": "Persistent saves, bottles and fairies, compact returns, and re-usable scale portals support retries; puzzle states generally preserve a path back to a legal size and position.",
+    "dimension.perspective-implementation": "The 2D top-down view expresses scale by swapping collision and art relationships rather than camera depth, making puddles, books, holes, and furniture into different route classes.",
+    "dimension.hardware-multiplayer": "The original Game Boy Advance title is single-player; its wider color display and additional shoulder buttons support dense scenes, rolling, and a broad assignable inventory.",
+    "dimension.production-runtime": "Its principles require dual-scale collision layers, portal-safe transforms, remote event flags, NPC fusion tables, temporary clone simulation, tool gates, persistent collectibles, and return-path validation."
+  },
+  "observationThemes": [
+    {
+      "key": "shrink-reinterprets-ordinary-object",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.growth-economy"],
+      "context": "At a designated portal, Link can change between human and Minish scale while nearby ordinary scenery remains recognizable.",
+      "preconditions": ["A valid scale-change portal is accessible", "The destination route is compatible with the target size"],
+      "playerInput": ["Use the portal to shrink", "Traverse a crack, tiny doorway, prop surface, or Minish route", "Return to a portal and grow when needed"],
+      "before": ["At human scale, a small opening is inaccessible and minor scenery is non-navigable", "The player sees the broad route but not its tiny path"],
+      "action": ["Change scale and move through the reclassified environment"],
+      "after": ["Tiny passages and characters become accessible", "Ordinary hazards such as water or height become proportionally significant"],
+      "feedback": ["A clear transformation animation and changed sprite scale mark the state", "Collision and path width immediately confirm which features now matter"],
+      "consequences": ["The player reaches information, tools, progression, or collectibles", "Scale change becomes a recurring exploration verb rather than a one-time spectacle"],
+      "factualDescription": "Using designated portals changes Link between human and Minish size, causing cracks, tiny entrances, props, puddles, and small characters to have different traversal or interaction roles.",
+      "interpretation": "Scale fantasy becomes systemic when familiar scenery retains identity but changes affordance class, letting the player repeatedly rediscover one place through a different body-world relationship.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "fusion-causes-remote-world-event",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.exploration-reward"],
+      "context": "An NPC displays a compatible Kinstone half, and the player holds a matching piece collected elsewhere in the world.",
+      "preconditions": ["The character is available for fusion", "A matching Kinstone piece is present in the player's bag"],
+      "playerInput": ["Initiate the fusion interaction", "Select and join the matching piece", "Travel to the location shown by the resulting event"],
+      "before": ["The NPC fusion is unresolved", "A remote chest, passage, creature, or opportunity has not appeared"],
+      "action": ["Complete the matching-piece fusion"],
+      "after": ["The fusion is recorded persistently", "A remote world location changes state"],
+      "feedback": ["The pieces visibly join", "A cutaway or map-like glimpse shows the distant change and its location"],
+      "consequences": ["The player gains a concrete revisit target", "Social curiosity is converted into spatial exploration and reward"],
+      "factualDescription": "Matching a carried Kinstone piece with a compatible NPC records the fusion and triggers one of many remote world changes, which is shown before the player travels to inspect it.",
+      "interpretation": "Showing the distant consequence makes a social collectible causal rather than abstract, turning an NPC encounter into a memorable invitation to revisit world topology.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "tool-rule-scales-to-boss",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.combat-boss", "dimension.teaching-feedback"],
+      "context": "An elemental dungeon introduces a signature tool through clear targets, then combines the same reaction with traversal, hazards, enemies, or its guardian arena.",
+      "preconditions": ["The dungeon item has been acquired", "Its basic target reaction has been demonstrated"],
+      "playerInput": ["Use the item on repeated compatible targets", "Apply the rule in more demanding room states", "Use learned behavior to complete the guardian encounter"],
+      "before": ["Later rooms and the element objective are inaccessible", "The player knows only the tool's initial use"],
+      "action": ["Resolve the escalating dependency chain and boss"],
+      "after": ["The element reward is obtained", "The signature item remains part of overworld traversal and combat"],
+      "feedback": ["Target animation, movement, sound, enemy reaction, and door changes confirm each application", "Boss-state changes expose whether the rule was applied correctly"],
+      "consequences": ["The sword-restoration campaign advances", "New field obstacles can be approached with a practiced tool"],
+      "factualDescription": "Elemental dungeons grant persistent signature items, repeat their compatible target grammar with escalating demands, and close with a boss and element reward.",
+      "interpretation": "A tool feels integrated when the bounded challenge develops it from readable experiment to pressured application and then returns it to the wider exploration vocabulary.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "clone-formation-embodies-restored-power",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.ui-input"],
+      "context": "After the central blade gains sufficient restored power, marked floor panels allow Link to charge and create temporary copies in a chosen formation.",
+      "preconditions": ["The blade has the required restoration level", "A clone panel and simultaneous targets are present"],
+      "playerInput": ["Stand on the panel", "Choose positions and charge the sword", "Move the resulting formation onto simultaneous switches or through the staged route"],
+      "before": ["One body cannot activate all required targets at once", "The restored sword power has not been embodied in the room"],
+      "action": ["Generate and control the temporary formation"],
+      "after": ["Multiple positions are occupied simultaneously", "A door, barrier, or route state changes"],
+      "feedback": ["Panel markings preview legal placement", "Copies, formation movement, switch depression, and door animation show the causal chain"],
+      "consequences": ["The player advances through a story-linked capability gate", "Sword restoration is expressed as a spatial verb as well as a narrative milestone"],
+      "factualDescription": "Restored sword power lets Link create temporary copies on marked panels; moving the formation onto multiple targets can activate simultaneous room mechanisms.",
+      "interpretation": "A narrative artifact upgrade becomes more persuasive when its growth is represented by a new embodied coordination problem with previewable formation and visible consequence.",
+      "confidence": "high",
+      "disposition": "single-title"
+    },
+    {
+      "key": "portal-safety-preserves-return-path",
+      "dimensions": ["dimension.recovery-accessibility", "dimension.perspective-implementation", "dimension.hardware-multiplayer", "dimension.production-runtime"],
+      "context": "Scale changes occur at designated anchors in a single-player top-down map, and traversal routes must eventually provide a legal anchor for returning to required size.",
+      "preconditions": ["Link is in a valid size state at a portal", "The destination side contains a traversable route and eventual recovery anchor"],
+      "playerInput": ["Transform at the portal", "Explore within the size-specific collision layer", "Use another valid portal to restore the needed scale"],
+      "before": ["Only one collision and interaction layer is active", "Some exits or controls are incompatible with that size"],
+      "action": ["Traverse the anchored scale-state graph and return"],
+      "after": ["The alternate collision layer is exited safely", "Persistent campaign and inventory state remain unchanged"],
+      "feedback": ["Transformation, sprite scale, camera framing, and collision immediately show the active layer", "The destination portal provides an explicit recovery point"],
+      "consequences": ["Players can experiment with scale without becoming permanently stranded", "Saved single-player progress remains valid across compact handheld sessions"],
+      "factualDescription": "The Game Boy Advance adventure restricts shrinking and growing to designated portals, linking human- and Minish-scale top-down routes while preserving persistent inventory and save state.",
+      "interpretation": "Anchored transformations constrain a powerful world rewrite into a testable graph, making anti-softlock guarantees and return-path readability part of the mechanic's design.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "Scale change can recontextualize a familiar map when stable objects switch traversal class and each transformation has an explicit safe anchor.",
+    "A social collectible becomes a spatial hook when the game previews a persistent remote consequence and trusts the player to travel there.",
+    "Artifact restoration gains dramatic credibility when each milestone adds a distinct player-controlled spatial capability."
+  ],
+  "uniqueOrNonportable": [
+    "The named tiny people, cap companion, sword, villain, festival, Kinstones, exact fusion effects, map and prop layouts, element sequence, characters, and audiovisual identity are source-specific.",
+    "The precise clone panels and scale-dependent routes are evidence only; reuse requires original transformation fiction, topology, targets, and visual language."
+  ],
+  "openQuestions": [
+    "A later review should identify which optional fusion outcomes are guaranteed versus inventory-dependent so coverage claims do not overstate deterministic progression."
+  ]
+}

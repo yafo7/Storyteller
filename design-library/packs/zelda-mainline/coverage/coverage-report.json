@@ -1,0 +1,167 @@
+{
+  "reportVersion": "1.0.0",
+  "generatedAt": "2026-07-18",
+  "scopeVersion": "1.0.0",
+  "counts": {
+    "works": 21,
+    "sources": 42,
+    "claims": 210,
+    "observations": 105,
+    "dossiers": 21,
+    "titleDimensionCells": 420,
+    "patterns": 36,
+    "releasedPatterns": 13,
+    "researchOnlyPatterns": 23,
+    "relations": 10,
+    "adapters": 1,
+    "benchmarks": 10
+  },
+  "ratios": {
+    "scopeCoverage": 1,
+    "scopeResolution": 1,
+    "workCoverage": 1,
+    "dimensionCoverage": 1,
+    "coreDimensionCoverage": 1,
+    "generalDimensionCoverage": 1,
+    "evidenceClosure": 1,
+    "observationDisposition": 1,
+    "patternReadiness": 1
+  },
+  "patternKindCoverage": {
+    "atomic-mechanic": 1,
+    "combat-boss": 2,
+    "exploration-reward": 3,
+    "interaction-prop": 1,
+    "npc-quest": 3,
+    "orchestration": 3,
+    "pacing-macro": 3,
+    "performance-camera": 2,
+    "puzzle-information": 4,
+    "spatial-level": 6,
+    "tutorial-feedback": 4,
+    "world-state-rule": 4
+  },
+  "workPatternCoverage": {
+    "work.the-legend-of-zelda": [
+      "pattern.knowledge-gated-revisit",
+      "pattern.threshold-performance-cue",
+      "pattern.agency-performance-breathing"
+    ],
+    "work.zelda-ii-the-adventure-of-link": [],
+    "work.a-link-to-the-past": [
+      "pattern.capability-recontextualizes-old-space",
+      "pattern.state-axis-rewrites-routes",
+      "pattern.parallel-state-comparison",
+      "pattern.safe-rule-experiment",
+      "pattern.local-rule-development-arc",
+      "pattern.action-first-onboarding"
+    ],
+    "work.links-awakening": [
+      "pattern.action-first-onboarding"
+    ],
+    "work.ocarina-of-time": [
+      "pattern.capability-recontextualizes-old-space",
+      "pattern.local-rule-development-arc",
+      "pattern.boss-rule-synthesis",
+      "pattern.npc-reacts-to-world-state",
+      "pattern.final-exam-recombination"
+    ],
+    "work.majoras-mask": [
+      "pattern.knowledge-gated-revisit",
+      "pattern.finite-schedule-loop",
+      "pattern.npc-schedule-as-information",
+      "pattern.reversible-reset-knowledge-retention"
+    ],
+    "work.oracle-of-seasons": [
+      "pattern.state-axis-rewrites-routes",
+      "pattern.local-rule-development-arc"
+    ],
+    "work.oracle-of-ages": [
+      "pattern.state-axis-rewrites-routes",
+      "pattern.parallel-state-comparison",
+      "pattern.dungeon-macro-state-machine"
+    ],
+    "work.the-wind-waker": [
+      "pattern.constrained-vehicle-route"
+    ],
+    "work.four-swords": [
+      "pattern.cooperative-role-interdependence"
+    ],
+    "work.four-swords-adventures": [
+      "pattern.cooperative-role-interdependence",
+      "pattern.asymmetric-screen-information"
+    ],
+    "work.the-minish-cap": [
+      "pattern.local-rule-development-arc",
+      "pattern.perspective-shift-reframes-space",
+      "pattern.boss-rule-synthesis"
+    ],
+    "work.twilight-princess": [
+      "pattern.perspective-shift-reframes-space",
+      "pattern.npc-reacts-to-world-state",
+      "pattern.companion-contextual-verb",
+      "pattern.embodied-world-change-reveal"
+    ],
+    "work.phantom-hourglass": [
+      "pattern.loop-shortcut-memory",
+      "pattern.hub-spoke-return",
+      "pattern.player-authored-map-memory",
+      "pattern.resource-expedition-return",
+      "pattern.boss-rule-synthesis"
+    ],
+    "work.spirit-tracks": [
+      "pattern.constrained-vehicle-route",
+      "pattern.threat-as-navigation-teacher",
+      "pattern.companion-contextual-verb"
+    ],
+    "work.skyward-sword": [
+      "pattern.hub-spoke-return",
+      "pattern.dungeon-macro-state-machine",
+      "pattern.optional-secret-readability",
+      "pattern.dense-overworld-as-challenge-space"
+    ],
+    "work.a-link-between-worlds": [
+      "pattern.perspective-shift-reframes-space"
+    ],
+    "work.tri-force-heroes": [
+      "pattern.cooperative-role-interdependence"
+    ],
+    "work.breath-of-the-wild": [
+      "pattern.knowledge-gated-revisit",
+      "pattern.landmark-promises-future-use",
+      "pattern.environmental-chain-reaction",
+      "pattern.multi-solution-state-graph",
+      "pattern.player-authored-map-memory",
+      "pattern.reward-expands-future-possibility",
+      "pattern.optional-secret-readability",
+      "pattern.dense-overworld-as-challenge-space"
+    ],
+    "work.tears-of-the-kingdom": [
+      "pattern.landmark-promises-future-use",
+      "pattern.multi-solution-state-graph",
+      "pattern.object-role-composition",
+      "pattern.reward-expands-future-possibility",
+      "pattern.companion-contextual-verb",
+      "pattern.systemic-verb-toolkit",
+      "pattern.dense-overworld-as-challenge-space"
+    ],
+    "work.echoes-of-wisdom": [
+      "pattern.multi-solution-state-graph",
+      "pattern.object-role-composition",
+      "pattern.copy-redeploy-affordance",
+      "pattern.embodied-world-change-reveal"
+    ]
+  },
+  "gaps": [
+    "The announced 2026 Ocarina of Time Nintendo Switch 2 edition remains a version-level classification review and does not affect work-level scope closure.",
+    "P7 autonomous candidate generation and P8 whole-system/game validation remain intentionally outside this P1-P6 Beta release."
+  ],
+  "gateResults": {
+    "G0": true,
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "G5": true
+  }
+}

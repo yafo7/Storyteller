@@ -1,0 +1,842 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.zelda-portal-history-en-20260717",
+    "tier": "A",
+    "kind": "official-site",
+    "title": "The official home for The Legend of Zelda - History",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/character/zelda/en/history/index.html",
+    "locator": "HISTORY work nodes, English portal snapshot captured 2026-07-17",
+    "accessedAt": "2026-07-17",
+    "versionScope": [],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "f2f72dd431cb1f642b74da7a3f157c068825b37c2c33ddde589c0d14aafefc69",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.oracle-pair-2023",
+    "tier": "A",
+    "kind": "official-site",
+    "title": "Oracle of Ages and Oracle of Seasons official retrospective",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/topics/article/c4ffd2cf-7151-4a25-914e-8a5aa12a5ee4",
+    "locator": "Sections distinguishing the two games and linked-play structure",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.oracle-of-ages.original",
+      "version.oracle-of-seasons.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "7d6af137926989fd408c43cdbb760fde7225dd720deb9376ddeffe71c4a7c54f",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.classics-policy-20260717",
+    "tier": "A",
+    "kind": "official-site",
+    "title": "Nintendo Classics feature",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/games/feature/nintendo-classics/index.html",
+    "locator": "Service description and original-content reproduction notice",
+    "accessedAt": "2026-07-17",
+    "versionScope": [],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "27cae5855f2eccdc232f94c9e53dfe68223da0784605593a0753b614a320aa53",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.ocarina-switch2-announcement-2026",
+    "tier": "A",
+    "kind": "official-site",
+    "title": "Ocarina of Time Nintendo Switch 2 announcement",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/topics/article/5101983a-3ed1-4033-841f-c7c80486bfdc",
+    "locator": "Announcement section identifying platform and 2026 release window",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.ocarina-of-time.switch2-2026"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "3069dc1bf09199c630d4595addafa7678e61c493d23d2a7ea4ac9c87746ecc20",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.zelda1.manual",
+    "tier": "A",
+    "kind": "official-manual",
+    "title": "The Legend of Zelda official manual",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/clv/manuals/ja/pdf/CLV-P-HAANJ.pdf",
+    "locator": "Manual sections for controls, overworld, items, enemies, and dungeons",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.the-legend-of-zelda.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "dcd059edb0e1dfc31aafca9285edb2c76e94c580889532ea3598e3bc0f5b9a45",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.zelda2.manual",
+    "tier": "A",
+    "kind": "official-manual",
+    "title": "Zelda II official manual",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/clv/manuals/ja/pdf/CLV-P-HAASJ.pdf",
+    "locator": "Manual sections for overworld travel, side-view action, towns, magic, lives, and palaces",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.zelda-ii-the-adventure-of-link.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "f1c9b3fe9606d9f339a4cdb9bd43d31f00bce0965ac80861347147fbcc66bc7d",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.alttp.manual",
+    "tier": "A",
+    "kind": "official-manual",
+    "title": "A Link to the Past official manual",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/clvs/manuals/ja/pdf/CLV-P-VAAEJ.pdf",
+    "locator": "Manual sections for controls, world navigation, equipment, and dungeon interaction",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.a-link-to-the-past.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "c47d72e2282ebcbc7a311923e422a27df3ac8a397e050ab13293032915f8bc1e",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.handheld-history.interview",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Iwata Asks — The History of Handheld The Legend of Zelda",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://iwataasks.nintendo.com/interviews/ds/zelda/1/0/",
+    "locator": "Volumes covering Link’s Awakening and Capcom-developed handheld games",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.links-awakening.original",
+      "version.oracle-of-seasons.original",
+      "version.oracle-of-ages.original",
+      "version.the-minish-cap.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "c5c9234b2a7d35c41c8d44fa2186178a3766b25ebcc82ec4768cc34a179bc399",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.oot3d.iwata-asks",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Iwata Asks — Ocarina of Time 3D",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://iwataasks.nintendo.com/interviews/3ds/zelda-ocarina-of-time/1/0/",
+    "locator": "Original-development recollections separated from Nintendo 3DS remake changes",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.ocarina-of-time.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "3a4528f8de3ad8f4f8586ba8d5f8cad8ce36f8578824de20fdf68ae3867346e3",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.mm3d.iwata-asks",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Iwata Asks — Majora’s Mask 3D",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://iwataasks.nintendo.com/interviews/3ds/majoras-mask-3d/0/0/",
+    "locator": "Original three-day system origin and explicitly separated remake discussion",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.majoras-mask.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "c03b514a9345ef2e344074ddf675c7e23160d9d3e6c6e44f430b473035470abd",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.four-swords.nso-feature",
+    "tier": "A",
+    "kind": "official-site",
+    "title": "Four Swords official Nintendo Switch Online feature",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/topics/article/8112acf2-75d1-45cc-938c-9b5388e737b4",
+    "locator": "Sections on cooperative/competitive structure, player-count maps, and map variation",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.four-swords.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "142d6b8f587c44841eeafcc0119c96228a5b287583f485ede525aed62c0ef62c",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.wind-waker-hd.iwata-asks",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Iwata Asks — The Wind Waker HD",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://iwataasks.nintendo.com/interviews/wiiu/wind-waker/0/0/",
+    "locator": "Original-development recollections and separately identified HD changes",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.the-wind-waker.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "cb94a0c367945842fc8703d44d01a18de0479602518541383c9385977fa65dce",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.twilight-princess.iwata-asks",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Iwata Asks — Twilight Princess",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://iwataasks.nintendo.com/interviews/wii/twilight_princess/0/0/",
+    "locator": "Volumes on original world, player viewpoint, controls, characters, and production",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.twilight-princess.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "9123b57934134b39e99c1d07cdaf91d3dd379e224273845d7f6eb7a7c66fdde4",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.phantom-hourglass.staff",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Phantom Hourglass official staff interview",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/ds/staff/azej/vol1/index.html",
+    "locator": "Volume on stylus control and Nintendo DS design",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.phantom-hourglass.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "37730cb04016a4249d6691c2a4b355b1bf285cb9ee388af05054419aa418b604",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.spirit-tracks.iwata-asks",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Iwata Asks — Spirit Tracks",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://iwataasks.nintendo.com/interviews/ds/zelda/0/0/",
+    "locator": "Volumes on rail structure, touch control, characters, and production",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.spirit-tracks.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "ca51b64a9e2e1ced4ed80ef2f1b7b450f823620618a81edf346c6389762e9fb2",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.skyward-sword.iwata-asks",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Iwata Asks — Skyward Sword",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://iwataasks.nintendo.com/interviews/wii/zelda-skyward-sword/0/0/",
+    "locator": "Multi-volume interview on MotionPlus, field structure, teaching, story performance, and production",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.skyward-sword.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "86c25025a1142c43e5eaa408a31973347f4099eb58f5ec12d21607c9b5b9e926",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.albw.iwata-asks",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Iwata Asks — A Link Between Worlds",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://iwataasks.nintendo.com/interviews/3ds/a-link-between-worlds/0/0/",
+    "locator": "Volumes on perspective, wall-merging, height readability, and non-linear structure",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.a-link-between-worlds.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "efc0c1754c4ad552eda90c65f14c4d129b371f282519232ac5b3a7e8f4447f4b",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.tri-force-heroes.manual",
+    "tier": "A",
+    "kind": "official-manual",
+    "title": "Tri Force Heroes electronic manual",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/3ds/ea3j/detail/manual_ea3j.pdf",
+    "locator": "Sections for single/multiplayer structure, communication icons, controls, and recovery",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.tri-force-heroes.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "bb513af57e2dc4be92391183e14e47b73a05f2ced54438671bb086dd6ba08679",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.botw.making-of",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "The Making of The Legend of Zelda: Breath of the Wild",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/topics/article/c1fb9037-03c1-11e7-9aaf-063b7ac45a6d",
+    "locator": "Official making-of feature on open-air exploration, systems, art, story, and production",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.breath-of-the-wild.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "127f4f65dc7ea412e530968d6e8d5925923e41d2a76f09d6688e3e70630666f1",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.totk.ask-developer",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Ask the Developer Vol. 9, Tears of the Kingdom",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/interview/totk/index.html",
+    "locator": "All parts; design intent and implementation context separated from observable game facts",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.tears-of-the-kingdom.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "6830c348862c64638f0bc82e542d44711b4f7e43f70cda43136faab1020082de",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.nintendo.eow.ask-developer",
+    "tier": "A",
+    "kind": "developer-interview",
+    "title": "Ask the Developer Vol. 13, Echoes of Wisdom",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/interview/bdgea/index.html",
+    "locator": "All parts; 2D top-down structure, echoes, freedom of solutions, story, and production",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.echoes-of-wisdom.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "d0364ccec631ab0fea072e6c56827599eb25b6fca5b9c020232b89683fbe581f",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.the-legend-of-zelda",
+    "tier": "A",
+    "kind": "game",
+    "title": "The Legend of Zelda — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/software/zelda1/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.the-legend-of-zelda.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "5590b0bcc2fc59a428538e3540b64353ea6a610c59ccb4d54c0471f599ff9d1e",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.zelda-ii-the-adventure-of-link",
+    "tier": "A",
+    "kind": "game",
+    "title": "Zelda II: The Adventure of Link — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/software/zelda2/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.zelda-ii-the-adventure-of-link.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "878d93bf4e53d31f3ddf2673ab5522b22bc9c15a535070df07a7e8b76cffa826",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.a-link-to-the-past",
+    "tier": "A",
+    "kind": "game",
+    "title": "A Link to the Past — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/clvs/soft/zelda.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.a-link-to-the-past.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "401b3e78e74c6818280ee552bc0673c4650ddcbbabe5add650a1537bb6e32e8d",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.links-awakening",
+    "tier": "A",
+    "kind": "game",
+    "title": "Link’s Awakening — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/games/zelda-links-awakening/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.links-awakening.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "121c8cc6d8f01b717aeb6f480a2d3424e182332cdbb83484a470d3f2f19aee97",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.ocarina-of-time",
+    "tier": "A",
+    "kind": "game",
+    "title": "Ocarina of Time — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/n01/n64/software/zelda/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.ocarina-of-time.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "78cf22398aed3e881f670faab8409efa01e229bab425ca81345dea7fdc7f593c",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.majoras-mask",
+    "tier": "A",
+    "kind": "game",
+    "title": "Majora’s Mask — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/n01/n64/software/nus_p_nzsj/normal/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.majoras-mask.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "049b43eb46105148d80bc6030adb424c731107ba5367ff5a2d9f3c085094b947",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.oracle-of-seasons",
+    "tier": "A",
+    "kind": "game",
+    "title": "Oracle of Seasons — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/titles/50010000013310.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.oracle-of-seasons.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "81241ba917142eb285eab8ec5d5bc9d67483939f19f56be6312a8d1b7c890d8d",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.oracle-of-ages",
+    "tier": "A",
+    "kind": "game",
+    "title": "Oracle of Ages — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/titles/50010000013311.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.oracle-of-ages.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "14e2464600e9cab093438748c19143f25ee33b31eb965c09e982a5095b8233d7",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.the-wind-waker",
+    "tier": "A",
+    "kind": "game",
+    "title": "The Wind Waker — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/ngc/gzlj/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.the-wind-waker.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "535433e0fcf2ea9f422e4e53c1d9368e7403bf0873a0b7fcd6a707e8b6e9e93a",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.four-swords",
+    "tier": "A",
+    "kind": "game",
+    "title": "Four Swords — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/n08/azlj/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.four-swords.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "d731adf91f4e27422243ad6b5efdc94409ce53c41993cee5084a0b953b76b871",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.four-swords-adventures",
+    "tier": "A",
+    "kind": "game",
+    "title": "Four Swords Adventures — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/ngc/g4sj/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.four-swords-adventures.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "94f22e871a6328ea77b74bacb0cf46d25e1aaebf4894bfdd6d5e62df28ade946",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.the-minish-cap",
+    "tier": "A",
+    "kind": "game",
+    "title": "The Minish Cap — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/n08/bzmj/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.the-minish-cap.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "40c045592a9030a11e9fd14593b18ca312ddbcef11b72bcdbf188c0753db9388",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.twilight-princess",
+    "tier": "A",
+    "kind": "game",
+    "title": "Twilight Princess — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/wii/rzdj/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.twilight-princess.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "68f1996d4a7d170b0478f923e219d2c85156d675ff6d0f662cd055354a245341",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.phantom-hourglass",
+    "tier": "A",
+    "kind": "game",
+    "title": "Phantom Hourglass — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/ds/azej/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.phantom-hourglass.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "07caabc63d5bb2c94ff592a548b013902a99e6f927e2a3b010b96a70b1883294",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.spirit-tracks",
+    "tier": "A",
+    "kind": "game",
+    "title": "Spirit Tracks — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/ds/bkij/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.spirit-tracks.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "26c0a330eac929883b971bc2413e2369d81196902975e3a04ca7a49c791af772",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.skyward-sword",
+    "tier": "A",
+    "kind": "game",
+    "title": "Skyward Sword — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/wii/souj/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.skyward-sword.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "5f0b78ce960c8680fe0b3eaffcfeb0a29172ae18c9dcf8858602fe7e5c899cf4",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.a-link-between-worlds",
+    "tier": "A",
+    "kind": "game",
+    "title": "A Link Between Worlds — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/3ds/bzlj/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.a-link-between-worlds.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "eedeb8815764ebbd57d4b803f875d1476071e3ff5982b445aa138dc105c7e68c",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.tri-force-heroes",
+    "tier": "A",
+    "kind": "game",
+    "title": "Tri-Force Heroes — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.co.jp/3ds/ea3j/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.tri-force-heroes.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "b514c021976712b6535424bf8aab88c5f3d570a84046600990c2ca9cc5c7e533",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.breath-of-the-wild",
+    "tier": "A",
+    "kind": "game",
+    "title": "Breath of the Wild — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/zelda/botw/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.breath-of-the-wild.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "cc38f9dcdd176ac250a156429cd45de4c7ee1725473428770936ea6468f14e3f",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.tears-of-the-kingdom",
+    "tier": "A",
+    "kind": "game",
+    "title": "Tears of the Kingdom — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/zelda/totk/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.tears-of-the-kingdom.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "a7c3c5adb2a86210d37ac4ed0b04ab39451fd372c3e7c494736e252d8925ae0d",
+    "status": "verified"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "sourceId": "source.game.echoes-of-wisdom",
+    "tier": "A",
+    "kind": "game",
+    "title": "Echoes of Wisdom — primary game and official product record",
+    "publisher": "Nintendo",
+    "authors": [],
+    "publishedAt": null,
+    "urlOrArchive": "https://www.nintendo.com/jp/switch/bdgea/index.html",
+    "locator": "Primary-version observable rules and states; official product page used for title/version context",
+    "accessedAt": "2026-07-17",
+    "versionScope": [
+      "version.echoes-of-wisdom.original"
+    ],
+    "usePolicy": "paraphrase-and-structured-observation-only",
+    "rightsNote": "Nintendo source; retain only citation metadata, paraphrase, and structured observations.",
+    "contentHash": "51b88dd1f76b3482bf3faf6e1d667cbcc8890439c5be699ef176158234f1e790",
+    "status": "verified"
+  }
+]

@@ -1,0 +1,325 @@
+{
+  "reviewVersion": "1.0.0",
+  "reviewId": "review.zelda-mainline.p4-supplemental-evidence-independent-20260718",
+  "reviewedAt": "2026-07-18",
+  "reviewerIndependence": {
+    "reviewer": "role.reviewer.independent-p4-supplemental-evidence",
+    "independentOfProposalAuthorship": true,
+    "proposalConclusionsAssumed": false,
+    "mutationPolicy": "The reviewer treated the proposal, supplement, schemas, and authoritative registries as read-only and wrote only this review artifact."
+  },
+  "scope": {
+    "supplement": "design-library/packs/zelda-mainline/observations/p4-supplemental-evidence.json",
+    "proposal": "planning/v03-zelda-mainline/reports/p4-evidence-proposal-a.json",
+    "registries": [
+      "design-library/packs/zelda-mainline/works/work-registry.json",
+      "design-library/packs/zelda-mainline/sources/source-registry.json",
+      "design-library/packs/zelda-mainline/claims/claim-registry.json",
+      "design-library/packs/zelda-mainline/observations/observation-registry.json"
+    ],
+    "schemas": [
+      "design-library/schemas/work.schema.json",
+      "design-library/schemas/source-record.schema.json",
+      "design-library/schemas/claim.schema.json",
+      "design-library/schemas/observation.schema.json"
+    ],
+    "inputHashes": {
+      "supplementSha256": "c7bed9faef238ba815f1ef3c20c48c8f7e578f68f434ca31d6f98aaade9ce9b8",
+      "proposalSha256": "db0f48c111685603d80fa354faefeb9ff9aab91fa45c5d42feb7c5b5f67ff5e0",
+      "workRegistrySha256": "363a14c624cfe0c70e5f5aac41a80f965cae40ba9856a7c9d9838a226fe01249",
+      "sourceRegistrySha256": "eb6adfbbdc6e8793e03406ba10d108da986e881a3d19da39e3c244a68b73e735",
+      "claimRegistrySha256": "bb6cb2e00a97b6e81e9e7c2c4e67800178944b91e66ec2ee0851dc5212123c29",
+      "observationRegistrySha256": "e7d484c4f65acb71a1e2fc8b29f75603cb5521af96704d6f8cdf935bd2082e49"
+    }
+  },
+  "method": {
+    "structuralChecks": [
+      "Strict-compiled the four formal Draft 2020-12 schemas used by the referenced records.",
+      "Validated the five referenced work records, five referenced source records, ten supplemental claims, and five supplemental observations against their formal schemas.",
+      "Resolved every work, version, source, fact-claim, and interpretation-claim edge and checked the proposed IDs for collisions with the authoritative claim and observation registries."
+    ],
+    "substantiveRule": "A proposed observation is approved only when its cited evidence records, rather than merely requests, a reproducible action-to-state-to-feedback-to-consequence trace and directly satisfies every material gate of the target principle.",
+    "statusRule": "A verified source record proves that the registered source is acceptable; it does not automatically verify a new claim made from that source. A prospective runtime-trace instruction is not an observed runtime trace.",
+    "externalEvidencePolicy": "Public corroboration was treated only as lead discovery. It was not used to replace the missing registered original-version runtime traces, and no inference from an unregistered public source was counted as approval evidence."
+  },
+  "structuralResults": {
+    "schemaCompilation": "pass",
+    "referencedWorkRecordsValid": 5,
+    "referencedSourceRecordsValid": 5,
+    "supplementalClaimsValid": 10,
+    "supplementalObservationsValid": 5,
+    "workRefsResolved": 5,
+    "versionRefsResolved": 5,
+    "sourceRefsResolved": 10,
+    "supplementClaimRefsResolved": 10,
+    "claimIdCollisions": 0,
+    "observationIdCollisions": 0,
+    "wrapperSchemaAvailable": false,
+    "finding": "The supplement is structurally well formed. These checks do not close its factual or causal evidence."
+  },
+  "targetPrinciples": [
+    {
+      "patternId": "pattern.knowledge-gated-revisit",
+      "principle": "New understanding, not new avatar power, makes an old place actionable.",
+      "minimumDirectEvidence": [
+        "The successful action is physically available before knowledge.",
+        "No item, capability, consumable, form, song, route flag, or map-layer grant is required between failed and successful runs.",
+        "A wrong probe is recoverable and the learned relation causes success at the same target."
+      ]
+    },
+    {
+      "patternId": "pattern.multi-solution-state-graph",
+      "principle": "Several causally distinct paths can satisfy one explicit world-state invariant.",
+      "minimumDirectEvidence": [
+        "At least two controlled paths begin from an equivalent reset state.",
+        "The paths differ causally rather than cosmetically or by an exploit.",
+        "Both independently reach the same explicit postcondition and neither is eliminated by resource or availability constraints."
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "principle": "Optional discovery rewards the player with additional future choices, not only immediate value.",
+      "minimumDirectEvidence": [
+        "Skipping the discovery preserves required progression.",
+        "The reward is persistent or repeatably available.",
+        "At least two later non-dominated choices become actionable or materially more legible, and choosing one preserves the other."
+      ]
+    }
+  ],
+  "perObservation": [
+    {
+      "observationId": "observation.the-legend-of-zelda.lost-woods-sequence-is-knowledge-only-route",
+      "targetPatternId": "pattern.knowledge-gated-revisit",
+      "decision": "fail-clue-transaction-and-loop-trace-unclosed",
+      "mechanicCredibility": "plausible-but-not-demonstrated-by-the-cited-record",
+      "locatorDecision": "fail-prospective-trace-only",
+      "causalChainDecision": "fail",
+      "factClaim": {
+        "claimId": "claim.the-legend-of-zelda.lost-woods-sequence-is-knowledge-only-route.fact",
+        "decision": "not-approved"
+      },
+      "interpretationClaim": {
+        "claimId": "claim.the-legend-of-zelda.lost-woods-sequence-is-knowledge-only-route.interpretation",
+        "decision": "not-approved"
+      },
+      "findings": [
+        "The north-west-south-west mechanic is plausible, but the evidence edge names a runtime experiment to perform and supplies no captured original-FDS result, trace identifier, timestamp, save-state fingerprint, or before/after state ledger.",
+        "The supplement does not demonstrate the exact reset behavior after an incorrect prefix or show that the correct sequence exits from the same maze state.",
+        "The method says to consult the in-game clue between runs while also requiring matched snapshots. It does not record whether obtaining that clue changes currency or another player state, nor does it specify a reload that restores the pre-clue snapshot while retaining only player knowledge.",
+        "Consequently, action-available-before-knowledge, zero capability or route-flag delta, and recoverable wrong-probe gates remain assertions rather than evidence."
+      ],
+      "requiredClosure": [
+        "Record an original-FDS trace with an identifiable maze start, one wrong-prefix reset, the complete successful sequence, and matched inventory, capability, quest, route, and geometry state.",
+        "Record the clue transaction or use a documented reload protocol so any non-knowledge delta is explicit and cannot explain success."
+      ],
+      "statusPromotion": {
+        "current": "draft",
+        "mayPromoteToReviewed": false,
+        "mayPromoteToVerified": false,
+        "highestPermittedStatus": "draft"
+      },
+      "blockerRefs": [
+        "P4-SE-GLOBAL-TRACE",
+        "P4-SE-TLOZ-CLUE"
+      ]
+    },
+    {
+      "observationId": "observation.ocarina-of-time.lost-woods-audio-rule-opens-existing-path",
+      "targetPatternId": "pattern.knowledge-gated-revisit",
+      "decision": "fail-audio-rule-and-route-state-not-reproduced",
+      "mechanicCredibility": "plausible-at-a-general-level-but-exact-audio-causality-unverified",
+      "locatorDecision": "fail-junctions-and-measurement-unspecified",
+      "causalChainDecision": "fail",
+      "factClaim": {
+        "claimId": "claim.ocarina-of-time.lost-woods-audio-rule-opens-existing-path.fact",
+        "decision": "not-approved"
+      },
+      "interpretationClaim": {
+        "claimId": "claim.ocarina-of-time.lost-woods-audio-rule-opens-existing-path.interpretation",
+        "decision": "not-approved"
+      },
+      "findings": [
+        "The cited locator identifies only the broad Kokiri-Forest-to-Sacred-Forest-Meadow route. It does not enumerate the tested junctions, wrong doorway, successful doorway sequence, or an objective capture of relative melody behavior.",
+        "The stronger wording that melody grows clearer at every productive exit and fades at an unproductive one is not established by a recorded original-Nintendo-64 trace.",
+        "No paired state ledger proves that age, songs, inventory, capabilities, progression flags, and junction graph were unchanged between failed and successful attempts.",
+        "Without the failed return and successful traversal results, the record does not directly prove that sensory knowledge alone, rather than campaign state, opens the route."
+      ],
+      "requiredClosure": [
+        "Capture the exact original-version junction sequence with synchronized audio and position evidence, including at least one wrong exit and its reset destination.",
+        "Record the before/after player and world-state snapshot and show that the complete route is physically available before any new song, item, age, or progression grant."
+      ],
+      "statusPromotion": {
+        "current": "draft",
+        "mayPromoteToReviewed": false,
+        "mayPromoteToVerified": false,
+        "highestPermittedStatus": "draft"
+      },
+      "blockerRefs": [
+        "P4-SE-GLOBAL-TRACE",
+        "P4-SE-OOT-AUDIO"
+      ]
+    },
+    {
+      "observationId": "observation.breath-of-the-wild.plateau-cold-route-has-distinct-preparation-paths",
+      "targetPatternId": "pattern.multi-solution-state-graph",
+      "decision": "fail-warm-doublet-availability-and-path-equivalence-unclosed",
+      "mechanicCredibility": "two protection mechanisms are plausible-but-the-controlled-pair-is-unverified",
+      "locatorDecision": "fail-fork-and-acquisition-state-not-recorded",
+      "causalChainDecision": "fail",
+      "factClaim": {
+        "claimId": "claim.breath-of-the-wild.plateau-cold-route-has-distinct-preparation-paths.fact",
+        "decision": "not-approved"
+      },
+      "interpretationClaim": {
+        "claimId": "claim.breath-of-the-wild.plateau-cold-route-has-distinct-preparation-paths.interpretation",
+        "decision": "not-approved"
+      },
+      "findings": [
+        "The supplement does not record an original-version fork at which the spicy-meal ingredients, cooking access, Old Man ingredient exchange, and Warm Doublet are all demonstrably available before leaving the Great Plateau.",
+        "It does not capture the Warm Doublet acquisition conditions or show that Path B can be completed from the declared fork without first using Path A, another cold-protection method, or a progression state absent from the comparison run.",
+        "The shared Keh Namut activation postcondition is well specified in prose but is not backed by two recorded outcomes from equivalent objective state.",
+        "Path cost, duration, persistence, and resource requirements are not measured, so the assertion that both are viable non-dominated causal paths is also open."
+      ],
+      "requiredClosure": [
+        "Record the exact pre-departure availability and acquisition chain for the Warm Doublet in the original version, including inventory, quest, objective, and resource state.",
+        "Run meal and clothing branches from a documented fork and record identical Keh Namut activation state, causal independence, rollback, and non-domination evidence."
+      ],
+      "statusPromotion": {
+        "current": "draft",
+        "mayPromoteToReviewed": false,
+        "mayPromoteToVerified": false,
+        "highestPermittedStatus": "draft"
+      },
+      "blockerRefs": [
+        "P4-SE-GLOBAL-TRACE",
+        "P4-SE-BOTW-DOUBLET"
+      ]
+    },
+    {
+      "observationId": "observation.echoes-of-wisdom.suthorn-ledge-accepts-two-echo-routes",
+      "targetPatternId": "pattern.multi-solution-state-graph",
+      "decision": "fail-nonunique-suthorn-locator-and-two-route-outcome-unverified",
+      "mechanicCredibility": "object-role hypothesis is plausible-but-the-specific-encounter-is-unsubstantiated",
+      "locatorDecision": "fail-not-reproducibly-identifiable",
+      "causalChainDecision": "fail",
+      "factClaim": {
+        "claimId": "claim.echoes-of-wisdom.suthorn-ledge-accepts-two-echo-routes.fact",
+        "decision": "not-approved"
+      },
+      "interpretationClaim": {
+        "claimId": "claim.echoes-of-wisdom.suthorn-ledge-accepts-two-echo-routes.interpretation",
+        "decision": "not-approved"
+      },
+      "findings": [
+        "First repeatable two-tile Suthorn Forest cliff after Trampoline Echo acquisition is not a unique locator: it has no map coordinate, adjacent landmark, captured frame, route timestamp, or other identifier that a reviewer can independently resolve.",
+        "The supplement does not record that Old Bed, Table, and Trampoline Echoes are simultaneously learned at that exact point or that the declared Tri power budget supports both constructions.",
+        "It gives no exact Old Bed count or placement geometry and no captured Table-plus-Trampoline launch result, so neither route to the same measured upper-ledge region is demonstrated.",
+        "Because start position, placed-echo reset, collision result, and postcondition are not recorded, causal distinctness and local reversibility remain inferred."
+      ],
+      "requiredClosure": [
+        "Replace the relative locator with a uniquely identifiable original-version location and capture its start and target regions.",
+        "Record Echo acquisition state, power budget, exact placements and costs, reset procedure, and successful Old-Bed and Table-plus-Trampoline routes to the same postcondition."
+      ],
+      "statusPromotion": {
+        "current": "draft",
+        "mayPromoteToReviewed": false,
+        "mayPromoteToVerified": false,
+        "highestPermittedStatus": "draft"
+      },
+      "blockerRefs": [
+        "P4-SE-GLOBAL-TRACE",
+        "P4-SE-EOW-LOCATOR"
+      ]
+    },
+    {
+      "observationId": "observation.tears-of-the-kingdom.optional-tower-creates-map-and-air-route-choices",
+      "targetPatternId": "pattern.reward-expands-future-possibility",
+      "decision": "fail-tower-optionality-and-choice-delta-not-demonstrated",
+      "mechanicCredibility": "map-and-launch-functions-are-plausible-but-the-target-principle-is-not-closed",
+      "locatorDecision": "fail-outbound-destinations-and-campaign-state-unspecified",
+      "causalChainDecision": "fail",
+      "factClaim": {
+        "claimId": "claim.tears-of-the-kingdom.optional-tower-creates-map-and-air-route-choices.fact",
+        "decision": "not-approved"
+      },
+      "interpretationClaim": {
+        "claimId": "claim.tears-of-the-kingdom.optional-tower-creates-map-and-air-route-choices.interpretation",
+        "decision": "not-approved"
+      },
+      "findings": [
+        "The supplement does not identify the tested campaign and quest state or provide a skip trace proving that Lindor's Brow Skyview Tower is optional while required progression remains reachable.",
+        "Persistent regional map data and repeatable launch are asserted without a captured before/after map state or a second launch from the activated tower.",
+        "The locator does not name the two outbound destinations, their feasibility constraints, or their separate endpoints. Two visible headings are insufficient unless both are non-dominated routes whose outcomes remain independently reachable.",
+        "No before/after comparison shows that activation creates or materially exposes at least two later choices rather than merely offering altitude or convenience for routes already equally actionable.",
+        "No branch trace shows that choosing one destination preserves the other, so the required persistent future-choice delta is unproven."
+      ],
+      "requiredClosure": [
+        "Record a precise original-version campaign state and a tower-skip route to a required goal to prove optionality.",
+        "Capture unactivated and activated map states, repeat launch availability, and two named non-dominated destination routes from a matched apex state, including proof that the unselected route remains reachable.",
+        "Measure the choice-set delta attributable to the tower reward rather than inferring it from visibility alone."
+      ],
+      "statusPromotion": {
+        "current": "draft",
+        "mayPromoteToReviewed": false,
+        "mayPromoteToVerified": false,
+        "highestPermittedStatus": "draft"
+      },
+      "blockerRefs": [
+        "P4-SE-GLOBAL-TRACE",
+        "P4-SE-TOTK-OPTIONALITY",
+        "P4-SE-TOTK-BRANCH"
+      ]
+    }
+  ],
+  "blockerDetails": [
+    {
+      "blockerId": "P4-SE-GLOBAL-TRACE",
+      "finding": "All ten claim locators are prospective runtime-test descriptions. The registered Tier-A source records contain generic primary-game or product-page metadata, but the supplement supplies no archived result, trace fingerprint, timestamp, save-state ledger, or independent reproduction for any proposed claim.",
+      "closure": "Attach reproducible original-version trace results and independent review; do not infer claim verification from source-record status."
+    },
+    {
+      "blockerId": "P4-SE-TLOZ-CLUE",
+      "finding": "The Lost Woods sequence, wrong-input reset, and knowledge-only delta are not jointly recorded, and the clue-between-runs transaction is not reconciled with the matched-snapshot requirement.",
+      "closure": "Capture both traversals and explicitly isolate player knowledge from currency, inventory, capability, quest, route, and geometry changes."
+    },
+    {
+      "blockerId": "P4-SE-OOT-AUDIO",
+      "finding": "The exact Lost Woods junctions, audio comparison rule, wrong-return behavior, successful route, and zero progression delta are not recorded.",
+      "closure": "Provide synchronized original-Nintendo-64 audio and route evidence plus paired state snapshots."
+    },
+    {
+      "blockerId": "P4-SE-BOTW-DOUBLET",
+      "finding": "Warm Doublet availability and causal independence at the proposed Great Plateau fork are not established, and the two claimed routes are not recorded to the same shrine postcondition.",
+      "closure": "Record acquisition availability and two controlled, viable, non-dominated branches to identical Keh Namut activation state."
+    },
+    {
+      "blockerId": "P4-SE-EOW-LOCATOR",
+      "finding": "The Suthorn ledge locator is not unique, and Echo availability, budget, placements, two route outcomes, and reset equivalence are unverified.",
+      "closure": "Use a uniquely reproducible location and capture both exact construction routes from the same reset state."
+    },
+    {
+      "blockerId": "P4-SE-TOTK-OPTIONALITY",
+      "finding": "Lindor's Brow Skyview Tower optionality is not tied to a tested campaign state or a successful skip route.",
+      "closure": "Demonstrate required progression without activation at the same campaign state."
+    },
+    {
+      "blockerId": "P4-SE-TOTK-BRANCH",
+      "finding": "No two named, feasible, non-dominated outbound branches or persistent unselected option are recorded, and no choice-set delta is attributable to tower activation.",
+      "closure": "Record the before/after choice set and two distinct route outcomes from the repeatable launch."
+    }
+  ],
+  "summary": {
+    "adjudication": "fail",
+    "observationsApproved": 0,
+    "claimsApproved": 0,
+    "blockers": [
+      "P4-SE-GLOBAL-TRACE",
+      "P4-SE-TLOZ-CLUE",
+      "P4-SE-OOT-AUDIO",
+      "P4-SE-BOTW-DOUBLET",
+      "P4-SE-EOW-LOCATOR",
+      "P4-SE-TOTK-OPTIONALITY",
+      "P4-SE-TOTK-BRANCH"
+    ]
+  }
+}

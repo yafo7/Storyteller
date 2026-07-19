@@ -1,0 +1,44 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.archive-rubbing-route",
+  "patternId": "pattern.knowledge-gated-revisit",
+  "testId": "test.knowledge-revisit.route",
+  "kind": "route",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "route contract fixture for pattern.knowledge-gated-revisit; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "knowledge-only-return",
+    "selectionRole": "specialization",
+    "requiredRuntimeCapabilities": [
+      "capability.world-facts",
+      "capability.route-gates",
+      "capability.dialogue-gates",
+      "capability.hint-ladder",
+      "capability.save-migration"
+    ],
+    "recoveryRequirements": [
+      "Preserve clue ledger on failure",
+      "Restore target state after every wrong probe",
+      "Escalate hints from evidence location to relation to action class"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.routes.firstVisit.actionPhysicallyPossible",
+      "operator": "equals",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.routes.wrongProbe.exitReachable",
+      "operator": "reachable",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

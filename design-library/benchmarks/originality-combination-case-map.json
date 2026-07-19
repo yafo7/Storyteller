@@ -1,0 +1,176 @@
+{
+  "mapVersion": "1.0.0",
+  "generatedAt": "2026-07-18",
+  "gateUseOnly": true,
+  "blindCasesRef": "benchmarks/originality-blind-combination-applications.json",
+  "registryRef": "benchmarks/originality-case-registry.json#/combinationCases",
+  "registryCandidateCount": 15,
+  "uniquePatternSetCount": 11,
+  "applicationCaseCount": 10,
+  "excludedStructuralSetCount": 1,
+  "mappings": [
+    {
+      "caseId": "blind.combination.case.1ae543417ce922d4db18",
+      "patternIds": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.parallel-state-comparison",
+        "pattern.state-axis-rewrites-routes"
+      ],
+      "vetoStatements": [
+        "One-to-one paired coordinates, source-like transition cadence, and the same obstacle roles survive together.",
+        "The combination preserves a source map pairing, transition ritual, object-role sequence, and narrative purpose.",
+        "The same paired coordinates, obstacle roles, transition action, and reveal order identify one source work."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.c731135f6c8bd75a39c9",
+        "blind.combination.pending.86620c80f01865a616af",
+        "blind.combination.pending.edcb137194453c2f3574"
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.21e4d7928db264285778",
+      "patternIds": [
+        "pattern.dense-overworld-as-challenge-space",
+        "pattern.landmark-promises-future-use",
+        "pattern.optional-secret-readability",
+        "pattern.state-axis-rewrites-routes"
+      ],
+      "vetoStatements": [
+        "Macro geography, landmark hierarchy, traversal verb set, secret distribution, and region-state progression converge on one source overworld."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.f340ef0d18d90c42c13a"
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.5a557d6d8c6db255d24e",
+      "patternIds": [
+        "pattern.action-first-onboarding",
+        "pattern.landmark-promises-future-use",
+        "pattern.local-rule-development-arc"
+      ],
+      "vetoStatements": [
+        "Opening emergency, route shape, first verb or item, mentor function, and next landmark align with one source title."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.dd5ecd9af394336ce8de"
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.5be839c267b45c60e90a",
+      "patternIds": [
+        "pattern.embodied-world-change-reveal",
+        "pattern.npc-reacts-to-world-state",
+        "pattern.parallel-state-comparison",
+        "pattern.state-axis-rewrites-routes"
+      ],
+      "vetoStatements": [
+        "World duality, restoration objective, affected cast, before/after topology, and transition cadence converge on one source title."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.9c774f9c3beae60a9ccf"
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.95161d0121a34108f85f",
+      "patternIds": [
+        "pattern.embodied-world-change-reveal",
+        "pattern.npc-reacts-to-world-state",
+        "pattern.parallel-state-comparison"
+      ],
+      "vetoStatements": [
+        "Affected cast, regional before/after structure, restoration action, and reaction sequence identify one source campaign beat."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.e359f49893980e2389a0"
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.a016f5605c95e2d913a2",
+      "patternIds": [
+        "pattern.constrained-vehicle-route",
+        "pattern.landmark-promises-future-use"
+      ],
+      "vetoStatements": [
+        "Vehicle form, macro network, landmark rhythm, and arrival structure identify one source voyage."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.969504e5bdfaf09f4dbf"
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.a1b58443328199f9f9f7",
+      "patternIds": [
+        "pattern.multi-solution-state-graph",
+        "pattern.object-role-composition"
+      ],
+      "vetoStatements": [
+        "Object roles, exact arrangement, action order, and payoff identify a source construction or copied-object puzzle.",
+        "Object roles, part arrangement, action order, and outcome reproduce a known source solution."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.2d521c8f5254681bd36d",
+        "blind.combination.pending.6a6ffa15fa7678aa26ad"
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.beddb017d39a22f02925",
+      "patternIds": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.landmark-promises-future-use",
+        "pattern.reward-expands-future-possibility"
+      ],
+      "vetoStatements": [
+        "Discovery location, item role, future obstacle, and reveal cadence converge on one source reward loop.",
+        "Landmark silhouette, approach graph, reward role, and reveal staging converge on one source destination."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.e1a48beee91f762c170a",
+        "blind.combination.pending.2dd6d9267356f8665fb9"
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.e6c3335562ec921c9834",
+      "patternIds": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.optional-secret-readability",
+        "pattern.reward-expands-future-possibility"
+      ],
+      "vetoStatements": [
+        "Clue surface, required action, hidden-room topology, and reward role collectively identify one source secret."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.aad3796932cd5fa785ba"
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.f2277fa2a0d339208209",
+      "patternIds": [
+        "pattern.action-first-onboarding",
+        "pattern.local-rule-development-arc"
+      ],
+      "vetoStatements": [
+        "Opening beats, tool order, room graph, and exam staging converge on one source dungeon."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.fb8e3cc12e92ea224189"
+      ]
+    }
+  ],
+  "excludedStructuralCases": [
+    {
+      "exclusionId": "blind.combination.excluded.16faf8fd0e2139151af1",
+      "patternIds": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.knowledge-gated-revisit"
+      ],
+      "vetoStatements": [
+        "The instance requires both a newly granted power and a supposedly knowledge-only solution."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.95ca04239bab151ff14b"
+      ],
+      "reason": "The first contract requires a later reusable avatar capability to make an earlier affordance actionable, while the second requires the relevant action to have been physically available on the first visit and to become usable through knowledge alone. Both maturity contracts explicitly declare the other pattern as a conflict, so a single coherent instance cannot satisfy both selection contracts."
+    }
+  ]
+}

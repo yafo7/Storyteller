@@ -13,10 +13,11 @@
     "hashPolicy": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["algorithm", "canonicalizationVersion"],
+      "required": ["algorithm", "canonicalizationVersion", "treeHash"],
       "properties": {
         "algorithm": { "const": "canonical-tree-sha256/v1" },
-        "canonicalizationVersion": { "const": "1" }
+        "canonicalizationVersion": { "const": "1" },
+        "treeHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
       }
     },
     "scope": {

@@ -1,0 +1,52 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.harbor-tide-covenant-runtime",
+  "patternId": "pattern.embodied-world-change-reveal",
+  "testId": "test.embodied-reveal.runtime",
+  "kind": "runtime",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "runtime contract fixture for pattern.embodied-world-change-reveal; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "enacted-world-state-transition",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.world-state-transactions",
+      "capability.map-state-variants",
+      "capability.actor-schedules",
+      "capability.performance-cues",
+      "capability.camera-directives",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Atomic rollback to pre-transition checkpoint",
+      "Replay with simplified camera",
+      "Reopen first consequence interaction",
+      "Route player to stable landmark"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.transition.atomic",
+      "operator": "equals",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.performance.actorTacticChangeCount",
+      "operator": "greater-or-equal",
+      "expected": 1
+    },
+    {
+      "evidencePath": "$.performance.secondsToMeaningfulControl",
+      "operator": "less-or-equal",
+      "expected": 20
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

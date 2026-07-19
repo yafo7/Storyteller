@@ -1,0 +1,193 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewId": "review.p2.calibration-remediation",
+  "reviewedAt": "2026-07-17",
+  "reviewer": {
+    "role": "independent-remediation-reviewer",
+    "participatedInRemediation": false
+  },
+  "basis": {
+    "independentReview": {
+      "path": "design-library/packs/zelda-mainline/coverage/calibration-independent-review.json",
+      "sha256": "5d11506f453e0c10b433691cf94b1d5b2e4a3c57d06ff61bfab9047ad7a2b932",
+      "modifiedByThisReview": false,
+      "disagreementsExpected": 10
+    },
+    "profileContract": {
+      "path": "design-library/packs/zelda-mainline/works/TITLE_PROFILE_CONTRACT.md",
+      "sha256": "461334d729f868fc0d8f6134d8b645a0274617a136ff79d76f1d3b017e1c7cee"
+    },
+    "compiler": {
+      "path": "design-library/scripts/compile-research.mjs",
+      "sha256": "e03bb0de43b047f629147487a07fa70ada6b68d01823ad4b0c23e1fa404cd2a3"
+    },
+    "coveragePolicy": {
+      "path": "design-library/governance/coverage-policy.json",
+      "sha256": "86e173fbd30a35fae42c86a2edd6736e7bf17418a6ecba8c87fddb3e3a46576eb"
+    }
+  },
+  "remediationChecks": [
+    {
+      "checkId": "remediation.tloz.cave-message.grain",
+      "disagreementRef": "disagreement.tloz.cave-message.grain",
+      "workId": "work.the-legend-of-zelda",
+      "themeKey": "cave-message-redirects-search",
+      "result": "pass",
+      "expected": "Narrow the theme to one information-guidance transaction rather than combining clues, grants, shops, and penalties.",
+      "observed": "The revised context, action, after-state, feedback, consequence, and factual description now cover only triggering and reading a short route or rule clue.",
+      "finalRulingApplied": true
+    },
+    {
+      "checkId": "remediation.tloz.cave-message.disposition",
+      "disagreementRef": "disagreement.tloz.cave-message.disposition",
+      "workId": "work.the-legend-of-zelda",
+      "themeKey": "cave-message-redirects-search",
+      "result": "pass",
+      "expected": "Classify the narrowed, abstract social-guidance principle as portable-candidate while retaining source wording as nonportable.",
+      "observed": "Disposition is portable-candidate and the profile still excludes cave wording, coordinates, and source expression through uniqueOrNonportable.",
+      "finalRulingApplied": true
+    },
+    {
+      "checkId": "remediation.mm.identity-form.dimension",
+      "disagreementRef": "disagreement.mm.identity-form.dimension",
+      "workId": "work.majoras-mask",
+      "themeKey": "identity-form-is-route-and-conversation-key",
+      "result": "pass",
+      "expected": "Remove the unsupported dungeon-structure edge from the identity-form theme and cover dungeon state only in a materially causal chain.",
+      "observed": "The identity-form theme no longer claims dungeon-structure. Dungeon-structure moved to reset-contract-separates-world-and-player-state, where dungeon mechanisms are in the before-state and dungeon conditions are explicitly reset by the global transaction.",
+      "finalRulingApplied": true
+    },
+    {
+      "checkId": "remediation.mm.scheduled-actors.dimension",
+      "disagreementRef": "disagreement.mm.scheduled-actors.dimension",
+      "workId": "work.majoras-mask",
+      "themeKey": "scheduled-actors-make-waiting-readable",
+      "result": "pass",
+      "expected": "Remove hardware-multiplayer from the scheduled-actor observation.",
+      "observed": "The theme now contains only npc-quest, narrative-performance, and camera-blocking, all of which materially participate in the schedule chain.",
+      "finalRulingApplied": true
+    },
+    {
+      "checkId": "remediation.mm.deadline.dimension",
+      "disagreementRef": "disagreement.mm.deadline.dimension",
+      "workId": "work.majoras-mask",
+      "themeKey": "deadline-is-recoverable-but-not-costless",
+      "result": "pass",
+      "expected": "Remove the incidental combat-boss edge; if hardware is covered, make platform persistence or input materially part of the chain.",
+      "observed": "Combat-boss was removed. The revised context, action, factual description, and interpretation now explicitly bind the original Nintendo 64 release's clock, pause, persistent reset save, and temporary suspension behavior to recovery decisions.",
+      "finalRulingApplied": true
+    },
+    {
+      "checkId": "remediation.botw.environmental-property.grain",
+      "disagreementRef": "disagreement.botw.environmental-property.grain",
+      "workId": "work.breath-of-the-wild",
+      "themeKey": "environmental-property-changes-plan",
+      "result": "pass",
+      "expected": "Replace the umbrella list of unrelated environmental systems with one independently testable material rule.",
+      "observed": "The revised observation is limited to combustible material, a fire trigger, visible burning, local heat-driven airflow, and the resulting route or encounter change.",
+      "finalRulingApplied": true
+    },
+    {
+      "checkId": "remediation.botw.memory-landmark.dimension",
+      "disagreementRef": "disagreement.botw.memory-landmark.dimension",
+      "workId": "work.breath-of-the-wild",
+      "themeKey": "memory-landmark-reveals-past",
+      "result": "pass",
+      "expected": "Remove the weak hardware-multiplayer edge and use a justified dossier-level N/A if no material causal rule exists.",
+      "observed": "The theme now contains only npc-quest, narrative-performance, and camera-blocking. dimension.hardware-multiplayer appears in notApplicableDimensions with a concrete rationale and has no observation edge.",
+      "finalRulingApplied": true
+    },
+    {
+      "checkId": "remediation.eow.summoned-ally.grain",
+      "disagreementRef": "disagreement.eow.summoned-ally.grain",
+      "workId": "work.echoes-of-wisdom",
+      "themeKey": "summoned-ally-externalizes-combat-choice",
+      "result": "pass",
+      "expected": "Narrow the theme to summon selection, placement, autonomous matchup feedback, and reversible replacement.",
+      "observed": "The revised chain contains one summon-budget transaction and removes binding, sword form, consumables, loot, and quest closure from the observation.",
+      "finalRulingApplied": true
+    },
+    {
+      "checkId": "remediation.eow.summoned-ally.dimension",
+      "disagreementRef": "disagreement.eow.summoned-ally.dimension",
+      "workId": "work.echoes-of-wisdom",
+      "themeKey": "summoned-ally-externalizes-combat-choice",
+      "result": "pass",
+      "expected": "Remove npc-quest unless a concrete resident-request state participates in the chain.",
+      "observed": "The summoned-ally theme now contains only growth-economy, combat-boss, and recovery-accessibility. NPC response moved to rift-expedition-converts-repair-into-story-state, whose before-state includes affected people, completion restores affected world elements, and consequences expose new conversations.",
+      "finalRulingApplied": true
+    },
+    {
+      "checkId": "remediation.eow.sync.dimension",
+      "disagreementRef": "disagreement.eow.sync.dimension",
+      "workId": "work.echoes-of-wisdom",
+      "themeKey": "sync-makes-relationship-visible",
+      "result": "pass",
+      "expected": "Remove the weak hardware-multiplayer edge and use a justified dossier-level N/A if no material causal rule exists.",
+      "observed": "The Sync theme now contains teaching-feedback, perspective-implementation, and production-runtime only. dimension.hardware-multiplayer is a reasoned notApplicableDimensions entry and has no observation edge.",
+      "finalRulingApplied": true
+    }
+  ],
+  "contractAndCompilerChecks": [
+    {
+      "checkId": "contract.reasoned-na-supported",
+      "result": "pass",
+      "evidence": "TITLE_PROFILE_CONTRACT defines optional notApplicableDimensions with a concrete rationale and excludes those dimensions from mandatory theme coverage."
+    },
+    {
+      "checkId": "contract.weak-edge-forbidden",
+      "result": "pass",
+      "evidence": "TITLE_PROFILE_CONTRACT requires a material causal role and explicitly forbids appending hardware-multiplayer or another weak edge to fill the matrix."
+    },
+    {
+      "checkId": "compiler.reason-and-coverage",
+      "result": "pass",
+      "evidence": "compile-research rejects unknown or short N/A rationales, excludes valid N/A dimensions from the missing-dimension check, and emits not-applicable dossier entries with the rationale in gaps and zero observationRefs."
+    },
+    {
+      "checkId": "compiler.na-theme-disjointness",
+      "result": "pass",
+      "evidence": "compile-research throws when a theme assigns a dimension also declared not applicable; the four reviewed profiles currently have zero such overlaps."
+    },
+    {
+      "checkId": "policy.compiler.validator-alignment",
+      "result": "pass",
+      "evidence": "coverage-policy defines valid N/A as a non-empty dossier rationale plus zero observation references, matching compile-research and validate-library behavior."
+    },
+    {
+      "checkId": "compiled.na-output",
+      "result": "pass",
+      "evidence": "Compiled dossiers mark BOTW and EOW hardware-multiplayer as not-applicable with one rationale, zero observationRefs, and no theme overlap; TLoZ and MM retain hardware only in material persistence chains."
+    }
+  ],
+  "validation": {
+    "command": "node design-library/scripts/validate-library.mjs",
+    "result": "pass",
+    "reportedPhase": "P2",
+    "schemaContracts": {
+      "metaValidated": 16,
+      "strictCompiled": 16,
+      "positiveFixtures": 16,
+      "negativeFixtures": 16
+    },
+    "coverage": {
+      "workCoverage": 1,
+      "dimensionCoverage": 1,
+      "coreDimensionCoverage": 1,
+      "generalDimensionCoverage": 1,
+      "evidenceClosure": 1,
+      "observationDisposition": 1
+    }
+  },
+  "summary": {
+    "disagreementsReviewed": 10,
+    "disagreementsPassed": 10,
+    "disagreementsFailed": 0,
+    "contractAndCompilerChecksPassed": 6,
+    "contractAndCompilerChecksFailed": 0,
+    "allFinalRulingsApplied": true,
+    "blockers": [],
+    "adjudication": "pass",
+    "adjudicationReason": "All ten fixed disagreement rulings are materially represented in the revised profiles. Reasoned N/A coverage, weak-edge prohibition, compile-time disjointness, governance wording, generated dossiers, and semantic validation are aligned."
+  }
+}

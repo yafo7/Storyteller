@@ -1,0 +1,2674 @@
+{
+  "registryVersion": "1.0.0",
+  "generatedAt": "2026-07-18",
+  "lifecycle": {
+    "status": "historical-diagnostic",
+    "blocking": false,
+    "releaseSetAligned": false,
+    "blockingWholeGameGate": "P8",
+    "note": "This registry records an earlier 15-pattern abstraction exercise. It is not authorization for the conservative 13-pattern Beta and cannot substitute for P8 blind review of the frozen complete game."
+  },
+  "protocol": {
+    "id": "protocol.originality.p4-blind-2x2",
+    "reviewersPerCase": 2,
+    "applicationsPerPattern": 2,
+    "hardVeto": "Fail only when both blind reviewers independently converge on the same specific commercial title and encounter at confidence >= 0.65."
+  },
+  "applicationIntegrity": {
+    "algorithm": "sha256-canonical-json-v1",
+    "inlined": true,
+    "reviewerInputHashAttestationAvailable": false,
+    "authorshipBlindnessRecorded": false,
+    "combinationReviewerInputHashAttestationAvailable": true,
+    "combinationInputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be"
+  },
+  "combinationOriginalityGate": {
+    "status": "reviewed",
+    "verdict": "pass",
+    "autoCompositionAuthorized": true,
+    "candidateCount": 15,
+    "uniquePatternSetCount": 11,
+    "reviewedCaseCount": 10,
+    "passedCaseCount": 10,
+    "failedCaseCount": 0,
+    "structurallyExcludedCaseCount": 1,
+    "note": "Authorization applies only to the ten compatible pattern sets that passed two independent blind reviews. The mutually exclusive set remains unavailable by construction, and every production instance still runs its declared composition vetoes."
+  },
+  "patternCount": 15,
+  "caseCount": 30,
+  "passedCases": 30,
+  "failedCases": 0,
+  "cases": [
+    {
+      "caseId": "blind.case.0075bb0a6808a50b9d70",
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/0",
+      "applicationHash": "sha256:0525eb3d496d59ae3fe92ec880fd60d6e60b443cfc290eb4e6c1916c48c454ff",
+      "transformedApplication": {
+        "caseId": "blind.case.0075bb0a6808a50b9d70",
+        "storySummary": "影长检票员在极昼鲸骨车站发现永不落下的太阳让列车影子提前进入了错误站台。若不能在载客冰帆车穿过白夜地平线前解决，旅客会登上驶向融冰区的维修车。空间不再是房间清单，而成为一台可推理的整体装置。",
+        "gameplaySummary": "玩家操纵由巨型肋骨构成的日影转辙架的一条连续刻度，让邻近地面、机械和人物同时进入三种可读状态；每次改变都会开启一条路并关闭另一条，玩家必须携带状态信息跨过多个区域。选择会关闭一条显眼通路，同时保留一条可验证的恢复路径，避免不可逆困局。",
+        "spatialSummary": "三个相连房间共享一条状态轴，远端结果可从中央视线与返回环路重新确认。核心锚点是由巨型肋骨构成的日影转辙架，关键操作对象是能把影子延长一倍的烟晶票夹。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "肋骨投影在雪地上拼成完整站台编号承担主要前后差异，冰帆掠过不同骨架产生由远及近的低哨只在关键因果成立时出现；清晰的前后画面对比、与因果完成同步的声音、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "feedback",
+          "narrative-causality",
+          "objects",
+          "timing",
+          "audio-language",
+          "worldbuilding"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "三个相连房间共享一条状态轴，远端结果可从中央视线与返回环路重新确认。",
+          "objectRoleGraph": "能把影子延长一倍的烟晶票夹从情境道具转为可验证因果的操作节点，由巨型肋骨构成的日影转辙架从背景地标转为结果锚点。",
+          "actionSequence": "玩家操纵由巨型肋骨构成的日影转辙架的一条连续刻度，让邻近地面、机械和人物同时进入三种可读状态；每次改变都会开启一条路并关闭另一条，玩家必须携带状态信息跨过多个区域。",
+          "feedbackSignature": "肋骨投影在雪地上拼成完整站台编号承担主要前后差异，冰帆掠过不同骨架产生由远及近的低哨只在关键因果成立时出现；清晰的前后画面对比、与因果完成同步的声音、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "空间不再是房间清单，而成为一台可推理的整体装置。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.28,
+          "verdict": "pass",
+          "rationale": "共享状态轴同时改写多房间通路属于常见的状态切换谜题结构；三状态、回环恢复与远端反馈不足以锁定某一作品中的具体关卡。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.34,
+          "verdict": "pass",
+          "rationale": "A central three-state control that reconfigures several connected rooms resembles a broad family of dungeon-state puzzles. The shared axis, recovery loop, shadow apparatus, and station consequences do not identify one commercial title, much less a particular level."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.0083be350d3fda8ced9a",
+      "patternId": "pattern.constrained-vehicle-route",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/1",
+      "applicationHash": "sha256:1bff38b64fd1edfaa0dbbd325e5239254f121748faa227ec1c78ac73653f4837",
+      "transformedApplication": {
+        "caseId": "blind.case.0083be350d3fda8ced9a",
+        "storySummary": "夜班分拣员在地下菌丝邮局发现寄往不同洞层的孢子信件开始在错误管道中发芽。若不能在晨间换气开始前解决，发芽的管道会封死整座聚落的呼吸井。交通不只是加载间隔，而是持续体现角色职责的行动场。",
+        "gameplaySummary": "玩家先在图面规划经过贯穿大厅的透明气根柱的行程，途中根据移动危险调整速度与分岔，并用一次现场动作保护乘客；到站评价同时考虑安全、时间和照料。跨区时保留贯穿大厅的透明气根柱的方位关系，让新的场所读法可以与旧记忆比较。",
+        "spatialSummary": "受限路网提供多个可预见交汇点，危险方向与可改道窗口在抵达前可读。核心锚点是贯穿大厅的透明气根柱，关键操作对象是遇到特定气味便卷曲的菌纸标签。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "菌丝脉络由淡绿亮成暖金承担主要前后差异，中空木管发出的短促敲击只在关键因果成立时出现；立即可验证的路线变化、对象和人物的动作变化、不依赖颜色的界面状态共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "worldbuilding",
+          "characters",
+          "topology",
+          "feedback",
+          "narrative-causality",
+          "objects"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "受限路网提供多个可预见交汇点，危险方向与可改道窗口在抵达前可读。",
+          "objectRoleGraph": "遇到特定气味便卷曲的菌纸标签从情境道具转为可验证因果的操作节点，贯穿大厅的透明气根柱从背景地标转为结果锚点。",
+          "actionSequence": "玩家先在图面规划经过贯穿大厅的透明气根柱的行程，途中根据移动危险调整速度与分岔，并用一次现场动作保护乘客；到站评价同时考虑安全、时间和照料。",
+          "feedbackSignature": "菌丝脉络由淡绿亮成暖金承担主要前后差异，中空木管发出的短促敲击只在关键因果成立时出现；立即可验证的路线变化、对象和人物的动作变化、不依赖颜色的界面状态共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "交通不只是加载间隔，而是持续体现角色职责的行动场。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.17,
+          "verdict": "pass",
+          "rationale": "图面规划、途中改道、风险控制和到站评分可见于多种运输与护送玩法；没有独特路线、事件或角色组合可归到具体遭遇。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.38,
+          "verdict": "pass",
+          "rationale": "Map planning, speed and junction choices, passenger protection, and arrival scoring evoke vehicle-transport or escort missions generally. The fungal postal route has no distinctive route geometry, objective sequence, or set piece that supports a specific encounter attribution."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.0876c381e8cbe2f3de82",
+      "patternId": "pattern.action-first-onboarding",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/2",
+      "applicationHash": "sha256:1f374a7fb3d81c5ed2a7869177091474a6331e3c41a2561d0dcb98dcdbe6ea72",
+      "transformedApplication": {
+        "caseId": "blind.case.0876c381e8cbe2f3de82",
+        "storySummary": "临时桥梁看守在迁徙的玄武岩村发现村庄脚下的石兽在跨越峡谷时拒绝同时落足。若不能在峡谷热气流转向前解决，背负居民的三块街区会被拉向不同崖壁。一个角色定义明确的需求把移动、交谈和基础操作串成开场。",
+        "gameplaySummary": "玩家在无工具状态下先向只能在石兽停步时说真话的议事员求助、辨认危险并取回受压后会留下蓝色掌纹的软岩楔，由此获得整场游戏的基础动作；失败只退回几步且不会重复对白。完成后，一条可复核的判断被写入系住石兽步幅的中央绳塔，人物与机关随后读取同一个结果。",
+        "spatialSummary": "可见庇护点与轻度危险并置，路线用后果引导而非箭头强迫。核心锚点是系住石兽步幅的中央绳塔，关键操作对象是受压后会留下蓝色掌纹的软岩楔。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "绳塔拉索从刺耳摩擦变为沉稳共振先提示可行动窗口，随后由岩楔上的掌纹依落足次序连续显现和场景中的实际变化确认结果；使用清晰的前后画面对比、不依赖颜色的界面状态、对象和人物的动作变化，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "control-language",
+          "worldbuilding",
+          "characters",
+          "narrative-causality",
+          "topology",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "可见庇护点与轻度危险并置，路线用后果引导而非箭头强迫。",
+          "objectRoleGraph": "受压后会留下蓝色掌纹的软岩楔从情境道具转为可验证因果的操作节点，系住石兽步幅的中央绳塔从背景地标转为结果锚点。",
+          "actionSequence": "玩家在无工具状态下先向只能在石兽停步时说真话的议事员求助、辨认危险并取回受压后会留下蓝色掌纹的软岩楔，由此获得整场游戏的基础动作；失败只退回几步且不会重复对白。",
+          "feedbackSignature": "绳塔拉索从刺耳摩擦变为沉稳共振先提示可行动窗口，随后由岩楔上的掌纹依落足次序连续显现和场景中的实际变化确认结果；使用清晰的前后画面对比、不依赖颜色的界面状态、对象和人物的动作变化，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "一个角色定义明确的需求把移动、交谈和基础操作串成开场。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.12,
+          "verdict": "pass",
+          "rationale": "以求助、辨险、取回基础工具组成低惩罚开场，是广泛使用的教学节奏；虚构对象与空间关系没有指向已知的特定序章。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.22,
+          "verdict": "pass",
+          "rationale": "Learning the core action through a safe NPC request, a nearby hazard, and a recoverable tool is common onboarding structure. The migrating stone-beast village, truth-timed councilor, and footprint evidence do not map to a recognizable commercial level."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.0d3eef974ea2d55f26ba",
+      "patternId": "pattern.multi-solution-state-graph",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/3",
+      "applicationHash": "sha256:6b35734c3aed4d84cc54d085234c7d04c2aa5913de03984c70a2ca0e5aa4ed5a",
+      "transformedApplication": {
+        "caseId": "blind.case.0d3eef974ea2d55f26ba",
+        "storySummary": "临时代课员在废弃观星学校发现旧投影穹顶开始把学生的影子误认为新的星座。若不能在年度导航考试开始前解决，远航学员会用错误星图规划整年的补给航线。观察直接扩大行动语言，但新的用途来自当前故事对象而非复制既有场面。",
+        "gameplaySummary": "玩家把从一处观察到的有限功能登记后，在另一处以明确容量重新部署；同屏数量、位置和持续时间都有上限，替换旧部署比堆叠更多对象更有效。因果成立后，能够分层旋转的黑玻璃穹顶旁出现一条持续开放的折返通路，并立即缩短下一次行动。",
+        "spatialSummary": "解题区域允许垂直、水平与掩护三类构型，并保留一条不依赖复杂组合的恢复路线。核心锚点是能够分层旋转的黑玻璃穹顶，关键操作对象是只在真实星光下留痕的粉笔。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "穹顶齿圈在层级对齐时响起一次清亮卡扣先提示可行动窗口，随后由影子星座与真实光点以不同颜色分离和场景中的实际变化确认结果；使用对象和人物的动作变化、不依赖颜色的界面状态、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "objects",
+          "timing",
+          "visual-language",
+          "audio-language",
+          "control-language",
+          "worldbuilding"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "解题区域允许垂直、水平与掩护三类构型，并保留一条不依赖复杂组合的恢复路线。",
+          "objectRoleGraph": "只在真实星光下留痕的粉笔从情境道具转为可验证因果的操作节点，能够分层旋转的黑玻璃穹顶从背景地标转为结果锚点。",
+          "actionSequence": "玩家把从一处观察到的有限功能登记后，在另一处以明确容量重新部署；同屏数量、位置和持续时间都有上限，替换旧部署比堆叠更多对象更有效。",
+          "feedbackSignature": "穹顶齿圈在层级对齐时响起一次清亮卡扣先提示可行动窗口，随后由影子星座与真实光点以不同颜色分离和场景中的实际变化确认结果；使用对象和人物的动作变化、不依赖颜色的界面状态、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "观察直接扩大行动语言，但新的用途来自当前故事对象而非复制既有场面。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.5,
+          "verdict": "pass",
+          "rationale": "记录功能后以容量上限重新部署，容易联想到以召唤复制物解谜的整作级机制，但垂直、水平、掩护三类构型仍无法定位到某个具体房间或遭遇。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": "The Legend of Zelda: Echoes of Wisdom",
+          "guessEncounter": null,
+          "confidence": 0.58,
+          "verdict": "pass",
+          "rationale": "Registering a limited observed function and redeploying it under capacity and placement constraints recalls the Echo system at the title level. The observatory-school puzzle supplies no identifiable dungeon, room, boss, or quest from that game, so encounter-level attribution is not possible."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.224b7775b6bb85f4f8dc",
+      "patternId": "pattern.parallel-state-comparison",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/4",
+      "applicationHash": "sha256:bcc2daf60fdbfad00a28d956a7e612745906ada639422910c744a979f2cbfafd",
+      "transformedApplication": {
+        "caseId": "blind.case.224b7775b6bb85f4f8dc",
+        "storySummary": "街巷折叠师在会呼吸的纸城发现城市每次吸气都会把医院折到市场背面。若不能在下一轮长达一小时的深呼吸前解决，等待转运的病患会被困在没有出口的纸层中。两种现实各自只提供半个答案，玩家的比较行为完成叙事上的证据拼接。",
+        "gameplaySummary": "玩家在两套对应布局之间往返，把沾水后能暂时固定折痕的纤维针留在一侧改变另一侧的支撑关系；成功依赖比较相同坐标的差异，而不是逐个试门。完成后，一条可复核的判断被写入控制街区折线的中央书脊塔，人物与机关随后读取同一个结果。",
+        "spatialSummary": "控制街区折线的中央书脊塔在两套布局中位置恒定，墙体、人物与危险的差异形成可以记忆的成对路线。核心锚点是控制街区折线的中央书脊塔，关键操作对象是沾水后能暂时固定折痕的纤维针。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "纸墙舒展声与书脊塔的木片拍击逐步同步先提示可行动窗口，随后由街面折痕由虚线变成连续墨线和场景中的实际变化确认结果；使用清晰的前后画面对比、不依赖颜色的界面状态、短暂且可跳过的构图提示，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "timing",
+          "visual-language",
+          "audio-language",
+          "control-language",
+          "worldbuilding",
+          "topology"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "控制街区折线的中央书脊塔在两套布局中位置恒定，墙体、人物与危险的差异形成可以记忆的成对路线。",
+          "objectRoleGraph": "沾水后能暂时固定折痕的纤维针从情境道具转为可验证因果的操作节点，控制街区折线的中央书脊塔从背景地标转为结果锚点。",
+          "actionSequence": "玩家在两套对应布局之间往返，把沾水后能暂时固定折痕的纤维针留在一侧改变另一侧的支撑关系；成功依赖比较相同坐标的差异，而不是逐个试门。",
+          "feedbackSignature": "纸墙舒展声与书脊塔的木片拍击逐步同步先提示可行动窗口，随后由街面折痕由虚线变成连续墨线和场景中的实际变化确认结果；使用清晰的前后画面对比、不依赖颜色的界面状态、短暂且可跳过的构图提示，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "两种现实各自只提供半个答案，玩家的比较行为完成叙事上的证据拼接。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": "Dishonored 2",
+          "guessEncounter": "A Crack in the Slab",
+          "confidence": 0.58,
+          "verdict": "pass",
+          "rationale": "同坐标双布局及一侧行动改变另一侧结构，最接近 Stilton 庄园的时态切换任务；但双世界、时间切换和跨状态支撑变化也存在于多部作品，且这里没有保留该任务的独特目标或路线，未达高置信唯一归因。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.43,
+          "verdict": "pass",
+          "rationale": "Two corresponding realities, coordinate comparison, and actions in one layout affecting the other are familiar dual-world puzzle conventions. Many commercial games use that structure, while the folding paper city and support-changing needle do not expose a specific pre-existing encounter."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.3b1402213c068d52e260",
+      "patternId": "pattern.constrained-vehicle-route",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/5",
+      "applicationHash": "sha256:c473dfe76eab8a544f594c3fbe3adfd2070399444fed4944181961a595d348e7",
+      "transformedApplication": {
+        "caseId": "blind.case.3b1402213c068d52e260",
+        "storySummary": "替补机关师在火山陶瓷剧院发现舞台下的熔釉渠道把每段布景烧成了错误颜色。若不能在纪念演出开幕前解决，观众会把被篡改的颜色顺序当作一场公开指控。每次航行连接人物需求与空间增长，返程也会改变下一项委托。",
+        "gameplaySummary": "玩家驾驶可改变高度的载具，在三个层级之间运送只有受热后才显出裂纹的白瓷面具；选择较短路线会增加风险，较长路线则消耗时限，途中可在安全站重新规划。因果成立后，能够翻转三层舞台的巨型陶轮旁出现一条持续开放的折返通路，并立即缩短下一次行动。",
+        "spatialSummary": "路线图与现场地标共享编号，新增边会持久改变后续可达站点而非只播放过场。核心锚点是能够翻转三层舞台的巨型陶轮，关键操作对象是只有受热后才显出裂纹的白瓷面具。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "陶轮每完成一层咬合便发出一记脆响先提示可行动窗口，随后由釉色沿渠道从暗红凝固成清晰的黑白边界和场景中的实际变化确认结果；使用立即可验证的路线变化、对象和人物的动作变化、不依赖颜色的界面状态，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "feedback",
+          "objects",
+          "timing",
+          "visual-language",
+          "audio-language",
+          "control-language"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "路线图与现场地标共享编号，新增边会持久改变后续可达站点而非只播放过场。",
+          "objectRoleGraph": "只有受热后才显出裂纹的白瓷面具从情境道具转为可验证因果的操作节点，能够翻转三层舞台的巨型陶轮从背景地标转为结果锚点。",
+          "actionSequence": "玩家驾驶可改变高度的载具，在三个层级之间运送只有受热后才显出裂纹的白瓷面具；选择较短路线会增加风险，较长路线则消耗时限，途中可在安全站重新规划。",
+          "feedbackSignature": "陶轮每完成一层咬合便发出一记脆响先提示可行动窗口，随后由釉色沿渠道从暗红凝固成清晰的黑白边界和场景中的实际变化确认结果；使用立即可验证的路线变化、对象和人物的动作变化、不依赖颜色的界面状态，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "每次航行连接人物需求与空间增长，返程也会改变下一项委托。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.2,
+          "verdict": "pass",
+          "rationale": "分层载具运输、风险与时限权衡、在安全站重规划及永久开边是运输冒险的通用组合，没有可识别的具体航程或任务脚本。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.27,
+          "verdict": "pass",
+          "rationale": "Choosing safe, slow routes or risky shortcuts while transporting cargo through a growing network is a broad traversal-and-delivery pattern. The altitude-changing vehicle, porcelain masks, and three-layer theater do not correspond confidently to a known mission or level."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.40ff7501c1ccd837ccd9",
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/6",
+      "applicationHash": "sha256:d7f50af6eabd13cda1b2451741c0c57c092039236839bbaab2ccd8841a879b93",
+      "transformedApplication": {
+        "caseId": "blind.case.40ff7501c1ccd837ccd9",
+        "storySummary": "低重力嫁接员在月面废料果园发现回收金属培育出的果树开始把磁性果实抛向居住穹顶。若不能在下一次人造黎明启动前解决，果实会击穿刚修好的氧气薄膜。人物不再忽略世界变化，玩家也能从其具体行动感到后果被社会承认。",
+        "gameplaySummary": "玩家改变控制果园潮汐磁场的旧起重环的可见条件后，地图、把每棵树的生长误差画成漫画的巡检机器人的站位、可提供服务和对话目的读取同一个结果；切回旧条件时四者必须同步恢复。完成后，一条可复核的判断被写入控制果园潮汐磁场的旧起重环，人物与机关随后读取同一个结果。",
+        "spatialSummary": "人物所在区域与发生变化的环境保持可见因果关系，前后状态都有可达路线。核心锚点是控制果园潮汐磁场的旧起重环，关键操作对象是能改变磁极的双面修枝夹。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "金属花粉围绕磁极画出相反旋向的弧线承担主要前后差异，起重环从连续嗡鸣变为间隔明确的脉冲只在关键因果成立时出现；对象和人物的动作变化、读取同一结果的人物回应、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "topology",
+          "feedback",
+          "narrative-causality",
+          "visual-language",
+          "objects",
+          "worldbuilding"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "人物所在区域与发生变化的环境保持可见因果关系，前后状态都有可达路线。",
+          "objectRoleGraph": "能改变磁极的双面修枝夹从情境道具转为可验证因果的操作节点，控制果园潮汐磁场的旧起重环从背景地标转为结果锚点。",
+          "actionSequence": "玩家改变控制果园潮汐磁场的旧起重环的可见条件后，地图、把每棵树的生长误差画成漫画的巡检机器人的站位、可提供服务和对话目的读取同一个结果；切回旧条件时四者必须同步恢复。",
+          "feedbackSignature": "金属花粉围绕磁极画出相反旋向的弧线承担主要前后差异，起重环从连续嗡鸣变为间隔明确的脉冲只在关键因果成立时出现；对象和人物的动作变化、读取同一结果的人物回应、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "人物不再忽略世界变化，玩家也能从其具体行动感到后果被社会承认。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.16,
+          "verdict": "pass",
+          "rationale": "地图、NPC 站位、服务和对白同步读取世界状态，是状态一致性的通用设计要求；缺少足以识别某一商业游戏遭遇的动作序列。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.16,
+          "verdict": "pass",
+          "rationale": "Synchronizing map state, NPC position, services, dialogue, and reversible environmental conditions is general reactive-world design. No action sequence or spatial signature ties the lunar magnetic orchard to a specific commercial encounter."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.41335aad56aa02fb7750",
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/7",
+      "applicationHash": "sha256:e05c2f48b086525e2fe173fdb4f7c2ebdefd5addc9c7a05141c804c052aa354a",
+      "transformedApplication": {
+        "caseId": "blind.case.41335aad56aa02fb7750",
+        "storySummary": "街巷折叠师在会呼吸的纸城发现城市每次吸气都会把医院折到市场背面。若不能在下一轮长达一小时的深呼吸前解决，等待转运的病患会被困在没有出口的纸层中。远方承诺与到达后的新可能形成连续好奇链，而非一次性收藏。",
+        "gameplaySummary": "玩家从控制街区折线的中央书脊塔看见一个无法立即解释的远景，将它作为自选目标；抵达后获得能改变未来旅行方式的回报，并从新视点看到下一处问题。完成后，一条可复核的判断被写入控制街区折线的中央书脊塔，人物与机关随后读取同一个结果。",
+        "spatialSummary": "远景在接近过程中持续可见，沿途至少有两种路线与一个可撤回的支路。核心锚点是控制街区折线的中央书脊塔，关键操作对象是沾水后能暂时固定折痕的纤维针。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "街面折痕由虚线变成连续墨线承担主要前后差异，纸墙舒展声与书脊塔的木片拍击逐步同步只在关键因果成立时出现；短暂且可跳过的构图提示、与因果完成同步的声音、清晰的前后画面对比共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "feedback",
+          "narrative-causality",
+          "control-language",
+          "objects",
+          "worldbuilding",
+          "characters"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "远景在接近过程中持续可见，沿途至少有两种路线与一个可撤回的支路。",
+          "objectRoleGraph": "沾水后能暂时固定折痕的纤维针从情境道具转为可验证因果的操作节点，控制街区折线的中央书脊塔从背景地标转为结果锚点。",
+          "actionSequence": "玩家从控制街区折线的中央书脊塔看见一个无法立即解释的远景，将它作为自选目标；抵达后获得能改变未来旅行方式的回报，并从新视点看到下一处问题。",
+          "feedbackSignature": "街面折痕由虚线变成连续墨线承担主要前后差异，纸墙舒展声与书脊塔的木片拍击逐步同步只在关键因果成立时出现；短暂且可跳过的构图提示、与因果完成同步的声音、清晰的前后画面对比共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "远方承诺与到达后的新可能形成连续好奇链，而非一次性收藏。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.15,
+          "verdict": "pass",
+          "rationale": "以持续可见远景引导自选目标，并让奖励开启下一段旅行，是开放世界常见的好奇链；没有唯一地标或具体遭遇指纹。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.29,
+          "verdict": "pass",
+          "rationale": "A visible distant landmark that yields traversal improvement and reveals the next landmark is common open-world curiosity chaining. The paper-city landmark, route alternatives, and folding reward do not distinguish one title or one authored location."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.49d49aa1c2ba481216b1",
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/8",
+      "applicationHash": "sha256:cc2eefa58e4e7f1b08ad5b402e755e84c69f9909179cf6f862fc879b6a51749c",
+      "transformedApplication": {
+        "caseId": "blind.case.49d49aa1c2ba481216b1",
+        "storySummary": "影长检票员在极昼鲸骨车站发现永不落下的太阳让列车影子提前进入了错误站台。若不能在载客冰帆车穿过白夜地平线前解决，旅客会登上驶向融冰区的维修车。社会回应和空间进展绑定同一事实，避免奖励只存在于菜单。",
+        "gameplaySummary": "玩家先帮助根据影子而非车号认路的盲眼乘务员完成一项局部需求，再远程改变公共环境；返程时人物不只更换台词，还改用另一条路线并开放一项新的合作动作。完成后，一条可复核的判断被写入由巨型肋骨构成的日影转辙架，人物与机关随后读取同一个结果。",
+        "spatialSummary": "远端变化通过可追踪通路连接到人物工作区，返程沿途可提前看见行为差异。核心锚点是由巨型肋骨构成的日影转辙架，关键操作对象是能把影子延长一倍的烟晶票夹。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "冰帆掠过不同骨架产生由远及近的低哨先提示可行动窗口，随后由肋骨投影在雪地上拼成完整站台编号和场景中的实际变化确认结果；使用对象和人物的动作变化、读取同一结果的人物回应、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "control-language",
+          "worldbuilding",
+          "characters",
+          "narrative-causality",
+          "topology",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "远端变化通过可追踪通路连接到人物工作区，返程沿途可提前看见行为差异。",
+          "objectRoleGraph": "能把影子延长一倍的烟晶票夹从情境道具转为可验证因果的操作节点，由巨型肋骨构成的日影转辙架从背景地标转为结果锚点。",
+          "actionSequence": "玩家先帮助根据影子而非车号认路的盲眼乘务员完成一项局部需求，再远程改变公共环境；返程时人物不只更换台词，还改用另一条路线并开放一项新的合作动作。",
+          "feedbackSignature": "冰帆掠过不同骨架产生由远及近的低哨先提示可行动窗口，随后由肋骨投影在雪地上拼成完整站台编号和场景中的实际变化确认结果；使用对象和人物的动作变化、读取同一结果的人物回应、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "社会回应和空间进展绑定同一事实，避免奖励只存在于菜单。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.19,
+          "verdict": "pass",
+          "rationale": "先满足 NPC 局部需求、远端改变环境、返程看到其行动与合作能力变化，属于通用的世界响应式任务结构，不能锁定具体支线。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.23,
+          "verdict": "pass",
+          "rationale": "A local favor followed by a distant world change and an NPC's new route or cooperative action is a widespread consequence-driven side-quest pattern. The blind conductor and shadow-routing station do not match a specific known quest."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.51fdbd1ce696fc287bc4",
+      "patternId": "pattern.action-first-onboarding",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/9",
+      "applicationHash": "sha256:c95640f019f6afb7d27486ffe32059e6249e1f74ffe65754010ff4e82ccfecf8",
+      "transformedApplication": {
+        "caseId": "blind.case.51fdbd1ce696fc287bc4",
+        "storySummary": "夜班分拣员在地下菌丝邮局发现寄往不同洞层的孢子信件开始在错误管道中发芽。若不能在晨间换气开始前解决，发芽的管道会封死整座聚落的呼吸井。玩家先通过责任理解自己是谁，再决定要了解多少历史。",
+        "gameplaySummary": "开场不给背景说明，玩家先完成一项安全且符合夜班分拣员职责的动作：检查遇到特定气味便卷曲的菌纸标签、移动到贯穿大厅的透明气根柱并处理一个小故障；反馈同时说明身份、眼前目标和一条世界规律。完成后，一条可复核的判断被写入贯穿大厅的透明气根柱，人物与机关随后读取同一个结果。",
+        "spatialSummary": "起点、目标和安全重试点在一个短回路内，完成后才开放可选背景信息。核心锚点是贯穿大厅的透明气根柱，关键操作对象是遇到特定气味便卷曲的菌纸标签。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "菌丝脉络由淡绿亮成暖金承担主要前后差异，中空木管发出的短促敲击只在关键因果成立时出现；清晰的前后画面对比、不依赖颜色的界面状态、对象和人物的动作变化共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "narrative-causality",
+          "control-language",
+          "visual-language",
+          "objects",
+          "worldbuilding",
+          "characters"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "起点、目标和安全重试点在一个短回路内，完成后才开放可选背景信息。",
+          "objectRoleGraph": "遇到特定气味便卷曲的菌纸标签从情境道具转为可验证因果的操作节点，贯穿大厅的透明气根柱从背景地标转为结果锚点。",
+          "actionSequence": "开场不给背景说明，玩家先完成一项安全且符合夜班分拣员职责的动作：检查遇到特定气味便卷曲的菌纸标签、移动到贯穿大厅的透明气根柱并处理一个小故障；反馈同时说明身份、眼前目标和一条世界规律。",
+          "feedbackSignature": "菌丝脉络由淡绿亮成暖金承担主要前后差异，中空木管发出的短促敲击只在关键因果成立时出现；清晰的前后画面对比、不依赖颜色的界面状态、对象和人物的动作变化共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "玩家先通过责任理解自己是谁，再决定要了解多少历史。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.13,
+          "verdict": "pass",
+          "rationale": "通过职业动作而非背景说明完成身份教学，是常见的冷开场手法；检查标签、移动与修理的小回路没有可归因的专属细节。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.14,
+          "verdict": "pass",
+          "rationale": "Introducing identity, goal, and one world rule through a safe occupational task before optional exposition is broad diegetic onboarding. The spore-mail sorting action does not preserve any recognizable commercial opening encounter."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.53b628ae74274b897540",
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/10",
+      "applicationHash": "sha256:39b708de3ac5d36106e24b48c4c36cd4f404e7b0a00b89e9ac09ae36899a221e",
+      "transformedApplication": {
+        "caseId": "blind.case.53b628ae74274b897540",
+        "storySummary": "低重力嫁接员在月面废料果园发现回收金属培育出的果树开始把磁性果实抛向居住穹顶。若不能在下一次人造黎明启动前解决，果实会击穿刚修好的氧气薄膜。细心观察获得可持续的未来便利，同时补充把每棵树的生长误差画成漫画的巡检机器人未公开的一段处境。",
+        "gameplaySummary": "玩家先在安全路径旁看见一处轻微异常，通过可选试探进入隐藏区；奖励既改善角色能力，也永久增加一处便捷落点。完成后，一条可复核的判断被写入控制果园潮汐磁场的旧起重环，人物与机关随后读取同一个结果。",
+        "spatialSummary": "秘密入口有两级可读线索，失败不会消耗唯一物件，发现后与主路线形成回环。核心锚点是控制果园潮汐磁场的旧起重环，关键操作对象是能改变磁极的双面修枝夹。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "起重环从连续嗡鸣变为间隔明确的脉冲先提示可行动窗口，随后由金属花粉围绕磁极画出相反旋向的弧线和场景中的实际变化确认结果；使用短暂且可跳过的构图提示、与因果完成同步的声音、清晰的前后画面对比，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "objects",
+          "timing",
+          "visual-language",
+          "audio-language",
+          "control-language",
+          "worldbuilding"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "秘密入口有两级可读线索，失败不会消耗唯一物件，发现后与主路线形成回环。",
+          "objectRoleGraph": "能改变磁极的双面修枝夹从情境道具转为可验证因果的操作节点，控制果园潮汐磁场的旧起重环从背景地标转为结果锚点。",
+          "actionSequence": "玩家先在安全路径旁看见一处轻微异常，通过可选试探进入隐藏区；奖励既改善角色能力，也永久增加一处便捷落点。",
+          "feedbackSignature": "起重环从连续嗡鸣变为间隔明确的脉冲先提示可行动窗口，随后由金属花粉围绕磁极画出相反旋向的弧线和场景中的实际变化确认结果；使用短暂且可跳过的构图提示、与因果完成同步的声音、清晰的前后画面对比，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "细心观察获得可持续的未来便利，同时补充把每棵树的生长误差画成漫画的巡检机器人未公开的一段处境。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.18,
+          "verdict": "pass",
+          "rationale": "安全路径旁的两级秘密线索、能力奖励和永久落点是探索游戏常用的秘密设计，无法据此识别某个具体隐藏区域。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.24,
+          "verdict": "pass",
+          "rationale": "A subtly signposted optional area that grants both a capability benefit and a permanent shortcut is standard exploration design. The two-stage clueing and orchard loop are insufficient to identify a particular secret room or game."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.6d65f8861ed1bf06dcc5",
+      "patternId": "pattern.knowledge-gated-revisit",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/11",
+      "applicationHash": "sha256:3c0c901058150526412dc2aa5e06589d69d4c6c119a69a4271ebe3419ba2b3b9",
+      "transformedApplication": {
+        "caseId": "blind.case.6d65f8861ed1bf06dcc5",
+        "storySummary": "种子保温员在冰川温室列车发现列车穿越裂谷时，三个车厢的昼夜循环突然彼此错位。若不能在冻土隧道封闭前解决，最后一批耐寒种子会在错误季相中提前萌发。真相来自玩家重新解释早已存在的证据，也迫使把每株幼苗都叫作不同名字的列车长承认此前的推断有误。",
+        "gameplaySummary": "玩家初访时可自由接近连接车厢的棱镜换气廊，但只能看到可储存一小时日照的黑釉花盆留下的三段不完整痕迹；在别处理解排列规则后，玩家不获得新工具，返回并用早已具备的观察、移动和交互动作重排痕迹。完成后，一条可复核的判断被写入连接车厢的棱镜换气廊，人物与机关随后读取同一个结果。",
+        "spatialSummary": "连接车厢的棱镜换气廊从一处看似封闭的终点变成可从侧面进入的交叉口，旧路线和新路线保持同一地标关系。核心锚点是连接车厢的棱镜换气廊，关键操作对象是可储存一小时日照的黑釉花盆。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "霜花沿玻璃边缘按车厢次序退去承担主要前后差异，暖气阀门由杂乱喷气变成稳定四拍只在关键因果成立时出现；不依赖颜色的界面状态、对象和人物的动作变化、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "topology",
+          "feedback",
+          "narrative-causality",
+          "objects",
+          "control-language",
+          "worldbuilding"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "连接车厢的棱镜换气廊从一处看似封闭的终点变成可从侧面进入的交叉口，旧路线和新路线保持同一地标关系。",
+          "objectRoleGraph": "可储存一小时日照的黑釉花盆从情境道具转为可验证因果的操作节点，连接车厢的棱镜换气廊从背景地标转为结果锚点。",
+          "actionSequence": "玩家初访时可自由接近连接车厢的棱镜换气廊，但只能看到可储存一小时日照的黑釉花盆留下的三段不完整痕迹；在别处理解排列规则后，玩家不获得新工具，返回并用早已具备的观察、移动和交互动作重排痕迹。",
+          "feedbackSignature": "霜花沿玻璃边缘按车厢次序退去承担主要前后差异，暖气阀门由杂乱喷气变成稳定四拍只在关键因果成立时出现；不依赖颜色的界面状态、对象和人物的动作变化、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "真相来自玩家重新解释早已存在的证据，也迫使把每株幼苗都叫作不同名字的列车长承认此前的推断有误。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.4,
+          "verdict": "pass",
+          "rationale": "无新工具、只凭异地获得的知识回访并重释旧证据，明显属于知识门控探索；它会让人联想到多部推理与探索游戏，但三段痕迹和侧向入口不足以确定具体谜题。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.42,
+          "verdict": "pass",
+          "rationale": "Returning to an old location with knowledge rather than a new tool strongly resembles knowledge-gated exploration games as a class. The prism corridor, daylight-storing pots, and three-trace rearrangement do not align confidently with a named planet, puzzle, or level."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.7487b163a1e18870b6ef",
+      "patternId": "pattern.parallel-state-comparison",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/12",
+      "applicationHash": "sha256:e9fce678b90b2cd455d05d3fd90d752ccdd7ebf87727febab3f5b6d1a181dd47",
+      "transformedApplication": {
+        "caseId": "blind.case.7487b163a1e18870b6ef",
+        "storySummary": "机械授粉观察员在发条昆虫温室发现新孵化的铜蜂开始为尚未开花的植株传粉。若不能在温室进入夜间密封前解决，错误花粉会让食用藤蔓在一夜内木质化。空间不再是房间清单，而成为一台可推理的整体装置。",
+        "gameplaySummary": "玩家操纵记录蜂群路线的玻璃蜂巢的一条连续刻度，让邻近地面、机械和人物同时进入三种可读状态；每次改变都会开启一条路并关闭另一条，玩家必须携带状态信息跨过多个区域。系统用铜蜂腹部的刻度灯组成新的飞行箭头和翅轮噪声在正确花序旁降为柔和和弦短暂聚焦结果，随后立即返还控制。",
+        "spatialSummary": "三个相连房间共享一条状态轴，远端结果可从中央视线与返回环路重新确认。核心锚点是记录蜂群路线的玻璃蜂巢，关键操作对象是可模仿一种花香的细齿钥匙。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "铜蜂腹部的刻度灯组成新的飞行箭头承担主要前后差异，翅轮噪声在正确花序旁降为柔和和弦只在关键因果成立时出现；清晰的前后画面对比、不依赖颜色的界面状态、短暂且可跳过的构图提示共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "objects",
+          "timing",
+          "worldbuilding",
+          "characters",
+          "topology",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "三个相连房间共享一条状态轴，远端结果可从中央视线与返回环路重新确认。",
+          "objectRoleGraph": "可模仿一种花香的细齿钥匙从情境道具转为可验证因果的操作节点，记录蜂群路线的玻璃蜂巢从背景地标转为结果锚点。",
+          "actionSequence": "玩家操纵记录蜂群路线的玻璃蜂巢的一条连续刻度，让邻近地面、机械和人物同时进入三种可读状态；每次改变都会开启一条路并关闭另一条，玩家必须携带状态信息跨过多个区域。",
+          "feedbackSignature": "铜蜂腹部的刻度灯组成新的飞行箭头承担主要前后差异，翅轮噪声在正确花序旁降为柔和和弦只在关键因果成立时出现；清晰的前后画面对比、不依赖颜色的界面状态、短暂且可跳过的构图提示共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "空间不再是房间清单，而成为一台可推理的整体装置。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.27,
+          "verdict": "pass",
+          "rationale": "连续刻度统一驱动三个房间并开闭相反路径，仍是常见的多区状态机谜题；蜂群主题和反馈已形成独立语境，无法匹配唯一关卡。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.34,
+          "verdict": "pass",
+          "rationale": "One continuous setting controlling three room states and trading one open route for another is a common systemic-dungeon construction. The clockwork pollination theme and readable bee signals provide no specific encounter correspondence."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.788d8afca0b073fedc81",
+      "patternId": "pattern.landmark-promises-future-use",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/13",
+      "applicationHash": "sha256:973a4e28d782aaf73fe63088d34ea76c46cae3a40529442a0562b484f6192f1b",
+      "transformedApplication": {
+        "caseId": "blind.case.788d8afca0b073fedc81",
+        "storySummary": "避雷索调度员在雷暴农场升降城发现漂浮田块在收割季被同一束闪电串成了危险闭环。若不能在主风暴抵达谷口前解决，闭环会把储粮塔变成整座城市的放电针。远方承诺与到达后的新可能形成连续好奇链，而非一次性收藏。",
+        "gameplaySummary": "玩家从分配田块高度的链式升降井看见一个无法立即解释的远景，将它作为自选目标；抵达后获得能改变未来旅行方式的回报，并从新视点看到下一处问题。完成后，一条可复核的判断被写入分配田块高度的链式升降井，人物与机关随后读取同一个结果。",
+        "spatialSummary": "远景在接近过程中持续可见，沿途至少有两种路线与一个可撤回的支路。核心锚点是分配田块高度的链式升降井，关键操作对象是触电后会改变重量的云母秤砣。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "电流沿避雷索显示为可预测的分叉路径承担主要前后差异，升降井链条以越来越短的间隔锁定只在关键因果成立时出现；清晰的前后画面对比、短暂且可跳过的构图提示、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "visual-language",
+          "audio-language",
+          "objects",
+          "worldbuilding",
+          "characters",
+          "topology"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "远景在接近过程中持续可见，沿途至少有两种路线与一个可撤回的支路。",
+          "objectRoleGraph": "触电后会改变重量的云母秤砣从情境道具转为可验证因果的操作节点，分配田块高度的链式升降井从背景地标转为结果锚点。",
+          "actionSequence": "玩家从分配田块高度的链式升降井看见一个无法立即解释的远景，将它作为自选目标；抵达后获得能改变未来旅行方式的回报，并从新视点看到下一处问题。",
+          "feedbackSignature": "电流沿避雷索显示为可预测的分叉路径承担主要前后差异，升降井链条以越来越短的间隔锁定只在关键因果成立时出现；清晰的前后画面对比、短暂且可跳过的构图提示、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "远方承诺与到达后的新可能形成连续好奇链，而非一次性收藏。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.15,
+          "verdict": "pass",
+          "rationale": "从远景选择目标、沿多路线接近、取得旅行能力并看到下一问题，是通用开放世界引导结构，未保留任何可识别的具体地点或事件。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.28,
+          "verdict": "pass",
+          "rationale": "Maintaining sight of an unexplained destination, offering multiple approaches, then revealing a new destination from the reward point is broad open-world composition. The storm-farm lift network does not identify a particular commercial landmark encounter."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.79d16d5fc3327f9eaf4a",
+      "patternId": "pattern.local-rule-development-arc",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/14",
+      "applicationHash": "sha256:34dc9a7cad0c610246b139c5d31b1a489fdb6a53144afe8021ffddc4cf877f34",
+      "transformedApplication": {
+        "caseId": "blind.case.79d16d5fc3327f9eaf4a",
+        "storySummary": "升力配药师在云端风筝诊所发现病患风筝的骨架开始吸入彼此不相容的高空气流。若不能在诊所越过雷云边界前解决，整片吊舱会因升力失衡坠入暴雨层。能力成长由玩家操作过的因果组成，结尾不引入隐藏的新规则。",
+        "gameplaySummary": "玩家先在无失败惩罚的隔间用会随湿度折叠的薄木翼片改变一个清晰目标，随后经历独立练习、环境变式、与旧动作组合，最后在有压力但可快速重试的场景中证明理解。因果成立后，诊所中央的压差转盘旁出现一条持续开放的折返通路，并立即缩短下一次行动。",
+        "spatialSummary": "五个相邻小区分别承担示范、练习、变式、组合和考试，回路允许玩家返回上一阶段复查。核心锚点是诊所中央的压差转盘，关键操作对象是会随湿度折叠的薄木翼片。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "牵索上的结依次亮起青、白、橙三色承担主要前后差异，风穿过翼片时形成由低到高的哨音只在关键因果成立时出现；对象和人物的动作变化、不依赖颜色的界面状态、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "characters",
+          "topology",
+          "feedback",
+          "narrative-causality",
+          "objects",
+          "timing"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "五个相邻小区分别承担示范、练习、变式、组合和考试，回路允许玩家返回上一阶段复查。",
+          "objectRoleGraph": "会随湿度折叠的薄木翼片从情境道具转为可验证因果的操作节点，诊所中央的压差转盘从背景地标转为结果锚点。",
+          "actionSequence": "玩家先在无失败惩罚的隔间用会随湿度折叠的薄木翼片改变一个清晰目标，随后经历独立练习、环境变式、与旧动作组合，最后在有压力但可快速重试的场景中证明理解。",
+          "feedbackSignature": "牵索上的结依次亮起青、白、橙三色承担主要前后差异，风穿过翼片时形成由低到高的哨音只在关键因果成立时出现；对象和人物的动作变化、不依赖颜色的界面状态、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "能力成长由玩家操作过的因果组成，结尾不引入隐藏的新规则。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.25,
+          "verdict": "pass",
+          "rationale": "示范、练习、变式、组合、考试的五段教学梯度广泛存在于解谜和动作游戏；没有某部作品独有的机制或关卡拓扑。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.45,
+          "verdict": "pass",
+          "rationale": "A sequence of demonstration, isolated practice, variation, combination, and pressured exam recalls many puzzle-game tutorial arcs. It describes pedagogical progression rather than a distinctive chamber layout or encounter from a specific title."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.7a62776e0f96d3be90f1",
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/15",
+      "applicationHash": "sha256:711ba69ff90f02d4912b0cfa93c101ef12afa39fcc4097b49e14df0b06e52a3b",
+      "transformedApplication": {
+        "caseId": "blind.case.7a62776e0f96d3be90f1",
+        "storySummary": "机械授粉观察员在发条昆虫温室发现新孵化的铜蜂开始为尚未开花的植株传粉。若不能在温室进入夜间密封前解决，错误花粉会让食用藤蔓在一夜内木质化。成长由可操作关系证明，角色承诺通过改变旧空间而兑现。",
+        "gameplaySummary": "玩家初次绕行记录蜂群路线的玻璃蜂巢并看见明确但暂时无法处理的界面；在一段与认为失序蜂群正在传递警告的老园丁共同完成的事件后，可模仿一种花香的细齿钥匙获得新的物理用途，返回时同一界面可被改变。因果成立后，记录蜂群路线的玻璃蜂巢旁出现一条持续开放的折返通路，并立即缩短下一次行动。",
+        "spatialSummary": "新动作打开旧路径上两个短支路，并把较远区域折回初访入口，避免能力只服务一扇门。核心锚点是记录蜂群路线的玻璃蜂巢，关键操作对象是可模仿一种花香的细齿钥匙。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "铜蜂腹部的刻度灯组成新的飞行箭头承担主要前后差异，翅轮噪声在正确花序旁降为柔和和弦只在关键因果成立时出现；对象和人物的动作变化、立即可验证的路线变化、清晰的前后画面对比共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "characters",
+          "topology",
+          "feedback",
+          "narrative-causality",
+          "objects",
+          "worldbuilding"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "新动作打开旧路径上两个短支路，并把较远区域折回初访入口，避免能力只服务一扇门。",
+          "objectRoleGraph": "可模仿一种花香的细齿钥匙从情境道具转为可验证因果的操作节点，记录蜂群路线的玻璃蜂巢从背景地标转为结果锚点。",
+          "actionSequence": "玩家初次绕行记录蜂群路线的玻璃蜂巢并看见明确但暂时无法处理的界面；在一段与认为失序蜂群正在传递警告的老园丁共同完成的事件后，可模仿一种花香的细齿钥匙获得新的物理用途，返回时同一界面可被改变。",
+          "feedbackSignature": "铜蜂腹部的刻度灯组成新的飞行箭头承担主要前后差异，翅轮噪声在正确花序旁降为柔和和弦只在关键因果成立时出现；对象和人物的动作变化、立即可验证的路线变化、清晰的前后画面对比共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "成长由可操作关系证明，角色承诺通过改变旧空间而兑现。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.2,
+          "verdict": "pass",
+          "rationale": "事件赋予旧物新用途、回访旧路径并打开多个支路，是典型能力门控与回环设计；没有足够细节定位到某次能力获得事件。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.29,
+          "verdict": "pass",
+          "rationale": "Previewing a blocked interface, gaining a contextual ability through a character event, and returning to open several old routes is conventional ability-gated exploration. The floral key and glass hive do not indicate a specific commercial level."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.92f38b9e0a229f1967c3",
+      "patternId": "pattern.optional-secret-readability",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/16",
+      "applicationHash": "sha256:8e6f89af9c3859eded46d1be968864170111c8816d5f946d0dca5545e2544ae3",
+      "transformedApplication": {
+        "caseId": "blind.case.92f38b9e0a229f1967c3",
+        "storySummary": "潮汐抄表员在雾潮灯塔群发现三座灯塔在同一夜给出了互相矛盾的水位记录。若不能在避难船队抵达浅海前解决，整支船队会被错误灯号引向盐礁。细心观察获得可持续的未来便利，同时补充拒绝离开雾笛室的老领航员未公开的一段处境。",
+        "gameplaySummary": "玩家先在安全路径旁看见一处轻微异常，通过可选试探进入隐藏区；奖励既改善角色能力，也永久增加一处便捷落点。完成后，一条可复核的判断被写入悬在主塔下方的沉钟闸门，人物与机关随后读取同一个结果。",
+        "spatialSummary": "秘密入口有两级可读线索，失败不会消耗唯一物件，发现后与主路线形成回环。核心锚点是悬在主塔下方的沉钟闸门，关键操作对象是会吸收盐分并显出旧刻度的纸带。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "三声远近不同的铜钟回响先提示可行动窗口，随后由雾线从银白逐段转为靛蓝和场景中的实际变化确认结果；使用清晰的前后画面对比、不依赖颜色的界面状态、对象和人物的动作变化，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "feedback",
+          "characters",
+          "narrative-causality",
+          "objects",
+          "timing",
+          "visual-language"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "秘密入口有两级可读线索，失败不会消耗唯一物件，发现后与主路线形成回环。",
+          "objectRoleGraph": "会吸收盐分并显出旧刻度的纸带从情境道具转为可验证因果的操作节点，悬在主塔下方的沉钟闸门从背景地标转为结果锚点。",
+          "actionSequence": "玩家先在安全路径旁看见一处轻微异常，通过可选试探进入隐藏区；奖励既改善角色能力，也永久增加一处便捷落点。",
+          "feedbackSignature": "三声远近不同的铜钟回响先提示可行动窗口，随后由雾线从银白逐段转为靛蓝和场景中的实际变化确认结果；使用清晰的前后画面对比、不依赖颜色的界面状态、对象和人物的动作变化，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "细心观察获得可持续的未来便利，同时补充拒绝离开雾笛室的老领航员未公开的一段处境。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.18,
+          "verdict": "pass",
+          "rationale": "可选异常、两级入口线索、非消耗试探和回环奖励是泛用秘密模板；灯塔与纸带没有对应到熟知的特定隐藏遭遇。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.24,
+          "verdict": "pass",
+          "rationale": "Layered environmental clues leading to a safe optional secret, character context, and a lasting convenience reward are widespread. The tide-gauge tape and submerged bell gate do not preserve a recognizable secret encounter."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.93fee44cd1d9f8e7db74",
+      "patternId": "pattern.landmark-promises-future-use",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/17",
+      "applicationHash": "sha256:244d3c86efcd843411a39833ad8a76af0ff045d4703f953397a1be469078a332",
+      "transformedApplication": {
+        "caseId": "blind.case.93fee44cd1d9f8e7db74",
+        "storySummary": "街巷折叠师在会呼吸的纸城发现城市每次吸气都会把医院折到市场背面。若不能在下一轮长达一小时的深呼吸前解决，等待转运的病患会被困在没有出口的纸层中。细心观察获得可持续的未来便利，同时补充用剪纸记录每次城市姿态的送餐员未公开的一段处境。",
+        "gameplaySummary": "玩家先在安全路径旁看见一处轻微异常，通过可选试探进入隐藏区；奖励既改善角色能力，也永久增加一处便捷落点。因果成立后，控制街区折线的中央书脊塔旁出现一条持续开放的折返通路，并立即缩短下一次行动。",
+        "spatialSummary": "秘密入口有两级可读线索，失败不会消耗唯一物件，发现后与主路线形成回环。核心锚点是控制街区折线的中央书脊塔，关键操作对象是沾水后能暂时固定折痕的纤维针。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "纸墙舒展声与书脊塔的木片拍击逐步同步先提示可行动窗口，随后由街面折痕由虚线变成连续墨线和场景中的实际变化确认结果；使用清晰的前后画面对比、短暂且可跳过的构图提示、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "timing",
+          "visual-language",
+          "audio-language",
+          "control-language",
+          "worldbuilding",
+          "topology"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "秘密入口有两级可读线索，失败不会消耗唯一物件，发现后与主路线形成回环。",
+          "objectRoleGraph": "沾水后能暂时固定折痕的纤维针从情境道具转为可验证因果的操作节点，控制街区折线的中央书脊塔从背景地标转为结果锚点。",
+          "actionSequence": "玩家先在安全路径旁看见一处轻微异常，通过可选试探进入隐藏区；奖励既改善角色能力，也永久增加一处便捷落点。",
+          "feedbackSignature": "纸墙舒展声与书脊塔的木片拍击逐步同步先提示可行动窗口，随后由街面折痕由虚线变成连续墨线和场景中的实际变化确认结果；使用清晰的前后画面对比、短暂且可跳过的构图提示、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "细心观察获得可持续的未来便利，同时补充用剪纸记录每次城市姿态的送餐员未公开的一段处境。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.17,
+          "verdict": "pass",
+          "rationale": "隐藏支路同时给能力改善、永久捷径和人物补叙，是常见探索奖励组合；纸城构造没有暴露可唯一对应的商业关卡。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.24,
+          "verdict": "pass",
+          "rationale": "The clue-secret-reward-shortcut loop is a broad exploration pattern, and the added NPC history is likewise common. Nothing in the breathing paper city identifies a commercial game's particular hidden room or side encounter."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.990c8b778b711efad08e",
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/18",
+      "applicationHash": "sha256:c0181fdcb8753109f0e6981816110226bde52262c713393400394c82bbc54a70",
+      "transformedApplication": {
+        "caseId": "blind.case.990c8b778b711efad08e",
+        "storySummary": "潮压记录官在深海珊瑚法庭发现证词被活珊瑚保存后，会随水压改变成互相冲突的句序。若不能在陪审鱼群迁出暖流前解决，一名无辜潜航员将因错误句序被永久放逐。新的身体经验改变了旧场所的意义，并为只愿在完全黑暗中补充证词的目击者提供此前不可能的救援方案。",
+        "gameplaySummary": "玩家先把能锁定一段水压的透明墨囊当作测量物，之后学会让它短暂改变自身与环境的接触方式；回到环绕审判席生长的记忆珊瑚墙时，可在不破坏原有地标的前提下通过过去只能远看的表面。因果成立后，环绕审判席生长的记忆珊瑚墙旁出现一条持续开放的折返通路，并立即缩短下一次行动。",
+        "spatialSummary": "一条熟悉走廊获得上下两种通行层，入口、出口和恢复点都能从原路线辨认。核心锚点是环绕审判席生长的记忆珊瑚墙，关键操作对象是能锁定一段水压的透明墨囊。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "气泡穿过墨囊时发出可比较的长短节拍先提示可行动窗口，随后由珊瑚文字由紫色分叉收拢成单一青线和场景中的实际变化确认结果；使用对象和人物的动作变化、立即可验证的路线变化、清晰的前后画面对比，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "topology",
+          "narrative-causality",
+          "feedback",
+          "characters",
+          "objects",
+          "timing"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "一条熟悉走廊获得上下两种通行层，入口、出口和恢复点都能从原路线辨认。",
+          "objectRoleGraph": "能锁定一段水压的透明墨囊从情境道具转为可验证因果的操作节点，环绕审判席生长的记忆珊瑚墙从背景地标转为结果锚点。",
+          "actionSequence": "玩家先把能锁定一段水压的透明墨囊当作测量物，之后学会让它短暂改变自身与环境的接触方式；回到环绕审判席生长的记忆珊瑚墙时，可在不破坏原有地标的前提下通过过去只能远看的表面。",
+          "feedbackSignature": "气泡穿过墨囊时发出可比较的长短节拍先提示可行动窗口，随后由珊瑚文字由紫色分叉收拢成单一青线和场景中的实际变化确认结果；使用对象和人物的动作变化、立即可验证的路线变化、清晰的前后画面对比，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "新的身体经验改变了旧场所的意义，并为只愿在完全黑暗中补充证词的目击者提供此前不可能的救援方案。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.29,
+          "verdict": "pass",
+          "rationale": "获得新的身体或接触方式后穿过旧日只能观察的表面，是标准的能力回访结构；上下两层走廊不足以区分众多类银河城关卡。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.31,
+          "verdict": "pass",
+          "rationale": "Turning an earlier measuring object into a traversal ability that recontextualizes a familiar corridor is recognizable metroidvania grammar. Passing through pressure-conditioned surfaces in a coral courtroom is not attributable to a specific ability room or level."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.a0aef5742f729817e45d",
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/19",
+      "applicationHash": "sha256:8199f815f645bb1de29abf90a5b3cbba67c6065ff65c4ed9cda8ab5e985374d1",
+      "transformedApplication": {
+        "caseId": "blind.case.a0aef5742f729817e45d",
+        "storySummary": "回声测绘师在镜盐矿井发现新生盐镜把求救声反射到了已经废弃的巷道。若不能在结晶潮封住竖井前解决，救援队会沿假回声深入没有回程的裂隙。两种现实各自只提供半个答案，玩家的比较行为完成叙事上的证据拼接。",
+        "gameplaySummary": "玩家在两套对应布局之间往返，把敲击后会暂时失去反光的黑盐钉留在一侧改变另一侧的支撑关系；成功依赖比较相同坐标的差异，而不是逐个试门。因果成立后，可旋转整面盐壁的配重轴旁出现一条持续开放的折返通路，并立即缩短下一次行动。",
+        "spatialSummary": "可旋转整面盐壁的配重轴在两套布局中位置恒定，墙体、人物与危险的差异形成可以记忆的成对路线。核心锚点是可旋转整面盐壁的配重轴，关键操作对象是敲击后会暂时失去反光的黑盐钉。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "回声延迟由重叠噪声变为三段可数间隔先提示可行动窗口，随后由错误倒影被黑盐钉切成可追踪的窄带和场景中的实际变化确认结果；使用清晰的前后画面对比、与因果完成同步的声音、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "timing",
+          "visual-language",
+          "audio-language",
+          "control-language",
+          "worldbuilding",
+          "topology"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "可旋转整面盐壁的配重轴在两套布局中位置恒定，墙体、人物与危险的差异形成可以记忆的成对路线。",
+          "objectRoleGraph": "敲击后会暂时失去反光的黑盐钉从情境道具转为可验证因果的操作节点，可旋转整面盐壁的配重轴从背景地标转为结果锚点。",
+          "actionSequence": "玩家在两套对应布局之间往返，把敲击后会暂时失去反光的黑盐钉留在一侧改变另一侧的支撑关系；成功依赖比较相同坐标的差异，而不是逐个试门。",
+          "feedbackSignature": "回声延迟由重叠噪声变为三段可数间隔先提示可行动窗口，随后由错误倒影被黑盐钉切成可追踪的窄带和场景中的实际变化确认结果；使用清晰的前后画面对比、与因果完成同步的声音、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "两种现实各自只提供半个答案，玩家的比较行为完成叙事上的证据拼接。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": "Dishonored 2",
+          "guessEncounter": "A Crack in the Slab",
+          "confidence": 0.58,
+          "verdict": "pass",
+          "rationale": "对应坐标、双布局切换及一侧行动改变另一侧结构，与 Stilton 庄园任务相近；但同类时态和双世界关卡很多，盐壁谜题也未复现该任务的具体目标、人物或路线，故不作高置信归因。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.43,
+          "verdict": "pass",
+          "rationale": "Paired layouts with fixed coordinates and cross-reality effects evoke established parallel-world puzzles, but not a single source. The rotating salt wall, echo comparison, and black-salt nail do not match a specific known encounter."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.a302189e8d6b29f69d96",
+      "patternId": "pattern.reward-expands-future-possibility",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/20",
+      "applicationHash": "sha256:2e981e0af8b93e1fe34a4327b9b8d847837d137c6030d5fcd87525d47dbafc2b",
+      "transformedApplication": {
+        "caseId": "blind.case.a302189e8d6b29f69d96",
+        "storySummary": "临时代课员在废弃观星学校发现旧投影穹顶开始把学生的影子误认为新的星座。若不能在年度导航考试开始前解决，远航学员会用错误星图规划整年的补给航线。勇气表现为承担可计算风险，而非接受不可逆损失。",
+        "gameplaySummary": "玩家带着可读的有限补给深入能够分层旋转的黑玻璃穹顶下方，每到一个安全节点都可选择继续或主动返回；返程能把发现换成容量、捷径或新准备，再次进入时路线明显改变。完成后，一条可复核的判断被写入能够分层旋转的黑玻璃穹顶，人物与机关随后读取同一个结果。",
+        "spatialSummary": "深度、剩余补给、最近安全区和撤退路径始终可见，失败不会抹除已打开的捷径。核心锚点是能够分层旋转的黑玻璃穹顶，关键操作对象是只在真实星光下留痕的粉笔。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "影子星座与真实光点以不同颜色分离承担主要前后差异，穹顶齿圈在层级对齐时响起一次清亮卡扣只在关键因果成立时出现；不依赖颜色的界面状态、对象和人物的动作变化、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "objects",
+          "worldbuilding",
+          "characters",
+          "topology",
+          "feedback",
+          "narrative-causality"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "深度、剩余补给、最近安全区和撤退路径始终可见，失败不会抹除已打开的捷径。",
+          "objectRoleGraph": "只在真实星光下留痕的粉笔从情境道具转为可验证因果的操作节点，能够分层旋转的黑玻璃穹顶从背景地标转为结果锚点。",
+          "actionSequence": "玩家带着可读的有限补给深入能够分层旋转的黑玻璃穹顶下方，每到一个安全节点都可选择继续或主动返回；返程能把发现换成容量、捷径或新准备，再次进入时路线明显改变。",
+          "feedbackSignature": "影子星座与真实光点以不同颜色分离承担主要前后差异，穹顶齿圈在层级对齐时响起一次清亮卡扣只在关键因果成立时出现；不依赖颜色的界面状态、对象和人物的动作变化、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "勇气表现为承担可计算风险，而非接受不可逆损失。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.24,
+          "verdict": "pass",
+          "rationale": "可计算补给、在安全节点决定深入或撤回、以发现换容量和捷径，是通用的推进行程循环；没有可识别的某次远征。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.31,
+          "verdict": "pass",
+          "rationale": "Readable supplies, voluntary retreat at safe nodes, persistent shortcuts, and preparation upgrades belong to a broad risk-managed expedition loop. The layered observatory gives no unique mission or level signature."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.ace83c99e505bc6badf4",
+      "patternId": "pattern.object-role-composition",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/21",
+      "applicationHash": "sha256:bb9fcfc45884d5e48488d76bd7618b1d53df91047c4b0ce8cd12f8df358b98b8",
+      "transformedApplication": {
+        "caseId": "blind.case.ace83c99e505bc6badf4",
+        "storySummary": "潜水校时员在淹水的钟表铸造镇发现不同街区的水下钟都在提前敲响同一场撤离警报。若不能在上游闸湖第二次放水前解决，居民会在真正洪峰到来时拒绝再次撤离。普通物件因用途而重要，玩家的方案选择也决定听力受损却记得旧潮序的铸钟匠如何评价风险。",
+        "gameplaySummary": "玩家观察场景物件的承重、传导与遮挡作用，选择两个作用组合成临时方案；失败会清楚显示是哪一种作用不足，拆解后可以立即重组。完成后，一条可复核的判断被写入半沉在广场中的母钟摆，人物与机关随后读取同一个结果。",
+        "spatialSummary": "半沉在广场中的母钟摆周围至少存在三条合法解法，每条改变不同的对象关系而抵达同一目标。核心锚点是半沉在广场中的母钟摆，关键操作对象是能封存一次振动的蜡制齿轮。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "水中的气泡围绕正确钟摆形成等距圆环承担主要前后差异，失谐钟声最终收束为一次清晰重音只在关键因果成立时出现；不依赖颜色的界面状态、清晰的前后画面对比、可关闭的触觉节拍共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "objects",
+          "visual-language",
+          "control-language",
+          "worldbuilding",
+          "characters",
+          "topology"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "半沉在广场中的母钟摆周围至少存在三条合法解法，每条改变不同的对象关系而抵达同一目标。",
+          "objectRoleGraph": "能封存一次振动的蜡制齿轮从情境道具转为可验证因果的操作节点，半沉在广场中的母钟摆从背景地标转为结果锚点。",
+          "actionSequence": "玩家观察场景物件的承重、传导与遮挡作用，选择两个作用组合成临时方案；失败会清楚显示是哪一种作用不足，拆解后可以立即重组。",
+          "feedbackSignature": "水中的气泡围绕正确钟摆形成等距圆环承担主要前后差异，失谐钟声最终收束为一次清晰重音只在关键因果成立时出现；不依赖颜色的界面状态、清晰的前后画面对比、可关闭的触觉节拍共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "普通物件因用途而重要，玩家的方案选择也决定听力受损却记得旧潮序的铸钟匠如何评价风险。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.36,
+          "verdict": "pass",
+          "rationale": "按承重、传导和遮挡组合环境物件并允许多解，会联想到物理沙盒或沉浸式模拟玩法，但没有唯一装置、敌人或解法指向具体神庙或关卡。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.39,
+          "verdict": "pass",
+          "rationale": "Combining ordinary objects by load-bearing, conductive, and shielding affordances with several valid solutions recalls systemic puzzle and immersive-sim design broadly. No particular construction challenge, shrine, or encounter is recoverable from the submerged clock-town scenario."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.aea0afb1f55f0744b9b8",
+      "patternId": "pattern.local-rule-development-arc",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/22",
+      "applicationHash": "sha256:bd79b17febefb45188c4074d847655a7379e7dc7996d0515666ecbf466723a62",
+      "transformedApplication": {
+        "caseId": "blind.case.aea0afb1f55f0744b9b8",
+        "storySummary": "种子保温员在冰川温室列车发现列车穿越裂谷时，三个车厢的昼夜循环突然彼此错位。若不能在冻土隧道封闭前解决，最后一批耐寒种子会在错误季相中提前萌发。同一规则从工具意义发展为人物承诺，使考试同时检验理解与责任。",
+        "gameplaySummary": "玩家通过一次可撤销试验发现连接车厢的棱镜换气廊与可储存一小时日照的黑釉花盆的关系，之后必须反向使用同一关系保护把每株幼苗都叫作不同名字的列车长；最终挑战把方向、时机和对象选择同时纳入，但每种信号都曾单独出现。因果成立后，连接车厢的棱镜换气廊旁出现一条持续开放的折返通路，并立即缩短下一次行动。",
+        "spatialSummary": "早期目标与最终目标可互相看见，失败只重置当前组合，不撤销已经完成的教学步骤。核心锚点是连接车厢的棱镜换气廊，关键操作对象是可储存一小时日照的黑釉花盆。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "暖气阀门由杂乱喷气变成稳定四拍先提示可行动窗口，随后由霜花沿玻璃边缘按车厢次序退去和场景中的实际变化确认结果；使用对象和人物的动作变化、不依赖颜色的界面状态、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "feedback",
+          "narrative-causality",
+          "characters",
+          "objects",
+          "timing",
+          "visual-language"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "早期目标与最终目标可互相看见，失败只重置当前组合，不撤销已经完成的教学步骤。",
+          "objectRoleGraph": "可储存一小时日照的黑釉花盆从情境道具转为可验证因果的操作节点，连接车厢的棱镜换气廊从背景地标转为结果锚点。",
+          "actionSequence": "玩家通过一次可撤销试验发现连接车厢的棱镜换气廊与可储存一小时日照的黑釉花盆的关系，之后必须反向使用同一关系保护把每株幼苗都叫作不同名字的列车长；最终挑战把方向、时机和对象选择同时纳入，但每种信号都曾单独出现。",
+          "feedbackSignature": "暖气阀门由杂乱喷气变成稳定四拍先提示可行动窗口，随后由霜花沿玻璃边缘按车厢次序退去和场景中的实际变化确认结果；使用对象和人物的动作变化、不依赖颜色的界面状态、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "同一规则从工具意义发展为人物承诺，使考试同时检验理解与责任。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.22,
+          "verdict": "pass",
+          "rationale": "先安全教学、后反向使用同一关系保护角色、最终组合方向时机与对象，是通用的机制毕业考设计，没有特定作品的独有桥段。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.27,
+          "verdict": "pass",
+          "rationale": "Discovering a reversible rule, practicing it, reversing its use to protect a character, and combining previously taught signals is generic final-exam encounter structure. The train greenhouse does not reproduce a specifically recognizable commercial sequence."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.b22c12c8e4360379055b",
+      "patternId": "pattern.embodied-world-change-reveal",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/23",
+      "applicationHash": "sha256:e30d196f2667180be25edcbdecc2c051fa8eb48e412e03d3868a578db2191fe6",
+      "transformedApplication": {
+        "caseId": "blind.case.b22c12c8e4360379055b",
+        "storySummary": "机械授粉观察员在发条昆虫温室发现新孵化的铜蜂开始为尚未开花的植株传粉。若不能在温室进入夜间密封前解决，错误花粉会让食用藤蔓在一夜内木质化。重大变化由场所、人物和下一行动共同表达，而非只由文字宣布。",
+        "gameplaySummary": "玩家跨过记录蜂群路线的玻璃蜂巢时触发不超过数秒的构图、声响与人物站位变化，镜头明确指出改变对象；控制返还后，最近可执行动作在场景中自然突出。完成后，记录蜂群路线的玻璃蜂巢、人物行动和可达路线同时显示同一个可验证结果。",
+        "spatialSummary": "阈值前有安全停留区，阈值后保留退路，跳过表演也会提交完全相同的环境结果。核心锚点是记录蜂群路线的玻璃蜂巢，关键操作对象是可模仿一种花香的细齿钥匙。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "铜蜂腹部的刻度灯组成新的飞行箭头承担主要前后差异，翅轮噪声在正确花序旁降为柔和和弦只在关键因果成立时出现；清晰的前后画面对比、短暂且可跳过的构图提示、读取同一结果的人物回应共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "control-language",
+          "objects",
+          "worldbuilding",
+          "characters",
+          "topology",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "阈值前有安全停留区，阈值后保留退路，跳过表演也会提交完全相同的环境结果。",
+          "objectRoleGraph": "可模仿一种花香的细齿钥匙从情境道具转为可验证因果的操作节点，记录蜂群路线的玻璃蜂巢从背景地标转为结果锚点。",
+          "actionSequence": "玩家跨过记录蜂群路线的玻璃蜂巢时触发不超过数秒的构图、声响与人物站位变化，镜头明确指出改变对象；控制返还后，最近可执行动作在场景中自然突出。",
+          "feedbackSignature": "铜蜂腹部的刻度灯组成新的飞行箭头承担主要前后差异，翅轮噪声在正确花序旁降为柔和和弦只在关键因果成立时出现；清晰的前后画面对比、短暂且可跳过的构图提示、读取同一结果的人物回应共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "重大变化由场所、人物和下一行动共同表达，而非只由文字宣布。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.14,
+          "verdict": "pass",
+          "rationale": "越过阈值后用短镜头、声响和人物站位展示永久世界变化，是常见的关卡反馈语言，无法据此归到具体遭遇。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.18,
+          "verdict": "pass",
+          "rationale": "A brief skippable camera-and-sound presentation that demonstrates a world change and visually exposes the next action is ubiquitous encounter staging. The bee-hive threshold has no source-specific content or layout."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.c1082c7dce4b426069ee",
+      "patternId": "pattern.knowledge-gated-revisit",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/24",
+      "applicationHash": "sha256:6e51f73f6e01e03bf7407c63a9e97d835211b1214aa57c066749f9f9cc907695",
+      "transformedApplication": {
+        "caseId": "blind.case.c1082c7dce4b426069ee",
+        "storySummary": "机械授粉观察员在发条昆虫温室发现新孵化的铜蜂开始为尚未开花的植株传粉。若不能在温室进入夜间密封前解决，错误花粉会让食用藤蔓在一夜内木质化。被忽略的行为成为行动说明，解决问题也修正了两人之间长期错误的责任归属。",
+        "gameplaySummary": "玩家先记录认为失序蜂群正在传递警告的老园丁在三次环境变化中的不同反应，再回到记录蜂群路线的玻璃蜂巢，按照反应的先后选择原本一直可用的三个控制点；没有钥匙或能力升级，只有因果次序被理解。因果成立后，记录蜂群路线的玻璃蜂巢旁出现一条持续开放的折返通路，并立即缩短下一次行动。",
+        "spatialSummary": "三个控制点分布在同一环形区域，玩家早期就能抵达全部位置，后续进展仅改变其信息含义。核心锚点是记录蜂群路线的玻璃蜂巢，关键操作对象是可模仿一种花香的细齿钥匙。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "翅轮噪声在正确花序旁降为柔和和弦先提示可行动窗口，随后由铜蜂腹部的刻度灯组成新的飞行箭头和场景中的实际变化确认结果；使用不依赖颜色的界面状态、对象和人物的动作变化、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "characters",
+          "narrative-causality",
+          "feedback",
+          "topology",
+          "objects",
+          "timing"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "三个控制点分布在同一环形区域，玩家早期就能抵达全部位置，后续进展仅改变其信息含义。",
+          "objectRoleGraph": "可模仿一种花香的细齿钥匙从情境道具转为可验证因果的操作节点，记录蜂群路线的玻璃蜂巢从背景地标转为结果锚点。",
+          "actionSequence": "玩家先记录认为失序蜂群正在传递警告的老园丁在三次环境变化中的不同反应，再回到记录蜂群路线的玻璃蜂巢，按照反应的先后选择原本一直可用的三个控制点；没有钥匙或能力升级，只有因果次序被理解。",
+          "feedbackSignature": "翅轮噪声在正确花序旁降为柔和和弦先提示可行动窗口，随后由铜蜂腹部的刻度灯组成新的飞行箭头和场景中的实际变化确认结果；使用不依赖颜色的界面状态、对象和人物的动作变化、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "被忽略的行为成为行动说明，解决问题也修正了两人之间长期错误的责任归属。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.35,
+          "verdict": "pass",
+          "rationale": "观察角色在三种环境下的反应并把次序用于既有控制点，是知识型因果谜题；类似结构跨越多部观察和时间循环游戏，缺少唯一事件指纹。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.36,
+          "verdict": "pass",
+          "rationale": "Observing an NPC's reactions under three conditions and using their order as a code is a familiar knowledge puzzle. The circular controls and bee-warning interpretation are not distinctive enough to name a title and encounter confidently."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.cfabb32ffcf9dbea36dd",
+      "patternId": "pattern.embodied-world-change-reveal",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/25",
+      "applicationHash": "sha256:686eb0948b3d1d77fd2c4f652e3744a33e422db9e895c47e1f44ae7d17e79578",
+      "transformedApplication": {
+        "caseId": "blind.case.cfabb32ffcf9dbea36dd",
+        "storySummary": "影长检票员在极昼鲸骨车站发现永不落下的太阳让列车影子提前进入了错误站台。若不能在载客冰帆车穿过白夜地平线前解决，旅客会登上驶向融冰区的维修车。行动准备表演、表演改变问题、下一次行动验证改变，形成可呼吸的戏剧节奏。",
+        "gameplaySummary": "玩家完成一段有目的的互动后观看短表演，再获得一个能准备下一段表演结果的自由窗口；三个节拍重复但每次行动目标不同。完成后，由巨型肋骨构成的日影转辙架、人物行动和可达路线同时显示同一个可验证结果。",
+        "spatialSummary": "互动区与表演焦点交替占据由巨型肋骨构成的日影转辙架周边，输入锁定有明确上限并可跳过、回看。核心锚点是由巨型肋骨构成的日影转辙架，关键操作对象是能把影子延长一倍的烟晶票夹。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "冰帆掠过不同骨架产生由远及近的低哨先提示可行动窗口，随后由肋骨投影在雪地上拼成完整站台编号和场景中的实际变化确认结果；使用清晰的前后画面对比、短暂且可跳过的构图提示、读取同一结果的人物回应，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "audio-language",
+          "control-language",
+          "worldbuilding",
+          "narrative-causality",
+          "topology",
+          "characters"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "互动区与表演焦点交替占据由巨型肋骨构成的日影转辙架周边，输入锁定有明确上限并可跳过、回看。",
+          "objectRoleGraph": "能把影子延长一倍的烟晶票夹从情境道具转为可验证因果的操作节点，由巨型肋骨构成的日影转辙架从背景地标转为结果锚点。",
+          "actionSequence": "玩家完成一段有目的的互动后观看短表演，再获得一个能准备下一段表演结果的自由窗口；三个节拍重复但每次行动目标不同。",
+          "feedbackSignature": "冰帆掠过不同骨架产生由远及近的低哨先提示可行动窗口，随后由肋骨投影在雪地上拼成完整站台编号和场景中的实际变化确认结果；使用清晰的前后画面对比、短暂且可跳过的构图提示、读取同一结果的人物回应，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "行动准备表演、表演改变问题、下一次行动验证改变，形成可呼吸的戏剧节奏。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.16,
+          "verdict": "pass",
+          "rationale": "互动、短表演、自由准备窗口循环三次，是广泛使用的互动戏剧节奏；每拍目标与具体表演内容均未对应到熟知关卡。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.17,
+          "verdict": "pass",
+          "rationale": "Alternating purposeful interaction, short performance, and a free preparation window is general pacing language for interactive drama. The repeated three-beat rhythm lacks a specific objective chain or staging match to a commercial encounter."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.d3b9ba204b7810ba9d63",
+      "patternId": "pattern.optional-secret-readability",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/26",
+      "applicationHash": "sha256:de05c6d97c6042edffd60a5b3dfefa07a5db0eb30b73d4102acfa21c1d5d8079",
+      "transformedApplication": {
+        "caseId": "blind.case.d3b9ba204b7810ba9d63",
+        "storySummary": "影长检票员在极昼鲸骨车站发现永不落下的太阳让列车影子提前进入了错误站台。若不能在载客冰帆车穿过白夜地平线前解决，旅客会登上驶向融冰区的维修车。远方承诺与到达后的新可能形成连续好奇链，而非一次性收藏。",
+        "gameplaySummary": "玩家从由巨型肋骨构成的日影转辙架看见一个无法立即解释的远景，将它作为自选目标；抵达后获得能改变未来旅行方式的回报，并从新视点看到下一处问题。完成后，一条可复核的判断被写入由巨型肋骨构成的日影转辙架，人物与机关随后读取同一个结果。",
+        "spatialSummary": "远景在接近过程中持续可见，沿途至少有两种路线与一个可撤回的支路。核心锚点是由巨型肋骨构成的日影转辙架，关键操作对象是能把影子延长一倍的烟晶票夹。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "肋骨投影在雪地上拼成完整站台编号承担主要前后差异，冰帆掠过不同骨架产生由远及近的低哨只在关键因果成立时出现；清晰的前后画面对比、不依赖颜色的界面状态、对象和人物的动作变化共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "feedback",
+          "narrative-causality",
+          "visual-language",
+          "control-language",
+          "objects",
+          "worldbuilding"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "远景在接近过程中持续可见，沿途至少有两种路线与一个可撤回的支路。",
+          "objectRoleGraph": "能把影子延长一倍的烟晶票夹从情境道具转为可验证因果的操作节点，由巨型肋骨构成的日影转辙架从背景地标转为结果锚点。",
+          "actionSequence": "玩家从由巨型肋骨构成的日影转辙架看见一个无法立即解释的远景，将它作为自选目标；抵达后获得能改变未来旅行方式的回报，并从新视点看到下一处问题。",
+          "feedbackSignature": "肋骨投影在雪地上拼成完整站台编号承担主要前后差异，冰帆掠过不同骨架产生由远及近的低哨只在关键因果成立时出现；清晰的前后画面对比、不依赖颜色的界面状态、对象和人物的动作变化共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "远方承诺与到达后的新可能形成连续好奇链，而非一次性收藏。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.15,
+          "verdict": "pass",
+          "rationale": "远景承诺、抵达后的移动回报和从新视点延伸下一目标，是开放世界常见探索链，没有唯一可归因的地标序列。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.29,
+          "verdict": "pass",
+          "rationale": "Visible landmarks that promise traversal rewards and reveal further destinations are common open-world motivational design. The whale-bone switchyard's routes and reward remain too abstract to identify one title or location."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.e8423455232d943dd25a",
+      "patternId": "pattern.object-role-composition",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/27",
+      "applicationHash": "sha256:d259df0324c72bdea64aa072b658770423b7c0a8014442aa3f20b21a980e27ce",
+      "transformedApplication": {
+        "caseId": "blind.case.e8423455232d943dd25a",
+        "storySummary": "临时桥梁看守在迁徙的玄武岩村发现村庄脚下的石兽在跨越峡谷时拒绝同时落足。若不能在峡谷热气流转向前解决，背负居民的三块街区会被拉向不同崖壁。观察直接扩大行动语言，但新的用途来自当前故事对象而非复制既有场面。",
+        "gameplaySummary": "玩家把从一处观察到的有限功能登记后，在另一处以明确容量重新部署；同屏数量、位置和持续时间都有上限，替换旧部署比堆叠更多对象更有效。玩家的动作改变只能在石兽停步时说真话的议事员的站位，新的站位又反过来改变路线与对话。",
+        "spatialSummary": "解题区域允许垂直、水平与掩护三类构型，并保留一条不依赖复杂组合的恢复路线。核心锚点是系住石兽步幅的中央绳塔，关键操作对象是受压后会留下蓝色掌纹的软岩楔。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "绳塔拉索从刺耳摩擦变为沉稳共振先提示可行动窗口，随后由岩楔上的掌纹依落足次序连续显现和场景中的实际变化确认结果；使用不依赖颜色的界面状态、清晰的前后画面对比、可关闭的触觉节拍，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "topology",
+          "feedback",
+          "characters",
+          "narrative-causality",
+          "objects",
+          "timing"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "解题区域允许垂直、水平与掩护三类构型，并保留一条不依赖复杂组合的恢复路线。",
+          "objectRoleGraph": "受压后会留下蓝色掌纹的软岩楔从情境道具转为可验证因果的操作节点，系住石兽步幅的中央绳塔从背景地标转为结果锚点。",
+          "actionSequence": "玩家把从一处观察到的有限功能登记后，在另一处以明确容量重新部署；同屏数量、位置和持续时间都有上限，替换旧部署比堆叠更多对象更有效。",
+          "feedbackSignature": "绳塔拉索从刺耳摩擦变为沉稳共振先提示可行动窗口，随后由岩楔上的掌纹依落足次序连续显现和场景中的实际变化确认结果；使用不依赖颜色的界面状态、清晰的前后画面对比、可关闭的触觉节拍，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "观察直接扩大行动语言，但新的用途来自当前故事对象而非复制既有场面。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.5,
+          "verdict": "pass",
+          "rationale": "观察并登记有限功能、按容量在别处重新部署，较强地联想到复制或召唤型整作机制；但角色站位改变路线与对白的应用没有对应到可命名的具体关卡。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": "The Legend of Zelda: Echoes of Wisdom",
+          "guessEncounter": null,
+          "confidence": 0.57,
+          "verdict": "pass",
+          "rationale": "Learning observed functions and redeploying a capped set of temporary objects strongly recalls the Echo mechanic at title level. The stone-beast bridge puzzle, councilor repositioning, and route changes do not correspond to a specifically identifiable dungeon or quest encounter."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.f79687cf5965cdf233ad",
+      "patternId": "pattern.reward-expands-future-possibility",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/28",
+      "applicationHash": "sha256:bdfb9e0c83f88d6e97c382cdb616f9f0e2f2bd4eb20e9cdc560d639897fb0f5f",
+      "transformedApplication": {
+        "caseId": "blind.case.f79687cf5965cdf233ad",
+        "storySummary": "临时桥梁看守在迁徙的玄武岩村发现村庄脚下的石兽在跨越峡谷时拒绝同时落足。若不能在峡谷热气流转向前解决，背负居民的三块街区会被拉向不同崖壁。探索回报同时改变人物能力和世界连通性，使准备行为具有故事后果。",
+        "gameplaySummary": "玩家先完成一个短支线获得受压后会留下蓝色掌纹的软岩楔，它既提供一次局部帮助，也在地图上建立长期返回点；是否继续远征取决于当前状态与下一安全区距离。因果成立后，系住石兽步幅的中央绳塔旁出现一条持续开放的折返通路，并立即缩短下一次行动。",
+        "spatialSummary": "三个支线节点围绕系住石兽步幅的中央绳塔形成不同成本的回路，奖励逐步压缩未来旅行。核心锚点是系住石兽步幅的中央绳塔，关键操作对象是受压后会留下蓝色掌纹的软岩楔。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "绳塔拉索从刺耳摩擦变为沉稳共振先提示可行动窗口，随后由岩楔上的掌纹依落足次序连续显现和场景中的实际变化确认结果；使用不依赖颜色的界面状态、对象和人物的动作变化、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+        "transformationAxes": [
+          "narrative-causality",
+          "feedback",
+          "characters",
+          "objects",
+          "timing",
+          "visual-language"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "三个支线节点围绕系住石兽步幅的中央绳塔形成不同成本的回路，奖励逐步压缩未来旅行。",
+          "objectRoleGraph": "受压后会留下蓝色掌纹的软岩楔从情境道具转为可验证因果的操作节点，系住石兽步幅的中央绳塔从背景地标转为结果锚点。",
+          "actionSequence": "玩家先完成一个短支线获得受压后会留下蓝色掌纹的软岩楔，它既提供一次局部帮助，也在地图上建立长期返回点；是否继续远征取决于当前状态与下一安全区距离。",
+          "feedbackSignature": "绳塔拉索从刺耳摩擦变为沉稳共振先提示可行动窗口，随后由岩楔上的掌纹依落足次序连续显现和场景中的实际变化确认结果；使用不依赖颜色的界面状态、对象和人物的动作变化、立即可验证的路线变化，跳过短提示也不会改变已提交的结果。",
+          "narrativeFunction": "探索回报同时改变人物能力和世界连通性，使准备行为具有故事后果。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.2,
+          "verdict": "pass",
+          "rationale": "支线奖励兼作局部能力、长期返回点和未来路程压缩，是常见探索经济；三个成本不同的回路不构成某一具体遭遇的独特结构。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.32,
+          "verdict": "pass",
+          "rationale": "Optional preparation that grants immediate help, establishes a permanent return point, and shortens later expeditions is common checkpoint-and-shortcut design. The three stone-village loops do not reveal a specific commercial side quest or region."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.case.fd3c3ba878029ef2def5",
+      "patternId": "pattern.multi-solution-state-graph",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "applicationRef": "benchmarks/originality-blind-applications.json#/cases/29",
+      "applicationHash": "sha256:6c56711d1678ee8b271d3ca3ca07625ceedcf18dbe5138d4d05809c80131326a",
+      "transformedApplication": {
+        "caseId": "blind.case.fd3c3ba878029ef2def5",
+        "storySummary": "升力配药师在云端风筝诊所发现病患风筝的骨架开始吸入彼此不相容的高空气流。若不能在诊所越过雷云边界前解决，整片吊舱会因升力失衡坠入暴雨层。普通物件因用途而重要，玩家的方案选择也决定害怕雷声却能辨认风向的幼年信使如何评价风险。",
+        "gameplaySummary": "玩家观察场景物件的承重、传导与遮挡作用，选择两个作用组合成临时方案；失败会清楚显示是哪一种作用不足，拆解后可以立即重组。完成后，一条可复核的判断被写入诊所中央的压差转盘，人物与机关随后读取同一个结果。",
+        "spatialSummary": "诊所中央的压差转盘周围至少存在三条合法解法，每条改变不同的对象关系而抵达同一目标。核心锚点是诊所中央的压差转盘，关键操作对象是会随湿度折叠的薄木翼片。入口、结果区与失败后的恢复边均保持可读，玩家能在不依赖文字解说的情况下比较操作前后的路线关系。",
+        "feedbackSummary": "牵索上的结依次亮起青、白、橙三色承担主要前后差异，风穿过翼片时形成由低到高的哨音只在关键因果成立时出现；对象和人物的动作变化、不依赖颜色的界面状态、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+        "transformationAxes": [
+          "characters",
+          "topology",
+          "feedback",
+          "narrative-causality",
+          "objects",
+          "control-language"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "诊所中央的压差转盘周围至少存在三条合法解法，每条改变不同的对象关系而抵达同一目标。",
+          "objectRoleGraph": "会随湿度折叠的薄木翼片从情境道具转为可验证因果的操作节点，诊所中央的压差转盘从背景地标转为结果锚点。",
+          "actionSequence": "玩家观察场景物件的承重、传导与遮挡作用，选择两个作用组合成临时方案；失败会清楚显示是哪一种作用不足，拆解后可以立即重组。",
+          "feedbackSignature": "牵索上的结依次亮起青、白、橙三色承担主要前后差异，风穿过翼片时形成由低到高的哨音只在关键因果成立时出现；对象和人物的动作变化、不依赖颜色的界面状态、立即可验证的路线变化共同确认结果，且任何必要信息都不只依赖颜色。",
+          "narrativeFunction": "普通物件因用途而重要，玩家的方案选择也决定害怕雷声却能辨认风向的幼年信使如何评价风险。"
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "caseIdMatchedAcrossApplicationAndReviews": true,
+        "reviewerInputHashAttested": false,
+        "authorshipBlindness": "not-recorded",
+        "note": "The two review records close to this exact application by caseId. The source reviews did not attest an input hash or author-blind generation, so neither property is inferred."
+      },
+      "verdict": "pass",
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-reviewer-a",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.36,
+          "verdict": "pass",
+          "rationale": "将普通物件的承重、传导、遮挡作用两两组合并提供多解，是物理沙盒的宽泛设计；风筝诊所未复现任何可识别的具体谜题房。"
+        },
+        {
+          "reviewerId": "blind-reviewer-b",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.39,
+          "verdict": "pass",
+          "rationale": "Composing temporary solutions from object affordances and supporting multiple valid relationship changes resembles systemic construction puzzles across several games. The kite clinic, pressure dial, and humidity-folding wing do not identify a particular authored encounter."
+        }
+      ]
+    }
+  ],
+  "combinationCases": [
+    {
+      "caseId": "blind.combination.case.1ae543417ce922d4db18",
+      "patternIds": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.parallel-state-comparison",
+        "pattern.state-axis-rewrites-routes"
+      ],
+      "vetoStatements": [
+        "One-to-one paired coordinates, source-like transition cadence, and the same obstacle roles survive together.",
+        "The combination preserves a source map pairing, transition ritual, object-role sequence, and narrative purpose.",
+        "The same paired coordinates, obstacle roles, transition action, and reveal order identify one source work."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.c731135f6c8bd75a39c9",
+        "blind.combination.pending.86620c80f01865a616af",
+        "blind.combination.pending.edcb137194453c2f3574"
+      ],
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "status": "reviewed-pass",
+      "verdict": "pass",
+      "autoCompositionAuthorized": true,
+      "applicationRef": "benchmarks/originality-blind-combination-applications.json#/cases/0",
+      "applicationHash": "sha256:e09032ce957d081b69f70d5188c123d496672fcc1057509b19d0f63413b9d9bb",
+      "transformedApplication": {
+        "caseId": "blind.combination.case.1ae543417ce922d4db18",
+        "storySummary": "A pressure surveyor in a city printed along the inner wall of a drifting ceramic lung returns to the cracked choir gallery passed during an earlier inspection. Training in pressure-knotting now lets the surveyor pulse the building between draw, hold, and release. The old gallery becomes the only place where differences among the three breaths can expose which civic airway has been quietly diverting medicine mist from the nursery wards.",
+        "gameplaySummary": "The player uses a reusable two-hand pressure gesture to set one of three building-wide breath states. Each state curls floor lips, stiffens hanging ladders, and opens a different route through the same spiral gallery. Numbered clay ribs and old mineral stains remain fixed, so the player compares their echoes and condensation marks across states, records the one inconsistent airway, and then uses that inference to reach a valve that was visibly inaccessible on the first visit. Every switch retains an escape edge and failed conclusions can be tested again without losing observations.",
+        "spatialSummary": "The gallery is a tri-lobed spiral around a hollow respiratory shaft rather than two matched maps. Draw opens a low inner loop, hold supports a short cross-bridge, and release unfolds an outer wall walk; no state is globally best. The stable ribs can be seen from different heights, while a return ramp always reconnects the surveyor to the pressure dais. The final airway is reached through a new edge created by the learned gesture, but identifying the correct valve still depends on comparing evidence rather than following a marker.",
+        "feedbackSummary": "Clay seams widen or knit shut in silhouette, suspended dust streams point toward active passages, and each fixed rib produces a distinct tactile beat through the controller. A side-by-side observation strip shows player-made rubbings without naming the answer. When the correct airway is isolated, medicine mist begins pulsing through transparent nursery tubes in the distant background; a wrong hypothesis produces a localized cough of powder and restores the prior route table atomically.",
+        "transformationAxes": [
+          "worldbuilding",
+          "characters",
+          "narrative-causality",
+          "topology",
+          "objects",
+          "control-language",
+          "audio-language",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "A tri-lobed spiral exposes different inner, cross, and outer edges under three pressure values, with one invariant return ramp instead of paired coordinate-for-coordinate layouts.",
+          "objectRoleGraph": "Fixed clay ribs serve as comparison anchors, the building skin becomes a route-changing medium, and the distant nursery tubes verify the inferred causal result.",
+          "actionSequence": "Revisit a remembered obstruction, pulse a pressure state, traverse and record anchor evidence, return through the invariant ramp, compare another state, infer the anomalous airway, and open the newly reachable valve.",
+          "feedbackSignature": "Changing silhouettes, directional dust, tactile rib beats, player-made rubbings, and distant mist pulses distinguish state, inference, and confirmed consequence without relying on color.",
+          "narrativeFunction": "Mastering the city's breathing does not merely unlock a passage; it lets the surveyor prove that an apparently natural shortage is deliberate diversion."
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "sourceFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+        "caseIdMatchedAcrossApplicationMapAndReviews": true,
+        "reviewerInputHashAttested": true,
+        "authorshipBlindness": "not-recorded"
+      },
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-combination-reviewer-a",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "The Legend of Zelda: Oracle of Seasons",
+          "guessEncounter": "Tarm Ruins seasonal maze",
+          "confidence": 0.28,
+          "verdict": "pass",
+          "rationale": "The area-wide state changes and return to a previously blocked route weakly recall Tarm Ruins, but that encounter uses four seasonal swaps and conventional navigation gates. This case instead has three asymmetric breath routes, invariant forensic anchors, repeated evidence comparison, and a civic-airway inference. Those differences prevent concrete encounter attribution at a meaningful confidence."
+        },
+        {
+          "reviewerId": "blind-combination-reviewer-b",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "Titanfall 2",
+          "guessEncounter": "Effect and Cause",
+          "confidence": 0.46,
+          "verdict": "pass",
+          "rationale": "Switching a traversal space among world states while reading invariant landmarks recalls Effect and Cause, but the resemblance stops at that broad device. This case uses three non-isomorphic pressure states, a revisit unlocked by a learned gesture, repeated evidence recording, an always-open return ramp, and a civic-diversion inference; those elements do not reproduce the mission's two-time-state room sequence or encounters closely enough for specific attribution."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.21e4d7928db264285778",
+      "patternIds": [
+        "pattern.dense-overworld-as-challenge-space",
+        "pattern.landmark-promises-future-use",
+        "pattern.optional-secret-readability",
+        "pattern.state-axis-rewrites-routes"
+      ],
+      "vetoStatements": [
+        "Macro geography, landmark hierarchy, traversal verb set, secret distribution, and region-state progression converge on one source overworld."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.f340ef0d18d90c42c13a"
+      ],
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "status": "reviewed-pass",
+      "verdict": "pass",
+      "autoCompositionAuthorized": true,
+      "applicationRef": "benchmarks/originality-blind-combination-applications.json#/cases/1",
+      "applicationHash": "sha256:00e2e2e37d231a8b2b68f39ee0f1f550f248daa518b8adc178e7f23a7ba516a4",
+      "transformedApplication": {
+        "caseId": "blind.combination.case.21e4d7928db264285778",
+        "storySummary": "A draft ranger crosses the inhabited inner surface of a slowly rotating communal kiln, where ceramic farms, repair yards, and cooling hammocks share one ventilation system. From the opening district the ranger repeatedly sees the Split Whistle Ring spanning the kiln's far curve, but reaching and sounding it only becomes relevant when a spreading glaze fever begins trapping heat around the residential terraces. The connective landscape itself is the investigation, with optional evidence hidden in ordinary maintenance irregularities.",
+        "gameplaySummary": "At neighborhood regulators the player reverses the kiln draft among inward, balanced, and outward modes. Draft direction unfurls cloth ramps, clears or deposits insulating ash, changes which pulley ferries can cross gaps, and exposes different resource and encounter choices across a dense network. Every short traversal asks the player to weigh heat, footing, visibility, or social access. Repeated soot crescents, a doubled whistle note, and cool handprints form a fair optional clue chain; testing it opens a side route whose testimony changes how the final Ring can be used, but the main route never requires the discovery.",
+        "spatialSummary": "Five interlocking terrace districts form loops around shared regulator courts, with alternate approaches and frequent recovery kilns rather than a large empty field. The three draft modes rewrite multiple local edges while leaving roofs, kiln ribs, and the distant split ring recognizable. The landmark is visible from three nonconsecutive junctions and becomes an actionable pressure instrument late in the crossing. The optional site sits beside a normal circulation loop and is suggested by repeated environmental differences, not by an isolated suspicious wall.",
+        "feedbackSummary": "Streamers snap inward, hang slack, or bow outward; ash changes both surface texture and footstep sound; pulley crews visibly relocate before their routes become available. The secret clue adds a syncopated second note and a raised handprint pattern readable by touch. A compact relief map embosses only links the player has verified, and failed route choices return to the nearest warm shelter while preserving discovered connections and clue observations.",
+        "transformationAxes": [
+          "worldbuilding",
+          "topology",
+          "visual-language",
+          "audio-language",
+          "objects",
+          "characters",
+          "narrative-causality",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "Five looped terrace districts repeatedly exchange edges under a three-value draft axis, with dense local decisions and short shelter returns around a landmark spanning the far circumference.",
+          "objectRoleGraph": "Regulator courts rewrite routes, mundane soot and handprints become testable optional evidence, and the Split Whistle Ring changes from orientation cue to a late civic pressure instrument.",
+          "actionSequence": "Read the next district, choose a draft value, traverse a costed connection, verify the changed network, optionally follow and test repeated maintenance anomalies, then approach and operate the long-promised ring.",
+          "feedbackSignature": "Streamer posture, ash texture, footstep timbre, worker relocation, paired whistle notes, tactile prints, and an earned embossed network make both mandatory state changes and optional inference legible.",
+          "narrativeFunction": "Crossing the overworld reveals how shared infrastructure distributes danger, while the optional clue determines whether the final intervention treats a symptom or exposes neglected residents."
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "sourceFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+        "caseIdMatchedAcrossApplicationMapAndReviews": true,
+        "reviewerInputHashAttested": true,
+        "authorshipBlindness": "not-recorded"
+      },
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-combination-reviewer-a",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.14,
+          "verdict": "pass",
+          "rationale": "A distant landmark, looping overworld, and wind-dependent routes are familiar adventure-game ingredients, but no specific commercial encounter is identifiable. The five interlocking districts, three-valued draft economy, ordinary-maintenance clue chain, optional testimony, and late conversion of the whistle ring into civic infrastructure form a distinct combination rather than a recognizable level reconstruction."
+        },
+        {
+          "reviewerId": "blind-combination-reviewer-b",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.18,
+          "verdict": "pass",
+          "rationale": "A repeatedly visible destination, a looped traversal network, and optional environmental clue chains are common adventure structures rather than a distinctive commercial encounter. The five interlocking kiln districts, three draft values, costed neighborhood links, tactile clue chain, and late conversion of the ring into civic infrastructure form no concrete level layout or action sequence I can identify."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.5a557d6d8c6db255d24e",
+      "patternIds": [
+        "pattern.action-first-onboarding",
+        "pattern.landmark-promises-future-use",
+        "pattern.local-rule-development-arc"
+      ],
+      "vetoStatements": [
+        "Opening emergency, route shape, first verb or item, mentor function, and next landmark align with one source title."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.dd5ecd9af394336ce8de"
+      ],
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "status": "reviewed-pass",
+      "verdict": "pass",
+      "autoCompositionAuthorized": true,
+      "applicationRef": "benchmarks/originality-blind-combination-applications.json#/cases/2",
+      "applicationHash": "sha256:3f5f77badd472e1e5b19b30f7361930662286e983f7515441e0b9bb0a02c558d",
+      "transformedApplication": {
+        "caseId": "blind.combination.case.5a557d6d8c6db255d24e",
+        "storySummary": "A new aeration hand arrives without briefing at a migrating seed nursery carried by hundreds of linked lifting bladders. A hatchling pod immediately begins collapsing beside the player, while the translucent Pollen Bell that coordinates the entire nursery hangs far beyond the service canopy. Saving the pod teaches what the player is responsible for and introduces the pressure-sharing rule that will grow through the whole shift before the Bell becomes the final workplace test.",
+        "gameplaySummary": "Control begins with no lecture: the player squeezes a nearby vent, follows a visible pressure ripple, and loosens one tether so the collapsing pod can borrow lift from its neighbor. A mistake only wrinkles the pod and resets those three local elements. Later stations practice the same invariant across paired bladders, vary it under crosswind, reverse it to drain an overfilled chamber, and combine borrowing with timed isolation. The exam asks the player to balance the distant Pollen Bell during a flock turn using only already-demonstrated relationships; success also clarifies the next destination through action rather than exposition.",
+        "spatialSummary": "The opening frames the failing pod, valid vent, safe reset cradle, and far-off Bell in one readable view. The rule arc then follows a branching work loop of four compact canopy platforms, each returning to a central hammock before the next variation. The Bell remains visible through changing layers of translucent nursery skin and is approached from below during the exam, so its identity persists even though its mechanical role changes from horizon promise to shared-pressure regulator.",
+        "feedbackSummary": "Pressure travels as widening wrinkles through the membrane, tether knots rise and fall in distinct shapes, and a low pulse passes from one controller side to the other. Correct transfer makes the hatchling pod resume a steady three-beat flutter; incorrect isolation produces a harmless uneven rustle and highlights only the last causal link. Each later lesson recombines the same visual, tactile, and rhythmic vocabulary, and the Bell's final chord is assembled from those familiar beats.",
+        "transformationAxes": [
+          "worldbuilding",
+          "characters",
+          "narrative-causality",
+          "control-language",
+          "topology",
+          "visual-language",
+          "timing",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "A safe opening cradle leads into a four-platform branching practice loop and culminates beneath a landmark continuously visible across translucent layers.",
+          "objectRoleGraph": "Vents, tethers, and lifting bladders express one pressure-sharing algebra, while the Pollen Bell evolves from orientation anchor into the exam's multi-chamber regulator.",
+          "actionSequence": "Respond to a visible need, transfer pressure safely, practice the invariant, handle crosswind variation, reverse the flow, combine isolation with timing, and balance the landmark without a new rule.",
+          "feedbackSignature": "Membrane wrinkles, knot silhouettes, lateral pulses, pod flutter rhythms, and the Bell's assembled chord teach error class and progress without explanatory dialogue.",
+          "narrativeFunction": "The player's job identity emerges from caring for one fragile organism, then expands into responsibility for a migrating community through demonstrated mastery."
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "sourceFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+        "caseIdMatchedAcrossApplicationMapAndReviews": true,
+        "reviewerInputHashAttested": true,
+        "authorshipBlindness": "not-recorded"
+      },
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-combination-reviewer-a",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "Portal 2",
+          "guessEncounter": "Chapter 1 opening test-chamber sequence",
+          "confidence": 0.25,
+          "verdict": "pass",
+          "rationale": "The safe onboarding followed by practice, variation, reversal, combination, and an exam loosely resembles Portal 2's early teaching cadence. The actual interaction is not portal placement, however: it is a pressure-sharing algebra introduced by rescuing a living pod, practiced across a branching workplace loop, and culminated at one continuously visible landmark. The similarity is pedagogical structure, not a specific copied encounter."
+        },
+        {
+          "reviewerId": "blind-combination-reviewer-b",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "Portal 2",
+          "guessEncounter": "Chapter 2: The Cold Boot test-chamber sequence",
+          "confidence": 0.31,
+          "verdict": "pass",
+          "rationale": "The safe introduction followed by practice, variation, reversal, combination, and a final application resembles Portal 2's instructional pacing. The actual pressure-sharing algebra, urgent care action, branching four-platform work loop, continuously visible Pollen Bell, and balancing exam do not map to a particular Cold Boot chamber, so this is a pedagogical analogy rather than encounter-level attribution."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.5be839c267b45c60e90a",
+      "patternIds": [
+        "pattern.embodied-world-change-reveal",
+        "pattern.npc-reacts-to-world-state",
+        "pattern.parallel-state-comparison",
+        "pattern.state-axis-rewrites-routes"
+      ],
+      "vetoStatements": [
+        "World duality, restoration objective, affected cast, before/after topology, and transition cadence converge on one source title."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.9c774f9c3beae60a9ccf"
+      ],
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "status": "reviewed-pass",
+      "verdict": "pass",
+      "autoCompositionAuthorized": true,
+      "applicationRef": "benchmarks/originality-blind-combination-applications.json#/cases/3",
+      "applicationHash": "sha256:1a2de4533aadd152b4fa213fb8367b86decc879266763ad425ad1eb1274b5f2e",
+      "transformedApplication": {
+        "caseId": "blind.combination.case.5be839c267b45c60e90a",
+        "storySummary": "Residents of a translucent drifting habitat believe their streets lie inside an engineered weather capsule. A membrane engineer restoring a failed osmotic pump instead makes the whole horizon flex, exposing the protected truth: the settlement occupies a single living pollen grain entering a storm cell. That enacted discovery permanently changes what the community knows, while the grain's reversible hydration cycle continues to reshape routes and provides evidence about which public records concealed the habitat's nature.",
+        "gameplaySummary": "The player drives the repaired pump through dry, balanced, and swollen values. Each value changes membrane tension, opening capillary tubes, flattening elastic courtyards, or lifting resin walkways. Stable scar stitches and embedded census plaques remain recognizable, letting the player compare their positions, sounds, and missing annotations across hydration states. Completing the first full pulse triggers the large-scale reveal; control returns at once so the player must cross a newly opened capillary, rescue a displaced witness, and decide which informed resident should receive the pump log.",
+        "spatialSummary": "Three folded neighborhoods share a central osmotic well and reconnect through state-dependent loops rather than mirrored worlds. Scar stitches provide stable comparison anchors, and every hydration value leaves a route back to the well. During the reveal the camera stays tied to the player's hand on the pump, then widens only far enough to show the curving living wall and storm droplets beyond it. Afterward, actors relocate according to what they could actually see or learn, with a neutral service route preserving access if a social shortcut closes.",
+        "feedbackSummary": "Membranes become papery, taut, or pillowed in profile; embedded plaques buzz at state-specific intervals; capillary flow produces directional controller pulses. The reveal interrupts those familiar signals with one enormous synchronized flex, then immediately returns them at habitat scale. A water accountant moves ration markers, a courier abandons a brittle shortcut, and a skeptical archivist changes the questions they will answer only after receiving evidence. Replay mode simplifies the camera but commits the same world facts.",
+        "transformationAxes": [
+          "worldbuilding",
+          "narrative-causality",
+          "topology",
+          "characters",
+          "visual-language",
+          "control-language",
+          "objects",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "Three folded neighborhoods exchange capillary, courtyard, and resin-walk edges under hydration values while retaining one central recovery well and nonmirrored stable anchors.",
+          "objectRoleGraph": "The osmotic pump both controls route state and causes the protected reveal; scar stitches and plaques anchor comparison; the pump log gates situated social reactions rather than universal dialogue changes.",
+          "actionSequence": "Repair and pulse the pump, traverse and compare stable anchors, complete a full hydration cycle, physically witness the habitat-scale truth, act immediately in the changed route graph, and choose how evidence reaches specific residents.",
+          "feedbackSignature": "Material profiles, plaque rhythms, directional pulses, the habitat-wide flex, visible actor tactics, and provenance-aware dialogue distinguish route state, revelation, and social consequence.",
+          "narrativeFunction": "Mechanical mastery uncovers a civic deception and turns an abstract origin story into a lived change in movement, trust, and resource policy."
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "sourceFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+        "caseIdMatchedAcrossApplicationMapAndReviews": true,
+        "reviewerInputHashAttested": true,
+        "authorshipBlindness": "not-recorded"
+      },
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-combination-reviewer-a",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.11,
+          "verdict": "pass",
+          "rationale": "Reversible world states and a large truth reveal occur in many narrative adventures, but I cannot map this case to one concrete encounter. Its ternary hydration topology, stable scar-and-plaque comparison anchors, player-caused habitat-scale revelation, immediate rescue, and provenance-limited distribution of the pump log make a particular causal and social sequence without a recognizable commercial-level match."
+        },
+        {
+          "reviewerId": "blind-combination-reviewer-b",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.14,
+          "verdict": "pass",
+          "rationale": "A mechanical action producing a large truth reveal and then changing routes and character knowledge is a broad dramatic pattern. The three hydration values, folded capillary loops, central recovery well, pollen-grain revelation, immediate witness rescue, and provenance-aware log sharing do not align with a specific commercial level I can name."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.95161d0121a34108f85f",
+      "patternIds": [
+        "pattern.embodied-world-change-reveal",
+        "pattern.npc-reacts-to-world-state",
+        "pattern.parallel-state-comparison"
+      ],
+      "vetoStatements": [
+        "Affected cast, regional before/after structure, restoration action, and reaction sequence identify one source campaign beat."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.e359f49893980e2389a0"
+      ],
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "status": "reviewed-pass",
+      "verdict": "pass",
+      "autoCompositionAuthorized": true,
+      "applicationRef": "benchmarks/originality-blind-combination-applications.json#/cases/4",
+      "applicationHash": "sha256:d78aa77afaed755d1144d99a17f05751cd83cc92e1fef937d7a881864ef80ecd",
+      "transformedApplication": {
+        "caseId": "blind.combination.case.95161d0121a34108f85f",
+        "storySummary": "A weather archivist in a kite-suspended scent refinery is ordered to release the season's first rain over a salt-basin city. Opening the municipal condenser reveals that every stored weather fragrance was distilled from memories residents surrendered as tax, including a missing strike that officials erased from the dry inventory. The player causes the scented rain, walks through its immediate social consequences, and compares the refinery before and after release to reconstruct whose testimony was removed.",
+        "gameplaySummary": "The player primes three condenser chambers by hand and opens the rain skin, remaining in control as aromatic droplets spread through the suspended platforms. They can then hold up reusable blotter overlays at fixed wind vanes to compare the dry inventory impressions with the live rain traces. Stable vane shapes align the two evidence states, while discrepancies in scent density, droplet rhythm, and worker behavior identify an omitted memory. Characters respond only to rain they experienced or to a blotter the player deliberately shares, changing access, work tactics, and beliefs rather than issuing uniform praise.",
+        "spatialSummary": "The refinery is a descending corkscrew of work decks around three fixed wind vanes. Rain stretches catch-skins into new ramps and lowers some service platforms, but the comparison activity follows the same recognizable anchors rather than a paired map. The embodied reveal travels downward with the player from condenser to public catchment, ending in a small interaction square where several witnesses are reachable. If one social route closes, an exterior maintenance sling preserves neutral circulation.",
+        "feedbackSummary": "Before release, blotters show embossed empty bands and the decks sound dry and brittle. After release, droplets add raised rings, alternating taps, and distinct scent icons with text labels for accessibility. A perfumer shutters a stall after recognizing a memory, a sanitation rigger opens an evidence hatch after seeing runoff, and an apprentice retraces an erased picket line only if given the matching blotter. Skipping the wide reveal preserves the same rain state and opens a replayable sensory record.",
+        "transformationAxes": [
+          "worldbuilding",
+          "characters",
+          "narrative-causality",
+          "topology",
+          "objects",
+          "visual-language",
+          "audio-language",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "A corkscrew refinery changes through one caused rainfall event, with catch-skin ramps and service decks arranged around three invariant vanes rather than coordinate-matched alternate maps.",
+          "objectRoleGraph": "The condenser enacts the public reveal, blotters turn state differences into portable evidence, and fixed wind vanes align comparisons while individual residents consume only evidence available to them.",
+          "actionSequence": "Prime chambers, cause the rain while retaining control, follow it into changed work decks, overlay dry and wet evidence at stable anchors, infer the omission, and choose which situated witness receives proof.",
+          "feedbackSignature": "Embossed bands, raised droplet rings, alternating taps, labeled scent icons, changed catch-skins, and actor-specific tactics make comparison and consequence independently readable.",
+          "narrativeFunction": "A civic weather ceremony becomes an embodied disclosure about coerced memory, and the player's evidence-sharing decisions determine how that truth enters public life."
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "sourceFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+        "caseIdMatchedAcrossApplicationMapAndReviews": true,
+        "reviewerInputHashAttested": true,
+        "authorshipBlindness": "not-recorded"
+      },
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-combination-reviewer-a",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "Dishonored 2",
+          "guessEncounter": "A Crack in the Slab",
+          "confidence": 0.43,
+          "verdict": "pass",
+          "rationale": "Anchor-aligned comparison of two conditions and consequences for inhabitants make A Crack in the Slab a plausible association. Attribution remains below threshold because this is not a freely toggled pair of coordinate-matched time maps: the player causes one rainfall transition, compares dry impressions with portable wet overlays, reconstructs omitted testimony, and deliberately shares evidence with situated witnesses along a corkscrew refinery. The action and topology signatures are materially different."
+        },
+        {
+          "reviewerId": "blind-combination-reviewer-b",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "Dishonored 2",
+          "guessEncounter": "Mission 7: A Crack in the Slab at Aramis Stilton's Manor",
+          "confidence": 0.61,
+          "verdict": "pass",
+          "rationale": "Using a handheld overlay to compare recognizable anchors across two conditions and seeing situated social consequences makes A Crack in the Slab the strongest candidate. Confidence remains below the failure threshold because the player causes a one-way rainfall, comparison occurs at three dedicated vanes, evidence is inferred from multisensory discrepancies and physically shared, and the corkscrew topology is not a coordinate-matched past/present manor."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.a016f5605c95e2d913a2",
+      "patternIds": [
+        "pattern.constrained-vehicle-route",
+        "pattern.landmark-promises-future-use"
+      ],
+      "vetoStatements": [
+        "Vehicle form, macro network, landmark rhythm, and arrival structure identify one source voyage."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.969504e5bdfaf09f4dbf"
+      ],
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "status": "reviewed-pass",
+      "verdict": "pass",
+      "autoCompositionAuthorized": true,
+      "applicationRef": "benchmarks/originality-blind-combination-applications.json#/cases/5",
+      "applicationHash": "sha256:2ac4f29593ea53cd88650eeaa883028a7cc99f34ef79e51b9cfd440e30c5ce81",
+      "transformedApplication": {
+        "caseId": "blind.combination.case.a016f5605c95e2d913a2",
+        "storySummary": "A seam pilot carries repair crews across a cloth city stretched between migrating atmospheric bladders. The crew's eight-footed seam walker can step only on load-bearing stitches, so every trip requires active choices among branching fabric lines, wind damage, passenger needs, and short repair stops. An inside-out rain fan, visible through several layers of cloth from the first route, promises a later destination where the city's dangerous tension imbalance can finally be diagnosed.",
+        "gameplaySummary": "The player previews nearby branches by plucking seam lines and reading the returning vibration, then sets the walker's leg cadence, chooses knots at junctions, and performs local balancing actions while moving. Fast taut seams save time but threaten fragile cargo; slack seams allow repairs but drift toward storm pockets. Stops checkpoint the walker and expose new views of the rain fan. On the final approach, knowledge gathered from several route vibrations lets the player dock beneath the fan and retension its folded vanes rather than merely arrive at a decorative endpoint.",
+        "spatialSummary": "The travel network is a web of stitched arcs with legible junction knots, short stop loops, and reroute edges after missed turns. It is neither a square navigation grid nor a rail corridor: fabric lines stretch, sag, and cross at different depths while the walker remains bound to verified load paths. The rain fan appears first as a reversed pattern of runoff, then gains mechanical detail from two intermediate stops, and finally serves as a hub that redistributes tension into three future seams.",
+        "feedbackSummary": "Each prospective seam answers a pluck with a distinct controller vibration and visible traveling crease. The walker's feet drum the chosen cadence, cargo straps change posture before failure, and junction knots rotate to show available branches without a chart screen. The rain fan's folded vanes add notes to the route's vibration language at each sighting; successful retension sends a recognizable crease backward across every traveled seam.",
+        "transformationAxes": [
+          "worldbuilding",
+          "objects",
+          "topology",
+          "control-language",
+          "visual-language",
+          "narrative-causality",
+          "characters",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "A depth-layered web of tensioned seams offers previewable branches, stop loops, and recovery reroutes to a repeatedly visible fan hub, without a conventional grid or track layout.",
+          "objectRoleGraph": "The many-legged walker is an active mobile decision space, seam knots communicate route risk, passenger cargo changes traversal priorities, and the rain fan evolves from distant anomaly into a network regulator.",
+          "actionSequence": "Pluck and preview branches, choose cadence and junction, manage a moving risk, stop for a local task and new sightline, reroute after misses, then use accumulated vibration evidence to operate the landmark.",
+          "feedbackSignature": "Traveling creases, tactile replies, foot rhythms, cargo posture, rotating knots, and a network-wide return crease confirm route decisions and landmark payoff without map or arrival fanfare conventions.",
+          "narrativeFunction": "Travel expresses the pilot's duty of care, while the landmark turns repeated route observations into a diagnosis of the city's shared structural problem."
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "sourceFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+        "caseIdMatchedAcrossApplicationMapAndReviews": true,
+        "reviewerInputHashAttested": true,
+        "authorshipBlindness": "not-recorded"
+      },
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-combination-reviewer-a",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.09,
+          "verdict": "pass",
+          "rationale": "Branching travel, vehicle-like traversal, route-risk tradeoffs, and a repeatedly framed destination are broad conventions rather than identifying evidence. The seam-plucking preview, eight-foot cadence control, layered non-grid fabric web, passenger-care decisions, and use of accumulated vibration readings to retension the final landmark do not resolve to a specific commercial journey or level."
+        },
+        {
+          "reviewerId": "blind-combination-reviewer-b",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "Death Stranding",
+          "guessEncounter": "Episode 2 delivery route to Port Knot City",
+          "confidence": 0.26,
+          "verdict": "pass",
+          "rationale": "Active route preview, cargo-dependent risk, recovery stops, and a visible destination loosely suggest Death Stranding's delivery approach structure. The stitch-bound walker, plucked seam responses, cadence control, depth-layered web, reroute edges, and final retensioning of a landmark do not reproduce the terrain, traversal verbs, or objective sequence of the Port Knot route."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.a1b58443328199f9f9f7",
+      "patternIds": [
+        "pattern.multi-solution-state-graph",
+        "pattern.object-role-composition"
+      ],
+      "vetoStatements": [
+        "Object roles, exact arrangement, action order, and payoff identify a source construction or copied-object puzzle.",
+        "Object roles, part arrangement, action order, and outcome reproduce a known source solution."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.2d521c8f5254681bd36d",
+        "blind.combination.pending.6a6ffa15fa7678aa26ad"
+      ],
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "status": "reviewed-pass",
+      "verdict": "pass",
+      "autoCompositionAuthorized": true,
+      "applicationRef": "benchmarks/originality-blind-combination-applications.json#/cases/6",
+      "applicationHash": "sha256:99df56879db95d154cdf6137ccc63f0ea48df8eb00d31f0dce16a2c6f8f7c751",
+      "transformedApplication": {
+        "caseId": "blind.combination.case.a1b58443328199f9f9f7",
+        "storySummary": "An atmospheric midwife tends juvenile fog bodies in a nursery suspended beneath a warm industrial plume. A sudden crosswind pushes three patients outside their safe humidity band, but the nursery owns no purpose-built rescue machine. The player must understand the causal roles of ordinary care materials and improvise one of several recoverable arrangements that delivers the same medical outcome without prescribing a single recipe.",
+        "gameplaySummary": "Portable materials advertise bounded roles: cork-bark collars anchor and absorb, hollow shell spirals redirect flow, woven icegrass diffuses turbulence, and heat-eating ink pads buffer temperature. The player places any two or three around the nursery's airflow pockets, observes the causal trace, and can undo one step or reset the whole bay. One valid path anchors a patient before bending the crosswind around it; another diffuses the gust and buffers the warm plume; a third moves the care screens to create a low-pressure corridor. All solutions must hold every patient inside the marked humidity band for six beats, but they consume different space and staff attention.",
+        "spatialSummary": "The nursery is a crescent deck with three airflow pockets connected to a shared recovery alcove. Materials can occupy broad zones rather than exact sockets, and each path changes a different subset of wind, heat, and moisture edges. The target invariant is visible from the central care rail, while side platforms make alternate arrangements practical instead of cosmetic. No placement can block the reset alcove or strand a required material.",
+        "feedbackSummary": "Wind is traced by short ribbons with arrow-shaped tips, heat by expanding stipple, and humidity by raised bands around each patient; each channel also has a distinct pulse rhythm and text label. Failed arrangements highlight the missing role category rather than suggesting an exact object. Successful paths produce the same six-beat breathing cadence but preserve their different material silhouettes, resource costs, and apprentice reactions so the player's causal authorship remains visible.",
+        "transformationAxes": [
+          "worldbuilding",
+          "objects",
+          "topology",
+          "control-language",
+          "visual-language",
+          "feedback",
+          "characters",
+          "narrative-causality"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "Three linked airflow pockets support several zone-level intervention paths around one protected reset alcove, with no exact placement grid or dominant route.",
+          "objectRoleGraph": "Four mundane care materials expose anchor, redirect, diffuse, and buffer roles that can form multiple causal chains while patients supply one shared measurable invariant.",
+          "actionSequence": "Inspect environmental traces, choose roles, place materials in broad zones, run a short simulation, diagnose the missing causal role, undo or reset, and sustain the common medical outcome through any valid path.",
+          "feedbackSignature": "Directional ribbons, heat stipple, tactile humidity bands, distinct pulse rhythms, labeled channels, and role-class failure cues reveal causality without disclosing a blueprint.",
+          "narrativeFunction": "Improvisation becomes a form of care: the solution selected changes workload and trust while preserving the same protected patient outcome."
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "sourceFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+        "caseIdMatchedAcrossApplicationMapAndReviews": true,
+        "reviewerInputHashAttested": true,
+        "authorshipBlindness": "not-recorded"
+      },
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-combination-reviewer-a",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.16,
+          "verdict": "pass",
+          "rationale": "The open-ended material puzzle may evoke systemic puzzle games generally, but no single authored encounter is recoverable from it. Four bounded causal roles can be composed in several zone-level arrangements, all judged by a six-beat patient-health invariant while retaining different space and labor costs. That role algebra, medical framing, multi-patient airflow topology, and role-class feedback are too nonspecific for title-and-encounter attribution."
+        },
+        {
+          "reviewerId": "blind-combination-reviewer-b",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "The Legend of Zelda: Tears of the Kingdom",
+          "guessEncounter": null,
+          "confidence": 0.29,
+          "verdict": "pass",
+          "rationale": "Open-ended placement of materials with several valid causal constructions has a broad Tears of the Kingdom-like affordance, but no particular shrine or encounter is identifiable. The anchor, redirect, diffuse, and buffer roles; zone-level placement; six-beat humidity invariant; diagnostic role-category feedback; and workload consequences constitute a different and medically framed system."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.beddb017d39a22f02925",
+      "patternIds": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.landmark-promises-future-use",
+        "pattern.reward-expands-future-possibility"
+      ],
+      "vetoStatements": [
+        "Discovery location, item role, future obstacle, and reveal cadence converge on one source reward loop.",
+        "Landmark silhouette, approach graph, reward role, and reveal staging converge on one source destination."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.e1a48beee91f762c170a",
+        "blind.combination.pending.2dd6d9267356f8665fb9"
+      ],
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "status": "reviewed-pass",
+      "verdict": "pass",
+      "autoCompositionAuthorized": true,
+      "applicationRef": "benchmarks/originality-blind-combination-applications.json#/cases/7",
+      "applicationHash": "sha256:95a9c948ea42b058cd39d3d95cc1b263e48a892c2b979c0ada8337bf2ddd90d6",
+      "transformedApplication": {
+        "caseId": "blind.combination.case.beddb017d39a22f02925",
+        "storySummary": "A spore cartographer works along the underside of a migrating glass fungus, where settlements cling to flexible nutrient membranes. Early surveys repeatedly frame the Corkscrew of Amber Foam rotating below the colony, but its approach membranes cannot bear ordinary footsteps. After learning a reusable pressure-braiding technique, the cartographer can revisit those old surfaces, reach the promised structure, and complete an optional rescue whose reward creates several later civic choices instead of ending as a collectible.",
+        "gameplaySummary": "Pressure-braiding is performed by alternating two hand controls to synchronize with a membrane's contraction; the learned technique works on many previously observed soft spans and opens useful return shortcuts. At the corkscrew, the player uses it across a branching approach, stabilizes stranded pollination crews, and may continue into an optional rotating chamber. Completing that chamber grants a share of mobile scaffold time. The share can later support one of three plans—extend a clinic route, create a school evacuation bypass, or open a risky research canopy—and can be reassigned before commitment, so discovery expands future decisions rather than awarding score.",
+        "spatialSummary": "The first visit ends at a clearly visible yielding membrane with a bidirectional retreat loop and the amber corkscrew framed below. On return, the new technique creates two diagonal edges through the old survey region and a spiraling multi-entry approach to the landmark, not a straight locked corridor. The optional chamber branches from the rescue path and reconnects before the exit. Its payoff is represented at later district planning tables, where the three scaffold options lead to genuinely different route graphs.",
+        "feedbackSummary": "Unbraided membranes buckle in broad waves; successful alternation tightens them into crosshatched load lines accompanied by a two-part haptic cadence. The corkscrew's foam cells rotate visibly at every sighting and begin carrying workers once reached. The optional chamber announces progress through changing air pressure and worker hand signals. Later planning tables preview the new edge, affected residents, and reversible commitment state for each scaffold choice without revealing the downstream challenge solution.",
+        "transformationAxes": [
+          "worldbuilding",
+          "objects",
+          "topology",
+          "control-language",
+          "visual-language",
+          "narrative-causality",
+          "characters",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "A remembered retreat loop gains two diagonal edges and a multi-entry spiral approach after pressure-braiding, with an optional side chamber that later branches into three district-scale route investments.",
+          "objectRoleGraph": "Flexible membranes change from visible obstruction to reusable traversal medium, the amber corkscrew changes from distant orientation anchor to workplace, and scaffold time becomes a reallocatable future-choice resource.",
+          "actionSequence": "Observe and remember the unreachable landmark, learn a general pressure technique elsewhere, revisit and transform known spans, reach and stabilize the corkscrew, optionally solve the side chamber, then choose among previewed future investments.",
+          "feedbackSignature": "Buckling waves, crosshatched load lines, paired haptics, rotating foam cells, worker signals, and planning-table edge previews separate capability, landmark payoff, and choice-generating reward.",
+          "narrativeFunction": "Personal traversal growth returns value to a place the player already remembers, then converts optional rescue labor into a contested decision about communal infrastructure."
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "sourceFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+        "caseIdMatchedAcrossApplicationMapAndReviews": true,
+        "reviewerInputHashAttested": true,
+        "authorshipBlindness": "not-recorded"
+      },
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-combination-reviewer-a",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.18,
+          "verdict": "pass",
+          "rationale": "Capability-gated revisiting, an early visible landmark, and optional side content are standard metroidvania vocabulary, not enough to identify a level. Here the learned action rhythm changes soft membranes throughout an old survey loop, supports a multi-entry spiral rescue, and converts optional chamber work into a reversible choice among three later civic route investments. I cannot match that complete chain to a concrete commercial encounter."
+        },
+        {
+          "reviewerId": "blind-combination-reviewer-b",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "Hollow Knight",
+          "guessEncounter": "Returning through Fungal Wastes after acquiring the Mantis Claw",
+          "confidence": 0.27,
+          "verdict": "pass",
+          "rationale": "Remembering an obstruction, gaining a reusable traversal ability, and returning through an old region are recognizable metroidvania conventions, with Hollow Knight only a tentative example. Alternating pressure-braiding, two diagonal return edges, a multi-entry corkscrew rescue, an optional rotating chamber, and a reallocatable three-way scaffold reward do not match the named area's route or reward structure."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.e6c3335562ec921c9834",
+      "patternIds": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.optional-secret-readability",
+        "pattern.reward-expands-future-possibility"
+      ],
+      "vetoStatements": [
+        "Clue surface, required action, hidden-room topology, and reward role collectively identify one source secret."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.aad3796932cd5fa785ba"
+      ],
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "status": "reviewed-pass",
+      "verdict": "pass",
+      "autoCompositionAuthorized": true,
+      "applicationRef": "benchmarks/originality-blind-combination-applications.json#/cases/8",
+      "applicationHash": "sha256:7d16879e8dedb3049e6a34a9d9f31f8ab52c24b580c80f0063fe0a38f00ada70",
+      "transformedApplication": {
+        "caseId": "blind.combination.case.e6c3335562ec921c9834",
+        "storySummary": "A biofilm conservator maintains a settlement grown through the porous wall of an abandoned desalination hose. After learning to reverse the electrical adhesion of living surfaces, the conservator revisits a laundry capillary where lint has always drifted against the water flow. The new technique makes an optional, testable anomaly actionable; solving it uncovers a forgotten maintenance quorum whose authority can be spent on several future interventions rather than on an immediate prize.",
+        "gameplaySummary": "The player can now flip charged biofilm between grip and release, causing old porous surfaces to hold, shed, or pass suspended matter. At the laundry capillary, three fair clues recur: lint climbs only along one seam, drying tabs twitch against the pump rhythm, and workers' soap bubbles flatten before an apparently solid mesh. Applying charge reversal to a nearby sample confirms the hypothesis before the player enters the optional bypass. Restoring the hidden quorum awards two transferable work mandates that can later reroute clean water, protect a nursery culture, or expose an illegal drain; commitments remain previewable and reversible until used.",
+        "spatialSummary": "The remembered laundry loop surrounds a porous central manifold with an always-open service return. Charge reversal adds a narrow filter crossing and opens a crescent bypass whose exit rejoins the public wash deck, so the optional discovery never gates the main route. Clues are visible from ordinary circulation at several scales, and the player can test the same surface property on a harmless sample tray. Future mandate sites occupy different districts and promise distinct social and route consequences rather than copies of the secret room.",
+        "feedbackSummary": "Biofilm hairs lie flat for release and stand in ridged rows for grip; lint trajectory and bubble shape provide redundant motion cues; the sample tray clicks in sync only when the causal relation is correct. Entering the bypass changes the pump's vibration rather than playing a generic discovery flourish. Work-mandate previews show affected pipes as embossed paths, name the residents involved, and display whether a commitment can still be withdrawn.",
+        "transformationAxes": [
+          "worldbuilding",
+          "objects",
+          "topology",
+          "control-language",
+          "visual-language",
+          "characters",
+          "narrative-causality",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "A public laundry loop gains a filter crossing and optional crescent bypass under a learned adhesion capability, while an invariant service edge preserves main-route circulation.",
+          "objectRoleGraph": "Living biofilm becomes a general grip-release medium, lint, tabs, and bubbles form a redundant clue system, the sample tray supports safe hypothesis testing, and quorum mandates create later choices.",
+          "actionSequence": "Recall an old anomaly, apply a new reusable surface action, compare recurring clues, test the causal rule safely, enter an optional reconnecting bypass, restore the quorum, and allocate reversible mandates later.",
+          "feedbackSignature": "Biofilm posture, lint motion, tab rhythm, bubble deformation, synchronized clicks, pump vibration, and embossed mandate previews distinguish inference, access, discovery, and future commitment.",
+          "narrativeFunction": "A hidden maintenance history becomes optional but consequential civic agency, allowing the player to decide which neglected system receives institutional attention."
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "sourceFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+        "caseIdMatchedAcrossApplicationMapAndReviews": true,
+        "reviewerInputHashAttested": true,
+        "authorshipBlindness": "not-recorded"
+      },
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-combination-reviewer-a",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": null,
+          "guessEncounter": null,
+          "confidence": 0.13,
+          "verdict": "pass",
+          "rationale": "A learned traversal property exposing an optional secret is a widespread structure. The distinctive evidence chain here uses lint direction, tab rhythm, bubble deformation, and a harmless sample-tray experiment before a reconnecting bypass; its reward is reversible institutional authority spent across later districts. Those mechanics and consequences do not point to one specific commercial secret room or level."
+        },
+        {
+          "reviewerId": "blind-combination-reviewer-b",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "Prey",
+          "guessEncounter": "Hardware Labs maintenance routes using the GLOO Cannon",
+          "confidence": 0.24,
+          "verdict": "pass",
+          "rationale": "A reusable traversal capability exposing optional maintenance routes and systemic clues loosely evokes Prey's station exploration. However, reversible biofilm adhesion, the lint-tab-bubble clue triad, a safe hypothesis tray, the reconnecting crescent bypass, a forgotten quorum, and transferable civic mandates do not correspond to a specific Hardware Labs room or objective."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.combination.case.f2277fa2a0d339208209",
+      "patternIds": [
+        "pattern.action-first-onboarding",
+        "pattern.local-rule-development-arc"
+      ],
+      "vetoStatements": [
+        "Opening beats, tool order, room graph, and exam staging converge on one source dungeon."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.fb8e3cc12e92ea224189"
+      ],
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "status": "reviewed-pass",
+      "verdict": "pass",
+      "autoCompositionAuthorized": true,
+      "applicationRef": "benchmarks/originality-blind-combination-applications.json#/cases/9",
+      "applicationHash": "sha256:f60e141c305d1e319112168c494a07b42b3c9b967fa022758becc15e2c6bc3fd",
+      "transformedApplication": {
+        "caseId": "blind.combination.case.f2277fa2a0d339208209",
+        "storySummary": "A new shift worker wakes inside an orbital silence refinery as a dangerous resonance ribbon slips from its duct and begins rattling a nearby sleeping habitat. With no briefing and no punitive timer, the player must route that loose vibration into a sponge vat. The response reveals the worker's responsibility, core controls, and immediate direction, then grows the same transfer rule through a complete sequence of practice, variation, reversal, combination, and exam.",
+        "gameplaySummary": "The first meaningful input presses a flexible duct, follows the visible pulse, and releases it when the sponge vat is open; a wrong release merely returns the ribbon to the starting loop. Subsequent bays ask the player to transfer two pulses in sequence, handle a rigid duct that reflects rather than carries, reverse flow to empty an overloaded vat, and combine reflection with timed absorption. The final exam protects three sleeping habitats by routing a mixed-frequency burst through equipment already learned. It introduces no secret rule, and each failure resets only the current bay while retaining the worker's lesson record.",
+        "spatialSummary": "The opening cell frames the loose ribbon, one flexible duct, the safe vat, and the disturbed habitat in a single action triangle. Four later bays wrap around a central quiet gallery, allowing observation and replay without retracing the whole refinery. Each bay changes topology and surface context while preserving the same readable causal chain. The exam reconnects earlier ducts into a branching loop and keeps an emergency bleed valve reachable from every state.",
+        "feedbackSummary": "Resonance appears as a thick ribbon whose spacing indicates frequency, while controller pulses and captioned waveform shapes provide noncolor channels. Flexible ducts bow with the pulse, rigid ducts snap it backward, and sponge vats visibly compress as they absorb. Wrong timing leaves a fading echo at the exact failed link; correct timing makes the nearby habitat's rattling objects settle. The exam layers familiar signals without increasing their vocabulary.",
+        "transformationAxes": [
+          "worldbuilding",
+          "characters",
+          "narrative-causality",
+          "control-language",
+          "topology",
+          "visual-language",
+          "audio-language",
+          "feedback"
+        ],
+        "structuralDelta": {
+          "topologyGraph": "A compact opening action triangle expands into four bays around a quiet gallery and culminates in a branching exam loop with a permanently reachable bleed valve.",
+          "objectRoleGraph": "Flexible ducts carry, rigid ducts reflect, sponge vats absorb, and sleeping habitats provide immediate stakes and verification within one reusable resonance rule.",
+          "actionSequence": "Solve an urgent safe transfer to infer the role, practice sequencing, encounter reflective variation, reverse an overload, combine known relationships, and pass a multi-target exam without a new rule.",
+          "feedbackSignature": "Ribbon spacing, waveform shapes, controller pulses, duct deformation, vat compression, local fading echoes, and settling habitat props identify state and error class at every stage.",
+          "narrativeFunction": "The refinery job is understood first as protection performed by hand, then as growing professional mastery rather than biography delivered in dialogue."
+        }
+      },
+      "applicationClosure": {
+        "hashAlgorithm": "sha256-canonical-json-v1",
+        "sourceFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+        "caseIdMatchedAcrossApplicationMapAndReviews": true,
+        "reviewerInputHashAttested": true,
+        "authorshipBlindness": "not-recorded"
+      },
+      "convergence": {
+        "specificTitleAndEncounter": false,
+        "threshold": 0.65,
+        "reviewerCount": 2
+      },
+      "reviewerResults": [
+        {
+          "reviewerId": "blind-combination-reviewer-a",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "Portal 2",
+          "guessEncounter": "Chapter 2: The Cold Boot test-chamber sequence",
+          "confidence": 0.29,
+          "verdict": "pass",
+          "rationale": "The controlled progression from safe first action through isolated variations to a combined exam weakly suggests Portal 2's early curriculum. That is a reusable tutorial pattern rather than encounter identity: this case teaches carrying, reflecting, reversing, and absorbing resonance in bays around a hub, begins with protection of a sleeping habitat, and preserves an emergency bleed route. No particular Portal chamber shares the object algebra or spatial sequence."
+        },
+        {
+          "reviewerId": "blind-combination-reviewer-b",
+          "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+          "guessTitle": "Portal",
+          "guessEncounter": "Aperture Science Test Chambers 00-18",
+          "confidence": 0.54,
+          "verdict": "pass",
+          "rationale": "The safe-reset teaching arc that introduces one relation, varies it, reverses it, combines familiar rules, and ends with an exam is recognizably Portal-like. It still does not identify a particular Portal chamber: the urgent habitat rescue, resonance transfer, carrying versus reflecting ducts, absorption timing, four-bay hub, mixed-frequency final loop, and always-reachable bleed valve are materially different mechanics and spatial relations."
+        }
+      ]
+    },
+    {
+      "caseId": "blind.combination.excluded.16faf8fd0e2139151af1",
+      "patternIds": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.knowledge-gated-revisit"
+      ],
+      "vetoStatements": [
+        "The instance requires both a newly granted power and a supposedly knowledge-only solution."
+      ],
+      "registryCandidateCaseIds": [
+        "blind.combination.pending.95ca04239bab151ff14b"
+      ],
+      "mode": "structural-exclusion",
+      "reviewerBlind": false,
+      "status": "structurally-excluded",
+      "verdict": "not-applicable",
+      "autoCompositionAuthorized": false,
+      "transformedApplication": null,
+      "applicationHash": null,
+      "reviewerResults": [],
+      "rationale": "The first contract requires a later reusable avatar capability to make an earlier affordance actionable, while the second requires the relevant action to have been physically available on the first visit and to become usable through knowledge alone. Both maturity contracts explicitly declare the other pattern as a conflict, so a single coherent instance cannot satisfy both selection contracts."
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "workId": "work.ocarina-of-time",
+  "author": "role.analyst.classic-3d-systems",
+  "reviewer": "role.reviewer.causal-observations",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player grows from an isolated child into a time-crossing hero whose competence is expressed by reading a three-dimensional world and helping its communities.",
+    "dimension.core-loop": "Follow a lead from the central field or a settlement, enter a bounded challenge, learn an item rule, defeat an exam encounter, and use the new capability to reinterpret earlier routes.",
+    "dimension.verbs": "Analog movement, context actions, lock-on sword and shield combat, aimed tools, object handling, riding, and performed melodies share a compact action vocabulary.",
+    "dimension.world-state": "Child and adult eras expose different occupants, hazards, routes, and affordances while selected quest progress and acquired capabilities persist across the transition.",
+    "dimension.topology": "A broad field works as a memorable hub whose visible exits lead to settlements and contained dungeons, with landmarks and route repetition building spatial memory.",
+    "dimension.gating-revisit": "Items, songs, age, story permissions, and learned environmental rules gate progress; shortcuts and changed-era routes make return travel materially different.",
+    "dimension.puzzle-information": "Puzzles present manipulable objects, targetable features, audio or visual cues, and item-compatible surfaces so a hypothesis can be attempted and immediately confirmed.",
+    "dimension.dungeon-structure": "Room-and-key dependency graphs introduce a local rule, add navigation pressure around a central device or spatial theme, and end with an item-centered boss exam.",
+    "dimension.exploration-reward": "Optional routes yield health pieces, bottles, collectible tokens, songs, ammunition capacity, and small discoveries that expand either endurance or future possibility.",
+    "dimension.growth-economy": "Health, magic, wallets, ammunition limits, bottles, and durable tools grow over the adventure while rupees and consumables support moment-to-moment preparation.",
+    "dimension.combat-boss": "Lock-on stabilizes facing and camera, enabling circling, guarding, timed attacks, projectile aiming, and bosses whose tells expose a tool-mediated vulnerability.",
+    "dimension.npc-quest": "Characters supply local goals, trade steps, songs, and state-dependent responses; day, place, and age sometimes change who is available and what can be completed.",
+    "dimension.narrative-performance": "A youthful collection quest pivots into an adult restoration journey, with era changes, location transformations, and short staged reveals carrying much of the drama.",
+    "dimension.camera-blocking": "Third-person framing, lock-on recentering, first-person aiming, entrance reveals, and selective fixed cameras keep actors, targets, and room-scale mechanisms readable.",
+    "dimension.teaching-feedback": "The opening settlement isolates movement, targeting, dialogue, currency, and equipment lessons; companions, action prompts, effects, and enemy reactions continue contextual guidance.",
+    "dimension.ui-input": "The N64 analog stick, Z trigger, context-sensitive action button, and three quick item buttons make mode and target state visible while limiting simultaneous tool loadout.",
+    "dimension.recovery-accessibility": "Saving, bottled fairies, health drops, dungeon shortcuts, and persistent major acquisitions soften failure, though the original version offers limited explicit assistance.",
+    "dimension.perspective-implementation": "Full 3D creates depth aiming, camera occlusion, vertical landmarks, and free approach angles, requiring targeting and contextual movement to reduce orientation burden.",
+    "dimension.hardware-multiplayer": "The original is single-player; its design is materially shaped by one analog stick, a rear targeting trigger, and the N64 controller's separate item buttons.",
+    "dimension.production-runtime": "A faithful abstraction needs target-aware locomotion and camera, room state graphs, era variants, persistent inventory and quest flags, melody recognition, and robust transition staging."
+  },
+  "observationThemes": [
+    {
+      "key": "lock-on-turns-free-3d-into-readable-duels",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.ui-input"],
+      "context": "A hostile actor is within targeting range in a navigable 3D encounter space.",
+      "preconditions": ["The player can move freely.", "A valid target is visible or near the camera's focus."],
+      "playerInput": ["Hold the targeting trigger and choose attack, guard, dodge, or aimed item."],
+      "before": ["Facing and camera direction can diverge from the opponent.", "Depth makes lateral relation harder to judge."],
+      "action": ["Acquire the target and execute a combat verb relative to it."],
+      "after": ["Facing and framing remain anchored to the opponent.", "Movement becomes orbiting and distance management."],
+      "feedback": ["Target marker, camera recentering, character facing, guard reactions, and hit effects expose the current relation."],
+      "consequences": ["The player can reason about timing and spacing instead of continuously correcting the camera."],
+      "factualDescription": "The original game binds targeting to the rear trigger and uses it for enemy combat, distant character interaction, and target-relative movement.",
+      "interpretation": "A temporary relational mode can make a new spatial dimension manageable without removing free movement outside the encounter.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "era-shift-rewrites-familiar-routes",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.perspective-implementation"],
+      "context": "The player has learned the hub and several settlements in one age and later gains access to another age.",
+      "preconditions": ["The corresponding location has been visited before.", "The age transition is available at its controlled access point."],
+      "playerInput": ["Cross eras and return to a known route or settlement."],
+      "before": ["The player owns a spatial model of the younger-era route.", "Some paths or actors are unavailable."],
+      "action": ["Re-enter the same named place in the other era and test its changed affordances."],
+      "after": ["Landmarks remain recognizable while hazards, residents, access, and route uses differ."],
+      "feedback": ["Changed lighting, occupancy, geometry state, music, dialogue, and blocked or opened paths make the era legible."],
+      "consequences": ["Old navigation knowledge reduces orientation cost while changed state creates new questions and gates."],
+      "factualDescription": "The game lets the hero occupy child and adult eras, and many shared locations differ in population, danger, and accessible actions between them.",
+      "interpretation": "Keeping landmark identity stable while changing affordances turns revisit into comparison rather than repetition.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "dungeon-tool-becomes-local-grammar",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.exploration-reward", "dimension.growth-economy"],
+      "context": "Inside a bounded dungeon, a newly acquired tool matches previously seen but unresolved features.",
+      "preconditions": ["The player has encountered a blocked dependency.", "The dungeon item has just been acquired."],
+      "playerInput": ["Apply the item to a nearby safe example, then to earlier or more complex obstacles."],
+      "before": ["Several room dependencies are unresolved.", "The player's tool vocabulary lacks the matching verb."],
+      "action": ["Use the tool on signaled targets and combine it with navigation or combat."],
+      "after": ["A route, reward, or mechanism changes state.", "The item remains available beyond the dungeon."],
+      "feedback": ["Distinct target reaction, sound, animation, opened geometry, and map progress confirm the rule."],
+      "consequences": ["The same acquisition resolves the local dependency graph and expands later overworld possibility."],
+      "factualDescription": "Major dungeons place a durable item inside their route and repeatedly require it before using related interactions in a culminating encounter.",
+      "interpretation": "An acquisition feels consequential when it is taught locally, examined structurally, and then exported into the wider world.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "performed-melody-is-command-and-scene",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.hardware-multiplayer"],
+      "context": "A character or marked place teaches or calls for a short melody tied to a world function.",
+      "preconditions": ["The instrument is available.", "The melody has been learned or can be imitated from the scene."],
+      "playerInput": ["Enter instrument mode and perform the note sequence with the controller buttons."],
+      "before": ["A social promise, route, time state, or travel need is unresolved."],
+      "action": ["Complete the recognized sequence."],
+      "after": ["A scripted response, state change, or transport operation begins."],
+      "feedback": ["The view isolates the performance, notes sound as entered, and recognition triggers a distinctive scene transition."],
+      "consequences": ["Remembered input becomes both a player-owned command and a recurring narrative motif."],
+      "factualDescription": "Learned melodies are entered through controller buttons and can affect travel, time, weather-like conditions, characters, or story events depending on context.",
+      "interpretation": "Requiring a tiny performance before a world command can bind interface memory to dramatic meaning.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "boss-recombines-readable-rule-under-risk",
+      "dimensions": ["dimension.combat-boss", "dimension.teaching-feedback", "dimension.recovery-accessibility", "dimension.production-runtime"],
+      "context": "A dungeon ends after the player has practiced its item and encounter grammar in lower-risk rooms.",
+      "preconditions": ["The relevant tool is owned.", "The player has seen compatible targets or tells."],
+      "playerInput": ["Read the boss tell, use the matching item or positioning response, then exploit the exposed opening."],
+      "before": ["The boss is protected or cannot be damaged efficiently."],
+      "action": ["Trigger the taught vulnerability cycle and attack during its confirmed window."],
+      "after": ["The boss advances damage or phase state while the player retains a recoverable combat loop."],
+      "feedback": ["Camera emphasis, sound, animation, target state, and damage reaction distinguish failed reads from valid openings."],
+      "consequences": ["Success validates the dungeon's grammar and awards durable progression; failure can be retried without replaying the whole dungeon."],
+      "factualDescription": "Dungeon bosses use staged tells and vulnerabilities, commonly involving the local item, and the dungeon retains major route progress after combat failure.",
+      "interpretation": "A boss can function as a comprehension exam when its state machine makes the taught rule legible and preserves the costliest prior learning.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "A reversible world-age layer can make stable landmarks support substantial revisit without demanding an entirely separate map.",
+    "A target-relative interaction mode may unify combat, conversation, and camera control in free 3D spaces.",
+    "A short performed input phrase can operate as both diegetic ritual and reusable system command."
+  ],
+  "uniqueOrNonportable": [
+    "The exact child-to-adult chronology, sacred instrument, melody set, named peoples, temples, and plot revelations are recognizable authored surface content and must not be reused.",
+    "Specific dungeon layouts, boss sequences, iconography, audiovisual cues, and the Hyrule Field arrangement are nonportable.",
+    "Z-targeting's branded presentation and N64 button mapping are historical implementation particulars; only the abstract target-relative relation may be compared."
+  ],
+  "openQuestions": [
+    "The announced 2026 Nintendo Switch 2 edition remains outside this original-version behavior profile until Nintendo publishes its edition type and changes.",
+    "A later review should separate original regional save behavior and text differences if recovery is compared at that granularity."
+  ]
+}

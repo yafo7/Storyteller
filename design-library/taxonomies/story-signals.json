@@ -1,0 +1,18 @@
+{
+  "schemaVersion":"1.0.0","taxonomyId":"taxonomy.story-signals","taxonomyVersion":"1.0.0","status":"frozen",
+  "terms":[
+    {"termId":"signal.hidden-causal-rule","label":"Hidden causal rule","definition":"The story contains a stable but initially unknown rule whose discovery can change action.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.revisited-place","label":"Revisited place","definition":"The dramatic spine returns to a place after knowledge, capability, allegiance, or world state changes.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.parallel-state","label":"Parallel state","definition":"One place or relationship has two meaningfully contrasting states the player can compare.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.schedule-pressure","label":"Schedule pressure","definition":"Character routines or repeating time windows make observation and timing narratively meaningful.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.transformable-environment","label":"Transformable environment","definition":"Physical or social surroundings can change persistently in response to a player-understood rule.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.multi-causal-problem","label":"Multi-causal problem","definition":"A dramatic obstacle admits several coherent interventions rather than one prescribed answer.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.landmark-mystery","label":"Landmark mystery","definition":"A visible place or object can promise future meaning before the player can fully reach or use it.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.relationship-memory","label":"Relationship memory","definition":"An NPC relationship can remember action, knowledge, trust, or failure across encounters.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.capability-reveal","label":"Capability reveal","definition":"A learned action can express character change while opening new spatial or narrative possibilities.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.embodied-secret","label":"Embodied secret","definition":"A reveal is stronger when enacted or witnessed spatially than when delivered as exposition.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.confined-stage","label":"Confined stage","definition":"The story has few locations, so depth must come from state, perspective, schedule, and re-use.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"signal.low-interaction-fit","label":"Low interaction fit","definition":"The source depends on uninterrupted language, fixed chronology, or unchangeable space that resists systemic play.","status":"active","aliases":[],"supersedes":[]}
+  ],
+  "governance":{"owner":"Selector designer","changePolicy":"Signals require a documented story-model path and positive plus negative benchmark coverage.","migrationRefs":[]}
+}

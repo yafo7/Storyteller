@@ -1,0 +1,861 @@
+{
+  "schemaVersion": "1.0.0",
+  "reportId": "report.p4-existing-rebind-proposal-c.2026-07-18",
+  "generatedAt": "2026-07-18",
+  "proposalStatus": "non-authoritative-ready-for-independent-review",
+  "scope": {
+    "patternRefs": [
+      "pattern.knowledge-gated-revisit",
+      "pattern.multi-solution-state-graph",
+      "pattern.reward-expands-future-possibility"
+    ],
+    "authoritativeArtifactsModified": false,
+    "newObservationRecordsProposed": 0,
+    "newClaimRecordsProposed": 0,
+    "supplementalDraftRecordsUsed": 0
+  },
+  "inputs": [
+    "design-library/packs/zelda-mainline/coverage/pattern-remediation-review.json",
+    "design-library/packs/zelda-mainline/coverage/p4-supplemental-evidence-review.json",
+    "design-library/packs/zelda-mainline/patterns/maturity-contracts.json",
+    "design-library/packs/zelda-mainline/observations/observation-registry.json",
+    "design-library/packs/zelda-mainline/claims/claim-registry.json"
+  ],
+  "rules": {
+    "registryBoundary": "Only observations already present with status verified in observation-registry.json and their registered claims are eligible for direct support.",
+    "excludedArtifact": "design-library/packs/zelda-mainline/observations/p4-supplemental-evidence.json",
+    "exclusionReason": "p4-supplemental-evidence-review.json left every supplemental observation and claim at draft and approved zero evidence edges.",
+    "atomicClosureRule": "Each supporting observation must independently contain the retained principle's complete action-state-feedback-consequence chain; two partial observations may not be combined to manufacture one support edge.",
+    "twoWorkRule": "Each release candidate requires direct observations from at least two distinct included works.",
+    "narrowingRule": "Delete unsupported causal legs instead of asserting optionality, same-target parity, equivalent reset state, physical first-visit availability, zero capability delta, or path non-domination.",
+    "promotionRule": "This proposal does not promote a pattern. Contract integration, fixture regeneration, blind-application regeneration, and independent adjudication remain required."
+  },
+  "proposals": [
+    {
+      "patternId": "pattern.knowledge-gated-revisit",
+      "decision": "evidence-closable-after-semantic-narrowing",
+      "currentBlocker": "The current knowledge-only-return contract asserts that the action was physically available on a first visit and that no capability, item, world-state grant, or consumable changed. No two verified observations record those legs.",
+      "identityChange": {
+        "preservePatternId": true,
+        "replaceNameWith": "Separated-knowledge application",
+        "replaceSubtypeWith": "separated-information-application",
+        "releaseNoteRequired": "Record that the release-candidate meaning was narrowed before first release; it no longer denotes a knowledge-only physical route gate."
+      },
+      "retainedPrinciple": "Information preserved across a temporal, spatial, or attempt boundary becomes gameplay progression when the player applies it to change a later route, timing, comparison, or puzzle action.",
+      "explicitlyRemovedClaims": [
+        "The later action was physically available before the information was learned.",
+        "No item, form, capability, consumable, map layer, or world-state grant changed between the two moments.",
+        "The application must occur at the same place or target as an earlier failed probe.",
+        "At least two clue channels are required.",
+        "The physical world remains unchanged while only the player changes."
+      ],
+      "directSupport": [
+        {
+          "observationRef": "observation.majoras-mask.knowledge-converts-failed-cycle-into-progress",
+          "workRef": "work.majoras-mask",
+          "versionRef": "version.majoras-mask.original",
+          "status": "verified",
+          "claimRefs": [
+            "claim.majoras-mask.knowledge-converts-failed-cycle-into-progress.fact",
+            "claim.majoras-mask.knowledge-converts-failed-cycle-into-progress.interpretation"
+          ],
+          "sourceRef": "source.game.majoras-mask",
+          "causalClosure": {
+            "information": "The player observes an event in a dependency chain and records or remembers its timing or prerequisite.",
+            "separation": "A time reset destroys local cycle state and begins another attempt.",
+            "laterApplication": "The player uses learned timing and revised execution to change the next cycle's sequence and reach a missed interaction window.",
+            "feedback": "Clock state, event dialogue, changed actor presence, records, and the successful trigger response expose whether the revised model worked.",
+            "consequence": "The failed attempt remains productive because causal understanding changes the later plan."
+          },
+          "scopeWarning": "The observation permits a persistent capability to coexist with learned information; it does not support a zero-capability-delta rule."
+        },
+        {
+          "observationRef": "observation.phantom-hourglass.map-note-becomes-puzzle-memory",
+          "workRef": "work.phantom-hourglass",
+          "versionRef": "version.phantom-hourglass.original",
+          "status": "verified",
+          "claimRefs": [
+            "claim.phantom-hourglass.map-note-becomes-puzzle-memory.fact",
+            "claim.phantom-hourglass.map-note-becomes-puzzle-memory.interpretation"
+          ],
+          "sourceRef": "source.game.phantom-hourglass",
+          "causalClosure": {
+            "information": "A symbol, route, order, or landmark is observed and converted into a player-authored map mark.",
+            "separation": "The clue and its application are separated by time or space.",
+            "laterApplication": "The retained mark is consulted and the recorded relationship is applied at the later obstacle.",
+            "feedback": "The mark remains visible and the active scene responds when the recorded rule is applied.",
+            "consequence": "The later puzzle can be acted on through observation and translation rather than undocumented recall alone."
+          },
+          "scopeWarning": "The record supports a persistent authored representation, not a claim that the later obstacle was solvable before the clue was recorded."
+        }
+      ],
+      "counterBoundary": {
+        "observationRef": "observation.zelda-ii-the-adventure-of-link.learned-capability-reopens-route",
+        "workRef": "work.zelda-ii-the-adventure-of-link",
+        "boundary": "A delayed return whose registered state transition is explained by acquisition of a spell, technique, or item is not a separated-knowledge application unless a typed clue is also recorded and reapplied at the later decision.",
+        "derivedAbstention": "Select capability-recontextualizes-old-space when a new capability alone closes the route; allow co-selection only when the knowledge application and capability grant have distinct causal references and tests."
+      },
+      "contractPatchPlan": {
+        "selection": {
+          "replaceRequiredSignalsWith": [
+            {
+              "path": "$.designEvidence.knowledgeBridges[*].informationRef",
+              "operator": "exists",
+              "value": true
+            },
+            {
+              "path": "$.designEvidence.knowledgeBridges[*].laterDecisionRef",
+              "operator": "exists",
+              "value": true
+            },
+            {
+              "path": "$.designEvidence.knowledgeBridges[*].separationKind",
+              "operator": "in",
+              "value": [
+                "time",
+                "space",
+                "attempt"
+              ]
+            },
+            {
+              "path": "$.designEvidence.knowledgeBridges[*].informationAppliedAtLaterDecision",
+              "operator": "equals",
+              "value": true
+            }
+          ],
+          "replaceNegativeSignalsWith": [
+            {
+              "path": "$.designEvidence.knowledgeBridges[*].informationAppliedAtLaterDecision",
+              "operator": "equals",
+              "value": false
+            },
+            {
+              "path": "$.designEvidence.knowledgeBridges[*].laterOutcomeExplainedOnlyByCapabilityRef",
+              "operator": "exists",
+              "value": true
+            }
+          ],
+          "replacePrecedenceTieBreakWith": "Choose this pattern only when a registered clue, memory, or authored record is explicitly reapplied after separation; choose the capability pattern when acquisition alone explains success, and permit both only with separate causal refs.",
+          "replaceScoreCriteriaWith": [
+            {
+              "criterionId": "score.knowledge-revisit.application-closure",
+              "path": "$.designEvidence.knowledgeBridges[*].informationAppliedAtLaterDecision",
+              "weight": 0.35,
+              "rule": "Require an explicit information-to-later-decision edge."
+            },
+            {
+              "criterionId": "score.knowledge-revisit.separation-legibility",
+              "path": "$.designEvidence.knowledgeBridges[*].separationKind",
+              "weight": 0.25,
+              "rule": "Reward a clearly staged time, space, or attempt boundary."
+            },
+            {
+              "criterionId": "score.knowledge-revisit.application-feedback",
+              "path": "$.designEvidence.knowledgeBridges[*].applicationFeedbackRef",
+              "weight": 0.25,
+              "rule": "Require feedback that distinguishes applied, untested, and disproved information."
+            },
+            {
+              "criterionId": "score.knowledge-revisit.reveal-safety",
+              "path": "$.storyModel.revealOrder",
+              "weight": 0.15,
+              "rule": "Preserve protected facts until the intended later application."
+            }
+          ],
+          "replaceHardVetoesWith": [
+            "No typed information is applied at the later decision",
+            "The later outcome is fully explained by a new capability and no separate information edge exists",
+            "The clue depends on copied source wording, map marks, melody, schedule, or puzzle answer",
+            "Applying the information reveals protected canon before its gate"
+          ]
+        },
+        "parameters": {
+          "removeParameterIds": [
+            "parameter.knowledge-revisit.location",
+            "parameter.knowledge-revisit.action"
+          ],
+          "replaceParameterIds": [
+            {
+              "parameterId": "parameter.knowledge-revisit.clue-set",
+              "constraints": [
+                "At least one authored clue, observed event, remembered relation, or player-authored record",
+                "No source wording or exact source answer is transferred"
+              ]
+            }
+          ],
+          "addParameters": [
+            {
+              "parameterId": "parameter.knowledge-revisit.separation",
+              "valueType": "knowledge-separation-ref",
+              "bindFrom": "story-model",
+              "sourcePath": "$.knowledgeBridges[*].separation",
+              "required": true,
+              "constraints": [
+                "Kind is time, space, or attempt",
+                "Preservation mode is player-memory, authored-record, or replayable-clue"
+              ]
+            },
+            {
+              "parameterId": "parameter.knowledge-revisit.later-decision",
+              "valueType": "decision-ref",
+              "bindFrom": "story-model",
+              "sourcePath": "$.knowledgeBridges[*].laterDecisionRef",
+              "required": true,
+              "constraints": [
+                "The decision names the information it applies",
+                "Outcome is reveal-safe"
+              ]
+            }
+          ],
+          "retainParameterIds": [
+            "parameter.knowledge-revisit.fact"
+          ]
+        },
+        "effects": {
+          "removeEffectIds": [
+            "effect.knowledge-revisit.commit-understanding",
+            "effect.knowledge-revisit.open-always-possible-route"
+          ],
+          "addEffects": [
+            {
+              "effectId": "effect.knowledge-revisit.preserve-information-across-separation",
+              "kind": "set-fact",
+              "requiredPreconditions": [
+                "The configured clue, event, or record has been observed",
+                "The retention mode is declared"
+              ],
+              "requiredPostconditions": [
+                "The information remains observable, replayable, or explicitly tracked after the configured separation",
+                "Its state remains observed or inferred, not automatically verified"
+              ],
+              "rollbackRule": "Restore attempt-local hypothesis state while preserving legitimately observed information."
+            },
+            {
+              "effectId": "effect.knowledge-revisit.apply-information-to-later-decision",
+              "kind": "set-fact",
+              "requiredPreconditions": [
+                "The later decision references the preserved information",
+                "The reveal gate is safe"
+              ],
+              "requiredPostconditions": [
+                "The selected route, timing, comparison, or puzzle action records the applied informationRef",
+                "Success or diagnostic failure updates the information state without claiming physical first-visit availability"
+              ],
+              "rollbackRule": "Rollback the tested decision locally while preserving the source information."
+            }
+          ]
+        },
+        "departmentAndCompositionChanges": [
+          "Replace first-visit capability snapshot with knowledge-bridge and retention-mode reads.",
+          "Remove the gameplay invariant 'No new capability is granted'.",
+          "Replace same-place topology requirements with a reachable later-decision target and a replay or recall path for essential information.",
+          "Remove the composition conflict with pattern.capability-recontextualizes-old-space; replace it with a veto only when both patterns claim the same causal edge.",
+          "Remove failure modes about physical first-visit availability; add missing information reference, lost record across separation, and capability-only false positive."
+        ],
+        "tests": {
+          "replaceSelectionAssertionsWith": [
+            "selectedSubtype equals separated-information-application",
+            "informationRef exists",
+            "laterDecisionRef exists",
+            "separationKind is time, space, or attempt",
+            "informationAppliedAtLaterDecision equals true"
+          ],
+          "replaceRuntimeAssertionsWith": [
+            "Information persists or remains replayable across the configured separation",
+            "The later decision records the exact informationRef it applies",
+            "Untested and disproved hypotheses are not serialized as verified facts",
+            "A coexisting capability, if any, has a distinct causalRef"
+          ],
+          "replaceRouteAssertionsWith": [
+            "The later decision is reachable after the configured separation",
+            "Every essential clue has a replay, record, or accessible recall path",
+            "A wrong application retains a reachable recovery exit"
+          ],
+          "addNegativeFixture": "A Zelda-II-like capability-only revisit with no typed information application must abstain.",
+          "removeAssertions": [
+            "capabilityDelta equals 0",
+            "effects.grantedCapabilities equals 0",
+            "firstVisit.actionPhysicallyPossible equals true",
+            "cluesObserved greater-or-equal 2"
+          ]
+        },
+        "originality": {
+          "replaceRetainedPrincipleWith": "Information preserved across a temporal, spatial, or attempt boundary becomes gameplay progression when the player applies it to change a later route, timing, comparison, or puzzle action.",
+          "replaceForbiddenTransfersWith": [
+            "source clue wording, riddles, dialogue, or answers",
+            "source-authored map marks, landmark compositions, or symbol layouts",
+            "source schedules, melodies, timing sequences, or reset cadence",
+            "source control language and confirmation signature"
+          ],
+          "replaceCombinationVetoWith": "Reject a combination with capability-recontextualizes-old-space when both patterns bind the same causal edge or when clue, acquisition, return route, and payoff recreate one source encounter.",
+          "requiredReviewAction": "Regenerate the transformed application and canonical hash, then rerun individual and combination blind attribution because the retained principle and subtype changed."
+        }
+      },
+      "promotionConditions": [
+        "Independent reviewer confirms both direct observations close the narrowed principle without zero-capability or physical-first-visit assumptions.",
+        "Selector benchmark distinguishes separated information application from capability-only revisit and from player-authored-map-memory.",
+        "All replacement fixtures execute in P7; contract-only placeholders do not count as runtime evidence.",
+        "Individual and combination originality gates pass against regenerated applications."
+      ]
+    },
+    {
+      "patternId": "pattern.multi-solution-state-graph",
+      "decision": "conditionally-closable-only-after-material-semantic-narrowing",
+      "currentBlocker": "The current contract claims causally distinct complete paths, equivalent reset state, one identical postcondition, resource equity, and zero dominated paths. The verified registry contains no two-work pair that records all of those legs.",
+      "identityChange": {
+        "preservePatternId": true,
+        "replaceNameWith": "Outcome-first eligible-input graph",
+        "replaceSubtypeWith": "outcome-first-eligible-inputs",
+        "releaseNoteRequired": "Record a pre-release semantic narrowing. If stable-ID policy treats this as a new abstraction rather than a narrowed release candidate, quarantine the old ID and mint a replacement instead of silently rewriting it."
+      },
+      "retainedPrinciple": "Define a local goal independently from one prescribed input sequence, then let the player select among readable eligible inputs while progress or failure feedback exposes whether the constructed state can reach that goal.",
+      "explicitlyRemovedClaims": [
+        "Two complete paths begin from equivalent reset states.",
+        "Every alternative is causally edge-disjoint.",
+        "Every path reaches an identical explicit postcondition.",
+        "No declared option is dominated in cost, duration, persistence, or availability.",
+        "Every expressive system necessarily provides multiple complete solutions to the same target."
+      ],
+      "directSupport": [
+        {
+          "observationRef": "observation.four-swords-adventures.collection-threshold-turns-exploration-into-clearance",
+          "workRef": "work.four-swords-adventures",
+          "versionRef": "version.four-swords-adventures.original",
+          "status": "verified",
+          "claimRefs": [
+            "claim.four-swords-adventures.collection-threshold-turns-exploration-into-clearance.fact",
+            "claim.four-swords-adventures.collection-threshold-turns-exploration-into-clearance.interpretation"
+          ],
+          "sourceRef": "source.game.four-swords-adventures",
+          "causalClosure": {
+            "goal": "The visible course-local Force threshold governs whether the dark barrier can be broken.",
+            "eligibleInputs": "Force can be gathered from enemies, scenery, mechanisms, and other course events, including optional and mandatory opportunities.",
+            "selection": "The record explicitly states that players can choose which opportunities satisfy the forgiving aggregate threshold rather than collect every exact source.",
+            "feedback": "Collection display, sword power indication, pickups, barrier reaction, and return warp expose progress and insufficiency.",
+            "result": "At threshold the barrier can be broken; below it the route remains closed and search continues."
+          },
+          "scopeWarning": "This is an aggregate-contribution graph. It does not prove two complete path traces, equivalent starts, or non-domination."
+        },
+        {
+          "observationRef": "observation.echoes-of-wisdom.echo-combination-authors-a-route",
+          "workRef": "work.echoes-of-wisdom",
+          "versionRef": "version.echoes-of-wisdom.original",
+          "status": "verified",
+          "claimRefs": [
+            "claim.echoes-of-wisdom.echo-combination-authors-a-route.fact",
+            "claim.echoes-of-wisdom.echo-combination-authors-a-route.interpretation"
+          ],
+          "sourceRef": "source.game.echoes-of-wisdom",
+          "causalClosure": {
+            "goal": "The local destination begins unreachable across a ledge, gap, current, barrier, or hazard.",
+            "eligibleInputs": "Several learned echoes expose different shapes, movement patterns, environmental effects, and visible power costs.",
+            "selection": "The player chooses echoes by property and cost and places, stacks, replaces, or sequences them into a temporary route rather than applying one prescribed key.",
+            "feedback": "Placement previews, silhouettes, contact, motion, power budget, successful movement, and collision failure expose viability.",
+            "result": "The player reaches the far side or learns why the constructed state fails, with a temporary local topology reflecting the selected inputs."
+          },
+          "scopeWarning": "The observation supports flexible eligible-input construction but does not record two controlled routes to one measured target."
+        }
+      ],
+      "counterBoundary": {
+        "observationRef": "observation.a-link-to-the-past.dungeon-tool-closes-local-dependency",
+        "workRef": "work.a-link-to-the-past",
+        "boundary": "A route whose registered dependency repeatedly requires one verified signature tool is not evidence of an eligible-input graph merely because that tool is reusable or appears in varied rooms.",
+        "derivedAbstention": "Abstain when the contract exposes only one eligible input or one prescribed action sequence; select local-rule-development-arc or capability-recontextualizes-old-space as appropriate."
+      },
+      "contractPatchPlan": {
+        "selection": {
+          "replaceRequiredSignalsWith": [
+            {
+              "path": "$.storyModel.storySignals",
+              "operator": "contains",
+              "value": "signal.multi-causal-problem"
+            },
+            {
+              "path": "$.designEvidence.solutionGraphs[*].goalConditionRef",
+              "operator": "exists",
+              "value": true
+            },
+            {
+              "path": "$.designEvidence.solutionGraphs[*].eligibleInputCount",
+              "operator": "greater-or-equal",
+              "value": 2
+            },
+            {
+              "path": "$.designEvidence.solutionGraphs[*].progressOrFailureFeedbackRef",
+              "operator": "exists",
+              "value": true
+            }
+          ],
+          "replaceNegativeSignalsWith": [
+            {
+              "path": "$.storyModel.protectedCanon",
+              "operator": "requires-single-action-sequence",
+              "value": true
+            },
+            {
+              "path": "$.designEvidence.solutionGraphs[*].eligibleInputCount",
+              "operator": "less-than",
+              "value": 2
+            },
+            {
+              "path": "$.designEvidence.solutionGraphs[*].goalEvaluatorRef",
+              "operator": "exists",
+              "value": false
+            }
+          ],
+          "replacePrecedenceTieBreakWith": "Use as core when selecting and evaluating eligible inputs is the experience goal; use object-role-composition only as a specialization for one composed input family, and abstain when one prescribed verb closes the dependency.",
+          "replaceScoreCriteriaWith": [
+            {
+              "criterionId": "score.multi-solution.input-legibility",
+              "path": "$.designEvidence.solutionGraphs[*].eligibleInputRefs",
+              "weight": 0.3,
+              "rule": "Reward at least two readable eligible inputs with declared affordance or contribution roles."
+            },
+            {
+              "criterionId": "score.multi-solution.goal-clarity",
+              "path": "$.designEvidence.solutionGraphs[*].goalConditionRef",
+              "weight": 0.3,
+              "rule": "Require an observable local goal condition independent of a source-shaped recipe."
+            },
+            {
+              "criterionId": "score.multi-solution.diagnostic-feedback",
+              "path": "$.designEvidence.solutionGraphs[*].progressOrFailureFeedbackRef",
+              "weight": 0.2,
+              "rule": "Require progress or viability feedback before an irreversible failure."
+            },
+            {
+              "criterionId": "score.multi-solution.recovery",
+              "path": "$.acceptance.solutionGraphRecovery",
+              "weight": 0.2,
+              "rule": "Require local rollback for the selected-input state."
+            }
+          ],
+          "replaceHardVetoesWith": [
+            "Canon requires one exact action sequence",
+            "Fewer than two eligible inputs are declared",
+            "No evaluator links the selected-input state to the local goal",
+            "An eligible input bypasses a protected reveal",
+            "The input catalogue, arrangement, threshold presentation, or feedback reproduces a source encounter"
+          ]
+        },
+        "parameters": {
+          "removeParameterIds": [
+            "parameter.multi-solution.outcome",
+            "parameter.multi-solution.paths",
+            "parameter.multi-solution.verb-set"
+          ],
+          "addParameters": [
+            {
+              "parameterId": "parameter.multi-solution.goal-condition",
+              "valueType": "goal-condition-ref",
+              "bindFrom": "story-model",
+              "sourcePath": "$.causalRules[*].requiredPostcondition",
+              "required": true,
+              "constraints": [
+                "Observable",
+                "Canon-safe",
+                "Does not encode a single source-shaped input sequence"
+              ]
+            },
+            {
+              "parameterId": "parameter.multi-solution.eligible-inputs",
+              "valueType": "eligible-input-ref-array",
+              "bindFrom": "designer-decision",
+              "sourcePath": "$.solutionGraph.eligibleInputs[*]",
+              "required": true,
+              "constraints": [
+                "At least two",
+                "Each input has an affordance or contribution role and availability rule"
+              ]
+            },
+            {
+              "parameterId": "parameter.multi-solution.goal-evaluator",
+              "valueType": "state-evaluator-ref",
+              "bindFrom": "designer-decision",
+              "sourcePath": "$.solutionGraph.goalEvaluator",
+              "required": true,
+              "constraints": [
+                "Reads only declared selected-input and world-state fields",
+                "Produces success, progress, or diagnostic-failure state"
+              ]
+            }
+          ],
+          "retainParameterIds": [
+            "parameter.multi-solution.recovery"
+          ]
+        },
+        "effects": {
+          "removeEffectIds": [
+            "effect.multi-solution.commit-shared-outcome"
+          ],
+          "addEffects": [
+            {
+              "effectId": "effect.multi-solution.evaluate-selected-input-state",
+              "kind": "set-fact",
+              "requiredPreconditions": [
+                "Every selected input is in parameter.multi-solution.eligible-inputs",
+                "The selected input's availability and resource rules are satisfied",
+                "The protected reveal gate is safe"
+              ],
+              "requiredPostconditions": [
+                "The goal evaluator records success, progress, or diagnostic failure",
+                "The selected input refs are recorded for telemetry and rollback",
+                "Success commits the goal condition without asserting parity with untested alternatives"
+              ],
+              "rollbackRule": "Restore selected-input-local state and consumed story-safe resources; preserve learned affordance roles."
+            }
+          ]
+        },
+        "departmentAndCompositionChanges": [
+          "Replace solution-path and shared-outcome reads with eligible-input set, goal condition, evaluator, and selected-input state.",
+          "Remove gameplay and evaluation invariants requiring non-dominated paths, identical postconditions, and every path's reachability.",
+          "Require at least two eligible input refs and one diagnostic goal evaluator.",
+          "Keep object-role-composition as a specialization only; add a selector collision fixture so an object catalogue alone does not select this core.",
+          "Replace full-path reset language with selected-input-local rollback and evaluator consistency."
+        ],
+        "tests": {
+          "replaceSelectionAssertionsWith": [
+            "selectedSubtype equals outcome-first-eligible-inputs",
+            "eligibleInputCount greater-or-equal 2",
+            "goalConditionRef exists",
+            "goalEvaluatorRef exists",
+            "single prescribed verb fixture abstains"
+          ],
+          "replaceRuntimeAssertionsWith": [
+            "Every selected input ref belongs to the declared eligible-input set",
+            "The evaluator emits success, progress, or diagnostic failure",
+            "Success commits the goal condition only when the evaluator returns success",
+            "Untested eligible inputs are not asserted to be equivalent or non-dominated"
+          ],
+          "replaceRouteAssertionsWith": [
+            "At least one declared selected-input construction reaches the local goal in the positive fixture",
+            "A failed construction exposes diagnostic feedback",
+            "Rollback and an exit remain reachable"
+          ],
+          "addNegativeFixtures": [
+            "An A-Link-to-the-Past-like single signature-tool dependency must abstain.",
+            "An object-role catalogue with only one viable input must select object-role-composition, not this core."
+          ],
+          "removeAssertions": [
+            "allPathsShareOutcome equals true",
+            "dominatedPathCount equals 0",
+            "pathA and pathB each reach an identical outcome",
+            "edgeDisjointness threshold"
+          ]
+        },
+        "originality": {
+          "replaceRetainedPrincipleWith": "Define a local goal independently from one prescribed input sequence, then let the player select among readable eligible inputs while progress or failure feedback exposes whether the constructed state can reach that goal.",
+          "replaceForbiddenTransfersWith": [
+            "source object, enemy, material, or collectible catalogues",
+            "source construction, stacking, threshold, or collection recipes",
+            "source level geometry and target arrangement",
+            "source resource HUD, pickup cadence, barrier, collision, or success signature"
+          ],
+          "replaceCombinationVetoWith": "Reject combination with object-role-composition when input roles, catalogue order, arrangement, resource budget, local geometry, and feedback converge on one source solution; reject aggregate-threshold compositions that reproduce source collection cadence or barrier presentation.",
+          "requiredReviewAction": "Regenerate the transformed application and canonical hash. Independent review must also decide whether this narrowing is still the same stable abstraction; if not, quarantine this ID and mint a replacement."
+        }
+      },
+      "promotionConditions": [
+        "Independent evidence review confirms that both observations close the common eligible-input causal chain without path-parity claims.",
+        "Independent taxonomy review finds no duplicate identity with object-role-composition, systemic-verb-toolkit, or threshold patterns.",
+        "Stable-ID adjudication explicitly approves narrowing this release candidate; otherwise downgrade and replace.",
+        "Selector, runtime, recovery, individual originality, and combination originality gates pass with regenerated fixtures."
+      ],
+      "failClosedAlternative": "If the common eligible-input identity or stable-ID narrowing is rejected, keep pattern.multi-solution-state-graph reviewed and non-selectable. The existing verified registry cannot honestly release the original same-postcondition, equivalent-start, non-dominated-path abstraction."
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "decision": "evidence-closable-after-contract-narrowing",
+      "currentBlocker": "The current contract requires optional discovery, at least two later non-dominated choices, and preservation of every unselected option. Only the Breath of the Wild shrine record closes optionality plus multiple future benefits; no second verified observation closes all current choice-graph legs.",
+      "identityChange": {
+        "preservePatternId": true,
+        "preserveName": true,
+        "replaceSubtypeWith": "persistent-multi-function-payoff",
+        "releaseNoteRequired": "Record that future possibility is measured as persistent functional breadth, not as two optional non-dominated branches."
+      },
+      "retainedPrinciple": "An exploration payoff expands later possibility when its persistent state improves at least two distinct functional dimensions, such as traversal, capacity, information, perception, topology, preparation, relationship access, or recovery, instead of granting only immediate score or value.",
+      "explicitlyRemovedClaims": [
+        "The acquisition is optional.",
+        "Skipping the acquisition preserves every required route.",
+        "At least two later non-dominated choices become newly actionable.",
+        "Choosing one later use preserves every other use.",
+        "The reward must be an inventory item."
+      ],
+      "directSupport": [
+        {
+          "observationRef": "observation.breath-of-the-wild.shrine-detour-converts-curiosity",
+          "workRef": "work.breath-of-the-wild",
+          "versionRef": "version.breath-of-the-wild.original",
+          "status": "verified",
+          "claimRefs": [
+            "claim.breath-of-the-wild.shrine-detour-converts-curiosity.fact",
+            "claim.breath-of-the-wild.shrine-detour-converts-curiosity.interpretation"
+          ],
+          "sourceRef": "source.game.breath-of-the-wild",
+          "causalClosure": {
+            "explorationPayoff": "The player diverts to and completes a bounded shrine challenge.",
+            "persistentState": "Completion is recorded, the shrine becomes a persistent fast-travel anchor, and an Orb contributes to permanent growth.",
+            "functionalDimensionOne": "The travel anchor improves future mobility and world topology.",
+            "functionalDimensionTwo": "The Orb improves long-term avatar capacity.",
+            "feedbackAndFutureUse": "Exterior and map state changes expose the travel function, while the reward enters the persistent growth system."
+          },
+          "scopeWarning": "The observation is optional, but optionality is not generalized because the second direct support does not record a skip trace."
+        },
+        {
+          "observationRef": "observation.tears-of-the-kingdom.lightroot-turns-darkness-into-map",
+          "workRef": "work.tears-of-the-kingdom",
+          "versionRef": "version.tears-of-the-kingdom.original",
+          "status": "verified",
+          "claimRefs": [
+            "claim.tears-of-the-kingdom.lightroot-turns-darkness-into-map.fact",
+            "claim.tears-of-the-kingdom.lightroot-turns-darkness-into-map.interpretation"
+          ],
+          "sourceRef": "source.game.tears-of-the-kingdom",
+          "causalClosure": {
+            "explorationPayoff": "The player crosses an unlit, gloom-constrained region and activates a root.",
+            "persistentState": "The after-state illuminates and maps the area and the root remains a stable recovery landmark.",
+            "functionalDimensionOne": "Illumination and map revelation improve perception and topology, making future routes more legible.",
+            "functionalDimensionTwo": "The root restores gloom-affected hearts and provides a recovery anchor.",
+            "feedbackAndFutureUse": "Darkness recedes, map data appears, health state changes, and later exploration becomes safer."
+          },
+          "scopeWarning": "The observation does not record campaign optionality, a tower-like air route, or two non-dominated destination branches; none is retained."
+        }
+      ],
+      "counterBoundary": {
+        "observationRef": "observation.tri-force-heroes.materials-become-role-costume",
+        "workRef": "work.tri-force-heroes",
+        "boundary": "A replay material that changes one bounded stage role does not by itself establish a persistent multi-function payoff across a revisitable world.",
+        "derivedAbstention": "Use a stage-loadout or role-reward contract when the payoff has only one functional dimension or exists only inside fixed course sessions."
+      },
+      "contractPatchPlan": {
+        "selection": {
+          "replaceRequiredSignalsWith": [
+            {
+              "path": "$.designEvidence.explorationRewards[*].rewardStateRef",
+              "operator": "exists",
+              "value": true
+            },
+            {
+              "path": "$.designEvidence.explorationRewards[*].persistent",
+              "operator": "equals",
+              "value": true
+            },
+            {
+              "path": "$.designEvidence.explorationRewards[*].functionalDimensionCount",
+              "operator": "greater-or-equal",
+              "value": 2
+            }
+          ],
+          "replaceNegativeSignalsWith": [
+            {
+              "path": "$.designEvidence.explorationRewards[*].onlyImmediateScoreOrValue",
+              "operator": "equals",
+              "value": true
+            },
+            {
+              "path": "$.designEvidence.explorationRewards[*].persistent",
+              "operator": "equals",
+              "value": false
+            },
+            {
+              "path": "$.designEvidence.explorationRewards[*].functionalDimensionCount",
+              "operator": "less-than",
+              "value": 2
+            }
+          ],
+          "replacePrecedenceTieBreakWith": "Use as core when the payoff's persistent state, rather than the landmark alone, improves at least two functional dimensions; otherwise use a single-function reward, landmark, capability, or recovery pattern.",
+          "replaceScoreCriteriaWith": [
+            {
+              "criterionId": "score.future-reward.functional-breadth",
+              "path": "$.designEvidence.explorationRewards[*].functionalDimensionRefs",
+              "weight": 0.35,
+              "rule": "Require at least two distinct future-usable functional dimensions."
+            },
+            {
+              "criterionId": "score.future-reward.persistence",
+              "path": "$.designEvidence.explorationRewards[*].persistent",
+              "weight": 0.25,
+              "rule": "Require ownership or world state to survive the relevant save, travel, or revisit boundary."
+            },
+            {
+              "criterionId": "score.future-reward.feedback",
+              "path": "$.performancePlan.rewardFunctionFeedbackRefs",
+              "weight": 0.2,
+              "rule": "Require legible feedback for each declared function without previewing source-shaped solutions."
+            },
+            {
+              "criterionId": "score.future-reward.safety",
+              "path": "$.productionCharter.rewardEconomy.dominanceRisk",
+              "weight": 0.2,
+              "rule": "Reject a payoff that invalidates protected order or all meaningful preparation tradeoffs."
+            }
+          ],
+          "replaceHardVetoesWith": [
+            "The payoff is only score, collection percentage, currency, or one immediate value spike",
+            "The payoff state does not persist across its declared future-use boundary",
+            "Fewer than two distinct functional dimensions are bound",
+            "A function copies a source item-role, map-node, health-growth, or recovery pairing",
+            "The payoff invalidates protected story order"
+          ]
+        },
+        "parameters": {
+          "removeParameterIds": [
+            "parameter.future-reward.discovery",
+            "parameter.future-reward.reward",
+            "parameter.future-reward.choice-set"
+          ],
+          "addParameters": [
+            {
+              "parameterId": "parameter.future-reward.acquisition",
+              "valueType": "interaction-ref",
+              "bindFrom": "story-model",
+              "sourcePath": "$.interactionOpportunities[*]",
+              "required": true,
+              "constraints": [
+                "Story-derived",
+                "Optionality is explicitly typed but not required"
+              ]
+            },
+            {
+              "parameterId": "parameter.future-reward.reward-state",
+              "valueType": "persistent-state-ref",
+              "bindFrom": "designer-decision",
+              "sourcePath": "$.rewardDesign.rewardStates[*]",
+              "required": true,
+              "constraints": [
+                "Persistent across the declared future-use boundary",
+                "May be inventory, world, relationship, map, knowledge, or recovery state",
+                "Not source-shaped"
+              ]
+            },
+            {
+              "parameterId": "parameter.future-reward.function-set",
+              "valueType": "reward-function-ref-array",
+              "bindFrom": "designer-decision",
+              "sourcePath": "$.rewardDesign.rewardFunctions[*]",
+              "required": true,
+              "constraints": [
+                "At least two distinct functional dimensions",
+                "Each function has one future-use context and feedback ref"
+              ]
+            }
+          ],
+          "retainParameterIds": [
+            "parameter.future-reward.economy"
+          ]
+        },
+        "effects": {
+          "removeEffectIds": [
+            "effect.future-reward.grant-choice-resource",
+            "effect.future-reward.register-future-options",
+            "effect.future-reward.unlock-one-later-choice"
+          ],
+          "addEffects": [
+            {
+              "effectId": "effect.future-reward.commit-persistent-reward-state",
+              "kind": "set-fact",
+              "requiredPreconditions": [
+                "The bound acquisition is complete",
+                "The reward state has not already been committed"
+              ],
+              "requiredPostconditions": [
+                "The persistent reward state is committed exactly once",
+                "Every declared function reads that same reward-state ref",
+                "Save and resume preserve the state"
+              ],
+              "rollbackRule": "Before commit, rollback acquisition-local state; after commit, preserve the reward state and migrate it explicitly."
+            },
+            {
+              "effectId": "effect.future-reward.register-functional-breadth",
+              "kind": "set-fact",
+              "requiredPreconditions": [
+                "The reward state is committed",
+                "At least two function refs are bound"
+              ],
+              "requiredPostconditions": [
+                "Each function ref is associated with a distinct functional dimension",
+                "Each function exposes a later-use context and feedback ref",
+                "No choice-count or unselected-option claim is inferred"
+              ],
+              "rollbackRule": "Reconstruct derived function availability from the persistent reward state on load."
+            }
+          ]
+        },
+        "departmentAndCompositionChanges": [
+          "Replace later-choice reads and writes with reward-state and function-set reads and derived function availability.",
+          "Remove optional acquisition beat, skip-route assertion, non-domination metric, and unselected-option navigation invariant.",
+          "Require at least two distinct functional dimensions and save/resume persistence.",
+          "Keep landmark-promises-future-use and optional-secret-readability as possible synergies, but do not make either a prerequisite.",
+          "Replace failure modes about one dominant choice with single-function masquerade, nonpersistent reward state, duplicated function labels, and source-pair copying."
+        ],
+        "tests": {
+          "replaceSelectionAssertionsWith": [
+            "selectedSubtype equals persistent-multi-function-payoff",
+            "rewardStateRef exists",
+            "persistent equals true",
+            "functionalDimensionCount greater-or-equal 2",
+            "single-function stage reward abstains"
+          ],
+          "replaceRuntimeAssertionsWith": [
+            "The reward state survives save, load, travel, or revisit according to its boundary",
+            "At least two distinct function refs read the same reward-state ref",
+            "Each function has a later-use context and legible feedback",
+            "The reward does not write protected story order"
+          ],
+          "replaceRouteAssertionsWith": [
+            "At least one later-use fixture for each declared functional dimension is reachable or actionable",
+            "Reload reconstructs all derived functions from the reward state",
+            "Loss of one optional use context does not corrupt the reward state"
+          ],
+          "addNegativeFixture": "A Tri-Force-Heroes-like single stage-role reward with no persistent multi-function world state must abstain.",
+          "removeAssertions": [
+            "optionalDiscovery equals true",
+            "laterChoiceCount greater-or-equal 2",
+            "nonDominatedCount greater-or-equal 2",
+            "skipReward.requiredGoal is reachable",
+            "unselectedOptions are reachable"
+          ]
+        },
+        "originality": {
+          "replaceRetainedPrincipleWith": "An exploration payoff expands later possibility when its persistent state improves at least two distinct functional dimensions, such as traversal, capacity, information, perception, topology, preparation, relationship access, or recovery, instead of granting only immediate score or value.",
+          "replaceForbiddenTransfersWith": [
+            "source reward objects, silhouettes, names, or acquisition staging",
+            "source shrine, cave, root, tower, chest, or map-node composition",
+            "source health-growth, fast-travel, mapping, illumination, or recovery pairing",
+            "source UI, sound, reveal cadence, economy, or exact function bundle"
+          ],
+          "replaceCombinationVetoWith": "Reject combinations with landmark, optional-secret, or capability patterns when acquisition site, reward-state type, function bundle, future-use contexts, and feedback cadence converge on one source reward loop.",
+          "requiredReviewAction": "Regenerate the transformed application and canonical hash, then rerun individual and combination blind attribution for the new persistent-multi-function principle."
+        }
+      },
+      "promotionConditions": [
+        "Independent reviewer confirms both observations individually close acquisition, persistence, two functional dimensions, feedback, and later-use consequence.",
+        "Selector benchmarks distinguish multi-function payoff from optional-secret, capability reward, landmark promise, recovery-only reward, and stage loadout.",
+        "Save, reload, function-use, and abstention fixtures execute in P7; contract-only fixture existence is insufficient.",
+        "Individual and combination originality reviews pass against regenerated applications."
+      ]
+    }
+  ],
+  "summary": {
+    "patternsAssessed": 3,
+    "patternsWithTwoExistingVerifiedWorksAfterNarrowing": 3,
+    "patternsClosablyNarrowed": 2,
+    "patternsConditionallyClosablyNarrowed": 1,
+    "conditionalPatternRef": "pattern.multi-solution-state-graph",
+    "draftSupplementalObservationsUsed": 0,
+    "newFactsAsserted": 0,
+    "authoritativeChanges": 0,
+    "adjudication": "proposal-ready-for-independent-evidence-taxonomy-and-stable-id-review",
+    "failClosedStatement": "If the multi-solution identity or stable-ID narrowing is rejected, that pattern must remain reviewed and non-selectable; the original complete-path abstraction cannot be released from the existing verified registry."
+  },
+  "validation": {
+    "jsonParsed": true,
+    "uniqueObservationRefsChecked": 9,
+    "allObservationRefsExistAndAreVerified": true,
+    "uniqueClaimRefsChecked": 12,
+    "allClaimRefsExist": true,
+    "workObservationConsistencyChecked": true,
+    "workObservationConsistencyPass": true,
+    "supplementalDraftRefsFound": 0
+  }
+}

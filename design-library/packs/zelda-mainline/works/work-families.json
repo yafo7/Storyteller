@@ -1,0 +1,13 @@
+{
+  "registryVersion":"1.0.0",
+  "families":[
+    {
+      "familyId":"family.oracle-duology",
+      "memberWorkRefs":["work.oracle-of-seasons","work.oracle-of-ages"],
+      "relationship":"paired-independent-works-with-linked-play",
+      "evidenceRef":"source.nintendo.oracle-pair-2023",
+      "rationale":"Nintendo documents two content-distinct games with different stories, characters, central state systems, dungeons, bosses, and items; password linking connects them without making either a version of the other.",
+      "researchRule":"Maintain separate dossiers and observations; analyse linked play in this family addendum and never use variant-of between the members."
+    }
+  ]
+}

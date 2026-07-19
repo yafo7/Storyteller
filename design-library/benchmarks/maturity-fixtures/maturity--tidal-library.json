@@ -1,0 +1,44 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.tidal-library",
+  "patternId": "pattern.state-axis-rewrites-routes",
+  "testId": "test.state-axis.selection",
+  "kind": "selection",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "selection contract fixture for pattern.state-axis-rewrites-routes; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "discrete-route-axis",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Atomic rollback of layer and route table",
+      "Emergency return to last transition checkpoint",
+      "Preserve learned state labels"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.selection.selected",
+      "operator": "equals",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.selection.continuousHeadingFixtureAbstains",
+      "operator": "equals",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

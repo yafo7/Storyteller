@@ -1,0 +1,18 @@
+{
+  "schemaVersion":"1.0.0","taxonomyId":"taxonomy.pattern-kinds","taxonomyVersion":"1.0.0","status":"frozen",
+  "terms":[
+    {"termId":"atomic-mechanic","label":"Atomic mechanic","definition":"A reusable player action and state transaction small enough to compose with other rules.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"interaction-prop","label":"Interaction prop","definition":"An object-role pattern that exposes a rule through handling, feedback, and persistent consequence.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"world-state-rule","label":"World-state rule","definition":"A repeatable transformation of global or local world state that changes available action.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"spatial-level","label":"Spatial and level","definition":"A topology, landmark, route, gating, or revisit structure that organizes navigation and memory.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"puzzle-information","label":"Puzzle and information","definition":"A structure for distributing clues, testing hypotheses, and confirming consistent environmental rules.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"exploration-reward","label":"Exploration and reward","definition":"A curiosity, discovery, reward, and recontextualization pattern that changes future possibility.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"combat-boss","label":"Combat and boss","definition":"A readable encounter rule or synthesis exam that tests previously taught capabilities.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"npc-quest","label":"NPC and quest","definition":"A character schedule, request, response, or social-state pattern connected to player action.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"tutorial-feedback","label":"Tutorial and feedback","definition":"A staged teaching, hinting, confirmation, failure, or accessibility pattern for learning a rule.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"performance-camera","label":"Performance and camera","definition":"An actor, cue, framing, transition, or interaction-window pattern for embodied storytelling.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"pacing-macro","label":"Pacing and macro structure","definition":"A work-scale cadence that alternates agency, challenge, return, revelation, and consolidation.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"orchestration","label":"Orchestration","definition":"A disciplined composition of mechanics, staging, performance, and tests around one experience spine.","status":"active","aliases":[],"supersedes":[]}
+  ],
+  "governance":{"owner":"Pattern distiller","changePolicy":"Pattern kinds change only with a taxonomy migration and validator fixture updates.","migrationRefs":[]}
+}

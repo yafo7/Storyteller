@@ -1,0 +1,44 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.signal-workshop",
+  "patternId": "pattern.local-rule-development-arc",
+  "testId": "test.rule-arc.selection",
+  "kind": "selection",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "selection contract fixture for pattern.local-rule-development-arc; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "teach-vary-combine-exam",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.world-facts",
+      "capability.route-gates",
+      "capability.performance-cues",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Reset only current stage state",
+      "Retain lesson ledger",
+      "Provide one-step hint tied to the last failed hypothesis"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.selection.selected",
+      "operator": "equals",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.selection.emergentSandboxAbstains",
+      "operator": "equals",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

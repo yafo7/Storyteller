@@ -1,0 +1,394 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewId": "review.p2.calibration-independent-coding",
+  "reviewedAt": "2026-07-17",
+  "reviewer": {
+    "role": "independent-second-coder",
+    "participatedInProfileAuthoring": false
+  },
+  "inputs": {
+    "profileContract": "design-library/packs/zelda-mainline/works/TITLE_PROFILE_CONTRACT.md",
+    "dimensionTaxonomy": "taxonomy.analysis-dimensions@1.0.0",
+    "profiles": [
+      "work.the-legend-of-zelda",
+      "work.majoras-mask",
+      "work.breath-of-the-wild",
+      "work.echoes-of-wisdom"
+    ]
+  },
+  "method": {
+    "unit": "theme-criterion decision",
+    "criteria": {
+      "grain": "One player-understandable causal rule or cadence with a coherent action-to-state-to-feedback-to-consequence chain.",
+      "dimensionAssignment": "Every assigned dimension must be materially demonstrated by that theme's causal chain, not merely named in context or appended to satisfy coverage.",
+      "factInterpretationSeparation": "The factual description remains observable and version-scoped; interpretation is separately labeled and does not assert creator intent or historical lineage.",
+      "disposition": "The stated research disposition follows the abstraction actually expressed; portable-candidate remains a hypothesis rather than a released pattern.",
+      "sourceSurfaceIsolation": "Source-specific expression stays in factual evidence and explicit nonportable boundaries; the transferable interpretation does not carry names, layouts, puzzle sequences, audiovisual signatures, or authored story beats into production."
+    },
+    "agreementDefinition": "A pass means the independent coder accepts the profile author's coding without a material change. A fail is a concrete coding disagreement and is not converted to pass merely to meet the target.",
+    "primaryAgreementMetric": "accepted criterion decisions divided by all criterion decisions",
+    "secondaryMetric": "themes on which all five criterion decisions are accepted",
+    "target": 0.85
+  },
+  "profileReviews": [
+    {
+      "workId": "work.the-legend-of-zelda",
+      "themes": [
+        {
+          "key": "visible-cave-grants-first-verb",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One acquisition changes the available combat verb and starts a clear exploration-combat cadence."},
+            "dimensionAssignment": {"result": "pass", "rationale": "Player fantasy, core loop, verbs, and growth are all directly altered by the sword transaction."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Observable opening behavior is separated from the tutorial-design reading."},
+            "disposition": {"result": "pass", "rationale": "The abstract action-first acquisition principle is a valid portability hypothesis."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The interpretation does not depend on character names, cave wording, coordinates, or audiovisual motifs."}
+          }
+        },
+        {
+          "key": "tools-reveal-overworld-state",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "A tool changes one remembered environmental feature into a persistent entrance state."},
+            "dimensionAssignment": {"result": "pass", "rationale": "World state, topology, revisit gating, and exploration reward are all consequences of the revealed entrance."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "The observable terrain transition is distinct from the hypothesis-field interpretation."},
+            "disposition": {"result": "pass", "rationale": "Tool-driven reinterpretation of old space is abstract enough for later cross-title testing."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "No entrance coordinate, map layout, exact solution, or named tool is transferred as a candidate principle."}
+          }
+        },
+        {
+          "key": "labyrinth-room-rule-chain",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "Despite allowing two trigger variants, the unit is one bounded room rule whose resolution changes an exit or reward state."},
+            "dimensionAssignment": {"result": "pass", "rationale": "Puzzle inference, bounded challenge dependency, combat clearance, and feedback are all visible in the same room chain."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Room behaviors are factual; the claim about readable experimentation is explicitly interpretive."},
+            "disposition": {"result": "pass", "rationale": "Single-frame causal teaching is a plausible portable candidate subject to cross-title support."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The theme omits room geometry, exact block positions, enemy roster, and solution sequence."}
+          }
+        },
+        {
+          "key": "cave-message-redirects-search",
+          "criteria": {
+            "grain": {"result": "fail", "rationale": "The theme merges clues, grants, shops, and penalties into one generic cave transaction; these have different state changes and consequences.", "disagreementRef": "disagreement.tloz.cave-message.grain"},
+            "dimensionAssignment": {"result": "pass", "rationale": "For the information-exchange version of the theme, NPC response, performed pause, framing, and UI feedback are materially present."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "The list of observable cave functions is kept separate from the route-guidance interpretation."},
+            "disposition": {"result": "fail", "rationale": "The interpretation states a broadly portable principle, so single-title is too restrictive as a research disposition.", "disagreementRef": "disagreement.tloz.cave-message.disposition"},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "No dialogue is quoted and the top-level nonportable section explicitly excludes cave wording and source coordinates."}
+          }
+        },
+        {
+          "key": "fixed-screen-failure-retry",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One continue transaction partitions retained campaign progress from repeated local traversal."},
+            "dimensionAssignment": {"result": "pass", "rationale": "Recovery, fixed-screen presentation, persistent hardware storage, and runtime state are causally connected."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Continue behavior is observable and the stakes-versus-recoverability reading is separately stated."},
+            "disposition": {"result": "pass", "rationale": "Persistent macro progress plus local retry is a portable recovery hypothesis."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The candidate principle does not copy the source's continue screen, map, or character expression."}
+          }
+        }
+      ],
+      "agreement": {"acceptedDecisions": 23, "totalDecisions": 25, "ratio": 0.92, "fullyAcceptedThemes": 4, "totalThemes": 5}
+    },
+    {
+      "workId": "work.majoras-mask",
+      "themes": [
+        {
+          "key": "knowledge-converts-failed-cycle-into-progress",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One failed scheduled attempt becomes a revised plan across a reset."},
+            "dimensionAssignment": {"result": "pass", "rationale": "Loop identity, repeated cadence, reset-and-route verbs, and clock or record UI all participate in the rule."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Scheduled repetition is factual; knowledge-as-progression is an explicit interpretation."},
+            "disposition": {"result": "pass", "rationale": "Knowledge retention across reversible local loss is portable at the principle level."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The abstraction does not carry the exact catastrophe, schedule, melody, or quest chain."}
+          }
+        },
+        {
+          "key": "reset-contract-separates-world-and-player-state",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "The global reset is one typed transaction with an observable persistence whitelist."},
+            "dimensionAssignment": {"result": "pass", "rationale": "World state, repeated topology, revisit strategy, and 3D place recognition are all changed or reused by the reset."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Reset and persistence behavior is separated from its strategic interpretation."},
+            "disposition": {"result": "pass", "rationale": "Partitioned reset state is a valid portable hypothesis once surface fiction is removed."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The portable rule is a whitelist contract rather than the source's named time cycle or transition treatment."}
+          }
+        },
+        {
+          "key": "identity-form-is-route-and-conversation-key",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One form choice consistently changes available affordances and recognition, even though it has several application domains."},
+            "dimensionAssignment": {"result": "fail", "rationale": "Puzzle information, exploration reward, and persistent growth are demonstrated, but the causal chain does not establish dungeon macro-structure.", "disagreementRef": "disagreement.mm.identity-form.dimension"},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Observable form abilities and reactions are separated from the density-of-capability interpretation."},
+            "disposition": {"result": "pass", "rationale": "A body or identity capability spanning spatial and social rules is abstractly portable."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "Specific mask identities, transformations, controls, dungeons, and dialogue remain explicitly nonportable."}
+          }
+        },
+        {
+          "key": "scheduled-actors-make-waiting-readable",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One scheduled actor branch is observed, intercepted, and used to plan a later cycle."},
+            "dimensionAssignment": {"result": "fail", "rationale": "NPC, narrative-performance, and actor blocking are demonstrated; single-player status is appended but hardware or multiplayer does not cause the schedule rule.", "disagreementRef": "disagreement.mm.scheduled-actors.dimension"},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Observed schedules are factual and timetable-as-prediction is separately interpretive."},
+            "disposition": {"result": "pass", "rationale": "Readable actor schedules are a portable performance-system hypothesis."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "No named resident, appointment chain, place, dialogue, or exact schedule is transferred."}
+          }
+        },
+        {
+          "key": "deadline-is-recoverable-but-not-costless",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "This is one decision cadence: commit under a visible deadline or invoke a known costly recovery contract."},
+            "dimensionAssignment": {"result": "fail", "rationale": "Teaching feedback, recovery, and runtime timing are material; combat is mentioned as one possible context but is not established by the factual chain.", "disagreementRef": "disagreement.mm.deadline.dimension"},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Clock, pause, reset, and save behavior remains separate from the dramatic-tension interpretation."},
+            "disposition": {"result": "pass", "rationale": "A legible but costly deadline recovery contract is portable beyond the source fiction."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The interpretation excludes the moon, three-day duration, melodies, save UI, and exact audiovisual escalation."}
+          }
+        }
+      ],
+      "agreement": {"acceptedDecisions": 22, "totalDecisions": 25, "ratio": 0.88, "fullyAcceptedThemes": 2, "totalThemes": 5}
+    },
+    {
+      "workId": "work.breath-of-the-wild",
+      "themes": [
+        {
+          "key": "landmark-climb-creates-self-route",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One visible landmark becomes a self-selected route and then a new information vantage."},
+            "dimensionAssignment": {"result": "pass", "rationale": "Player fantasy, exploration cadence, landmark topology, and 3D perspective are integral to the route choice."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Observable sighting, pinning, and traversal remain separate from the self-authored-problem interpretation."},
+            "disposition": {"result": "pass", "rationale": "Visible goals with unknown routes are portable across suitable spatial profiles."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The principle excludes source terrain, towers, settlements, silhouettes, coordinates, and traversal tuning."}
+          }
+        },
+        {
+          "key": "environmental-property-changes-plan",
+          "criteria": {
+            "grain": {"result": "fail", "rationale": "Weather, fire, wind, electricity, temperature, material, and free physics are several causal rule families rather than one independently testable rule.", "disagreementRef": "disagreement.botw.environmental-property.grain"},
+            "dimensionAssignment": {"result": "pass", "rationale": "For a narrowed material-rule instance, verbs, state, puzzle inference, and feedback are the correct four dimensions."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Reactive-system facts are distinct from the transferability interpretation."},
+            "disposition": {"result": "pass", "rationale": "Consistent material response remains a valid portable family after splitting into atomic observations."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The text omits source-specific puzzle sequences, object arrangements, and physics set pieces."}
+          }
+        },
+        {
+          "key": "shrine-detour-converts-curiosity",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One optional challenge completion changes both avatar progression and future travel topology."},
+            "dimensionAssignment": {"result": "pass", "rationale": "Revisit access, bounded challenge, exploration reward, and persistent runtime state all follow from the same completion."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "The source reward bundle is factual and the dual-value node interpretation is clearly separated."},
+            "disposition": {"result": "pass", "rationale": "A detour that improves both capacity and travel network is portable after renaming and restructuring."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "Shrine expression is confined to evidence and explicit nonportable boundaries; no solution or layout is stored."}
+          }
+        },
+        {
+          "key": "fragile-equipment-prompts-preparation",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "The unit is a coherent preparation-spend-replace cadence rather than a list of unrelated encounter outcomes."},
+            "dimensionAssignment": {"result": "pass", "rationale": "Economy, combat, equipment UI, and multiple recovery choices are all involved in the resource transaction."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Durability and recovery options are observable; their effect on adaptation is interpretive."},
+            "disposition": {"result": "pass", "rationale": "Readable attrition with replenishment and alternative recovery is a portable hypothesis."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "No source item table, recipe, enemy, damage value, icon, or encounter layout is transferred."}
+          }
+        },
+        {
+          "key": "memory-landmark-reveals-past",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One image-to-place comparison produces a discrete optional narrative reveal."},
+            "dimensionAssignment": {"result": "fail", "rationale": "NPC clues, nonlinear narrative, and camera comparison are demonstrated; absence of multiplayer synchronization does not materially cause the search rule.", "disagreementRef": "disagreement.botw.memory-landmark.dimension"},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Photograph matching and scene triggering are factual, while spatialized exposition is interpretive."},
+            "disposition": {"result": "pass", "rationale": "A visual clue anchored to searchable space is portable with original fiction and imagery."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "Named source surfaces appear only in the evidence half and are explicitly prohibited by the profile's nonportable list."}
+          }
+        }
+      ],
+      "agreement": {"acceptedDecisions": 23, "totalDecisions": 25, "ratio": 0.92, "fullyAcceptedThemes": 3, "totalThemes": 5}
+    },
+    {
+      "workId": "work.echoes-of-wisdom",
+      "themes": [
+        {
+          "key": "echo-learning-turns-observation-into-vocabulary",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One learn transaction changes a local entity property into a persistent callable catalogue entry."},
+            "dimensionAssignment": {"result": "pass", "rationale": "Problem-solver fantasy, learn-use cadence, summon verb, and selector UI are all directly changed."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Eligibility, catalogue, summon, and budget behavior are distinct from the vocabulary-growth interpretation."},
+            "disposition": {"result": "pass", "rationale": "Observation becoming a reusable abstract verb is portable if the entity set and fiction are independently authored."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The profile explicitly excludes the source roster, costs, companion fiction, iconography, and exact object properties."}
+          }
+        },
+        {
+          "key": "echo-combination-authors-a-route",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One constrained composition transaction temporarily adds a traversable route to local topology."},
+            "dimensionAssignment": {"result": "pass", "rationale": "Temporary state, topology, revisit capability, and property inference all arise from the same arrangement."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Placement and budget behavior is factual; property-based versus prescribed gating is interpretive."},
+            "disposition": {"result": "pass", "rationale": "Budgeted object composition is a portable hypothesis after changing vocabulary, topology, control, and feedback."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "No exact copied object, obstacle layout, summon cost, or solution sequence enters the portable statement."}
+          }
+        },
+        {
+          "key": "rift-expedition-converts-repair-into-story-state",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "This is a permissible macro cadence: complete one bounded expedition and observe the damaged region enter a restored state."},
+            "dimensionAssignment": {"result": "pass", "rationale": "Dungeon completion, access reward, story advancement, and staged before-after framing are one causal chain."},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Rift completion and restoration are factual; causal dramatic legibility is interpretive."},
+            "disposition": {"result": "pass", "rationale": "Visible damage before and restoration after a challenge is abstractly portable."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The nonportable list isolates rift fiction, world names, regional sequence, dungeon layouts, and exact story events."}
+          }
+        },
+        {
+          "key": "summoned-ally-externalizes-combat-choice",
+          "criteria": {
+            "grain": {"result": "fail", "rationale": "Summoned allies, environmental echoes, binding, direct sword form, consumable recovery, loot, and quest completion create several transactions rather than one atomic combat rule.", "disagreementRef": "disagreement.eow.summoned-ally.grain"},
+            "dimensionAssignment": {"result": "fail", "rationale": "Growth economy, combat, and recovery are material; NPC quest is only a possible context and is absent from the factual description's state chain.", "disagreementRef": "disagreement.eow.summoned-ally.dimension"},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "The broad factual list still remains distinct from the combat-as-composition interpretation."},
+            "disposition": {"result": "pass", "rationale": "After splitting, externalized attack selection and placement can remain a portable candidate."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The candidate statement avoids exact creature roster, costs, boss responses, companion fiction, animations, and control sequence."}
+          }
+        },
+        {
+          "key": "sync-makes-relationship-visible",
+          "criteria": {
+            "grain": {"result": "pass", "rationale": "One reversible binding relation transfers motion from one side to the other and exposes immediate collision results."},
+            "dimensionAssignment": {"result": "fail", "rationale": "Teaching feedback, 2.5D readability, and local runtime constraints are demonstrated; conventional single-player hardware is not a causal property of the binding rule.", "disagreementRef": "disagreement.eow.sync.dimension"},
+            "factInterpretationSeparation": {"result": "pass", "rationale": "Binding direction and movement are factual; reusable relational-verb potential is interpretive."},
+            "disposition": {"result": "pass", "rationale": "A reversible, visible movement constraint is portable with different objects, controls, fiction, and spatial grammar."},
+            "sourceSurfaceIsolation": {"result": "pass", "rationale": "The interpretation avoids named companion fiction, exact link visuals, puzzle layout, target roster, and control treatment."}
+          }
+        }
+      ],
+      "agreement": {"acceptedDecisions": 22, "totalDecisions": 25, "ratio": 0.88, "fullyAcceptedThemes": 3, "totalThemes": 5}
+    }
+  ],
+  "disagreements": [
+    {
+      "disagreementId": "disagreement.tloz.cave-message.grain",
+      "workId": "work.the-legend-of-zelda",
+      "themeKey": "cave-message-redirects-search",
+      "criterion": "grain",
+      "authorCoding": "One theme covers clues, item grants, shops, and penalties as a common cave exchange.",
+      "independentCoding": "These exchange types have different inputs, state transitions, and consequences and should not share one atomic observation.",
+      "finalRuling": "Split into an information-guidance transaction and, only if needed, a separate resource or service transaction. Retain the guidance interpretation for this theme."
+    },
+    {
+      "disagreementId": "disagreement.tloz.cave-message.disposition",
+      "workId": "work.the-legend-of-zelda",
+      "themeKey": "cave-message-redirects-search",
+      "criterion": "disposition",
+      "authorCoding": "single-title",
+      "independentCoding": "portable-candidate",
+      "finalRuling": "After narrowing to isolated, tactically weighted social guidance, classify as portable-candidate while keeping source wording and cave presentation nonportable."
+    },
+    {
+      "disagreementId": "disagreement.mm.identity-form.dimension",
+      "workId": "work.majoras-mask",
+      "themeKey": "identity-form-is-route-and-conversation-key",
+      "criterion": "dimensionAssignment",
+      "authorCoding": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.exploration-reward", "dimension.growth-economy"],
+      "independentCoding": ["dimension.puzzle-information", "dimension.exploration-reward", "dimension.growth-economy"],
+      "finalRuling": "Do not count this observation as dungeon-structure evidence unless its context, factual description, and state transition are narrowed to a bounded dungeon dependency."
+    },
+    {
+      "disagreementId": "disagreement.mm.scheduled-actors.dimension",
+      "workId": "work.majoras-mask",
+      "themeKey": "scheduled-actors-make-waiting-readable",
+      "criterion": "dimensionAssignment",
+      "authorCoding": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.hardware-multiplayer"],
+      "independentCoding": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking"],
+      "finalRuling": "Remove hardware-multiplayer from this theme; cover hardware or controller constraints with an observation in which they materially alter input, storage, simulation, or information distribution."
+    },
+    {
+      "disagreementId": "disagreement.mm.deadline.dimension",
+      "workId": "work.majoras-mask",
+      "themeKey": "deadline-is-recoverable-but-not-costless",
+      "criterion": "dimensionAssignment",
+      "authorCoding": ["dimension.combat-boss", "dimension.teaching-feedback", "dimension.recovery-accessibility", "dimension.production-runtime"],
+      "independentCoding": ["dimension.teaching-feedback", "dimension.recovery-accessibility", "dimension.production-runtime"],
+      "finalRuling": "Remove combat-boss or rewrite the theme around one concrete timed encounter whose enemy or boss state is part of the before-action-after chain."
+    },
+    {
+      "disagreementId": "disagreement.botw.environmental-property.grain",
+      "workId": "work.breath-of-the-wild",
+      "themeKey": "environmental-property-changes-plan",
+      "criterion": "grain",
+      "authorCoding": "One observation covers weather, materials, temperature, wind, fire, electricity, movable objects, and physics.",
+      "independentCoding": "The shared systemic philosophy is valid, but the listed properties implement several distinct causal rules and cannot be independently reproduced or falsified as one observation.",
+      "finalRuling": "Split into at least two atomic examples, such as conductive propagation and thermal or airflow route change; reserve their cross-context consistency for later pattern-family distillation."
+    },
+    {
+      "disagreementId": "disagreement.botw.memory-landmark.dimension",
+      "workId": "work.breath-of-the-wild",
+      "themeKey": "memory-landmark-reveals-past",
+      "criterion": "dimensionAssignment",
+      "authorCoding": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.hardware-multiplayer"],
+      "independentCoding": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking"],
+      "finalRuling": "Remove hardware-multiplayer; single-player status does not explain the image-matching rule and should not be used only to complete the 20-dimension matrix."
+    },
+    {
+      "disagreementId": "disagreement.eow.summoned-ally.grain",
+      "workId": "work.echoes-of-wisdom",
+      "themeKey": "summoned-ally-externalizes-combat-choice",
+      "criterion": "grain",
+      "authorCoding": "One theme combines summoned ally selection, environmental tools, binding, direct combat form, consumables, loot, and quest response.",
+      "independentCoding": "The theme contains multiple fallback and reward transactions beyond the core summon-placement causal rule.",
+      "finalRuling": "Narrow the observation to summon selection, placement, autonomous behavior, and matchup feedback; move direct combat, consumables, loot, and quest closure to other evidence."
+    },
+    {
+      "disagreementId": "disagreement.eow.summoned-ally.dimension",
+      "workId": "work.echoes-of-wisdom",
+      "themeKey": "summoned-ally-externalizes-combat-choice",
+      "criterion": "dimensionAssignment",
+      "authorCoding": ["dimension.growth-economy", "dimension.combat-boss", "dimension.npc-quest", "dimension.recovery-accessibility"],
+      "independentCoding": ["dimension.growth-economy", "dimension.combat-boss", "dimension.recovery-accessibility"],
+      "finalRuling": "Remove npc-quest unless a concrete resident request and its updated quest state are included in the factual causal chain."
+    },
+    {
+      "disagreementId": "disagreement.eow.sync.dimension",
+      "workId": "work.echoes-of-wisdom",
+      "themeKey": "sync-makes-relationship-visible",
+      "criterion": "dimensionAssignment",
+      "authorCoding": ["dimension.teaching-feedback", "dimension.perspective-implementation", "dimension.hardware-multiplayer", "dimension.production-runtime"],
+      "independentCoding": ["dimension.teaching-feedback", "dimension.perspective-implementation", "dimension.production-runtime"],
+      "finalRuling": "Remove hardware-multiplayer; local single-player simulation is a runtime implementation fact, not evidence that hardware or player count shapes this binding rule."
+    }
+  ],
+  "systemicFindings": [
+    {
+      "findingId": "finding.calibration.dimension-laundering-risk",
+      "severity": "high",
+      "observation": "Requiring all 20 dimensions to occur across exactly five themes encourages weak fourth-dimension tags, especially hardware-multiplayer, even when a dimension belongs only in the dossier summary or is legitimately not applicable.",
+      "finalRuling": "Before P3 coverage is treated as evidence, semantic validation must require a material causal link for each theme-to-dimension edge. Permit dossier-level not-applicable with rationale instead of forcing every dimension into an atomic observation."
+    },
+    {
+      "findingId": "finding.calibration.family-before-atom",
+      "severity": "medium",
+      "observation": "Three themes state a useful cross-context family before recording one falsifiable atomic rule.",
+      "finalRuling": "Keep the higher-level interpretation as a contribution hypothesis, but split evidence into atomic observations before those observations support a released pattern."
+    },
+    {
+      "findingId": "finding.calibration.source-isolation-strong",
+      "severity": "positive",
+      "observation": "All four profiles consistently separate source-specific names, layouts, exact sequences, and audiovisual expression from abstract interpretations through explicit uniqueOrNonportable boundaries.",
+      "finalRuling": "Retain this profile-level boundary and continue stripping raw source surfaces from production retrieval indexes."
+    }
+  ],
+  "summary": {
+    "profilesReviewed": 4,
+    "themesReviewed": 20,
+    "criteriaPerTheme": 5,
+    "totalCriterionDecisions": 100,
+    "acceptedCriterionDecisions": 90,
+    "disagreedCriterionDecisions": 10,
+    "interRaterAgreement": 0.9,
+    "target": 0.85,
+    "targetMet": true,
+    "fullyAcceptedThemes": 12,
+    "exactThemeAgreement": 0.6,
+    "disagreementBreakdown": {
+      "grain": 3,
+      "dimensionAssignment": 6,
+      "factInterpretationSeparation": 0,
+      "disposition": 1,
+      "sourceSurfaceIsolation": 0
+    },
+    "adjudication": "conditional-pass",
+    "adjudicationReason": "Criterion-level calibration agreement exceeds the 0.85 target without suppressing disagreements. The ten challenged coding decisions remain recorded corrections and must not be treated as supporting dimension or pattern evidence until their final rulings are applied.",
+    "inflationGuard": "The 0.90 value is decision-level agreement across all 100 predeclared checks. The stricter exact-theme agreement of 0.60 is reported separately so the gate cannot conceal themes with one or more material disagreements."
+  }
+}

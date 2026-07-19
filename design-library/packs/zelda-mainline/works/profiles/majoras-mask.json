@@ -1,0 +1,123 @@
+{
+  "workId": "work.majoras-mask",
+  "author": "role.analyst.temporal-worlds",
+  "reviewer": "role.reviewer.causal-observations",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player becomes an observant time-loop intervener who learns a doomed community's routines, inhabits alternate bodies, and assembles a successful sequence from repeated attempts.",
+    "dimension.core-loop": "Observe schedules, acquire knowledge or a persistent capability, intervene in a timed chain, accept partial success or failure, reset the three-day cycle, and execute a better route.",
+    "dimension.verbs": "The prior game's movement, targeting, tools, and melodies are expanded by form-changing masks whose movement, combat, and environmental verbs differ.",
+    "dimension.world-state": "Most local events, consumables, and dungeon conditions reset with the cycle while masks, major equipment, learned songs, and selected stored resources persist.",
+    "dimension.topology": "A compact town hub and four surrounding regions are spatially stable but temporally layered by moving characters, opening hours, deadlines, and event dependencies.",
+    "dimension.gating-revisit": "Progress is gated by time windows, identity, form abilities, songs, dungeon rewards, and knowledge; repeated routes shorten as the player learns prerequisites and schedules.",
+    "dimension.puzzle-information": "Puzzles include spatial mechanisms and temporal dependency chains, often asking who must be met, in which form, at what place and time, after which prior event.",
+    "dimension.dungeon-structure": "Four principal dungeons use familiar room dependencies but give strong roles to transformation movement and large state changes within the bounded structure.",
+    "dimension.exploration-reward": "Masks, bottles, health pieces, songs, notebook knowledge, and character outcomes reward attention to side paths and time-specific social events.",
+    "dimension.growth-economy": "Persistent equipment and health grow across cycles; carried rupees and common supplies reset unless deliberately converted or stored through an established persistent service.",
+    "dimension.combat-boss": "Targeted 3D combat supports human and transformation-specific attacks, while bosses test mobility, form switching, items, and recognition of cyclic openings.",
+    "dimension.npc-quest": "Characters follow multi-day schedules and interdependent routines; the player's interventions can temporarily change their actions even though the next reset restores the baseline.",
+    "dimension.narrative-performance": "The visible countdown and descending moon sustain pressure while intimate, often optional character episodes give each loop emotional consequence despite systemic reversal.",
+    "dimension.camera-blocking": "Lock-on and contextual framing preserve 3D readability; transformations, clock transitions, and scheduled encounters receive brief staged emphasis that marks state change.",
+    "dimension.teaching-feedback": "The compulsory opening cycle teaches loss, reset, time pressure, and one transformation before the wider quest; clocks, bells, schedules, and form reactions provide ongoing feedback.",
+    "dimension.ui-input": "A persistent on-screen day-and-time display, quick items, mask selection, targeting, and instrument mode make temporal and form state central interface concerns.",
+    "dimension.recovery-accessibility": "Returning to the first dawn is both recovery and cost: it restores opportunity and world baseline but discards nonpersistent progress; original save rules demand deliberate cycle planning.",
+    "dimension.perspective-implementation": "The 3D camera supports place recognition and form-specific traversal, while repeated spatial paths expose even small temporal changes in occupancy and affordance.",
+    "dimension.hardware-multiplayer": "The original is single-player and requires the N64 Expansion Pak; analog movement, targeting, and quick buttons support rapid switching among temporal and form tools.",
+    "dimension.production-runtime": "A faithful abstraction requires a deterministic global clock, actor schedules, event dependency graphs, reset and persistence whitelists, form-specific controllers, and recoverable loop simulation."
+  },
+  "observationThemes": [
+    {
+      "key": "knowledge-converts-failed-cycle-into-progress",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.ui-input"],
+      "context": "A scheduled objective cannot be completed because the player arrived late, missed a prerequisite, or lacks a persistent capability.",
+      "preconditions": ["The three-day clock is active.", "The player has observed at least one event in the dependency chain."],
+      "playerInput": ["Record or remember the clue, reset time, and repeat the route with revised timing or tools."],
+      "before": ["The current cycle cannot reach the desired outcome.", "The player lacks a complete schedule model."],
+      "action": ["Use learned timing and faster execution to alter the next cycle's sequence."],
+      "after": ["The player reaches a previously missed interaction window or carries a new persistent capability into it."],
+      "feedback": ["Clock, event dialogue, notebook-like records, changed actor presence, and successful trigger response confirm the revised model."],
+      "consequences": ["An unsuccessful attempt still improves the player's plan, making knowledge a durable progression resource."],
+      "factualDescription": "The game repeats a continuous three-day cycle; many events occur at scheduled times, and the player can use information learned before a reset to act differently afterward.",
+      "interpretation": "A loop can preserve motivation when failure destroys local state but leaves the player's causal understanding useful and actionable.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "reset-contract-separates-world-and-player-state",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.perspective-implementation", "dimension.dungeon-structure"],
+      "context": "The deadline approaches or the player chooses to begin the cycle again.",
+      "preconditions": ["The player can perform the reset melody.", "Current local events or supplies differ from the first dawn baseline."],
+      "playerInput": ["Trigger the return to the first dawn."],
+      "before": ["Schedules, local quest states, dungeon mechanisms, and carried supplies reflect the current cycle."],
+      "action": ["Apply the global reset transaction."],
+      "after": ["Places and schedules return to baseline while the approved persistent inventory and learned capabilities remain."],
+      "feedback": ["A strong transition, day label, restored town arrangement, reset clock, and changed inventory make both sides of the contract visible."],
+      "consequences": ["The player can retry the same spatial network with better preparation but must reconstruct ephemeral achievements."],
+      "factualDescription": "Returning to the first day resets events, dungeon conditions, and many carried resources, while masks and other major acquisitions remain available.",
+      "interpretation": "Explicitly partitioning resettable and persistent state lets repetition create strategy instead of erasing all advancement.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "identity-form-is-route-and-conversation-key",
+      "dimensions": ["dimension.puzzle-information", "dimension.exploration-reward", "dimension.growth-economy", "dimension.combat-boss"],
+      "context": "A route, mechanism, character, or combat situation responds differently to one transformation form.",
+      "preconditions": ["The corresponding transformation mask is owned.", "The player can safely test the form's verbs."],
+      "playerInput": ["Change form and use its locomotion, interaction, or attack in context."],
+      "before": ["The human form cannot satisfy the local rule or social recognition condition."],
+      "action": ["Apply the alternate body's distinctive verb or identity."],
+      "after": ["Traversal, mechanism, dialogue, or combat state changes and the form remains a reusable capability."],
+      "feedback": ["Transformation staging, altered animation and controls, environment response, and character reaction identify the active rule."],
+      "consequences": ["One durable reward opens spatial, systemic, and social possibilities rather than a single matching lock."],
+      "factualDescription": "Major masks transform the player into forms with distinct movement and combat abilities, and some characters or mechanisms respond to those forms.",
+      "interpretation": "A capability gains density when it changes body, route grammar, and social identity under one consistent player choice.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "scheduled-actors-make-waiting-readable",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking"],
+      "context": "An actor moves through a multi-step routine while the player may observe, follow, wait, or intervene.",
+      "preconditions": ["The relevant day and time window is active.", "Earlier dependencies determine the actor's current branch."],
+      "playerInput": ["Track the clock and actor, then interact at a selected step or let the routine continue."],
+      "before": ["The future branch is uncertain and the actor is en route or unavailable."],
+      "action": ["Arrive at the scheduled place and satisfy or disrupt the prerequisite."],
+      "after": ["The actor enters a new temporary state and later appointments may open or close."],
+      "feedback": ["Visible movement, clock changes, location-specific staging, dialogue response, and recorded schedule information expose the result."],
+      "consequences": ["The player reads performance as a causal system and can plan a later cycle around it."],
+      "factualDescription": "Numerous town characters occupy different places and perform different events across the three days, with some side quests linking several scheduled steps.",
+      "interpretation": "A visible timetable turns otherwise passive waiting into prediction when actor blocking consistently expresses system state.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "deadline-is-recoverable-but-not-costless",
+      "dimensions": ["dimension.teaching-feedback", "dimension.recovery-accessibility", "dimension.hardware-multiplayer", "dimension.production-runtime"],
+      "context": "On the original single-player Nintendo 64 release, the visible world clock and platform save options define whether the player continues a cycle, suspends it, or resets.",
+      "preconditions": ["The clock is near a meaningful deadline.", "Some current-cycle progress or supplies would be lost on reset."],
+      "playerInput": ["Read remaining time, choose to commit, slow time where available, save appropriately, or reset and prepare again."],
+      "before": ["The outcome and remaining duration are uncertain."],
+      "action": ["Use the clock, pause behavior, save option, and reset rule to commit to or recover from the current schedule."],
+      "after": ["The attempt either closes before catastrophe or returns to baseline with known losses and preserved durable progress."],
+      "feedback": ["Clock display, day transitions, escalating audiovisual warnings, save messaging, and reset inventory changes communicate risk."],
+      "consequences": ["Tension remains credible because recovery exists, while the reset cost prevents time from becoming irrelevant."],
+      "factualDescription": "The original single-player Nintendo 64 game exposes a continuous deadline, pauses it in conversations and subscreens, and distinguishes persistent cycle-reset saving from temporary owl-statue suspension.",
+      "interpretation": "A platform-level clock and persistence contract supports sustained drama when recovery is predictable enough for planning but costly enough to matter.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "A deterministic short cycle can turn character schedules into navigable level structure and player knowledge into progression.",
+    "A visible reset whitelist may support consequential experimentation without conventional irreversible branching.",
+    "Alternate bodies can unify traversal ability, combat style, and social identity in one reusable verb family."
+  ],
+  "uniqueOrNonportable": [
+    "The exact three-day moon catastrophe, named town and residents, mask identities, melodies, transformation designs, and quest schedules are recognizable authored surface content and must not be reused.",
+    "Specific appointment chains, dungeon layouts, boss sequences, dialogue outcomes, iconography, and the displayed clock treatment are nonportable.",
+    "The emotional stories attached to particular masks are authored narrative expressions, not generic mechanic templates."
+  ],
+  "openQuestions": [
+    "Original N64 and later 3DS save, schedule, and assistance changes should be represented as version deltas before recovery comparisons include both.",
+    "A later trace should quantify how many critical chains expose schedule information before their first miss without relying on walkthrough sources."
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "reportVersion": "1.0.0",
+  "gateId": "gate.P4.pattern-contract-tests",
+  "generatedAt": "2026-07-18",
+  "ok": true,
+  "inputs": {
+    "patternSchema": "design-library/schemas/design-pattern.schema.json",
+    "patterns": "design-library/packs/zelda-mainline/patterns/released-patterns.json",
+    "maturity": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json",
+    "quarantineRegister": "design-library/packs/zelda-mainline/patterns/quarantine-register.json",
+    "observations": "design-library/packs/zelda-mainline/observations/observation-registry.json",
+    "works": "design-library/packs/zelda-mainline/works/work-registry.json",
+    "claims": "design-library/packs/zelda-mainline/claims/claim-registry.json",
+    "fixtures": "design-library/benchmarks/fixture-registry.json",
+    "originalityCases": "design-library/benchmarks/originality-case-registry.json",
+    "originalityPolicy": "design-library/governance/originality-validation-policy.json",
+    "retrieval": "design-library/indexes/retrieval-index.json",
+    "compositionRule": "design-library/core/composition-rules/default-1-plus-3.json"
+  },
+  "output": "design-library/packs/zelda-mainline/coverage/pattern-contract-test-report.json",
+  "metrics": {
+    "normalizedScoreShapes": {
+      "releasablePatterns": 13,
+      "uniqueShapes": 13
+    },
+    "originalityValidation": {
+      "p1ThroughP6BlockingMode": "static-abstraction",
+      "patternBlindEvidence": "historical-diagnostic-nonblocking",
+      "historicalReleaseSetAligned": false,
+      "p8WholeGameBlindGate": "required-blocking"
+    },
+    "retrievalIsolation": {
+      "blockingOwner": "P5-release-validation",
+      "preReleaseIndexContentsAffectP4": false
+    },
+    "patterns": {
+      "total": 36,
+      "released": 13,
+      "reviewed": 23,
+      "releasableMarkers": 13
+    },
+    "evidence": {
+      "observations": 105,
+      "works": 21,
+      "claims": 210,
+      "fixtures": 67,
+      "originalityCases": 30,
+      "combinationOriginalityCases": 11,
+      "quarantineRegisterRecords": 23
+    },
+    "checks": {
+      "total": 14,
+      "passed": 14,
+      "failed": 0
+    }
+  },
+  "checks": [
+    {
+      "checkId": "inputs.load",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "schema.formal-pattern-contract",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "maturity.lossless-lowering",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "registry.identity-and-status",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "quarantine.register-closure",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "provenance.evidence-closure",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "selection.family-role-precedence-exclusion-budget",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "hooks.emit-and-parameter-use",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "score.normalization-and-discrimination",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "effects.concrete-postconditions",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "tests.four-release-gates-and-fixtures",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "composition.reference-and-conflict-closure",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "originality.static-contract-and-p8-deferral",
+      "passed": true,
+      "failureCount": 0
+    },
+    {
+      "checkId": "retrieval.pre-release-isolation-diagnostic",
+      "passed": true,
+      "failureCount": 0
+    }
+  ],
+  "diagnostics": [
+    {
+      "checkId": "originality.static-contract-and-p8-deferral",
+      "code": "HISTORICAL_BLIND_EVIDENCE_STALE",
+      "message": "Historical pattern-level blind evidence does not align with the current release set and is retained only as a nonblocking diagnostic; P8 will test the frozen whole game.",
+      "releaseSetAligned": false,
+      "stalePatternRefs": [
+        "pattern.multi-solution-state-graph",
+        "pattern.knowledge-gated-revisit"
+      ],
+      "staleCombinationRefs": [
+        "pattern.multi-solution-state-graph",
+        "pattern.knowledge-gated-revisit"
+      ],
+      "releasedWithoutCases": []
+    }
+  ],
+  "failures": []
+}

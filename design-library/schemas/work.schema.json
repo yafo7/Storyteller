@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/design-library/schemas/1.0.0/work.schema.json",
+  "title": "V0.3 research work record draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "workId", "canonicalTitle", "scopeDecision", "inclusionBasis", "releaseFamily", "perspectiveTags", "researchStatus", "dimensionCoverage", "sourceRefs"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "workId": { "type": "string", "pattern": "^work\\.[a-z0-9-]+$" },
+    "canonicalTitle": { "type": "string", "minLength": 1 },
+    "aliases": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "scopeDecision": { "enum": ["included", "excluded", "review"] },
+    "inclusionBasis": { "type": "string", "minLength": 10 },
+    "releaseFamily": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primaryVersionId", "versions"],
+      "properties": {
+        "primaryVersionId": { "type": "string", "pattern": "^version\\." },
+        "versions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["versionId", "relationship", "researchTreatment", "platforms", "releaseDate", "deltaFrom"],
+            "properties": {
+              "versionId": { "type": "string", "pattern": "^version\\." },
+              "relationship": { "enum": ["original", "port", "remaster", "remake", "enhanced-edition", "regional", "expansion", "other", "review"] },
+              "researchTreatment": { "enum": ["primary", "delta", "grouped", "excluded", "review"] },
+              "platforms": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true },
+              "releaseDate": { "type": ["string", "null"] },
+              "deltaFrom": { "type": ["string", "null"] },
+              "releaseWindow": { "type": ["string", "null"] },
+              "releaseEvents": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["region", "date", "platform", "distribution"],
+                  "properties": {
+                    "region": { "type": "string", "minLength": 2 },
+                    "date": { "type": ["string", "null"] },
+                    "platform": { "type": "string", "minLength": 1 },
+                    "distribution": { "enum": ["physical", "digital", "built-in", "unknown"] }
+                  }
+                }
+              },
+              "notes": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "perspectiveTags": {
+      "type": "array",
+      "items": { "enum": ["2d-topdown", "2d-sideview", "2.5d", "3d", "mixed"] },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "researchStatus": { "enum": ["unresearched", "scoped", "in-progress", "covered", "verified"] },
+    "dimensionCoverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.puzzle-information", "dimension.dungeon-structure", "dimension.exploration-reward", "dimension.growth-economy", "dimension.combat-boss", "dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.teaching-feedback", "dimension.ui-input", "dimension.recovery-accessibility", "dimension.perspective-implementation", "dimension.hardware-multiplayer", "dimension.production-runtime"],
+      "properties": {
+        "dimension.player-fantasy": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.core-loop": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.verbs": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.world-state": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.topology": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.gating-revisit": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.puzzle-information": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.dungeon-structure": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.exploration-reward": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.growth-economy": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.combat-boss": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.npc-quest": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.narrative-performance": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.camera-blocking": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.teaching-feedback": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.ui-input": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.recovery-accessibility": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.perspective-implementation": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.hardware-multiplayer": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] },
+        "dimension.production-runtime": { "enum": ["unknown", "planned", "covered", "not-applicable", "needs-review"] }
+      }
+    },
+    "sourceRefs": { "type": "array", "items": { "type": "string", "pattern": "^source\\." }, "uniqueItems": true },
+    "openQuestions": { "type": "array", "items": { "type": "string" } },
+    "lastReviewedAt": { "type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+  }
+}

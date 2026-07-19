@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "taxonomyId": "taxonomy.analysis-dimensions",
+  "taxonomyVersion": "1.0.0",
+  "status": "frozen",
+  "terms": [
+    {"termId":"dimension.player-fantasy","label":"Player fantasy and promise","definition":"The role, emotional promise, and kind of agency the work asks the player to inhabit.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.core-loop","label":"Core loop and cadence","definition":"The recurring action, feedback, decision, and reward loop plus its characteristic pacing unit.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.verbs","label":"Player verbs","definition":"The controllable actions, their combinations, and the situations in which their meanings change.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.world-state","label":"World rules and causality","definition":"Persistent or cyclical state, causal rules, and how player action changes what the world permits.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.topology","label":"Topology and landmarks","definition":"The navigable graph, landmark hierarchy, sightlines, loops, and demands placed on spatial memory.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.gating-revisit","label":"Gating and revisit","definition":"Capability or knowledge gates, shortcuts, returns, and reinterpretation of previously known space.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.puzzle-information","label":"Puzzle information","definition":"The rule grammar, information distribution, hypothesis formation, and validation structure of puzzles.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.dungeon-structure","label":"Closed challenge structure","definition":"The macro-structure of dungeons or bounded challenges, including dependencies, escalation, and exams.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.exploration-reward","label":"Exploration and reward","definition":"How curiosity is created, directed, confirmed, and converted into present or future possibility.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.growth-economy","label":"Growth and economy","definition":"The acquisition, expenditure, scarcity, and long-term meaning of resources and capabilities.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.combat-boss","label":"Combat and boss exams","definition":"Enemy readable rules, combat decision space, encounter escalation, and boss-level synthesis tests.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.npc-quest","label":"NPC and quest response","definition":"How characters, schedules, tasks, and social feedback react to player knowledge and world change.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.narrative-performance","label":"Narrative and performance","definition":"Reveal order, dramatic beats, embodied action, scene transitions, and the relation of agency to exposition.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.camera-blocking","label":"Camera and blocking","definition":"View framing, actor placement, motion, and visual guidance used to make spaces and events readable.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.teaching-feedback","label":"Teaching and feedback","definition":"How rules are introduced, practiced, varied, hinted, confirmed, and escalated without opaque failure.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.ui-input","label":"UI and input","definition":"The control vocabulary, interface visibility, information hierarchy, and moment-to-moment readability.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.recovery-accessibility","label":"Recovery and accessibility","definition":"Failure cost, checkpoints, anti-softlock guarantees, assistance, replay, and accessible alternatives.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.perspective-implementation","label":"Perspective constraints","definition":"Design opportunities and limits created by top-down, side-view, 2.5D, 3D, or mixed presentation.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.hardware-multiplayer","label":"Hardware and multiplayer","definition":"Mechanics or information structures shaped by controllers, screens, networking, or player count.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"dimension.production-runtime","label":"Production and runtime","definition":"Asset, code, content, testing, state, camera, and performance capabilities needed to reproduce the principle.","status":"active","aliases":[],"supersedes":[]}
+  ],
+  "governance": {"owner":"Corpus steward","changePolicy":"Any addition, removal, or semantic change requires a taxonomy major release and dossier migration.","migrationRefs":[]}
+}

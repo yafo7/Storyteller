@@ -1,0 +1,121 @@
+{
+  "workId": "work.zelda-ii-the-adventure-of-link",
+  "author": "Early Corpus Analyst Cedar",
+  "reviewer": "Independent Reviewer Juniper",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player becomes a traveling swordsman whose bodily skill, learned techniques, magic, and numeric growth all visibly improve across a hazardous kingdom.",
+    "dimension.core-loop": "The cadence alternates strategic overworld travel with side-view action spaces, then converts combat experience, town assistance, and palace completion into stronger future attempts.",
+    "dimension.verbs": "Side-view movement supports jumping, high and low sword attacks, shield positioning, learned thrusts, and selectable spells, while the overworld abstracts travel and encounters.",
+    "dimension.world-state": "Palace crystals, learned spells and techniques, key items, opened routes, and character levels persist, while roaming encounter icons create temporary local threats.",
+    "dimension.topology": "A top-down regional map connects towns, caves, bridges, palaces, and terrain-triggered action scenes; side-view spaces then express the local path and combat geometry.",
+    "dimension.gating-revisit": "Spells, quest items, movement techniques, and palace tools unlock terrain or interactions, repeatedly sending the player from regional routes back to towns and blocked passages.",
+    "dimension.puzzle-information": "Towns and caves distribute short clues, while local side-view layouts ask players to connect those statements with item use, magic, hidden passages, and traversal timing.",
+    "dimension.dungeon-structure": "Palaces are branching side-view room networks with elevators, locked doors, keys, a major item, a guardian, and a crystal-placement objective.",
+    "dimension.exploration-reward": "Optional caves, town services, hidden tiles, and combat risks can yield experience, magic or life growth, containers, techniques, or information needed elsewhere.",
+    "dimension.growth-economy": "Experience points can be assigned at thresholds to attack, magic, or life levels, creating a visible tradeoff between immediate improvement and saving toward a costlier attribute.",
+    "dimension.combat-boss": "Combat emphasizes spacing, jump arcs, shield height, enemy guard position, magic expenditure, and precise sword contact within constrained side-view lanes.",
+    "dimension.npc-quest": "Town residents give clues and services, and several teachers or spell-granting characters respond only after the player resolves a local need or finds a required person or object.",
+    "dimension.narrative-performance": "The sleeping-princess premise frames a pilgrimage, while towns, palace crystal placements, and the final temple turn progression into repeated acts of restoration and qualification.",
+    "dimension.camera-blocking": "The overworld camera frames regional choice, then contact or entry cuts to side-view scenes where platforms, enemies, and shield lines are staged laterally.",
+    "dimension.teaching-feedback": "Early action scenes expose jumping, sword height, and shield behavior directly; level-up prompts, spell effects, and NPC responses make new rules immediately testable.",
+    "dimension.ui-input": "A status interface tracks life, magic, experience, and three levels; pause selection assigns a spell while directional and button combinations control side-view technique.",
+    "dimension.recovery-accessibility": "Extra lives absorb some failures, but losing the active stock returns the player to the starting palace and can erase unbanked experience, making route preparation consequential.",
+    "dimension.perspective-implementation": "The mixed perspective separates high-level navigation from detailed platform combat, requiring explicit transitions and different collision, movement, and encounter rules for each mode.",
+    "dimension.hardware-multiplayer": "The original Disk System game is single-player and maps its mixed-mode action, menu selection, and save data to a compact digital controller.",
+    "dimension.production-runtime": "Its principles require two movement models, encounter spawning on a regional map, side-view combat physics, attribute thresholds, magic costs, lives, and persistent quest and palace flags."
+  },
+  "observationThemes": [
+    {
+      "key": "overworld-contact-expands-to-action",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.growth-economy"],
+      "context": "While Link travels as a small figure on the regional map, roaming enemy markers can approach and make contact.",
+      "preconditions": ["The player is traveling outside a town or palace", "A roaming encounter marker is active nearby"],
+      "playerInput": ["Move on the overworld", "Either evade the marker or allow contact and then traverse the side-view encounter"],
+      "before": ["Travel is represented at regional scale", "No local combat arena is active"],
+      "action": ["Contact an enemy marker and fight or traverse the resulting action scene"],
+      "after": ["The player returns to the regional map if the scene is exited", "Defeated enemies may have added experience toward an attribute threshold"],
+      "feedback": ["The view switches from top-down map travel to a side-view lane", "Enemy defeat and the experience display report incremental growth"],
+      "consequences": ["Travel itself becomes a risk-management decision", "Repeated mastery can be converted into attack, magic, or life improvement"],
+      "factualDescription": "Contact with a roaming marker on the top-down map opens a side-view action encounter; completing or leaving that space returns Link to regional travel and combat can add experience.",
+      "interpretation": "Expanding a map contact into embodied combat lets one journey alternate planning and execution while tying the player's growing dexterity to an explicit long-term growth economy.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "learned-capability-reopens-route",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.exploration-reward"],
+      "context": "Regional travel exposes terrain and side-view passages that cannot be crossed until the player has learned a spell, technique, or obtained a key item.",
+      "preconditions": ["A blocked route has been observed", "The required persistent capability is later acquired through exploration or town assistance"],
+      "playerInput": ["Return through the overworld network", "Invoke the learned capability at the compatible obstruction"],
+      "before": ["The route graph ends at an obstacle", "The next region or reward cannot be reached"],
+      "action": ["Use the relevant spell, movement technique, or item in the blocked context"],
+      "after": ["The obstacle becomes passable or its hidden route becomes legible", "The regional graph gains a new reachable branch"],
+      "feedback": ["The avatar's action or spell visibly changes the traversal condition", "Crossing the former boundary confirms the capability match"],
+      "consequences": ["The player reaches a palace, town, container, or further clue", "Earlier geography is reinterpreted as a list of capability-dependent returns"],
+      "factualDescription": "Persistent spells, learned sword techniques, and quest items are used at compatible overworld or side-view obstacles to make previously blocked routes traversable.",
+      "interpretation": "When instruction and capability acquisition occur away from the obstacle, successful return joins social memory, regional navigation, and mechanical growth into one payoff.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "palace-item-to-guardian-exam",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.combat-boss", "dimension.teaching-feedback"],
+      "context": "A palace branches through locked rooms, elevators, enemies, and hazards before yielding a major item and placing a guardian near its completion objective.",
+      "preconditions": ["The palace has been entered", "The player has enough keys, health, and combat ability to explore its branches"],
+      "playerInput": ["Read side-view geometry and enemy guards", "Acquire the palace item and apply learned combat or traversal rules to reach the guardian"],
+      "before": ["Parts of the palace and later world remain inaccessible", "The palace crystal objective is unfinished"],
+      "action": ["Navigate the dependency chain, defeat the guardian, and place a crystal"],
+      "after": ["The palace objective records completion", "The major item remains available outside the palace"],
+      "feedback": ["Doors, elevators, item presentation, guardian defeat, and crystal placement mark each dependency", "Side-view staging exposes attack height and contact results"],
+      "consequences": ["A campaign-level qualification step is completed", "The acquired tool can change later routes and encounters"],
+      "factualDescription": "Each palace combines branching side-view navigation, locks, enemies, a persistent item, a guardian battle, and a crystal-placement completion state.",
+      "interpretation": "A bounded challenge can make a tool acquisition serve two scales at once: it resolves local dependencies and becomes evidence that the player is ready for harder regional traversal.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "town-request-unlocks-teaching",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.ui-input"],
+      "context": "In a town, residents occupy lateral streets and house interiors; a teacher or spell-granting character may withhold help until a related local need is resolved.",
+      "preconditions": ["The relevant town is reachable", "The player lacks the offered spell or technique"],
+      "playerInput": ["Speak with residents", "Find the requested person or object", "Return to the character who can teach"],
+      "before": ["A resident communicates a need or condition", "The capability is absent from the player's status and input vocabulary"],
+      "action": ["Complete the local request and re-enter the teacher's interaction"],
+      "after": ["The spell or technique is learned persistently", "Its selection or button combination becomes usable"],
+      "feedback": ["The side-view street and house transitions stage the search as a short social route", "Text and a visible status or action change confirm the lesson"],
+      "consequences": ["A new combat or traversal solution becomes available", "Town narrative directly changes the player's mechanical repertoire"],
+      "factualDescription": "Town conversations can establish a local condition whose completion causes another resident to grant a persistent spell or sword technique with a usable control expression.",
+      "interpretation": "Turning help into embodied instruction makes an NPC exchange mechanically consequential and lets a small town function as both narrative scene and capability hub.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "lives-and-unbanked-growth-on-failure",
+      "dimensions": ["dimension.recovery-accessibility", "dimension.perspective-implementation", "dimension.hardware-multiplayer", "dimension.production-runtime"],
+      "context": "A single-player attempt carries a finite life stock and a current experience total through transitions between regional travel and side-view hazards.",
+      "preconditions": ["The player has not converted all current experience into levels", "Repeated health depletion consumes the remaining life stock"],
+      "playerInput": ["Continue after a lost life", "If the stock is exhausted, resume from the starting palace and rebuild the route"],
+      "before": ["The player is deep in a route with accumulated but unbanked experience", "The active life stock still represents retry capacity"],
+      "action": ["Lose all health and eventually exhaust the current lives"],
+      "after": ["The player returns to the campaign's starting recovery point", "Persistent levels and key progress remain while unbanked experience is at risk"],
+      "feedback": ["Life loss, game-over flow, status totals, and the familiar starting room make the recovery transaction explicit", "The mixed-mode runtime reloads a stable campaign state"],
+      "consequences": ["Long expeditions require decisions about growth thresholds and survival", "Failure is recoverable but exact travel and combat must be repeated"],
+      "factualDescription": "The original single-player campaign uses health, extra lives, saved levels, and a starting-palace continue state; exhausting lives can forfeit current unassigned experience while preserving major progress.",
+      "interpretation": "Separating persistent growth from attempt-bound value creates a recoverable failure loop that gives both combat execution and the timing of level choices strategic weight.",
+      "confidence": "high",
+      "disposition": "single-title"
+    }
+  ],
+  "contributionHypotheses": [
+    "A regional map can remain legible while local contacts expand into a different movement model for high-detail action.",
+    "NPC assistance becomes a strong progression beat when resolving a social condition produces a new, immediately testable verb.",
+    "Persistent levels and attempt-bound experience can create route stakes without deleting campaign completion state."
+  ],
+  "uniqueOrNonportable": [
+    "The exact princess premise, palace count and layouts, spell and enemy names, character identities, audiovisual motifs, and final qualification sequence must remain source-specific evidence.",
+    "The precise experience tables and loss penalties are balance data, not a reusable pattern; any adaptation requires independent tuning and gentler accessibility review."
+  ],
+  "openQuestions": [
+    "A version audit should document exact save and experience-loss differences between the Japanese Disk System original and later cartridge or emulated editions."
+  ]
+}

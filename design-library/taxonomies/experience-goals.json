@@ -1,0 +1,16 @@
+{
+  "schemaVersion":"1.0.0","taxonomyId":"taxonomy.experience-goals","taxonomyVersion":"1.0.0","status":"frozen",
+  "terms":[
+    {"termId":"experience.self-directed-discovery","label":"Self-directed discovery","definition":"The player chooses to investigate and experiences the conclusion as personally discovered.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"experience.rule-mastery","label":"Rule mastery","definition":"The player forms, tests, revises, and finally combines a reliable model of world rules.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"experience.spatial-memory","label":"Spatial memory","definition":"The player builds a useful mental map through landmarks, loops, shortcuts, and revisits.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"experience.world-recontextualization","label":"World recontextualization","definition":"New knowledge, capability, or state gives earlier locations and objects a different meaning.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"experience.consequential-agency","label":"Consequential agency","definition":"Player action visibly changes routes, characters, information, or future choices in the world.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"experience.embodied-revelation","label":"Embodied revelation","definition":"A story fact is understood through action, space, or performance before explanatory dialogue.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"experience.curiosity-tension","label":"Curiosity and tension","definition":"Visible anomalies and incomplete information sustain voluntary investigation without opaque withholding.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"experience.competence-growth","label":"Competence growth","definition":"Increasingly expressive use of a stable verb set makes the player feel more capable over time.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"experience.social-recognition","label":"Social recognition","definition":"NPC behavior and shared spaces acknowledge what the player has learned or changed.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"experience.fair-recovery","label":"Fair recovery","definition":"Failure communicates cause, preserves learning, and returns the player to meaningful action quickly.","status":"active","aliases":[],"supersedes":[]}
+  ],
+  "governance":{"owner":"Selector designer","changePolicy":"Experience goals are extended only with cross-fixture evidence and a backward-compatible migration.","migrationRefs":[]}
+}

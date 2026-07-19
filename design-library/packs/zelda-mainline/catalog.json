@@ -1,0 +1,48 @@
+{
+  "catalogVersion": "1.0.0",
+  "capturedAt": "2026-07-17",
+  "dateBasis": "Japanese original catalogue date shown by Nintendo Zelda Portal HISTORY; not labelled as worldwide first release.",
+  "authority": {
+    "sourceId": "source.nintendo.zelda-portal-history-en-20260717",
+    "title": "The official home for The Legend of Zelda - History",
+    "url": "https://www.nintendo.com/jp/character/zelda/en/history/index.html",
+    "locator": "HISTORY work nodes, English portal snapshot captured 2026-07-17"
+  },
+  "works": [
+    {"slug":"the-legend-of-zelda","title":"The Legend of Zelda","date":"1986-02-21","platforms":["Family Computer Disk System"],"perspectives":["2d-topdown"],"productUrl":"https://www.nintendo.com/jp/software/zelda1/index.html"},
+    {"slug":"zelda-ii-the-adventure-of-link","title":"Zelda II: The Adventure of Link","date":"1987-01-14","platforms":["Family Computer Disk System"],"perspectives":["2d-topdown","2d-sideview","mixed"],"productUrl":"https://www.nintendo.com/jp/software/zelda2/index.html"},
+    {"slug":"a-link-to-the-past","title":"A Link to the Past","date":"1991-11-21","platforms":["Super Famicom"],"perspectives":["2d-topdown"],"productUrl":"https://www.nintendo.co.jp/clvs/soft/zelda.html"},
+    {"slug":"links-awakening","title":"Link’s Awakening","date":"1993-06-06","platforms":["Game Boy"],"perspectives":["2d-topdown","2d-sideview","mixed"],"productUrl":"https://www.nintendo.com/jp/games/zelda-links-awakening/index.html"},
+    {"slug":"ocarina-of-time","title":"Ocarina of Time","date":"1998-11-21","platforms":["Nintendo 64"],"perspectives":["3d"],"productUrl":"https://www.nintendo.co.jp/n01/n64/software/zelda/index.html"},
+    {"slug":"majoras-mask","title":"Majora’s Mask","date":"2000-04-27","platforms":["Nintendo 64"],"perspectives":["3d"],"productUrl":"https://www.nintendo.co.jp/n01/n64/software/nus_p_nzsj/normal/index.html"},
+    {"slug":"oracle-of-seasons","title":"Oracle of Seasons","date":"2001-02-27","platforms":["Game Boy Color"],"perspectives":["2d-topdown"],"productUrl":"https://www.nintendo.com/jp/titles/50010000013310.html"},
+    {"slug":"oracle-of-ages","title":"Oracle of Ages","date":"2001-02-27","platforms":["Game Boy Color"],"perspectives":["2d-topdown"],"productUrl":"https://www.nintendo.com/jp/titles/50010000013311.html"},
+    {"slug":"the-wind-waker","title":"The Wind Waker","date":"2002-12-13","platforms":["Nintendo GameCube"],"perspectives":["3d"],"productUrl":"https://www.nintendo.co.jp/ngc/gzlj/index.html"},
+    {"slug":"four-swords","title":"Four Swords","date":"2003-03-14","platforms":["Game Boy Advance"],"perspectives":["2d-topdown"],"productUrl":"https://www.nintendo.co.jp/n08/azlj/index.html"},
+    {"slug":"four-swords-adventures","title":"Four Swords Adventures","date":"2004-03-18","platforms":["Nintendo GameCube"],"perspectives":["2d-topdown"],"productUrl":"https://www.nintendo.co.jp/ngc/g4sj/index.html"},
+    {"slug":"the-minish-cap","title":"The Minish Cap","date":"2004-11-04","platforms":["Game Boy Advance"],"perspectives":["2d-topdown"],"productUrl":"https://www.nintendo.co.jp/n08/bzmj/index.html"},
+    {"slug":"twilight-princess","title":"Twilight Princess","date":"2006-12-02","platforms":["Wii","Nintendo GameCube"],"perspectives":["3d"],"productUrl":"https://www.nintendo.co.jp/wii/rzdj/index.html"},
+    {"slug":"phantom-hourglass","title":"Phantom Hourglass","date":"2007-06-23","platforms":["Nintendo DS"],"perspectives":["2.5d"],"productUrl":"https://www.nintendo.co.jp/ds/azej/index.html"},
+    {"slug":"spirit-tracks","title":"Spirit Tracks","date":"2009-12-23","platforms":["Nintendo DS"],"perspectives":["2.5d"],"productUrl":"https://www.nintendo.co.jp/ds/bkij/index.html"},
+    {"slug":"skyward-sword","title":"Skyward Sword","date":"2011-11-23","platforms":["Wii"],"perspectives":["3d"],"productUrl":"https://www.nintendo.co.jp/wii/souj/index.html"},
+    {"slug":"a-link-between-worlds","title":"A Link Between Worlds","date":"2013-12-26","platforms":["Nintendo 3DS"],"perspectives":["2.5d"],"productUrl":"https://www.nintendo.co.jp/3ds/bzlj/index.html"},
+    {"slug":"tri-force-heroes","title":"Tri-Force Heroes","date":"2015-10-22","platforms":["Nintendo 3DS"],"perspectives":["2.5d"],"productUrl":"https://www.nintendo.co.jp/3ds/ea3j/index.html"},
+    {"slug":"breath-of-the-wild","title":"Breath of the Wild","date":"2017-03-03","platforms":["Nintendo Switch","Wii U"],"perspectives":["3d"],"productUrl":"https://www.nintendo.com/jp/zelda/botw/index.html"},
+    {"slug":"tears-of-the-kingdom","title":"Tears of the Kingdom","date":"2023-05-12","platforms":["Nintendo Switch"],"perspectives":["3d"],"productUrl":"https://www.nintendo.com/jp/zelda/totk/index.html"},
+    {"slug":"echoes-of-wisdom","title":"Echoes of Wisdom","date":"2024-09-26","platforms":["Nintendo Switch"],"perspectives":["2.5d"],"productUrl":"https://www.nintendo.com/jp/switch/bdgea/index.html"}
+  ],
+  "boundaryExclusions": [
+    {"label":"Hyrule Warriors product line","reason":"Adjacent Warriors products are not independent work nodes in the frozen Zelda Portal HISTORY corpus."},
+    {"label":"Cadence of Hyrule","reason":"Official product catalogue spin-off, not a frozen HISTORY work node."},
+    {"label":"Link’s Crossbow Training","reason":"Peripheral training spin-off, not a frozen HISTORY work node."},
+    {"label":"Tingle, Nintendo Land, Picross and Game & Watch side games","reason":"Side-product or mini-game families outside the Portal HISTORY work-node definition."},
+    {"label":"Satellaview and CD-i titles","reason":"Boundary historical releases outside the frozen Nintendo Portal HISTORY work-node set."},
+    {"label":"Compilations, emulated rereleases and guest appearances","reason":"Packages, ports, or appearances do not create a new design work record."}
+  ],
+  "versionDecisions": [
+    {"id":"scope-decision.oracle-pair","resolution":"Oracle of Ages and Oracle of Seasons are two works in one paired family, not variants of one work.","sourceUrl":"https://www.nintendo.com/jp/topics/article/c4ffd2cf-7151-4a25-914e-8a5aa12a5ee4"},
+    {"id":"scope-decision.ports-remakes","resolution":"Ports, remasters, remakes, regional releases, expansions, and enhanced editions remain versions under their original workId.","sourceUrl":"https://www.nintendo.com/jp/games/feature/nintendo-classics/index.html"},
+    {"id":"scope-decision.multiplayer","resolution":"Four Swords, Four Swords Adventures, and Tri-Force Heroes remain included because the frozen HISTORY authority lists them as series-history nodes.","sourceUrl":"https://www.nintendo.com/jp/character/zelda/en/history/index.html"},
+    {"id":"scope-decision.ocarina-switch2","resolution":"The announced 2026 Nintendo Switch 2 edition remains a review version of Ocarina of Time until Nintendo describes its edition type; it is not a new work.","sourceUrl":"https://www.nintendo.com/jp/topics/article/5101983a-3ed1-4033-841f-c7c80486bfdc"}
+  ]
+}

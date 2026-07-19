@@ -1,0 +1,123 @@
+{
+  "workId": "work.the-wind-waker",
+  "author": "role.analyst.oceanic-spaces",
+  "reviewer": "role.reviewer.causal-observations",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player is a young sailor-adventurer who turns a vulnerable family rescue into confident navigation across an unknown sea and its scattered communities.",
+    "dimension.core-loop": "Select a chart heading, set or exploit the wind, sail toward a visible or charted point, investigate an island or platform, gain information or a tool, and return to the sea with more options.",
+    "dimension.verbs": "Expressive context movement, lock-on swordplay and parries, aimed items, rope traversal, melody performance, sailing, wind control, telescope observation, and limited companion direction form the main vocabulary.",
+    "dimension.world-state": "Wind direction is directly mutable, chart cells become documented, day and night cycle, and story or item state changes which islands, sea hazards, and submerged rewards can be acted upon.",
+    "dimension.topology": "A regular ocean grid provides long sightlines and stable headings; distinct islands are separated nodes whose silhouettes, chart cells, and local interiors carry most authored density.",
+    "dimension.gating-revisit": "Boat access, wind, charts, songs, dungeon tools, story permissions, and late travel abilities gate destinations or actions; earlier islands accumulate new solvable features.",
+    "dimension.puzzle-information": "Readable animation, gaze, target cues, wind indicators, environmental reactions, and companion constraints expose rules that are tested through tools, timing, direction, or positioning.",
+    "dimension.dungeon-structure": "Bounded dungeons use keys, central routes, new items, and boss exams; some add an escorted or directed partner whose position becomes part of the dependency graph.",
+    "dimension.exploration-reward": "Unmarked silhouettes, charts, treasure maps, salvage points, optional islands, platforms, collectibles, and side tasks repeatedly convert visual curiosity into resources or future leads.",
+    "dimension.growth-economy": "Health, wallets, ammunition capacities, bottles, equipment, and songs persist while rupees, bait, bombs, arrows, and salvage costs regulate preparation and optional discovery.",
+    "dimension.combat-boss": "Targeted combat adds conspicuous tells and a prompted evasive counter; enemies and bosses emphasize animation-readable openings, spatial reactions, and tool-mediated vulnerability.",
+    "dimension.npc-quest": "Compact island communities support trading, delivery, photography-like collection, character favors, and reactive dialogue, with facial animation making disposition unusually legible.",
+    "dimension.narrative-performance": "Sailing departures and arrivals alternate solitude with highly animated encounters; comic reactions, family stakes, and large visual reveals carry drama with relatively little interface interruption.",
+    "dimension.camera-blocking": "Lock-on, first-person telescope and aiming, wide sea framing, island approach shots, and reaction-focused cuts use silhouette and facial motion to direct attention.",
+    "dimension.teaching-feedback": "The home island teaches movement, observation, combat, items, and family motivation in a safe circuit; boat guidance, chart markers, target reactions, and expressive animation extend instruction.",
+    "dimension.ui-input": "The GameCube controller supports analog movement, lock-on, context action, quick item slots, a map and inventory; sailing adds explicit compass, wind, and chart information.",
+    "dimension.recovery-accessibility": "Saving, fairies, health drops, bottles, dungeon shortcuts, and the boat's stable route network preserve major progress; original-version sailing time can make a mistaken heading costly without being lethal.",
+    "dimension.perspective-implementation": "Stylized 3D prioritizes silhouette, gaze, squash, and anticipation over texture detail, while ocean scale and horizon visibility make camera distance and streaming central.",
+    "dimension.hardware-multiplayer": "The main adventure is single-player, with an optional Game Boy Advance plus link-cable role that lets a second participant support from a separate interface without requiring another game copy.",
+    "dimension.production-runtime": "A faithful abstraction needs streamed sea cells, stable heading and wind simulation, chart discovery, boat transitions, expressive actor animation, target-aware camera, island state, and optional second-device messaging."
+  },
+  "observationThemes": [
+    {
+      "key": "horizon-curiosity-drives-the-travel-loop",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.ui-input"],
+      "context": "The player is aboard the boat with a destination or an unfamiliar silhouette visible across open water.",
+      "preconditions": ["The sea route is available.", "The player can consult heading and wind information."],
+      "playerInput": ["Inspect the chart or horizon, choose a heading, set the sail, and correct course during travel."],
+      "before": ["The destination is distant and its local content is unknown."],
+      "action": ["Convert a visual or chart lead into sustained directional movement."],
+      "after": ["The island grows from silhouette to navigable place and a new local interaction loop becomes available."],
+      "feedback": ["Compass heading, wind arrow, boat wake, changing silhouette scale, music transition, and arrival framing show progress."],
+      "consequences": ["Travel itself confirms orientation and seeds optional detours instead of acting only as a loading boundary."],
+      "factualDescription": "The player sails between islands across a charted sea, using the map, wind direction, horizon, and telescope-like observation to choose or adjust routes.",
+      "interpretation": "A traversal loop becomes exploratory when distant landmarks continuously turn travel time into prediction and choice.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "wind-is-visible-global-route-state",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.perspective-implementation"],
+      "context": "A desired sailing or environmental action depends on direction rather than only possession of an item.",
+      "preconditions": ["The wind-control melody is learned.", "A direction-dependent sail or mechanism is present."],
+      "playerInput": ["Perform the control phrase, choose a direction, and resume the dependent action."],
+      "before": ["The current wind makes travel inefficient or leaves the mechanism inactive."],
+      "action": ["Change the shared directional state."],
+      "after": ["Sail response and other wind-sensitive affordances align with the selected direction."],
+      "feedback": ["Wind arrow, cloth and particle motion, sound, boat acceleration, and mechanism response make the state perceptible."],
+      "consequences": ["One explicit world variable connects navigation, puzzle reasoning, and environmental performance."],
+      "factualDescription": "A learned conducting action lets the player choose wind direction, which directly affects the sailboat and selected environmental interactions.",
+      "interpretation": "A global rule feels usable when multiple channels render it continuously and its consequences span more than one subsystem.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "island-nodes-concentrate-reward-density",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.exploration-reward", "dimension.growth-economy"],
+      "context": "After a long open-water approach, the player reaches an island, sea platform, salvage clue, or bounded dungeon entrance.",
+      "preconditions": ["The node is reachable by boat.", "At least one visible or charted affordance invites investigation."],
+      "playerInput": ["Disembark or stop, inspect the compact site, solve its local rule, and collect or record the result."],
+      "before": ["The chart cell or site's opportunity is incomplete or unknown."],
+      "action": ["Trade travel time for a short, dense interaction sequence."],
+      "after": ["The chart, inventory, resource stock, or quest state records a new benefit or lead."],
+      "feedback": ["Distinct island identity, chart update, chest or salvage response, inventory change, and departure view confirm completion."],
+      "consequences": ["Many small nodes make the sparse-looking sea support frequent optional rewards and return goals."],
+      "factualDescription": "The ocean is divided into chart regions with distinctive islands and smaller encounters; investigation can reveal chart information, treasure, collectibles, resources, quests, or dungeon access.",
+      "interpretation": "Large traversal spaces can remain legible by concentrating authored interactions into visually singular nodes with explicit completion feedback.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "expressive-reaction-serves-story-and-rule-reading",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.hardware-multiplayer"],
+      "context": "A character or enemy notices an event, object, direction, threat, or player action.",
+      "preconditions": ["The actor has a readable reaction state.", "Camera distance allows silhouette, gaze, or facial change to be seen."],
+      "playerInput": ["Approach, present an object, trigger the event, or wait for the actor's response."],
+      "before": ["The actor's intent or the next point of attention is uncertain."],
+      "action": ["Cause the actor to enter a reaction animation."],
+      "after": ["Disposition, attention direction, danger, or interaction readiness is clearer."],
+      "feedback": ["Eyes, head turn, pose, timing, sound, and camera emphasis communicate the reaction before or alongside text."],
+      "consequences": ["Performance advances characterization while also reducing dependence on abstract markers."],
+      "factualDescription": "The stylized characters use pronounced facial and body animation, and the camera frequently gives those reactions space during social, puzzle, and combat moments.",
+      "interpretation": "One animation system can carry both dramatic subtext and functional guidance when reactions point toward actionable state.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "parry-prompt-closes-a-readable-combat-cycle",
+      "dimensions": ["dimension.combat-boss", "dimension.teaching-feedback", "dimension.recovery-accessibility", "dimension.production-runtime"],
+      "context": "A targeted enemy commits to a telegraphed attack that creates a positional counter opportunity.",
+      "preconditions": ["The enemy is targeted.", "The player is within the valid response window and relation."],
+      "playerInput": ["Read the tell and press the context action during the exposed interval."],
+      "before": ["The enemy controls the exchange or guards ordinary attacks."],
+      "action": ["Execute the contextual evasive counter."],
+      "after": ["The hero repositions and the enemy becomes vulnerable or takes damage."],
+      "feedback": ["A brief action prompt, exaggerated anticipation, camera relation, swoosh, and hit reaction distinguish the successful timing."],
+      "consequences": ["The encounter rewards observation and provides a repeatable recovery from offensive pressure."],
+      "factualDescription": "Targeted combat includes a context-sensitive counter that appears during selected enemy attacks and produces an evasive strike when timed correctly.",
+      "interpretation": "A narrow prompt can teach timing without replacing observation when it only appears after animation and spatial preconditions are satisfied.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "A sparse macro-space can sustain exploration if distant silhouettes continually advertise compact, high-identity interaction nodes.",
+    "A player-controlled directional field can unify traversal, puzzle state, visual motion, and ritualized input.",
+    "Highly legible actor reactions may carry guidance and characterization through the same authored performance channel."
+  ],
+  "uniqueOrNonportable": [
+    "The exact flooded kingdom history, named islands and characters, family rescue plot, conducting instrument, melodies, boat identity, and chart arrangement are recognizable authored surface content and must not be reused.",
+    "Specific island silhouettes, dungeon layouts, treasure-chart sequences, enemy counter animations, visual style, and audiovisual motifs are nonportable.",
+    "The branded optional handheld-support character and interface are hardware-era particulars; only the abstract asymmetric support relation may be compared."
+  ],
+  "openQuestions": [
+    "Original GameCube and HD edition travel-speed, map-interface, and quest changes need explicit delta records before pacing evidence is combined.",
+    "Optional link-cable support should receive a separate hardware trace if asymmetric multiplayer patterns are promoted."
+  ]
+}

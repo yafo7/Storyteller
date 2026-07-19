@@ -1,0 +1,26 @@
+{
+  "schemaVersion":"1.0.0","taxonomyId":"taxonomy.runtime-capabilities","taxonomyVersion":"1.0.0","status":"frozen",
+  "terms":[
+    {"termId":"capability.world-facts","label":"World facts","definition":"Store, query, persist, and migrate typed facts that drive interactions and scene conditions.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.map-layers","label":"Map layers","definition":"Enable or replace visual, collision, and interaction layers from explicit world state.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.route-gates","label":"Route gates","definition":"Open, close, and validate routes while guaranteeing a documented recovery path.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.inventory","label":"Inventory","definition":"Grant, inspect, consume, and persist abstract items or capabilities with readable feedback.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.context-interaction","label":"Context interaction","definition":"Resolve a player interaction against nearby actors, props, conditions, and available verbs.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.npc-state","label":"NPC state","definition":"Persist character availability, schedule, belief, tactic, and dialogue-gate state.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.dialogue-gates","label":"Dialogue gates","definition":"Select dialogue or performance beats from player knowledge and reveal-safe world conditions.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.performance-cues","label":"Performance cues","definition":"Sequence actor motion, animation, audio, lighting, text, and interaction windows deterministically.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.camera-cues","label":"Camera cues","definition":"Pan, frame, focus, shake, or transition the camera while preserving navigation readability.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.portal-transitions","label":"Portal transitions","definition":"Move the player between map regions with explicit spawn, facing, and state preservation.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.grid-collision","label":"Grid collision","definition":"Represent walkability and dynamic blockers on a deterministic top-down tile or cell grid.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.spatial-query","label":"Spatial query","definition":"Find nearby actors, props, zones, and line-of-sight relations for interactions and feedback.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.object-placement","label":"Object placement","definition":"Place or move bounded objects into legal cells and derive interactions from their positions.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.object-composition","label":"Object composition","definition":"Combine bounded properties or object roles under deterministic and inspectable composition rules.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.schedule-clock","label":"Schedule clock","definition":"Advance, display, persist, and reset a finite schedule without depending on real wall-clock time.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.checkpoints","label":"Checkpoints","definition":"Capture and restore safe player, map, inventory, NPC, and reveal state consistently.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.save-migration","label":"Save migration","definition":"Version, validate, and migrate saved state without silently discarding authoritative facts.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.hint-ladder","label":"Hint ladder","definition":"Offer escalating optional hints tied to failed hypotheses while avoiding premature revelation.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.route-simulation","label":"Route simulation","definition":"Explore required state and topology routes automatically to detect unreachable goals and softlocks.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"capability.telemetry","label":"Experience telemetry","definition":"Record privacy-safe actions, attempts, revisits, hints, and comprehension proxies for evaluation.","status":"active","aliases":[],"supersedes":[]}
+  ],
+  "governance":{"owner":"Runtime adapter owner","changePolicy":"Capabilities require an observable contract, fallback policy, and adapter/runtime verification fixture.","migrationRefs":[]}
+}

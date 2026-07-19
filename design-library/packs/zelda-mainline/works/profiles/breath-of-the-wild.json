@@ -1,0 +1,126 @@
+{
+  "workId": "work.breath-of-the-wild",
+  "author": "Corpus Analyst Rowan-C",
+  "reviewer": "Independent Reviewer Alder-C",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player inhabits a self-directed wilderness survivor who reads terrain, weather, materials, creatures, and ruins to choose a personally meaningful route through Hyrule.",
+    "dimension.core-loop": "The cadence is to sight a landmark, plan an approach, traverse or improvise through local conditions, discover a shrine, quest, resource, or memory, and use that gain to pursue a farther curiosity.",
+    "dimension.verbs": "Running, climbing, gliding, swimming, riding, cooking, gathering, stealth, melee, archery, shield use, physics manipulation, elemental interaction, and photography overlap across traversal and combat.",
+    "dimension.world-state": "Activated towers and shrines, completed quests, recovered memories, defeated Divine Beasts, opened travel points, weather, time, fire, electricity, and moved objects all change present options at different persistence scales.",
+    "dimension.topology": "A continuous three-dimensional landscape uses visible towers, peaks, settlements, roads, geological barriers, and Hyrule Castle as nested landmarks rather than a mandatory corridor graph.",
+    "dimension.gating-revisit": "The plateau teaches required capabilities, after which most gates are soft constraints of stamina, temperature, equipment, knowledge, danger, or chosen preparation rather than a fixed dungeon sequence.",
+    "dimension.puzzle-information": "Material properties, environmental reactions, silhouettes, airflow, magnetic highlighting, sound, NPC clues, and shrine geometry let the player form multiple physical hypotheses.",
+    "dimension.dungeon-structure": "Numerous compact shrines isolate rule experiments, Divine Beasts provide larger reconfigurable challenge spaces, and Hyrule Castle permits several routes through a hostile final landmark.",
+    "dimension.exploration-reward": "Curiosity yields shrines, Korok seeds, resources, equipment, memories, quests, vistas, travel points, and knowledge that can be useful even when no permanent item is awarded.",
+    "dimension.growth-economy": "Spirit Orbs, stamina, hearts, inventory slots, armor upgrades, rupees, food, elixirs, arrows, materials, and replaceable weapons form several interacting preparation economies.",
+    "dimension.combat-boss": "Encounters support direct fighting, stealth, terrain, elemental reactions, remote bombs, physics, avoidance, and preparation; bosses foreground readable attacks and champion-related abilities.",
+    "dimension.npc-quest": "Settlements, stables, travelers, researchers, and regional leaders offer rumors, services, contextual tasks, and reactions that turn self-directed travel into local social purpose.",
+    "dimension.narrative-performance": "An amnesiac opening aligns player and protagonist knowledge, while optional memories and regional quests reveal the past in a route-dependent order around a stable rescue objective.",
+    "dimension.camera-blocking": "A freely controlled third-person camera supports horizon scouting, close combat reading, vertical route inspection, Sheikah Slate aiming, and cinematic reframing during major reveals.",
+    "dimension.teaching-feedback": "The plateau safely introduces powers and survival constraints, while elemental effects, stamina, noise, temperature, weapon warnings, map marks, and physics responses continuously explain consequences.",
+    "dimension.ui-input": "Health, stamina, temperature, sound, weather, equipment, runes, map pins, quest records, and inventory surfaces provide layered planning information without prescribing one route.",
+    "dimension.recovery-accessibility": "Frequent saves, fast travel, retreat, cooking, route changes, avoidance, fairies, and later revival effects allow recovery from danger without removing environmental or resource consequences.",
+    "dimension.perspective-implementation": "The 3D view makes elevation and distant landmarks primary planning data, but requires robust camera control, climbing surfaces, line of sight, streaming, and fall-state readability.",
+    "dimension.hardware-multiplayer": "The original is a single-player experience released simultaneously on Switch and Wii U; no cooperative state is required, while controller motion can supplement selected aiming interactions.",
+    "dimension.production-runtime": "Its principles require streamed open terrain, systemic physics and elements, weather and time, climbable geometry, AI perception, dynamic encounters, layered save state, map discovery, and broad interaction testing."
+  },
+  "notApplicableDimensions": {
+    "dimension.hardware-multiplayer": "The primary design is single-player and no core causal rule depends on multiplayer, asymmetric screens, networking, or a platform-exclusive input device; platform editions are handled as version deltas."
+  },
+  "observationThemes": [
+    {
+      "key": "landmark-climb-creates-self-route",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.topology", "dimension.perspective-implementation"],
+      "context": "From a high or open position, a distant tower, shrine, settlement, mountain, or other landmark is visible without being assigned as the current objective.",
+      "preconditions": ["The player has free movement beyond the opening constraints", "The landmark is within sight or has been marked"],
+      "playerInput": ["Aim the camera or scope and place a pin", "Choose a route", "Climb, walk, ride, or glide toward the landmark"],
+      "before": ["The destination is only a visual hypothesis", "The terrain between player and landmark is not yet understood"],
+      "action": ["Commit to a self-selected route and adapt to elevation and local obstacles"],
+      "after": ["The player reaches a new vantage, route branch, or destination", "Additional landmarks and local opportunities become visible"],
+      "feedback": ["The landmark remains spatially coherent across the journey", "Stamina, height, weather, and camera sightlines expose route viability"],
+      "consequences": ["The next goal can emerge from the new view instead of a prescribed sequence", "Personal spatial memory grows around landmarks and traversed terrain"],
+      "factualDescription": "The continuous 3D landscape exposes distant landmarks that can be pinned and approached through player-chosen combinations of walking, climbing, riding, and gliding.",
+      "interpretation": "When a destination is visible before its route is known, traversal itself becomes a self-authored problem and each arrival can generate the next curiosity.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "environmental-property-changes-plan",
+      "dimensions": ["dimension.verbs", "dimension.world-state", "dimension.puzzle-information", "dimension.teaching-feedback"],
+      "context": "A flammable object or patch of dry vegetation lies between the player and a local route, resource, or threat.",
+      "preconditions": ["A visibly combustible material is present", "The player can introduce or avoid a fire source"],
+      "playerInput": ["Inspect the material", "Apply or redirect fire", "Observe combustion and nearby airflow"],
+      "before": ["The material is intact", "The local route or tactical situation has not changed"],
+      "action": ["Trigger the material's fire response"],
+      "after": ["The material burns or is removed and heat may create a local updraft", "A route, vantage, or encounter plan changes"],
+      "feedback": ["Flame, smoke, sound, material disappearance, and airflow make the thermal transition visible", "Comparable materials repeat the same response"],
+      "consequences": ["The player can incorporate the thermal rule into traversal or combat planning", "The local solution remains one instance of a broader consistent material system"],
+      "factualDescription": "Combustible materials can catch fire, visibly burn, and sometimes create heat-driven airflow, changing nearby traversal or encounter conditions.",
+      "interpretation": "One narrow material rule becomes portable design evidence when its before state, trigger, feedback, and route consequence are independently testable.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "shrine-detour-converts-curiosity",
+      "dimensions": ["dimension.gating-revisit", "dimension.dungeon-structure", "dimension.exploration-reward", "dimension.production-runtime"],
+      "context": "A shrine is spotted or sensed off the current route and can become a compact optional challenge and future travel point.",
+      "preconditions": ["The shrine has not been completed", "The player can reach its entrance through current preparation or an alternate route"],
+      "playerInput": ["Divert from the current journey", "Enter and solve the bounded challenge", "Claim its completion reward"],
+      "before": ["The shrine is an unresolved landmark", "Its travel point and Spirit Orb are unavailable"],
+      "action": ["Complete the isolated rule test"],
+      "after": ["The shrine records completion and becomes a fast-travel anchor", "The player receives an Orb toward permanent growth"],
+      "feedback": ["The shrine's exterior and map state change", "The interior presents a contained causal space and a clear completion presentation"],
+      "consequences": ["A detour improves both future mobility and long-term capacity", "The runtime must preserve many independent challenge, reward, and travel states across the open world"],
+      "factualDescription": "Discovered shrines contain compact challenges, award Spirit Orbs on completion, and function as persistent fast-travel destinations in the wider landscape.",
+      "interpretation": "A small optional challenge can justify exploration twice when its reward improves both the avatar and the topology of future travel.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "fragile-equipment-prompts-preparation",
+      "dimensions": ["dimension.growth-economy", "dimension.combat-boss", "dimension.ui-input", "dimension.recovery-accessibility"],
+      "context": "A dangerous encounter begins while weapons, shields, food, armor, arrows, and escape routes differ in quality or availability.",
+      "preconditions": ["An enemy or boss is present", "The player has at least one combat, avoidance, or preparation option"],
+      "playerInput": ["Inspect and select equipment", "Fight, use the environment, eat prepared food, or retreat", "Replace gear when durability is exhausted"],
+      "before": ["The threat remains active", "Current health and resources may be insufficient for a direct approach"],
+      "action": ["Spend equipment durability and consumables while responding to the encounter"],
+      "after": ["The threat is defeated, bypassed, or left for later", "Inventory and health reflect the cost"],
+      "feedback": ["Damage, weapon-condition warnings, breaks, health, armor, and food effects are visible", "Enemy reactions distinguish effective tactics from unsafe ones"],
+      "consequences": ["Loot can replace spent equipment", "Failure pressure can be answered through cooking, upgrading, route change, stealth, or later return rather than mandatory grinding"],
+      "factualDescription": "Weapons, bows, and shields wear out through use, while food, armor, elemental options, stealth, retreat, and replacement equipment let the player manage encounter risk.",
+      "interpretation": "Consumable combat power can keep gathering and adaptation relevant when the interface warns clearly and the world supplies multiple recovery strategies.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "memory-landmark-reveals-past",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking"],
+      "context": "A photograph in the Sheikah Slate depicts an unidentified location associated with Link's missing memories and Zelda's past actions.",
+      "preconditions": ["The memory-search objective is active", "The relevant photograph is available", "The corresponding landscape location can be reached"],
+      "playerInput": ["Compare the photograph with terrain and NPC information", "Travel to the matching site", "Inspect the marked position"],
+      "before": ["The past event and exact location are unknown", "The photograph is only a visual clue"],
+      "action": ["Identify the real-world landmark represented by the image"],
+      "after": ["A memory scene is recovered", "The album and narrative understanding gain another piece"],
+      "feedback": ["The free camera and landscape allow visual comparison", "A cinematic scene clearly separates recovered past from present exploration"],
+      "consequences": ["The player can assemble backstory in a self-selected order", "Each recovered location ties present exploration to one bounded past event"],
+      "factualDescription": "Stored photographs can be matched to locations in the 3D landscape; reaching the correct site triggers an optional recovered-memory scene about Link, Zelda, and the past.",
+      "interpretation": "Turning a narrative reveal into visual landmark search lets exploration determine exposition order while keeping the evidence available for deliberate comparison.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "Distant landmark visibility can generate self-directed objectives when traversal supports several viable approaches.",
+    "Systemic environmental rules are most portable when the same material response informs traversal, puzzle solving, and combat.",
+    "Optional challenge nodes can reward curiosity with both avatar growth and a denser future travel network.",
+    "Narrative fragments can be discovered nonlinearly when each reveal is anchored to a searchable spatial clue."
+  ],
+  "uniqueOrNonportable": [
+    "Hyrule's exact terrain, towers, shrines, Divine Beasts, Sheikah technology, characters, creatures, memory scenes, quest text, music, iconography, and visual language are nonportable.",
+    "Specific shrine solutions, Korok tasks, boss weaknesses, recipes, item tables, landmark coordinates, and physics set pieces remain evidence only.",
+    "The portable value lies in abstract systemic and spatial relationships, not in reproducing this work's recognizable content density or map silhouette."
+  ],
+  "openQuestions": [
+    "A later version delta should measure how the Nintendo Switch 2 Edition's performance, additional save slot, and Zelda Notes change navigation and recovery without treating it as a separate work."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.originality.aquarium-maintenance",
+  "patternId": "pattern.object-role-composition",
+  "testId": "test.object-role.originality",
+  "kind": "originality",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "originality contract fixture for pattern.object-role-composition; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "bounded-role-algebra",
+    "selectionRole": "support",
+    "requiredRuntimeCapabilities": [
+      "capability.inventory",
+      "capability.object-placement",
+      "capability.object-composition",
+      "capability.world-facts",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Single-step undo",
+      "Full zone reset",
+      "Regenerate minimum required consumables"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.blindAttribution.specificEncounterConvergence",
+      "operator": "less-than",
+      "expected": 0.65
+    },
+    {
+      "evidencePath": "$.structuralDeltas.objectRoleGraph",
+      "operator": "greater-or-equal",
+      "expected": 0.75
+    },
+    {
+      "evidencePath": "$.surfaceTransfers.objectCatalog",
+      "operator": "equals",
+      "expected": 0
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

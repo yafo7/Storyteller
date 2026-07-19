@@ -1,0 +1,52 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.rooftop-waterworks-district-runtime",
+  "patternId": "pattern.dense-overworld-as-challenge-space",
+  "testId": "test.dense-overworld.runtime",
+  "kind": "runtime",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "runtime contract fixture for pattern.dense-overworld-as-challenge-space; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "interconnected-traversal-challenge-field",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.spatial-query",
+      "capability.route-graphs",
+      "capability.world-state-transactions",
+      "capability.map-discovery",
+      "capability.encounters",
+      "capability.resource-state",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Collapse redundant no-choice cells",
+      "Add loopback shortcut to known junction",
+      "Preserve discovered links across failure",
+      "Return to nearest verified recovery node"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.region.meaningfulConnectionRatio",
+      "operator": "greater-or-equal",
+      "expected": 0.65
+    },
+    {
+      "evidencePath": "$.region.challengeVerbCategoryCount",
+      "operator": "greater-or-equal",
+      "expected": 3
+    },
+    {
+      "evidencePath": "$.region.travelOnlyTimeRatio",
+      "operator": "less-or-equal",
+      "expected": 0.5
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

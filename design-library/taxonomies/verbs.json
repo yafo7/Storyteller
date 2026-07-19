@@ -1,0 +1,22 @@
+{
+  "schemaVersion":"1.0.0","taxonomyId":"taxonomy.player-verbs","taxonomyVersion":"1.0.0","status":"frozen",
+  "terms":[
+    {"termId":"verb.observe","label":"Observe","definition":"Inspect a perceivable object, actor, or environmental condition to acquire actionable information.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.move","label":"Move","definition":"Navigate continuously or discretely between reachable positions while respecting current topology.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.interact","label":"Interact","definition":"Apply a contextual action to an actor, prop, threshold, or world-state control.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.take","label":"Take","definition":"Move a portable object or capability into player-controlled inventory or state.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.place","label":"Place","definition":"Assign a carried, created, or moved object to a meaningful world position or target.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.combine","label":"Combine","definition":"Join two known objects, rules, states, or capabilities to produce a distinct consequence.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.transform","label":"Transform","definition":"Change an object, actor, route, or environmental layer between rule-consistent states.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.toggle-state","label":"Toggle state","definition":"Switch an available world-state axis and observe its systemic consequences.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.recall","label":"Recall","definition":"Return, retrieve, or compare previously acquired information, object state, or spatial memory.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.ask","label":"Ask","definition":"Direct a contextual question or topic to an NPC and receive knowledge-gated response.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.show","label":"Show","definition":"Present evidence, an object, or a changed state to an actor or validating system.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.wait","label":"Wait","definition":"Advance a schedule or condition deliberately while preserving player understanding of the change.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.evade","label":"Evade","definition":"Avoid a readable threat through timing, positioning, concealment, or route choice.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.strike","label":"Strike","definition":"Apply an offensive action whose timing and target are governed by visible encounter rules.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.defend","label":"Defend","definition":"Reduce or redirect a threat through timing, facing, resource use, or environmental cover.","status":"active","aliases":[],"supersedes":[]},
+    {"termId":"verb.mark","label":"Mark","definition":"Persist a player-created note, route cue, or hypothesis anchor for later comparison.","status":"active","aliases":[],"supersedes":[]}
+  ],
+  "governance":{"owner":"Gameplay designer","changePolicy":"Verb additions require runtime semantics, feedback, recovery, and adapter mappings.","migrationRefs":[]}
+}

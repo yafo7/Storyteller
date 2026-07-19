@@ -1,0 +1,362 @@
+[
+  {
+    "slug":"capability-recontextualizes-old-space","name":"Capability recontextualizes old space","kind":"spatial-level","flavorClass":"zelda-discriminative",
+    "designProblem":"Progression should deepen the meaning of known places instead of only appending new rooms.",
+    "principle":"Teach a reusable capability, preserve visible unresolved affordances, then make returning a self-motivated act of reinterpretation.",
+    "goals":["experience.world-recontextualization","experience.spatial-memory","experience.competence-growth"],
+    "signals":["signal.revisited-place","signal.capability-reveal","signal.landmark-mystery"],"verbs":["verb.observe","verb.move","verb.interact","verb.recall"],
+    "effects":["unlock-route","toggle-map-layer"],"capabilities":["capability.world-facts","capability.route-gates","capability.map-layers","capability.route-simulation"],
+    "dimensions":["dimension.gating-revisit","dimension.topology","dimension.exploration-reward","dimension.teaching-feedback"],
+    "supportWorks":["work.a-link-to-the-past","work.the-minish-cap","work.ocarina-of-time"],"counterWork":"work.breath-of-the-wild","counterLimit":"Avoid artificial locks when the intended experience depends on broad early traversal freedom.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"knowledge-gated-revisit","name":"Knowledge-gated revisit","kind":"puzzle-information","flavorClass":"zelda-discriminative",
+    "designProblem":"A return should become possible through understanding rather than only through inventory acquisition.",
+    "principle":"Place stable but initially unreadable evidence in an early visit, then let later knowledge reveal an action that was always physically available.",
+    "goals":["experience.self-directed-discovery","experience.world-recontextualization","experience.rule-mastery"],
+    "signals":["signal.hidden-causal-rule","signal.revisited-place","signal.embodied-secret"],"verbs":["verb.observe","verb.recall","verb.interact","verb.show"],
+    "effects":["set-fact","unlock-route"],"capabilities":["capability.world-facts","capability.route-gates","capability.dialogue-gates","capability.hint-ladder"],
+    "dimensions":["dimension.puzzle-information","dimension.gating-revisit","dimension.narrative-performance"],
+    "supportWorks":["work.links-awakening","work.majoras-mask","work.oracle-of-ages"],"counterWork":"work.zelda-ii-the-adventure-of-link","counterLimit":"Do not hide required progression behind culturally specific or untelegraphed wording.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"state-axis-rewrites-routes","name":"State axis rewrites routes","kind":"world-state-rule","flavorClass":"zelda-discriminative",
+    "designProblem":"A small map needs meaningful transformation without becoming an unrelated set of replacement scenes.",
+    "principle":"Expose one legible state axis whose consistent environmental consequences open some routes while closing or changing others.",
+    "goals":["experience.rule-mastery","experience.world-recontextualization","experience.consequential-agency"],
+    "signals":["signal.parallel-state","signal.transformable-environment","signal.revisited-place"],"verbs":["verb.observe","verb.toggle-state","verb.move","verb.recall"],
+    "effects":["toggle-map-layer","unlock-route","lock-route"],"capabilities":["capability.world-facts","capability.map-layers","capability.route-gates","capability.checkpoints"],
+    "dimensions":["dimension.world-state","dimension.topology","dimension.gating-revisit","dimension.puzzle-information"],
+    "supportWorks":["work.oracle-of-seasons","work.oracle-of-ages","work.a-link-to-the-past"],"counterWork":"work.the-wind-waker","counterLimit":"Do not force a binary layer swap when traversal value comes from continuous open-space navigation.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"parallel-state-comparison","name":"Parallel-state comparison","kind":"puzzle-information","flavorClass":"zelda-discriminative",
+    "designProblem":"Players need to infer a hidden difference between two versions of the same place or relationship.",
+    "principle":"Keep landmarks and causal anchors stable across contrasting states so comparison itself becomes the information-gathering verb.",
+    "goals":["experience.rule-mastery","experience.spatial-memory","experience.embodied-revelation"],
+    "signals":["signal.parallel-state","signal.hidden-causal-rule","signal.embodied-secret"],"verbs":["verb.observe","verb.toggle-state","verb.recall","verb.mark"],
+    "effects":["toggle-map-layer","set-fact","emit-performance-cue"],"capabilities":["capability.map-layers","capability.world-facts","capability.performance-cues","capability.save-migration"],
+    "dimensions":["dimension.world-state","dimension.puzzle-information","dimension.narrative-performance","dimension.topology"],
+    "supportWorks":["work.a-link-to-the-past","work.oracle-of-ages","work.twilight-princess"],"counterWork":"work.tri-force-heroes","counterLimit":"Avoid parallel states when fast cooperative readability is more important than reflective comparison.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"finite-schedule-loop","name":"Finite schedule loop","kind":"world-state-rule","flavorClass":"zelda-discriminative",
+    "designProblem":"A dense cast and small area need evolving situations while the player retains freedom to investigate.",
+    "principle":"Repeat a finite, readable schedule while allowing knowledge, selected resources, and deliberate interventions to persist across resets.",
+    "goals":["experience.curiosity-tension","experience.social-recognition","experience.rule-mastery"],
+    "signals":["signal.schedule-pressure","signal.relationship-memory","signal.confined-stage"],"verbs":["verb.observe","verb.wait","verb.recall","verb.interact"],
+    "effects":["set-npc-state","set-checkpoint","set-fact"],"capabilities":["capability.schedule-clock","capability.npc-state","capability.checkpoints","capability.world-facts"],
+    "dimensions":["dimension.world-state","dimension.npc-quest","dimension.narrative-performance","dimension.recovery-accessibility"],
+    "supportWorks":["work.majoras-mask","work.the-legend-of-zelda","work.breath-of-the-wild"],"counterWork":"work.skyward-sword","counterLimit":"Avoid reset pressure when the story requires uninterrupted emotional continuity or cannot explain repetition.","fixture":"fixture.selector.relationship-drama"
+  },
+  {
+    "slug":"landmark-promises-future-use","name":"Landmark promises future use","kind":"exploration-reward","flavorClass":"zelda-discriminative",
+    "designProblem":"Exploration needs directional pull without reducing discovery to a list of explicit objectives.",
+    "principle":"Show a distinctive, navigable landmark before its full meaning is known and preserve sightline or memory cues until the player can act on it.",
+    "goals":["experience.self-directed-discovery","experience.spatial-memory","experience.curiosity-tension"],
+    "signals":["signal.landmark-mystery","signal.capability-reveal","signal.revisited-place"],"verbs":["verb.observe","verb.move","verb.mark","verb.recall"],
+    "effects":["set-fact","unlock-route"],"capabilities":["capability.world-facts","capability.route-gates","capability.spatial-query","capability.camera-cues"],
+    "dimensions":["dimension.topology","dimension.exploration-reward","dimension.camera-blocking","dimension.gating-revisit"],
+    "supportWorks":["work.ocarina-of-time","work.breath-of-the-wild","work.tears-of-the-kingdom"],"counterWork":"work.four-swords","counterLimit":"Do not create distant promises in short stages whose cooperative cadence depends on immediate shared goals.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"loop-shortcut-memory","name":"Loop and shortcut memory","kind":"spatial-level","flavorClass":"zelda-discriminative",
+    "designProblem":"Repeated travel should confirm learning and progress instead of feeling like redundant backtracking.",
+    "principle":"Fold routes back onto memorable anchors, then let player action open shortcuts that visibly compress a previously understood journey.",
+    "goals":["experience.spatial-memory","experience.consequential-agency","experience.competence-growth"],
+    "signals":["signal.revisited-place","signal.landmark-mystery","signal.transformable-environment"],"verbs":["verb.move","verb.observe","verb.interact","verb.recall"],
+    "effects":["unlock-route","toggle-map-layer","set-checkpoint"],"capabilities":["capability.route-gates","capability.map-layers","capability.checkpoints","capability.route-simulation"],
+    "dimensions":["dimension.topology","dimension.gating-revisit","dimension.recovery-accessibility"],
+    "supportWorks":["work.the-minish-cap","work.twilight-princess","work.skyward-sword"],"counterWork":"work.phantom-hourglass","counterLimit":"Do not over-compress a route whose repeated traversal is the deliberate navigation challenge.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"hub-spoke-return","name":"Hub-spoke return cadence","kind":"pacing-macro","flavorClass":"adventure-generic",
+    "designProblem":"A broad adventure needs rest, synthesis, and social feedback between outward expeditions.",
+    "principle":"Alternate outward challenge spokes with meaningful hub returns that change services, relationships, information, or route choice.",
+    "goals":["experience.social-recognition","experience.spatial-memory","experience.consequential-agency"],
+    "signals":["signal.revisited-place","signal.relationship-memory","signal.landmark-mystery"],"verbs":["verb.move","verb.ask","verb.show","verb.recall"],
+    "effects":["set-npc-state","set-dialogue-gate","unlock-route"],"capabilities":["capability.npc-state","capability.dialogue-gates","capability.portal-transitions","capability.world-facts"],
+    "dimensions":["dimension.core-loop","dimension.npc-quest","dimension.topology","dimension.narrative-performance"],
+    "supportWorks":["work.the-wind-waker","work.skyward-sword","work.a-link-between-worlds"],"counterWork":"work.majoras-mask","counterLimit":"Avoid static hub resets when evolving schedules are the central dramatic system.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"dungeon-macro-state-machine","name":"Bounded challenge as macro state machine","kind":"spatial-level","flavorClass":"zelda-discriminative",
+    "designProblem":"A closed challenge needs global coherence beyond a sequence of unrelated rooms.",
+    "principle":"Give the whole bounded space one inspectable state variable whose manipulation changes routes, clues, and local challenges across multiple zones.",
+    "goals":["experience.rule-mastery","experience.spatial-memory","experience.consequential-agency"],
+    "signals":["signal.hidden-causal-rule","signal.transformable-environment","signal.confined-stage"],"verbs":["verb.observe","verb.interact","verb.toggle-state","verb.recall"],
+    "effects":["toggle-map-layer","unlock-route","lock-route"],"capabilities":["capability.map-layers","capability.route-gates","capability.world-facts","capability.route-simulation"],
+    "dimensions":["dimension.dungeon-structure","dimension.world-state","dimension.topology","dimension.puzzle-information"],
+    "supportWorks":["work.ocarina-of-time","work.majoras-mask","work.skyward-sword"],"counterWork":"work.the-legend-of-zelda","counterLimit":"Do not impose one global machine on a space whose intended appeal is independent route discovery.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"safe-rule-experiment","name":"Safe rule experiment","kind":"tutorial-feedback","flavorClass":"zelda-discriminative",
+    "designProblem":"Players need to discover a rule through action without an instruction dump or punishing first failure.",
+    "principle":"Present one salient affordance in a low-risk pocket, make the first causal result unmistakable, and leave room for voluntary repetition.",
+    "goals":["experience.rule-mastery","experience.self-directed-discovery","experience.fair-recovery"],
+    "signals":["signal.hidden-causal-rule","signal.capability-reveal","signal.transformable-environment"],"verbs":["verb.observe","verb.interact","verb.recall"],
+    "effects":["set-fact","emit-performance-cue","set-checkpoint"],"capabilities":["capability.world-facts","capability.performance-cues","capability.checkpoints","capability.hint-ladder"],
+    "dimensions":["dimension.teaching-feedback","dimension.puzzle-information","dimension.recovery-accessibility","dimension.ui-input"],
+    "supportWorks":["work.a-link-to-the-past","work.ocarina-of-time","work.echoes-of-wisdom"],"counterWork":"work.zelda-ii-the-adventure-of-link","counterLimit":"Do not treat lethal ambiguity as teaching when feedback does not explain the failed hypothesis.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"local-rule-development-arc","name":"Teach-practice-twist-exam rule arc","kind":"tutorial-feedback","flavorClass":"zelda-discriminative",
+    "designProblem":"A mechanic should grow into a meaningful language instead of appearing as a one-off interaction.",
+    "principle":"Teach one rule safely, require deliberate practice, vary context, combine or reverse the rule, then stage a readable synthesis exam.",
+    "goals":["experience.rule-mastery","experience.competence-growth","experience.fair-recovery"],
+    "signals":["signal.capability-reveal","signal.hidden-causal-rule","signal.multi-causal-problem"],"verbs":["verb.observe","verb.interact","verb.combine","verb.recall"],
+    "effects":["set-fact","unlock-route","emit-performance-cue"],"capabilities":["capability.world-facts","capability.route-gates","capability.performance-cues","capability.route-simulation"],
+    "dimensions":["dimension.teaching-feedback","dimension.core-loop","dimension.puzzle-information","dimension.combat-boss"],
+    "supportWorks":["work.links-awakening","work.skyward-sword","work.echoes-of-wisdom"],"counterWork":"work.tri-force-heroes","counterLimit":"Short cooperative stages may need a compressed arc and shared teaching rather than a long solo sequence.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"environmental-chain-reaction","name":"Environmental chain reaction","kind":"world-state-rule","flavorClass":"zelda-discriminative",
+    "designProblem":"Systemic freedom needs predictable consequences rather than arbitrary object-specific scripting.",
+    "principle":"Define a small set of readable material or state relations whose consequences propagate through nearby objects and remain inspectable.",
+    "goals":["experience.rule-mastery","experience.self-directed-discovery","experience.consequential-agency"],
+    "signals":["signal.transformable-environment","signal.multi-causal-problem","signal.hidden-causal-rule"],"verbs":["verb.observe","verb.place","verb.combine","verb.transform"],
+    "effects":["set-fact","toggle-map-layer","move-actor"],"capabilities":["capability.world-facts","capability.object-placement","capability.object-composition","capability.spatial-query"],
+    "dimensions":["dimension.world-state","dimension.verbs","dimension.puzzle-information","dimension.production-runtime"],
+    "supportWorks":["work.breath-of-the-wild","work.tears-of-the-kingdom","work.echoes-of-wisdom"],"counterWork":"work.the-legend-of-zelda","counterLimit":"Do not promise simulation depth when the runtime can only support isolated binary interactions.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"multi-solution-state-graph","name":"Multi-solution state graph","kind":"puzzle-information","flavorClass":"zelda-discriminative",
+    "designProblem":"A problem should reward understanding and improvisation without becoming impossible to validate or recover.",
+    "principle":"Define the required state outcome independently of one action sequence, then admit several verb-and-object paths that satisfy the same invariants.",
+    "goals":["experience.self-directed-discovery","experience.competence-growth","experience.rule-mastery"],
+    "signals":["signal.multi-causal-problem","signal.transformable-environment","signal.hidden-causal-rule"],"verbs":["verb.observe","verb.place","verb.combine","verb.transform"],
+    "effects":["set-fact","unlock-route"],"capabilities":["capability.world-facts","capability.object-placement","capability.object-composition","capability.route-simulation"],
+    "dimensions":["dimension.puzzle-information","dimension.verbs","dimension.world-state","dimension.recovery-accessibility"],
+    "supportWorks":["work.breath-of-the-wild","work.tears-of-the-kingdom","work.echoes-of-wisdom"],"counterWork":"work.oracle-of-ages","counterLimit":"Do not erase the value of carefully sequenced information puzzles by accepting arbitrary state changes.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"object-role-composition","name":"Object-role composition","kind":"interaction-prop","flavorClass":"zelda-discriminative",
+    "designProblem":"Portable objects need to participate in a shared rule language instead of acting as isolated keys.",
+    "principle":"Give objects a small set of legible functional roles and let spatial placement or combination produce consequences from those roles.",
+    "goals":["experience.rule-mastery","experience.competence-growth","experience.consequential-agency"],
+    "signals":["signal.multi-causal-problem","signal.transformable-environment","signal.capability-reveal"],"verbs":["verb.take","verb.place","verb.combine","verb.observe"],
+    "effects":["grant-item","consume-item","move-actor","set-fact"],"capabilities":["capability.inventory","capability.object-placement","capability.object-composition","capability.world-facts"],
+    "dimensions":["dimension.verbs","dimension.world-state","dimension.growth-economy","dimension.production-runtime"],
+    "supportWorks":["work.tears-of-the-kingdom","work.echoes-of-wisdom","work.the-minish-cap"],"counterWork":"work.four-swords-adventures","counterLimit":"Avoid complex object composition when synchronized group readability is the primary constraint.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"copy-redeploy-affordance","name":"Copy and redeploy affordance","kind":"atomic-mechanic","flavorClass":"zelda-discriminative",
+    "designProblem":"The player needs a broad expressive vocabulary without a separate bespoke item for every obstacle.",
+    "principle":"Let observation capture a bounded functional affordance, then redeploy that role under clear cost, placement, and coexistence limits.",
+    "goals":["experience.competence-growth","experience.self-directed-discovery","experience.rule-mastery"],
+    "signals":["signal.capability-reveal","signal.multi-causal-problem","signal.transformable-environment"],"verbs":["verb.observe","verb.take","verb.place","verb.combine"],
+    "effects":["grant-item","spawn-actor","despawn-actor","set-fact"],"capabilities":["capability.inventory","capability.object-placement","capability.spatial-query","capability.world-facts"],
+    "dimensions":["dimension.verbs","dimension.exploration-reward","dimension.growth-economy","dimension.ui-input"],
+    "supportWorks":["work.echoes-of-wisdom","work.tears-of-the-kingdom","work.links-awakening"],"counterWork":"work.ocarina-of-time","counterLimit":"Do not replace a deliberately authored small tool set with an unreadable catalogue of copied objects.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"perspective-shift-reframes-space","name":"Perspective shift reframes space","kind":"spatial-level","flavorClass":"zelda-discriminative",
+    "designProblem":"A familiar area needs new navigational meaning without discarding its landmarks or topology.",
+    "principle":"Change the player’s scale, layer, plane, or embodied viewpoint while preserving anchors that make old and new spatial readings comparable.",
+    "goals":["experience.world-recontextualization","experience.spatial-memory","experience.embodied-revelation"],
+    "signals":["signal.parallel-state","signal.revisited-place","signal.capability-reveal"],"verbs":["verb.observe","verb.transform","verb.move","verb.recall"],
+    "effects":["toggle-map-layer","move-actor","camera-transition"],"capabilities":["capability.map-layers","capability.spatial-query","capability.camera-cues","capability.route-gates"],
+    "dimensions":["dimension.perspective-implementation","dimension.topology","dimension.gating-revisit","dimension.camera-blocking"],
+    "supportWorks":["work.the-minish-cap","work.a-link-between-worlds","work.twilight-princess"],"counterWork":"work.spirit-tracks","counterLimit":"Do not introduce free perspective shifts when a fixed route viewpoint is essential to control clarity.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"constrained-vehicle-route","name":"Constrained vehicle route with local agency","kind":"spatial-level","flavorClass":"adventure-generic",
+    "designProblem":"Travel on a vehicle or fixed network risks becoming passive traversal with little player authorship.",
+    "principle":"Constrain the macro route but embed meaningful switches, hazards, timing, detours, and local disembarkation choices along it.",
+    "goals":["experience.spatial-memory","experience.competence-growth","experience.curiosity-tension"],
+    "signals":["signal.landmark-mystery","signal.schedule-pressure","signal.multi-causal-problem"],"verbs":["verb.observe","verb.move","verb.interact","verb.evade"],
+    "effects":["map-transition","unlock-route","emit-performance-cue"],"capabilities":["capability.portal-transitions","capability.route-gates","capability.performance-cues","capability.spatial-query"],
+    "dimensions":["dimension.topology","dimension.core-loop","dimension.ui-input","dimension.production-runtime"],
+    "supportWorks":["work.the-wind-waker","work.phantom-hourglass","work.spirit-tracks"],"counterWork":"work.breath-of-the-wild","counterLimit":"Avoid route rails when unconstrained direction choice is the central exploration promise.","fixture":"fixture.selector.comedy-chase"
+  },
+  {
+    "slug":"player-authored-map-memory","name":"Player-authored map memory","kind":"tutorial-feedback","flavorClass":"zelda-discriminative",
+    "designProblem":"The game needs to support planning and recall without automatically solving every navigation question.",
+    "principle":"Let players place bounded notes or route marks that externalize their hypotheses while leaving interpretation and action to them.",
+    "goals":["experience.spatial-memory","experience.self-directed-discovery","experience.rule-mastery"],
+    "signals":["signal.landmark-mystery","signal.revisited-place","signal.hidden-causal-rule"],"verbs":["verb.observe","verb.mark","verb.recall","verb.move"],
+    "effects":["set-fact","emit-performance-cue"],"capabilities":["capability.world-facts","capability.context-interaction","capability.spatial-query","capability.save-migration"],
+    "dimensions":["dimension.ui-input","dimension.topology","dimension.teaching-feedback","dimension.recovery-accessibility"],
+    "supportWorks":["work.phantom-hourglass","work.breath-of-the-wild","work.tears-of-the-kingdom"],"counterWork":"work.four-swords","counterLimit":"Do not pause shared real-time play for detailed private annotation unless all players remain informed.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"reward-expands-future-possibility","name":"Reward expands future possibility","kind":"exploration-reward","flavorClass":"zelda-discriminative",
+    "designProblem":"Optional exploration rewards should matter beyond completion percentage or immediate currency.",
+    "principle":"Reward discovery with a capability, knowledge, relationship, or resource pattern that creates new choices elsewhere in the world.",
+    "goals":["experience.self-directed-discovery","experience.world-recontextualization","experience.competence-growth"],
+    "signals":["signal.landmark-mystery","signal.capability-reveal","signal.revisited-place"],"verbs":["verb.observe","verb.move","verb.take","verb.recall"],
+    "effects":["grant-item","set-fact","unlock-route"],"capabilities":["capability.inventory","capability.world-facts","capability.route-gates","capability.save-migration"],
+    "dimensions":["dimension.exploration-reward","dimension.growth-economy","dimension.gating-revisit"],
+    "supportWorks":["work.the-legend-of-zelda","work.a-link-between-worlds","work.breath-of-the-wild"],"counterWork":"work.tri-force-heroes","counterLimit":"Keep stage rewards immediately legible when long-horizon world revisits do not exist.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"optional-secret-readability","name":"Optional secret readability","kind":"exploration-reward","flavorClass":"zelda-discriminative",
+    "designProblem":"Secrets should reward attention and inference without requiring random exhaustive interaction.",
+    "principle":"Repeat subtle visual, spatial, behavioral, or audio grammar so an observant player can form and test a secret-finding hypothesis.",
+    "goals":["experience.self-directed-discovery","experience.rule-mastery","experience.curiosity-tension"],
+    "signals":["signal.landmark-mystery","signal.hidden-causal-rule","signal.confined-stage"],"verbs":["verb.observe","verb.interact","verb.recall"],
+    "effects":["unlock-route","grant-item","emit-performance-cue"],"capabilities":["capability.route-gates","capability.inventory","capability.performance-cues","capability.hint-ladder"],
+    "dimensions":["dimension.exploration-reward","dimension.puzzle-information","dimension.teaching-feedback","dimension.camera-blocking"],
+    "supportWorks":["work.the-legend-of-zelda","work.links-awakening","work.the-minish-cap"],"counterWork":"work.zelda-ii-the-adventure-of-link","counterLimit":"Do not make mandatory progression depend on weak or inconsistent secret grammar.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"resource-expedition-return","name":"Resource expedition and return","kind":"pacing-macro","flavorClass":"adventure-generic",
+    "designProblem":"Resource pressure should shape route planning without turning exploration into irreversible attrition.",
+    "principle":"Let the player choose expedition depth against readable supplies, then convert a voluntary return into preparation and a changed next attempt.",
+    "goals":["experience.curiosity-tension","experience.competence-growth","experience.fair-recovery"],
+    "signals":["signal.landmark-mystery","signal.revisited-place","signal.schedule-pressure"],"verbs":["verb.move","verb.observe","verb.take","verb.recall"],
+    "effects":["grant-item","consume-item","set-checkpoint"],"capabilities":["capability.inventory","capability.checkpoints","capability.save-migration","capability.world-facts"],
+    "dimensions":["dimension.core-loop","dimension.growth-economy","dimension.recovery-accessibility","dimension.exploration-reward"],
+    "supportWorks":["work.the-legend-of-zelda","work.breath-of-the-wild","work.skyward-sword"],"counterWork":"work.majoras-mask","counterLimit":"Do not stack opaque resource pressure on top of a schedule loop whose reset already carries the dramatic cost.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"boss-rule-synthesis","name":"Boss as rule synthesis","kind":"combat-boss","flavorClass":"zelda-discriminative",
+    "designProblem":"A climactic encounter should test learned understanding rather than reveal an unrelated hidden trick.",
+    "principle":"Recombine previously practiced signals, timing, verbs, and environmental rules under pressure while keeping failure causes readable.",
+    "goals":["experience.rule-mastery","experience.competence-growth","experience.fair-recovery"],
+    "signals":["signal.capability-reveal","signal.hidden-causal-rule","signal.multi-causal-problem"],"verbs":["verb.observe","verb.evade","verb.strike","verb.combine"],
+    "effects":["set-fact","emit-performance-cue","set-checkpoint"],"capabilities":["capability.world-facts","capability.performance-cues","capability.checkpoints","capability.spatial-query"],
+    "dimensions":["dimension.combat-boss","dimension.teaching-feedback","dimension.verbs","dimension.recovery-accessibility"],
+    "supportWorks":["work.ocarina-of-time","work.twilight-princess","work.skyward-sword"],"counterWork":"work.echoes-of-wisdom","counterLimit":"Do not collapse an expressive multi-solution system into one prescribed boss weakness sequence.","fixture":"fixture.selector.comedy-chase"
+  },
+  {
+    "slug":"threat-as-navigation-teacher","name":"Threat as navigation teacher","kind":"combat-boss","flavorClass":"adventure-generic",
+    "designProblem":"Enemies should teach space, timing, and affordances rather than merely interrupt exploration.",
+    "principle":"Place readable threats so evasion or engagement demonstrates route shape, safe zones, useful objects, and later mastery opportunities.",
+    "goals":["experience.competence-growth","experience.spatial-memory","experience.fair-recovery"],
+    "signals":["signal.landmark-mystery","signal.capability-reveal","signal.transformable-environment"],"verbs":["verb.observe","verb.evade","verb.defend","verb.move"],
+    "effects":["move-actor","set-checkpoint","emit-performance-cue"],"capabilities":["capability.spatial-query","capability.checkpoints","capability.performance-cues","capability.grid-collision"],
+    "dimensions":["dimension.combat-boss","dimension.topology","dimension.teaching-feedback","dimension.camera-blocking"],
+    "supportWorks":["work.zelda-ii-the-adventure-of-link","work.ocarina-of-time","work.breath-of-the-wild"],"counterWork":"work.phantom-hourglass","counterLimit":"Avoid precision threat placement when stylus navigation or vehicle control makes the taught response unreliable.","fixture":"fixture.selector.comedy-chase"
+  },
+  {
+    "slug":"npc-schedule-as-information","name":"NPC schedule as information","kind":"npc-quest","flavorClass":"zelda-discriminative",
+    "designProblem":"NPC routines need to be playable evidence rather than decorative background motion.",
+    "principle":"Give a character a legible routine whose deviations reveal needs, relationships, risks, or hidden causal rules the player can act upon.",
+    "goals":["experience.social-recognition","experience.curiosity-tension","experience.embodied-revelation"],
+    "signals":["signal.schedule-pressure","signal.relationship-memory","signal.embodied-secret"],"verbs":["verb.observe","verb.wait","verb.ask","verb.recall"],
+    "effects":["set-npc-state","set-dialogue-gate","set-fact"],"capabilities":["capability.schedule-clock","capability.npc-state","capability.dialogue-gates","capability.world-facts"],
+    "dimensions":["dimension.npc-quest","dimension.narrative-performance","dimension.world-state","dimension.puzzle-information"],
+    "supportWorks":["work.majoras-mask","work.links-awakening","work.skyward-sword"],"counterWork":"work.four-swords","counterLimit":"Do not require private schedule tracking in a short synchronous cooperative stage.","fixture":"fixture.selector.relationship-drama"
+  },
+  {
+    "slug":"npc-reacts-to-world-state","name":"NPC reacts to world state","kind":"npc-quest","flavorClass":"zelda-discriminative",
+    "designProblem":"A changed map feels hollow when characters continue to behave as if nothing happened.",
+    "principle":"Bind NPC availability, tactic, dialogue intent, or service state to the same causal facts that drive visible environmental change.",
+    "goals":["experience.social-recognition","experience.consequential-agency","experience.embodied-revelation"],
+    "signals":["signal.relationship-memory","signal.transformable-environment","signal.revisited-place"],"verbs":["verb.interact","verb.ask","verb.show","verb.recall"],
+    "effects":["set-npc-state","set-dialogue-gate","emit-performance-cue"],"capabilities":["capability.npc-state","capability.dialogue-gates","capability.performance-cues","capability.world-facts"],
+    "dimensions":["dimension.npc-quest","dimension.world-state","dimension.narrative-performance"],
+    "supportWorks":["work.the-minish-cap","work.twilight-princess","work.breath-of-the-wild"],"counterWork":"work.the-legend-of-zelda","counterLimit":"Do not imply deep social simulation when the product has almost no recurring characters.","fixture":"fixture.selector.relationship-drama"
+  },
+  {
+    "slug":"companion-contextual-verb","name":"Companion as contextual verb","kind":"npc-quest","flavorClass":"zelda-discriminative",
+    "designProblem":"A companion risks becoming constant exposition unless their presence changes what the player can actually do.",
+    "principle":"Express the companion through a bounded contextual action, information capability, or traversal role that evolves with the relationship.",
+    "goals":["experience.social-recognition","experience.competence-growth","experience.embodied-revelation"],
+    "signals":["signal.relationship-memory","signal.capability-reveal","signal.embodied-secret"],"verbs":["verb.ask","verb.show","verb.combine","verb.interact"],
+    "effects":["set-npc-state","set-fact","unlock-route"],"capabilities":["capability.npc-state","capability.context-interaction","capability.world-facts","capability.route-gates"],
+    "dimensions":["dimension.npc-quest","dimension.verbs","dimension.narrative-performance","dimension.gating-revisit"],
+    "supportWorks":["work.twilight-princess","work.spirit-tracks","work.skyward-sword"],"counterWork":"work.breath-of-the-wild","counterLimit":"Avoid a compulsory speaking companion when solitude and self-directed observation are the dominant fantasy.","fixture":"fixture.selector.relationship-drama"
+  },
+  {
+    "slug":"embodied-world-change-reveal","name":"Embodied world-change reveal","kind":"performance-camera","flavorClass":"zelda-discriminative",
+    "designProblem":"A major story reveal should be felt as a change in action and place rather than delivered only as text.",
+    "principle":"Synchronize a canon-safe reveal with visible world-state change, altered routes, actor tactics, and a new interaction window.",
+    "goals":["experience.embodied-revelation","experience.consequential-agency","experience.world-recontextualization"],
+    "signals":["signal.embodied-secret","signal.transformable-environment","signal.revisited-place"],"verbs":["verb.observe","verb.interact","verb.move","verb.recall"],
+    "effects":["toggle-map-layer","emit-performance-cue","set-dialogue-gate","camera-transition"],"capabilities":["capability.map-layers","capability.performance-cues","capability.dialogue-gates","capability.camera-cues"],
+    "dimensions":["dimension.narrative-performance","dimension.world-state","dimension.camera-blocking","dimension.gating-revisit"],
+    "supportWorks":["work.a-link-to-the-past","work.links-awakening","work.twilight-princess"],"counterWork":"work.tri-force-heroes","counterLimit":"Do not interrupt a fast shared stage with a long noninteractive transformation sequence.","fixture":"fixture.selector.relationship-drama"
+  },
+  {
+    "slug":"threshold-performance-cue","name":"Threshold performance cue","kind":"performance-camera","flavorClass":"adventure-generic",
+    "designProblem":"Entering a changed place or major challenge needs clarity without removing control for an extended scene.",
+    "principle":"At a spatial threshold, briefly align framing, sound, actor blocking, and objective salience, then return agency with the next action readable.",
+    "goals":["experience.curiosity-tension","experience.embodied-revelation","experience.fair-recovery"],
+    "signals":["signal.landmark-mystery","signal.embodied-secret","signal.transformable-environment"],"verbs":["verb.move","verb.observe","verb.interact"],
+    "effects":["camera-transition","emit-performance-cue","set-checkpoint"],"capabilities":["capability.camera-cues","capability.performance-cues","capability.checkpoints","capability.context-interaction"],
+    "dimensions":["dimension.narrative-performance","dimension.camera-blocking","dimension.teaching-feedback","dimension.recovery-accessibility"],
+    "supportWorks":["work.ocarina-of-time","work.the-wind-waker","work.breath-of-the-wild"],"counterWork":"work.the-legend-of-zelda","counterLimit":"Keep cues minimal when uninterrupted player-led exploration is the stronger presentation language.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"agency-performance-breathing","name":"Agency-performance breathing","kind":"pacing-macro","flavorClass":"adventure-generic",
+    "designProblem":"Continuous dialogue or continuous interaction both flatten dramatic rhythm and reduce comprehension.",
+    "principle":"Alternate short authored performances with purposeful interaction windows whose actions prepare, complicate, or pay off the next beat.",
+    "goals":["experience.embodied-revelation","experience.consequential-agency","experience.curiosity-tension"],
+    "signals":["signal.embodied-secret","signal.relationship-memory","signal.confined-stage"],"verbs":["verb.observe","verb.interact","verb.ask","verb.move"],
+    "effects":["emit-performance-cue","set-dialogue-gate","set-fact"],"capabilities":["capability.performance-cues","capability.dialogue-gates","capability.world-facts","capability.context-interaction"],
+    "dimensions":["dimension.narrative-performance","dimension.core-loop","dimension.npc-quest","dimension.teaching-feedback"],
+    "supportWorks":["work.links-awakening","work.twilight-princess","work.skyward-sword"],"counterWork":"work.breath-of-the-wild","counterLimit":"Do not over-author pauses when the central promise is sustained free-form exploration.","fixture":"fixture.selector.relationship-drama"
+  },
+  {
+    "slug":"action-first-onboarding","name":"Action-first onboarding","kind":"tutorial-feedback","flavorClass":"zelda-discriminative",
+    "designProblem":"A player who knows nothing about their role needs immediate orientation without an exposition wall.",
+    "principle":"Begin with a safe, character-defining action whose feedback reveals role, local objective, and one world rule before optional context expands.",
+    "goals":["experience.embodied-revelation","experience.competence-growth","experience.fair-recovery"],
+    "signals":["signal.capability-reveal","signal.embodied-secret","signal.confined-stage"],"verbs":["verb.observe","verb.move","verb.interact"],
+    "effects":["set-fact","emit-performance-cue","set-dialogue-gate"],"capabilities":["capability.world-facts","capability.performance-cues","capability.dialogue-gates","capability.context-interaction"],
+    "dimensions":["dimension.player-fantasy","dimension.teaching-feedback","dimension.narrative-performance","dimension.ui-input"],
+    "supportWorks":["work.a-link-to-the-past","work.ocarina-of-time","work.breath-of-the-wild"],"counterWork":"work.zelda-ii-the-adventure-of-link","counterLimit":"Do not assume players infer identity from action when essential stakes remain invisible and unsupported.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"reversible-reset-knowledge-retention","name":"Reversible reset with knowledge retention","kind":"world-state-rule","flavorClass":"zelda-discriminative",
+    "designProblem":"Resetting world state risks invalidating effort unless each attempt produces durable player or system knowledge.",
+    "principle":"Reset reversible world state to a clear checkpoint while retaining discoveries, selected commitments, and a faster route to the next hypothesis.",
+    "goals":["experience.fair-recovery","experience.rule-mastery","experience.competence-growth"],
+    "signals":["signal.schedule-pressure","signal.hidden-causal-rule","signal.revisited-place"],"verbs":["verb.observe","verb.recall","verb.wait","verb.interact"],
+    "effects":["set-checkpoint","set-fact","toggle-map-layer"],"capabilities":["capability.checkpoints","capability.world-facts","capability.save-migration","capability.schedule-clock"],
+    "dimensions":["dimension.recovery-accessibility","dimension.world-state","dimension.teaching-feedback","dimension.core-loop"],
+    "supportWorks":["work.majoras-mask","work.phantom-hourglass","work.breath-of-the-wild"],"counterWork":"work.links-awakening","counterLimit":"Avoid diegetic repetition when a one-directional emotional arc would be weakened by resets.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"final-exam-recombination","name":"Final exam recombines familiar rules","kind":"orchestration","flavorClass":"zelda-discriminative",
+    "designProblem":"A finale should prove accumulated understanding instead of introducing the game’s deepest rule too late.",
+    "principle":"Recombine previously operated mechanics, spatial memories, relationships, and reveal-safe facts in a new but inferable configuration.",
+    "goals":["experience.rule-mastery","experience.competence-growth","experience.embodied-revelation"],
+    "signals":["signal.capability-reveal","signal.revisited-place","signal.multi-causal-problem"],"verbs":["verb.observe","verb.recall","verb.combine","verb.interact"],
+    "effects":["set-fact","toggle-map-layer","emit-performance-cue","unlock-route"],"capabilities":["capability.world-facts","capability.map-layers","capability.performance-cues","capability.route-simulation"],
+    "dimensions":["dimension.core-loop","dimension.dungeon-structure","dimension.narrative-performance","dimension.teaching-feedback"],
+    "supportWorks":["work.a-link-to-the-past","work.ocarina-of-time","work.skyward-sword"],"counterWork":"work.tears-of-the-kingdom","counterLimit":"Do not prescribe a single recombination when the established system promises multiple valid solutions.","fixture":"fixture.selector.locked-room"
+  },
+  {
+    "slug":"systemic-verb-toolkit","name":"Small systemic verb toolkit","kind":"orchestration","flavorClass":"zelda-discriminative",
+    "designProblem":"A game needs systemic depth without overwhelming the player with unrelated one-use actions.",
+    "principle":"Choose a small verb set with orthogonal effects, let each verb solve several problem classes, and create depth through combinations.",
+    "goals":["experience.competence-growth","experience.rule-mastery","experience.self-directed-discovery"],
+    "signals":["signal.multi-causal-problem","signal.capability-reveal","signal.transformable-environment"],"verbs":["verb.observe","verb.interact","verb.place","verb.combine"],
+    "effects":["set-fact","move-actor","toggle-map-layer"],"capabilities":["capability.context-interaction","capability.world-facts","capability.object-placement","capability.route-simulation"],
+    "dimensions":["dimension.verbs","dimension.core-loop","dimension.puzzle-information","dimension.production-runtime"],
+    "supportWorks":["work.ocarina-of-time","work.breath-of-the-wild","work.echoes-of-wisdom"],"counterWork":"work.tri-force-heroes","counterLimit":"Compress the toolkit when simultaneous players need immediate shared readability.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"dense-overworld-as-challenge-space","name":"Dense overworld as challenge space","kind":"spatial-level","flavorClass":"zelda-discriminative",
+    "designProblem":"An overworld should contain authored rule development rather than serve only as travel between isolated challenges.",
+    "principle":"Layer landmarks, traversal tests, local state machines, shortcuts, and optional discoveries so the connecting world teaches and examines core verbs.",
+    "goals":["experience.spatial-memory","experience.rule-mastery","experience.self-directed-discovery"],
+    "signals":["signal.landmark-mystery","signal.transformable-environment","signal.revisited-place"],"verbs":["verb.observe","verb.move","verb.interact","verb.recall"],
+    "effects":["unlock-route","toggle-map-layer","set-checkpoint"],"capabilities":["capability.route-gates","capability.map-layers","capability.checkpoints","capability.route-simulation"],
+    "dimensions":["dimension.topology","dimension.dungeon-structure","dimension.exploration-reward","dimension.teaching-feedback"],
+    "supportWorks":["work.skyward-sword","work.breath-of-the-wild","work.tears-of-the-kingdom"],"counterWork":"work.spirit-tracks","counterLimit":"Do not simulate dense free exploration on a product whose travel fantasy depends on a clearly constrained network.","fixture":"fixture.selector.open-exploration"
+  },
+  {
+    "slug":"cooperative-role-interdependence","name":"Cooperative role interdependence","kind":"orchestration","flavorClass":"zelda-discriminative","status":"reviewed","autoSelectable":false,
+    "designProblem":"Cooperative play needs complementary responsibilities rather than several players performing the same action in parallel.",
+    "principle":"Create simultaneous roles with shared state, visible dependencies, recovery from mistakes, and opportunities for both cooperation and playful competition.",
+    "goals":["experience.social-recognition","experience.competence-growth","experience.consequential-agency"],
+    "signals":["signal.multi-causal-problem","signal.schedule-pressure","signal.confined-stage"],"verbs":["verb.observe","verb.move","verb.place","verb.combine"],
+    "effects":["move-actor","unlock-route","set-fact"],"capabilities":["capability.world-facts","capability.spatial-query","capability.route-simulation","capability.telemetry"],
+    "dimensions":["dimension.hardware-multiplayer","dimension.verbs","dimension.puzzle-information","dimension.recovery-accessibility"],
+    "supportWorks":["work.four-swords","work.four-swords-adventures","work.tri-force-heroes"],"counterWork":"work.links-awakening","counterLimit":"Keep disabled when the runtime or story has only one player role and no robust synchronization model.","fixture":"fixture.selector.comedy-chase"
+  },
+  {
+    "slug":"asymmetric-screen-information","name":"Asymmetric screen information","kind":"puzzle-information","flavorClass":"uncertain","status":"reviewed","autoSelectable":false,"supportClass":"single-title-research-only",
+    "designProblem":"Multiple players can hold different private information while acting in one shared world.",
+    "principle":"Separate private and shared views only when communication itself is a supported verb and no player becomes a passive information terminal.",
+    "goals":["experience.social-recognition","experience.rule-mastery","experience.curiosity-tension"],
+    "signals":["signal.multi-causal-problem","signal.hidden-causal-rule","signal.confined-stage"],"verbs":["verb.observe","verb.ask","verb.show","verb.move"],
+    "effects":["set-fact","emit-performance-cue"],"capabilities":["capability.world-facts","capability.telemetry","capability.performance-cues","capability.route-simulation"],
+    "dimensions":["dimension.hardware-multiplayer","dimension.ui-input","dimension.puzzle-information","dimension.npc-quest"],
+    "supportWorks":["work.four-swords-adventures"],"counterWork":"work.four-swords","counterLimit":"Research-only until a second distinct work and a supported multi-screen runtime provide evidence and validation.","fixture":"fixture.selector.comedy-chase"
+  }
+]

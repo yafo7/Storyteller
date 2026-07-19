@@ -1,0 +1,36 @@
+{
+  "policyId": "policy.originality-validation-boundary",
+  "policyVersion": "1.1.0",
+  "effectiveDate": "2026-07-18",
+  "p1ThroughP6": {
+    "status": "skill-beta",
+    "blockingChecks": [
+      "forbidden-surface-scan",
+      "minimum-transformation-axes",
+      "minimum-structural-deltas",
+      "clone-risk-veto-declarations",
+      "production-index-source-isolation"
+    ],
+    "patternBlindReview": {
+      "status": "historical-diagnostic",
+      "blocking": false,
+      "mayBeReleaseSetStale": true,
+      "rationale": "Pattern-level blind applications can expose abstraction risk, but they do not validate the experience, staging, art, or composition of a complete generated game."
+    }
+  },
+  "p7": {
+    "generatedCandidateBlindReview": {
+      "status": "recommended-diagnostic",
+      "blocking": false,
+      "rationale": "P7 must first prove that the autonomous workflow can finish a playable candidate before the evaluation phase is allowed to block release."
+    }
+  },
+  "p8": {
+    "wholeGameBlindAttribution": {
+      "status": "required",
+      "blocking": true,
+      "reviewerMinimum": 2,
+      "veto": "Two independent reviewers stably attribute the shipped topology, object-role sequence, audiovisual staging, or encounter composition to one protected commercial source."
+    }
+  }
+}

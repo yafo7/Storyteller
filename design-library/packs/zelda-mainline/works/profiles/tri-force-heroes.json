@@ -1,0 +1,123 @@
+{
+  "workId": "work.tri-force-heroes",
+  "author": "Corpus Analyst Rowan-C",
+  "reviewer": "Independent Reviewer Alder-C",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player is one member of a deliberately interdependent three-hero team whose success depends on role sharing, vertical formation, and lightweight communication.",
+    "dimension.core-loop": "The cadence is to form a team, choose a costume, enter a short multi-stage course, coordinate puzzles and combat, defeat its climax, and use earned materials to prepare another role.",
+    "dimension.verbs": "Individual movement, attacks, and items combine with picking up, carrying, throwing, stacking into a totem, switching heroes in solo play, and sending communication icons.",
+    "dimension.world-state": "Within a run, three positions, shared health, held items, formation order, room completion, and special-mission conditions form a coupled team state reset at course boundaries.",
+    "dimension.topology": "The Drablands are organized as discrete themed areas, courses, and compact staged rooms whose exits require the whole team to satisfy local dependencies.",
+    "dimension.gating-revisit": "Course completion opens later content, materials enable costumes, and optional special missions invite returns under altered constraints rather than relying on a seamless overworld.",
+    "dimension.puzzle-information": "Height, color, item distribution, simultaneous positions, enemy placement, and teammate icons expose who must move, carry, throw, or act next.",
+    "dimension.dungeon-structure": "Each course is a bounded sequence of short cooperative puzzle-combat stages followed by a completion reward, with area themes escalating a small set of team rules.",
+    "dimension.exploration-reward": "Treasure and materials are awarded through courses and special conditions, making replay and mastery more important than freeform geographic searching.",
+    "dimension.growth-economy": "Collected materials are exchanged for costumes that alter abilities or team roles, so build choice changes tactics without a long numerical level curve.",
+    "dimension.combat-boss": "Enemies and bosses require shared health management, vertical reach, item-role coordination, timing, and recovery when another player controls a needed position.",
+    "dimension.npc-quest": "The kingdom's curse provides the campaign request, while the castle lobby, costume makers, and service characters organize teams, crafting, missions, and rewards.",
+    "dimension.narrative-performance": "The comic rescue premise stays light, allowing teamwork itself—waiting, signaling, carrying, mistiming, and celebrating—to become the dominant performed drama.",
+    "dimension.camera-blocking": "A high oblique view keeps all three heroes and vertical totem levels in frame, while compact stages reduce the chance that a required teammate acts beyond readable space.",
+    "dimension.teaching-feedback": "Totem height, role position, item effects, shared hearts, icon reactions, stage gates, and costume previews visibly explain what the team changed and what remains unresolved.",
+    "dimension.ui-input": "Each player receives ordinary action controls plus touch-screen communication icons; shared health and teammate status prioritize team information over a single-avatar HUD.",
+    "dimension.recovery-accessibility": "Shared health permits teammates to compensate for mistakes, course-scale restarts bound loss, and solo play replaces absent people with switchable invulnerable dolls.",
+    "dimension.perspective-implementation": "The 2.5D overhead-oblique camera makes horizontal separation and three-level stacking legible but favors compact authored rooms over free camera exploration.",
+    "dimension.hardware-multiplayer": "The original supports three-player local, download, and online cooperation plus solo switching; online cooperative service ended in 2024, making mode provenance important.",
+    "dimension.production-runtime": "Implementation requires synchronized three-actor state, stacking hierarchies, ownership transfer, shared health, role-specific items, icon communication, networking, reconnection policy, and solo AI-safe stand-ins."
+  },
+  "observationThemes": [
+    {
+      "key": "totem-converts-team-into-height",
+      "dimensions": ["dimension.player-fantasy", "dimension.verbs", "dimension.puzzle-information", "dimension.hardware-multiplayer"],
+      "context": "A high target, enemy, switch, or route cannot be reached by one hero standing on the floor.",
+      "preconditions": ["Two or three heroes are present", "The team can approach and form a stack", "A player can control the base and another the active upper role"],
+      "playerInput": ["Pick up one or more teammates", "Move the totem into position", "Have the appropriate level use an item or attack"],
+      "before": ["The target lies outside individual reach", "The team occupies separate ground positions"],
+      "action": ["Assemble a two- or three-level totem and coordinate movement with the acting layer"],
+      "after": ["The upper hero reaches the target height", "The switch, enemy, or route can be affected"],
+      "feedback": ["The stacked order and height are visually explicit", "Target response confirms whether the correct layer and role acted"],
+      "consequences": ["Progress depends on cooperation rather than three parallel solo actions", "The same verb works with remote players, nearby players, or switchable solo stand-ins"],
+      "factualDescription": "Heroes can carry and stack one another into a totem; the base controls movement while an upper hero can reach elevated targets with attacks or items.",
+      "interpretation": "Turning team membership into a visible spatial resource creates an immediately readable cooperative verb with distinct movement and action responsibilities.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "shared-state-demands-communication",
+      "dimensions": ["dimension.core-loop", "dimension.world-state", "dimension.ui-input", "dimension.narrative-performance"],
+      "context": "During a cooperative room, heroes share health while different positions or items must act in a sequence that cannot be explained through free text chat.",
+      "preconditions": ["A three-player course is active", "The next action depends on teammate timing or position"],
+      "playerInput": ["Send a touch-screen communication icon", "Wait, move, carry, or use the assigned item in response"],
+      "before": ["The team intent is not aligned", "A mistake by any member can reduce the shared health pool"],
+      "action": ["Use a bounded signal and coordinate the coupled team state"],
+      "after": ["Players align around the requested action or reveal disagreement", "The room dependency advances if coordination succeeds"],
+      "feedback": ["Icons are visible to teammates", "Shared hearts, avatar reactions, and gate changes show collective result"],
+      "consequences": ["Communication and recovery become part of the recurring stage cadence", "Team behavior generates moment-to-moment dramatic tension without additional scripted dialogue"],
+      "factualDescription": "Cooperative play uses a shared health pool and touch-screen communication icons while rooms assign different movement or item responsibilities to the three players.",
+      "interpretation": "Limited but expressive signals can focus collaboration on actionable intent, while shared consequences make even small misunderstandings socially meaningful.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "materials-become-role-costume",
+      "dimensions": ["dimension.exploration-reward", "dimension.growth-economy", "dimension.npc-quest", "dimension.teaching-feedback"],
+      "context": "After completing courses or special missions, the player has materials that can be exchanged for a costume with a stated ability change.",
+      "preconditions": ["A material reward has been collected", "A costume recipe is available", "The required combination is complete"],
+      "playerInput": ["Visit the costume service", "Choose a recipe and spend materials", "Equip the costume before a course"],
+      "before": ["The costume ability is unavailable", "Collected materials have not been converted into a tactical option"],
+      "action": ["Complete the crafting exchange and select the resulting role modifier"],
+      "after": ["The costume enters the collection", "Its advertised ability changes relevant actions during play"],
+      "feedback": ["Recipe requirements and costume preview expose the exchange", "Changed attack, item, defense, or support behavior confirms the effect"],
+      "consequences": ["Course replay yields new team compositions rather than only completion marks", "Players can prepare complementary roles for later challenges"],
+      "factualDescription": "Course rewards include materials that service characters exchange for costumes, and equipped costumes alter combat, item, defense, or support capabilities.",
+      "interpretation": "A crafting economy can turn replay rewards into legible team roles when each unlock changes a verb instead of merely increasing an opaque number.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "course-gates-team-boss",
+      "dimensions": ["dimension.topology", "dimension.gating-revisit", "dimension.dungeon-structure", "dimension.combat-boss"],
+      "context": "A themed course advances through compact stages whose exits require every hero before culminating in a coordinated combat exam.",
+      "preconditions": ["The course is unlocked", "Three controllable heroes and the stage's distributed items are present"],
+      "playerInput": ["Resolve each room dependency", "Bring the full team to the exit", "Coordinate formation and items against the boss"],
+      "before": ["Later course stages and the completion reward are locked", "The local cooperative rules have not been fully tested"],
+      "action": ["Clear the ordered stage chain and synthesize its rules in the final encounter"],
+      "after": ["The course records completion", "A reward and later route or challenge becomes available"],
+      "feedback": ["Compact camera framing, stage transitions, and exit checks show group progress", "Boss reactions expose effective role timing"],
+      "consequences": ["The campaign advances through a clear course graph", "Special missions can reuse the course with altered constraints for revisits"],
+      "factualDescription": "Courses consist of sequential cooperative puzzle-combat stages that require the team to reach their exits and conclude with a coordinated climax or boss before rewards are issued.",
+      "interpretation": "Short bounded stages reduce coordination ambiguity and let a cooperative rule be introduced, combined, and examined before players commit to another course.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "solo-switch-preserves-three-body-rule",
+      "dimensions": ["dimension.camera-blocking", "dimension.recovery-accessibility", "dimension.perspective-implementation", "dimension.production-runtime"],
+      "context": "In single-player mode, a room still requires three bodies even though only one human is present.",
+      "preconditions": ["Solo mode is active", "Three hero bodies exist as one controlled hero and two dolls"],
+      "playerInput": ["Switch control to another body", "Carry inactive dolls into position", "Use the active hero to perform the next dependency"],
+      "before": ["The required body or item is not under direct control", "Inactive dolls occupy safe persistent positions"],
+      "action": ["Transfer control and stage the three bodies sequentially"],
+      "after": ["The newly active body performs its role", "The room can satisfy the same positional rule used in multiplayer"],
+      "feedback": ["The compact oblique camera keeps all bodies and stack levels readable", "Control highlighting and invulnerable inactive dolls clarify responsibility"],
+      "consequences": ["The campaign remains playable without partners", "Runtime logic must preserve multiplayer dependencies while preventing inactive bodies from creating unfair failure"],
+      "factualDescription": "Solo play retains three hero bodies, lets the player switch among them, and keeps inactive dolls from taking damage while they are carried or positioned for puzzles.",
+      "interpretation": "A solo fallback can preserve a cooperative spatial grammar by serializing roles and protecting inactive stand-ins, though the resulting cadence differs from live teamwork.",
+      "confidence": "high",
+      "disposition": "counterexample"
+    }
+  ],
+  "contributionHypotheses": [
+    "A cooperative game's clearest signature verb can convert player count into an immediately visible spatial resource.",
+    "Bounded communication works best when every signal maps to a small set of observable team actions and consequences.",
+    "Solo fallback can retain multiplayer puzzle topology by serializing control, but it should be evaluated as a distinct pacing variant rather than assumed equivalent."
+  ],
+  "uniqueOrNonportable": [
+    "The Hytopia setting, curse premise, named costumes, exact totem appearance, characters, stage layouts, enemy and boss designs, icon art, music, and dialogue are nonportable.",
+    "Exact recipes, material tables, course sequences, special-mission conditions, and boss solutions remain evidence only.",
+    "The retired Nintendo 3DS online service must not be represented as a currently available runtime feature."
+  ],
+  "openQuestions": [
+    "Future benchmarking should compare live three-player comprehension with solo serial-control comprehension instead of merging their pacing evidence.",
+    "Current reproducibility should distinguish local/download play from the online cooperative service that ended on 2024-04-09."
+  ]
+}

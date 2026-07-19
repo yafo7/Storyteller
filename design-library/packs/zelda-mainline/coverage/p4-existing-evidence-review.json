@@ -1,0 +1,246 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewId": "review.p4-existing-evidence.2026-07-18",
+  "reviewedAt": "2026-07-18",
+  "reviewedArtifact": "planning/v03-zelda-mainline/reports/p4-evidence-proposal-b.json",
+  "reviewScope": [
+    "pattern.optional-secret-readability",
+    "pattern.npc-reacts-to-world-state",
+    "pattern.embodied-world-change-reveal"
+  ],
+  "method": {
+    "closureRule": "Every retained causal leg must be present in one verified registered observation per work. Proposal prose, source-adjacent knowledge, and thematic similarity do not close a leg.",
+    "minimumDistinctWorks": 2,
+    "registriesChecked": [
+      "design-library/packs/zelda-mainline/works/work-registry.json",
+      "design-library/packs/zelda-mainline/sources/source-registry.json",
+      "design-library/packs/zelda-mainline/claims/claim-registry.json",
+      "design-library/packs/zelda-mainline/observations/observation-registry.json"
+    ],
+    "contractChecked": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json"
+  },
+  "patternReviews": [
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "decision": "pass",
+      "retainedPrinciple": {
+        "verdict": "pass",
+        "finding": "The narrowed clue-to-bounded-test-to-success-feedback principle is closed by two distinct verified observations. Breath of the Wild records an optional photograph clue, a location-matching test, and a recovered-memory confirmation. Skyward Sword records an optional surface activation, a map or visual signal that bounds the linked aerial target, and a chest response that confirms the cross-region relation. The latter supports the principle through the post-activation signal, not through an unregistered claim that the surface object is visually distinctive."
+      },
+      "directSupport": {
+        "verdict": "pass",
+        "distinctRegisteredWorks": 2,
+        "observations": [
+          {
+            "observationRef": "observation.breath-of-the-wild.memory-landmark-reveals-past",
+            "workRef": "work.breath-of-the-wild",
+            "verdict": "pass",
+            "closedLegs": [
+              "optional content",
+              "persistent visual clue",
+              "bounded location test",
+              "successful recovered-memory feedback"
+            ]
+          },
+          {
+            "observationRef": "observation.skyward-sword.surface-discovery-pays-off-in-the-sky-hub",
+            "workRef": "work.skyward-sword",
+            "verdict": "pass",
+            "closedLegs": [
+              "optional reward state",
+              "map or visual signal",
+              "bounded signaled island or chest target",
+              "successful chest response"
+            ]
+          }
+        ]
+      },
+      "narrowing": {
+        "verdict": "pass",
+        "finding": "The specialization remains callable as an optional clue-action-confirmation pattern and no longer generalizes from generic hidden routes or mandatory capability gates."
+      },
+      "exactRequiredEdits": [
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-evidence-proposal-b.json#/releasedCandidateProposals/0/recommendedRepair/directSupport/1/causalClosure/learnableClue",
+          "action": "replace",
+          "replacement": "The activation scene and registered map marker or visual signal identify the linked aerial destination as a finite target.",
+          "reason": "The registry does not state that the surface object is visually distinctive."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/optional-secret-readability/originality/retainedPrinciple",
+          "action": "replace",
+          "replacement": "Optional content is readable when at least one observable clue supports a bounded player test and successful testing gives unmistakable feedback that confirms the same clue-action relation; abstain when discovery requires blind exhaustive testing or when the route is required."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/optional-secret-readability/selection/requiredSignals",
+          "action": "replace-causal-thresholds",
+          "replacement": "Require optionalGoalRef with a passing skip-route assertion, at least one registered clue channel, a bounded target set, an available testActionRef, and a successFeedbackRef. Do not require two cue channels for provenance closure."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/optional-secret-readability/parameters",
+          "action": "rebind",
+          "replacement": "Bind optionalGoalRef, clueChannelRef, testActionRef, boundedTargetSetRef, and successFeedbackRef; keep cue redundancy as an accessibility requirement rather than an evidence invariant."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/optional-secret-readability/tests",
+          "action": "replace-unsupported-hard-assertions",
+          "replacement": "Add required-route-when-skipped, bounded-target, success-identifies-tested-target, no-walkthrough-hint, and blind-exhaustive-search-abstention assertions; lower distinctCueChannels from two to one and do not require a three-way wrong-action/incomplete/success taxonomy as provenance."
+        }
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "decision": "fail",
+      "retainedPrinciple": {
+        "verdict": "fail",
+        "finding": "Only the Twilight Princess observation closes the proposed shared-fact chain. The Oracle of Ages observation records era-specific scenery and actor placement as context, then a separate item, information, or quest-state interaction that updates dialogue and a clue, reward, or route. It does not record one authoritative fact driving both a visible world-state delta and the NPC delta."
+      },
+      "directSupport": {
+        "verdict": "fail",
+        "distinctRegisteredWorks": 1,
+        "observations": [
+          {
+            "observationRef": "observation.twilight-princess.province-restoration-reframes-known-space",
+            "workRef": "work.twilight-princess",
+            "verdict": "pass",
+            "closedLegs": [
+              "one governing province flag",
+              "visible regional delta",
+              "inhabitant and service availability delta",
+              "consistent renewed interaction and route feedback"
+            ]
+          },
+          {
+            "observationRef": "observation.oracle-of-ages.era-specific-resident-updates-quest",
+            "workRef": "work.oracle-of-ages",
+            "verdict": "fail",
+            "missingLegs": [
+              "one fact shared by the map and NPC reads",
+              "a visible map-state delta caused by the same transaction that updates the NPC",
+              "evidence that the local quest condition governs the era scenery"
+            ]
+          }
+        ]
+      },
+      "narrowing": {
+        "verdict": "pass",
+        "finding": "The proposed shared-fact consistency specialization removes unsupported notice, personal-stakes, and mandatory player-causation claims and remains useful, but it cannot be approved with the submitted Oracle of Ages edge."
+      },
+      "exactRequiredEdits": [
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-evidence-proposal-b.json#/releasedCandidateProposals/1/recommendedRepair/directSupport/1",
+          "action": "replace",
+          "replacement": "Use observation.ocarina-of-time.era-shift-rewrites-familiar-routes from work.ocarina-of-time, version.ocarina-of-time.original, and source.game.ocarina-of-time. Bind the active era as the shared fact; bind lighting, occupancy, geometry, music, and paths as the visible world delta; bind residents, dialogue, and actor availability as the NPC delta.",
+          "reason": "This already registered observation closes the shared-state comparison; the submitted Oracle of Ages observation does not."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/npc-reacts-to-world-state/originality/retainedPrinciple",
+          "action": "replace",
+          "replacement": "Use one authoritative world fact to drive both a visible world-state delta and at least one situated NPC dialogue, availability, behavior, service, or access delta, so character response cannot contradict the state the player can observe."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/npc-reacts-to-world-state/selection",
+          "action": "replace-psychological-requirements",
+          "replacement": "Require one shared worldFactRef and beforeNpcState/afterNpcState with at least one observable NPC delta. Remove mandatory knowledge-transition provenance, named interpretation, personal stakes, and voluntary post-change conversation requirements."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/npc-reacts-to-world-state/effects",
+          "action": "replace-effect-chain",
+          "replacement": "Replace the mandatory update-knowledge, perform-reaction, and social-consequence sequence with a shared-fact read that updates map state and at least one NPC dialogue, placement, schedule, service, tactic, relationship, or access state."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/npc-reacts-to-world-state/tests",
+          "action": "replace-runtime-assertions",
+          "replacement": "Add shared-fact identity, before/after NPC delta, map-NPC consistency, save/resume, and rollback assertions; remove knowledgeProvenanceValid as a universal hard requirement."
+        }
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "decision": "fail",
+      "retainedPrinciple": {
+        "verdict": "fail",
+        "finding": "The proposed principle still requires a bounded return-to-control cue and an immediate test of a changed affordance. Neither cited observation records time to control, a first returned-control position, or an immediate affordance test without another transaction. The observations support visible completed restoration and later changed play, not the submitted immediacy claim."
+      },
+      "directSupport": {
+        "verdict": "fail",
+        "distinctRegisteredWorks": 0,
+        "observations": [
+          {
+            "observationRef": "observation.twilight-princess.province-restoration-reframes-known-space",
+            "workRef": "work.twilight-princess",
+            "verdict": "fail",
+            "closedLegs": [
+              "completed governing-state transition",
+              "coordinated presentation, inhabitant, service, movement, and route deltas"
+            ],
+            "missingLegs": [
+              "bounded control-return cue",
+              "immediate post-transition affordance test"
+            ]
+          },
+          {
+            "observationRef": "observation.echoes-of-wisdom.rift-expedition-converts-repair-into-story-state",
+            "workRef": "work.echoes-of-wisdom",
+            "verdict": "fail",
+            "closedLegs": [
+              "completed rift-state transition",
+              "resolution cue and restored world, narrative, and navigation opportunities"
+            ],
+            "missingLegs": [
+              "bounded control-return cue",
+              "immediate conversation, reward, route, or affordance test",
+              "proof that all listed subsystems commit against one registered fact identity"
+            ]
+          }
+        ]
+      },
+      "narrowing": {
+        "verdict": "fail",
+        "finding": "Removing mandatory major-reveal, actor-tactic, and player-origin claims is directionally correct, but retaining immediate returned agency still overclaims the registry. A further narrowing can preserve a callable atomic world-change-legibility pattern."
+      },
+      "exactRequiredEdits": [
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-evidence-proposal-b.json#/releasedCandidateProposals/2/recommendedRepair/retainedPrinciple",
+          "action": "replace",
+          "replacement": "Treat a player-completed world-state transition as one atomic change: stage a coordinated before-and-after cue and make at least one affected navigation, actor, or interaction state observable in subsequent play.",
+          "reason": "The existing observations establish coherent after-state consequences but not immediate control return or an immediate test."
+        },
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-evidence-proposal-b.json#/releasedCandidateProposals/2/recommendedRepair/directSupport/*/causalClosure/returnedAgency",
+          "action": "replace",
+          "replacement": "Use postTransitionConsequence and quote only the registered later inhabitants, services, conversations, rewards, routes, or exploration opportunities; remove the word immediate."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/embodied-world-change-reveal/originality/retainedPrinciple",
+          "action": "replace",
+          "replacement": "Treat a player-completed world-state transition as one atomic change: stage a coordinated before-and-after cue and make at least one affected navigation, actor, or interaction state observable in subsequent play."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/embodied-world-change-reveal/selection",
+          "action": "remove-unsupported-universal-signals",
+          "replacement": "Remove carriesProtectedReveal, actorTacticChangeCount, and secondsToMeaningfulControl as universal selection requirements. Require a completed transition, defined before/after state, coordinated performance cue, and at least one observable affected-state consequence."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/embodied-world-change-reveal/parameters-and-effects",
+          "action": "rebind",
+          "replacement": "Bind transitionFactRef, beforeVariantRef, afterVariantRef, performanceCueRef, and changedStateRef. Make affected actor state conditional. Remove revealFactRef, mandatory actor-tactic postconditions, and immediate followup-window preconditions unless new observations close them."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/maturity-contracts.json#/patterns/embodied-world-change-reveal/tests",
+          "action": "replace-runtime-assertions",
+          "replacement": "Keep atomic commit, rollback, skip/save parity, and post-transition reachability. Remove actorTacticChangeCount >= 1 and secondsToMeaningfulControl <= 20 as evidence-derived hard requirements unless two new registered observations close those legs."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "adjudication": "fail",
+    "patternsApproved": 1,
+    "blockers": [
+      "pattern.npc-reacts-to-world-state: observation.oracle-of-ages.era-specific-resident-updates-quest does not bind one authoritative fact to both a visible map-state delta and the NPC delta; the proposal has only one closed direct-support work.",
+      "pattern.embodied-world-change-reveal: neither cited observation records bounded return to control plus an immediate changed-affordance test, so the retained principle and both direct-support edges remain causally open.",
+      "The current maturity contracts still contain the broader unsupported cue-count, psychological-reaction, protected-reveal, mandatory-actor-tactic, and immediacy requirements identified in the per-pattern exactRequiredEdits."
+    ]
+  }
+}

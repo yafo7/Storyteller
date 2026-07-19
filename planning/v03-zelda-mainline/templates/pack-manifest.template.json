@@ -5,7 +5,8 @@
   "status": "alpha",
   "hashPolicy": {
     "algorithm": "canonical-tree-sha256/v1",
-    "canonicalizationVersion": "1"
+    "canonicalizationVersion": "1",
+    "treeHash": "0000000000000000000000000000000000000000000000000000000000000000"
   },
   "scope": {
     "scopeId": "scope.zelda-mainline",

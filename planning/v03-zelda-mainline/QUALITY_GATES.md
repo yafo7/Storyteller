@@ -7,6 +7,7 @@
 - 自动检查负责结构、引用、路线和回归，不能代替用户品味验收；
 - 一次游戏中的问题优先回到知识、选择、适配或导演的根因层，不只在成品里打补丁；
 - 每次根因修复都新增可复现 fixture。
+- 原创性采用分阶段门禁：P1–P6 的静态约束负责阻止专有表达和结构照搬，P8 才对冻结后的完整游戏执行整局盲测；P8 前的模式级盲测只能作为诊断证据，不能阻塞 Library Beta 或 Skill/Workflow Beta。
 
 ## 2. G0–G14
 
@@ -17,15 +18,15 @@
 | G2 Evidence Closure | 事实与案例 | 外部事实均有 Source、版本、结构化 locator、claim 类型/重要性和置信度；关键 claim 至少有一个 A/B 来源；事实与解释引用分离；关键无来源断言为 0 | Claims ledger、来源等级矩阵、断链报告 | 硬 | 证据层 |
 | G3 Pattern Completeness | 每条模式 | 必填字段 100%；五个 typed hook、参数绑定、effect primitives、四部门 handoff、适用/禁用、发展、恢复、运行时、原创化和输入→预期输出断言可执行 | Schema、hook fixture 与 vertical-slice 报告 | 硬 | 蒸馏层 |
 | G4 Library Consistency | 模式与关系 | 未解决重复、术语冲突、悬空引用、关系环和 ID 冲突为 0 | 去重、图关系、taxonomy 报告 | 软转硬（Beta 起硬） | Schema / 蒸馏 |
-| G5 Originality | 模式库与生成结果 | 专有角色、地图、台词、音乐、UI、造型和标志性步骤迁移为 0；拓扑/角色图/动作序列/反馈/叙事功能结构指纹显著改变；独立 reviewer 盲源归因不稳定 | 扫描、结构 delta、变形记录、盲源审查 | 硬 | 原创化层 |
+| G5 Originality | 模式库与完整游戏 | `G5-S`：专有角色、地图、台词、音乐、UI、造型和标志性步骤迁移为 0，来源语料不进入生成上下文，模式声明足够的变形轴与结构 delta；`G5-B`：冻结后的完整游戏由未参与生成的 reviewer 整局体验后，不能稳定归因到某个具体作品、关卡或谜题 | P1–P6 提交扫描、禁止迁移清单、结构 delta、变形记录与上下文隔离证明；P8 提交匿名构建、预注册判据、整局盲测和揭盲记录 | 分阶段硬：P4–P6 只要求 `G5-S`，P8 要求 `G5-B` | 原创化层 / P8 Evaluator |
 | G6 Selection Quality | 候选选择 | 相关性、系统深度、复用发展、预算、运行时和原创余量平均 ≥4/5；关键项 ≥3/5；反例能 abstain | 多类基准、多随机种子、拒绝理由 | 软转硬（Skill Beta 起硬） | 选择器 |
 | G7 Composition Discipline | 单个方案 | 默认 1 核心 + 1–3 辅助；核心经历教学、发展、变化/反转、综合考核；冲突为 0 | 组合报告、设计血缘 | 硬 | 选择器 / 总导演 |
 | G8 Canon Safety | 适配结果 | 核心事实、人物知识、揭示顺序和结局约束未被模式污染 | Story diff、reveal audit | 硬 | Story / Pattern handoff |
-| G9 Runtime Fit | 选择与引擎 | 所需能力 100% 满足或有批准替代；不可实现项不静默降为文本 | 能力锁、adapter 报告 | 硬 | Adapter / 编译 |
+| G9 Runtime Fit | 选择与引擎 | 所需能力 100% 满足或有批准替代；每个 released effect 都闭合到 typed transaction；地图/碰撞、NPC/日程、库存/物件、传送、存档/恢复与不可逆门均经正反 fixture 执行；不可实现项不静默降为文本 | 能力锁、effect contract、可执行 adapter 状态事务报告 | 硬 | Adapter / 编译 |
 | G10 Playability | 完整游戏 | 所有必需路线可达；无软锁；保存恢复一致；最终段真实使用既有规则 | 自动路线、浏览器 QA、状态快照 | 硬 | 关卡 / 编译 |
-| G11 Blind Experiment | 三臂对照 | A 原生 0.21、B 0.3 无 Pack、C 0.3+Zelda Pack；同 Profile/资产/时长/预算且 provenance 无泄漏；B>A 归因导演，C>B 归因 Pack，并在未见 fixture 复现预注册最小收益 | parity report、匿名顺序、行为数据、问卷 | 软（RC 必交） | 对应责任层 |
-| G12 User Taste | 用户冷体验 | 用户认可“有设计味道但不是具体模仿”，且理解主要意图与角色目标 | 冷体验记录、揭盲反馈 | 硬 | 选择 / 演出 / 蒸馏 |
-| G13 Reproducibility | 发行 | Skill、Schema、Library、Pack、模式、Adapter 和专业 Skill 均被 hash 锁定 | release manifest、lock、复跑日志 | 硬 | 发布工程 |
+| G11 Autonomous Workflow | P7 生产运行 | 用户只提供剧本与高层产品约束；Skill 独立完成故事分析、选择、玩法、演出、场景、美术、编译和候选自检；没有由用户补写具体玩法、谜题、关卡或剧情演出；阶段检查点、失效传播和失败回流完整 | 生产运行日志、阶段 handoff、checkpoint/resume 记录、设计血缘、人工介入清单 | 硬（P8 验证） | 0.3 总导演 / 对应责任层 |
+| G12 User Taste | 用户冷启动体验 | 首次接触玩家能理解角色、近期目标和主要规则；用户认可“有设计味道但不是具体模仿”，且主要意图由行动和演出而非外部说明传达 | 冷启动记录、行为数据、卡点、揭盲反馈 | 硬 | 选择 / 演出 / 蒸馏 |
+| G13 Reproducibility | 系统与发行 | Skill、Schema、Library、Pack、模式、Adapter、专业 Skill、输入和关键产物均被 hash 锁定；从同一锁与检查点可复跑到等价候选 | release manifest、lock、冷启动复跑日志、产物 hash 对账 | 硬 | 发布工程 |
 | G14 Rollback | 默认版本 | 能恢复上一稳定组合，不修改旧目录、旧游戏或旧存档 | 回滚演练与旧锁验证 | 硬 | 部署层 |
 
 ## 3. 生命周期与门禁组合
@@ -35,10 +36,11 @@
 | Scope Freeze | G0 |
 | Calibration Exit | 样本上的 G1、G2，以及 provisional vertical slice 的样本 G3 |
 | Coverage Alpha | 全范围 G1、G2 |
-| Pattern Beta | G3、G4、G5 |
-| Skill Beta | G6、G7、G8、G9、G13 |
-| Game RC | G5、G7–G11、G13 |
-| Stable | G0–G14；其中 G11 必交证据，G12 为最终人工硬门禁 |
+| Pattern Beta | G3、G4、`G5-S`；模式级盲测不作为退出条件 |
+| Skill / Workflow Beta（P6） | `G5-S`、G6、G7、G8、G9、G13 的锁与合同部分；不得以尚无完整游戏为由要求 `G5-B`、G10–G12 |
+| Playable Candidate（P7） | 由 Skill 自主生成一个完整候选；完成静态原创性、冒烟、路线和保存预检，但不宣称 P8 验证通过 |
+| System / Game Validation（P8） | `G5-B`、G10–G14 以及受影响的上游 Gate 回归 |
+| Stable | G0–G14；整局盲测、用户冷启动、复现和回滚均为最终硬证据 |
 
 ## 4. Flavor 与 Clone Risk 必须分开
 
@@ -62,7 +64,7 @@
 - 可辨识台词、故事段落或视觉构图；
 - 仅换名字与皮肤但保留完整表层结构。
 
-Flavor 得分再高，也不能抵消任一 clone-risk 否决项。
+Flavor 得分再高，也不能抵消任一 clone-risk 否决项。P1–P6 用静态扫描、结构 delta、禁止迁移清单和来源上下文隔离执行 `G5-S`；P7 候选冻结后，P8 再由未参与生成的人执行 `G5-B` 整局盲测。此前积累的模式级盲测可以帮助定位风险，但结果过期、缺失或与当前 release set 不对齐时，只登记为诊断债务，不阻塞 P1–P6。
 
 ## 5. 选择器基准集
 
@@ -79,22 +81,25 @@ Flavor 得分再高，也不能抵消任一 clone-risk 否决项。
 
 每个 fixture 记录应出现的设计属性和不应出现的强制答案，而不是规定唯一模式 ID。每个用例运行多个随机种子，检查词面误选、组合漂移和 abstain 能力。
 
-## 6. 三臂实验与冷体验协议
+## 6. P7 自主生成与 P8 验证协议
 
-### 6.1 三臂与控制变量
+### 6.1 P7 自主生成边界
 
-- 同一剧本与 story model；
-- 同一 0.21 俯视像素 Product Profile；
-- 同一 Runtime capabilities；
-- 相近游戏时长、场景数、美术规格和生产预算；
-- A 使用原生 0.21；B 使用 0.3 且关闭全部 Pack；C 使用同一 0.3 且只开启锁定的 Zelda Pack；
-- B 的 provenance filter 阻止 Zelda 派生模式经 core 间接泄漏；
-- 页面不显示版本号、“塞尔达”或模式名称；
-- 体验顺序随机或交叉。
-- 为三组生成 parity report，并使用至少一个未参与调参的新 fixture 复测；
-- 在看结果前预注册行为指标阈值和最小可感知收益。
+- 用户只提供剧本、目标平台、视角、端口或时长等高层产品约束，不参与具体玩法、谜题、关卡、NPC 行为或剧情演出设计；
+- 0.3 总导演锁定 Library、Pack、Product Profile、Runtime capabilities 和全部专业 Skill；
+- 总导演依序完成 Story → Pattern selection → Gameplay → Performance → World → Art → Build，不得先看来源作品表面案例再改写故事；
+- 每一阶段写入权威 handoff、输入/输出 hash、状态、失败 owner 和可恢复 checkpoint；中断后从最近有效检查点恢复，不静默重做已批准上游；
+- P7 只生成一个完整可玩候选并做机器预检，不把用户冷体验、整局盲测或最终品味验收伪装成已完成。
 
-### 6.2 冷体验记录
+### 6.2 P8 冻结与整局盲测
+
+- 先冻结候选 build、输入剧本、版本锁和预注册判据，再开始体验；
+- 匿名页面、存档和记录不得暴露 Zelda、模式 ID、参考作品名或设计血缘；
+- reviewer 不参与该候选的研究、模式选择、实例化或实现，并从开场到结局体验完整路线；
+- 记录其自发联想到的作品、关卡、谜题或表达，以及归因置信度和触发片段；稳定指向具体来源即 `G5-B` 失败，回到 Originality/Selector/Gameplay/Stage 对应层；
+- 揭盲后对照静态结构 delta 和设计血缘，避免把通用冒险类型相似误判为具体复制，也避免仅靠换皮掩盖结构复制。
+
+### 6.3 用户冷启动记录
 
 - 首次理解角色身份和短期目标所需时间；
 - 主动偏离直线路径和调查异常的次数；
@@ -106,13 +111,22 @@ Flavor 得分再高，也不能抵消任一 clone-risk 否决项。
 - 最终段是否意识到自己在综合此前规则；
 - 对“自己发现”与“文本告诉”的主观评价。
 
-### 6.3 揭盲后问题
+### 6.4 揭盲后问题
 
 - 是否感到探索与空间设计具有统一哲学；
 - 哪些机制真正与剧本结合；
 - 哪些部分只是装饰或套路；
 - 是否明显联想到某一部具体作品、关卡或谜题；
 - 哪个地方最需要删减、加深或重新教学。
+
+### 6.5 复现与回滚
+
+- 在干净进程中仅使用冻结输入、精确 lock 和已登记工具版本重放 workflow，核对关键 handoff 与候选 build hash；
+- 从一次人为中断的阶段检查点恢复，确认不会污染上游产物或遗漏失效传播；
+- 切回上一稳定 Skill、Library、Pack、Schema 和 Adapter 锁组合，确认旧游戏与旧存档不变；
+- 任一复现、恢复或回滚失败都阻止 Stable。
+
+三臂或多版本对照仍可在未来作为研究实验，用于估计总导演或 Pack 的增量收益；它不是本轮 P1–P8 的完成前提，也不能替代对实际候选的整局验证。
 
 ## 7. 失败回流表
 

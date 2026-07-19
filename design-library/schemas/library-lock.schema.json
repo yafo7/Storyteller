@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/design-library/schemas/1.0.0/library-lock.schema.json",
+  "title": "V0.3 production library lock draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "lockId", "productionId", "hashPolicy", "input", "orchestrator", "specialistSkills", "library", "packs", "provenancePolicy", "schemas", "resolvedPatterns", "adapters", "productProfile", "runtimeCapabilities", "invalidationPolicyVersion", "createdAt"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "lockId": { "type": "string", "pattern": "^lock\\." },
+    "productionId": { "type": "string", "minLength": 3 },
+    "hashPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "canonicalizationVersion", "fileManifestHash"],
+      "properties": {
+        "algorithm": { "const": "canonical-tree-sha256/v1" },
+        "canonicalizationVersion": { "const": "1" },
+        "fileManifestHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scriptHash", "storyModelHash", "productionCharterHash"],
+      "properties": {
+        "scriptHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "storyModelHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "productionCharterHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "orchestrator": { "$ref": "#/$defs/componentLock" },
+    "specialistSkills": { "type": "array", "items": { "$ref": "#/$defs/componentLock" }, "minItems": 1 },
+    "library": { "$ref": "#/$defs/versionedContentLock" },
+    "packs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "version", "manifestHash", "contentHash", "enabled"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^pack\\." },
+          "version": { "type": "string", "minLength": 1 },
+          "manifestHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "contentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "enabled": { "const": true }
+        }
+      },
+      "uniqueItems": true
+    },
+    "provenancePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabledPackIds", "blockedPackIds", "allowCorePromotedFromBlockedPack"],
+      "properties": {
+        "enabledPackIds": { "type": "array", "items": { "type": "string", "pattern": "^pack\\." }, "uniqueItems": true },
+        "blockedPackIds": { "type": "array", "items": { "type": "string", "pattern": "^pack\\." }, "uniqueItems": true },
+        "allowCorePromotedFromBlockedPack": { "const": false }
+      }
+    },
+    "schemas": { "type": "array", "items": { "$ref": "#/$defs/componentLock" }, "minItems": 1 },
+    "resolvedPatterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["patternId", "version", "hash"],
+        "properties": {
+          "patternId": { "type": "string", "pattern": "^pattern\\." },
+          "version": { "type": "string" },
+          "hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    },
+    "adapters": { "type": "array", "items": { "$ref": "#/$defs/componentLock" }, "minItems": 1 },
+    "productProfile": { "$ref": "#/$defs/componentLock" },
+    "runtimeCapabilities": { "$ref": "#/$defs/componentLock" },
+    "invalidationPolicyVersion": { "type": "string" },
+    "createdAt": { "type": "string" },
+    "toolchain": { "type": "object", "additionalProperties": { "type": "string" } }
+  },
+  "$defs": {
+    "componentLock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "path", "hash"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "path": { "type": "string", "minLength": 1 },
+        "hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "versionedContentLock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "manifestHash", "contentHash"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "manifestHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "contentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    }
+  }
+}

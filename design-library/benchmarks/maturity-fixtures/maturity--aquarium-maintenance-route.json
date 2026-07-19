@@ -1,0 +1,44 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.aquarium-maintenance-route",
+  "patternId": "pattern.object-role-composition",
+  "testId": "test.object-role.route",
+  "kind": "route",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "route contract fixture for pattern.object-role-composition; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "bounded-role-algebra",
+    "selectionRole": "support",
+    "requiredRuntimeCapabilities": [
+      "capability.inventory",
+      "capability.object-placement",
+      "capability.object-composition",
+      "capability.world-facts",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Single-step undo",
+      "Full zone reset",
+      "Regenerate minimum required consumables"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.routes.allPlacementStates.exit",
+      "operator": "reachable",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.routes.reset.minimumObjects",
+      "operator": "reachable",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

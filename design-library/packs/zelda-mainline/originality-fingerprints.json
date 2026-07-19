@@ -1,0 +1,12 @@
+{
+  "registryVersion": "1.0.0",
+  "visibility": "evidence-review-only",
+  "productionIndexPolicy": "Exclude this registry and all source-specific signatures from production retrieval contexts.",
+  "fingerprints": [
+    {"fingerprintId":"fingerprint.no-source-room-topology","definition":"Reject an instance whose route graph remains readily attributable to a single source room or dungeon sequence."},
+    {"fingerprintId":"fingerprint.no-source-object-sequence","definition":"Reject an instance that preserves source-specific objects in the same ordered action sequence with equivalent feedback."},
+    {"fingerprintId":"fingerprint.no-source-boss-script","definition":"Reject an instance that preserves a recognizable source boss weakness, phase order, timing, or staging signature."},
+    {"fingerprintId":"fingerprint.no-proprietary-surface","definition":"Reject proprietary names, characters, lore, dialogue, symbols, music, UI composition, or item silhouettes."},
+    {"fingerprintId":"fingerprint.blind-attribution-unstable","definition":"A reviewer without provenance should not reliably identify one source encounter after abstraction and transformation."}
+  ]
+}

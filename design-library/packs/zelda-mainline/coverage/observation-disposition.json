@@ -1,0 +1,758 @@
+{
+  "registryVersion": "1.0.0",
+  "total": 105,
+  "resolved": 105,
+  "records": [
+    {
+      "observationId": "observation.a-link-between-worlds.wall-merge-rewrites-boundary",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.perspective-shift-reframes-space"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.a-link-between-worlds.rental-enables-order-choice",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.a-link-between-worlds.rift-links-corresponding-worlds",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.a-link-between-worlds.height-puzzle-supports-optional-hint",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.a-link-between-worlds.collectible-threshold-upgrades-owned-tool",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.a-link-to-the-past.storm-rescue-teaches-action-chain",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.action-first-onboarding"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.a-link-to-the-past.paired-world-coordinate-reframe",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.state-axis-rewrites-routes",
+        "pattern.parallel-state-comparison"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.a-link-to-the-past.dungeon-tool-closes-local-dependency",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.safe-rule-experiment",
+        "pattern.local-rule-development-arc"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.a-link-to-the-past.milestone-transition-reframes-campaign",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.a-link-to-the-past.optional-buffer-softens-retry",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.breath-of-the-wild.landmark-climb-creates-self-route",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.landmark-promises-future-use",
+        "pattern.player-authored-map-memory",
+        "pattern.dense-overworld-as-challenge-space"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.breath-of-the-wild.environmental-property-changes-plan",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.environmental-chain-reaction",
+        "pattern.multi-solution-state-graph"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.breath-of-the-wild.shrine-detour-converts-curiosity",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.reward-expands-future-possibility"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.breath-of-the-wild.fragile-equipment-prompts-preparation",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.breath-of-the-wild.memory-landmark-reveals-past",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.knowledge-gated-revisit",
+        "pattern.optional-secret-readability"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.echoes-of-wisdom.echo-learning-turns-observation-into-vocabulary",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.multi-solution-state-graph",
+        "pattern.object-role-composition",
+        "pattern.copy-redeploy-affordance"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.echoes-of-wisdom.echo-combination-authors-a-route",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.copy-redeploy-affordance"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.echoes-of-wisdom.rift-expedition-converts-repair-into-story-state",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.embodied-world-change-reveal"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.echoes-of-wisdom.summoned-ally-externalizes-combat-choice",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.echoes-of-wisdom.sync-makes-relationship-visible",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.four-swords-adventures.four-bodies-become-one-configurable-verb",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.cooperative-role-interdependence",
+        "pattern.asymmetric-screen-information"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.four-swords-adventures.private-interior-and-public-world-share-state",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.four-swords-adventures.collection-threshold-turns-exploration-into-clearance",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.four-swords-adventures.course-ranking-reframes-peer-performance",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.four-swords-adventures.formation-telegraph-scales-crowded-combat",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.four-swords.cooperation-and-score-share-one-action-space",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.cooperative-role-interdependence"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.four-swords.separation-expands-search-then-chokepoint-regroups",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.four-swords.situational-tools-are-negotiated-team-resources",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.four-swords.peer-behavior-is-the-responsive-character-system",
+      "disposition": "work-specific",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.four-swords.group-failure-preserves-session-momentum",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.links-awakening.recover-sword-establishes-castaway-loop",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.action-first-onboarding"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.links-awakening.new-item-combination-reframes-island",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.links-awakening.dungeon-instrument-advances-mystery",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.links-awakening.barter-chain-turns-npcs-into-route",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.links-awakening.topdown-to-sideview-control-continuity",
+      "disposition": "work-specific",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.majoras-mask.knowledge-converts-failed-cycle-into-progress",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.knowledge-gated-revisit",
+        "pattern.finite-schedule-loop",
+        "pattern.reversible-reset-knowledge-retention"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.majoras-mask.reset-contract-separates-world-and-player-state",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.finite-schedule-loop",
+        "pattern.reversible-reset-knowledge-retention"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.majoras-mask.identity-form-is-route-and-conversation-key",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.majoras-mask.scheduled-actors-make-waiting-readable",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.finite-schedule-loop",
+        "pattern.npc-schedule-as-information"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.majoras-mask.deadline-is-recoverable-but-not-costless",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.finite-schedule-loop",
+        "pattern.npc-schedule-as-information"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.ocarina-of-time.lock-on-turns-free-3d-into-readable-duels",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.ocarina-of-time.era-shift-rewrites-familiar-routes",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.npc-reacts-to-world-state"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.ocarina-of-time.dungeon-tool-becomes-local-grammar",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.local-rule-development-arc"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.ocarina-of-time.performed-melody-is-command-and-scene",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.ocarina-of-time.boss-recombines-readable-rule-under-risk",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.boss-rule-synthesis",
+        "pattern.final-exam-recombination"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.oracle-of-ages.harp-turns-time-into-player-verb",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.oracle-of-ages.cross-era-cause-opens-route",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.state-axis-rewrites-routes",
+        "pattern.parallel-state-comparison"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.oracle-of-ages.multi-room-state-puzzle-persists",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.dungeon-macro-state-machine"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.oracle-of-ages.era-specific-resident-updates-quest",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.oracle-of-ages.paired-map-save-restores-solvable-state",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.oracle-of-seasons.season-command-becomes-route-verb",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.oracle-of-seasons.seasonal-comparison-solves-blocked-screen",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.state-axis-rewrites-routes"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.oracle-of-seasons.dungeon-action-rule-escalates",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.local-rule-development-arc"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.oracle-of-seasons.password-connects-character-continuity",
+      "disposition": "work-specific",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.oracle-of-seasons.screen-variant-runtime-preserves-recovery",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.phantom-hourglass.stylus-unifies-motion-and-strike",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.phantom-hourglass.chart-expands-voyage-graph",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.phantom-hourglass.timed-temple-revisit-compounds",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.loop-shortcut-memory",
+        "pattern.resource-expedition-return"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.phantom-hourglass.map-note-becomes-puzzle-memory",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.player-authored-map-memory"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.phantom-hourglass.boss-resolution-funds-next-voyage",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.hub-spoke-return",
+        "pattern.boss-rule-synthesis"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.skyward-sword.directional-input-makes-observation-the-attack",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.skyward-sword.revisited-landform-receives-a-new-rule",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.dense-overworld-as-challenge-space"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.skyward-sword.local-time-field-rewrites-multiple-system-roles",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.dungeon-macro-state-machine"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.skyward-sword.surface-discovery-pays-off-in-the-sky-hub",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.hub-spoke-return",
+        "pattern.optional-secret-readability"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.skyward-sword.shield-timing-converts-defense-into-recovery",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.spirit-tracks.restored-track-opens-network",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.constrained-vehicle-route"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.spirit-tracks.engineer-plans-live-journey",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.spirit-tracks.phantom-path-enables-cooperation",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.companion-contextual-verb"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.spirit-tracks.dual-screen-and-microphone-externalize-rule",
+      "disposition": "work-specific",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.spirit-tracks.hazard-readable-route-recovery",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.threat-as-navigation-teacher"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.tears-of-the-kingdom.ultrahand-builds-local-solution",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.multi-solution-state-graph",
+        "pattern.object-role-composition",
+        "pattern.systemic-verb-toolkit"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.tears-of-the-kingdom.vertical-entry-links-world-layers",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.landmark-promises-future-use",
+        "pattern.dense-overworld-as-challenge-space"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.tears-of-the-kingdom.fuse-converts-loot-into-function",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.systemic-verb-toolkit"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.tears-of-the-kingdom.lightroot-turns-darkness-into-map",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.reward-expands-future-possibility"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.tears-of-the-kingdom.regional-partner-turns-vow-into-ability",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.companion-contextual-verb"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.the-legend-of-zelda.visible-cave-grants-first-verb",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.the-legend-of-zelda.tools-reveal-overworld-state",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.the-legend-of-zelda.labyrinth-room-rule-chain",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.the-legend-of-zelda.cave-message-redirects-search",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.knowledge-gated-revisit",
+        "pattern.threshold-performance-cue",
+        "pattern.agency-performance-breathing"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.the-legend-of-zelda.fixed-screen-failure-retry",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.the-minish-cap.shrink-reinterprets-ordinary-object",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.perspective-shift-reframes-space"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.the-minish-cap.fusion-causes-remote-world-event",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.the-minish-cap.tool-rule-scales-to-boss",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.local-rule-development-arc",
+        "pattern.boss-rule-synthesis"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.the-minish-cap.clone-formation-embodies-restored-power",
+      "disposition": "work-specific",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.the-minish-cap.portal-safety-preserves-return-path",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.the-wind-waker.horizon-curiosity-drives-the-travel-loop",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.constrained-vehicle-route"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.the-wind-waker.wind-is-visible-global-route-state",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.the-wind-waker.island-nodes-concentrate-reward-density",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.the-wind-waker.expressive-reaction-serves-story-and-rule-reading",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.the-wind-waker.parry-prompt-closes-a-readable-combat-cycle",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.tri-force-heroes.totem-converts-team-into-height",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.cooperative-role-interdependence"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.tri-force-heroes.shared-state-demands-communication",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.tri-force-heroes.materials-become-role-costume",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.tri-force-heroes.course-gates-team-boss",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.tri-force-heroes.solo-switch-preserves-three-body-rule",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.twilight-princess.body-form-changes-the-investigation-question",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.perspective-shift-reframes-space",
+        "pattern.companion-contextual-verb"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.twilight-princess.province-restoration-reframes-known-space",
+      "disposition": "pattern-evidence",
+      "patternRefs": [
+        "pattern.npc-reacts-to-world-state",
+        "pattern.embodied-world-change-reveal"
+      ],
+      "rationale": "Referenced by at least one reviewed cross-title pattern."
+    },
+    {
+      "observationId": "observation.twilight-princess.dungeon-tool-extends-physical-scale",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.twilight-princess.escort-set-piece-integrates-character-and-route-risk",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.twilight-princess.optional-technique-turns-tell-into-advantage",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.zelda-ii-the-adventure-of-link.overworld-contact-expands-to-action",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.zelda-ii-the-adventure-of-link.learned-capability-reopens-route",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.zelda-ii-the-adventure-of-link.palace-item-to-guardian-exam",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.zelda-ii-the-adventure-of-link.town-request-unlocks-teaching",
+      "disposition": "work-specific-evidence",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    },
+    {
+      "observationId": "observation.zelda-ii-the-adventure-of-link.lives-and-unbanked-growth-on-failure",
+      "disposition": "work-specific",
+      "patternRefs": [],
+      "rationale": "Retained in the verified title dossier as evidence or a future comparison candidate; not promoted to an auto-selectable rule in this Beta."
+    }
+  ]
+}

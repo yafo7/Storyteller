@@ -1,0 +1,247 @@
+{
+  "registryVersion": "1.0.0",
+  "generatedAt": "2026-07-18",
+  "caseCount": 10,
+  "cases": [
+    {
+      "caseId": "blind.combination.case.1ae543417ce922d4db18",
+      "storySummary": "A pressure surveyor in a city printed along the inner wall of a drifting ceramic lung returns to the cracked choir gallery passed during an earlier inspection. Training in pressure-knotting now lets the surveyor pulse the building between draw, hold, and release. The old gallery becomes the only place where differences among the three breaths can expose which civic airway has been quietly diverting medicine mist from the nursery wards.",
+      "gameplaySummary": "The player uses a reusable two-hand pressure gesture to set one of three building-wide breath states. Each state curls floor lips, stiffens hanging ladders, and opens a different route through the same spiral gallery. Numbered clay ribs and old mineral stains remain fixed, so the player compares their echoes and condensation marks across states, records the one inconsistent airway, and then uses that inference to reach a valve that was visibly inaccessible on the first visit. Every switch retains an escape edge and failed conclusions can be tested again without losing observations.",
+      "spatialSummary": "The gallery is a tri-lobed spiral around a hollow respiratory shaft rather than two matched maps. Draw opens a low inner loop, hold supports a short cross-bridge, and release unfolds an outer wall walk; no state is globally best. The stable ribs can be seen from different heights, while a return ramp always reconnects the surveyor to the pressure dais. The final airway is reached through a new edge created by the learned gesture, but identifying the correct valve still depends on comparing evidence rather than following a marker.",
+      "feedbackSummary": "Clay seams widen or knit shut in silhouette, suspended dust streams point toward active passages, and each fixed rib produces a distinct tactile beat through the controller. A side-by-side observation strip shows player-made rubbings without naming the answer. When the correct airway is isolated, medicine mist begins pulsing through transparent nursery tubes in the distant background; a wrong hypothesis produces a localized cough of powder and restores the prior route table atomically.",
+      "transformationAxes": [
+        "worldbuilding",
+        "characters",
+        "narrative-causality",
+        "topology",
+        "objects",
+        "control-language",
+        "audio-language",
+        "feedback"
+      ],
+      "structuralDelta": {
+        "topologyGraph": "A tri-lobed spiral exposes different inner, cross, and outer edges under three pressure values, with one invariant return ramp instead of paired coordinate-for-coordinate layouts.",
+        "objectRoleGraph": "Fixed clay ribs serve as comparison anchors, the building skin becomes a route-changing medium, and the distant nursery tubes verify the inferred causal result.",
+        "actionSequence": "Revisit a remembered obstruction, pulse a pressure state, traverse and record anchor evidence, return through the invariant ramp, compare another state, infer the anomalous airway, and open the newly reachable valve.",
+        "feedbackSignature": "Changing silhouettes, directional dust, tactile rib beats, player-made rubbings, and distant mist pulses distinguish state, inference, and confirmed consequence without relying on color.",
+        "narrativeFunction": "Mastering the city's breathing does not merely unlock a passage; it lets the surveyor prove that an apparently natural shortage is deliberate diversion."
+      }
+    },
+    {
+      "caseId": "blind.combination.case.21e4d7928db264285778",
+      "storySummary": "A draft ranger crosses the inhabited inner surface of a slowly rotating communal kiln, where ceramic farms, repair yards, and cooling hammocks share one ventilation system. From the opening district the ranger repeatedly sees the Split Whistle Ring spanning the kiln's far curve, but reaching and sounding it only becomes relevant when a spreading glaze fever begins trapping heat around the residential terraces. The connective landscape itself is the investigation, with optional evidence hidden in ordinary maintenance irregularities.",
+      "gameplaySummary": "At neighborhood regulators the player reverses the kiln draft among inward, balanced, and outward modes. Draft direction unfurls cloth ramps, clears or deposits insulating ash, changes which pulley ferries can cross gaps, and exposes different resource and encounter choices across a dense network. Every short traversal asks the player to weigh heat, footing, visibility, or social access. Repeated soot crescents, a doubled whistle note, and cool handprints form a fair optional clue chain; testing it opens a side route whose testimony changes how the final Ring can be used, but the main route never requires the discovery.",
+      "spatialSummary": "Five interlocking terrace districts form loops around shared regulator courts, with alternate approaches and frequent recovery kilns rather than a large empty field. The three draft modes rewrite multiple local edges while leaving roofs, kiln ribs, and the distant split ring recognizable. The landmark is visible from three nonconsecutive junctions and becomes an actionable pressure instrument late in the crossing. The optional site sits beside a normal circulation loop and is suggested by repeated environmental differences, not by an isolated suspicious wall.",
+      "feedbackSummary": "Streamers snap inward, hang slack, or bow outward; ash changes both surface texture and footstep sound; pulley crews visibly relocate before their routes become available. The secret clue adds a syncopated second note and a raised handprint pattern readable by touch. A compact relief map embosses only links the player has verified, and failed route choices return to the nearest warm shelter while preserving discovered connections and clue observations.",
+      "transformationAxes": [
+        "worldbuilding",
+        "topology",
+        "visual-language",
+        "audio-language",
+        "objects",
+        "characters",
+        "narrative-causality",
+        "feedback"
+      ],
+      "structuralDelta": {
+        "topologyGraph": "Five looped terrace districts repeatedly exchange edges under a three-value draft axis, with dense local decisions and short shelter returns around a landmark spanning the far circumference.",
+        "objectRoleGraph": "Regulator courts rewrite routes, mundane soot and handprints become testable optional evidence, and the Split Whistle Ring changes from orientation cue to a late civic pressure instrument.",
+        "actionSequence": "Read the next district, choose a draft value, traverse a costed connection, verify the changed network, optionally follow and test repeated maintenance anomalies, then approach and operate the long-promised ring.",
+        "feedbackSignature": "Streamer posture, ash texture, footstep timbre, worker relocation, paired whistle notes, tactile prints, and an earned embossed network make both mandatory state changes and optional inference legible.",
+        "narrativeFunction": "Crossing the overworld reveals how shared infrastructure distributes danger, while the optional clue determines whether the final intervention treats a symptom or exposes neglected residents."
+      }
+    },
+    {
+      "caseId": "blind.combination.case.5a557d6d8c6db255d24e",
+      "storySummary": "A new aeration hand arrives without briefing at a migrating seed nursery carried by hundreds of linked lifting bladders. A hatchling pod immediately begins collapsing beside the player, while the translucent Pollen Bell that coordinates the entire nursery hangs far beyond the service canopy. Saving the pod teaches what the player is responsible for and introduces the pressure-sharing rule that will grow through the whole shift before the Bell becomes the final workplace test.",
+      "gameplaySummary": "Control begins with no lecture: the player squeezes a nearby vent, follows a visible pressure ripple, and loosens one tether so the collapsing pod can borrow lift from its neighbor. A mistake only wrinkles the pod and resets those three local elements. Later stations practice the same invariant across paired bladders, vary it under crosswind, reverse it to drain an overfilled chamber, and combine borrowing with timed isolation. The exam asks the player to balance the distant Pollen Bell during a flock turn using only already-demonstrated relationships; success also clarifies the next destination through action rather than exposition.",
+      "spatialSummary": "The opening frames the failing pod, valid vent, safe reset cradle, and far-off Bell in one readable view. The rule arc then follows a branching work loop of four compact canopy platforms, each returning to a central hammock before the next variation. The Bell remains visible through changing layers of translucent nursery skin and is approached from below during the exam, so its identity persists even though its mechanical role changes from horizon promise to shared-pressure regulator.",
+      "feedbackSummary": "Pressure travels as widening wrinkles through the membrane, tether knots rise and fall in distinct shapes, and a low pulse passes from one controller side to the other. Correct transfer makes the hatchling pod resume a steady three-beat flutter; incorrect isolation produces a harmless uneven rustle and highlights only the last causal link. Each later lesson recombines the same visual, tactile, and rhythmic vocabulary, and the Bell's final chord is assembled from those familiar beats.",
+      "transformationAxes": [
+        "worldbuilding",
+        "characters",
+        "narrative-causality",
+        "control-language",
+        "topology",
+        "visual-language",
+        "timing",
+        "feedback"
+      ],
+      "structuralDelta": {
+        "topologyGraph": "A safe opening cradle leads into a four-platform branching practice loop and culminates beneath a landmark continuously visible across translucent layers.",
+        "objectRoleGraph": "Vents, tethers, and lifting bladders express one pressure-sharing algebra, while the Pollen Bell evolves from orientation anchor into the exam's multi-chamber regulator.",
+        "actionSequence": "Respond to a visible need, transfer pressure safely, practice the invariant, handle crosswind variation, reverse the flow, combine isolation with timing, and balance the landmark without a new rule.",
+        "feedbackSignature": "Membrane wrinkles, knot silhouettes, lateral pulses, pod flutter rhythms, and the Bell's assembled chord teach error class and progress without explanatory dialogue.",
+        "narrativeFunction": "The player's job identity emerges from caring for one fragile organism, then expands into responsibility for a migrating community through demonstrated mastery."
+      }
+    },
+    {
+      "caseId": "blind.combination.case.5be839c267b45c60e90a",
+      "storySummary": "Residents of a translucent drifting habitat believe their streets lie inside an engineered weather capsule. A membrane engineer restoring a failed osmotic pump instead makes the whole horizon flex, exposing the protected truth: the settlement occupies a single living pollen grain entering a storm cell. That enacted discovery permanently changes what the community knows, while the grain's reversible hydration cycle continues to reshape routes and provides evidence about which public records concealed the habitat's nature.",
+      "gameplaySummary": "The player drives the repaired pump through dry, balanced, and swollen values. Each value changes membrane tension, opening capillary tubes, flattening elastic courtyards, or lifting resin walkways. Stable scar stitches and embedded census plaques remain recognizable, letting the player compare their positions, sounds, and missing annotations across hydration states. Completing the first full pulse triggers the large-scale reveal; control returns at once so the player must cross a newly opened capillary, rescue a displaced witness, and decide which informed resident should receive the pump log.",
+      "spatialSummary": "Three folded neighborhoods share a central osmotic well and reconnect through state-dependent loops rather than mirrored worlds. Scar stitches provide stable comparison anchors, and every hydration value leaves a route back to the well. During the reveal the camera stays tied to the player's hand on the pump, then widens only far enough to show the curving living wall and storm droplets beyond it. Afterward, actors relocate according to what they could actually see or learn, with a neutral service route preserving access if a social shortcut closes.",
+      "feedbackSummary": "Membranes become papery, taut, or pillowed in profile; embedded plaques buzz at state-specific intervals; capillary flow produces directional controller pulses. The reveal interrupts those familiar signals with one enormous synchronized flex, then immediately returns them at habitat scale. A water accountant moves ration markers, a courier abandons a brittle shortcut, and a skeptical archivist changes the questions they will answer only after receiving evidence. Replay mode simplifies the camera but commits the same world facts.",
+      "transformationAxes": [
+        "worldbuilding",
+        "narrative-causality",
+        "topology",
+        "characters",
+        "visual-language",
+        "control-language",
+        "objects",
+        "feedback"
+      ],
+      "structuralDelta": {
+        "topologyGraph": "Three folded neighborhoods exchange capillary, courtyard, and resin-walk edges under hydration values while retaining one central recovery well and nonmirrored stable anchors.",
+        "objectRoleGraph": "The osmotic pump both controls route state and causes the protected reveal; scar stitches and plaques anchor comparison; the pump log gates situated social reactions rather than universal dialogue changes.",
+        "actionSequence": "Repair and pulse the pump, traverse and compare stable anchors, complete a full hydration cycle, physically witness the habitat-scale truth, act immediately in the changed route graph, and choose how evidence reaches specific residents.",
+        "feedbackSignature": "Material profiles, plaque rhythms, directional pulses, the habitat-wide flex, visible actor tactics, and provenance-aware dialogue distinguish route state, revelation, and social consequence.",
+        "narrativeFunction": "Mechanical mastery uncovers a civic deception and turns an abstract origin story into a lived change in movement, trust, and resource policy."
+      }
+    },
+    {
+      "caseId": "blind.combination.case.95161d0121a34108f85f",
+      "storySummary": "A weather archivist in a kite-suspended scent refinery is ordered to release the season's first rain over a salt-basin city. Opening the municipal condenser reveals that every stored weather fragrance was distilled from memories residents surrendered as tax, including a missing strike that officials erased from the dry inventory. The player causes the scented rain, walks through its immediate social consequences, and compares the refinery before and after release to reconstruct whose testimony was removed.",
+      "gameplaySummary": "The player primes three condenser chambers by hand and opens the rain skin, remaining in control as aromatic droplets spread through the suspended platforms. They can then hold up reusable blotter overlays at fixed wind vanes to compare the dry inventory impressions with the live rain traces. Stable vane shapes align the two evidence states, while discrepancies in scent density, droplet rhythm, and worker behavior identify an omitted memory. Characters respond only to rain they experienced or to a blotter the player deliberately shares, changing access, work tactics, and beliefs rather than issuing uniform praise.",
+      "spatialSummary": "The refinery is a descending corkscrew of work decks around three fixed wind vanes. Rain stretches catch-skins into new ramps and lowers some service platforms, but the comparison activity follows the same recognizable anchors rather than a paired map. The embodied reveal travels downward with the player from condenser to public catchment, ending in a small interaction square where several witnesses are reachable. If one social route closes, an exterior maintenance sling preserves neutral circulation.",
+      "feedbackSummary": "Before release, blotters show embossed empty bands and the decks sound dry and brittle. After release, droplets add raised rings, alternating taps, and distinct scent icons with text labels for accessibility. A perfumer shutters a stall after recognizing a memory, a sanitation rigger opens an evidence hatch after seeing runoff, and an apprentice retraces an erased picket line only if given the matching blotter. Skipping the wide reveal preserves the same rain state and opens a replayable sensory record.",
+      "transformationAxes": [
+        "worldbuilding",
+        "characters",
+        "narrative-causality",
+        "topology",
+        "objects",
+        "visual-language",
+        "audio-language",
+        "feedback"
+      ],
+      "structuralDelta": {
+        "topologyGraph": "A corkscrew refinery changes through one caused rainfall event, with catch-skin ramps and service decks arranged around three invariant vanes rather than coordinate-matched alternate maps.",
+        "objectRoleGraph": "The condenser enacts the public reveal, blotters turn state differences into portable evidence, and fixed wind vanes align comparisons while individual residents consume only evidence available to them.",
+        "actionSequence": "Prime chambers, cause the rain while retaining control, follow it into changed work decks, overlay dry and wet evidence at stable anchors, infer the omission, and choose which situated witness receives proof.",
+        "feedbackSignature": "Embossed bands, raised droplet rings, alternating taps, labeled scent icons, changed catch-skins, and actor-specific tactics make comparison and consequence independently readable.",
+        "narrativeFunction": "A civic weather ceremony becomes an embodied disclosure about coerced memory, and the player's evidence-sharing decisions determine how that truth enters public life."
+      }
+    },
+    {
+      "caseId": "blind.combination.case.a016f5605c95e2d913a2",
+      "storySummary": "A seam pilot carries repair crews across a cloth city stretched between migrating atmospheric bladders. The crew's eight-footed seam walker can step only on load-bearing stitches, so every trip requires active choices among branching fabric lines, wind damage, passenger needs, and short repair stops. An inside-out rain fan, visible through several layers of cloth from the first route, promises a later destination where the city's dangerous tension imbalance can finally be diagnosed.",
+      "gameplaySummary": "The player previews nearby branches by plucking seam lines and reading the returning vibration, then sets the walker's leg cadence, chooses knots at junctions, and performs local balancing actions while moving. Fast taut seams save time but threaten fragile cargo; slack seams allow repairs but drift toward storm pockets. Stops checkpoint the walker and expose new views of the rain fan. On the final approach, knowledge gathered from several route vibrations lets the player dock beneath the fan and retension its folded vanes rather than merely arrive at a decorative endpoint.",
+      "spatialSummary": "The travel network is a web of stitched arcs with legible junction knots, short stop loops, and reroute edges after missed turns. It is neither a square navigation grid nor a rail corridor: fabric lines stretch, sag, and cross at different depths while the walker remains bound to verified load paths. The rain fan appears first as a reversed pattern of runoff, then gains mechanical detail from two intermediate stops, and finally serves as a hub that redistributes tension into three future seams.",
+      "feedbackSummary": "Each prospective seam answers a pluck with a distinct controller vibration and visible traveling crease. The walker's feet drum the chosen cadence, cargo straps change posture before failure, and junction knots rotate to show available branches without a chart screen. The rain fan's folded vanes add notes to the route's vibration language at each sighting; successful retension sends a recognizable crease backward across every traveled seam.",
+      "transformationAxes": [
+        "worldbuilding",
+        "objects",
+        "topology",
+        "control-language",
+        "visual-language",
+        "narrative-causality",
+        "characters",
+        "feedback"
+      ],
+      "structuralDelta": {
+        "topologyGraph": "A depth-layered web of tensioned seams offers previewable branches, stop loops, and recovery reroutes to a repeatedly visible fan hub, without a conventional grid or track layout.",
+        "objectRoleGraph": "The many-legged walker is an active mobile decision space, seam knots communicate route risk, passenger cargo changes traversal priorities, and the rain fan evolves from distant anomaly into a network regulator.",
+        "actionSequence": "Pluck and preview branches, choose cadence and junction, manage a moving risk, stop for a local task and new sightline, reroute after misses, then use accumulated vibration evidence to operate the landmark.",
+        "feedbackSignature": "Traveling creases, tactile replies, foot rhythms, cargo posture, rotating knots, and a network-wide return crease confirm route decisions and landmark payoff without map or arrival fanfare conventions.",
+        "narrativeFunction": "Travel expresses the pilot's duty of care, while the landmark turns repeated route observations into a diagnosis of the city's shared structural problem."
+      }
+    },
+    {
+      "caseId": "blind.combination.case.a1b58443328199f9f9f7",
+      "storySummary": "An atmospheric midwife tends juvenile fog bodies in a nursery suspended beneath a warm industrial plume. A sudden crosswind pushes three patients outside their safe humidity band, but the nursery owns no purpose-built rescue machine. The player must understand the causal roles of ordinary care materials and improvise one of several recoverable arrangements that delivers the same medical outcome without prescribing a single recipe.",
+      "gameplaySummary": "Portable materials advertise bounded roles: cork-bark collars anchor and absorb, hollow shell spirals redirect flow, woven icegrass diffuses turbulence, and heat-eating ink pads buffer temperature. The player places any two or three around the nursery's airflow pockets, observes the causal trace, and can undo one step or reset the whole bay. One valid path anchors a patient before bending the crosswind around it; another diffuses the gust and buffers the warm plume; a third moves the care screens to create a low-pressure corridor. All solutions must hold every patient inside the marked humidity band for six beats, but they consume different space and staff attention.",
+      "spatialSummary": "The nursery is a crescent deck with three airflow pockets connected to a shared recovery alcove. Materials can occupy broad zones rather than exact sockets, and each path changes a different subset of wind, heat, and moisture edges. The target invariant is visible from the central care rail, while side platforms make alternate arrangements practical instead of cosmetic. No placement can block the reset alcove or strand a required material.",
+      "feedbackSummary": "Wind is traced by short ribbons with arrow-shaped tips, heat by expanding stipple, and humidity by raised bands around each patient; each channel also has a distinct pulse rhythm and text label. Failed arrangements highlight the missing role category rather than suggesting an exact object. Successful paths produce the same six-beat breathing cadence but preserve their different material silhouettes, resource costs, and apprentice reactions so the player's causal authorship remains visible.",
+      "transformationAxes": [
+        "worldbuilding",
+        "objects",
+        "topology",
+        "control-language",
+        "visual-language",
+        "feedback",
+        "characters",
+        "narrative-causality"
+      ],
+      "structuralDelta": {
+        "topologyGraph": "Three linked airflow pockets support several zone-level intervention paths around one protected reset alcove, with no exact placement grid or dominant route.",
+        "objectRoleGraph": "Four mundane care materials expose anchor, redirect, diffuse, and buffer roles that can form multiple causal chains while patients supply one shared measurable invariant.",
+        "actionSequence": "Inspect environmental traces, choose roles, place materials in broad zones, run a short simulation, diagnose the missing causal role, undo or reset, and sustain the common medical outcome through any valid path.",
+        "feedbackSignature": "Directional ribbons, heat stipple, tactile humidity bands, distinct pulse rhythms, labeled channels, and role-class failure cues reveal causality without disclosing a blueprint.",
+        "narrativeFunction": "Improvisation becomes a form of care: the solution selected changes workload and trust while preserving the same protected patient outcome."
+      }
+    },
+    {
+      "caseId": "blind.combination.case.beddb017d39a22f02925",
+      "storySummary": "A spore cartographer works along the underside of a migrating glass fungus, where settlements cling to flexible nutrient membranes. Early surveys repeatedly frame the Corkscrew of Amber Foam rotating below the colony, but its approach membranes cannot bear ordinary footsteps. After learning a reusable pressure-braiding technique, the cartographer can revisit those old surfaces, reach the promised structure, and complete an optional rescue whose reward creates several later civic choices instead of ending as a collectible.",
+      "gameplaySummary": "Pressure-braiding is performed by alternating two hand controls to synchronize with a membrane's contraction; the learned technique works on many previously observed soft spans and opens useful return shortcuts. At the corkscrew, the player uses it across a branching approach, stabilizes stranded pollination crews, and may continue into an optional rotating chamber. Completing that chamber grants a share of mobile scaffold time. The share can later support one of three plans—extend a clinic route, create a school evacuation bypass, or open a risky research canopy—and can be reassigned before commitment, so discovery expands future decisions rather than awarding score.",
+      "spatialSummary": "The first visit ends at a clearly visible yielding membrane with a bidirectional retreat loop and the amber corkscrew framed below. On return, the new technique creates two diagonal edges through the old survey region and a spiraling multi-entry approach to the landmark, not a straight locked corridor. The optional chamber branches from the rescue path and reconnects before the exit. Its payoff is represented at later district planning tables, where the three scaffold options lead to genuinely different route graphs.",
+      "feedbackSummary": "Unbraided membranes buckle in broad waves; successful alternation tightens them into crosshatched load lines accompanied by a two-part haptic cadence. The corkscrew's foam cells rotate visibly at every sighting and begin carrying workers once reached. The optional chamber announces progress through changing air pressure and worker hand signals. Later planning tables preview the new edge, affected residents, and reversible commitment state for each scaffold choice without revealing the downstream challenge solution.",
+      "transformationAxes": [
+        "worldbuilding",
+        "objects",
+        "topology",
+        "control-language",
+        "visual-language",
+        "narrative-causality",
+        "characters",
+        "feedback"
+      ],
+      "structuralDelta": {
+        "topologyGraph": "A remembered retreat loop gains two diagonal edges and a multi-entry spiral approach after pressure-braiding, with an optional side chamber that later branches into three district-scale route investments.",
+        "objectRoleGraph": "Flexible membranes change from visible obstruction to reusable traversal medium, the amber corkscrew changes from distant orientation anchor to workplace, and scaffold time becomes a reallocatable future-choice resource.",
+        "actionSequence": "Observe and remember the unreachable landmark, learn a general pressure technique elsewhere, revisit and transform known spans, reach and stabilize the corkscrew, optionally solve the side chamber, then choose among previewed future investments.",
+        "feedbackSignature": "Buckling waves, crosshatched load lines, paired haptics, rotating foam cells, worker signals, and planning-table edge previews separate capability, landmark payoff, and choice-generating reward.",
+        "narrativeFunction": "Personal traversal growth returns value to a place the player already remembers, then converts optional rescue labor into a contested decision about communal infrastructure."
+      }
+    },
+    {
+      "caseId": "blind.combination.case.e6c3335562ec921c9834",
+      "storySummary": "A biofilm conservator maintains a settlement grown through the porous wall of an abandoned desalination hose. After learning to reverse the electrical adhesion of living surfaces, the conservator revisits a laundry capillary where lint has always drifted against the water flow. The new technique makes an optional, testable anomaly actionable; solving it uncovers a forgotten maintenance quorum whose authority can be spent on several future interventions rather than on an immediate prize.",
+      "gameplaySummary": "The player can now flip charged biofilm between grip and release, causing old porous surfaces to hold, shed, or pass suspended matter. At the laundry capillary, three fair clues recur: lint climbs only along one seam, drying tabs twitch against the pump rhythm, and workers' soap bubbles flatten before an apparently solid mesh. Applying charge reversal to a nearby sample confirms the hypothesis before the player enters the optional bypass. Restoring the hidden quorum awards two transferable work mandates that can later reroute clean water, protect a nursery culture, or expose an illegal drain; commitments remain previewable and reversible until used.",
+      "spatialSummary": "The remembered laundry loop surrounds a porous central manifold with an always-open service return. Charge reversal adds a narrow filter crossing and opens a crescent bypass whose exit rejoins the public wash deck, so the optional discovery never gates the main route. Clues are visible from ordinary circulation at several scales, and the player can test the same surface property on a harmless sample tray. Future mandate sites occupy different districts and promise distinct social and route consequences rather than copies of the secret room.",
+      "feedbackSummary": "Biofilm hairs lie flat for release and stand in ridged rows for grip; lint trajectory and bubble shape provide redundant motion cues; the sample tray clicks in sync only when the causal relation is correct. Entering the bypass changes the pump's vibration rather than playing a generic discovery flourish. Work-mandate previews show affected pipes as embossed paths, name the residents involved, and display whether a commitment can still be withdrawn.",
+      "transformationAxes": [
+        "worldbuilding",
+        "objects",
+        "topology",
+        "control-language",
+        "visual-language",
+        "characters",
+        "narrative-causality",
+        "feedback"
+      ],
+      "structuralDelta": {
+        "topologyGraph": "A public laundry loop gains a filter crossing and optional crescent bypass under a learned adhesion capability, while an invariant service edge preserves main-route circulation.",
+        "objectRoleGraph": "Living biofilm becomes a general grip-release medium, lint, tabs, and bubbles form a redundant clue system, the sample tray supports safe hypothesis testing, and quorum mandates create later choices.",
+        "actionSequence": "Recall an old anomaly, apply a new reusable surface action, compare recurring clues, test the causal rule safely, enter an optional reconnecting bypass, restore the quorum, and allocate reversible mandates later.",
+        "feedbackSignature": "Biofilm posture, lint motion, tab rhythm, bubble deformation, synchronized clicks, pump vibration, and embossed mandate previews distinguish inference, access, discovery, and future commitment.",
+        "narrativeFunction": "A hidden maintenance history becomes optional but consequential civic agency, allowing the player to decide which neglected system receives institutional attention."
+      }
+    },
+    {
+      "caseId": "blind.combination.case.f2277fa2a0d339208209",
+      "storySummary": "A new shift worker wakes inside an orbital silence refinery as a dangerous resonance ribbon slips from its duct and begins rattling a nearby sleeping habitat. With no briefing and no punitive timer, the player must route that loose vibration into a sponge vat. The response reveals the worker's responsibility, core controls, and immediate direction, then grows the same transfer rule through a complete sequence of practice, variation, reversal, combination, and exam.",
+      "gameplaySummary": "The first meaningful input presses a flexible duct, follows the visible pulse, and releases it when the sponge vat is open; a wrong release merely returns the ribbon to the starting loop. Subsequent bays ask the player to transfer two pulses in sequence, handle a rigid duct that reflects rather than carries, reverse flow to empty an overloaded vat, and combine reflection with timed absorption. The final exam protects three sleeping habitats by routing a mixed-frequency burst through equipment already learned. It introduces no secret rule, and each failure resets only the current bay while retaining the worker's lesson record.",
+      "spatialSummary": "The opening cell frames the loose ribbon, one flexible duct, the safe vat, and the disturbed habitat in a single action triangle. Four later bays wrap around a central quiet gallery, allowing observation and replay without retracing the whole refinery. Each bay changes topology and surface context while preserving the same readable causal chain. The exam reconnects earlier ducts into a branching loop and keeps an emergency bleed valve reachable from every state.",
+      "feedbackSummary": "Resonance appears as a thick ribbon whose spacing indicates frequency, while controller pulses and captioned waveform shapes provide noncolor channels. Flexible ducts bow with the pulse, rigid ducts snap it backward, and sponge vats visibly compress as they absorb. Wrong timing leaves a fading echo at the exact failed link; correct timing makes the nearby habitat's rattling objects settle. The exam layers familiar signals without increasing their vocabulary.",
+      "transformationAxes": [
+        "worldbuilding",
+        "characters",
+        "narrative-causality",
+        "control-language",
+        "topology",
+        "visual-language",
+        "audio-language",
+        "feedback"
+      ],
+      "structuralDelta": {
+        "topologyGraph": "A compact opening action triangle expands into four bays around a quiet gallery and culminates in a branching exam loop with a permanently reachable bleed valve.",
+        "objectRoleGraph": "Flexible ducts carry, rigid ducts reflect, sponge vats absorb, and sleeping habitats provide immediate stakes and verification within one reusable resonance rule.",
+        "actionSequence": "Solve an urgent safe transfer to infer the role, practice sequencing, encounter reflective variation, reverse an overload, combine known relationships, and pass a multi-target exam without a new rule.",
+        "feedbackSignature": "Ribbon spacing, waveform shapes, controller pulses, duct deformation, vat compression, local fading echoes, and settling habitat props identify state and error class at every stage.",
+        "narrativeFunction": "The refinery job is understood first as protection performed by hand, then as growing professional mastery rather than biography delivered in dialogue."
+      }
+    }
+  ]
+}

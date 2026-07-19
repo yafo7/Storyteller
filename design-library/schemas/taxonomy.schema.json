@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/design-library/schemas/1.0.0/taxonomy.schema.json",
+  "title": "V0.3 controlled taxonomy draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "taxonomyId", "taxonomyVersion", "status", "terms", "governance"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "taxonomyId": { "type": "string", "pattern": "^taxonomy\\." },
+    "taxonomyVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "status": { "enum": ["draft", "frozen", "superseded"] },
+    "terms": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["termId", "label", "definition", "status", "aliases", "supersedes"],
+        "properties": {
+          "termId": { "type": "string", "minLength": 3 },
+          "label": { "type": "string", "minLength": 1 },
+          "definition": { "type": "string", "minLength": 20 },
+          "status": { "enum": ["active", "deprecated"] },
+          "aliases": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "supersedes": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "changePolicy", "migrationRefs"],
+      "properties": {
+        "owner": { "type": "string", "minLength": 1 },
+        "changePolicy": { "type": "string", "minLength": 20 },
+        "migrationRefs": { "type": "array", "items": { "type": "string", "pattern": "^migration\\." } }
+      }
+    }
+  }
+}

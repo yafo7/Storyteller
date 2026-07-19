@@ -1,0 +1,51 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.originality.night-shift-signal-failure",
+  "patternId": "pattern.action-first-onboarding",
+  "testId": "test.action-first.originality",
+  "kind": "originality",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "originality contract fixture for pattern.action-first-onboarding; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "role-and-goal-learned-through-action",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.contextual-prompts",
+      "capability.world-facts",
+      "capability.interaction-windows",
+      "capability.performance-cues",
+      "capability.checkpoints",
+      "capability.telemetry"
+    ],
+    "recoveryRequirements": [
+      "Restart current step only",
+      "Reduce urgency without changing canon outcome",
+      "Reframe target in camera",
+      "Provide optional factual recap after attempt"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.blindAttribution.specificEncounterConvergence",
+      "operator": "less-than",
+      "expected": 0.65
+    },
+    {
+      "evidencePath": "$.structuralDeltas.actionSequence",
+      "operator": "greater-or-equal",
+      "expected": 0.75
+    },
+    {
+      "evidencePath": "$.surfaceTransfers.sourceOpeningSequence",
+      "operator": "equals",
+      "expected": 0
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.weather-station-cache-route",
+  "patternId": "pattern.optional-secret-readability",
+  "testId": "test.optional-secret.route",
+  "kind": "route",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "route contract fixture for pattern.optional-secret-readability; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "optional-affordance-clue-chain",
+    "selectionRole": "supporting",
+    "requiredRuntimeCapabilities": [
+      "capability.spatial-query",
+      "capability.world-facts",
+      "capability.interaction-prompts",
+      "capability.inventory",
+      "capability.performance-cues",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Persist partial clue knowledge",
+      "Refund failed test costs",
+      "Keep site revisitable after chapter transitions"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.routes.skipSecret.requiredEnding",
+      "operator": "reachable",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.routes.failedAttempt.safeJunction",
+      "operator": "reachable",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

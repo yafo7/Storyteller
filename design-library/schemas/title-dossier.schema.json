@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/design-library/schemas/1.0.0/title-dossier.schema.json",
+  "title": "V0.3 title dossier draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "dossierId", "workId", "scopeVersion", "status", "dimensions", "contributionHypotheses", "uniqueOrNonportable", "openQuestions", "review"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "dossierId": { "type": "string", "pattern": "^dossier\\." },
+    "workId": { "type": "string", "pattern": "^work\\." },
+    "scopeVersion": { "type": "string" },
+    "status": { "enum": ["draft", "covered", "verified", "superseded"] },
+    "dimensions": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 20,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["dimensionId", "coverage", "summary", "observationRefs", "gaps"],
+        "properties": {
+          "dimensionId": { "type": "string", "pattern": "^dimension\\." },
+          "coverage": { "enum": ["covered", "not-applicable", "needs-review"] },
+          "summary": { "type": "string" },
+          "observationRefs": { "type": "array", "items": { "type": "string", "pattern": "^observation\\." }, "uniqueItems": true },
+          "gaps": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "contributionHypotheses": { "type": "array", "items": { "type": "string" } },
+    "uniqueOrNonportable": { "type": "array", "items": { "type": "string" } },
+    "openQuestions": { "type": "array", "items": { "type": "string" } },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["author", "reviewer", "reviewedAt"],
+      "properties": {
+        "author": { "type": "string", "minLength": 1 },
+        "reviewer": { "type": "string", "minLength": 1 },
+        "reviewedAt": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "workId": "work.twilight-princess",
+  "author": "role.analyst.dual-form-adventure",
+  "reviewer": "role.reviewer.causal-observations",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player moves from capable ranch hand to heroic swordsman and sensory wolf, protecting communities while learning to cooperate with a morally complex guide.",
+    "dimension.core-loop": "Enter a threatened province, investigate in the form currently permitted, restore access or light, pursue a dungeon and its tool, then revisit the connected field with new traversal and combat options.",
+    "dimension.verbs": "Lock-on sword techniques, shield, aimed tools, climbing, swimming, riding, wolf scent vision, digging, howling, pack attacks, warping, and companion-assisted leaps provide two overlapping controllers.",
+    "dimension.world-state": "Light and twilight conditions, restored provinces, portals, cleared hazards, opened shortcuts, and eventually freer human-wolf transformation alter which actors and routes are accessible.",
+    "dimension.topology": "Large provincial fields connect settlements, caves, ruins, and dungeons; landmarks and unlocked warp points compress later travel across the expanded 3D scale.",
+    "dimension.gating-revisit": "Form, senses, scent trails, tools, mounted access, companion actions, story state, and warp portals gate routes; old fields expose hidden spaces after each capability increase.",
+    "dimension.puzzle-information": "Distinct surfaces, scent traces, shadow-only phenomena, companion prompts, tool targets, and mechanical animation tell the player which form or capability can change a state.",
+    "dimension.dungeon-structure": "Large themed dungeons use keys, central spaces, bespoke mechanisms, new tools, shortcuts, and bosses, often emphasizing physical scale and a singular architectural identity.",
+    "dimension.exploration-reward": "Hidden caves, insects, spirits, health pieces, equipment upgrades, wallets, ammunition capacity, and optional combat instruction reward revisiting broad field routes.",
+    "dimension.growth-economy": "Health, wallets, quivers, bomb bags, bottles, armor and tools persist; rupees, arrows, bombs, oil-like supplies, and shield state regulate field and dungeon preparation.",
+    "dimension.combat-boss": "Target-relative sword combat expands through learned techniques, mounted encounters, wolf attacks, and large bosses that expose positional or tool-mediated vulnerability in staged phases.",
+    "dimension.npc-quest": "Settlements, rescue sequences, escorts, trading and collection tasks, and companion exchanges respond strongly to story restoration, though fewer characters run dense systemic schedules.",
+    "dimension.narrative-performance": "Long-form cinematics, transformations, companion conflict, mounted set pieces, province restorations, and returns to threatened places foreground dramatic staging more than freeform chronology.",
+    "dimension.camera-blocking": "Lock-on, sense overlays, mounted follow cameras, wide boss framing, reveal shots, and carefully blocked cutscenes maintain clarity across two body scales and large environments.",
+    "dimension.teaching-feedback": "Opening village work teaches context action, riding, aiming, animal handling, and social stakes; form-specific prompts, a companion, visual traces, and optional combat lessons extend instruction.",
+    "dimension.ui-input": "The original Wii and GameCube releases map the same core states differently: analog targeting remains central, while Wii adds pointer aiming and motion gestures to selected actions.",
+    "dimension.recovery-accessibility": "Saving, fairies, bottles, health drops, dungeon shortcuts, unlocked warp points, and companion prompts preserve macro progress; the original provides limited formal assist modes.",
+    "dimension.perspective-implementation": "Realistic-scale 3D supports horseback speed, long approaches, vertical architecture, scent-following overlays, and large cinematic actors but increases camera, streaming, and return-travel costs.",
+    "dimension.hardware-multiplayer": "The work is single-player and launched on Wii and GameCube; mirrored world orientation and different aiming or attack mappings are version-specific control expressions.",
+    "dimension.production-runtime": "A faithful abstraction needs paired human-wolf locomotion and interaction sets, target camera, trace visualization, mounted traversal, province variants, portals, cinematic state handoff, and dual input profiles."
+  },
+  "observationThemes": [
+    {
+      "key": "body-form-changes-the-investigation-question",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.ui-input"],
+      "context": "A missing route, person, or hidden phenomenon leaves clues that ordinary human interaction cannot resolve.",
+      "preconditions": ["Wolf form is active or available.", "Sense, scent, digging, or companion actions are relevant to the location."],
+      "playerInput": ["Change form when allowed, activate sensory vision, follow a trace, dig, howl, or use a form-specific interaction."],
+      "before": ["The environment appears incomplete or gives no ordinary target."],
+      "action": ["Adopt the alternate body's perceptual and movement vocabulary."],
+      "after": ["A trace, hidden actor, buried route, special leap, or other actionable relation becomes available."],
+      "feedback": ["Transformation staging, altered HUD prompts, sense overlay, scent visualization, animation, and companion response expose the new state."],
+      "consequences": ["Investigation becomes a player-controlled change of perceptual model rather than a passive clue reveal."],
+      "factualDescription": "Wolf form can use senses to perceive otherwise hidden phenomena and follow scents, dig at selected ground, howl, and perform companion-assisted leaps.",
+      "interpretation": "An alternate form is strongest when it changes what counts as evidence, not only movement speed or combat damage.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "province-restoration-reframes-known-space",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.perspective-implementation"],
+      "context": "The player first traverses a province under an abnormal state and later resolves the region-scale objective.",
+      "preconditions": ["The affected province is reachable.", "The required investigation or collection chain is complete."],
+      "playerInput": ["Finish the restoration transaction and re-enter the region afterward."],
+      "before": ["Lighting, occupants, form constraints, hazards, and route permissions express the abnormal state."],
+      "action": ["Change the province's governing story and environment flag."],
+      "after": ["Normal inhabitants and services return, routes become usable in a new form, and the next dungeon or field goal becomes legible."],
+      "feedback": ["Large visual transition, music, character reappearance, changed body state, and renewed interactions dramatize restoration."],
+      "consequences": ["The player experiences progress as a place becoming socially and spatially habitable, not only as a quest marker increment."],
+      "factualDescription": "Early provinces are encountered under twilight and are later restored, changing lighting, accessible inhabitants, and how the hero can move and interact there.",
+      "interpretation": "A region-scale before-and-after presentation can make a systemic flag carry emotional and navigational payoff.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "dungeon-tool-extends-physical-scale",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.exploration-reward", "dimension.growth-economy"],
+      "context": "A large dungeon presents architecture whose moving parts or distances exceed the hero's current reach.",
+      "preconditions": ["The local tool is acquired.", "Targets and mechanisms are visually distinct."],
+      "playerInput": ["Aim or deploy the tool on a signaled target, then combine it with route navigation and earlier rooms."],
+      "before": ["A vertical gap, massive mechanism, distant anchor, or protected route blocks the dependency graph."],
+      "action": ["Use the new physical relation introduced by the tool."],
+      "after": ["Architecture moves, the hero crosses space differently, or a shortcut and reward become reachable."],
+      "feedback": ["Camera scale, mechanical animation, target response, sound, and opened geometry show both force and direction."],
+      "consequences": ["The acquisition changes the player's relationship to dungeon scale and later exposes optional field rewards."],
+      "factualDescription": "Major dungeons award tools that repeatedly manipulate or traverse their large mechanisms and are subsequently usable in overworld secrets and combat.",
+      "interpretation": "A tool feels substantial when level architecture visibly demonstrates a new physical relationship rather than presenting isolated locks.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "escort-set-piece-integrates-character-and-route-risk",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.hardware-multiplayer"],
+      "context": "A vulnerable character or vehicle must traverse a dangerous field while the hero rides and responds to threats.",
+      "preconditions": ["The escort route and mounted controller are active.", "Threats can alter the protected actor's progress."],
+      "playerInput": ["Ride alongside, target attackers or hazards, manage position, and restore the route when disrupted."],
+      "before": ["Narrative urgency exists but the destination has not been reached."],
+      "action": ["Protect moving actors through a staged spatial sequence."],
+      "after": ["The escort advances, diverts, stalls, or reaches safety according to encounter state."],
+      "feedback": ["Follow camera, actor blocking, route motion, attack cues, damage reaction, and destination framing expose the shared risk."],
+      "consequences": ["Character stakes remain embodied in controllable movement instead of becoming a noninteractive cutscene."],
+      "factualDescription": "The adventure includes mounted protection sequences in which moving allies and threats share the field and player actions determine whether the route continues.",
+      "interpretation": "An escort can function as performance when protected actors visibly occupy the same causal space and recovery is staged rather than instant failure.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "optional-technique-turns-tell-into-advantage",
+      "dimensions": ["dimension.combat-boss", "dimension.teaching-feedback", "dimension.recovery-accessibility", "dimension.production-runtime"],
+      "context": "The player discovers an optional combat lesson and later meets enemies whose guard or attack pattern rewards that technique.",
+      "preconditions": ["The lesson has been found and completed.", "The technique's positional or timing condition is present."],
+      "playerInput": ["Recognize the tell, execute the learned command, and follow through during the opening."],
+      "before": ["Ordinary attacks are inefficient or unsafe."],
+      "action": ["Use the optional advanced response against a compatible enemy state."],
+      "after": ["The hero repositions, breaks defense, or creates a safer damage window."],
+      "feedback": ["Dedicated lesson staging, move animation, enemy reaction, target camera, and retained move list confirm mastery."],
+      "consequences": ["Exploration yields expressive combat competence without making the main route depend on every optional lesson."],
+      "factualDescription": "Optional encounters teach durable sword techniques that can later exploit particular enemy positions or attack states, while ordinary combat remains available.",
+      "interpretation": "Optional teaching can reward curiosity with a more legible recovery option rather than a mandatory numerical upgrade.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "An alternate body can make investigation systemic by changing visible evidence, traversal, and social access together.",
+    "A large regional state transition can fuse narrative catharsis with new navigation and service availability.",
+    "Optional authored lessons can turn exploration rewards into new responses to existing combat tells."
+  ],
+  "uniqueOrNonportable": [
+    "The exact light-versus-twilight cosmology, named companion, wolf transformation design, characters, provinces, artifacts, and plot incidents are recognizable authored surface content and must not be reused.",
+    "Specific scent trails, restoration sequences, dungeon architecture, boss fights, mounted set pieces, sword lessons, and cinematic compositions are nonportable.",
+    "Wii mirroring, gesture mappings, and the GameCube control layout are version-specific historical expressions rather than portable design rules."
+  ],
+  "openQuestions": [
+    "Wii and GameCube original releases should receive separate control and orientation delta traces before input evidence is aggregated.",
+    "A later route simulation should distinguish mandatory wolf investigation from optional sense-based discovery across the full work."
+  ]
+}

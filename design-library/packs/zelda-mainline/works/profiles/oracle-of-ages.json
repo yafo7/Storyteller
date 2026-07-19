@@ -1,0 +1,121 @@
+{
+  "workId": "work.oracle-of-ages",
+  "author": "Early Corpus Analyst Cedar",
+  "reviewer": "Independent Reviewer Juniper",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player is a temporal problem-solver who restores a damaged land by learning how actions, structures, and relationships differ between past and present.",
+    "dimension.core-loop": "The cadence moves between information gathering, past-present comparison, puzzle-dense field and dungeon routes, new tools or harp tunes, and essence recovery.",
+    "dimension.verbs": "Sword and shield actions combine with lifting, jumping, swimming, seed effects, ranged tools, object exchange, and increasingly flexible time travel through the Harp of Ages.",
+    "dimension.world-state": "Past and present maintain related but different terrain, construction, and NPC states; permanent tools, tunes, essences, trades, rings, and linked secrets accumulate.",
+    "dimension.topology": "A compact screen-grid region exists in two temporal versions whose corresponding locations may differ in water, buildings, routes, settlements, and interaction opportunities.",
+    "dimension.gating-revisit": "Harp tunes, time portals, movement equipment, dungeon tools, and knowledge of cross-era causality reopen places whose useful state exists in another time.",
+    "dimension.puzzle-information": "Clues and visible differences invite players to form hypotheses about temporal cause, object state, switches, color, movement, and multi-room dependencies.",
+    "dimension.dungeon-structure": "Eight principal dungeons use keyed room graphs, signature tools, multi-room state puzzles, bosses, and essence rewards, with later challenges increasing dependency density.",
+    "dimension.exploration-reward": "Temporal detours, caves, seed trees, rings, trades, companion paths, and linked secrets provide upgrades, resources, shortcuts, and new causal information.",
+    "dimension.growth-economy": "Hearts, rupees, bombs, seeds, rings, upgrades, and collected materials support preparedness while new harp functions expand access without consuming a resource.",
+    "dimension.combat-boss": "Combat remains top-down and tool-aware, but many bounded challenges place execution inside puzzle-like state constraints before bosses test observation and control.",
+    "dimension.npc-quest": "Residents occupy era-specific situations, give clues and exchanges, and can respond differently as actions or information connect the two times and paired game.",
+    "dimension.narrative-performance": "The possessed oracle and disrupted history make temporal damage visible; rescues, era shifts, essence beats, and linked continuation pace the restoration narrative.",
+    "dimension.camera-blocking": "Fixed screens preserve landmarks for past-present comparison, while a time-shift effect and changed actor or terrain blocking stage the consequence in the same location.",
+    "dimension.teaching-feedback": "Early portal use shows one coordinate in two eras, and each additional harp tune expands transition freedom with a visible effect and nearby route application.",
+    "dimension.ui-input": "Two assignable item buttons and a subscreen manage weapons, tools, seeds, rings, and the harp; stable counters keep health and expendables legible during puzzle action.",
+    "dimension.recovery-accessibility": "Persistent saves retain tools, tunes, essences, and key quest state, while healing and compact routes support retries; temporal puzzles must remain solvable from either recoverable state.",
+    "dimension.perspective-implementation": "The 2D top-down view makes corresponding coordinates easy to compare, with some side-view passages adding gravity-based traversal under the same inventory system.",
+    "dimension.hardware-multiplayer": "The original Game Boy Color title is single-player but shares state asynchronously with its paired adventure through passwords and limited link functions.",
+    "dimension.production-runtime": "Its model requires paired temporal maps, cross-era state dependencies, legal transition anchors and tunes, persistent items, item assignment, linked secrets, and temporal anti-softlock tests."
+  },
+  "observationThemes": [
+    {
+      "key": "harp-turns-time-into-player-verb",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.growth-economy"],
+      "context": "At a coordinate where the current harp function permits transition, the player can use the Harp of Ages to move between the region's past and present.",
+      "preconditions": ["The harp and an applicable tune have been acquired", "The current location satisfies that tune's transition rule"],
+      "playerInput": ["Assign and play the harp", "Cross the temporal transition", "Act in the alternate era"],
+      "before": ["Only the current era's terrain and actors are active", "A route or causal opportunity may be unavailable"],
+      "action": ["Invoke the learned time-travel tune"],
+      "after": ["The corresponding location in the other era becomes active", "Changed terrain, structures, or characters can be traversed or influenced"],
+      "feedback": ["Music, transition effects, palette, scenery, and NPC differences mark the era change", "The harp's expanded tune set remains visible in inventory progression"],
+      "consequences": ["Temporal comparison becomes part of the repeated play loop", "New tunes increase where and how the player can perform the world-changing verb"],
+      "factualDescription": "The Harp of Ages and its learned tunes let the player transition between past and present under progressively broader location rules, activating the corresponding temporal version of the area.",
+      "interpretation": "Treating time travel as an acquired, repeatedly invoked verb makes temporal authorship part of player identity rather than reserving it for scripted scenes.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "cross-era-cause-opens-route",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.exploration-reward"],
+      "context": "A location has related past and present versions, and an object, structure, or route condition can be reached or altered more effectively in one era.",
+      "preconditions": ["Both temporal states of the region are reachable", "The player has observed a blocked route or state difference"],
+      "playerInput": ["Travel to the useful era", "Change or traverse the era-specific condition", "Return to the corresponding location if needed"],
+      "before": ["The target route is blocked in the current time", "The paired coordinate suggests a different causal state"],
+      "action": ["Use temporal transition and perform the available era-specific action"],
+      "after": ["The route state or reachable position differs", "A destination, shortcut, or reward can be accessed"],
+      "feedback": ["Stable landmark relationships identify the coordinate", "Changed buildings, terrain, water, or inhabitants show the temporal consequence"],
+      "consequences": ["The player gains progression or optional value", "Earlier places become multi-era causal questions"],
+      "factualDescription": "Corresponding locations in past and present can differ in traversability and object or settlement state, so acting or routing through one era can make a destination reachable.",
+      "interpretation": "Temporal navigation is legible when geography stays comparable but selected causal features differ, allowing players to reason from contrast rather than search two unrelated maps.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "multi-room-state-puzzle-persists",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.combat-boss", "dimension.teaching-feedback"],
+      "context": "A dungeon dependency spans several rooms or floors, with switches, object positions, movement tools, or color states influencing a route beyond the immediate screen.",
+      "preconditions": ["The relevant dungeon tool or rule has been introduced", "The target branch remains inaccessible"],
+      "playerInput": ["Observe the repeated state indicators", "Change the controlling state", "Navigate to the affected room and test the result"],
+      "before": ["The remote door, platform, or path is in the wrong state", "The dungeon map contains an unresolved dependency"],
+      "action": ["Manipulate the shared state and traverse the resulting room sequence"],
+      "after": ["The dependent route becomes usable", "The player reaches a key, boss path, or objective"],
+      "feedback": ["Color, sound, object orientation, door animation, or changed geometry identifies the state", "Repeated symbols link cause and distant effect"],
+      "consequences": ["The dungeon graph advances toward its boss and essence", "The player learns to preserve and reason about state across room boundaries"],
+      "factualDescription": "Principal dungeons include dependencies in which changing a visible switch, object, or movement state affects routes across more than one room before the boss and essence objective.",
+      "interpretation": "A bounded challenge can increase puzzle depth by asking the player to carry a clearly signaled state through space, provided feedback makes the remote relationship reconstructible.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "era-specific-resident-updates-quest",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.ui-input"],
+      "context": "A resident or settlement occupies a different situation in past and present, and conversation or an item exchange in the relevant era advances a local need.",
+      "preconditions": ["The required era and resident are reachable", "The player possesses the relevant item, information, or prior quest state"],
+      "playerInput": ["Travel to the appropriate time", "Approach and speak with the resident", "Provide the required help or information"],
+      "before": ["The character's need or settlement condition remains unresolved", "A related route, clue, or reward is unavailable"],
+      "action": ["Complete the era-specific interaction"],
+      "after": ["Dialogue and persistent quest state update", "A clue, item, or changed opportunity becomes available"],
+      "feedback": ["Fixed-screen actor placement and era-specific scenery contextualize the scene", "Text and inventory or route changes confirm the response"],
+      "consequences": ["The social result supports further exploration or restoration", "Time travel gains human consequences in addition to terrain effects"],
+      "factualDescription": "Characters and settlements can occupy era-specific states, and interacting with them in the appropriate time can update dialogue, exchange items, and unlock information or progression.",
+      "interpretation": "World-state mechanics carry more dramatic weight when the same causal comparison applies to people and communities, not only to doors and terrain.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "paired-map-save-restores-solvable-state",
+      "dimensions": ["dimension.recovery-accessibility", "dimension.perspective-implementation", "dimension.hardware-multiplayer", "dimension.production-runtime"],
+      "context": "The handheld campaign stores persistent temporal capabilities and quest flags while exploration can end in either era of a paired top-down map.",
+      "preconditions": ["The player has acquired a harp tune or other major capability", "The session ends or health failure interrupts a route"],
+      "playerInput": ["Resume the single-player save", "Use available transitions and tools to return to the intended dependency"],
+      "before": ["The active attempt has stopped", "The current era and local route context must be reconstructed"],
+      "action": ["Reload the campaign and navigate within the legal paired-map state"],
+      "after": ["Persistent items, tunes, essences, and quest flags remain", "The needed temporal transition can be performed again"],
+      "feedback": ["Status and inventory confirm retained growth", "Time-shift effects and stable top-down coordinates show the restored causal state"],
+      "consequences": ["A failed hypothesis or encounter can be retried without campaign reset", "Temporal dependencies remain testable across portable play sessions"],
+      "factualDescription": "The original single-player save retains tools, harp tunes, essences, and quest state, allowing the player to reconstruct legal past-present routes after resuming or recovering.",
+      "interpretation": "Stateful puzzles remain fair across interruptions when persistent capability is separated from reconstructible local state and every required transition has a recoverable path.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "Paired temporal maps support causal reasoning when stable coordinates anchor a deliberately limited set of meaningful differences.",
+    "A world-state mechanic gains narrative force when it changes resident situations and not only traversal geometry.",
+    "Multi-room puzzles remain learnable when shared state has a consistent sensory signature and a reconstructible route between cause and effect."
+  ],
+  "uniqueOrNonportable": [
+    "The named oracle, region, harp and tunes, eras, essences, characters, exact causal events, dungeon solutions, codes, linked ending, and audiovisual identity are source-specific.",
+    "Specific past-present correspondences are evidence only; adaptations must invent independent states, consequences, and geography rather than mirror the source map."
+  ],
+  "openQuestions": [
+    "A variant review should verify original link-cable behavior separately from password continuity and later emulation feature loss."
+  ]
+}

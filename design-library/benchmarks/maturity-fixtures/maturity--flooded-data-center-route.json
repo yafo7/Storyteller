@@ -1,0 +1,49 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.flooded-data-center-route",
+  "patternId": "pattern.multi-solution-state-graph",
+  "testId": "test.multi-solution.route",
+  "kind": "route",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "route contract fixture for pattern.multi-solution-state-graph; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "outcome-first-many-paths",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.world-facts",
+      "capability.object-placement",
+      "capability.object-composition",
+      "capability.route-simulation",
+      "capability.checkpoints"
+    ],
+    "recoveryRequirements": [
+      "Full local-state reset",
+      "Return consumed story-safe resources",
+      "Preserve discovered affordance roles"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.routes.pathA.outcome",
+      "operator": "reachable",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.routes.pathB.outcome",
+      "operator": "reachable",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.routes.rollback.exit",
+      "operator": "reachable",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

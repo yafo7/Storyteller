@@ -1,0 +1,46 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.night-shift-signal-failure",
+  "patternId": "pattern.action-first-onboarding",
+  "testId": "test.action-first.selection",
+  "kind": "selection",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "selection contract fixture for pattern.action-first-onboarding; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "role-and-goal-learned-through-action",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.contextual-prompts",
+      "capability.world-facts",
+      "capability.interaction-windows",
+      "capability.performance-cues",
+      "capability.checkpoints",
+      "capability.telemetry"
+    ],
+    "recoveryRequirements": [
+      "Restart current step only",
+      "Reduce urgency without changing canon outcome",
+      "Reframe target in camera",
+      "Provide optional factual recap after attempt"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.selection.roleBearingOpeningSelected",
+      "operator": "equals",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.selection.generalCombatControlAbstains",
+      "operator": "equals",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

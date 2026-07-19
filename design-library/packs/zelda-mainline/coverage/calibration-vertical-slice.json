@@ -1,0 +1,254 @@
+{
+  "reportVersion": "1.0.0",
+  "runId": "calibration.vertical-slice.stateful-revisit",
+  "generatedAt": "2026-07-17",
+  "inputs": {
+    "patternRef": "pattern.calibration.stateful-revisit@0.1.0",
+    "fixtureRef": "fixture.calibration.hidden-room",
+    "patternStatus": "candidate",
+    "autoSelectable": false
+  },
+  "detect": {
+    "minimumMatches": 2,
+    "matchedRules": 3,
+    "rules": [
+      {
+        "ruleId": "rule.state-axis-rewrites-routes.story.1",
+        "sourcePath": "$.storySignals",
+        "operator": "contains",
+        "expected": "signal.parallel-state",
+        "matchedValues": [
+          "signal.parallel-state"
+        ],
+        "passed": true
+      },
+      {
+        "ruleId": "rule.state-axis-rewrites-routes.story.2",
+        "sourcePath": "$.storySignals",
+        "operator": "contains",
+        "expected": "signal.transformable-environment",
+        "matchedValues": [],
+        "passed": false
+      },
+      {
+        "ruleId": "rule.state-axis-rewrites-routes.story.3",
+        "sourcePath": "$.storySignals",
+        "operator": "contains",
+        "expected": "signal.revisited-place",
+        "matchedValues": [
+          "signal.revisited-place"
+        ],
+        "passed": true
+      },
+      {
+        "ruleId": "rule.state-axis-rewrites-routes.spatial.1",
+        "sourcePath": "$.productProfile.spatialSignals",
+        "operator": "intersects",
+        "expected": [
+          "signal.parallel-state",
+          "signal.transformable-environment",
+          "signal.revisited-place"
+        ],
+        "matchedValues": [
+          "signal.parallel-state",
+          "signal.revisited-place"
+        ],
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "score": {
+    "criteria": [
+      {
+        "criterionId": "criterion.state-axis-rewrites-routes.story-fit",
+        "evidencePath": "$.storyModel.dramaticSpine",
+        "weight": 0.25,
+        "value": 5,
+        "weightedContribution": 1.25
+      },
+      {
+        "criterionId": "criterion.state-axis-rewrites-routes.embodied-performance",
+        "evidencePath": "$.storyModel.interactionOpportunities",
+        "weight": 0.2,
+        "value": 4,
+        "weightedContribution": 0.8
+      },
+      {
+        "criterionId": "criterion.state-axis-rewrites-routes.development-depth",
+        "evidencePath": "$.productionCharter.targetDuration",
+        "weight": 0.15,
+        "value": 4,
+        "weightedContribution": 0.6
+      },
+      {
+        "criterionId": "criterion.state-axis-rewrites-routes.causal-clarity",
+        "evidencePath": "$.storyModel.causalRules",
+        "weight": 0.1,
+        "value": 5,
+        "weightedContribution": 0.5
+      },
+      {
+        "criterionId": "criterion.state-axis-rewrites-routes.spatial-fit",
+        "evidencePath": "$.productProfile.spatialBudget",
+        "weight": 0.1,
+        "value": 5,
+        "weightedContribution": 0.5
+      },
+      {
+        "criterionId": "criterion.state-axis-rewrites-routes.runtime-fit",
+        "evidencePath": "$.runtimeCapabilities",
+        "weight": 0.1,
+        "value": 5,
+        "weightedContribution": 0.5
+      },
+      {
+        "criterionId": "criterion.state-axis-rewrites-routes.budget-fit",
+        "evidencePath": "$.productionCharter.budget",
+        "weight": 0.05,
+        "value": 2,
+        "weightedContribution": 0.1
+      },
+      {
+        "criterionId": "criterion.state-axis-rewrites-routes.originality-margin",
+        "evidencePath": "$.originalityConstraints",
+        "weight": 0.05,
+        "value": 5,
+        "weightedContribution": 0.25
+      }
+    ],
+    "weightedTotal": 4.5,
+    "hardVetoes": [],
+    "passed": true
+  },
+  "instantiate": {
+    "parameterBindings": {
+      "parameter.state-axis-rewrites-routes.actor": "Night archivist responsible for closing the building",
+      "parameter.state-axis-rewrites-routes.location": "location.curtain-room",
+      "parameter.state-axis-rewrites-routes.fact": "fact.ledger-reveal-after-two-states",
+      "parameter.state-axis-rewrites-routes.prop": "prop.story-derived-curtain-mechanism"
+    },
+    "requiredParameters": [
+      "parameter.state-axis-rewrites-routes.actor",
+      "parameter.state-axis-rewrites-routes.location",
+      "parameter.state-axis-rewrites-routes.fact"
+    ],
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "passed": true
+  },
+  "emit": {
+    "mappings": [
+      {
+        "mappingId": "mapping.state-axis-rewrites-routes.gameplay",
+        "owner": "gameplay",
+        "contractRef": "gameplay-handoff@1",
+        "targetPath": "$.patternApplications.state-axis-rewrites-routes.gameplay",
+        "effectRefs": [
+          "effect.state-axis-rewrites-routes.1",
+          "effect.state-axis-rewrites-routes.2",
+          "effect.state-axis-rewrites-routes.3"
+        ],
+        "constraintRefs": [
+          "constraint.state-axis-rewrites-routes.canon",
+          "constraint.state-axis-rewrites-routes.originality",
+          "constraint.state-axis-rewrites-routes.recovery"
+        ]
+      },
+      {
+        "mappingId": "mapping.state-axis-rewrites-routes.performance",
+        "owner": "performance",
+        "contractRef": "performance-handoff@1",
+        "targetPath": "$.patternApplications.state-axis-rewrites-routes.performance",
+        "effectRefs": [
+          "effect.state-axis-rewrites-routes.1",
+          "effect.state-axis-rewrites-routes.2",
+          "effect.state-axis-rewrites-routes.3"
+        ],
+        "constraintRefs": [
+          "constraint.state-axis-rewrites-routes.canon",
+          "constraint.state-axis-rewrites-routes.originality",
+          "constraint.state-axis-rewrites-routes.recovery"
+        ]
+      },
+      {
+        "mappingId": "mapping.state-axis-rewrites-routes.stage",
+        "owner": "stage",
+        "contractRef": "stage-handoff@1",
+        "targetPath": "$.patternApplications.state-axis-rewrites-routes.stage",
+        "effectRefs": [
+          "effect.state-axis-rewrites-routes.1",
+          "effect.state-axis-rewrites-routes.2",
+          "effect.state-axis-rewrites-routes.3"
+        ],
+        "constraintRefs": [
+          "constraint.state-axis-rewrites-routes.canon",
+          "constraint.state-axis-rewrites-routes.originality",
+          "constraint.state-axis-rewrites-routes.recovery"
+        ]
+      },
+      {
+        "mappingId": "mapping.state-axis-rewrites-routes.evaluation",
+        "owner": "evaluation",
+        "contractRef": "evaluation-handoff@1",
+        "targetPath": "$.patternApplications.state-axis-rewrites-routes.evaluation",
+        "effectRefs": [],
+        "constraintRefs": [
+          "constraint.state-axis-rewrites-routes.canon",
+          "constraint.state-axis-rewrites-routes.originality",
+          "constraint.state-axis-rewrites-routes.recovery"
+        ]
+      }
+    ],
+    "emittedOwners": [
+      "gameplay",
+      "performance",
+      "stage",
+      "evaluation"
+    ],
+    "emittedEffectRefs": [
+      "effect.state-axis-rewrites-routes.1",
+      "effect.state-axis-rewrites-routes.2",
+      "effect.state-axis-rewrites-routes.3"
+    ],
+    "passed": true
+  },
+  "validate": {
+    "assertions": [
+      {
+        "assertionId": "assertion.state-axis-rewrites-routes.effect-observable",
+        "passed": true,
+        "evidence": "Every emitted effect has an observable postcondition and multimodal feedback."
+      },
+      {
+        "assertionId": "assertion.state-axis-rewrites-routes.canon-safe",
+        "passed": true,
+        "evidence": "The bound fact is from the approved story model and protectedCanon is copied unchanged."
+      },
+      {
+        "assertionId": "assertion.state-axis-rewrites-routes.clone-safe",
+        "passed": true,
+        "evidence": "Six transformation axes are declared and the fixture excludes source-game expression."
+      }
+    ],
+    "passed": true
+  },
+  "invariants": {
+    "protectedCanonBefore": [
+      "The archivist caused no original disaster",
+      "The final ledger reveal must follow direct observation of both room states"
+    ],
+    "protectedCanonAfter": [
+      "The archivist caused no original disaster",
+      "The final ledger reveal must follow direct observation of both room states"
+    ],
+    "sourceSurfaceTransferred": false
+  },
+  "result": "pass"
+}

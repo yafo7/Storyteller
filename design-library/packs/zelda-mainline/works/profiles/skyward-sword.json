@@ -1,0 +1,123 @@
+{
+  "workId": "work.skyward-sword",
+  "author": "role.analyst.embodied-input",
+  "reviewer": "role.reviewer.causal-observations",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player is a young knight whose physical gestures, growing fieldcraft, and repeated descents from a safe sky community gradually make him capable of protecting a close friend and founding a heroic legacy.",
+    "dimension.core-loop": "Prepare in the sky hub, choose a surface landing, traverse a dense puzzle-field, enter its dungeon, acquire or refine a capability, return upward to upgrade and socialize, then revisit a transformed region.",
+    "dimension.verbs": "Directional sword swings, thrust, shield bash, lock-on, stamina-limited sprint and climbing, sailcloth descent, dowsing, flying, aimed tools, object manipulation, and motion-shaped item use form an embodied vocabulary.",
+    "dimension.world-state": "Three surface regions acquire successive route and hazard variants, local time-shift fields replace selected present states with past states, and sky-surface links open through story and activated landmarks.",
+    "dimension.topology": "Aerial Skyloft and scattered sky islands form the service hub, while separated surface regions behave like dense obstacle courses whose familiar landforms are reused under changed conditions.",
+    "dimension.gating-revisit": "Story songs, dowsing targets, stamina routes, new tools, landing statues, local state devices, and upgraded equipment gate progress; revisits often use the same terrain with a new rule or objective.",
+    "dimension.puzzle-information": "Enemy guards, directional cuts, mechanism orientation, stamina paths, dowsing signals, local temporal boundaries, and tool-reactive surfaces provide explicit hypotheses and fast feedback.",
+    "dimension.dungeon-structure": "Distinct dungeons continue item-and-boss dependency structures while the surrounding surface itself adopts dungeon-like density, sequencing, and environmental rule escalation.",
+    "dimension.exploration-reward": "Insects, upgrade treasures, health pieces, goddess cubes and their sky rewards, side-quest tokens, bottles, and optional islands connect careful surface search to later hub benefits.",
+    "dimension.growth-economy": "Collected treasures and insects support equipment upgrades; wallet, item pouch, shield durability, ammunition, potions, health, and rupees make preparation and loadout management explicit.",
+    "dimension.combat-boss": "Enemies visibly guard directions, so sword angle, feint, distance, shield timing, stamina, and item choice matter; bosses escalate the same embodied read-and-response grammar.",
+    "dimension.npc-quest": "The sky settlement supports day-and-night routines, favors, shops, upgrades, and relationship episodes; a companion supplies analysis and dowsing while the central rescue relationship drives the route.",
+    "dimension.narrative-performance": "Frequent cinematics, repeated near-meetings, ritual trials, region transformations, and gesture-driven confrontations alternate authored drama with player-performed action.",
+    "dimension.camera-blocking": "Targeting stabilizes combat, first-person-like dowsing and aiming isolate a search direction, flight and descent cameras expose altitude, and staged cuts emphasize character and mechanism response.",
+    "dimension.teaching-feedback": "A long safe prologue teaches movement, flight, sword direction, social context, and interface; companion analysis, training rooms, optional hint media, telegraphs, and repeated landforms reinforce rules.",
+    "dimension.ui-input": "The Wii Remote Plus and Nunchuk are required; motion direction drives sword and several items, while radial selections, stamina, shield state, dowsing, and recalibration cues expose active mode.",
+    "dimension.recovery-accessibility": "Bird statues save and connect surface routes, stamina fruit restores traversal capacity, seats and consumables restore health, shields can be repaired or replaced, and optional hints reduce puzzle deadlock.",
+    "dimension.perspective-implementation": "Third-person 3D accommodates directional gesture combat, altitude, dense multi-level terrain, and local temporal overlays, but the original's limited free-camera control increases dependence on targeting and authored framing.",
+    "dimension.hardware-multiplayer": "The original is single-player and requires Wii MotionPlus capability plus a Nunchuk; physical calibration, player space, dominant-hand mapping, and gesture recognition are core design constraints.",
+    "dimension.production-runtime": "A faithful abstraction needs directional motion classification and calibration, target-relative guard states, stamina and durability, surface-state variants, local temporal volumes, hub-field transit, dowsing signals, upgrades, and cinematic handoff."
+  },
+  "observationThemes": [
+    {
+      "key": "directional-input-makes-observation-the-attack",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.ui-input"],
+      "context": "An enemy visibly guards one or more directions while remaining vulnerable from another angle.",
+      "preconditions": ["Target-relative combat is active.", "Motion input is calibrated well enough to distinguish attack directions."],
+      "playerInput": ["Read the guard, orient or feint the sword, then swing or thrust through an open line."],
+      "before": ["An undirected attack would strike the guard and create no opening."],
+      "action": ["Translate a chosen physical direction into a matching in-game attack vector."],
+      "after": ["The enemy blocks, evades, or takes damage according to the relation between guard and swing."],
+      "feedback": ["Enemy pose, sword orientation, impact sound, recoil, hit effect, and controller-to-animation correspondence expose the read."],
+      "consequences": ["Moment-to-moment offense becomes a cycle of observation, commitment, and correction rather than repeated generic attack input."],
+      "factualDescription": "Wii MotionPlus maps several sword directions and a thrust, while many enemies alter their guard so the player must choose an exposed line.",
+      "interpretation": "A high-dimensional input earns its complexity when opponent state visibly asks for one of those dimensions and gives immediate diagnostic feedback.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "revisited-landform-receives-a-new-rule",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.perspective-implementation"],
+      "context": "The player returns to a previously learned surface region for a later objective under changed hazards or traversal conditions.",
+      "preconditions": ["The region's base route is familiar.", "A new story state, tool, song, or environmental condition is active."],
+      "playerInput": ["Re-enter through an unlocked landing and navigate by comparing remembered geometry with the new rule."],
+      "before": ["The player knows landmark relations but not the current dependency path."],
+      "action": ["Apply new capabilities and state reading to the stable landform."],
+      "after": ["Old routes change priority, new shortcuts or hazards become relevant, and a new objective path emerges."],
+      "feedback": ["Recognizable silhouettes, altered occupancy or material state, new targets, landing access, and objective signals expose continuity and change."],
+      "consequences": ["Spatial memory reduces reorientation while the new rule prevents the revisit from being a simple repeat."],
+      "factualDescription": "The adventure sends the player back to the same three principal surface regions, where changed conditions and later capabilities produce different routes and challenges over familiar terrain.",
+      "interpretation": "Reusing landforms can create density when every return changes the governing verb or state question rather than merely raising enemy strength.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "local-time-field-rewrites-multiple-system-roles",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.exploration-reward", "dimension.growth-economy"],
+      "context": "A device creates a bounded temporal field in which terrain, machines, plants, enemies, or resources occupy a different historical state.",
+      "preconditions": ["A time-shift source can be activated or moved.", "Relevant objects have authored present and past variants."],
+      "playerInput": ["Activate or reposition the field, observe which entities change, and exploit the temporarily valid route or function."],
+      "before": ["Present-state decay or terrain blocks access and disables needed mechanisms."],
+      "action": ["Move the boundary so selected objects enter their functioning past state."],
+      "after": ["Machinery operates, traversal geometry changes, enemies or resources transform, and the dependency becomes solvable within the active volume."],
+      "feedback": ["A sharp visible boundary, material and vegetation change, mechanical activation, sound transition, and object behavior identify temporal state."],
+      "consequences": ["One spatially local rule supports navigation, combat, resource, and puzzle combinations without resetting the whole map."],
+      "factualDescription": "Selected desert mechanisms create local areas where nearby objects take their past forms, changing terrain, machinery, enemies, and usable routes while the effect is active.",
+      "interpretation": "A bounded state field becomes generative when several entity classes share the rule and the player can manipulate the boundary itself.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "surface-discovery-pays-off-in-the-sky-hub",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.hardware-multiplayer"],
+      "context": "The player activates an optional surface object whose reward is delivered to a corresponding location in the sky.",
+      "preconditions": ["Sky travel is available.", "The surface discovery has a linked aerial reward state."],
+      "playerInput": ["Activate the surface object, return upward, fly to the signaled island or chest, and claim the reward."],
+      "before": ["The optional reward is unavailable in the hub layer."],
+      "action": ["Create a cross-region link through exploration, then traverse the macro-map to complete it."],
+      "after": ["A sky reward becomes accessible and the player's inventory or capacity improves."],
+      "feedback": ["Activation scene, upward travel, map marker or visual signal, flight approach, and chest response connect the two locations."],
+      "consequences": ["Surface curiosity seeds a future reason to revisit the social and service hub instead of ending at the discovery site."],
+      "factualDescription": "Activating goddess cubes on the surface unlocks corresponding treasure chests on sky islands, requiring a later flight to collect their contents.",
+      "interpretation": "A delayed cross-map reward can braid exploration with hub return when both endpoints are clearly signaled and independently meaningful.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "shield-timing-converts-defense-into-recovery",
+      "dimensions": ["dimension.combat-boss", "dimension.teaching-feedback", "dimension.recovery-accessibility", "dimension.production-runtime"],
+      "context": "An enemy attack is incoming while the player's shield has finite durability.",
+      "preconditions": ["A usable shield is equipped.", "The enemy tell and impact window are visible."],
+      "playerInput": ["Choose passive guard or time a shield bash to the attack."],
+      "before": ["Taking the blow risks health, while passive defense consumes durability and may preserve enemy pressure."],
+      "action": ["Commit the defensive gesture inside or outside the counter window."],
+      "after": ["A successful bash interrupts or exposes the enemy; a weaker response spends durability or health and may require repair or replacement."],
+      "feedback": ["Shield meter or condition, impact sound, recoil, enemy stagger, controller motion, and shop repair state communicate the result."],
+      "consequences": ["Defense offers a skill-based momentum reversal while its durable resource cost keeps safer blocking meaningful."],
+      "factualDescription": "Shields have durability and can block attacks, while a timed shield bash can deflect or stagger; damaged shields can be repaired, replaced, or upgraded.",
+      "interpretation": "A recovery verb gains tactical depth when precise timing earns initiative and imprecise safety consumes a recoverable economy resource.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "Directional physical input can support readable combat when opponents visibly encode the required response dimension.",
+    "A compact set of landforms can feel dense when later visits replace the governing route rule rather than only repopulating content.",
+    "A movable local state field may generate puzzles by transforming several entity classes through one visible boundary."
+  ],
+  "uniqueOrNonportable": [
+    "The exact sky-and-surface mythology, named island and regions, characters, sword origin, companion, rituals, devices, and story sequence are recognizable authored surface content and must not be reused.",
+    "Specific motion gestures, enemy guards, time-shift object designs, dungeon layouts, boss sequences, cube-to-chest placements, and audiovisual motifs are nonportable.",
+    "Wii MotionPlus calibration and required controller arrangement are historical platform expressions; portable patterns must specify alternate accessible inputs."
+  ],
+  "openQuestions": [
+    "Skyward Sword HD's button-control, camera, hint, and pacing changes require a separate variant delta before accessibility conclusions include that edition.",
+    "A primary trace should distinguish truly persistent region changes from scenario-local variants before reuse rules are encoded."
+  ]
+}

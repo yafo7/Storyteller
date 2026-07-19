@@ -1,0 +1,123 @@
+{
+  "workId": "work.four-swords-adventures",
+  "author": "role.analyst.asymmetric-multiscreen",
+  "reviewer": "role.reviewer.causal-observations",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player or group commands four coordinated heroes as a small force, alternating solidarity, formation tactics, independent action, and friendly competition.",
+    "dimension.core-loop": "Enter a course, explore public and private spaces, assign items or formations, solve multi-body obstacles, collect enough Force to empower the shared sword, defeat the course threat, break the final barrier, and receive a performance ranking.",
+    "dimension.verbs": "Top-down sword and item actions combine with group, split, leader-swap, carry, and four formations; multiplayer gives individuals direct control while solo play treats the four as a reconfigurable unit.",
+    "dimension.world-state": "Course-local enemies, switches, interiors, player positions, held items, collected Force, and the final barrier are synchronized; completion advances through eight regions of three courses each.",
+    "dimension.topology": "Courses alternate shared television spaces with interiors shown privately on connected handhelds, allowing hidden subspaces, simultaneous routes, and reunions without losing the public macro-scene.",
+    "dimension.gating-revisit": "Headcount, color, formation, item, public-private position, Force threshold, and course completion gate progress; insufficient Force can send the team back through the current course to search.",
+    "dimension.puzzle-information": "Puzzles communicate required formation, number, color, screen layer, direction, or item through object shape and response; group reconfiguration is frequently the answer grammar.",
+    "dimension.dungeon-structure": "The main adventure uses discrete courses rather than a continuous overworld, each with an internal arc of exploration, puzzles, mass combat, collection, and an end barrier or boss.",
+    "dimension.exploration-reward": "Force gems appear from enemies, vegetation, mechanisms, hidden spaces, and cooperative actions, making thorough route coverage both a score opportunity and a clearance requirement.",
+    "dimension.growth-economy": "Force is a course-local empowerment and gate resource, while item ownership is largely situational; stage results compare individual contribution rather than building a conventional persistent wallet economy.",
+    "dimension.combat-boss": "Large enemy groups make formation shape meaningful, while bosses and barriers test coordinated force, item use, and the ability to regroup after independent movement.",
+    "dimension.npc-quest": "Authored NPC interaction is secondary to human coordination; multiplayer participants help or compete, while solo leader switching and formation control substitute a command relationship for peer negotiation.",
+    "dimension.narrative-performance": "Episodic course framing, massed hero motion, transitions between public and private screens, barrier destruction, and end-course rankings deliver the primary theatrical rhythm.",
+    "dimension.camera-blocking": "A shared television camera frames public action, personal handheld screens frame interiors or hidden activity, and formation silhouettes keep the four-body unit readable during crowded scenes.",
+    "dimension.teaching-feedback": "Formation icons, immediate block and enemy reactions, visible Force accumulation, screen transfer, regroup commands, and course-end scoring teach through repeated local consequences.",
+    "dimension.ui-input": "Solo play can use a GameCube controller, while one-to-four-player modes use linked Game Boy Advance systems; leader, formation, item, Force, and screen location require clear mode indicators.",
+    "dimension.recovery-accessibility": "Course segmentation and local regrouping limit replay distance after mistakes, and solo support avoids mandatory partners; multiplayer still requires specialized handhelds and cables.",
+    "dimension.perspective-implementation": "Top-down 2D supports precise formation footprints and dense enemy fields, while the split public-private display model turns screen ownership into a spatial rule.",
+    "dimension.hardware-multiplayer": "One-to-four players are supported; handhelds plus GameCube link cables provide private views, while solo play can command all four heroes with formations from a standard controller.",
+    "dimension.production-runtime": "A faithful abstraction needs synchronized multi-display world state, public-private visibility rules, four-agent formation and regroup logic, course-local resource accounting, scalable player ownership, and stage-result scoring."
+  },
+  "observationThemes": [
+    {
+      "key": "four-bodies-become-one-configurable-verb",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.ui-input"],
+      "context": "A solo player controls all four heroes in a course containing different obstacle and enemy geometries.",
+      "preconditions": ["The heroes are grouped.", "Several formations and the split command are available."],
+      "playerInput": ["Choose a formation, move or attack as a unit, then split or change leader when precision is needed."],
+      "before": ["The current group footprint is poorly matched to the obstacle or threat."],
+      "action": ["Reconfigure the same four actors into a wide, long, cross, box, parade, or separated arrangement."],
+      "after": ["Their combined collision, reach, attack coverage, or object-pushing relation changes."],
+      "feedback": ["Formation icon, immediate rearrangement, synchronized animation, object movement, and enemy response expose the new capability."],
+      "consequences": ["Party composition remains constant while spatial configuration becomes the primary tactical verb."],
+      "factualDescription": "Solo play lets one player command four heroes using several named formations, change the leader, gather the group, or separate an individual.",
+      "interpretation": "Multiple bodies can act like a single tool whose function changes through geometry rather than inventory replacement.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "private-interior-and-public-world-share-state",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.perspective-implementation"],
+      "context": "A handheld-controlled hero enters a house, cave, or hidden subspace while other heroes remain in the television world.",
+      "preconditions": ["A connected handheld display is active.", "The entrance transitions that hero into a private-view area."],
+      "playerInput": ["Enter the subspace, manipulate its local objects, and return or affect the public area."],
+      "before": ["The public group cannot see the interior details and a cross-layer dependency is unresolved."],
+      "action": ["Operate privately while the synchronized course continues on the shared display."],
+      "after": ["An item, actor, projectile, switch, or route can cross or affect the boundary."],
+      "feedback": ["The hero disappears from the television, appears on the handheld, and visible or audible consequences propagate between screens."],
+      "consequences": ["Information asymmetry and simultaneous action become level-design materials rather than menu separation."],
+      "factualDescription": "Connected handhelds show interiors and other private spaces when a hero leaves the shared television area, while both displays remain part of one synchronized course.",
+      "interpretation": "A visibility boundary is most meaningful when actions can cross it and other participants must infer or communicate private state.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "collection-threshold-turns-exploration-into-clearance",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.exploration-reward", "dimension.growth-economy"],
+      "context": "The team reaches a course-ending dark barrier after passing through optional and mandatory Force sources.",
+      "preconditions": ["The shared sword has accumulated some Force.", "The barrier requires a visible course-local threshold."],
+      "playerInput": ["Attempt the barrier, then if necessary revisit the course and extract missed Force from combat, objects, or mechanisms."],
+      "before": ["The route endpoint is reached but collection may be insufficient."],
+      "action": ["Convert thorough interaction and exploration into a shared empowerment state."],
+      "after": ["At the threshold the barrier can be broken; below it, the route remains closed and the search continues."],
+      "feedback": ["Collect display, sword power indication, gem pickups, barrier reaction, and return warp make the requirement explicit."],
+      "consequences": ["Optional-looking side interactions become part of macro progression without requiring every exact collectible."],
+      "factualDescription": "Each course ends at a dark barrier that can only be destroyed after enough Force has been gathered from enemies, scenery, mechanisms, and other course events.",
+      "interpretation": "A forgiving aggregate threshold can reward broad engagement while letting players choose which opportunities satisfy it.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "course-ranking-reframes-peer-performance",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.hardware-multiplayer"],
+      "context": "Multiple participants complete a cooperative course after helping, separating, and competing for resources.",
+      "preconditions": ["The course goal is cleared.", "Individual actions have generated trackable contribution signals."],
+      "playerInput": ["Finish the course and review the comparative result."],
+      "before": ["The group has a shared success but ambiguous individual standing."],
+      "action": ["Transform accumulated play traces into a staged ranking."],
+      "after": ["Each participant receives an explicit comparative outcome without undoing collective clearance."],
+      "feedback": ["End-stage presentation, category results, placement, and peer reaction expose how the session is being interpreted."],
+      "consequences": ["Competition is deferred into a social epilogue, allowing cooperative dependency to dominate the course itself."],
+      "factualDescription": "After a stage, multiplayer performance is evaluated and participants are ranked from several tracked aspects of play.",
+      "interpretation": "Post-stage comparison can preserve playful rivalry while preventing constant scoring from obscuring shared spatial goals.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "formation-telegraph-scales-crowded-combat",
+      "dimensions": ["dimension.combat-boss", "dimension.teaching-feedback", "dimension.recovery-accessibility", "dimension.production-runtime"],
+      "context": "A dense enemy group surrounds or channels the four-hero unit.",
+      "preconditions": ["The group can change formation without losing course progress.", "Enemy arrangement creates a readable directional threat."],
+      "playerInput": ["Select a formation whose footprint and attack coverage match the threat, then regroup after disruption."],
+      "before": ["A compact or misaligned formation exposes the unit to damage or limits coverage."],
+      "action": ["Change geometry and attack through the corresponding lanes."],
+      "after": ["More enemies are covered, a narrow route is respected, or the group avoids surrounding attacks."],
+      "feedback": ["Distinct silhouette, synchronized attack arcs, hit effects, health response, and one-button regroup show whether the choice worked."],
+      "consequences": ["Crowd difficulty can grow through arrangement while recovery remains a clear reconfiguration action."],
+      "factualDescription": "The game fields large enemy groups and gives formations different directional coverage and spatial uses, with a direct gather command after separation.",
+      "interpretation": "When formation shape is visually obvious, encounter density can test configuration instead of demanding more individual commands.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "A party can become a reconfigurable spatial tool when formation changes alter footprint, force, and coverage under one input grammar.",
+    "Public and private synchronized views can turn visibility boundaries into cooperative level mechanics.",
+    "A course-wide aggregate collection threshold may reward optional engagement while preserving route flexibility."
+  ],
+  "uniqueOrNonportable": [
+    "The exact four-hero mythology, named sword and Force resource, characters, regions, story incidents, formations' branded names, and course sequence are recognizable authored surface content and must not be reused.",
+    "Specific room layouts, screen-transition scenes, bosses, ranking categories, item roster, and audiovisual identity are nonportable.",
+    "The GameCube-to-GBA cable implementation is a historical platform expression; only abstract public-private synchronized views may be compared."
+  ],
+  "openQuestions": [
+    "A primary-play trace should distinguish which public-private effects are mandatory in solo controller play versus handheld play.",
+    "Exact course recovery, individual scoring weights, and Force retention rules need formal state traces before pattern tests encode them."
+  ]
+}

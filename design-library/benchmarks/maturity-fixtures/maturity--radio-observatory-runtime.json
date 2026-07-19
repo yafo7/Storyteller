@@ -1,0 +1,43 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.radio-observatory-runtime",
+  "patternId": "pattern.landmark-promises-future-use",
+  "testId": "test.landmark-promise.runtime",
+  "kind": "runtime",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "runtime contract fixture for pattern.landmark-promises-future-use; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "early-sighting-later-payoff",
+    "selectionRole": "support",
+    "requiredRuntimeCapabilities": [
+      "capability.world-facts",
+      "capability.route-gates",
+      "capability.spatial-query",
+      "capability.camera-cues"
+    ],
+    "recoveryRequirements": [
+      "Repeat sightline from another route",
+      "Preserve seen/marked state",
+      "Keep wrong approach detours reversible"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.memory.seenBeforeUse",
+      "operator": "equals",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.payoff.actionAvailable",
+      "operator": "equals",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

@@ -69,7 +69,7 @@
               "weightedTotal": { "type": "number", "minimum": 0, "maximum": 5 }
             }
           },
-          "hardVetoes": { "type": "array", "items": { "enum": ["canon-conflict", "runtime-impossible", "clone-risk", "unrecoverable-softlock", "budget-impossible"] }, "uniqueItems": true },
+          "hardVetoes": { "type": "array", "items": { "enum": ["canon-conflict", "runtime-impossible", "clone-risk", "unrecoverable-softlock", "budget-impossible", "manual-binding-incomplete"] }, "uniqueItems": true },
           "verdict": { "enum": ["selected", "rejected", "deferred"] },
           "reasons": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
         }

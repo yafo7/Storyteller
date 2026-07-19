@@ -1,0 +1,45 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.flooded-market-restored-route",
+  "patternId": "pattern.npc-reacts-to-world-state",
+  "testId": "test.npc-state.route",
+  "kind": "route",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "route contract fixture for pattern.npc-reacts-to-world-state; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "situated-social-reflection",
+    "selectionRole": "supporting",
+    "requiredRuntimeCapabilities": [
+      "capability.actor-memory",
+      "capability.world-facts",
+      "capability.dialogue-conditions",
+      "capability.actor-schedules",
+      "capability.performance-cues",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Persist knowledge provenance",
+      "Route actor to fallback anchor",
+      "Provide neutral access alternative when social branch closes"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.routes.postChangeAffectedActor",
+      "operator": "reachable",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.routes.skipOptionalResponse.requiredEnding",
+      "operator": "reachable",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

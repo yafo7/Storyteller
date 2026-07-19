@@ -1,0 +1,121 @@
+{
+  "workId": "work.a-link-between-worlds",
+  "author": "Corpus Analyst Rowan-C",
+  "reviewer": "Independent Reviewer Alder-C",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player is a nimble problem solver who treats walls, height, rented tools, and two related kingdoms as a field of route choices rather than a fixed sequence.",
+    "dimension.core-loop": "After an opening arc, the player chooses a destination, equips the likely tools, traverses one of two connected worlds, completes a dungeon, and reinvests rewards into ownership or upgrades.",
+    "dimension.verbs": "Top-down movement and combat are joined by wall merging, lateral movement along surfaces, portal traversal, and a broad tool set regulated by a shared replenishing energy meter.",
+    "dimension.world-state": "Completed dungeons, rescued figures, purchased tools, discovered rifts, opened shortcuts, and collectible thresholds persistently change access and available strength.",
+    "dimension.topology": "Hyrule and Lorule form corresponding but nonidentical overworld graphs linked by wall rifts, so a blocked route in one world may be approached through the other.",
+    "dimension.gating-revisit": "Most major tools become available through rental early enough to support flexible dungeon order, while ownership, wall merging, rifts, and local keys control finer-grained revisits.",
+    "dimension.puzzle-information": "Wall seams, narrow ledges, visible height, tool-shaped affordances, energy limits, and paired-world correspondence provide the evidence used to form and test traversal hypotheses.",
+    "dimension.dungeon-structure": "Dungeons remain bounded room graphs with a focused interaction grammar, but the broader set can be attempted in multiple orders because required tools are not tied only to prior dungeon completion.",
+    "dimension.exploration-reward": "Rifts, caves, minigames, heart pieces, rupees, and hidden collectibles reward both close inspection of familiar terrain and comparison between corresponding world locations.",
+    "dimension.growth-economy": "Rupees fund temporary rentals and permanent purchases; ownership survives defeat and enables collectible-based upgrades, turning economic commitment into reduced future risk.",
+    "dimension.combat-boss": "Combat combines positional swordplay, energy-limited tools, wall evasion, and bosses that test the local dungeon rule without requiring a single global acquisition order.",
+    "dimension.npc-quest": "Ravio converts item access into a shop relationship, while residents, rescued sages, minigame hosts, and collectible-related characters connect optional tasks to growth and world knowledge.",
+    "dimension.narrative-performance": "The conflict is revealed through transformations, captures, rescues, and crossings between parallel kingdoms; agency resumes between compact scenes so player-chosen dungeon order remains visible.",
+    "dimension.camera-blocking": "The overhead camera exposes room plans while modeled height and wall-side movement reveal vertical relationships; wall merging temporarily reframes Link as a lateral figure on the boundary.",
+    "dimension.teaching-feedback": "Flattening animation, energy drain and refill, highlighted cracks, rental loss, purchase permanence, stereo depth, and hint ghosts clearly communicate unusual rules and recovery options.",
+    "dimension.ui-input": "The interface exposes the shared item-energy meter, equipped tools, map links, and rental status, while optional hint glasses exchange system Play Coins for contextual guidance.",
+    "dimension.recovery-accessibility": "Defeat returns rented items to the shop but preserves permanent progress; players can re-rent, buy equipment, select another objective, or use optional hints rather than face a hard dead end.",
+    "dimension.perspective-implementation": "A 2.5D overhead presentation preserves classic planar readability while stereoscopic height, wall planes, and layered floors make vertical separation an actionable rule.",
+    "dimension.hardware-multiplayer": "The original is a single-player Nintendo 3DS title whose stereoscopic display and Play Coin system affect depth reading and optional hint access without requiring networked play.",
+    "dimension.production-runtime": "Implementation requires paired-world mappings, wall-surface navigation, reversible avatar projection, a shared energy economy, flexible dungeon dependencies, rentals, persistent ownership, and hint-state checks."
+  },
+  "observationThemes": [
+    {
+      "key": "wall-merge-rewrites-boundary",
+      "dimensions": ["dimension.player-fantasy", "dimension.verbs", "dimension.camera-blocking", "dimension.perspective-implementation"],
+      "context": "A gap, narrow ledge, barred route, enemy attack, or world rift is reachable from a solid wall surface but not from the normal floor plane.",
+      "preconditions": ["Wall merging has been acquired", "A compatible wall is within reach", "The energy meter is not empty"],
+      "playerInput": ["Merge into the wall", "Move laterally along its surface", "Exit at a valid floor or enter a rift"],
+      "before": ["The obstacle blocks ordinary top-down movement", "Link occupies the ground plane"],
+      "action": ["Transform Link into a wall-bound state and traverse the boundary"],
+      "after": ["Link reaches a new side, ledge, portal, or safe position", "The energy meter reflects the temporary state"],
+      "feedback": ["The avatar visibly flattens and the framing emphasizes the wall plane", "Lateral motion and energy drain confirm the new movement rule"],
+      "consequences": ["Walls become routes rather than only collision", "The player can solve traversal, evasion, and portal problems with the same verb"],
+      "factualDescription": "Link can merge into compatible walls, move laterally along them while energy drains, and exit onto reachable ground or pass through designated rifts.",
+      "interpretation": "A reversible change of movement plane can make a familiar boundary support exploration, puzzle solving, and combat while remaining readable in one camera system.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "rental-enables-order-choice",
+      "dimensions": ["dimension.core-loop", "dimension.gating-revisit", "dimension.growth-economy", "dimension.recovery-accessibility"],
+      "context": "Several dungeons are available and their expected tools can be rented from Ravio rather than acquired only by clearing an earlier dungeon.",
+      "preconditions": ["The rental shop is operating", "The player has enough rupees", "At least one target dungeon is available"],
+      "playerInput": ["Choose and rent a tool", "Travel to a compatible dungeon", "Later choose whether to buy the tool permanently"],
+      "before": ["The tool is unavailable", "The chosen dungeon's affordances cannot be used"],
+      "action": ["Spend currency to obtain temporary access and attempt the objective"],
+      "after": ["The tool can be used until defeat", "Purchase can later convert temporary access into persistent ownership"],
+      "feedback": ["The shop and inventory display rental status", "Defeat returns rented equipment, while purchase visibly changes permanence"],
+      "consequences": ["Dungeon order becomes a player decision", "Failure creates an economic retry cost without erasing completed campaign progress"],
+      "factualDescription": "Ravio rents major tools for rupees and retrieves rentals after defeat; the player can later buy tools permanently and use this access to choose among available dungeons.",
+      "interpretation": "Separating capability access from permanent ownership can support nonlinear objective order while retaining preparation, failure stakes, and a long-term economy.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "rift-links-corresponding-worlds",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.exploration-reward", "dimension.hardware-multiplayer"],
+      "context": "A discovered rift connects a wall position in Hyrule to a related but differently traversable location in Lorule.",
+      "preconditions": ["The rift is reachable", "Wall merging is available", "The destination world contains a useful route or discovery"],
+      "playerInput": ["Merge into the rift", "Cross worlds", "Compare the destination with the corresponding map location"],
+      "before": ["The target location is inaccessible or unexplored in the current world", "The cross-world connection is not yet part of the player's route model"],
+      "action": ["Use the paired spatial link and continue from the alternate topology"],
+      "after": ["The avatar occupies the corresponding region of the other world", "A route, shortcut, dungeon, or reward becomes reachable"],
+      "feedback": ["A transition distinguishes the worlds", "Landform and landmark similarities support comparison while local differences expose new paths"],
+      "consequences": ["Exploration rewards reasoning across two maps", "The single-player experience gains systemic depth without depending on online or simultaneous participants"],
+      "factualDescription": "Designated wall rifts connect Hyrule and Lorule at corresponding locations, and differences between the two overworlds allow crossings to bypass barriers or expose discoveries.",
+      "interpretation": "Paired maps become more than visual variants when each cross-world edge changes route possibility and asks the player to remember both similarity and difference.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "height-puzzle-supports-optional-hint",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.teaching-feedback", "dimension.ui-input"],
+      "context": "Within a dungeon room, visible elevation and wall surfaces imply a route, but the player may not yet understand how to combine merge movement with the local tool.",
+      "preconditions": ["The room dependency is unsolved", "Required verbs are available", "Hint glasses may be available as an optional support"],
+      "playerInput": ["Inspect height and wall continuity", "Test merging or the local tool", "Optionally spend a Play Coin on a contextual hint"],
+      "before": ["The next floor, switch, or exit is unavailable", "Several spatial interpretations remain possible"],
+      "action": ["Apply the inferred wall-and-height rule or request graduated information"],
+      "after": ["The room state opens the next dependency", "The player retains agency over executing the solution"],
+      "feedback": ["Stereoscopic depth, wall motion, switches, and door changes show the causal result", "A hint ghost provides information without automatically moving the avatar"],
+      "consequences": ["The dungeon grammar is learned for later rooms and its boss", "A stuck player can recover without changing the core rule"],
+      "factualDescription": "Dungeon puzzles combine overhead layouts, modeled height, wall merging, and tools; optional hint ghosts can exchange 3DS Play Coins for contextual guidance.",
+      "interpretation": "Readable spatial evidence plus an opt-in hint economy can preserve discovery for confident players while providing a bounded recovery path for stalled players.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "collectible-threshold-upgrades-owned-tool",
+      "dimensions": ["dimension.combat-boss", "dimension.npc-quest", "dimension.narrative-performance", "dimension.production-runtime"],
+      "context": "Hidden Maiamai are returned to their parent after the player has purchased a rentable tool and reached a collectible threshold.",
+      "preconditions": ["A tool is permanently owned", "Enough hidden collectibles have been found", "The related NPC can be visited"],
+      "playerInput": ["Explore and collect hidden Maiamai", "Return to Mother Maiamai", "Select an eligible owned tool for improvement"],
+      "before": ["The threshold reward is pending", "The tool has its normal combat and puzzle behavior"],
+      "action": ["Complete the return transaction and apply the upgrade"],
+      "after": ["The NPC acknowledges the recovered group", "The selected tool gains a persistent stronger behavior"],
+      "feedback": ["Collection totals and the upgrade presentation show the threshold", "Subsequent tool use visibly changes its effect"],
+      "consequences": ["Optional exploration improves later encounters and bosses", "The system must validate both collectible count and permanent ownership before offering the reward"],
+      "factualDescription": "Returning hidden Maiamai at set totals lets their parent upgrade a tool that the player has permanently purchased, changing that tool's later effectiveness.",
+      "interpretation": "A social collectible turn-in can connect exploration to combat growth while making prior economic commitment a clear prerequisite for the optional reward.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "Temporary capability access can support nonlinear objective order when ownership and failure preserve meaningful economic decisions.",
+    "A reversible movement-plane transformation can unify traversal, portals, evasion, and spatial puzzles.",
+    "Corresponding worlds create strong exploration reasoning when crossings are sparse edges and local topology differs in consequential ways."
+  ],
+  "uniqueOrNonportable": [
+    "The names and depictions of Hyrule, Lorule, Ravio, the sages, wall-painting form, Maiamai, exact rift map, narrative scenes, music, and dialogue are nonportable.",
+    "Specific dungeon order, item roster, room layouts, collectible locations, boss weaknesses, and visual transformation sequence remain evidence only."
+  ],
+  "openQuestions": [
+    "A later accessibility review should test the game's critical depth cues with stereoscopic display disabled rather than inferring equivalence from the product page."
+  ]
+}

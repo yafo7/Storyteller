@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/design-library/schemas/1.0.0/pattern-selection.schema.json",
+  "title": "V0.3 pattern recommendation handoff draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "productionId", "storyModelHash", "libraryLockRef", "provenancePolicy", "query", "consideredCandidates", "selectedApplications", "composition", "runtimeAssessment", "originalityPlan", "abstention", "handoffs", "status"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "productionId": { "type": "string", "minLength": 3 },
+    "storyModelHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "libraryLockRef": { "type": "string", "minLength": 3 },
+    "provenancePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["enabledPackIds", "blockedPackIds", "allowCorePromotedFromBlockedPack"],
+      "properties": {
+        "enabledPackIds": { "type": "array", "items": { "type": "string", "pattern": "^pack\\." }, "uniqueItems": true },
+        "blockedPackIds": { "type": "array", "items": { "type": "string", "pattern": "^pack\\." }, "uniqueItems": true },
+        "allowCorePromotedFromBlockedPack": { "const": false }
+      }
+    },
+    "query": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["storySignals", "experienceGoals", "spatialConstraints", "runtimeCapabilities", "budget", "negativeSignals"],
+      "properties": {
+        "storySignals": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "experienceGoals": { "type": "array", "items": { "type": "string", "pattern": "^experience\\." }, "minItems": 1 },
+        "spatialConstraints": { "type": "array", "items": { "type": "string" } },
+        "runtimeCapabilities": { "type": "array", "items": { "type": "string", "pattern": "^capability\\." } },
+        "budget": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["design", "code", "art", "qa"],
+          "properties": {
+            "design": { "enum": ["low", "medium", "high"] },
+            "code": { "enum": ["low", "medium", "high"] },
+            "art": { "enum": ["low", "medium", "high"] },
+            "qa": { "enum": ["low", "medium", "high"] }
+          }
+        },
+        "negativeSignals": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "consideredCandidates": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["patternId", "patternVersion", "scores", "hardVetoes", "verdict", "reasons"],
+        "properties": {
+          "patternId": { "type": "string", "pattern": "^pattern\\." },
+          "patternVersion": { "type": "string" },
+          "scores": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["storyRelevance", "dramaticIntegration", "systemicDepth", "stateCausality", "spatialReinterpretation", "runtimeFit", "budgetFit", "originalityMargin", "weightedTotal"],
+            "properties": {
+              "storyRelevance": { "type": "number", "minimum": 0, "maximum": 5 },
+              "dramaticIntegration": { "type": "number", "minimum": 0, "maximum": 5 },
+              "systemicDepth": { "type": "number", "minimum": 0, "maximum": 5 },
+              "stateCausality": { "type": "number", "minimum": 0, "maximum": 5 },
+              "spatialReinterpretation": { "type": "number", "minimum": 0, "maximum": 5 },
+              "runtimeFit": { "type": "number", "minimum": 0, "maximum": 5 },
+              "budgetFit": { "type": "number", "minimum": 0, "maximum": 5 },
+              "originalityMargin": { "type": "number", "minimum": 0, "maximum": 5 },
+              "weightedTotal": { "type": "number", "minimum": 0, "maximum": 5 }
+            }
+          },
+          "hardVetoes": { "type": "array", "items": { "enum": ["canon-conflict", "runtime-impossible", "clone-risk", "unrecoverable-softlock", "budget-impossible", "manual-binding-incomplete"] }, "uniqueItems": true },
+          "verdict": { "enum": ["selected", "rejected", "deferred"] },
+          "reasons": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+        }
+      }
+    },
+    "selectedApplications": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["applicationId", "patternId", "patternVersion", "role", "originPackRefs", "storyRefs", "retainedPrinciples", "adaptationSummary", "discardedSurfaceDetails", "hookBindings", "effectApplications", "runtimeMapping", "evidenceInOutput"],
+        "properties": {
+          "applicationId": { "type": "string", "pattern": "^application\\." },
+          "patternId": { "type": "string", "pattern": "^pattern\\." },
+          "patternVersion": { "type": "string" },
+          "role": { "enum": ["core", "support"] },
+          "originPackRefs": { "type": "array", "items": { "type": "string", "pattern": "^pack\\." }, "minItems": 1, "uniqueItems": true },
+          "storyRefs": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "retainedPrinciples": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "adaptationSummary": { "type": "string", "minLength": 20 },
+          "discardedSurfaceDetails": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "hookBindings": {
+            "type": "array",
+            "minItems": 5,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["hook", "sourceRef", "targetOwner", "targetContract", "targetPath"],
+              "properties": {
+                "hook": { "enum": ["detect", "score", "instantiate", "emit", "validate"] },
+                "sourceRef": { "type": "string", "minLength": 1 },
+                "targetOwner": { "enum": ["gameplay", "performance", "stage", "compile", "evaluation"] },
+                "targetContract": { "type": "string", "minLength": 1 },
+                "targetPath": { "type": "string", "minLength": 1 }
+              }
+            }
+          },
+          "effectApplications": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["effectRef", "parameterBindings", "expectedPostconditions"],
+              "properties": {
+                "effectRef": { "type": "string", "pattern": "^effect\\." },
+                "parameterBindings": { "type": "object", "minProperties": 1, "additionalProperties": { "type": "string" } },
+                "expectedPostconditions": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+              }
+            }
+          },
+          "runtimeMapping": { "type": "array", "items": { "type": "string" } },
+          "evidenceInOutput": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["corePatternRef", "supportPatternRefs", "sharedExperienceAxis", "conflictsResolved", "developmentArc"],
+      "properties": {
+        "corePatternRef": { "type": ["string", "null"] },
+        "supportPatternRefs": { "type": "array", "items": { "type": "string", "pattern": "^pattern\\." }, "maxItems": 3 },
+        "sharedExperienceAxis": { "type": "string" },
+        "conflictsResolved": { "type": "array", "items": { "type": "string" } },
+        "developmentArc": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "runtimeAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["satisfiedCapabilities", "gaps", "approvedFallbacks"],
+      "properties": {
+        "satisfiedCapabilities": { "type": "array", "items": { "type": "string" } },
+        "gaps": { "type": "array", "items": { "type": "string" } },
+        "approvedFallbacks": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "originalityPlan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["transformationAxes", "structuralDeltas", "forbiddenTransfers", "blindSourceAttributionReview", "reviewChecks"],
+      "properties": {
+        "transformationAxes": { "type": "array", "items": { "enum": ["worldbuilding", "characters", "objects", "topology", "feedback", "narrative-causality", "timing", "visual-language", "audio-language", "control-language"] }, "minItems": 3, "uniqueItems": true },
+        "structuralDeltas": { "type": "array", "items": { "enum": ["topology-graph", "object-role-graph", "action-sequence", "feedback-signature", "narrative-function"] }, "minItems": 3, "uniqueItems": true },
+        "forbiddenTransfers": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "blindSourceAttributionReview": { "enum": ["required", "passed", "failed"] },
+        "reviewChecks": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "abstention": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["abstained", "reason"],
+      "properties": {
+        "abstained": { "type": "boolean" },
+        "reason": { "type": ["string", "null"] }
+      }
+    },
+    "handoffs": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["handoffId", "owner", "contractRef", "applicationRefs", "requirements", "validationRefs"],
+        "properties": {
+          "handoffId": { "type": "string", "pattern": "^handoff\\." },
+          "owner": { "enum": ["gameplay", "performance", "stage", "compile", "evaluation"] },
+          "contractRef": { "type": "string", "minLength": 1 },
+          "applicationRefs": { "type": "array", "items": { "type": "string", "pattern": "^application\\." }, "uniqueItems": true },
+          "requirements": { "type": "object", "minProperties": 1, "additionalProperties": true },
+          "validationRefs": { "type": "array", "items": { "type": "string", "pattern": "^assertion\\." }, "minItems": 1, "uniqueItems": true }
+        }
+      }
+    },
+    "status": { "enum": ["draft", "approved", "rejected", "superseded"] }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "abstention": { "type": "object", "properties": { "abstained": { "const": true } } } }, "required": ["abstention"] },
+      "then": {
+        "properties": {
+          "selectedApplications": { "type": "array", "maxItems": 0 },
+          "composition": { "type": "object", "properties": { "corePatternRef": { "type": "null" }, "supportPatternRefs": { "type": "array", "maxItems": 0 } } }
+        }
+      },
+      "else": {
+        "properties": {
+          "selectedApplications": { "type": "array", "minItems": 1, "contains": { "type": "object", "properties": { "role": { "const": "core" } }, "required": ["role"] }, "minContains": 1, "maxContains": 1 },
+          "composition": { "type": "object", "properties": { "corePatternRef": { "type": "string", "pattern": "^pattern\\." } } }
+        }
+      }
+    }
+  ]
+}

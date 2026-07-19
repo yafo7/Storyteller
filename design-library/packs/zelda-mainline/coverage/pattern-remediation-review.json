@@ -1,0 +1,258 @@
+{
+  "reportVersion": "2.0.0",
+  "reviewId": "review.zelda-mainline.pattern-remediation-final-independent-20260718",
+  "reviewedArtifact": "design-library/packs/zelda-mainline/patterns/released-patterns.json",
+  "reviewedAt": "2026-07-18",
+  "reviewer": {
+    "role": "role.reviewer.independent-p4-final-adjudication",
+    "independenceStatement": "This review changed no compiler, schema, maturity contract, pattern, relation, quarantine, governance, retrieval, fixture, planning, or Skill input. It independently reran the frozen compilation and contract checks, inspected the generated records and governing evidence, and wrote only this final adjudication report."
+  },
+  "reviewProtocol": {
+    "requiredSplit": {
+      "totalPatterns": 36,
+      "releasedPatterns": 13,
+      "reviewedPatterns": 23
+    },
+    "releasedApprovalRule": "A released pattern is approved only when strict schema validation, direct cross-title support, bounded counterevidence, lossless callable lowering, discriminating selection, fixture closure, composition closure, four department contracts, and P1-P6 static originality controls all pass.",
+    "quarantineVerificationRule": "A reviewed pattern is verified only when it is non-selectable, is excluded from the released set, exactly matches the quarantine register, states an evidence-specific reason and promotion boundary, and does not assert false provenance closure.",
+    "phaseRule": "Pattern-level blind evidence is historical diagnostic material and is not a P1-P6 blocking gate. P8 owns blocking whole-game blind attribution after P7 freezes a playable candidate. Production retrieval generation and the exact released-only retrieval check are owned by P5."
+  },
+  "reviewedInputs": [
+    "design-library/schemas/design-pattern.schema.json",
+    "design-library/packs/zelda-mainline/patterns/maturity-contracts.json",
+    "design-library/packs/zelda-mainline/patterns/quarantine-register.json",
+    "design-library/packs/zelda-mainline/patterns/released-patterns.json",
+    "design-library/packs/zelda-mainline/relations/relation-registry.json",
+    "design-library/packs/zelda-mainline/observations/observation-registry.json",
+    "design-library/packs/zelda-mainline/claims/claim-registry.json",
+    "design-library/packs/zelda-mainline/works/work-registry.json",
+    "design-library/benchmarks/fixture-registry.json",
+    "design-library/benchmarks/originality-case-registry.json",
+    "design-library/governance/originality-policy.md",
+    "design-library/governance/originality-validation-policy.json",
+    "design-library/indexes/retrieval-index.json",
+    "design-library/migrations/pattern.reward-expands-future-possibility.1.1.0-to-2.0.0.json",
+    "design-library/packs/zelda-mainline/coverage/pattern-independent-review.json",
+    "design-library/packs/zelda-mainline/coverage/p4-existing-evidence-review.json",
+    "design-library/packs/zelda-mainline/coverage/p4-existing-rebind-review-c.json",
+    "design-library/packs/zelda-mainline/coverage/p4-supplemental-evidence-review.json",
+    "design-library/packs/zelda-mainline/coverage/pattern-contract-test-report.json"
+  ],
+  "immutablePriorBlockingReview": {
+    "path": "design-library/packs/zelda-mainline/coverage/pattern-independent-review.json",
+    "sha256": "3534d1ea43a8461a677cc1b73d5d3026e5b384a992bd21572672a5b722fc5f9f",
+    "decision": "release-blocked",
+    "patternReviews": 36,
+    "releaseBlockers": 5,
+    "preservationCheck": "pass",
+    "disposition": "The original blocking audit remains immutable evidence of the defects that drove remediation. This final report closes only the remediated 13/23 split under the approved phase boundary and does not rewrite the historical findings."
+  },
+  "machineEvidence": [
+    {
+      "command": "node design-library/scripts/compile-patterns.mjs",
+      "exitCode": 0,
+      "result": "Compiled 36 pattern records: 13 released and 23 quarantined; 10 relations."
+    },
+    {
+      "command": "node design-library/scripts/run-pattern-contract-tests.mjs",
+      "exitCode": 0,
+      "result": "14 of 14 checks passed with zero failures."
+    },
+    {
+      "command": "node design-library/scripts/validate-library.mjs --phase=P3",
+      "exitCode": 0,
+      "result": "All 16 schemas meta-validated and strict-compiled; all 16 positive and 16 negative schema fixtures passed; the 21-work, 105-observation, 210-claim evidence baseline remained closed."
+    },
+    {
+      "command": "independent read-only record-set, evidence-edge, relation-cycle, quarantine-binding, fixture, originality-boundary, retrieval-ownership, and prior-review hash audit",
+      "exitCode": 0,
+      "result": "36/13/23, 23 exact quarantine bindings, 10 valid relations with zero directed cycles, 67 resolved fixtures, no independent audit errors."
+    }
+  ],
+  "auditResults": {
+    "strictSchema": {
+      "adjudication": "pass",
+      "draft": "2020-12",
+      "metaValidatedSchemas": 16,
+      "strictCompiledSchemas": 16,
+      "positiveFixturesPassed": 16,
+      "negativeFixturesPassed": 16,
+      "patternRecordsValidated": 36,
+      "finding": "The formal design-pattern schema strict-compiles under Ajv 2020, and every generated pattern validates against it."
+    },
+    "maturitySplit": {
+      "adjudication": "pass",
+      "totalPatterns": 36,
+      "releasedPatterns": 13,
+      "reviewedPatterns": 23,
+      "releasedAutoSelectable": 13,
+      "reviewedAutoSelectable": 0,
+      "finding": "Status, autoSelectable, and quarantine markers agree for every record. The two rejected stable-ID rebinds remain reviewed; no record is released by a contradictory marker."
+    },
+    "evidenceAndCounterevidence": {
+      "adjudication": "pass",
+      "works": 21,
+      "observations": 105,
+      "claims": 210,
+      "supplementalObservationsImported": 0,
+      "supplementalClaimsImported": 0,
+      "releasedMinimumDirectWorks": 2,
+      "releasedPatternsWithBoundedCounterevidence": 13,
+      "finding": "Every released pattern closes its observationRefs to the exact supportingWorkRefs set, has direct support from at least two distinct included works, and maps each counterEvidenceRef one-to-one to an explicit boundary. The rejected supplemental evidence remains excluded, so no failed draft edge was used to manufacture release support."
+    },
+    "quarantineClosure": {
+      "adjudication": "pass",
+      "reviewedPatterns": 23,
+      "quarantineRegisterRecords": 23,
+      "duplicateRegisterIds": 0,
+      "setDifference": [],
+      "valueMismatches": [],
+      "falseProvenanceClosedAssertions": 0,
+      "finding": "The quarantine register exactly covers the reviewed set and lowers losslessly into quarantineReason, quarantineIssueRefs, quarantineEvidenceDisposition, and promotionRequirements. Reasons distinguish single-work support, incomplete causal traces, unresolved cross-title identity, missing runtime contracts, and taxonomy collisions rather than using a generic schema-only exclusion."
+    },
+    "relationsAndComposition": {
+      "adjudication": "pass",
+      "relationRecords": 10,
+      "releasedRelations": 4,
+      "duplicateRelationIds": 0,
+      "invalidEndpoints": 0,
+      "unresolvedEvidenceRefs": 0,
+      "releasedRelationsTouchingReviewedPatterns": 0,
+      "directedRelationCycles": 0,
+      "compositionConflictClosure": "pass",
+      "finding": "All relation endpoints and evidence references resolve. Directed specializes/composed-of edges are acyclic. Composition conflicts and selection exclusions are reciprocal and no released pattern depends on a reviewed pattern."
+    },
+    "losslessCallableContracts": {
+      "adjudication": "pass",
+      "releasedMaturityContracts": 13,
+      "releasedRecords": 13,
+      "reviewedMaturityContractsCompiledToQuarantine": 2,
+      "patternsWithDetectScoreInstantiateEmitValidate": 36,
+      "releasedPatternsWithGameplayPerformanceStageEvaluationContracts": 13,
+      "releasedPatternsWithGameplayPerformanceStageCompileEvaluationEmitOwners": 13,
+      "fixtureRegistryRecords": 67,
+      "requiredReleasedTestKinds": [
+        "selection",
+        "runtime",
+        "route",
+        "originality"
+      ],
+      "finding": "Required-signal count and minimumMatches, strict less-than boundaries, score paths/weights/rules, parameter types/source paths/constraints, fixture refs, and assertion operators/expected values survive compilation exactly. All required parameter and effect references resolve. Fixture payload existence and contract assertions are P4 evidence; actual whole-game route and experience execution remains downstream validation rather than being falsely claimed here."
+    },
+    "selectionDiscrimination": {
+      "adjudication": "pass",
+      "releasedNormalizedScoreShapes": 13,
+      "uniqueReleasedNormalizedScoreShapes": 13,
+      "familySubtypeAndPrecedenceCollisions": 0,
+      "maximumSupportCount": 3,
+      "finding": "The earlier template-shaped selector defect is closed: every released score shape is distinct, family subtypes and precedence rules discriminate adjacent patterns, and co-selection remains bounded by the locked 1+3 composition rule."
+    },
+    "staticOriginalityGovernance": {
+      "adjudication": "pass",
+      "p1ThroughP6BlockingChecks": [
+        "forbidden-surface-scan",
+        "minimum-transformation-axes",
+        "minimum-structural-deltas",
+        "clone-risk-veto-declarations",
+        "production-index-source-isolation"
+      ],
+      "minimumReleasedTransformationAxes": 6,
+      "minimumReleasedStructuralDeltaAxes": 5,
+      "patternsMissingForbiddenSurfaceOrCompositionVeto": 0,
+      "patternBlindEvidenceStatus": "historical-diagnostic-nonblocking",
+      "historicalReleaseSetAligned": false,
+      "staleHistoricalPatternRefs": [
+        "pattern.knowledge-gated-revisit",
+        "pattern.multi-solution-state-graph"
+      ],
+      "p8WholeGameBlindGate": "required-blocking",
+      "finding": "All patterns retain static transfer prohibitions, at least three expression transformations, at least three structural deltas, clone-risk checks, and composition vetoes. Historical individual and combination blind cases are deliberately not treated as current-release proof. P8 must blind-review the frozen complete game with at least two independent reviewers."
+    },
+    "retrievalOwnership": {
+      "adjudication": "pass-with-p5-owned-action",
+      "currentPreReleaseRecords": 15,
+      "staleReviewedPatternRefs": [
+        "pattern.knowledge-gated-revisit",
+        "pattern.multi-solution-state-graph"
+      ],
+      "p4Disposition": "nonblocking diagnostic because P4 owns pattern maturity, not production index publication",
+      "p5RequiredAction": "compile-release must regenerate the faceted and retrieval indexes from the exact 13 released records, exclude all 23 reviewed records and all source/observation/fingerprint fields, then run the P5 production-index hard gate before publication.",
+      "finding": "The stale pre-release index is transparently reported and is not used to claim a P5 release. Its cleanup has one explicit downstream owner and remains blocking at P5."
+    },
+    "stableIdAndMigration": {
+      "adjudication": "pass",
+      "reviewedStableIds": [
+        "pattern.knowledge-gated-revisit@1.0.0",
+        "pattern.multi-solution-state-graph@1.0.0"
+      ],
+      "breakingMigration": "migration.pattern.reward-expands-future-possibility.1.1.0-to-2.0.0",
+      "migrationStatus": "verified",
+      "migrationFixtureHashesVerified": 2,
+      "finding": "The two proposed identity replacements were not smuggled into release. reward-expands-future-possibility is released only as 2.0.0 with a machine-readable manual-reinstantiation boundary and byte-verified fixtures, satisfying the conditional prior adjudication."
+    }
+  },
+  "releasedPatternAdjudications": [
+    { "patternId": "pattern.capability-recontextualizes-old-space", "version": "1.1.0", "directWorks": 2, "directObservations": 2, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 6, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.state-axis-rewrites-routes", "version": "1.1.0", "directWorks": 3, "directObservations": 3, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 8, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.parallel-state-comparison", "version": "1.1.0", "directWorks": 2, "directObservations": 2, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 7, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.landmark-promises-future-use", "version": "1.1.0", "directWorks": 2, "directObservations": 2, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 8, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.local-rule-development-arc", "version": "1.1.0", "directWorks": 4, "directObservations": 4, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 7, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.object-role-composition", "version": "1.1.0", "directWorks": 2, "directObservations": 2, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 8, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.constrained-vehicle-route", "version": "1.1.0", "directWorks": 2, "directObservations": 2, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 8, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.reward-expands-future-possibility", "version": "2.0.0", "directWorks": 2, "directObservations": 2, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 6, "structuralDeltas": 5, "adjudication": "approve-with-verified-breaking-migration" },
+    { "patternId": "pattern.optional-secret-readability", "version": "1.1.0", "directWorks": 2, "directObservations": 2, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 8, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.npc-reacts-to-world-state", "version": "1.1.0", "directWorks": 2, "directObservations": 2, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 7, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.embodied-world-change-reveal", "version": "1.1.0", "directWorks": 2, "directObservations": 2, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 7, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.action-first-onboarding", "version": "1.1.0", "directWorks": 2, "directObservations": 2, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 8, "structuralDeltas": 5, "adjudication": "approve" },
+    { "patternId": "pattern.dense-overworld-as-challenge-space", "version": "1.1.0", "directWorks": 3, "directObservations": 3, "counterEvidence": 1, "hooks": 5, "departmentContracts": 4, "testKinds": 4, "transformationAxes": 7, "structuralDeltas": 5, "adjudication": "approve" }
+  ],
+  "quarantineAdjudications": [
+    { "patternId": "pattern.knowledge-gated-revisit", "evidenceDisposition": "cross-title-partial-not-closed", "adjudication": "verified-nonselectable-stable-id-preserved" },
+    { "patternId": "pattern.finite-schedule-loop", "evidenceDisposition": "single-work-direct-only", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.loop-shortcut-memory", "evidenceDisposition": "single-work-direct-only", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.hub-spoke-return", "evidenceDisposition": "cross-title-partial-not-closed", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.dungeon-macro-state-machine", "evidenceDisposition": "cross-title-partial-not-closed", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.safe-rule-experiment", "evidenceDisposition": "single-work-direct-only", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.environmental-chain-reaction", "evidenceDisposition": "no-complete-single-work-trace", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.multi-solution-state-graph", "evidenceDisposition": "cross-title-partial-not-closed", "adjudication": "verified-nonselectable-stable-id-preserved" },
+    { "patternId": "pattern.copy-redeploy-affordance", "evidenceDisposition": "single-work-direct-only", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.perspective-shift-reframes-space", "evidenceDisposition": "plausible-cross-title-still-unadjudicated", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.player-authored-map-memory", "evidenceDisposition": "plausible-cross-title-still-unadjudicated", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.resource-expedition-return", "evidenceDisposition": "single-work-direct-only", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.boss-rule-synthesis", "evidenceDisposition": "plausible-cross-title-still-unadjudicated", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.threat-as-navigation-teacher", "evidenceDisposition": "single-work-direct-only", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.npc-schedule-as-information", "evidenceDisposition": "single-work-direct-only", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.companion-contextual-verb", "evidenceDisposition": "plausible-cross-title-still-unadjudicated", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.threshold-performance-cue", "evidenceDisposition": "no-complete-single-work-trace", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.agency-performance-breathing", "evidenceDisposition": "no-complete-single-work-trace", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.reversible-reset-knowledge-retention", "evidenceDisposition": "single-work-direct-only", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.final-exam-recombination", "evidenceDisposition": "no-complete-single-work-trace", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.systemic-verb-toolkit", "evidenceDisposition": "no-complete-single-work-trace", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.cooperative-role-interdependence", "evidenceDisposition": "cross-title-evidence-runtime-blocked", "adjudication": "verified-nonselectable" },
+    { "patternId": "pattern.asymmetric-screen-information", "evidenceDisposition": "no-complete-single-work-trace", "adjudication": "verified-nonselectable" }
+  ],
+  "nonblockingDiagnostics": [
+    {
+      "diagnosticId": "P4-DIAG-HISTORICAL-BLIND-STALE",
+      "finding": "Historical pattern-level individual and combination blind evidence still mentions knowledge-gated-revisit and multi-solution-state-graph after both were quarantined.",
+      "disposition": "Retain as historical diagnostic evidence. Do not regenerate it to manufacture a P4 pass. P8 will run blocking blind attribution against the frozen whole game."
+    },
+    {
+      "diagnosticId": "P4-DIAG-PRE-P5-RETRIEVAL-STALE",
+      "finding": "The pre-release retrieval index still has 15 records and includes knowledge-gated-revisit and multi-solution-state-graph.",
+      "disposition": "P5 compile-release must regenerate the index from exactly 13 released records and pass the production-index isolation gate before publication."
+    },
+    {
+      "diagnosticId": "P4-DIAG-RUNTIME-EXECUTION-DOWNSTREAM",
+      "finding": "P4 proves typed contract and fixture closure, not execution inside a complete shipped game.",
+      "disposition": "P7 owns candidate generation and machine preflight; P8 owns whole-game route, experience, originality, reproducibility, and rollback validation."
+    }
+  ],
+  "summary": {
+    "adjudication": "pass",
+    "releasedPatternsApproved": 13,
+    "quarantinedPatternsVerified": 23,
+    "blockers": [],
+    "releaseBoundary": "P4 cross-title distillation is approved for handoff to P5. This report does not approve a production retrieval index, Library/Pack release hash, Skill workflow, playable game, whole-game originality, or Stable status."
+  }
+}

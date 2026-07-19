@@ -1,0 +1,121 @@
+{
+  "workId": "work.phantom-hourglass",
+  "author": "Corpus Analyst Rowan-C",
+  "reviewer": "Independent Reviewer Alder-C",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player is a sea-roaming rescuer and practical navigator who turns sketches, charts, and a stylus-controlled hero into progress across an unfamiliar archipelago.",
+    "dimension.core-loop": "The recurring cadence alternates plotting a voyage, landing on an island, solving a bounded objective, gaining a chart or capability, and returning to the sea with a wider choice of destinations.",
+    "dimension.verbs": "Touching directs movement and inspection, drawn strokes produce attacks or paths, and acquired tools extend the vocabulary with ranged, digging, grappling, and context-sensitive actions.",
+    "dimension.world-state": "Recovered sea charts expose new sectors, dungeon results unlock routes and tools, collected sand extends protected time, and ship equipment changes voyage resilience.",
+    "dimension.topology": "The world is a node-and-route archipelago whose islands contain compact local graphs, while a repeatedly entered central temple acts as a deepening progression spine.",
+    "dimension.gating-revisit": "Sea sectors, island obstacles, and deeper temple floors are gated by charts, tools, protected-time capacity, and learned shortcuts that make earlier spaces cheaper to traverse.",
+    "dimension.puzzle-information": "The game distributes clues across scenery, dialogue, the upper display, and maps that accept player notes, allowing remembered symbols and spatial relationships to become manipulable information.",
+    "dimension.dungeon-structure": "Island dungeons provide distinct tool-and-boss arcs, while the recurring timed temple layers stealth, safe areas, keys, shortcuts, and newly reachable depths into a cumulative challenge.",
+    "dimension.exploration-reward": "Optional islands, salvaged treasure, hidden chests, ship parts, health growth, and additional sand convert curiosity into either immediate supplies or longer future expeditions.",
+    "dimension.growth-economy": "Rupees, consumables, treasure, health, hourglass sand, and interchangeable ship parts create linked personal and vessel economies rather than a single linear power track.",
+    "dimension.combat-boss": "Stylus attacks emphasize target position and stroke direction, while enemies and bosses ask the player to combine direct movement with a recently learned tool or arena rule.",
+    "dimension.npc-quest": "Ciela, Linebeck, island residents, and service characters supply motives, transport, clues, trades, and optional errands that repeatedly redirect the voyage graph.",
+    "dimension.narrative-performance": "The search for the missing Tetra is staged through departures, arrivals, companion exchanges, repeated temple descents, and boss resolutions that return agency quickly to navigation.",
+    "dimension.camera-blocking": "A mostly overhead play view keeps touch targets and room causality readable, while the second screen can carry map or status information without covering the active scene.",
+    "dimension.teaching-feedback": "Direct cursor-to-avatar response, visible route lines, map marks, safe-zone color, a draining time meter, and item-specific audiovisual cues expose the result of each new rule.",
+    "dimension.ui-input": "The stylus is the primary pointer for travel, combat, interaction, item use, route drawing, and annotation, with the two displays separating action from reference information.",
+    "dimension.recovery-accessibility": "Safe areas pause the central temple's time pressure, opened shortcuts reduce repeated work, and leaving to gather more sand or equipment provides a recoverable alternative to brute-force repetition.",
+    "dimension.perspective-implementation": "The 2.5D overhead view maps touch coordinates directly to ground positions and preserves readable silhouettes, while sea travel shifts scale without abandoning map-led navigation.",
+    "dimension.hardware-multiplayer": "The original uses the DS touch screen, dual displays, microphone, local wireless, download play, and online services; its separate two-player mode turns drawn paths into asymmetric pursuit control.",
+    "dimension.production-runtime": "Reproduction requires gesture and path recognition, persistent handwritten map layers, dual-screen layouts, boat navigation, timed protected zones, companion state, and deterministic dungeon shortcuts."
+  },
+  "observationThemes": [
+    {
+      "key": "stylus-unifies-motion-and-strike",
+      "dimensions": ["dimension.player-fantasy", "dimension.verbs", "dimension.ui-input", "dimension.hardware-multiplayer"],
+      "context": "During ordinary island traversal, the touch screen presents Link, nearby terrain, enemies, and interactive targets in one pointer-controlled field.",
+      "preconditions": ["The player is in a controllable field or dungeon area", "A destination, target, or nearby enemy is visible"],
+      "playerInput": ["Touch a ground position to move", "Trace or tap near a target to attack or interact"],
+      "before": ["Link is stationary or following an earlier destination", "The target has not been reached or affected"],
+      "action": ["Use the stylus position and stroke as the command"],
+      "after": ["Link follows the indicated path or performs the contextual action", "The target changes state if the command is valid"],
+      "feedback": ["Avatar motion follows the pointer destination", "Attack motion, hit response, or interaction presentation confirms recognition"],
+      "consequences": ["Navigation, combat, and inspection share one learnable physical vocabulary", "The same path-drawing hardware can support a separate competitive control rule"],
+      "factualDescription": "The original game uses stylus touches and strokes as the primary means to move Link, inspect the scene, and perform combat actions on the active touch display.",
+      "interpretation": "A single spatial input language reduces mode switching and makes the player feel like a navigator issuing direct marks on the adventure surface.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "chart-expands-voyage-graph",
+      "dimensions": ["dimension.core-loop", "dimension.world-state", "dimension.topology", "dimension.exploration-reward"],
+      "context": "After securing a new sea chart or equivalent voyage information, previously unknown waters and island destinations become available from the ship.",
+      "preconditions": ["The player has completed the required local objective", "A new chart sector has been obtained"],
+      "playerInput": ["Open the sea chart", "Draw a navigable route toward a newly shown destination", "Begin sailing"],
+      "before": ["The destination is absent from the usable voyage graph", "The current set of islands limits further objectives"],
+      "action": ["Register the chart and commit a route across the newly exposed sector"],
+      "after": ["Additional sea nodes and routes are usable", "A new island objective can be entered"],
+      "feedback": ["The chart visibly gains geography and destinations", "The ship follows the plotted line while the new sector is presented at travel scale"],
+      "consequences": ["The explore-island-return cadence begins another cycle", "Optional detours in the expanded sector can yield treasure and vessel improvements"],
+      "factualDescription": "Progress awards sea-chart information that reveals additional waters; the player then draws a ship route and can reach newly available islands and optional discoveries.",
+      "interpretation": "Making world expansion both a visible map-state change and a player-authored route turns narrative progress into an immediately legible increase in navigational agency.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "timed-temple-revisit-compounds",
+      "dimensions": ["dimension.gating-revisit", "dimension.dungeon-structure", "dimension.recovery-accessibility", "dimension.production-runtime"],
+      "context": "The recurring central temple drains protected time outside designated safe areas and is revisited after the player gains more sand, tools, or shortcuts.",
+      "preconditions": ["The temple is accessible", "The hourglass contains a finite amount of protective sand"],
+      "playerInput": ["Leave a safe area and traverse solved or newly reachable rooms", "Use an acquired shortcut or tool", "Return to safety before the resource is exhausted"],
+      "before": ["Deeper floors are blocked by capability, route cost, or insufficient protected time", "Previously cleared rooms still lie on the descent"],
+      "action": ["Spend protected time while applying accumulated knowledge and capabilities"],
+      "after": ["A deeper checkpoint, chart, or shortcut is reached", "Later visits can bypass part of the repeated route"],
+      "feedback": ["The hourglass meter visibly drains or pauses", "Safe flooring and opened shortcuts clearly change traversal pressure"],
+      "consequences": ["Earlier mastery becomes measurable time saved on later descents", "A failed or inefficient attempt can be answered by leaving, improving capacity, and retrying"],
+      "factualDescription": "The central temple is revisited under a finite protection timer; safe zones halt the drain, while later tools, additional sand, and shortcuts permit deeper and faster traversal.",
+      "interpretation": "A repeated dungeon can feel progressive when persistent shortcuts and player fluency convert old rooms from repetition into an efficiency test with recoverable preparation options.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "map-note-becomes-puzzle-memory",
+      "dimensions": ["dimension.puzzle-information", "dimension.camera-blocking", "dimension.teaching-feedback", "dimension.perspective-implementation"],
+      "context": "A clue encountered in one location must be retained or compared with spatial information shown on the map or second display.",
+      "preconditions": ["A relevant symbol, route, order, or landmark has been observed", "The map accepts freehand marks"],
+      "playerInput": ["Open or consult the map", "Write a note, symbol, or route on it", "Apply the recorded information at the later obstacle"],
+      "before": ["The clue and its application are separated by time or space", "The correct relationship is not yet externalized"],
+      "action": ["Convert observed information into a persistent player-authored map mark"],
+      "after": ["The clue remains visible for comparison", "The later puzzle can be acted on without relying only on memory"],
+      "feedback": ["The handwritten mark remains over the map", "The active overhead scene visibly responds when the recorded rule is applied"],
+      "consequences": ["Information gathering becomes an explicit player verb", "The dual-screen overhead presentation supports reference without obscuring the causal scene"],
+      "factualDescription": "The map can retain freehand stylus notes, allowing the player to record observed spatial or symbolic information and consult it while solving later obstacles.",
+      "interpretation": "Treating note-taking as part of the interface lets puzzles test observation and translation rather than undocumented recall, while preserving player-authored reasoning.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "boss-resolution-funds-next-voyage",
+      "dimensions": ["dimension.growth-economy", "dimension.combat-boss", "dimension.npc-quest", "dimension.narrative-performance"],
+      "context": "At the end of an island or temple objective, a boss encounter tests the area's tool rule before the companions resume the voyage.",
+      "preconditions": ["The local dungeon route is complete", "The relevant item or interaction rule has been learned"],
+      "playerInput": ["Read the boss's vulnerable state", "Use movement, stylus attacks, and the relevant tool", "Collect the resulting progression reward"],
+      "before": ["The local story objective remains unresolved", "The next voyage sector or resource gain is unavailable"],
+      "action": ["Create and exploit the boss vulnerability until the encounter resolves"],
+      "after": ["The boss is defeated and the local objective closes", "Health, sand, treasure, or voyage information advances the campaign"],
+      "feedback": ["Arena reactions and damage states confirm the effective tactic", "Companion dialogue and reward presentation mark the return from combat to travel"],
+      "consequences": ["The player is better prepared for the repeated temple and sea hazards", "The rescue journey receives another performed beat rather than only a textual update"],
+      "factualDescription": "Major local objectives culminate in bosses that use the area's learned interaction rule; victory grants progression and returns Link and his companions to the wider voyage.",
+      "interpretation": "Closing each island arc with a rule exam and a concrete travel benefit binds combat mastery, companion motivation, and the navigation economy into one cadence.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "Player-authored route lines and notes can make a map an action surface rather than a passive record.",
+    "A repeatedly visited challenge space can show growth through saved time, shortcuts, and increased safe-resource capacity.",
+    "Alternating compact island objectives with plotted travel can keep a broad world legible as a node-and-route adventure."
+  ],
+  "uniqueOrNonportable": [
+    "The named hourglass, central temple identity, exact floor sequence, character identities, archipelago layout, ship designs, dialogue, and audiovisual motifs are nonportable surface expression.",
+    "Specific glyphs, touch-screen puzzle answers, boss solutions, chart geography, and handwritten clue content remain evidence only; only the abstract information transaction may transfer."
+  ],
+  "openQuestions": [
+    "A later variant review should separate original online-service behavior from currently unavailable Nintendo Wi-Fi functionality and emulated rereleases."
+  ]
+}

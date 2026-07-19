@@ -1,0 +1,128 @@
+{
+  "mapVersion": "1.0.0",
+  "generatedAt": "2026-07-17",
+  "gateUseOnly": true,
+  "blindCasesRef": "benchmarks/originality-blind-applications.json",
+  "mappings": [
+    {
+      "caseId": "blind.case.0075bb0a6808a50b9d70",
+      "patternId": "pattern.state-axis-rewrites-routes"
+    },
+    {
+      "caseId": "blind.case.0083be350d3fda8ced9a",
+      "patternId": "pattern.constrained-vehicle-route"
+    },
+    {
+      "caseId": "blind.case.0876c381e8cbe2f3de82",
+      "patternId": "pattern.action-first-onboarding"
+    },
+    {
+      "caseId": "blind.case.0d3eef974ea2d55f26ba",
+      "patternId": "pattern.multi-solution-state-graph"
+    },
+    {
+      "caseId": "blind.case.224b7775b6bb85f4f8dc",
+      "patternId": "pattern.parallel-state-comparison"
+    },
+    {
+      "caseId": "blind.case.3b1402213c068d52e260",
+      "patternId": "pattern.constrained-vehicle-route"
+    },
+    {
+      "caseId": "blind.case.40ff7501c1ccd837ccd9",
+      "patternId": "pattern.npc-reacts-to-world-state"
+    },
+    {
+      "caseId": "blind.case.41335aad56aa02fb7750",
+      "patternId": "pattern.dense-overworld-as-challenge-space"
+    },
+    {
+      "caseId": "blind.case.49d49aa1c2ba481216b1",
+      "patternId": "pattern.npc-reacts-to-world-state"
+    },
+    {
+      "caseId": "blind.case.51fdbd1ce696fc287bc4",
+      "patternId": "pattern.action-first-onboarding"
+    },
+    {
+      "caseId": "blind.case.53b628ae74274b897540",
+      "patternId": "pattern.dense-overworld-as-challenge-space"
+    },
+    {
+      "caseId": "blind.case.6d65f8861ed1bf06dcc5",
+      "patternId": "pattern.knowledge-gated-revisit"
+    },
+    {
+      "caseId": "blind.case.7487b163a1e18870b6ef",
+      "patternId": "pattern.parallel-state-comparison"
+    },
+    {
+      "caseId": "blind.case.788d8afca0b073fedc81",
+      "patternId": "pattern.landmark-promises-future-use"
+    },
+    {
+      "caseId": "blind.case.79d16d5fc3327f9eaf4a",
+      "patternId": "pattern.local-rule-development-arc"
+    },
+    {
+      "caseId": "blind.case.7a62776e0f96d3be90f1",
+      "patternId": "pattern.capability-recontextualizes-old-space"
+    },
+    {
+      "caseId": "blind.case.92f38b9e0a229f1967c3",
+      "patternId": "pattern.optional-secret-readability"
+    },
+    {
+      "caseId": "blind.case.93fee44cd1d9f8e7db74",
+      "patternId": "pattern.landmark-promises-future-use"
+    },
+    {
+      "caseId": "blind.case.990c8b778b711efad08e",
+      "patternId": "pattern.capability-recontextualizes-old-space"
+    },
+    {
+      "caseId": "blind.case.a0aef5742f729817e45d",
+      "patternId": "pattern.state-axis-rewrites-routes"
+    },
+    {
+      "caseId": "blind.case.a302189e8d6b29f69d96",
+      "patternId": "pattern.reward-expands-future-possibility"
+    },
+    {
+      "caseId": "blind.case.ace83c99e505bc6badf4",
+      "patternId": "pattern.object-role-composition"
+    },
+    {
+      "caseId": "blind.case.aea0afb1f55f0744b9b8",
+      "patternId": "pattern.local-rule-development-arc"
+    },
+    {
+      "caseId": "blind.case.b22c12c8e4360379055b",
+      "patternId": "pattern.embodied-world-change-reveal"
+    },
+    {
+      "caseId": "blind.case.c1082c7dce4b426069ee",
+      "patternId": "pattern.knowledge-gated-revisit"
+    },
+    {
+      "caseId": "blind.case.cfabb32ffcf9dbea36dd",
+      "patternId": "pattern.embodied-world-change-reveal"
+    },
+    {
+      "caseId": "blind.case.d3b9ba204b7810ba9d63",
+      "patternId": "pattern.optional-secret-readability"
+    },
+    {
+      "caseId": "blind.case.e8423455232d943dd25a",
+      "patternId": "pattern.object-role-composition"
+    },
+    {
+      "caseId": "blind.case.f79687cf5965cdf233ad",
+      "patternId": "pattern.reward-expands-future-possibility"
+    },
+    {
+      "caseId": "blind.case.fd3c3ba878029ef2def5",
+      "patternId": "pattern.multi-solution-state-graph"
+    }
+  ]
+}

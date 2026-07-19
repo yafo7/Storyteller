@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/design-library/schemas/1.0.0/pack-manifest.schema.json",
+  "title": "V0.3 inspiration pack manifest draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "packId", "packVersion", "status", "hashPolicy", "scope", "schemaVersions", "content", "coverage", "governance", "fileManifest"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "packId": { "type": "string", "pattern": "^pack\\.[a-z0-9-]+$" },
+    "packVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "status": { "enum": ["alpha", "coverage-alpha", "beta", "release-candidate", "stable", "deprecated"] },
+    "hashPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "canonicalizationVersion", "treeHash"],
+      "properties": {
+        "algorithm": { "const": "canonical-tree-sha256/v1" },
+        "canonicalizationVersion": { "const": "1" },
+        "treeHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scopeId", "scopeVersion", "scopeHash"],
+      "properties": {
+        "scopeId": { "type": "string", "pattern": "^scope\\." },
+        "scopeVersion": { "type": "string" },
+        "scopeHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    },
+    "schemaVersions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scope", "work", "source", "claim", "observation", "dossier", "relation", "pattern", "selection", "lock", "benchmark", "pack", "taxonomy", "adapter", "migration", "libraryRelease"],
+      "properties": {
+        "scope": { "type": "string" },
+        "work": { "type": "string" },
+        "source": { "type": "string" },
+        "claim": { "type": "string" },
+        "observation": { "type": "string" },
+        "dossier": { "type": "string" },
+        "relation": { "type": "string" },
+        "pattern": { "type": "string" },
+        "selection": { "type": "string" },
+        "lock": { "type": "string" },
+        "benchmark": { "type": "string" },
+        "pack": { "type": "string" },
+        "taxonomy": { "type": "string" },
+        "adapter": { "type": "string" },
+        "migration": { "type": "string" },
+        "libraryRelease": { "type": "string" }
+      }
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["works", "sources", "observations", "claims", "dossiers", "patterns", "relations", "adapters", "benchmarks"],
+      "properties": {
+        "works": { "type": "integer", "minimum": 0 },
+        "sources": { "type": "integer", "minimum": 0 },
+        "observations": { "type": "integer", "minimum": 0 },
+        "claims": { "type": "integer", "minimum": 0 },
+        "dossiers": { "type": "integer", "minimum": 0 },
+        "patterns": { "type": "integer", "minimum": 0 },
+        "relations": { "type": "integer", "minimum": 0 },
+        "adapters": { "type": "integer", "minimum": 0 },
+        "benchmarks": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scopeCoverage", "workCoverage", "dimensionCoverage", "evidenceClosure", "observationDisposition", "patternReadiness"],
+      "properties": {
+        "scopeCoverage": { "type": "number", "minimum": 0, "maximum": 1 },
+        "workCoverage": { "type": "number", "minimum": 0, "maximum": 1 },
+        "dimensionCoverage": { "type": "number", "minimum": 0, "maximum": 1 },
+        "evidenceClosure": { "type": "number", "minimum": 0, "maximum": 1 },
+        "observationDisposition": { "type": "number", "minimum": 0, "maximum": 1 },
+        "patternReadiness": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidencePolicyVersion", "originalityPolicyVersion", "mergePolicyVersion", "migrationRefs", "releaseNotes"],
+      "properties": {
+        "evidencePolicyVersion": { "type": "string" },
+        "originalityPolicyVersion": { "type": "string" },
+        "mergePolicyVersion": { "type": "string" },
+        "migrationRefs": { "type": "array", "items": { "type": "string" } },
+        "releaseNotes": { "type": "string", "minLength": 20 }
+      }
+    },
+    "fileManifest": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "kind", "bytes", "sha256"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["scope", "work", "source", "claim", "observation", "dossier", "relation", "pattern", "adapter", "taxonomy", "index", "benchmark", "governance", "report"] },
+          "bytes": { "type": "integer", "minimum": 1 },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "stable" } }, "required": ["status"] },
+      "then": {
+        "properties": {
+          "content": {
+            "type": "object",
+            "properties": {
+              "works": { "type": "integer", "minimum": 1 },
+              "sources": { "type": "integer", "minimum": 1 },
+              "observations": { "type": "integer", "minimum": 1 },
+              "claims": { "type": "integer", "minimum": 1 },
+              "dossiers": { "type": "integer", "minimum": 1 },
+              "patterns": { "type": "integer", "minimum": 1 },
+              "relations": { "type": "integer", "minimum": 1 },
+              "adapters": { "type": "integer", "minimum": 1 },
+              "benchmarks": { "type": "integer", "minimum": 1 }
+            }
+          },
+          "coverage": {
+            "type": "object",
+            "properties": {
+              "scopeCoverage": { "const": 1 },
+              "workCoverage": { "const": 1 },
+              "dimensionCoverage": { "type": "number", "minimum": 0.95 },
+              "evidenceClosure": { "const": 1 },
+              "observationDisposition": { "const": 1 },
+              "patternReadiness": { "const": 1 }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

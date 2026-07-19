@@ -1,0 +1,721 @@
+{
+  "schemaVersion": "1.0.0",
+  "patternId": "pattern.calibration.stateful-revisit",
+  "patternVersion": "0.2.0",
+  "name": "Calibration-only stateful revisit vertical slice",
+  "kind": "world-state-rule",
+  "status": "candidate",
+  "supportClass": "cross-title",
+  "autoSelectable": false,
+  "quarantineReason": "This P2 vertical-slice artifact validates the five-hook contract and is excluded from production retrieval and P4 maturity counts.",
+  "quarantineIssueRefs": [],
+  "quarantineEvidenceDisposition": null,
+  "promotionRequirements": null,
+  "flavorClass": "zelda-discriminative",
+  "intent": {
+    "designProblem": "A small map needs meaningful transformation without becoming an unrelated set of replacement scenes.",
+    "experienceGoals": [
+      "experience.rule-mastery",
+      "experience.world-recontextualization",
+      "experience.consequential-agency"
+    ],
+    "principle": "One visible, reversible state axis consistently changes route affordances across stable space."
+  },
+  "selection": {
+    "familyId": "family.calibration.stateful-revisit",
+    "selectionRole": "core",
+    "subtypeId": "calibration-only",
+    "exclusiveWith": [],
+    "precedence": [
+      "Priority 85: Select as core when the state axis causally changes route reachability; comparison alone is a specialization.",
+      "Evaluate before pattern.parallel-state-comparison."
+    ],
+    "maxCoSelections": 2,
+    "storySignals": [
+      {
+        "ruleId": "rule.state-axis-rewrites-routes.story.1",
+        "sourcePath": "$.storyModel.storySignals",
+        "operator": "contains",
+        "valueType": "string",
+        "expected": "signal.parallel-state"
+      },
+      {
+        "ruleId": "rule.state-axis-rewrites-routes.story.2",
+        "sourcePath": "$.storyModel.storySignals",
+        "operator": "contains",
+        "valueType": "string",
+        "expected": "signal.transformable-environment"
+      },
+      {
+        "ruleId": "rule.state-axis-rewrites-routes.story.3",
+        "sourcePath": "$.storyModel.storySignals",
+        "operator": "contains",
+        "valueType": "string",
+        "expected": "signal.revisited-place"
+      }
+    ],
+    "spatialSignals": [
+      {
+        "ruleId": "rule.state-axis-rewrites-routes.spatial.1",
+        "sourcePath": "$.storyModel.spatialSignals",
+        "operator": "contains",
+        "valueType": "string",
+        "expected": "signal.parallel-state"
+      },
+      {
+        "ruleId": "rule.state-axis-rewrites-routes.spatial.2",
+        "sourcePath": "$.storyModel.spatialSignals",
+        "operator": "contains",
+        "valueType": "string",
+        "expected": "signal.transformable-environment"
+      },
+      {
+        "ruleId": "rule.state-axis-rewrites-routes.spatial.3",
+        "sourcePath": "$.storyModel.spatialSignals",
+        "operator": "contains",
+        "valueType": "string",
+        "expected": "signal.revisited-place"
+      }
+    ],
+    "prerequisites": [
+      "$.storyModel.storySignals must satisfy contains \"signal.parallel-state\".",
+      "$.storyModel.storySignals must satisfy contains \"signal.transformable-environment\".",
+      "$.designEvidence.stateAxes[*].routeDeltaCount must satisfy greater-or-equal 2."
+    ],
+    "contraindications": [
+      "The two states are unrelated replacement maps",
+      "One state only reskins the other",
+      "The transition can irreversibly close every required route",
+      "$.designEvidence.stateAxes[*].transitionDomain equals \"continuous-heading\"",
+      "$.productProfile.spatialPromise equals \"unconstrained-open-navigation\""
+    ],
+    "abstainWhen": [
+      "The two states are unrelated replacement maps",
+      "One state only reskins the other",
+      "The transition can irreversibly close every required route"
+    ]
+  },
+  "effectPrimitives": [
+    {
+      "effectId": "effect.state-axis.apply-value",
+      "kind": "toggle-map-layer",
+      "preconditions": [
+        "$.world.stateAxis.transitionAllowed must satisfy equals against true before the authored transaction is accepted.",
+        "$.player.currentVerb must satisfy equals-ref against reference parameter.state-axis.transition before the authored transaction is accepted."
+      ],
+      "parameters": [
+        "parameter.state-axis.axis",
+        "parameter.state-axis.location",
+        "parameter.state-axis.transition"
+      ],
+      "postconditions": [
+        "$.world.locations[location].activeAxisValue must satisfy equals against \"requested-value\" before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract.",
+        "$.world.locations[location].visualCollisionInteractionVersion must satisfy internally-consistent against true before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract."
+      ],
+      "observableFeedback": [
+        "visual",
+        "audio"
+      ],
+      "rollback": "reversible"
+    },
+    {
+      "effectId": "effect.state-axis.recompute-routes",
+      "kind": "unlock-route",
+      "preconditions": [
+        "$.world.stateAxis.activeValue must satisfy equals against \"requested-value\" before the authored transaction is accepted."
+      ],
+      "parameters": [
+        "parameter.state-axis.axis",
+        "parameter.state-axis.route-set"
+      ],
+      "postconditions": [
+        "$.navigation.routeSet must satisfy matches-axis-table against true before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract.",
+        "$.navigation.requiredEscape must satisfy reachable against true before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract."
+      ],
+      "observableFeedback": [
+        "navigation"
+      ],
+      "rollback": "reversible"
+    },
+    {
+      "effectId": "effect.state-axis.close-tradeoff-routes",
+      "kind": "lock-route",
+      "preconditions": [
+        "$.navigation.routeSet.hasTradeoff must satisfy equals against true before the authored transaction is accepted."
+      ],
+      "parameters": [
+        "parameter.state-axis.axis",
+        "parameter.state-axis.route-set"
+      ],
+      "postconditions": [
+        "$.navigation.closedEdges must satisfy equals against \"axis-declared-closed-edges\" before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract.",
+        "$.navigation.requiredGoal must satisfy reachable against true before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract."
+      ],
+      "observableFeedback": [
+        "animation",
+        "ui"
+      ],
+      "rollback": "reversible"
+    }
+  ],
+  "hooks": {
+    "detect": {
+      "rules": [
+        {
+          "ruleId": "rule.state-axis-rewrites-routes.contract.1",
+          "sourcePath": "$.storyModel.storySignals",
+          "operator": "contains",
+          "valueType": "string",
+          "expected": "signal.parallel-state"
+        },
+        {
+          "ruleId": "rule.state-axis-rewrites-routes.contract.2",
+          "sourcePath": "$.storyModel.storySignals",
+          "operator": "contains",
+          "valueType": "string",
+          "expected": "signal.transformable-environment"
+        },
+        {
+          "ruleId": "rule.state-axis-rewrites-routes.contract.3",
+          "sourcePath": "$.designEvidence.stateAxes[*].routeDeltaCount",
+          "operator": "greater-or-equal",
+          "valueType": "number",
+          "expected": 2
+        }
+      ],
+      "minimumMatches": 3
+    },
+    "score": {
+      "criteria": [
+        {
+          "criterionId": "criterion.state-axis.consequence-consistency",
+          "weight": 0.35,
+          "evidencePath": "$.designEvidence.stateAxes[*].entityRuleCoverage",
+          "rule": "Reward the same axis value producing consistent consequences across terrain, blockers, and actors."
+        },
+        {
+          "criterionId": "criterion.state-axis.route-balance",
+          "weight": 0.25,
+          "evidencePath": "$.productProfile.routeGraphDeltas[*].openedAndClosedEdges",
+          "rule": "Reward meaningful tradeoffs rather than a universally better state."
+        },
+        {
+          "criterionId": "criterion.state-axis.legibility",
+          "weight": 0.2,
+          "evidencePath": "$.performancePlan.stateFeedbackChannels",
+          "rule": "Require at least two non-color channels that identify the active state."
+        },
+        {
+          "criterionId": "criterion.state-axis.recovery",
+          "weight": 0.2,
+          "evidencePath": "$.acceptance.routeMatrix.resetAndEscape",
+          "rule": "Require a reachable state-change or escape action from every required zone."
+        }
+      ],
+      "hardVetoes": [
+        "The two states are unrelated replacement maps",
+        "One state only reskins the other",
+        "The transition can irreversibly close every required route"
+      ]
+    },
+    "instantiate": {
+      "parameters": [
+        {
+          "parameterId": "parameter.state-axis.axis",
+          "valueType": "state-axis-ref",
+          "bindFrom": "story-model",
+          "sourcePath": "$.causalRules.stateAxes[*]",
+          "required": true,
+          "constraints": [
+            "Two to four enumerable values",
+            "Player can identify active value"
+          ]
+        },
+        {
+          "parameterId": "parameter.state-axis.location",
+          "valueType": "location-ref",
+          "bindFrom": "story-model",
+          "sourcePath": "$.locations[*]",
+          "required": true,
+          "constraints": [
+            "At least two zones share the axis"
+          ]
+        },
+        {
+          "parameterId": "parameter.state-axis.route-set",
+          "valueType": "route-ref-array",
+          "bindFrom": "product-profile",
+          "sourcePath": "$.routeGraph.edges[*]",
+          "required": true,
+          "constraints": [
+            "Includes an opened and a closed or altered edge"
+          ]
+        },
+        {
+          "parameterId": "parameter.state-axis.transition",
+          "valueType": "verb-ref",
+          "bindFrom": "designer-decision",
+          "sourcePath": "$.stateAxisDesign.transitionVerb",
+          "required": true,
+          "constraints": [
+            "Repeatable or recoverable",
+            "Canon-safe"
+          ]
+        }
+      ],
+      "minimumTransformationAxes": 8
+    },
+    "emit": {
+      "mappings": [
+        {
+          "mappingId": "mapping.state-axis-rewrites-routes.gameplay",
+          "owner": "gameplay",
+          "contractRef": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.state-axis-rewrites-routes.gameplay",
+          "effectRefs": [
+            "effect.state-axis.apply-value",
+            "effect.state-axis.recompute-routes",
+            "effect.state-axis.close-tradeoff-routes"
+          ],
+          "constraintRefs": [
+            "constraint.state-axis-rewrites-routes.canon",
+            "constraint.state-axis-rewrites-routes.originality",
+            "constraint.state-axis-rewrites-routes.recovery",
+            "parameter.state-axis.axis",
+            "parameter.state-axis.location",
+            "parameter.state-axis.route-set",
+            "parameter.state-axis.transition"
+          ]
+        },
+        {
+          "mappingId": "mapping.state-axis-rewrites-routes.performance",
+          "owner": "performance",
+          "contractRef": "performance-design/v03",
+          "targetPath": "$.patternApplications.state-axis-rewrites-routes.performance",
+          "effectRefs": [
+            "effect.state-axis.apply-value",
+            "effect.state-axis.recompute-routes",
+            "effect.state-axis.close-tradeoff-routes"
+          ],
+          "constraintRefs": [
+            "constraint.state-axis-rewrites-routes.canon",
+            "constraint.state-axis-rewrites-routes.originality",
+            "constraint.state-axis-rewrites-routes.recovery",
+            "parameter.state-axis.axis",
+            "parameter.state-axis.location",
+            "parameter.state-axis.route-set",
+            "parameter.state-axis.transition"
+          ]
+        },
+        {
+          "mappingId": "mapping.state-axis-rewrites-routes.stage",
+          "owner": "stage",
+          "contractRef": "stage-plan/v03",
+          "targetPath": "$.patternApplications.state-axis-rewrites-routes.stage",
+          "effectRefs": [
+            "effect.state-axis.apply-value",
+            "effect.state-axis.recompute-routes",
+            "effect.state-axis.close-tradeoff-routes"
+          ],
+          "constraintRefs": [
+            "constraint.state-axis-rewrites-routes.canon",
+            "constraint.state-axis-rewrites-routes.originality",
+            "constraint.state-axis-rewrites-routes.recovery",
+            "parameter.state-axis.axis",
+            "parameter.state-axis.location",
+            "parameter.state-axis.route-set",
+            "parameter.state-axis.transition"
+          ]
+        },
+        {
+          "mappingId": "mapping.state-axis-rewrites-routes.compile",
+          "owner": "compile",
+          "contractRef": "production-ir/v03",
+          "targetPath": "$.patternApplications.state-axis-rewrites-routes.compile",
+          "effectRefs": [
+            "effect.state-axis.apply-value",
+            "effect.state-axis.recompute-routes",
+            "effect.state-axis.close-tradeoff-routes"
+          ],
+          "constraintRefs": [
+            "constraint.state-axis-rewrites-routes.canon",
+            "constraint.state-axis-rewrites-routes.originality",
+            "constraint.state-axis-rewrites-routes.recovery",
+            "parameter.state-axis.axis",
+            "parameter.state-axis.location",
+            "parameter.state-axis.route-set",
+            "parameter.state-axis.transition"
+          ]
+        },
+        {
+          "mappingId": "mapping.state-axis-rewrites-routes.evaluation",
+          "owner": "evaluation",
+          "contractRef": "acceptance/v03",
+          "targetPath": "$.patternApplications.state-axis-rewrites-routes.evaluation",
+          "effectRefs": [],
+          "constraintRefs": [
+            "constraint.state-axis-rewrites-routes.canon",
+            "constraint.state-axis-rewrites-routes.originality",
+            "constraint.state-axis-rewrites-routes.recovery",
+            "parameter.state-axis.axis",
+            "parameter.state-axis.location",
+            "parameter.state-axis.route-set",
+            "parameter.state-axis.transition"
+          ]
+        }
+      ]
+    },
+    "validate": {
+      "assertionRefs": [
+        "assertion.state-axis-rewrites-routes.selection.1",
+        "assertion.state-axis-rewrites-routes.selection.2",
+        "assertion.state-axis-rewrites-routes.runtime.1",
+        "assertion.state-axis-rewrites-routes.runtime.2",
+        "assertion.state-axis-rewrites-routes.route.1",
+        "assertion.state-axis-rewrites-routes.route.2",
+        "assertion.state-axis-rewrites-routes.originality.1",
+        "assertion.state-axis-rewrites-routes.originality.2",
+        "assertion.state-axis-rewrites-routes.originality.3"
+      ]
+    }
+  },
+  "departmentContracts": {
+    "gameplay": {
+      "playerVerbs": [
+        "verb.observe",
+        "verb.toggle-state",
+        "verb.compare",
+        "verb.move"
+      ],
+      "effectRefs": [
+        "effect.state-axis.apply-value",
+        "effect.state-axis.recompute-routes",
+        "effect.state-axis.close-tradeoff-routes"
+      ],
+      "canonInvariants": [
+        "One causal table governs every affected entity",
+        "No value dominates every objective"
+      ]
+    },
+    "performance": {
+      "revealConstraints": [
+        "Show consequences before explaining labels"
+      ],
+      "npcTactics": [
+        "Stage actor tactics so that Make the world state feel like a rule the player authors, not a scene swap."
+      ],
+      "interactionWindows": [
+        "Let player inspect both opened and closed paths after a change"
+      ],
+      "cueIntents": [
+        "Make the world state feel like a rule the player authors, not a scene swap.",
+        "first state change in a safe zone",
+        "later change under route pressure"
+      ],
+      "skipReplayAccessibility": [
+        "Skipping or replaying a cue must commit the same authoritative world facts.",
+        "Essential causal information remains available through a replayable original-language log."
+      ]
+    },
+    "stage": {
+      "topologyChanges": [
+        "Stable anchors survive every value",
+        "Each required zone has a legal transition or escape"
+      ],
+      "actorBlocking": [
+        "Place one opened and one closed edge within comparable landmark context."
+      ],
+      "cameraTransitions": [
+        "Frame the nearest consequence, not a source-like panoramic transformation."
+      ],
+      "navigationInvariants": [
+        "Every value has a route back to a transition point",
+        "Goal remains reachable in the intended sequence"
+      ]
+    },
+    "evaluation": {
+      "observableAssertionRefs": [
+        "assertion.state-axis-rewrites-routes.selection.1",
+        "assertion.state-axis-rewrites-routes.selection.2",
+        "assertion.state-axis-rewrites-routes.runtime.1",
+        "assertion.state-axis-rewrites-routes.runtime.2",
+        "assertion.state-axis-rewrites-routes.route.1",
+        "assertion.state-axis-rewrites-routes.route.2",
+        "assertion.state-axis-rewrites-routes.originality.1",
+        "assertion.state-axis-rewrites-routes.originality.2",
+        "assertion.state-axis-rewrites-routes.originality.3"
+      ],
+      "routeRequirements": [
+        "Every value has a route back to a transition point",
+        "Goal remains reachable in the intended sequence"
+      ],
+      "cloneRiskChecks": [
+        "source paired-map coordinates",
+        "source seasonal or era iconography",
+        "source transition songs and effects",
+        "Independent blind reviewers must not converge on one source encounter with high confidence."
+      ]
+    }
+  },
+  "development": {
+    "teach": [
+      "Change one safe tile class while keeping landmarks fixed.",
+      "Success evidence: Player predicts which edge opens.",
+      "Recovery: Allow immediate state reversal."
+    ],
+    "practice": [
+      "Use the same axis on a second entity class.",
+      "Success evidence: Player transfers the causal rule.",
+      "Recovery: Keep both consequences in view."
+    ],
+    "variation": [
+      "Open one route while closing a convenient alternative.",
+      "Success evidence: Player plans around tradeoff.",
+      "Recovery: Transition point remains reachable."
+    ],
+    "combineOrReverse": [
+      "Combine axis choice with a story-derived actor or resource condition.",
+      "Success evidence: Player distinguishes axis effect from the second condition.",
+      "Recovery: Reset only the second condition first."
+    ],
+    "exam": [
+      "Choose and later reverse the axis value to traverse a multi-zone dependency.",
+      "Success evidence: No hidden rule is introduced.",
+      "Recovery: Checkpoint before the first irreversible narrative gate."
+    ]
+  },
+  "implementation": {
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "perspectiveAdapters": [
+      "adapter.2d-topdown-v021"
+    ],
+    "productionCost": {
+      "design": "high",
+      "code": "high",
+      "art": "high",
+      "qa": "high"
+    },
+    "fallbacks": [
+      "Limit the axis to two localized zones but retain one opened and one closed edge plus reversible transition."
+    ],
+    "accessibility": [
+      "Pair state with shape, motion, audio, and text labels",
+      "Allow a reduced transition animation",
+      "Provide a state-table hint after repeated route reversals"
+    ]
+  },
+  "composition": {
+    "dependencies": [],
+    "synergies": [
+      "pattern.parallel-state-comparison",
+      "pattern.embodied-world-change-reveal"
+    ],
+    "conflicts": [],
+    "failureModes": [
+      "Layer mismatch between art and collision",
+      "One value is always optimal",
+      "Transition point becomes unreachable"
+    ],
+    "recoveryRules": [
+      "Atomic rollback of layer and route table",
+      "Emergency return to last transition checkpoint",
+      "Preserve learned state labels"
+    ]
+  },
+  "originality": {
+    "retainedPrinciples": [
+      "One visible, reversible state axis consistently changes route affordances across stable space."
+    ],
+    "forbiddenSurfaceTransfers": [
+      "source paired-map coordinates",
+      "source seasonal or era iconography",
+      "source transition songs and effects"
+    ],
+    "requiredTransformationAxes": [
+      "worldbuilding",
+      "objects",
+      "topology",
+      "timing",
+      "feedback",
+      "audio-language",
+      "characters",
+      "narrative-causality"
+    ],
+    "structuralDeltaAxes": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "sourceFingerprintRefs": [
+      "fingerprint.no-source-room-topology",
+      "fingerprint.no-source-object-sequence",
+      "fingerprint.no-source-boss-script",
+      "fingerprint.no-proprietary-surface",
+      "fingerprint.blind-attribution-unstable"
+    ],
+    "compositionVetoRefs": [
+      "fingerprint.no-source-object-sequence",
+      "fingerprint.blind-attribution-unstable"
+    ],
+    "blindSourceAttributionRequired": true,
+    "cloneRiskChecks": [
+      "source paired-map coordinates",
+      "source seasonal or era iconography",
+      "source transition songs and effects",
+      "Veto pattern.capability-recontextualizes-old-space + pattern.parallel-state-comparison when The same paired coordinates, obstacle roles, transition action, and reveal order identify one source work."
+    ]
+  },
+  "provenance": {
+    "originPackRefs": [
+      "pack.zelda-mainline"
+    ],
+    "observationRefs": [
+      "observation.oracle-of-seasons.seasonal-comparison-solves-blocked-screen",
+      "observation.oracle-of-ages.cross-era-cause-opens-route",
+      "observation.a-link-to-the-past.paired-world-coordinate-reframe"
+    ],
+    "supportingWorkRefs": [
+      "work.oracle-of-seasons",
+      "work.oracle-of-ages",
+      "work.a-link-to-the-past"
+    ],
+    "counterEvidenceRefs": [
+      "observation.the-wind-waker.wind-is-visible-global-route-state"
+    ],
+    "counterEvidenceBounds": [
+      {
+        "evidenceRef": "observation.the-wind-waker.wind-is-visible-global-route-state",
+        "challengedAssumption": "Every directional state should compile as a discrete map-layer axis.",
+        "observedBoundary": "Continuous heading changes traversal efficiency without replacing comparable route layers.",
+        "derivedRule": "Use a directional-field or vehicle contract when consequences vary continuously with heading."
+      }
+    ],
+    "confidence": "high"
+  },
+  "tests": [
+    {
+      "testId": "test.state-axis.selection",
+      "kind": "selection",
+      "inputFixtureRef": "fixture.maturity.tidal-library",
+      "expectedOutputRefs": [
+        "selection-gate.json"
+      ],
+      "assertions": [
+        {
+          "assertionId": "assertion.state-axis-rewrites-routes.selection.1",
+          "evidencePath": "$.selection.selected",
+          "operator": "equals",
+          "expected": true,
+          "hardGate": true
+        },
+        {
+          "assertionId": "assertion.state-axis-rewrites-routes.selection.2",
+          "evidencePath": "$.selection.continuousHeadingFixtureAbstains",
+          "operator": "equals",
+          "expected": true,
+          "hardGate": true
+        }
+      ]
+    },
+    {
+      "testId": "test.state-axis.runtime",
+      "kind": "runtime",
+      "inputFixtureRef": "fixture.maturity.tidal-library-runtime",
+      "expectedOutputRefs": [
+        "runtime-gate.json"
+      ],
+      "assertions": [
+        {
+          "assertionId": "assertion.state-axis-rewrites-routes.runtime.1",
+          "evidencePath": "$.layers.visualCollisionInteractionAgree",
+          "operator": "equals",
+          "expected": true,
+          "hardGate": true
+        },
+        {
+          "assertionId": "assertion.state-axis-rewrites-routes.runtime.2",
+          "evidencePath": "$.effects.rollbackRestoresPriorValue",
+          "operator": "equals",
+          "expected": true,
+          "hardGate": true
+        }
+      ]
+    },
+    {
+      "testId": "test.state-axis.route",
+      "kind": "route",
+      "inputFixtureRef": "fixture.maturity.tidal-library-route",
+      "expectedOutputRefs": [
+        "route-gate.json"
+      ],
+      "assertions": [
+        {
+          "assertionId": "assertion.state-axis-rewrites-routes.route.1",
+          "evidencePath": "$.routeMatrix.allAxisValuesEscapeReachable",
+          "operator": "equals",
+          "expected": true,
+          "hardGate": true
+        },
+        {
+          "assertionId": "assertion.state-axis-rewrites-routes.route.2",
+          "evidencePath": "$.routeMatrix.tradeoffEdgesDiffer",
+          "operator": "equals",
+          "expected": true,
+          "hardGate": true
+        }
+      ]
+    },
+    {
+      "testId": "test.state-axis.originality",
+      "kind": "originality",
+      "inputFixtureRef": "fixture.originality.tidal-library",
+      "expectedOutputRefs": [
+        "originality-gate.json"
+      ],
+      "assertions": [
+        {
+          "assertionId": "assertion.state-axis-rewrites-routes.originality.1",
+          "evidencePath": "$.blindAttribution.specificEncounterConvergence",
+          "operator": "less-than",
+          "expected": 0.65,
+          "hardGate": true
+        },
+        {
+          "assertionId": "assertion.state-axis-rewrites-routes.originality.2",
+          "evidencePath": "$.structuralDeltas.topologyGraph",
+          "operator": "greater-or-equal",
+          "expected": 0.6,
+          "hardGate": true
+        },
+        {
+          "assertionId": "assertion.state-axis-rewrites-routes.originality.3",
+          "evidencePath": "$.surfaceTransfers",
+          "operator": "equals",
+          "expected": 0,
+          "hardGate": true
+        }
+      ]
+    }
+  ],
+  "governance": {
+    "owner": "Pattern distiller",
+    "reviewers": [
+      "Independent provenance reviewer",
+      "Static originality reviewer",
+      "Runtime adapter reviewer"
+    ],
+    "changelog": [
+      "0.2.0 — calibration-only vertical slice recompiled against the final P4 contract; never production-selectable."
+    ],
+    "supersedes": [],
+    "deprecatedBy": null
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.community-radio-cache",
+  "patternId": "pattern.reward-expands-future-possibility",
+  "testId": "test.future-reward.selection",
+  "kind": "selection",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "selection contract fixture for pattern.reward-expands-future-possibility; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "choice-generating-reward",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.inventory",
+      "capability.world-facts",
+      "capability.route-gates",
+      "capability.save-migration",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Preserve reward across failure",
+      "Rollback only selected option state",
+      "Refund irreversible expenditure on softlock"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.selection.laterChoiceCount",
+      "operator": "greater-or-equal",
+      "expected": 2
+    },
+    {
+      "evidencePath": "$.selection.stageOnlyRewardAbstains",
+      "operator": "equals",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

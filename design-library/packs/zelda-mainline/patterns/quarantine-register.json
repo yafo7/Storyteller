@@ -1,0 +1,312 @@
+{
+  "registerVersion": "1.0.0",
+  "reviewRef": "review.zelda-mainline.patterns-independent-20260717",
+  "records": [
+    {
+      "patternId": "pattern.finite-schedule-loop",
+      "evidenceDisposition": "single-work-direct-only",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Only Majora's Mask directly supports a finite resettable actor schedule, leaving stable single-source attribution; the record also lacks a typed reset scope, persistence whitelist, deadline and missed-window recovery behavior, schedule simulation, and blind-attribution closure.",
+      "promotionRequires": "A second distinct work that closes the full finite schedule/reset chain, pattern-specific reset and schedule contracts, route/recovery tests, and blind originality results."
+    },
+    {
+      "patternId": "pattern.loop-shortcut-memory",
+      "evidenceDisposition": "single-work-direct-only",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "The current corpus offers at most one direct Phantom Hourglass route-compression trace; earlier remote-event, restoration, and landform citations did not show a player-opened shortcut with measurable before/after path compression. Cross-title support, route metrics, softlock simulation, and originality outcomes remain absent.",
+      "promotionRequires": "Two direct works, player-authored shortcut binding, before/after route-length assertions, return-path recovery, and blind attribution."
+    },
+    {
+      "patternId": "pattern.hub-spoke-return",
+      "evidenceDisposition": "cross-title-partial-not-closed",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Skyward Sword supplies a plausible hub-payoff trace, but the cited Phantom Hourglass boss closure does not itself prove a changed hub or service state followed by a meaningful next-departure choice. The contract still lacks required return cadence, service delta, and spoke-to-hub-to-next-spoke assertions.",
+      "promotionRequires": "A second complete spoke departure, changed-hub, and next-departure trace plus cadence, service, route, recovery, and originality tests."
+    },
+    {
+      "patternId": "pattern.dungeon-macro-state-machine",
+      "evidenceDisposition": "cross-title-partial-not-closed",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Oracle of Ages plausibly shows a persistent multi-room puzzle state, but the cited Skyward Sword local time field does not yet prove one persistent reversible variable changing multiple bounded zones and route closures. The record lacks reversible closure, restore-state, and softlock-free graph tests.",
+      "promotionRequires": "A second complete bounded multi-zone state-machine trace and typed macro-state, reversible-route, save/restore, recovery, and originality validation."
+    },
+    {
+      "patternId": "pattern.safe-rule-experiment",
+      "evidenceDisposition": "single-work-direct-only",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Only the A Link to the Past observation directly records a low-cost local confirmation step; other cited combat or vocabulary examples do not establish voluntary repetition or low failure cost. Risk, reset distance, diagnostic feedback, and a second direct work are missing.",
+      "promotionRequires": "A second direct safe-experiment trace, quantitative risk/reset bounds, diagnostic negative feedback, retry tests, and originality results."
+    },
+    {
+      "patternId": "pattern.environmental-chain-reaction",
+      "evidenceDisposition": "no-complete-single-work-trace",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G005-detector-collisions-hide-duplicate-patterns",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "The Breath of the Wild material observation records combustion and a possible derived effect, not a verified ordered propagation through adjacent objects; Tears construction and Echo vocabulary are not chain reactions. No complete work trace, deterministic ordering, cycle cap, rollback, collision discriminator, or blind result exists.",
+      "promotionRequires": "Two direct ordered-propagation traces plus typed adjacency, deterministic resolution, cycle cap, rollback, collision precedence, and runtime/originality tests.",
+      "auditPriority": "evidence-insufficient-six"
+    },
+    {
+      "patternId": "pattern.copy-redeploy-affordance",
+      "evidenceDisposition": "single-work-direct-only",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G005-detector-collisions-hide-duplicate-patterns",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Only Echoes of Wisdom directly closes observe, capture or catalog, and redeploy; construction and ordinary item acquisition do not. The spawn/catalog sequence remains stably attributable to one source, and collision boundaries against object composition remain unresolved.",
+      "promotionRequires": "A distinct second work with the full capture-redeploy chain, subtype precedence against composition, lifecycle/recovery tests, and unstable blind attribution."
+    },
+    {
+      "patternId": "pattern.perspective-shift-reframes-space",
+      "evidenceDisposition": "plausible-cross-title-still-unadjudicated",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "The currently cited shrink, wall-plane, and alternate-body observations are plausible cross-title examples, but the initial review's callable gaps remain: camera transition, collision footprint, anchor correspondence, return orientation, recovery, and blind-attribution behavior are not release-ready.",
+      "promotionRequires": "Independent evidence adjudication plus typed anchor/collision/camera/return contracts, route recovery, selector discrimination, and blind review."
+    },
+    {
+      "patternId": "pattern.player-authored-map-memory",
+      "evidenceDisposition": "plausible-cross-title-still-unadjudicated",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Direct player-note and pin examples may now be present, but the initial defect remains unresolved: player hypotheses must not be written as authoritative world facts, and the runtime lacks typed create, edit, delete, capacity, persistence, and accessible marker behavior with tests.",
+      "promotionRequires": "Independent provenance review, a hypothesis-versus-fact data contract, full marker lifecycle and accessibility capabilities, persistence tests, and blind originality results."
+    },
+    {
+      "patternId": "pattern.resource-expedition-return",
+      "evidenceDisposition": "single-work-direct-only",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "At most the Phantom Hourglass timed expedition supplies a direct depth, pressure, return, and improved-next-attempt trace; the original opening, landmark, and combat citations did not. Retreat availability, forecast, loss, banking, resupply, checkpoint, and second-work evidence are missing.",
+      "promotionRequires": "A second complete expedition-return trace plus resource forecast, voluntary retreat, banking/loss, resupply, checkpoint, recovery, and originality tests."
+    },
+    {
+      "patternId": "pattern.boss-rule-synthesis",
+      "evidenceDisposition": "plausible-cross-title-still-unadjudicated",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G005-detector-collisions-hide-duplicate-patterns",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "New boss-specific observations may improve support, but release remains blocked because encounter phases, telegraphs, damage windows, reset and anti-one-shot recovery, boss-route tests, and precedence against local-rule-development-arc and final-exam-recombination are not independently closed.",
+      "promotionRequires": "Independent provenance decision, typed encounter runtime, lesson-ledger binding, safe recovery and route tests, duplicate precedence, and blind attribution."
+    },
+    {
+      "patternId": "pattern.threat-as-navigation-teacher",
+      "evidenceDisposition": "single-work-direct-only",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Only the current Spirit Tracks hazard-route observation directly suggests a threat shaping navigation; prior capability, era, and landmark citations did not show threat-readable safe zones. A second work and pursuit, aggro, safe-zone, disengage, and failure-recovery contracts are absent.",
+      "promotionRequires": "A second direct threat-teaches-route trace, typed threat and safe-zone state, disengage/retry routes, accessibility bounds, and blind review."
+    },
+    {
+      "patternId": "pattern.npc-schedule-as-information",
+      "evidenceDisposition": "single-work-direct-only",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Only Majora's Mask supplies direct readable actor schedules, so the abstraction remains single-work and highly attributable. Actor itinerary, deviation, observation windows, player knowledge, missed-window recovery, schedule simulation, and cross-title support are not closed.",
+      "promotionRequires": "A distinct second work plus typed itinerary/deviation/knowledge windows, missed-window recovery, schedule simulation, and combination-level originality review."
+    },
+    {
+      "patternId": "pattern.companion-contextual-verb",
+      "evidenceDisposition": "plausible-cross-title-still-unadjudicated",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Several current observations plausibly show companion-mediated actions, but the callable record still omits availability, consent or refusal, tactic and relationship-state change, absent-companion fallback, recovery, and blind originality tests required by the initial review.",
+      "promotionRequires": "Independent causal-evidence decision and typed companion availability, invocation, refusal, relationship, fallback, route recovery, and originality validation."
+    },
+    {
+      "patternId": "pattern.threshold-performance-cue",
+      "evidenceDisposition": "no-complete-single-work-trace",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "The sole cave-message observation shows a brief cue and redirected search, but not a bounded spatial threshold with maximum interruption, skip equivalence, visible next action, camera-safe return, and verified agency restoration. No complete single-work trace currently supports the full abstraction.",
+      "promotionRequires": "Two complete threshold-to-cue-to-agency traces and typed duration, skip parity, next-action visibility, camera safety, recovery, and route tests.",
+      "auditPriority": "evidence-insufficient-six"
+    },
+    {
+      "patternId": "pattern.agency-performance-breathing",
+      "evidenceDisposition": "no-complete-single-work-trace",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "One cave-message-to-search transition does not establish an alternating cadence in which purposeful agency prepares or pays off authored performance. Beat durations, player-purpose assertions, input-lock bounds, skip/replay parity, cadence tests, and direct work traces are missing.",
+      "promotionRequires": "Two beat-level agency/performance cadence traces plus duration, purpose, lock, skip/replay, adjacency-payoff, recovery, and originality tests.",
+      "auditPriority": "evidence-insufficient-six"
+    },
+    {
+      "patternId": "pattern.reversible-reset-knowledge-retention",
+      "evidenceDisposition": "single-work-direct-only",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G005-detector-collisions-hide-duplicate-patterns",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Only Majora's Mask directly supports deliberate world reset with retained knowledge, and composition with finite-schedule-loop plus npc-schedule-as-information recreates a highly attributable fingerprint. The reset manifest still does not type facts, knowledge, inventory, actors, schedules, checkpoints, or migration.",
+      "promotionRequires": "A distinct second work, typed reset/persistence manifest, migration and recovery tests, composition veto closure, and combination-level blind attribution."
+    },
+    {
+      "patternId": "pattern.final-exam-recombination",
+      "evidenceDisposition": "no-complete-single-work-trace",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G005-detector-collisions-hide-duplicate-patterns",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "The Ocarina of Time observation supports a dungeon-local boss comprehension exam, not a campaign finale that recombines mechanics, spatial memory, relationships, and facts. No complete single-work trace, prerequisite lesson ledger, no-new-rule assertion, or scoped finale recovery test exists.",
+      "promotionRequires": "Two complete campaign-level recombination traces, a typed prerequisite ledger, prohibition of hidden new rules, scoped retry behavior, duplicate precedence, and originality review.",
+      "auditPriority": "evidence-insufficient-six"
+    },
+    {
+      "patternId": "pattern.systemic-verb-toolkit",
+      "evidenceDisposition": "no-complete-single-work-trace",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G005-detector-collisions-hide-duplicate-patterns",
+        "G006-counterevidence-is-often-an-unexplained-unrelated-observation"
+      ],
+      "quarantineReason": "Ultrahand and Fuse show broad systems, but the cited records do not prove a small orthogonal verb set used across several problem classes with meaningful combinations. No verb-role matrix, overlap metric, dominance check, content-coverage test, or clean boundary from multi-solution-state-graph and object-role-composition exists.",
+      "promotionRequires": "Two complete toolkit traces plus verb-role and combination matrices, overlap/dominance thresholds, content coverage, selector precedence, and originality results.",
+      "auditPriority": "evidence-insufficient-six"
+    },
+    {
+      "patternId": "pattern.cooperative-role-interdependence",
+      "evidenceDisposition": "cross-title-evidence-runtime-blocked",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G004-blind-attribution-is-required-but-not-recorded",
+        "G007-disabled-research-records-and-runtime-capabilities-are-inconsistent"
+      ],
+      "quarantineReason": "Three multiplayer works plausibly support interdependent roles, but the frozen runtime and callable record omit player ownership, synchronization, join/leave and disconnect recovery, latency, grief prevention, unequal-skill accessibility, and multiplayer route simulation. It must remain disabled until those contracts and blind results exist.",
+      "promotionRequires": "Typed multiplayer capabilities and ownership, synchronization and disconnect recovery, anti-grief and accessibility behavior, multiplayer route tests, and independent originality closure."
+    },
+    {
+      "patternId": "pattern.asymmetric-screen-information",
+      "evidenceDisposition": "no-complete-single-work-trace",
+      "quarantineIssueRefs": [
+        "G001-callable-hooks-are-template-shaped",
+        "G002-department-development-and-recovery-contracts-are-boilerplate",
+        "G003-tests-do-not-close-runtime-or-originality",
+        "G007-disabled-research-records-and-runtime-capabilities-are-inconsistent"
+      ],
+      "quarantineReason": "The currently cited Four Swords Adventures formation-control observation does not record public/private screen information or communication as a verb, and the Four Swords contrast is not a clean counterexample. A second work and multi-view ownership, privacy, synchronization, disconnect, passive-player prevention, accessibility, and tests are absent.",
+      "promotionRequires": "Correct direct public/private-view observations from at least two works, typed privacy and ownership runtime, communication and reconnect behavior, passive-player prevention, accessibility tests, and originality review.",
+      "auditPriority": "evidence-insufficient-six"
+    },
+    {
+      "patternId": "pattern.knowledge-gated-revisit",
+      "evidenceDisposition": "cross-title-partial-not-closed",
+      "quarantineIssueRefs": [
+        "G006-evidence-closes-new-identity-not-stable-id",
+        "G005-stable-id-preservation-requires-new-pattern",
+        "G004-taxonomy-passes-only-as-new-identity"
+      ],
+      "quarantineReason": "The two verified observations pass only for the new separated-knowledge principle. The released ID encodes knowledge-only gating, an old place or revisit, and physical preavailability; permitting capability coexistence, removing same-place return, and admitting any later timing, comparison, route, or puzzle decision is a generalization and identity replacement, not a compatible narrowing. Separated-knowledge application can be distinguished from player-authored-map-memory and reversible-reset-knowledge-retention only as a new pattern identity, so the old name, subtype, principle, and stable ID remain unchanged and non-selectable.",
+      "promotionRequires": "Keep the original proof standard: provide verified observations from at least two distinct works that each close the original knowledge-only revisit invariant, including an old place or revisit, an action physically available before the information was learned, and no new item, form, capability, consumable, map layer, or world-state grant explaining success; then add selector collisions, executable fixtures, and renewed individual and combination originality review. Any separated-knowledge application must instead be minted as pattern.separated-knowledge-application with reciprocal taxonomy boundaries and a breaking migration."
+    },
+    {
+      "patternId": "pattern.multi-solution-state-graph",
+      "evidenceDisposition": "cross-title-partial-not-closed",
+      "quarantineIssueRefs": [
+        "G006-evidence-does-not-close-complete-solutions",
+        "G005-stable-id-preservation-retains-original-meaning",
+        "G004-taxonomy-collides-with-specializations"
+      ],
+      "quarantineReason": "The submitted works close different specializations: Four Swords Adventures closes an aggregate-contribution threshold and Echoes of Wisdom closes object-role composition. Their common denominator admits a single mandatory construction and therefore does not discriminate a multi-solution pattern. Removing complete paths, equivalent starts, a shared postcondition, causal independence, and non-domination while testing only one successful construction would make the released multi-solution stable ID semantically false; the original name, subtype, principle, and identity remain unchanged and non-selectable.",
+      "promotionRequires": "Require at least two independently viable complete paths from controlled comparable starts to the same explicit postcondition in each of two distinct works. Before promotion, add formal generalizes or specializes relations and reciprocal precedence plus collision fixtures against object-role-composition, systemic-verb-toolkit, scalar aggregate thresholds, one mandatory two-input construction, and one prescribed signature-tool route; then execute rollback and route fixtures and renew individual and combination originality review."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "reportVersion": "1.0.0",
+  "reportId": "report.p2.calibration-exit",
+  "generatedAt": "2026-07-17",
+  "sample": {
+    "works": [
+      "work.the-legend-of-zelda",
+      "work.majoras-mask",
+      "work.breath-of-the-wild",
+      "work.echoes-of-wisdom"
+    ],
+    "reason": "The sample spans early 2D exploration, a finite 3D schedule loop, open systemic 3D exploration, and a recent top-down systemic adventure.",
+    "profiles": 4,
+    "themes": 20,
+    "criterionDecisions": 100
+  },
+  "independentCoding": {
+    "reviewRef": "review.p2.calibration-independent-coding",
+    "acceptedDecisions": 90,
+    "disagreedDecisions": 10,
+    "agreement": 0.9,
+    "target": 0.85,
+    "targetMet": true,
+    "exactThemeAgreement": 0.6,
+    "initialAdjudication": "conditional-pass"
+  },
+  "remediation": {
+    "reviewRef": "review.p2.calibration-remediation",
+    "disagreementsReviewed": 10,
+    "disagreementsPassed": 10,
+    "contractAndCompilerChecksPassed": 6,
+    "blockers": [],
+    "adjudication": "pass"
+  },
+  "verticalSlice": {
+    "runRef": "calibration.vertical-slice.stateful-revisit",
+    "patternRef": "pattern.calibration.stateful-revisit@0.1.0",
+    "fixtureRef": "fixture.calibration.hidden-room",
+    "hooksExecuted": ["detect", "score", "instantiate", "emit", "validate"],
+    "departmentOwners": ["gameplay", "performance", "stage", "evaluation"],
+    "excludedFromReleaseSelection": true,
+    "result": "pass"
+  },
+  "gateResults": {
+    "G1_sampleCoverage": true,
+    "G2_sampleEvidenceClosure": true,
+    "G3_provisionalVerticalSlice": true
+  },
+  "adjudication": "pass",
+  "adjudicationReason": "The calibration agreement exceeded the preregistered threshold, every disagreement was retained and corrected, N/A semantics are aligned across contract/compiler/policy, and the non-released provisional pattern completes all five typed hooks."
+}

@@ -1,0 +1,8 @@
+design-library/** text eol=lf
+.codex/skills/build-interactive-stage-game-v03/** text eol=lf
+.codex/skills/curate-game-design-library/** text eol=lf
+.codex/skills/select-game-design-patterns/** text eol=lf
+planning/v03-zelda-mainline/** text eol=lf
+package.json text eol=lf
+package-lock.json text eol=lf
+.gitignore text eol=lf

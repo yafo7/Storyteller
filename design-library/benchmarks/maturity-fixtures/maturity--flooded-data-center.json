@@ -1,0 +1,44 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.flooded-data-center",
+  "patternId": "pattern.multi-solution-state-graph",
+  "testId": "test.multi-solution.selection",
+  "kind": "selection",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "selection contract fixture for pattern.multi-solution-state-graph; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "outcome-first-many-paths",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.world-facts",
+      "capability.object-placement",
+      "capability.object-composition",
+      "capability.route-simulation",
+      "capability.checkpoints"
+    ],
+    "recoveryRequirements": [
+      "Full local-state reset",
+      "Return consumed story-safe resources",
+      "Preserve discovered affordance roles"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.selection.validPathCount",
+      "operator": "greater-or-equal",
+      "expected": 2
+    },
+    {
+      "evidencePath": "$.selection.singleVerbGateAbstains",
+      "operator": "equals",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

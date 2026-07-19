@@ -1,0 +1,261 @@
+{
+  "schemaVersion": "1.0.0",
+  "scopeId": "scope.zelda-mainline",
+  "scopeVersion": "1.0.0",
+  "status": "frozen",
+  "policy": {
+    "authorityRule": "Include each independent game represented by a work node in the frozen Nintendo Zelda Portal HISTORY; split an officially documented multi-game node into separate works.",
+    "releaseGroupingRule": "Regional events, concurrent original platforms, ports, and emulated rereleases share the original workId and are recorded as versions or release events.",
+    "variantRule": "Remasters, remakes, expansions, and enhanced editions receive delta versions under the same workId; an undisclosed edition type remains version-level review.",
+    "borderlineRule": "Multiplayer entries remain included when present in HISTORY; spin-offs and adjacent product lines outside the authority union are logged as boundary exclusions.",
+    "changeRule": "A later authority change creates a new semantic scope release and migration; frozen releases are never silently rewritten."
+  },
+  "authoritySnapshots": [
+    {
+      "snapshotId": "scope-snapshot.nintendo-portal-history-20260717",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717",
+        "source.nintendo.oracle-pair-2023"
+      ],
+      "capturedAt": "2026-07-17",
+      "contentHash": "2ea13c6c01f37bc9ff6725708ec398a497d45c4bc590e7880502dcac9be560d3",
+      "candidateWorkIds": [
+        "work.the-legend-of-zelda",
+        "work.zelda-ii-the-adventure-of-link",
+        "work.a-link-to-the-past",
+        "work.links-awakening",
+        "work.ocarina-of-time",
+        "work.majoras-mask",
+        "work.oracle-of-seasons",
+        "work.oracle-of-ages",
+        "work.the-wind-waker",
+        "work.four-swords",
+        "work.four-swords-adventures",
+        "work.the-minish-cap",
+        "work.twilight-princess",
+        "work.phantom-hourglass",
+        "work.spirit-tracks",
+        "work.skyward-sword",
+        "work.a-link-between-worlds",
+        "work.tri-force-heroes",
+        "work.breath-of-the-wild",
+        "work.tears-of-the-kingdom",
+        "work.echoes-of-wisdom"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "workId": "work.the-legend-of-zelda",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.zelda-ii-the-adventure-of-link",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.a-link-to-the-past",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.links-awakening",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.ocarina-of-time",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.majoras-mask",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.oracle-of-seasons",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717",
+        "source.nintendo.oracle-pair-2023"
+      ]
+    },
+    {
+      "workId": "work.oracle-of-ages",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717",
+        "source.nintendo.oracle-pair-2023"
+      ]
+    },
+    {
+      "workId": "work.the-wind-waker",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.four-swords",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.four-swords-adventures",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.the-minish-cap",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.twilight-princess",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.phantom-hourglass",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.spirit-tracks",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.skyward-sword",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.a-link-between-worlds",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.tri-force-heroes",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.breath-of-the-wild",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.tears-of-the-kingdom",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "workId": "work.echoes-of-wisdom",
+      "decision": "included",
+      "rationale": "Resolved by the frozen HISTORY work-node rule; no candidate remains at work-level review.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "decisionId": "scope-decision.oracle-pair",
+      "question": "oracle pair",
+      "resolution": "Oracle of Ages and Oracle of Seasons are two works in one paired family, not variants of one work.",
+      "sourceRefs": [
+        "source.nintendo.oracle-pair-2023"
+      ]
+    },
+    {
+      "decisionId": "scope-decision.ports-remakes",
+      "question": "ports remakes",
+      "resolution": "Ports, remasters, remakes, regional releases, expansions, and enhanced editions remain versions under their original workId.",
+      "sourceRefs": [
+        "source.nintendo.classics-policy-20260717"
+      ]
+    },
+    {
+      "decisionId": "scope-decision.multiplayer",
+      "question": "multiplayer",
+      "resolution": "Four Swords, Four Swords Adventures, and Tri-Force Heroes remain included because the frozen HISTORY authority lists them as series-history nodes.",
+      "sourceRefs": [
+        "source.nintendo.zelda-portal-history-en-20260717"
+      ]
+    },
+    {
+      "decisionId": "scope-decision.ocarina-switch2",
+      "question": "ocarina switch2",
+      "resolution": "The announced 2026 Nintendo Switch 2 edition remains a review version of Ocarina of Time until Nintendo describes its edition type; it is not a new work.",
+      "sourceRefs": [
+        "source.nintendo.ocarina-switch2-announcement-2026"
+      ]
+    }
+  ],
+  "reconciliation": {
+    "authorityUnionCount": 21,
+    "registeredCandidateCount": 21,
+    "missingFromRegistry": [],
+    "notInAuthorityUnion": [],
+    "unresolvedReviewCount": 0
+  },
+  "supersedes": null
+}

@@ -1,0 +1,121 @@
+{
+  "workId": "work.the-legend-of-zelda",
+  "author": "Early Corpus Analyst Cedar",
+  "reviewer": "Independent Reviewer Juniper",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player inhabits a lightly directed lone adventurer who turns an initially dangerous wilderness into a personally understood route network.",
+    "dimension.core-loop": "The recurring cadence is to scan an overworld screen, survive its enemies, test a route or suspicious feature, and convert discoveries into deeper dungeon progress.",
+    "dimension.verbs": "Movement and sword use form the base vocabulary, while bombs, flame, projectiles, pushing, rafting, and crossing gaps add context-specific world verbs.",
+    "dimension.world-state": "Collected relic pieces, acquired tools, opened dungeon routes, and revealed caves persist, so exploration steadily changes what the player can reach and afford.",
+    "dimension.topology": "A fixed-screen overworld grid connects landmark-like terrain screens to hidden interiors and nine separate labyrinth graphs, rewarding remembered adjacency.",
+    "dimension.gating-revisit": "Some obstacles yield to a newly acquired item and others to knowledge about an unmarked entrance, making both capability and memory valid revisit keys.",
+    "dimension.puzzle-information": "Puzzle information is deliberately sparse: room geometry, enemy clearance, block placement, and short cave messages invite experimentation rather than explicit procedures.",
+    "dimension.dungeon-structure": "Labyrinths are room graphs with locked doors, keys, maps, compasses, a major tool, a boss encounter, and an objective fragment that closes the local arc.",
+    "dimension.exploration-reward": "Curiosity can reveal currency, shops, health growth, tools, shortcuts, or required entrances, so an uncertain detour may improve either present survival or future access.",
+    "dimension.growth-economy": "Heart capacity, sword upgrades, item capacity, keys, bombs, and rupees provide both permanent growth and expendable decision pressure.",
+    "dimension.combat-boss": "Top-down combat asks the player to read enemy movement, approach angles, shield-facing behavior, projectile lanes, and the limited supply of secondary attacks.",
+    "dimension.npc-quest": "NPC presence is compact and functional: cave inhabitants grant equipment, sell supplies, impose costs, or communicate terse clues that alter the player's search.",
+    "dimension.narrative-performance": "A brief premise establishes the rescue and collection goal, after which progress is performed mostly through traversal, acquisition, dungeon completion, and the final confrontation.",
+    "dimension.camera-blocking": "Each overworld or dungeon room is framed as one complete tactical tableau, and edge scrolling clearly marks the move to a neighboring stateful screen.",
+    "dimension.teaching-feedback": "The visible starting cave offers an early weapon, while immediate changes in attack ability, pickups, door states, and sounds confirm learned rules with little textual instruction.",
+    "dimension.ui-input": "A compact status display exposes health and resources, while the subscreen selects one secondary item and shows accumulated progression information.",
+    "dimension.recovery-accessibility": "Failure supports continued attempts from established recovery locations, but lost time and repeated traversal preserve meaningful pressure; persistent progress prevents a total restart.",
+    "dimension.perspective-implementation": "The 2D top-down view makes cardinal routes and enemy lanes readable but hides vertical layering, so caves and scrolling boundaries express depth as discrete transitions.",
+    "dimension.hardware-multiplayer": "The original Disk System release is single-player and uses a small digital-button vocabulary plus persistent disk data rather than simultaneous or networked play.",
+    "dimension.production-runtime": "Reproducing its principles requires deterministic room grids, screen-to-screen transitions, collision-triggered secrets, inventory gates, resource counters, and persistent per-room flags."
+  },
+  "observationThemes": [
+    {
+      "key": "visible-cave-grants-first-verb",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.growth-economy"],
+      "context": "At the opening overworld screen, a cave is visible while nearby enemies make unarmed wandering hazardous.",
+      "preconditions": ["A new file has begun", "The sword has not been collected"],
+      "playerInput": ["Enter the visible cave", "Approach the cave inhabitant and collect the offered sword"],
+      "before": ["The player can move but lacks the normal melee attack", "Nearby overworld enemies remain dangerous"],
+      "action": ["Collect the sword from the cave interior"],
+      "after": ["The sword becomes a persistent inventory capability", "The attack button now produces a directional melee strike"],
+      "feedback": ["The item acquisition presentation names and displays the weapon", "Subsequent button input immediately changes Link's action"],
+      "consequences": ["The player can contest ordinary enemies and begin the explore-fight-search loop", "The opening establishes that entering compact interiors may grant new verbs"],
+      "factualDescription": "The opening screen presents an accessible cave whose inhabitant grants the sword; after collection, the player gains the standard melee action used across the adventure.",
+      "interpretation": "Placing an optional-looking shelter beside initial danger lets a single acquisition teach exploration, character approach, inventory growth, and the core combat verb without a long tutorial.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "tools-reveal-overworld-state",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.exploration-reward"],
+      "context": "Across the fixed-screen overworld, some apparently solid terrain features conceal interiors or routes that only a suitable tool and chosen target can reveal.",
+      "preconditions": ["The player has obtained and can spend or use the relevant tool", "A candidate terrain feature is reachable"],
+      "playerInput": ["Return to a remembered screen", "Apply the tool to a chosen environmental feature"],
+      "before": ["The screen appears to have its normal exits only", "The concealed interior or route is unavailable"],
+      "action": ["Use flame or an explosive on a compatible but not always explicitly marked feature"],
+      "after": ["A doorway or traversable state is exposed", "The discovered interior becomes part of the player's mental route network"],
+      "feedback": ["Terrain visibly changes to an entrance", "The player can cross the new threshold and receive an interior response"],
+      "consequences": ["The result may provide supplies, growth, information, or required progression", "Previously passed screens acquire new value after capability growth"],
+      "factualDescription": "Compatible overworld terrain can be changed with acquired tools to expose caves or routes, turning a previously closed screen into an entrance-bearing state.",
+      "interpretation": "A small persistent state change makes tool ownership reframe old scenery as a field of hypotheses, combining resource risk with spatial memory and discovery reward.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "labyrinth-room-rule-chain",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.combat-boss", "dimension.teaching-feedback"],
+      "context": "Inside a labyrinth, a fixed room can contain enemies, doors, movable blocks, and a state change that is not described before the player acts.",
+      "preconditions": ["The player has entered a labyrinth room", "A room exit or reward is presently unavailable"],
+      "playerInput": ["Observe the room layout", "Defeat enemies or test a conspicuous block after the combat state changes"],
+      "before": ["The room's dependency is unresolved", "A door, stair, or reward remains inaccessible"],
+      "action": ["Satisfy the room rule through combat clearance and a context-sensitive environmental action"],
+      "after": ["The room records a solved or cleared state", "The next route or reward becomes available"],
+      "feedback": ["Enemy count, block position, door animation, and sound communicate the transition", "The full-room camera keeps cause and result in one frame"],
+      "consequences": ["The player advances in the labyrinth graph", "The learned clearance-and-test cadence can be applied to later rooms and boss preparation"],
+      "factualDescription": "Labyrinth rooms frequently bind enemy clearance or block manipulation to doors, stairs, or rewards, with the resulting transition shown inside the same fixed tableau.",
+      "interpretation": "Keeping a complete causal chain in one frame turns sparse instruction into readable experimentation and makes ordinary rooms teach the action-state grammar later challenges depend on.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "cave-message-redirects-search",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.ui-input"],
+      "context": "A compact cave interior isolates one inhabitant and a short message from the hazards and visual noise of the overworld.",
+      "preconditions": ["The player discovers and enters an inhabited cave", "The message has not yet been incorporated into the player's route plan"],
+      "playerInput": ["Approach the inhabitant", "Read the short on-screen clue or transaction prompt"],
+      "before": ["A target or rule is unknown", "The current search has several plausible directions"],
+      "action": ["Trigger and read the inhabitant's short guidance message"],
+      "after": ["The player holds a concrete route or rule clue", "A possible next action becomes more legible"],
+      "feedback": ["The cave framing removes unrelated action", "Large on-screen text isolates the information exchange"],
+      "consequences": ["The player can redirect exploration or prepare for a known obstacle", "Minimal dialogue becomes part of route reasoning rather than a separate quest log"],
+      "factualDescription": "Some inhabited caves pause overworld action and present a short clue whose on-screen wording can redirect the player's route or interpretation of a later obstacle.",
+      "interpretation": "Spatially isolating brief social information gives each line tactical weight and folds narrative guidance into exploration without requiring a persistent quest interface.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "fixed-screen-failure-retry",
+      "dimensions": ["dimension.recovery-accessibility", "dimension.perspective-implementation", "dimension.hardware-multiplayer", "dimension.production-runtime"],
+      "context": "Combat and navigation occur in discrete top-down screens while the single-player save record retains major acquisitions between sessions.",
+      "preconditions": ["The player has a saved adventure state", "Health is depleted during exploration or combat"],
+      "playerInput": ["Choose to continue the adventure", "Navigate again from the offered recovery context"],
+      "before": ["The active attempt has ended", "Some local traversal and encounter state must be repeated"],
+      "action": ["Resume from the game's continue flow using the persistent file"],
+      "after": ["The avatar returns with a playable health state", "Major stored progression remains available"],
+      "feedback": ["A clear game-over and continue interface separates failure from resumed play", "The fixed-screen world and status display reappear in a known state"],
+      "consequences": ["The player retries without recreating the entire campaign", "Distance from the failed objective still makes route mastery and resource preparation valuable"],
+      "factualDescription": "The single-player original stores campaign progress and offers a continue flow after health loss, returning the player to the fixed-screen world with major acquisitions retained.",
+      "interpretation": "Persistent campaign state combined with local repetition makes harsh encounters recoverable while preserving the exploratory stakes created by travel and limited resources.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "A sparse world can teach exploration through visible shelter, immediate danger, and persistent tool-driven state changes rather than explicit objective arrows.",
+    "Fixed-screen rooms can make action-to-state causality unusually legible when every trigger and result remains inside one tactical frame.",
+    "Knowledge gates and capability gates can coexist when new tools cause players to reinterpret previously ordinary terrain."
+  ],
+  "uniqueOrNonportable": [
+    "The exact relic names, rescue premise, character identities, enemy roster, map layout, dungeon numbering, audiovisual motifs, and cave wording are protected surface expression and must not be reproduced.",
+    "Specific hidden entrance coordinates and puzzle solutions are evidence only; portability applies to the abstract reveal-and-revisit transaction."
+  ],
+  "openQuestions": [
+    "A later review should distinguish original Disk System recovery details from behaviors introduced by cartridge, Virtual Console, or subscription rereleases."
+  ]
+}

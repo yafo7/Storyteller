@@ -1,0 +1,356 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewId": "review.p4-existing-rebind-c.2026-07-18",
+  "reviewedAt": "2026-07-18",
+  "reviewedArtifact": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json",
+  "reviewerIndependence": {
+    "reviewer": "role.reviewer.independent-p4-evidence-taxonomy-stable-id-c",
+    "independentOfProposalAuthorship": true,
+    "proposalConclusionsAssumed": false,
+    "mutationPolicy": "Only this review artifact was written. Contracts, registries, patterns, relations, indexes, manifests, and the proposal were treated as read-only."
+  },
+  "scope": {
+    "patternRefs": [
+      "pattern.knowledge-gated-revisit",
+      "pattern.multi-solution-state-graph",
+      "pattern.reward-expands-future-possibility"
+    ],
+    "requiredArtifactsChecked": [
+      "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json",
+      "design-library/packs/zelda-mainline/observations/observation-registry.json",
+      "design-library/packs/zelda-mainline/claims/claim-registry.json",
+      "design-library/packs/zelda-mainline/works/work-registry.json",
+      "design-library/packs/zelda-mainline/sources/source-registry.json",
+      "design-library/packs/zelda-mainline/patterns/maturity-contracts.json",
+      "design-library/packs/zelda-mainline/patterns/quarantine-register.json",
+      "design-library/packs/zelda-mainline/coverage/pattern-remediation-review.json",
+      "design-library/packs/zelda-mainline/coverage/p4-supplemental-evidence-review.json"
+    ],
+    "additionalStableIdAndTaxonomyArtifactsChecked": [
+      "design-library/packs/zelda-mainline/patterns/released-patterns.json",
+      "design-library/packs/zelda-mainline/patterns/pattern-blueprints.json",
+      "design-library/packs/zelda-mainline/relations/relation-registry.json",
+      "design-library/releases/0.3.0.json",
+      "design-library/governance/merge-policy.md"
+    ]
+  },
+  "inputHashes": {
+    "proposalSha256": "9ee258bdb1eaf9739cb9dd0786da4029e2803eff0b30d686d67539c9cea415c2",
+    "observationRegistrySha256": "e7d484c4f65acb71a1e2fc8b29f75603cb5521af96704d6f8cdf935bd2082e49",
+    "claimRegistrySha256": "bb6cb2e00a97b6e81e9e7c2c4e67800178944b91e66ec2ee0851dc5212123c29",
+    "workRegistrySha256": "363a14c624cfe0c70e5f5aac41a80f965cae40ba9856a7c9d9838a226fe01249",
+    "sourceRegistrySha256": "eb6adfbbdc6e8793e03406ba10d108da986e881a3d19da39e3c244a68b73e735",
+    "maturityContractsSha256": "24746418ffdb485b5d51522e9171936e66a1b95837e8e9d3e592f293780fe151",
+    "quarantineRegisterSha256": "8528573288c6215bc7b3225001b02bb0e59dc0cc06650828b4c1279a18ae1580",
+    "patternRemediationReviewSha256": "49828a7ba02334cb4396dff6d3422a00f2ab6da2113ab57d111ca7edb958d40d",
+    "supplementalEvidenceReviewSha256": "d9134031ac73bed987fef0a1a10951542354445c33895e83c90899e55f84b519"
+  },
+  "method": {
+    "closureRule": "Every material leg of a retained principle must be closed inside one verified registered observation from each of at least two distinct included works. Legs may not be assembled across partial observations.",
+    "evidenceBoundary": "Only authoritative registry text was counted. Draft supplemental records, common knowledge, proposal paraphrase, and prospective runtime-test prose were not counted as evidence.",
+    "stableIdRule": "A released ID may retain a compatible conceptual identity through a versioned migration, but it may not be reused for an abstraction that removes the nouns or causal invariant encoded by the old name, subtype, family, and released principle.",
+    "taxonomyRule": "A common denominator is not an approvable pattern when it merely spans distinct specializations without a discriminating selector, reciprocal relations, and collision fixtures."
+  },
+  "structuralResults": {
+    "proposalJsonParsed": true,
+    "patternsReviewed": 3,
+    "directSupportObservationsChecked": 6,
+    "counterObservationsChecked": 3,
+    "allNineObservationRefsResolved": true,
+    "allNineObservationsVerified": true,
+    "allNineWorkRefsResolvedAndIncluded": true,
+    "allNineVersionRefsResolvedToOriginalVersions": true,
+    "directSupportClaimRefsChecked": 12,
+    "allDirectSupportClaimRefsResolved": true,
+    "directSupportFactClaimsVerified": 6,
+    "directSupportInterpretationClaimsReviewed": 6,
+    "allDirectSupportSourceRefsResolved": true,
+    "allDirectSupportSourcesTierAAndVerified": true,
+    "supplementalDraftRefsUsed": 0,
+    "supplementalReviewDecisionObserved": "fail-with-zero-observations-and-zero-claims-approved",
+    "priorRemediationDecisionObserved": "all-three-original-broad-contracts-not-approved-for-fewer-than-two-exact-works",
+    "stableIdHistoryFinding": "All three IDs are status released at patternVersion 1.1.0 in released-patterns.json and are listed in the Beta 0.3.0 release core. Proposal wording that calls either change pre-release or before first release is false."
+  },
+  "patternReviews": [
+    {
+      "patternId": "pattern.knowledge-gated-revisit",
+      "decision": "fail",
+      "evidenceClosure": {
+        "verdict": "pass-for-the-new-separated-knowledge-principle",
+        "retainedPrinciple": "Information preserved across a temporal, spatial, or attempt boundary becomes gameplay progression when the player applies it to change a later route, timing, comparison, or puzzle action.",
+        "distinctRegisteredWorks": 2,
+        "observationAudits": [
+          {
+            "observationRef": "observation.majoras-mask.knowledge-converts-failed-cycle-into-progress",
+            "workRef": "work.majoras-mask",
+            "verdict": "pass",
+            "closedLegs": [
+              "scheduled information is observed and remembered",
+              "a reset creates a later attempt boundary",
+              "learned timing is applied to revise the next sequence",
+              "clock, actor, dialogue, record, and trigger feedback expose the result",
+              "the later interaction window makes failed-attempt knowledge durable progression"
+            ],
+            "boundary": "The observation permits a persistent capability to coexist with knowledge; it does not support the old zero-capability-delta invariant."
+          },
+          {
+            "observationRef": "observation.phantom-hourglass.map-note-becomes-puzzle-memory",
+            "workRef": "work.phantom-hourglass",
+            "verdict": "pass",
+            "closedLegs": [
+              "observed information is externalized as a persistent authored mark",
+              "clue and application are separated by time or space",
+              "the retained information is consulted and applied at a later obstacle",
+              "the mark and active-scene response expose the test result",
+              "the later puzzle becomes actionable through observation and translation"
+            ],
+            "boundary": "The record does not establish an old place, a failed first probe, or physical first-visit solvability."
+          }
+        ],
+        "draftOrProposalTextNeededToCloseAnyLeg": false
+      },
+      "taxonomy": {
+        "verdict": "pass-only-as-a-new-pattern-identity",
+        "finding": "Separated-knowledge application can be distinguished from player-authored-map-memory as the later application rather than the storage medium, and from reversible-reset-knowledge-retention as the later decision rather than the reset substrate. Those boundaries are not the released knowledge-gated-revisit identity."
+      },
+      "stableId": {
+        "verdict": "reject-preservation",
+        "decision": "mint-new-id",
+        "recommendedNewId": "pattern.separated-knowledge-application",
+        "finding": "The released ID encodes knowledge-only gating, an old place or revisit, and physical preavailability. The proposal renames it, permits capability coexistence, removes same-place return, and admits any later timing, comparison, route, or puzzle decision. That is a generalization and identity replacement, not a compatible narrowing."
+      },
+      "exactRequiredEdits": [
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/0/identityChange/preservePatternId",
+          "action": "replace",
+          "replacement": false,
+          "reason": "The proposed abstraction no longer denotes knowledge-gated revisit."
+        },
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/0/decision",
+          "action": "replace",
+          "replacement": "evidence-closable-only-as-new-pattern-identity"
+        },
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/0/identityChange",
+          "action": "add",
+          "replacement": {
+            "newPatternId": "pattern.separated-knowledge-application",
+            "oldPatternDisposition": "reviewed-non-selectable-pending-new-evidence",
+            "migrationClass": "post-1.1-breaking-pattern-split"
+          }
+        },
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/0/identityChange/releaseNoteRequired",
+          "action": "replace",
+          "replacement": "Record that pattern.knowledge-gated-revisit was already released in Beta 0.3.0 at patternVersion 1.1.0. Preserve that ID and meaning as reviewed, non-selectable research; create pattern.separated-knowledge-application under a new ID and a machine-readable breaking migration."
+        },
+        {
+          "target": "design-library/packs/zelda-mainline/patterns/released-patterns.json#pattern.knowledge-gated-revisit",
+          "action": "future-integration-requirement",
+          "replacement": "Do not rewrite its principle, name, or subtype. Remove it from production retrieval, set reviewed and autoSelectable false, and add an honest quarantine record until two works close the original knowledge-only revisit invariant."
+        },
+        {
+          "target": "future pattern.separated-knowledge-application selector fixtures",
+          "action": "add",
+          "replacement": "Add negative collisions for authored-map storage without later application, reset persistence without a later information-bound decision, and capability-only revisit; add reciprocal boundaries with player-authored-map-memory and reversible-reset-knowledge-retention."
+        }
+      ]
+    },
+    {
+      "patternId": "pattern.multi-solution-state-graph",
+      "decision": "fail",
+      "evidenceClosure": {
+        "verdict": "pass-only-for-the-minimal-eligible-input-evaluator-wording",
+        "retainedPrinciple": "Define a local goal independently from one prescribed input sequence, then let the player select among readable eligible inputs while progress or failure feedback exposes whether the constructed state can reach that goal.",
+        "distinctRegisteredWorks": 2,
+        "observationAudits": [
+          {
+            "observationRef": "observation.four-swords-adventures.collection-threshold-turns-exploration-into-clearance",
+            "workRef": "work.four-swords-adventures",
+            "verdict": "pass-for-aggregate-contribution-specialization",
+            "closedLegs": [
+              "a visible local Force threshold defines the goal",
+              "enemies, scenery, mechanisms, and course events provide readable contributions",
+              "the player can choose which opportunities satisfy the forgiving aggregate",
+              "collection, sword, pickup, barrier, and return feedback expose progress or insufficiency",
+              "the barrier opens at threshold and remains closed below it"
+            ],
+            "boundary": "This is a scalar aggregate threshold, not two controlled complete solution paths."
+          },
+          {
+            "observationRef": "observation.echoes-of-wisdom.echo-combination-authors-a-route",
+            "workRef": "work.echoes-of-wisdom",
+            "verdict": "pass-for-object-role-composition-specialization",
+            "closedLegs": [
+              "an unreachable local destination defines the goal",
+              "learned echoes expose readable shape, behavior, effect, and cost inputs",
+              "the player selects and composes eligible echoes",
+              "preview, power, contact, movement, and collision feedback expose viability",
+              "the constructed topology reaches the destination or diagnoses failure"
+            ],
+            "boundary": "The observation does not record two controlled complete routes to one measured postcondition."
+          }
+        ],
+        "draftOrProposalTextNeededToCloseAnyLeg": false,
+        "criticalCaveat": "The principle passes only because it no longer requires multiple solutions. The common wording is too weak to retain the original identity or prove a distinct production taxonomy node."
+      },
+      "taxonomy": {
+        "verdict": "fail",
+        "objectRoleComposition": "Direct collision. The Echo support is already a bounded object-role and spatial-composition mechanism. The proposed one-viable-input negative fixture does not distinguish an object-role graph with two or more roles from this core.",
+        "systemicVerbToolkit": "Not identical in principle: systemic-verb-toolkit is a small orthogonal verb set reused across several problem classes, while the proposal is one local goal evaluator. However, the existing relation registry only records a reviewed synergy and the quarantined toolkit explicitly lacks a clean boundary from multi-solution and object-role. Reciprocal selector fixtures and relations are still absent.",
+        "thresholdConcept": "pattern.threshold-performance-cue is only a same-word presentation pattern and is not a semantic duplicate. The Four Swords Adventures evidence instead instantiates an unregistered aggregate-contribution-threshold specialization, which the proposal currently absorbs without a typed hierarchy.",
+        "finding": "The two works close different specializations. Their common denominator admits any local evaluator with two building-block inputs, including a single mandatory construction, so it does not discriminate a multi-solution pattern."
+      },
+      "stableId": {
+        "verdict": "reject-preservation",
+        "decision": "keep-old-id-with-old-meaning-and-quarantine",
+        "finding": "The released identity requires several causally distinct paths converging on one explicit invariant. The proposal removes complete paths, equivalent start, shared postcondition, causal independence, and non-domination, then tests only one successful construction. The phrase multi-solution would become false under the new contract."
+      },
+      "exactRequiredEdits": [
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/1/identityChange/preservePatternId",
+          "action": "replace",
+          "replacement": false
+        },
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/1/decision",
+          "action": "replace",
+          "replacement": "not-closable-as-multi-solution-and-taxonomically-unresolved"
+        },
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/1/identityChange/releaseNoteRequired",
+          "action": "replace",
+          "replacement": "Record that pattern.multi-solution-state-graph was already released in Beta 0.3.0 at patternVersion 1.1.0. Do not rewrite it as outcome-first eligible inputs; demote it to reviewed, non-selectable research and quarantine it until two works close the original complete-path invariant."
+        },
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/1/contractPatchPlan",
+          "action": "do-not-apply-to-original-id",
+          "replacement": "Do not bind eligible-input-count, goal-evaluator, score, parameter, effect, or test IDs under the multi-solution namespace. The submitted pair does not justify one new released common pattern."
+        },
+        {
+          "target": "future evidence disposition",
+          "action": "split",
+          "replacement": "Route observation.four-swords-adventures.collection-threshold-turns-exploration-into-clearance to an aggregate-contribution-threshold research candidate requiring a second work. Reconsider observation.echoes-of-wisdom.echo-combination-authors-a-route as support for object-role-composition rather than as proof of complete-path multiplicity."
+        },
+        {
+          "target": "future taxonomy and selector review",
+          "action": "add",
+          "replacement": "Before minting any eligible-input-evaluator ID, require a second atomic-mechanism pair, formal generalizes/specializes relations, reciprocal precedence, and collision fixtures against object-role-composition, systemic-verb-toolkit, scalar aggregate thresholds, one mandatory two-input construction, and one prescribed signature-tool route."
+        },
+        {
+          "target": "future pattern.multi-solution-state-graph promotion",
+          "action": "retain-original-proof-standard",
+          "replacement": "Require at least two independently viable complete paths from controlled comparable starts to the same explicit postcondition in each of two works. Current verified registry evidence does not satisfy this standard."
+        }
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "decision": "pass",
+      "evidenceClosure": {
+        "verdict": "pass",
+        "retainedPrinciple": "An exploration payoff expands later possibility when its persistent state improves at least two distinct functional dimensions, such as traversal, capacity, information, perception, topology, preparation, relationship access, or recovery, instead of granting only immediate score or value.",
+        "distinctRegisteredWorks": 2,
+        "observationAudits": [
+          {
+            "observationRef": "observation.breath-of-the-wild.shrine-detour-converts-curiosity",
+            "workRef": "work.breath-of-the-wild",
+            "verdict": "pass",
+            "closedLegs": [
+              "an exploration detour and bounded challenge produce the payoff",
+              "completion, travel-anchor state, and Orb growth state persist",
+              "future mobility or topology and long-term capacity are distinct functions",
+              "exterior, map, challenge, and completion feedback expose acquisition",
+              "future travel and capacity consequences exceed immediate score or value"
+            ],
+            "boundary": "The record supports a reward transaction with multiple persistent outputs; it does not prove that two functions read one indivisible scalar state ref."
+          },
+          {
+            "observationRef": "observation.tears-of-the-kingdom.lightroot-turns-darkness-into-map",
+            "workRef": "work.tears-of-the-kingdom",
+            "verdict": "pass",
+            "closedLegs": [
+              "crossing a dark, gloom-constrained region and activating the root produces the payoff",
+              "illumination, map revelation, and the root landmark persist",
+              "perception or topology and recovery are distinct functions",
+              "darkness, map, health, and landmark feedback expose the new state",
+              "later routes become more legible and exploration becomes safer"
+            ],
+            "boundary": "The record does not close optionality, non-dominated destination branches, or preservation of unselected choices; the retained principle correctly removes them."
+          }
+        ],
+        "draftOrProposalTextNeededToCloseAnyLeg": false
+      },
+      "taxonomy": {
+        "verdict": "pass-with-required-collision-fixtures",
+        "finding": "A persistent multi-function exploration payoff remains distinct from a landmark promise without committed reward state, a single capability or route affordance, a recovery-only node, and optional-secret clue readability, provided duplicated labels do not count as distinct functional dimensions."
+      },
+      "stableId": {
+        "verdict": "preserve-with-major-versioned-migration",
+        "decision": "preserve-pattern-id",
+        "finding": "The name, exploration-reward kind, family, and reward-to-later-possibility causal identity remain continuous. Persistent multi-function payoff is a new operational contract for the same high-level identity. It is not a mere narrowing: replacing optional plus two non-dominated choices with persistence plus two functional dimensions is behaviorally incompatible and requires a major version and machine-readable migration."
+      },
+      "exactRequiredEdits": [
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/2/identityChange/releaseNoteRequired",
+          "action": "replace",
+          "replacement": "Record a post-Beta-0.3.0 breaking re-specification from patternVersion 1.1.0 choice-generating-reward to patternVersion 2.0.0 persistent-multi-function-payoff; include a machine-readable migration and invalidation list."
+        },
+        {
+          "target": "future pattern.reward-expands-future-possibility record",
+          "action": "version",
+          "replacement": "Set patternVersion to 2.0.0 and treat selector, binding, runtime, route, and save semantics as a major behavioral change rather than a patch or pre-release narrowing."
+        },
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/2/contractPatchPlan/parameters",
+          "action": "replace-single-state-binding",
+          "replacement": "Bind one acquisitionTransactionRef, one or more persistentStateRefs committed by that transaction, and at least two function refs. Each function must cite its persistentStateRef, distinct functionalDimension, futureUseContextRef, feedbackRef, and before/after actionabilityDelta."
+        },
+        {
+          "target": "planning/v03-zelda-mainline/reports/p4-existing-rebind-proposal-c.json#/proposals/2/contractPatchPlan/effects",
+          "action": "replace-same-ref-postcondition",
+          "replacement": "Require all declared function states to be committed atomically by the same acquisition transaction; do not require Breath of the Wild travel and growth functions to read one indivisible reward-state ref, which the registered observation does not state."
+        },
+        {
+          "target": "future pattern migration",
+          "action": "add",
+          "replacement": "Mark optionalDiscovery, laterChoiceCount, nonDominatedCount, and unselectedOptions bindings as non-automatically-migratable; require re-instantiation under the 2.0.0 acquisition, persistent-state, function, and actionability-delta contract."
+        },
+        {
+          "target": "future selector fixtures",
+          "action": "add",
+          "replacement": "Add collisions for a single new capability or old affordance, a landmark promise without committed reward state, recovery-only payoff, duplicated illumination and mapping labels that express one dimension, immediate currency or score, and a single stage-role reward."
+        },
+        {
+          "target": "future release integration",
+          "action": "regenerate-and-validate",
+          "replacement": "Rebind provenance to the two approved direct observations and the registered Tri-Force Heroes counter; regenerate fixtures, selector benchmarks, originality applications, indexes, hashes, and migration tests before release."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "adjudication": "fail",
+    "patternsApproved": [
+      "pattern.reward-expands-future-possibility"
+    ],
+    "patternsRejected": [
+      "pattern.knowledge-gated-revisit",
+      "pattern.multi-solution-state-graph"
+    ],
+    "stableIdDecisions": {
+      "pattern.knowledge-gated-revisit": "reject-preservation; keep old meaning quarantined and mint pattern.separated-knowledge-application",
+      "pattern.multi-solution-state-graph": "reject-preservation; keep old meaning quarantined and do not mint one released replacement from the submitted mixed-specialization pair",
+      "pattern.reward-expands-future-possibility": "preserve only through patternVersion 2.0.0 and a machine-readable breaking migration"
+    },
+    "blockers": [
+      "pattern.knowledge-gated-revisit: the proposed name, subtype, causal scope, and capability boundary replace the released knowledge-only old-place identity, so the old stable ID cannot be reused.",
+      "pattern.multi-solution-state-graph: the proposal removes multiple complete solutions and validates only one successful construction, so the stable ID would become semantically false.",
+      "pattern.multi-solution-state-graph: the submitted works instantiate aggregate-threshold and object-role-composition specializations; no discriminating common production taxonomy, reciprocal relation set, or collision fixtures exist.",
+      "All three IDs were already released in Beta 0.3.0 at patternVersion 1.1.0; proposal language describing pre-release or before-first-release narrowing must be replaced with post-release migration language.",
+      "pattern.reward-expands-future-possibility is approved only after a 2.0.0 migration and a reward-transaction or persistent-state-set binding that does not infer one indivisible state ref from the two registered reward bundles.",
+      "Draft supplemental observations and claims remain unusable: p4-supplemental-evidence-review approved zero evidence edges."
+    ]
+  }
+}

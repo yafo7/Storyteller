@@ -1,0 +1,126 @@
+{
+  "workId": "work.echoes-of-wisdom",
+  "author": "Corpus Analyst Rowan-C",
+  "reviewer": "Independent Reviewer Alder-C",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player embodies Zelda as a resourceful problem solver who answers danger and blocked routes by learning echoes, recombining their properties, and restoring places damaged by rifts.",
+    "dimension.core-loop": "The cadence is to observe an object or creature, learn its echo, select and summon a useful copy, combine copies or Sync with the environment, explore rifts, and convert discoveries into a broader solution vocabulary.",
+    "dimension.verbs": "Movement and conversation are joined by learning, selecting, summoning, dismissing, and repositioning echoes; Sync and reverse-bond movement manipulate objects, while a limited swordfighter form supplies direct action.",
+    "dimension.world-state": "The learned-echo catalogue, Tri's available summoning power, repaired rifts, resolved local requests, collected materials, equipment, and swordfighter resources record progress at different persistence scales.",
+    "dimension.topology": "A compact overhead Hyrule links settlements, fields, waters, deserts, caves, dungeons, and rift entrances to fragmented Still World spaces whose floating terrain remixes recognizable spatial motifs.",
+    "dimension.gating-revisit": "Progress is governed by regional rift states, echo knowledge, Tri's summoning capacity, environmental properties, Sync use, and the player's ability to compose a route rather than only by fixed keys.",
+    "dimension.puzzle-information": "Object shapes, movement patterns, creature behavior, echo costs, surfaces, hazards, and visible target geometry expose a grammar in which several learned copies can satisfy one spatial or systemic need.",
+    "dimension.dungeon-structure": "Still World expeditions and conventional dungeons turn the broad echo vocabulary into denser sequences of traversal, switching, combat, and boss tests before a rift or regional condition changes.",
+    "dimension.exploration-reward": "Optional routes and local problems yield new echoes, ingredients, equipment, currency, swordfighter upgrade resources, automaton opportunities, and shortcuts that widen future approaches.",
+    "dimension.growth-economy": "Tri's power expands the usable echo budget, while currency, ingredients, smoothies, accessories, and swordfighter upgrades create parallel economies for experimentation, resilience, and direct combat.",
+    "dimension.combat-boss": "Threats can be answered by summoning monster echoes, exploiting environmental objects, using Sync, repositioning allies, or spending limited swordfighter energy, with bosses emphasizing readable states and tool choice.",
+    "dimension.npc-quest": "Residents present concrete worries, services, recipes, rumors, and side requests; helping them directs exploration toward echo applications and can unlock rewards or fabrication options such as automatons.",
+    "dimension.narrative-performance": "Zelda's search for missing people and the cause of the rifts progresses through restored regions, rescued figures, companion reactions, and short scenes that convert visible world repair into story advancement.",
+    "dimension.camera-blocking": "The elevated 2.5D camera keeps Zelda, Tri, summoned copies, height differences, hazards, and destinations readable, while shifts in framing and depth support rift entrances, reveals, and compact performed moments.",
+    "dimension.teaching-feedback": "Learn prompts, catalogue entries, placement previews, echo-cost markers, Tri's power display, Sync links, valid positioning, creature behavior, and immediate world reactions explain what each copied element can do.",
+    "dimension.ui-input": "A growing echo selector, cost indicators, equipment and smoothie menus, map and quest records, swordfighter energy, contextual prompts, and summon replacement controls expose a large but reusable action library.",
+    "dimension.recovery-accessibility": "Summoned copies can be dismissed and replaced without consuming ordinary inventory, failed arrangements can be rebuilt, smoothies support recovery and resistance, and alternate echo combinations reduce dependence on one solution.",
+    "dimension.perspective-implementation": "The overhead 2.5D presentation preserves top-down route clarity while making elevation, stacking, object volume, water, moving platforms, and the fragmented depth of rift spaces mechanically legible.",
+    "dimension.hardware-multiplayer": "The original is a single-player Nintendo Switch game controlled through a conventional gamepad; echo selection, placement, companion behavior, and simulated creatures are local rather than synchronized between players.",
+    "dimension.production-runtime": "Its principles require a tagged echo registry, summon-budget accounting, placement and collision checks, allied creature AI, object-binding constraints, layered navigation, persistent rift and quest state, and broad combination testing."
+  },
+  "notApplicableDimensions": {
+    "dimension.hardware-multiplayer": "The primary design is a local single-player adventure and its core rules do not depend on multiplayer, network state, asymmetric screens, or a platform-exclusive input device."
+  },
+  "observationThemes": [
+    {
+      "key": "echo-learning-turns-observation-into-vocabulary",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.ui-input"],
+      "context": "A useful object or defeated creature displays a learnable echo that could answer a current or later spatial, combat, or utility need.",
+      "preconditions": ["The Tri Rod and echo system are available", "The target is eligible to be learned", "The player can reach or defeat the source"],
+      "playerInput": ["Observe or interact with the eligible source", "Learn its echo", "Open the selector and summon the learned copy"],
+      "before": ["The source exists only as a local object or creature", "Its function is not yet callable from the player's echo catalogue"],
+      "action": ["Convert the encountered source into a selectable echo and place a copy where its property is useful"],
+      "after": ["The catalogue contains a reusable new entry", "The copied function can participate in the present problem and later combinations"],
+      "feedback": ["A learn prompt and acquisition presentation identify the new entry", "Selector iconography, power cost, placement preview, and the summoned copy confirm use"],
+      "consequences": ["Exploration expands the player's verb vocabulary rather than only a numeric inventory", "A later obstacle can be approached through remembered properties from earlier encounters"],
+      "factualDescription": "Eligible objects and creatures can be learned as echoes, selected from a catalogue, and summoned as copies that reproduce useful physical or behavioral properties within Tri's power limit.",
+      "interpretation": "When observation permanently enlarges a reusable verb library, ordinary scenery and enemies become prospective capabilities and discovery directly feeds problem solving.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "echo-combination-authors-a-route",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.puzzle-information"],
+      "context": "A ledge, gap, current, barrier, or hazard blocks movement, while the player knows several echoes with different shapes, movement patterns, or environmental effects.",
+      "preconditions": ["At least one relevant echo has been learned", "Tri has enough available power for the proposed arrangement", "The obstacle permits a systemic response"],
+      "playerInput": ["Inspect the geometry and hazard", "Choose echoes by property and cost", "Place, stack, replace, or sequence copies to create a route"],
+      "before": ["The destination is spatially unreachable from the current position", "No completed route spans the obstacle"],
+      "action": ["Compose a temporary traversable arrangement from summoned copies"],
+      "after": ["The player reaches the far side or learns why the arrangement fails", "The local topology temporarily includes the player-made route"],
+      "feedback": ["Placement previews, copy silhouettes, contact, motion, and Tri's remaining power expose constraints", "Zelda's successful movement or visible collision failure validates the hypothesis"],
+      "consequences": ["Previously seen places can become reachable after the catalogue or power budget grows", "One authored obstacle can accept several property-based solutions"],
+      "factualDescription": "Echoes with different shapes and behaviors can be placed together under a visible power budget to create steps, moving support, protection, or other temporary routes through the overhead world.",
+      "interpretation": "A broad but constrained object vocabulary shifts gating from possession of one prescribed key toward recognizing properties and composing a viable local topology.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "rift-expedition-converts-repair-into-story-state",
+      "dimensions": ["dimension.dungeon-structure", "dimension.exploration-reward", "dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking"],
+      "context": "A regional rift has displaced terrain or people and opens access to a fragmented Still World route leading toward a dungeon or confrontation.",
+      "preconditions": ["The relevant regional investigation has reached the rift", "The entrance is available", "The player has a workable echo set"],
+      "playerInput": ["Enter the rift", "Traverse fragmented spaces with echoes and Sync", "Complete the enclosed tests and confrontation"],
+      "before": ["The region visibly suffers from the rift", "Affected people, objects, or routes remain unavailable", "The interior route is unresolved"],
+      "action": ["Complete the rift expedition and its culminating challenge"],
+      "after": ["The rift condition changes and affected world elements are restored", "Narrative access and exploration opportunities advance"],
+      "feedback": ["The overhead camera frames separated terrain, depth, summoned routes, and destination landmarks", "Resolution scenes and visible regional change connect the completed challenge to restoration"],
+      "consequences": ["Dungeon completion modifies both story and navigable world state", "The restored region can expose new conversations, rewards, and onward routes"],
+      "factualDescription": "Rifts lead into fragmented Still World areas and dungeon challenges; resolving their central threat restores affected parts of Hyrule and advances Zelda's investigation.",
+      "interpretation": "Making environmental damage visible before an expedition and restoration visible afterward gives a dungeon a legible causal role beyond awarding an abstract progression token.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "summoned-ally-externalizes-combat-choice",
+      "dimensions": ["dimension.growth-economy", "dimension.combat-boss", "dimension.recovery-accessibility"],
+      "context": "A hostile creature blocks a route while the player knows more than one combat-capable echo and has a limited summon-power budget.",
+      "preconditions": ["At least one combat-capable echo is learned", "The threat's position or behavior is readable", "Tri has sufficient power for one candidate summon"],
+      "playerInput": ["Select and place a combat echo", "Observe its autonomous behavior and matchup", "Reposition or replace it when the result is ineffective"],
+      "before": ["The threat remains active", "No summoned ally currently applies pressure"],
+      "action": ["Spend summon capacity on one ally behavior at a chosen position"],
+      "after": ["The threat is defeated, displaced, or exposes why another matchup is needed", "Released summon capacity becomes available for the next attempt"],
+      "feedback": ["Creature movement, targeting, impacts, threat response, and Tri's cost display reveal the matchup", "Visible defeat or failed engagement confirms whether the choice worked"],
+      "consequences": ["The player can retry with a different learned behavior or placement instead of repeating one timing sequence", "The useful combat vocabulary grows as additional echoes are learned"],
+      "factualDescription": "Zelda can spend Tri's visible power budget to summon learned monster echoes whose autonomous attacks and movement interact with hostile creatures; she can replace an ineffective summon with another learned option.",
+      "interpretation": "Externalizing one attack choice into a placed allied behavior turns a combat exchange into an observable matchup-and-position hypothesis with a reversible retry path.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "sync-makes-relationship-visible",
+      "dimensions": ["dimension.teaching-feedback", "dimension.perspective-implementation", "dimension.production-runtime"],
+      "context": "An object or creature must be moved along Zelda's path, or its own motion can carry Zelda through an otherwise difficult route.",
+      "preconditions": ["Sync is available", "The target permits a binding relationship", "Space and collision allow at least one linked movement hypothesis"],
+      "playerInput": ["Target and bind to the object or creature", "Move Zelda to transfer motion, or reverse the relationship to follow the target", "Release or revise the link"],
+      "before": ["Zelda and the target move independently", "The target's position or path does not yet solve the problem"],
+      "action": ["Create a temporary movement relationship and use the controlling side's motion to reposition the other"],
+      "after": ["The target or Zelda reaches a new position", "The relationship can be released, repeated, or rejected by visible constraints"],
+      "feedback": ["A visible link, target highlight, camera framing, and synchronized motion expose which body controls the relationship", "Collision and path response immediately show whether the link can continue"],
+      "consequences": ["One relational verb supports object puzzles, traversal, and combat manipulation", "The runtime must resolve both linked bodies, collision, and control direction deterministically"],
+      "factualDescription": "Sync links Zelda with an eligible object or creature so her movement can move it, while the reverse form lets the target's movement carry Zelda; the game presents this in a single-player overhead 2.5D space.",
+      "interpretation": "A clearly visualized temporary constraint can produce many interactions when control direction is reversible and collision feedback remains immediate.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "Turning encountered entities into reusable verbs can make exploration, combat, and puzzle growth share one progression language.",
+    "A visible summon budget can preserve open-ended composition while keeping local state readable and replaceable.",
+    "Externalized creature behavior can shift combat emphasis from repeated direct attacks toward selection, placement, and adaptation.",
+    "A reversible binding relationship can support diverse puzzles when control direction and collision consequences are always visible."
+  ],
+  "uniqueOrNonportable": [
+    "Zelda, Link, Tri, Hyrule, the Tri Rod, the Still World, named characters, creatures, locations, rift fiction, iconography, dialogue, music, and exact story events are nonportable.",
+    "The precise echo roster, costs, object properties, dungeon layouts, boss responses, automata, recipes, and regional restoration sequence remain evidence only.",
+    "Portable principles require an original copy vocabulary, companion fiction, visual silhouettes, resource economy, encounter topology, audiovisual identity, and causal story context."
+  ],
+  "openQuestions": [
+    "A comparative playtest should measure how selector burden and discoverability change as the echo catalogue grows, especially for players who rely on accessibility support."
+  ]
+}

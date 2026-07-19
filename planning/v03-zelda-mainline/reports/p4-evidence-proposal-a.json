@@ -1,0 +1,599 @@
+{
+  "proposalVersion": "1.0.0",
+  "proposalId": "proposal.p4-evidence-a-20260718",
+  "authoredAt": "2026-07-18",
+  "scope": "Evidence-only proposal; no authoritative registry was modified.",
+  "verificationRule": "Every draft record below must be reproduced from the cited registered Tier-A primary-game source and independently reviewed before it can replace a released-pattern evidence edge.",
+  "patterns": [
+    {
+      "patternId": "pattern.knowledge-gated-revisit",
+      "verdict": "proposed-closure-pending-primary-runtime-verification",
+      "retainedPrinciple": "New understanding, not new avatar power, makes an old place actionable.",
+      "existingRefsToKeep": [
+        {
+          "ref": "observation.zelda-ii-the-adventure-of-link.learned-capability-reopens-route",
+          "role": "counter",
+          "countsTowardTwoWorkClosure": false,
+          "reason": "It cleanly bounds the pattern: a spell, technique, or item acquired after first contact is a capability gate, even when the player also learns where to use it."
+        }
+      ],
+      "existingRefsToRemove": [
+        {
+          "ref": "observation.majoras-mask.knowledge-converts-failed-cycle-into-progress",
+          "reason": "Its after-state expressly permits carrying a new persistent capability, so it does not prove a knowledge-only gate."
+        },
+        {
+          "ref": "observation.breath-of-the-wild.memory-landmark-reveals-past",
+          "reason": "It proves landmark identification and optional reveal order, but not that the same previously attempted action opens an old route with zero capability delta."
+        },
+        {
+          "ref": "observation.the-legend-of-zelda.cave-message-redirects-search",
+          "reason": "It proves clue delivery and route redirection, but does not trace the clue to a specific pre-existing action target and successful return."
+        }
+      ],
+      "newObservations": [
+        {
+          "schemaVersion": "1.0.0",
+          "observationId": "observation.the-legend-of-zelda.lost-woods-sequence-is-knowledge-only-route",
+          "workId": "work.the-legend-of-zelda",
+          "versionId": "version.the-legend-of-zelda.original",
+          "dimensionIds": [
+            "dimension.gating-revisit",
+            "dimension.puzzle-information",
+            "dimension.topology",
+            "dimension.teaching-feedback"
+          ],
+          "context": "The player has reached the repeating forest-maze screen while every directional input needed to leave it is already available.",
+          "preconditions": [
+            "Use the same original-version save, inventory, health, and acquired-capability snapshot for both runs",
+            "Record one unsuccessful traversal before consulting the registered in-game clue",
+            "Do not acquire or consume an item between the unsuccessful and successful runs"
+          ],
+          "playerInput": [
+            "Attempt an incorrect direction sequence and observe the loop",
+            "Learn the four-direction relation from the in-game clue",
+            "Return and enter north, west, south, west"
+          ],
+          "stateTransition": {
+            "before": [
+              "The route inputs are physically available but the player model of their order is incomplete",
+              "An incorrect sequence returns traversal to the repeating maze state"
+            ],
+            "action": [
+              "Apply the learned direction relation at the unchanged maze screen"
+            ],
+            "after": [
+              "The player exits into the adjacent overworld branch",
+              "Inventory, capability set, and the maze geometry are unchanged"
+            ]
+          },
+          "feedback": [
+            "Wrong directions reproduce the maze screen",
+            "The complete sequence changes the connected overworld screen without an acquisition cue"
+          ],
+          "consequences": [
+            "A route that was executable on first contact becomes reliably actionable through knowledge alone"
+          ],
+          "factualDescription": "In the original game, the Lost Woods accepts ordinary directional movement from first contact; an incorrect route loops, while the learned north-west-south-west sequence exits the maze without changing inventory or avatar capabilities.",
+          "factClaimRefs": [
+            "claim.the-legend-of-zelda.lost-woods-sequence-is-knowledge-only-route.fact"
+          ],
+          "interpretation": "A route is knowledge-gated when an unchanged input set and unchanged world geometry produce progress only after the player learns the relation among already available actions.",
+          "interpretationClaimRefs": [
+            "claim.the-legend-of-zelda.lost-woods-sequence-is-knowledge-only-route.interpretation"
+          ],
+          "confidence": "medium",
+          "disposition": "portable-candidate",
+          "status": "draft",
+          "reviewNotes": [
+            "Requires a controlled primary-version replay and an independent check that no item, capability, or quest flag changes between runs."
+          ]
+        },
+        {
+          "schemaVersion": "1.0.0",
+          "observationId": "observation.ocarina-of-time.lost-woods-audio-rule-opens-existing-path",
+          "workId": "work.ocarina-of-time",
+          "versionId": "version.ocarina-of-time.original",
+          "dimensionIds": [
+            "dimension.gating-revisit",
+            "dimension.puzzle-information",
+            "dimension.topology",
+            "dimension.teaching-feedback"
+          ],
+          "context": "Child Link can enter the Lost Woods junctions, but choosing an unproductive doorway returns him toward the entrance while one sequence leads toward the Sacred Forest Meadow.",
+          "preconditions": [
+            "Use one original Nintendo 64 version save and hold inventory, songs, age, and capabilities constant",
+            "Reach the junctions before knowing which doorway preserves progress",
+            "Keep audio enabled and record the relative melody feedback at each candidate doorway"
+          ],
+          "playerInput": [
+            "Probe a doorway whose melody fades and observe the return",
+            "Compare the melody at the unchanged doorway set",
+            "Re-enter and repeatedly choose the doorway where the melody remains strongest"
+          ],
+          "stateTransition": {
+            "before": [
+              "All doorway actions are available but the productive adjacency is unknown",
+              "An incorrect choice returns the player instead of granting progress"
+            ],
+            "action": [
+              "Use the learned audio-spatial relation to choose among the same doors"
+            ],
+            "after": [
+              "The player reaches the Sacred Forest Meadow approach",
+              "No item, song, form, or world-state grant was added between the failed and successful attempts"
+            ]
+          },
+          "feedback": [
+            "The melody grows clearer at the productive exit and fades at an unproductive one",
+            "The new connected area confirms the inferred route"
+          ],
+          "consequences": [
+            "Observation and recall, rather than avatar growth, turn the old junction into a navigable route"
+          ],
+          "factualDescription": "In the original Nintendo 64 game, the Lost Woods doorways are traversable before the route is understood; comparing the melody across exits lets the player reach the Sacred Forest Meadow approach with no intervening capability acquisition.",
+          "factClaimRefs": [
+            "claim.ocarina-of-time.lost-woods-audio-rule-opens-existing-path.fact"
+          ],
+          "interpretation": "Diagnostic sensory feedback can support a knowledge-only revisit when failed probes are reversible and the successful action was physically available from the first attempt.",
+          "interpretationClaimRefs": [
+            "claim.ocarina-of-time.lost-woods-audio-rule-opens-existing-path.interpretation"
+          ],
+          "confidence": "medium",
+          "disposition": "portable-candidate",
+          "status": "draft",
+          "reviewNotes": [
+            "Requires original-version replay; treat the forest, melody, and exact doorway sequence as nonportable source surface."
+          ]
+        }
+      ],
+      "newClaims": [
+        {
+          "schemaVersion": "1.0.0",
+          "claimId": "claim.the-legend-of-zelda.lost-woods-sequence-is-knowledge-only-route.fact",
+          "claimType": "fact",
+          "criticality": "critical",
+          "minimumSourceTier": "A",
+          "statement": "The repeating forest route can be exited by an ordinary four-direction sequence that is executable without acquiring or consuming a new item or capability.",
+          "workRefs": ["work.the-legend-of-zelda"],
+          "versionRefs": ["version.the-legend-of-zelda.original"],
+          "evidence": [{
+            "sourceRef": "source.game.the-legend-of-zelda",
+            "locator": "Original FDS primary-game runtime trace: Lost Woods repeating screen; compare an incorrect traversal with north-west-south-west from identical inventory/capability snapshots, consulting the in-game clue only between runs.",
+            "relation": "supports"
+          }],
+          "confidence": "medium",
+          "status": "draft",
+          "review": {
+            "author": "role.analyst.p4-evidence-proposal-a",
+            "reviewer": "role.reviewer.pending-independent-verification",
+            "notes": ["Promote only after a recorded controlled replay verifies zero item, capability, and quest-state delta."]
+          }
+        },
+        {
+          "schemaVersion": "1.0.0",
+          "claimId": "claim.the-legend-of-zelda.lost-woods-sequence-is-knowledge-only-route.interpretation",
+          "claimType": "interpretation",
+          "criticality": "supporting",
+          "minimumSourceTier": "A",
+          "statement": "An unchanged route can be gated by the player's causal knowledge when every required action existed before the clue and wrong hypotheses reset locally.",
+          "workRefs": ["work.the-legend-of-zelda"],
+          "versionRefs": ["version.the-legend-of-zelda.original"],
+          "evidence": [{
+            "sourceRef": "source.game.the-legend-of-zelda",
+            "locator": "Original FDS primary-game runtime trace: Lost Woods loop feedback, clue inspection, and successful return under a fixed inventory/capability snapshot.",
+            "relation": "contextualizes"
+          }],
+          "confidence": "medium",
+          "status": "draft",
+          "review": {
+            "author": "role.analyst.p4-evidence-proposal-a",
+            "reviewer": "role.reviewer.pending-independent-verification",
+            "notes": ["This is a causal interpretation, not a creator-intent or lineage claim."]
+          }
+        },
+        {
+          "schemaVersion": "1.0.0",
+          "claimId": "claim.ocarina-of-time.lost-woods-audio-rule-opens-existing-path.fact",
+          "claimType": "fact",
+          "criticality": "critical",
+          "minimumSourceTier": "A",
+          "statement": "The original game's Lost Woods exposes traversable doorways whose melody feedback distinguishes the route toward the Sacred Forest Meadow without granting a new capability.",
+          "workRefs": ["work.ocarina-of-time"],
+          "versionRefs": ["version.ocarina-of-time.original"],
+          "evidence": [{
+            "sourceRef": "source.game.ocarina-of-time",
+            "locator": "Original Nintendo 64 primary-game runtime trace: child-era Lost Woods junctions from the Kokiri Forest entrance to the Sacred Forest Meadow approach; compare fading and strengthening melody exits under one fixed save snapshot.",
+            "relation": "supports"
+          }],
+          "confidence": "medium",
+          "status": "draft",
+          "review": {
+            "author": "role.analyst.p4-evidence-proposal-a",
+            "reviewer": "role.reviewer.pending-independent-verification",
+            "notes": ["Promote only after inventory, song, age, and world-state deltas are shown to be zero across the two attempts."]
+          }
+        },
+        {
+          "schemaVersion": "1.0.0",
+          "claimId": "claim.ocarina-of-time.lost-woods-audio-rule-opens-existing-path.interpretation",
+          "claimType": "interpretation",
+          "criticality": "supporting",
+          "minimumSourceTier": "A",
+          "statement": "A reversible sensory probe can teach a route relation that makes an already traversable junction actionable without converting the gate into avatar progression.",
+          "workRefs": ["work.ocarina-of-time"],
+          "versionRefs": ["version.ocarina-of-time.original"],
+          "evidence": [{
+            "sourceRef": "source.game.ocarina-of-time",
+            "locator": "Original Nintendo 64 primary-game runtime trace: audible doorway comparison, failed return, and successful traversal of the unchanged Lost Woods junction graph.",
+            "relation": "contextualizes"
+          }],
+          "confidence": "medium",
+          "status": "draft",
+          "review": {
+            "author": "role.analyst.p4-evidence-proposal-a",
+            "reviewer": "role.reviewer.pending-independent-verification",
+            "notes": ["This is an interpretation of the observed action-state chain only."]
+          }
+        }
+      ],
+      "counterRef": "observation.zelda-ii-the-adventure-of-link.learned-capability-reopens-route",
+      "counterBound": "Abstain whenever success requires any item, spell, form, learned technique, consumable, route flag, or map-layer state absent from the first-visit snapshot; knowledge may identify a capability lock but cannot reclassify it.",
+      "rationale": "The two proposed observations close the same invariant in two distinct original works: the successful action and geometry exist before understanding, failed probes are recoverable, and the successful run has zero capability delta. The old generic clue, memory, and reset observations should not count toward the two-work threshold.",
+      "risks": [
+        "Both proposed cases use maze navigation, so an independent reviewer should confirm that the retained principle is not narrowed to a recurring forest surface expression.",
+        "The exact route and melody are protected evidence surfaces and must never enter the production retrieval index.",
+        "Any hidden quest or progression flag discovered during replay invalidates the affected support edge."
+      ]
+    },
+    {
+      "patternId": "pattern.multi-solution-state-graph",
+      "verdict": "proposed-closure-pending-primary-runtime-verification",
+      "retainedPrinciple": "Several causally distinct paths can satisfy one explicit world-state invariant.",
+      "existingRefsToKeep": [
+        {
+          "ref": "observation.oracle-of-ages.harp-turns-time-into-player-verb",
+          "role": "counter",
+          "countsTowardTwoWorkClosure": false,
+          "reason": "It bounds the pattern because an expressive verb can still be the single authored action required for a gate."
+        }
+      ],
+      "existingRefsToRemove": [
+        {
+          "ref": "observation.breath-of-the-wild.environmental-property-changes-plan",
+          "reason": "It traces one material trigger and consequence, not two independent paths to one invariant."
+        },
+        {
+          "ref": "observation.tears-of-the-kingdom.ultrahand-builds-local-solution",
+          "reason": "It establishes construction iteration but records no two controlled solution traces with the same postcondition."
+        },
+        {
+          "ref": "observation.echoes-of-wisdom.echo-learning-turns-observation-into-vocabulary",
+          "reason": "It establishes vocabulary growth, not several causally distinct paths through one unchanged obstacle."
+        }
+      ],
+      "newObservations": [
+        {
+          "schemaVersion": "1.0.0",
+          "observationId": "observation.breath-of-the-wild.plateau-cold-route-has-distinct-preparation-paths",
+          "workId": "work.breath-of-the-wild",
+          "versionId": "version.breath-of-the-wild.original",
+          "dimensionIds": [
+            "dimension.puzzle-information",
+            "dimension.topology",
+            "dimension.growth-economy",
+            "dimension.recovery-accessibility"
+          ],
+          "context": "The Great Plateau cold region blocks an unprotected approach to the Keh Namut Shrine through continuous temperature damage.",
+          "preconditions": [
+            "Fork two runs before entering the cold region with the same main-objective state",
+            "Keep the destination and required shrine postcondition identical",
+            "Use only resources available on the Great Plateau"
+          ],
+          "playerInput": [
+            "Path A: cook and consume a spicy-pepper meal to obtain timed cold resistance, then traverse the cold route",
+            "Path B: complete the Old Man's ingredient exchange, equip the Warm Doublet, then traverse the cold route",
+            "Reach and activate the same shrine destination in both runs"
+          ],
+          "stateTransition": {
+            "before": [
+              "Cold damage prevents an unprotected traversal from reliably reaching the destination",
+              "The shrine is not activated"
+            ],
+            "action": [
+              "Satisfy the temperature constraint through either a timed food status or persistent clothing resistance"
+            ],
+            "after": [
+              "Keh Namut Shrine is reached and can be activated in both runs",
+              "The causal path differs while the destination and activation invariant are identical"
+            ]
+          },
+          "feedback": [
+            "The temperature gauge and damage response expose the constraint",
+            "A meal timer versus equipped clothing visibly distinguishes the two protection states",
+            "The same shrine activation confirms convergence"
+          ],
+          "consequences": [
+            "Preparation choice changes path cost and persistence without changing the required world-state outcome"
+          ],
+          "factualDescription": "On the Great Plateau, the player can reach and activate Keh Namut Shrine through at least two distinct cold-protection paths: a timed spicy meal or the equipped Warm Doublet, both available before leaving the Plateau.",
+          "factClaimRefs": [
+            "claim.breath-of-the-wild.plateau-cold-route-has-distinct-preparation-paths.fact"
+          ],
+          "interpretation": "A multi-solution graph is substantiated when controlled runs use different state mechanisms but converge on the same explicit destination flag without one hidden required sequence.",
+          "interpretationClaimRefs": [
+            "claim.breath-of-the-wild.plateau-cold-route-has-distinct-preparation-paths.interpretation"
+          ],
+          "confidence": "medium",
+          "disposition": "portable-candidate",
+          "status": "draft",
+          "reviewNotes": [
+            "Independent replay must verify both preparations are available before leaving the Great Plateau and that no shared hidden acquisition invalidates path independence."
+          ]
+        },
+        {
+          "schemaVersion": "1.0.0",
+          "observationId": "observation.echoes-of-wisdom.suthorn-ledge-accepts-two-echo-routes",
+          "workId": "work.echoes-of-wisdom",
+          "versionId": "version.echoes-of-wisdom.original",
+          "dimensionIds": [
+            "dimension.puzzle-information",
+            "dimension.topology",
+            "dimension.verbs",
+            "dimension.teaching-feedback"
+          ],
+          "context": "At the first repeatable two-tile cliff in Suthorn Forest after the Trampoline Echo is learnable, the upper ledge is the fixed destination and the local world state can be reset between attempts.",
+          "preconditions": [
+            "Use one save with Old Bed, Table, and Trampoline Echoes already learned",
+            "Reset placed echoes and player position before each run",
+            "Keep Tri's power budget and the target upper ledge identical"
+          ],
+          "playerInput": [
+            "Path A: place overlapping Old Bed Echoes as a climbable staircase",
+            "Path B: place a Table and Trampoline Echo to gain the required height",
+            "Move Zelda onto the same upper ledge"
+          ],
+          "stateTransition": {
+            "before": [
+              "Zelda stands below the unchanged ledge",
+              "The target upper position is not reachable by ordinary walking"
+            ],
+            "action": [
+              "Instantiate either a support-chain route or a launch route under the same visible power budget"
+            ],
+            "after": [
+              "Zelda occupies the same upper-ledge region in both runs",
+              "The two paths use different object roles and movement causality"
+            ]
+          },
+          "feedback": [
+            "Placement previews, power cost, collision, climbing, and launch arcs expose each path's operation",
+            "Standing on the same upper ledge confirms the common invariant"
+          ],
+          "consequences": [
+            "The player may choose among non-cosmetic routes while failure is locally reversible"
+          ],
+          "factualDescription": "With the cited early Echo set, the same Suthorn Forest upper ledge can be reached either by building an Old Bed staircase or by combining a Table with a Trampoline, after resetting the local placement state between runs.",
+          "factClaimRefs": [
+            "claim.echoes-of-wisdom.suthorn-ledge-accepts-two-echo-routes.fact"
+          ],
+          "interpretation": "Different callable object roles constitute separate solution paths when each independently reaches one measured spatial postcondition and neither is merely a cosmetic rearrangement.",
+          "interpretationClaimRefs": [
+            "claim.echoes-of-wisdom.suthorn-ledge-accepts-two-echo-routes.interpretation"
+          ],
+          "confidence": "medium",
+          "disposition": "portable-candidate",
+          "status": "draft",
+          "reviewNotes": [
+            "The named ledge and both routes require primary-game replay; exact Echo identities and layout remain nonportable evidence surfaces."
+          ]
+        }
+      ],
+      "newClaims": [
+        {
+          "schemaVersion": "1.0.0",
+          "claimId": "claim.breath-of-the-wild.plateau-cold-route-has-distinct-preparation-paths.fact",
+          "claimType": "fact",
+          "criticality": "critical",
+          "minimumSourceTier": "A",
+          "statement": "Keh Namut Shrine can be reached and activated through distinct Great Plateau cold-protection paths using either timed food resistance or equipped clothing resistance.",
+          "workRefs": ["work.breath-of-the-wild"],
+          "versionRefs": ["version.breath-of-the-wild.original"],
+          "evidence": [{
+            "sourceRef": "source.game.breath-of-the-wild",
+            "locator": "Original-version primary-game controlled trace: Great Plateau cold-region approach to Keh Namut Shrine; fork before entry, then compare spicy-pepper meal and pre-departure Warm Doublet runs through the same shrine activation postcondition.",
+            "relation": "supports"
+          }],
+          "confidence": "medium",
+          "status": "draft",
+          "review": {"author": "role.analyst.p4-evidence-proposal-a", "reviewer": "role.reviewer.pending-independent-verification", "notes": ["Verify availability, path independence, and identical activation state in two recorded runs."]}
+        },
+        {
+          "schemaVersion": "1.0.0",
+          "claimId": "claim.breath-of-the-wild.plateau-cold-route-has-distinct-preparation-paths.interpretation",
+          "claimType": "interpretation",
+          "criticality": "supporting",
+          "minimumSourceTier": "A",
+          "statement": "Temporary status preparation and persistent equipment preparation can form non-cosmetic solution paths when both satisfy the same measured destination invariant.",
+          "workRefs": ["work.breath-of-the-wild"],
+          "versionRefs": ["version.breath-of-the-wild.original"],
+          "evidence": [{"sourceRef": "source.game.breath-of-the-wild", "locator": "Controlled Great Plateau cold-route comparison ending at the same Keh Namut Shrine activation state.", "relation": "contextualizes"}],
+          "confidence": "medium",
+          "status": "draft",
+          "review": {"author": "role.analyst.p4-evidence-proposal-a", "reviewer": "role.reviewer.pending-independent-verification", "notes": ["Causal interpretation only; it does not assert author intent."]}
+        },
+        {
+          "schemaVersion": "1.0.0",
+          "claimId": "claim.echoes-of-wisdom.suthorn-ledge-accepts-two-echo-routes.fact",
+          "claimType": "fact",
+          "criticality": "critical",
+          "minimumSourceTier": "A",
+          "statement": "The same early Suthorn Forest upper ledge can be reached after a local reset through either an Old Bed staircase or a Table-and-Trampoline launch route.",
+          "workRefs": ["work.echoes-of-wisdom"],
+          "versionRefs": ["version.echoes-of-wisdom.original"],
+          "evidence": [{
+            "sourceRef": "source.game.echoes-of-wisdom",
+            "locator": "Original Switch primary-game controlled trace: first repeatable two-tile Suthorn Forest cliff after Trampoline Echo acquisition; reset position and echoes, then record Old Bed staircase and Table-plus-Trampoline runs to the same upper-ledge region.",
+            "relation": "supports"
+          }],
+          "confidence": "medium",
+          "status": "draft",
+          "review": {"author": "role.analyst.p4-evidence-proposal-a", "reviewer": "role.reviewer.pending-independent-verification", "notes": ["Verify the locator, Echo availability, budget, and both route outcomes in the original version."]}
+        },
+        {
+          "schemaVersion": "1.0.0",
+          "claimId": "claim.echoes-of-wisdom.suthorn-ledge-accepts-two-echo-routes.interpretation",
+          "claimType": "interpretation",
+          "criticality": "supporting",
+          "minimumSourceTier": "A",
+          "statement": "A support chain and a launch chain are causally distinct solutions when they use different roles yet converge on one resettable spatial postcondition.",
+          "workRefs": ["work.echoes-of-wisdom"],
+          "versionRefs": ["version.echoes-of-wisdom.original"],
+          "evidence": [{"sourceRef": "source.game.echoes-of-wisdom", "locator": "Controlled Suthorn Forest two-route trace with identical start, budget, target region, and local reset.", "relation": "contextualizes"}],
+          "confidence": "medium",
+          "status": "draft",
+          "review": {"author": "role.analyst.p4-evidence-proposal-a", "reviewer": "role.reviewer.pending-independent-verification", "notes": ["Causal interpretation only; exact objects and layout are excluded from production retrieval."]}
+        }
+      ],
+      "counterRef": "observation.oracle-of-ages.harp-turns-time-into-player-verb",
+      "counterBound": "Abstain when every valid route must invoke the same authored verb, object, order, or hidden progression flag; cosmetic rearrangements and dominated or exploit-only paths do not satisfy path multiplicity.",
+      "rationale": "The two proposed controlled traces identify an explicit common postcondition and at least two non-cosmetic causal paths in two different works. The generic material, construction, and vocabulary records remain useful context but should not count as direct provenance.",
+      "risks": [
+        "Both controlled traces must be replayed from identical starts; otherwise preparation-state or placement-state drift can falsely manufacture path independence.",
+        "The Suthorn locator and early Echo availability are the highest-confidence risk and must be verified before registry insertion.",
+        "No emergent exploit or source-specific recipe may become a production prompt."
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "verdict": "proposed-closure-pending-primary-runtime-verification",
+      "retainedPrinciple": "Optional discovery rewards the player with additional future choices, not only immediate value.",
+      "existingRefsToKeep": [
+        {
+          "ref": "observation.breath-of-the-wild.shrine-detour-converts-curiosity",
+          "role": "support",
+          "countsTowardTwoWorkClosure": true,
+          "reason": "It directly traces an optional detour through a bounded challenge to two durable future benefits: avatar growth and a new travel node."
+        },
+        {
+          "ref": "observation.tri-force-heroes.materials-become-role-costume",
+          "role": "counter",
+          "countsTowardTwoWorkClosure": false,
+          "reason": "It bounds persistent world-choice expansion against a course-loadout reward whose payoff remains inside fixed stages."
+        }
+      ],
+      "existingRefsToRemove": [
+        {
+          "ref": "observation.the-legend-of-zelda.visible-cave-grants-first-verb",
+          "reason": "The opening sword is foundational onboarding and required capability access, not an optional curiosity reward."
+        },
+        {
+          "ref": "observation.a-link-between-worlds.rental-enables-order-choice",
+          "reason": "Rental is a shop transaction for temporary access, not a reward earned by optional discovery."
+        }
+      ],
+      "newObservations": [
+        {
+          "schemaVersion": "1.0.0",
+          "observationId": "observation.tears-of-the-kingdom.optional-tower-creates-map-and-air-route-choices",
+          "workId": "work.tears-of-the-kingdom",
+          "versionId": "version.tears-of-the-kingdom.original",
+          "dimensionIds": [
+            "dimension.exploration-reward",
+            "dimension.topology",
+            "dimension.world-state",
+            "dimension.teaching-feedback"
+          ],
+          "context": "Lindor's Brow Skyview Tower is an optional visible detour while its regional map data and repeatable launch are unavailable.",
+          "preconditions": [
+            "The tower has not been activated",
+            "The player has already perceived at least two candidate destinations in the surrounding region",
+            "Neither destination is required to activate the tower"
+          ],
+          "playerInput": [
+            "Divert to and activate the tower",
+            "Use the tower's launch sequence",
+            "From the aerial vantage, choose one of at least two previously perceived destinations while leaving the other available"
+          ],
+          "stateTransition": {
+            "before": [
+              "Regional surface and sky map data are absent",
+              "The tower cannot provide the repeatable aerial departure"
+            ],
+            "action": [
+              "Complete the optional tower activation and launch"
+            ],
+            "after": [
+              "Regional surface and sky map data persist",
+              "The repeatable launch makes multiple outbound routes actionable",
+              "Choosing one destination does not invalidate the other"
+            ]
+          },
+          "feedback": [
+            "The mapping presentation records the persistent information reward",
+            "The visible aerial panorama and glide trajectory expose the new route choices"
+          ],
+          "consequences": [
+            "The detour rewards curiosity by increasing future navigation choices rather than only paying an immediate collectible"
+          ],
+          "factualDescription": "Activating Lindor's Brow Skyview Tower persistently adds regional surface and sky map data and enables a repeatable aerial launch from which the player can choose among multiple visible destinations.",
+          "factClaimRefs": [
+            "claim.tears-of-the-kingdom.optional-tower-creates-map-and-air-route-choices.fact"
+          ],
+          "interpretation": "An optional reward expands future possibility when it preserves more than one later destination choice and makes those choices legible without closing alternatives.",
+          "interpretationClaimRefs": [
+            "claim.tears-of-the-kingdom.optional-tower-creates-map-and-air-route-choices.interpretation"
+          ],
+          "confidence": "medium",
+          "disposition": "portable-candidate",
+          "status": "draft",
+          "reviewNotes": [
+            "Requires a before/after original-version replay and two recorded outbound route choices; tower identity and map geography are evidence-only."
+          ]
+        }
+      ],
+      "newClaims": [
+        {
+          "schemaVersion": "1.0.0",
+          "claimId": "claim.tears-of-the-kingdom.optional-tower-creates-map-and-air-route-choices.fact",
+          "claimType": "fact",
+          "criticality": "critical",
+          "minimumSourceTier": "A",
+          "statement": "Activating Lindor's Brow Skyview Tower adds persistent regional map data and a repeatable aerial departure that supports multiple later destination choices.",
+          "workRefs": ["work.tears-of-the-kingdom"],
+          "versionRefs": ["version.tears-of-the-kingdom.original"],
+          "evidence": [{
+            "sourceRef": "source.game.tears-of-the-kingdom",
+            "locator": "Original Switch primary-game before/after trace: Lindor's Brow Skyview Tower unactivated versus activated; record surface-and-sky map state, repeatable launch, and two distinct visible outbound glide destinations from the same apex state.",
+            "relation": "supports"
+          }],
+          "confidence": "medium",
+          "status": "draft",
+          "review": {"author": "role.analyst.p4-evidence-proposal-a", "reviewer": "role.reviewer.pending-independent-verification", "notes": ["Verify optionality, persistent map state, repeatable launch, and two non-dominated outbound choices."]}
+        },
+        {
+          "schemaVersion": "1.0.0",
+          "claimId": "claim.tears-of-the-kingdom.optional-tower-creates-map-and-air-route-choices.interpretation",
+          "claimType": "interpretation",
+          "criticality": "supporting",
+          "minimumSourceTier": "A",
+          "statement": "A curiosity-driven detour becomes a choice-generating reward when its durable information and traversal affordance make several later routes actionable while preserving alternatives.",
+          "workRefs": ["work.tears-of-the-kingdom"],
+          "versionRefs": ["version.tears-of-the-kingdom.original"],
+          "evidence": [{"sourceRef": "source.game.tears-of-the-kingdom", "locator": "Lindor's Brow Skyview Tower controlled activation and two-destination outbound-route trace in the original Switch version.", "relation": "contextualizes"}],
+          "confidence": "medium",
+          "status": "draft",
+          "review": {"author": "role.analyst.p4-evidence-proposal-a", "reviewer": "role.reviewer.pending-independent-verification", "notes": ["This is a causal interpretation and does not assert creator intent."]}
+        }
+      ],
+      "counterRef": "observation.tri-force-heroes.materials-become-role-costume",
+      "counterBound": "Abstain when the payoff is only score, collection percentage, a mandatory handoff, or a bounded stage-loadout change with no persistent revisitable world-choice delta; at least two later non-dominated options must remain measurable.",
+      "rationale": "The existing Breath of the Wild shrine record already closes one work. The proposed Tears of the Kingdom tower record supplies a second work with a controlled optional-detour-to-durable-map-and-route-choice chain. The opening sword and rental transaction should be removed from direct support.",
+      "risks": [
+        "The reviewer must distinguish two genuine future choices from two camera headings that converge immediately.",
+        "Tower geography, launch staging, and interface presentation are protected source surfaces and cannot enter production retrieval.",
+        "If the tower is mandatory at the tested campaign state, use a later non-required tower or reclassify this edge as contextual only."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "workId": "work.tears-of-the-kingdom",
+  "author": "Corpus Analyst Rowan-C",
+  "reviewer": "Independent Reviewer Alder-C",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player is an improvising explorer-engineer who rebuilds capability from found matter and links sky, surface, caves, and depths into self-made routes.",
+    "dimension.core-loop": "The cadence is to identify a destination or need, gather nearby materials and devices, construct or fuse a solution, traverse one of the world's layers, and convert discovery into stronger future improvisation.",
+    "dimension.verbs": "Climbing, gliding, fighting, cooking, and gathering return alongside Ultrahand assembly, Fuse, Recall, Ascend, device activation, blueprint recreation, throwing, and material-enhanced archery.",
+    "dimension.world-state": "Built objects, moved geometry, lit roots, completed shrines and quests, cleared phenomena, map discovery, weapon fusions, environmental time reversal, and temporary devices operate at several persistence scales.",
+    "dimension.topology": "A vertically layered Hyrule connects sky islands, surface terrain, caves, wells, chasms, and the depths through falls, launches, Ascend surfaces, holes, towers, and player-built vehicles.",
+    "dimension.gating-revisit": "An opening sky island teaches core powers, while later access is often governed by knowledge, preparation, vertical entry, environmental resistance, devices, regional story state, or newly gained support.",
+    "dimension.puzzle-information": "Loose components, attachment points, device affordances, motion histories, overhead surfaces, material effects, and example constructions expose a combinatorial rule grammar.",
+    "dimension.dungeon-structure": "Shrines isolate power experiments, regional temples embed large traversal devices in their surrounding quests, caves create compact discoveries, and the depths provide an extended environmental challenge layer.",
+    "dimension.exploration-reward": "Exploration yields shrines, roots, caves, armor, blueprints, devices, energy resources, weapons, schema stones, quests, maps, materials, and vantage points across mutually informative layers.",
+    "dimension.growth-economy": "Hearts, stamina, battery capacity, armor, inventory slots, Zonai devices, zonaite, charges, rupees, meals, materials, and fused weapon durability support multiple build and survival economies.",
+    "dimension.combat-boss": "Combat combines direct weapon timing with fused properties, arrow materials, deployable devices, constructed weapons, stealth, ally support, environmental manipulation, and retreat.",
+    "dimension.npc-quest": "Regional partners, settlement residents, researchers, travelers, builders, newspaper investigations, and stable networks turn the Upheaval into many local problems and unlock services or abilities.",
+    "dimension.narrative-performance": "The missing-Zelda mystery unfolds through regional action, discovered memories, present-day investigations, and companion vows, alternating broad agency with compact performed revelations.",
+    "dimension.camera-blocking": "A third-person camera supports horizon and vertical-layer scouting, close assembly inspection, attachment rotation, object highlighting, aiming, companion readability, and cinematic reveals.",
+    "dimension.teaching-feedback": "The opening island stages powers in controlled shrines, while ghosted attachments, glue visuals, motion trails, valid Ascend surfaces, material previews, battery meters, and device behavior explain experiments.",
+    "dimension.ui-input": "Radial power choice, inventory sorting, quick material attachment, map layers, quest records, battery and stamina meters, device capsules, blueprints, and pins expose a large combinatorial vocabulary.",
+    "dimension.recovery-accessibility": "Frequent saves, fast travel, retreat, alternate construction, detachable or replaceable materials, cooking, roots that heal gloom damage, and optional hints support recovery from failed routes and builds.",
+    "dimension.perspective-implementation": "The 3D presentation makes volume, orientation, altitude, overhangs, falling, construction, and cross-layer sightlines central; reliable camera and physics feedback are therefore prerequisites.",
+    "dimension.hardware-multiplayer": "The original is a single-player Switch game with controller and optional motion aiming; creation is locally simulated rather than synchronized, though later editions can share blueprint data externally.",
+    "dimension.production-runtime": "Its principles demand robust object attachment, rigid-body simulation, device energy, reversible motion histories, vertical streaming, construction persistence rules, AI interaction, save safety, and combinatorial testing."
+  },
+  "observationThemes": [
+    {
+      "key": "ultrahand-builds-local-solution",
+      "dimensions": ["dimension.player-fantasy", "dimension.verbs", "dimension.puzzle-information", "dimension.production-runtime"],
+      "context": "A gap, transport problem, hostile space, or shrine presents loose components and devices rather than one completed mechanism.",
+      "preconditions": ["Ultrahand is available", "At least two movable or attachable components are present", "The obstacle permits a physical construction response"],
+      "playerInput": ["Grab and rotate components", "Attach them into a structure", "Activate, steer, or reposition the result"],
+      "before": ["No usable bridge, vehicle, or mechanism spans the obstacle", "Parts exist as separate objects"],
+      "action": ["Assemble a purpose-built object and test it in the local physics context"],
+      "after": ["The construction functions, fails visibly, or can be revised", "The route or encounter gains a new option"],
+      "feedback": ["Highlighting, orientation controls, attachment points, adhesive visuals, and motion show assembly state", "Physical behavior reveals balance, thrust, weight, and contact consequences"],
+      "consequences": ["The player can iterate instead of searching only for a prescribed key", "The runtime must remain stable across many unanticipated component arrangements"],
+      "factualDescription": "Ultrahand lets the player move, rotate, and attach world objects and Zonai devices, then activate the resulting construction to address traversal, puzzle, or combat needs.",
+      "interpretation": "Providing parts plus legible physical constraints turns authored obstacles into local design problems, with failure serving as information for the next revision.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "vertical-entry-links-world-layers",
+      "dimensions": ["dimension.core-loop", "dimension.topology", "dimension.gating-revisit", "dimension.perspective-implementation"],
+      "context": "A destination on the surface, sky, cave system, or depths can be approached through a launch, fall, chasm, overhang, Ascend surface, or player-built vehicle.",
+      "preconditions": ["The destination or useful vertical relationship has been identified", "A viable entry method and sufficient preparation are available"],
+      "playerInput": ["Choose a layer-changing route", "Use Ascend, glide, fall, launch, climb, or construct a vehicle", "Reorient after transition"],
+      "before": ["The target is separated by altitude or an opaque boundary", "The current layer's ordinary path is blocked or inefficient"],
+      "action": ["Traverse the vertical edge between world layers"],
+      "after": ["The player occupies a new layer or side of the boundary", "New landmarks, resources, or return routes become available"],
+      "feedback": ["Altitude, camera framing, map layers, falling distance, ceilings, and transition effects make the move legible", "The destination's geometry aligns with the chosen entry"],
+      "consequences": ["Old locations gain new approaches when a higher or lower layer is understood", "Exploration cycles between layers rather than treating each as an isolated map"],
+      "factualDescription": "Sky islands, surface terrain, caves, chasms, and the depths are connected by vertical travel methods including gliding, falling, Ascend, towers, and constructed devices.",
+      "interpretation": "A layered world becomes one navigational system when vertical edges are numerous, readable, and useful for revisiting known coordinates from a different altitude.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "fuse-converts-loot-into-function",
+      "dimensions": ["dimension.world-state", "dimension.growth-economy", "dimension.combat-boss", "dimension.ui-input"],
+      "context": "The player has a base weapon, shield, or arrow and a material whose properties could answer an enemy, terrain, durability, or range problem.",
+      "preconditions": ["Fuse or arrow attachment is available", "Compatible equipment and a material are in reach or inventory"],
+      "playerInput": ["Select the equipment and material", "Attach them", "Use the resulting fused action"],
+      "before": ["The base equipment has its ordinary power and durability", "The material is only loose loot or inventory"],
+      "action": ["Bind the material property to the equipment slot"],
+      "after": ["The equipment gains altered power, durability, geometry, element, or utility", "The material is consumed into the fused state"],
+      "feedback": ["The combined object is visibly represented", "Inventory values, previews, hit effects, and enemy or terrain reactions expose the new function"],
+      "consequences": ["Enemy drops become inputs for the next encounter", "Players can recover weak equipment by making context-specific tools instead of waiting for fixed upgrades"],
+      "factualDescription": "Fuse combines one material or object with a weapon or shield, and materials can be attached to arrows, producing visible equipment with changed combat or utility properties.",
+      "interpretation": "A reversible-looking but resource-consuming combination rule can turn ordinary loot into situational verbs and connect combat rewards directly to future experimentation.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "lightroot-turns-darkness-into-map",
+      "dimensions": ["dimension.dungeon-structure", "dimension.exploration-reward", "dimension.teaching-feedback", "dimension.recovery-accessibility"],
+      "context": "In the depths, darkness and gloom obscure terrain while a distant root offers light, map revelation, and recovery.",
+      "preconditions": ["The player has entered an unlit region of the depths", "A light source, visible root, or navigational hypothesis is available"],
+      "playerInput": ["Deploy brightbloom light or travel toward the root", "Avoid or mitigate gloom", "Activate the root"],
+      "before": ["Terrain and threats are difficult to read", "Gloom damage has limited ordinary heart recovery", "The local map is unrevealed"],
+      "action": ["Create temporary light and reach the persistent illumination node"],
+      "after": ["The area around the root is lit and mapped", "Gloom-damaged hearts can be restored at the root"],
+      "feedback": ["Darkness recedes, map data appears, and health state changes", "The root becomes a stable landmark in the extended challenge layer"],
+      "consequences": ["Exploration becomes safer and future routes more legible", "A risky expedition yields both knowledge and a recovery anchor"],
+      "factualDescription": "The depths begin in darkness; player-created light supports movement, while activating a Lightroot illuminates and maps an area and restores hearts affected by gloom.",
+      "interpretation": "A hostile exploration layer can reward progress with a node that simultaneously improves perception, topology, and recovery, making danger reduction itself a discovery reward.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "regional-partner-turns-vow-into-ability",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.hardware-multiplayer"],
+      "context": "A regional crisis is investigated and resolved alongside a local partner who acts during traversal, scenes, and the area's temple climax.",
+      "preconditions": ["The regional quest has begun", "The partner and their contextual ability are available"],
+      "playerInput": ["Travel and solve objectives with the partner", "Invoke the partner ability at relevant obstacles and combat states", "Complete the regional climax"],
+      "before": ["The regional phenomenon remains unresolved", "The partner's support is local and story-bound"],
+      "action": ["Coordinate with the companion through the quest and boss sequence"],
+      "after": ["The regional condition changes", "A persistent vow enables a related support ability beyond the region"],
+      "feedback": ["Companion placement, prompts, voice, action effects, scenes, and environmental change show the partnership's effect", "The camera reframes major joint actions and resolution beats"],
+      "consequences": ["Narrative relationship becomes ongoing mechanical support", "The original remains single-player, so companion behavior is AI-controlled rather than synchronized with another human"],
+      "factualDescription": "Regional quests pair Link with local companions whose abilities support traversal and combat; after the regional climax, a vow provides a persistent related ability.",
+      "interpretation": "A companion arc gains continuity when its climactic relationship reward remains callable in later play, turning performed cooperation into durable agency.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "Construction systems can turn obstacles into iterative design problems when parts, constraints, and failure feedback remain locally legible.",
+    "Several world layers feel integrated when their vertical edges create useful approaches to the same horizontal coordinates.",
+    "Loot gains systemic meaning when materials can be converted into visible properties on ordinary equipment.",
+    "A dangerous exploration region can reward advancement with nodes that combine illumination, mapping, and recovery."
+  ],
+  "uniqueOrNonportable": [
+    "Hyrule's layered map, Zonai culture and devices, named arm powers, exact constructions, characters, temples, creatures, story scenes, iconography, music, and dialogue are nonportable.",
+    "Specific shrine and temple solutions, device recipes, blueprint shapes, boss weaknesses, layer correspondence, and resource tables remain evidence only.",
+    "Portable construction principles must be re-expressed with an original part vocabulary, world fiction, silhouettes, constraints, and audiovisual feedback."
+  ],
+  "openQuestions": [
+    "A later version delta should isolate Nintendo Switch 2 Edition performance and Zelda Notes blueprint-sharing effects from original single-player design evidence."
+  ]
+}

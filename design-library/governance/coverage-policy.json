@@ -1,0 +1,35 @@
+{
+  "policyVersion": "1.0.0",
+  "coreDimensions": [
+    "dimension.player-fantasy",
+    "dimension.core-loop",
+    "dimension.verbs",
+    "dimension.world-state",
+    "dimension.topology",
+    "dimension.gating-revisit",
+    "dimension.puzzle-information",
+    "dimension.exploration-reward",
+    "dimension.narrative-performance",
+    "dimension.teaching-feedback"
+  ],
+  "generalDimensions": [
+    "dimension.dungeon-structure",
+    "dimension.growth-economy",
+    "dimension.combat-boss",
+    "dimension.npc-quest",
+    "dimension.camera-blocking",
+    "dimension.ui-input",
+    "dimension.recovery-accessibility",
+    "dimension.perspective-implementation",
+    "dimension.hardware-multiplayer",
+    "dimension.production-runtime"
+  ],
+  "gateThresholds": {
+    "coreDimensionCoverage": 1,
+    "generalDimensionCoverage": 0.95,
+    "workCoverage": 1,
+    "evidenceClosure": 1
+  },
+  "validCoveredRule": "covered requires at least one verified observation reference",
+  "validNotApplicableRule": "not-applicable requires a non-empty rationale in gaps and zero observation references; it is a dossier-level coverage decision, not an atomic causal observation"
+}

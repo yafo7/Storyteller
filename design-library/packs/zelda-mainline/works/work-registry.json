@@ -1,0 +1,1447 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.the-legend-of-zelda",
+    "canonicalTitle": "The Legend of Zelda",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.the-legend-of-zelda.original",
+      "versions": [
+        {
+          "versionId": "version.the-legend-of-zelda.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Family Computer Disk System"
+          ],
+          "releaseDate": "1986-02-21",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "1986-02-21",
+              "platform": "Family Computer Disk System",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2d-topdown"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.the-legend-of-zelda"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.zelda-ii-the-adventure-of-link",
+    "canonicalTitle": "Zelda II: The Adventure of Link",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.zelda-ii-the-adventure-of-link.original",
+      "versions": [
+        {
+          "versionId": "version.zelda-ii-the-adventure-of-link.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Family Computer Disk System"
+          ],
+          "releaseDate": "1987-01-14",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "1987-01-14",
+              "platform": "Family Computer Disk System",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2d-topdown",
+      "2d-sideview",
+      "mixed"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.zelda-ii-the-adventure-of-link"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.a-link-to-the-past",
+    "canonicalTitle": "A Link to the Past",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.a-link-to-the-past.original",
+      "versions": [
+        {
+          "versionId": "version.a-link-to-the-past.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Super Famicom"
+          ],
+          "releaseDate": "1991-11-21",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "1991-11-21",
+              "platform": "Super Famicom",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2d-topdown"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.a-link-to-the-past"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.links-awakening",
+    "canonicalTitle": "Link’s Awakening",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.links-awakening.original",
+      "versions": [
+        {
+          "versionId": "version.links-awakening.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Game Boy"
+          ],
+          "releaseDate": "1993-06-06",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "1993-06-06",
+              "platform": "Game Boy",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2d-topdown",
+      "2d-sideview",
+      "mixed"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.links-awakening"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.ocarina-of-time",
+    "canonicalTitle": "Ocarina of Time",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.ocarina-of-time.original",
+      "versions": [
+        {
+          "versionId": "version.ocarina-of-time.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo 64"
+          ],
+          "releaseDate": "1998-11-21",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "1998-11-21",
+              "platform": "Nintendo 64",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        },
+        {
+          "versionId": "version.ocarina-of-time.switch2-2026",
+          "relationship": "review",
+          "researchTreatment": "review",
+          "platforms": [
+            "Nintendo Switch 2"
+          ],
+          "releaseDate": null,
+          "deltaFrom": "version.ocarina-of-time.original",
+          "releaseWindow": "2026",
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": null,
+              "platform": "Nintendo Switch 2",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Officially announced; edition type and exact date remain undisclosed at the 2026-07-17 snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "3d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.ocarina-of-time"
+    ],
+    "openQuestions": [
+      "Classify the announced Nintendo Switch 2 edition when Nintendo publishes its edition type."
+    ],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.majoras-mask",
+    "canonicalTitle": "Majora’s Mask",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.majoras-mask.original",
+      "versions": [
+        {
+          "versionId": "version.majoras-mask.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo 64"
+          ],
+          "releaseDate": "2000-04-27",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2000-04-27",
+              "platform": "Nintendo 64",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "3d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.majoras-mask"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.oracle-of-seasons",
+    "canonicalTitle": "Oracle of Seasons",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.oracle-of-seasons.original",
+      "versions": [
+        {
+          "versionId": "version.oracle-of-seasons.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Game Boy Color"
+          ],
+          "releaseDate": "2001-02-27",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2001-02-27",
+              "platform": "Game Boy Color",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2d-topdown"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.oracle-of-seasons"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.oracle-of-ages",
+    "canonicalTitle": "Oracle of Ages",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.oracle-of-ages.original",
+      "versions": [
+        {
+          "versionId": "version.oracle-of-ages.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Game Boy Color"
+          ],
+          "releaseDate": "2001-02-27",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2001-02-27",
+              "platform": "Game Boy Color",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2d-topdown"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.oracle-of-ages"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.the-wind-waker",
+    "canonicalTitle": "The Wind Waker",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.the-wind-waker.original",
+      "versions": [
+        {
+          "versionId": "version.the-wind-waker.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo GameCube"
+          ],
+          "releaseDate": "2002-12-13",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2002-12-13",
+              "platform": "Nintendo GameCube",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "3d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.the-wind-waker"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.four-swords",
+    "canonicalTitle": "Four Swords",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.four-swords.original",
+      "versions": [
+        {
+          "versionId": "version.four-swords.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Game Boy Advance"
+          ],
+          "releaseDate": "2003-03-14",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2003-03-14",
+              "platform": "Game Boy Advance",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2d-topdown"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.four-swords"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.four-swords-adventures",
+    "canonicalTitle": "Four Swords Adventures",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.four-swords-adventures.original",
+      "versions": [
+        {
+          "versionId": "version.four-swords-adventures.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo GameCube"
+          ],
+          "releaseDate": "2004-03-18",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2004-03-18",
+              "platform": "Nintendo GameCube",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2d-topdown"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.four-swords-adventures"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.the-minish-cap",
+    "canonicalTitle": "The Minish Cap",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.the-minish-cap.original",
+      "versions": [
+        {
+          "versionId": "version.the-minish-cap.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Game Boy Advance"
+          ],
+          "releaseDate": "2004-11-04",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2004-11-04",
+              "platform": "Game Boy Advance",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2d-topdown"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.the-minish-cap"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.twilight-princess",
+    "canonicalTitle": "Twilight Princess",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.twilight-princess.original",
+      "versions": [
+        {
+          "versionId": "version.twilight-princess.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Wii",
+            "Nintendo GameCube"
+          ],
+          "releaseDate": "2006-12-02",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2006-12-02",
+              "platform": "Wii",
+              "distribution": "unknown"
+            },
+            {
+              "region": "JP",
+              "date": "2006-12-02",
+              "platform": "Nintendo GameCube",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "3d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.twilight-princess"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.phantom-hourglass",
+    "canonicalTitle": "Phantom Hourglass",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.phantom-hourglass.original",
+      "versions": [
+        {
+          "versionId": "version.phantom-hourglass.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo DS"
+          ],
+          "releaseDate": "2007-06-23",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2007-06-23",
+              "platform": "Nintendo DS",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2.5d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.phantom-hourglass"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.spirit-tracks",
+    "canonicalTitle": "Spirit Tracks",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.spirit-tracks.original",
+      "versions": [
+        {
+          "versionId": "version.spirit-tracks.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo DS"
+          ],
+          "releaseDate": "2009-12-23",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2009-12-23",
+              "platform": "Nintendo DS",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2.5d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.spirit-tracks"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.skyward-sword",
+    "canonicalTitle": "Skyward Sword",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.skyward-sword.original",
+      "versions": [
+        {
+          "versionId": "version.skyward-sword.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Wii"
+          ],
+          "releaseDate": "2011-11-23",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2011-11-23",
+              "platform": "Wii",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "3d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.skyward-sword"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.a-link-between-worlds",
+    "canonicalTitle": "A Link Between Worlds",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.a-link-between-worlds.original",
+      "versions": [
+        {
+          "versionId": "version.a-link-between-worlds.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo 3DS"
+          ],
+          "releaseDate": "2013-12-26",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2013-12-26",
+              "platform": "Nintendo 3DS",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2.5d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.a-link-between-worlds"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.tri-force-heroes",
+    "canonicalTitle": "Tri-Force Heroes",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.tri-force-heroes.original",
+      "versions": [
+        {
+          "versionId": "version.tri-force-heroes.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo 3DS"
+          ],
+          "releaseDate": "2015-10-22",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2015-10-22",
+              "platform": "Nintendo 3DS",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2.5d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.tri-force-heroes"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.breath-of-the-wild",
+    "canonicalTitle": "Breath of the Wild",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.breath-of-the-wild.original",
+      "versions": [
+        {
+          "versionId": "version.breath-of-the-wild.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo Switch",
+            "Wii U"
+          ],
+          "releaseDate": "2017-03-03",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2017-03-03",
+              "platform": "Nintendo Switch",
+              "distribution": "unknown"
+            },
+            {
+              "region": "JP",
+              "date": "2017-03-03",
+              "platform": "Wii U",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        },
+        {
+          "versionId": "version.breath-of-the-wild.switch2-edition",
+          "relationship": "enhanced-edition",
+          "researchTreatment": "delta",
+          "platforms": [
+            "Nintendo Switch 2"
+          ],
+          "releaseDate": "2025-06-05",
+          "deltaFrom": "version.breath-of-the-wild.original",
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2025-06-05",
+              "platform": "Nintendo Switch 2",
+              "distribution": "physical"
+            }
+          ],
+          "notes": "Enhanced edition under the same work; save continuity and upgrade path do not create a new work."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "3d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "not-applicable",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.breath-of-the-wild"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.tears-of-the-kingdom",
+    "canonicalTitle": "Tears of the Kingdom",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.tears-of-the-kingdom.original",
+      "versions": [
+        {
+          "versionId": "version.tears-of-the-kingdom.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo Switch"
+          ],
+          "releaseDate": "2023-05-12",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2023-05-12",
+              "platform": "Nintendo Switch",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        },
+        {
+          "versionId": "version.tears-of-the-kingdom.switch2-edition",
+          "relationship": "enhanced-edition",
+          "researchTreatment": "delta",
+          "platforms": [
+            "Nintendo Switch 2"
+          ],
+          "releaseDate": "2025-06-05",
+          "deltaFrom": "version.tears-of-the-kingdom.original",
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2025-06-05",
+              "platform": "Nintendo Switch 2",
+              "distribution": "physical"
+            }
+          ],
+          "notes": "Enhanced edition under the same work; save continuity and upgrade path do not create a new work."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "3d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "covered",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.tears-of-the-kingdom"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "workId": "work.echoes-of-wisdom",
+    "canonicalTitle": "Echoes of Wisdom",
+    "aliases": [],
+    "scopeDecision": "included",
+    "inclusionBasis": "Included by the frozen Nintendo Zelda Portal HISTORY work-node rule; Oracle pair is resolved as two content-distinct works.",
+    "releaseFamily": {
+      "primaryVersionId": "version.echoes-of-wisdom.original",
+      "versions": [
+        {
+          "versionId": "version.echoes-of-wisdom.original",
+          "relationship": "original",
+          "researchTreatment": "primary",
+          "platforms": [
+            "Nintendo Switch"
+          ],
+          "releaseDate": "2024-09-26",
+          "deltaFrom": null,
+          "releaseWindow": null,
+          "releaseEvents": [
+            {
+              "region": "JP",
+              "date": "2024-09-26",
+              "platform": "Nintendo Switch",
+              "distribution": "unknown"
+            }
+          ],
+          "notes": "Date is the Japanese original catalogue date in the frozen Nintendo Zelda Portal HISTORY snapshot."
+        }
+      ]
+    },
+    "perspectiveTags": [
+      "2.5d"
+    ],
+    "researchStatus": "covered",
+    "dimensionCoverage": {
+      "dimension.player-fantasy": "covered",
+      "dimension.core-loop": "covered",
+      "dimension.verbs": "covered",
+      "dimension.world-state": "covered",
+      "dimension.topology": "covered",
+      "dimension.gating-revisit": "covered",
+      "dimension.puzzle-information": "covered",
+      "dimension.dungeon-structure": "covered",
+      "dimension.exploration-reward": "covered",
+      "dimension.growth-economy": "covered",
+      "dimension.combat-boss": "covered",
+      "dimension.npc-quest": "covered",
+      "dimension.narrative-performance": "covered",
+      "dimension.camera-blocking": "covered",
+      "dimension.teaching-feedback": "covered",
+      "dimension.ui-input": "covered",
+      "dimension.recovery-accessibility": "covered",
+      "dimension.perspective-implementation": "covered",
+      "dimension.hardware-multiplayer": "not-applicable",
+      "dimension.production-runtime": "covered"
+    },
+    "sourceRefs": [
+      "source.nintendo.zelda-portal-history-en-20260717",
+      "source.game.echoes-of-wisdom"
+    ],
+    "openQuestions": [],
+    "lastReviewedAt": "2026-07-17"
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://storyteller.local/design-library/schemas/1.0.0/perspective-adapter.schema.json",
+  "title": "V0.3 perspective and runtime adapter draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "adapterId", "adapterVersion", "status", "targetProfile", "supportedPatternKinds", "requiredCapabilities", "mappings", "constraints", "tests", "governance"],
+  "properties": {
+    "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "adapterId": { "type": "string", "pattern": "^adapter\\." },
+    "adapterVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "status": { "enum": ["draft", "beta", "released", "deprecated"] },
+    "targetProfile": { "type": "string", "minLength": 3 },
+    "supportedPatternKinds": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true },
+    "requiredCapabilities": { "type": "array", "items": { "type": "string", "pattern": "^capability\\." }, "minItems": 1, "uniqueItems": true },
+    "mappings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["mappingId", "abstractPath", "runtimePrimitive", "cost", "fallback", "observableResult"],
+        "properties": {
+          "mappingId": { "type": "string", "pattern": "^adapter-mapping\\." },
+          "abstractPath": { "type": "string", "minLength": 1 },
+          "runtimePrimitive": { "type": "string", "minLength": 1 },
+          "cost": { "enum": ["low", "medium", "high"] },
+          "fallback": { "type": ["string", "null"] },
+          "observableResult": { "type": "string", "minLength": 10 }
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["camera", "navigation", "readability", "accessibility"],
+      "properties": {
+        "camera": { "type": "array", "items": { "type": "string" } },
+        "navigation": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "readability": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "accessibility": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "tests": { "type": "array", "items": { "type": "string", "pattern": "^test\\." }, "minItems": 1, "uniqueItems": true },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "reviewers", "changelog"],
+      "properties": {
+        "owner": { "type": "string", "minLength": 1 },
+        "reviewers": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "changelog": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    }
+  }
+}

@@ -7,6 +7,10 @@
   "status": "candidate",
   "supportClass": "single-title-research-only",
   "autoSelectable": false,
+  "quarantineReason": "Planning candidate has not passed cross-title evidence, runtime, and originality review.",
+  "quarantineIssueRefs": ["G001-callable-hooks-are-template-shaped"],
+  "quarantineEvidenceDisposition": "not-yet-reviewed",
+  "promotionRequirements": "Complete independent evidence adjudication, typed callable contracts, runtime and route tests, and blind originality review before promotion.",
   "flavorClass": "uncertain",
   "intent": {
     "designProblem": "__THE GENERAL DESIGN PROBLEM, NOT A SOURCE GAME SUMMARY__",
@@ -14,6 +18,12 @@
     "principle": "__WHY THE PATTERN WORKS ACROSS DIFFERENT SURFACE EXPRESSIONS__"
   },
   "selection": {
+    "familyId": "family.placeholder-pattern",
+    "selectionRole": "support",
+    "subtypeId": "placeholder",
+    "exclusiveWith": [],
+    "precedence": ["__SELECT ONLY AFTER THE REQUIRED CORE IS APPROVED__"],
+    "maxCoSelections": 1,
     "storySignals": [
       {
         "ruleId": "rule.placeholder-story-signal",
@@ -57,7 +67,8 @@
         {
           "criterionId": "criterion.story-relevance",
           "weight": 1,
-          "evidencePath": "query.storySignals"
+          "evidencePath": "query.storySignals",
+          "rule": "Award credit only when the bound story evidence directly supports the declared design problem."
         }
       ],
       "hardVetoes": ["canon conflict", "runtime impossible", "clone risk"]
@@ -69,7 +80,8 @@
           "valueType": "location-ref",
           "bindFrom": "story-model",
           "sourcePath": "locations[0].id",
-          "required": true
+          "required": true,
+          "constraints": ["Bind an approved story-derived location and preserve its canon facts."]
         }
       ],
       "minimumTransformationAxes": 3
@@ -138,6 +150,7 @@
     "requiredTransformationAxes": ["worldbuilding", "objects", "topology"],
     "structuralDeltaAxes": ["topology-graph", "object-role-graph", "action-sequence"],
     "sourceFingerprintRefs": ["fingerprint.placeholder-source-structure"],
+    "compositionVetoRefs": ["fingerprint.placeholder-combination-risk"],
     "blindSourceAttributionRequired": true,
     "cloneRiskChecks": ["__COULD A REVIEWER NAME ONE SPECIFIC SOURCE ROOM OR PUZZLE?__"]
   },
@@ -146,6 +159,7 @@
     "observationRefs": ["observation.placeholder-candidate"],
     "supportingWorkRefs": ["work.placeholder-candidate"],
     "counterEvidenceRefs": [],
+    "counterEvidenceBounds": [],
     "confidence": "low"
   },
   "tests": [

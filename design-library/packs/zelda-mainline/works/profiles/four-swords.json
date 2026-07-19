@@ -1,0 +1,123 @@
+{
+  "workId": "work.four-swords",
+  "author": "role.analyst.cooperative-systems",
+  "reviewer": "role.reviewer.causal-observations",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "Each participant is one member of a duplicated hero team that must coordinate to advance while still competing to be the most successful collector.",
+    "dimension.core-loop": "Two to four players enter a themed area, split up or regroup, exchange access to tools, solve simultaneous-action obstacles, collect rupees, defeat a boss, and compare individual results.",
+    "dimension.verbs": "Top-down swordplay, carrying or throwing teammates, pulling and pushing together, using a currently held tool, separating, regrouping, and opportunistic collection make social coordination part of the action set.",
+    "dimension.world-state": "Stage-local switches, defeated enemies, collected rupees, tool availability, and player positions form a shared synchronized state; major progress is organized by completed areas and earned keys.",
+    "dimension.topology": "Separate handheld screens allow players to occupy different nearby spaces, while choke points and multi-person mechanisms repeatedly draw the team back together.",
+    "dimension.gating-revisit": "Player count, synchronized presence, carried tools, rupee performance, area completion, and earned keys gate progress; replay supports higher collection performance rather than a solitary world revisit.",
+    "dimension.puzzle-information": "Obstacles signal required headcount, simultaneous timing, complementary positions, or a swappable tool; the solution often exists in communication between differently situated players.",
+    "dimension.dungeon-structure": "The adventure is a sequence of multiplayer dungeon areas with local challenge rooms, collection targets, and bosses rather than one continuous overworld-to-dungeon map.",
+    "dimension.exploration-reward": "Rupees reward route coverage and speed while hidden paths, tool opportunities, and team separation create a tension between collective clearance and individual score.",
+    "dimension.growth-economy": "Collected rupees act as both required progress currency and comparative score; most tools are situational stage resources rather than a growing permanent solo inventory.",
+    "dimension.combat-boss": "Top-down encounters scale around several independent attackers and can require coordinated positions or shared exploitation while allowing players to compete for nearby rewards.",
+    "dimension.npc-quest": "The social system is primarily player-to-player rather than NPC-driven; communication, assistance, obstruction, and score comparison create the responsive relationship layer.",
+    "dimension.narrative-performance": "A concise rescue frame establishes why the hero is divided, then stage starts, team reunions, boss clears, rupee tallies, and key awards provide the main performance cadence.",
+    "dimension.camera-blocking": "Each player has a centered personal handheld view, so blocking relies on local object readability and shared choke points rather than keeping every participant inside one camera.",
+    "dimension.teaching-feedback": "Simple top-down verbs, explicit player-count obstacles, immediate switch and object reactions, rupee totals, and peer demonstration let the group teach itself during play.",
+    "dimension.ui-input": "Every participant uses a Game Boy Advance with a private screen and compact controls; individual health, held tool, position, and collection state remain locally readable.",
+    "dimension.recovery-accessibility": "A mistake affects local health, position, or shared collection performance more often than erasing the whole session, but assembling the required hardware and players is a substantial access cost.",
+    "dimension.perspective-implementation": "Top-down personal views permit independent movement and off-screen separation while tile-like interaction zones make synchronized switches, carries, and enemy states precise.",
+    "dimension.hardware-multiplayer": "The original Four Swords requires two to four Game Boy Advance systems, a copy for each participant, and link cables; it has no original single-player mode.",
+    "dimension.production-runtime": "A faithful abstraction needs deterministic multi-client state, low-latency position and switch synchronization, player-count-aware dependencies, per-player cameras and UI, stage scoring, and disconnect-safe recovery."
+  },
+  "observationThemes": [
+    {
+      "key": "cooperation-and-score-share-one-action-space",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.ui-input"],
+      "context": "Several players traverse the same stage while both a shared clearance goal and individual rupee totals remain active.",
+      "preconditions": ["Two to four linked participants are present.", "A route contains both collective dependencies and collectible opportunities."],
+      "playerInput": ["Choose when to help, separate, carry a teammate, use a tool, or race toward a visible reward."],
+      "before": ["The team needs collective progress, but individual ranking is unsettled."],
+      "action": ["Perform a verb that can advance the group while changing personal position or score opportunity."],
+      "after": ["A shared obstacle may clear while collection advantage shifts between players."],
+      "feedback": ["Immediate object response, separate player movement, rupee pickup effects, and individual totals expose both outcomes."],
+      "consequences": ["Momentary self-interest creates conversation and improvisation without replacing the common objective."],
+      "factualDescription": "The game requires players to work together through multiplayer dungeons while rupees contribute to individual comparison and overall advancement.",
+      "interpretation": "Cooperation gains social texture when the same space offers low-stakes competitive temptations that do not invalidate the shared win condition.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "separation-expands-search-then-chokepoint-regroups",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.perspective-implementation"],
+      "context": "Personal screens allow players to explore different branches until a multi-person obstacle requires reunion.",
+      "preconditions": ["The local topology has separable routes.", "A downstream gate checks simultaneous presence or combined force."],
+      "playerInput": ["Split to inspect branches, communicate findings, then navigate back and synchronize at the gate."],
+      "before": ["Information and collectibles are distributed across more space than one group path efficiently covers."],
+      "action": ["Use independent cameras for parallel search and a headcount rule for reunion."],
+      "after": ["The team consolidates at the dependency and opens the shared onward route."],
+      "feedback": ["Personal viewport changes, peer communication, player markers, gate response, and reunion animation make group state legible."],
+      "consequences": ["Topology creates a rhythm of autonomy and coordination instead of requiring constant formation."],
+      "factualDescription": "Each participant views and controls a separate hero, can move apart from the others, and encounters obstacles that require multiple heroes acting together.",
+      "interpretation": "Alternating parallel branches with explicit reunion gates can exploit multiple viewpoints without losing a coherent team route.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "situational-tools-are-negotiated-team-resources",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.exploration-reward", "dimension.growth-economy"],
+      "context": "A stage obstacle needs a particular item while players currently hold different situational tools.",
+      "preconditions": ["The required tool is available somewhere in the stage.", "The team can change or exchange its tool distribution."],
+      "playerInput": ["Identify the matching affordance, locate the tool, and assign or transfer it to a suitably positioned player."],
+      "before": ["The group has enough people but the wrong capability distribution at the dependency."],
+      "action": ["Reconfigure who carries which local verb."],
+      "after": ["The obstacle resolves and the team's remaining loadout creates new tradeoffs."],
+      "feedback": ["Tool icon, pickup or swap response, environmental reaction, and opened path confirm the allocation."],
+      "consequences": ["Inventory becomes a communication problem and a reason for players to exchange roles within a stage."],
+      "factualDescription": "Players use and swap items while solving multiplayer dungeon obstacles, and those tools are more situational than a single permanently expanding inventory.",
+      "interpretation": "Restricting simultaneous capability per participant can turn a familiar item lock into a cooperative allocation decision.",
+      "confidence": "medium",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "peer-behavior-is-the-responsive-character-system",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.hardware-multiplayer"],
+      "context": "A puzzle, reward cluster, or dangerous room makes one player's behavior immediately relevant to the others.",
+      "preconditions": ["All participants share the stage state.", "Each has a private centered display and independent input."],
+      "playerInput": ["Signal verbally or through movement, then assist, race, wait, or playfully obstruct."],
+      "before": ["No authored character response can determine the social outcome."],
+      "action": ["Let human participants negotiate the local tactic."],
+      "after": ["The group's trust, temporary roles, and pace change even if the formal quest state only advances one step."],
+      "feedback": ["Live movement, object consequences, score change, laughter or verbal response, and the final tally expose social impact."],
+      "consequences": ["Replay variation comes primarily from people rather than additional scripted dialogue branches."],
+      "factualDescription": "The original requires multiple human-controlled heroes, and its official description explicitly combines cooperation with competition over rupees.",
+      "interpretation": "In a mandatory multiplayer work, other players can occupy design functions normally assigned to reactive NPCs, provided their effects are immediately visible.",
+      "confidence": "high",
+      "disposition": "single-title"
+    },
+    {
+      "key": "group-failure-preserves-session-momentum",
+      "dimensions": ["dimension.combat-boss", "dimension.teaching-feedback", "dimension.recovery-accessibility", "dimension.production-runtime"],
+      "context": "One participant mistimes a combat or coordination action during a shared stage.",
+      "preconditions": ["The stage session and link connection remain active.", "Other participants can continue acting or repeat the local interaction."],
+      "playerInput": ["Recover position or health, regroup, and retry the immediate dependency with peer guidance."],
+      "before": ["The team loses efficiency, resources, or a scoring opportunity."],
+      "action": ["Absorb the local penalty without dissolving the multiplayer session."],
+      "after": ["The group resumes from nearby state and can demonstrate the corrected timing."],
+      "feedback": ["Health or rupee change, respawn or repositioning, peer movement, and repeated mechanism response show the correction path."],
+      "consequences": ["A weaker player can learn through continued participation while stronger players retain incentives in score performance."],
+      "factualDescription": "Stage play supports repeated local combat and puzzle attempts within a continuous linked session, while collection totals provide a visible cost to inefficient play.",
+      "interpretation": "Multiplayer recovery should preserve the gathering and connection cost while attaching failure to a legible, local resource consequence.",
+      "confidence": "medium",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "A shared-clearance goal plus individual collection score can create productive cooperation-competition tension inside the same stage.",
+    "Private centered views can support parallel search if topology periodically requires explicit reunion.",
+    "Temporary per-player tool limits may turn inventory selection into negotiated team roles."
+  ],
+  "uniqueOrNonportable": [
+    "The exact fourfold hero premise, named sword, villain, princess rescue frame, themed areas, keys, and rupee presentation are recognizable authored surface content and must not be reused.",
+    "Specific room layouts, boss sequences, player-carry animations, item roster, scoring values, and audiovisual identity are nonportable.",
+    "The required GBA multi-cartridge and cable arrangement is a historical product constraint, not a default recommendation for modern projects."
+  ],
+  "openQuestions": [
+    "Original stage-layout variation and exact resource penalties require a primary-play trace before they support any deterministic generation claim.",
+    "The Anniversary Edition's single-player and wireless changes should be recorded as a separate variant delta, not blended into this profile."
+  ]
+}

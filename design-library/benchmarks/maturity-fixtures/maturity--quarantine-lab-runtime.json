@@ -1,0 +1,44 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.quarantine-lab-runtime",
+  "patternId": "pattern.parallel-state-comparison",
+  "testId": "test.parallel-state.runtime",
+  "kind": "runtime",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "runtime contract fixture for pattern.parallel-state-comparison; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "anchor-preserving-comparison",
+    "selectionRole": "specialization",
+    "requiredRuntimeCapabilities": [
+      "capability.map-layers",
+      "capability.world-facts",
+      "capability.performance-cues",
+      "capability.save-migration",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Always expose a transition back",
+      "Preserve observation log",
+      "Rollback unverified cross-state actions"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.anchors.semanticIdentityPreserved",
+      "operator": "equals",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.knowledge.observationBeforeInference",
+      "operator": "equals",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

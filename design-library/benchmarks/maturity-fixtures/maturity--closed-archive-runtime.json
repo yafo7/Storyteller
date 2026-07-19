@@ -1,0 +1,43 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.maturity.closed-archive-runtime",
+  "patternId": "pattern.capability-recontextualizes-old-space",
+  "testId": "test.capability-revisit.runtime",
+  "kind": "runtime",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "runtime contract fixture for pattern.capability-recontextualizes-old-space; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "capability-gated-return",
+    "selectionRole": "core",
+    "requiredRuntimeCapabilities": [
+      "capability.world-facts",
+      "capability.route-gates",
+      "capability.map-layers",
+      "capability.route-simulation"
+    ],
+    "recoveryRequirements": [
+      "Keep a bidirectional escape edge",
+      "Preserve capability and learned affordance facts after failure",
+      "Disable the new edge if its destination cannot load"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.effects.unlock-old-affordance.post.routeReachable",
+      "operator": "equals",
+      "expected": true
+    },
+    {
+      "evidencePath": "$.effects.commit-place-delta.landmarkIdentityPreserved",
+      "operator": "equals",
+      "expected": true
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

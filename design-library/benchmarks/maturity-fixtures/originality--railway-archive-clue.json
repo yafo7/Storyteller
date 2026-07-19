@@ -1,0 +1,49 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtureId": "fixture.originality.railway-archive-clue",
+  "patternId": "pattern.knowledge-gated-revisit",
+  "testId": "test.knowledge-revisit.originality",
+  "kind": "originality",
+  "status": "authored-contract-fixture",
+  "originalityStatement": "This synthetic contract fixture was authored for Storyteller validation and contains no source map, character, dialogue, audiovisual signature, or encounter sequence.",
+  "purpose": "originality contract fixture for pattern.knowledge-gated-revisit; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+  "sourceContract": "packs/zelda-mainline/patterns/maturity-contracts.json",
+  "scenarioBoundary": {
+    "subtype": "knowledge-only-return",
+    "selectionRole": "specialization",
+    "requiredRuntimeCapabilities": [
+      "capability.world-facts",
+      "capability.route-gates",
+      "capability.dialogue-gates",
+      "capability.hint-ladder",
+      "capability.save-migration"
+    ],
+    "recoveryRequirements": [
+      "Preserve clue ledger on failure",
+      "Restore target state after every wrong probe",
+      "Escalate hints from evidence location to relation to action class"
+    ]
+  },
+  "expectedAssertions": [
+    {
+      "evidencePath": "$.blindAttribution.specificEncounterConvergence",
+      "operator": "less-than",
+      "expected": 0.65
+    },
+    {
+      "evidencePath": "$.surfaceTransfers.sourceWording",
+      "operator": "equals",
+      "expected": 0
+    },
+    {
+      "evidencePath": "$.structuralDeltas.narrativeFunction",
+      "operator": "greater-or-equal",
+      "expected": 0.7
+    }
+  ],
+  "executionPolicy": {
+    "executableInP4": false,
+    "firstRuntimeExecutionPhase": "P7",
+    "failClosedUntilRuntimeEvidence": true
+  }
+}

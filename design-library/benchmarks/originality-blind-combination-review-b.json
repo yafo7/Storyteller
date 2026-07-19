@@ -1,0 +1,111 @@
+{
+  "reviewVersion": "1.0.0",
+  "reviewerId": "blind-combination-reviewer-b",
+  "reviewedAt": "2026-07-18",
+  "mode": "blind-combination",
+  "reviewerBlind": true,
+  "inputRef": "design-library/benchmarks/originality-blind-combination-applications.json",
+  "inputFileHash": "sha256:bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be",
+  "records": [
+    {
+      "caseId": "blind.combination.case.1ae543417ce922d4db18",
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "guessTitle": "Titanfall 2",
+      "guessEncounter": "Effect and Cause",
+      "confidence": 0.46,
+      "verdict": "pass",
+      "rationale": "Switching a traversal space among world states while reading invariant landmarks recalls Effect and Cause, but the resemblance stops at that broad device. This case uses three non-isomorphic pressure states, a revisit unlocked by a learned gesture, repeated evidence recording, an always-open return ramp, and a civic-diversion inference; those elements do not reproduce the mission's two-time-state room sequence or encounters closely enough for specific attribution."
+    },
+    {
+      "caseId": "blind.combination.case.21e4d7928db264285778",
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.18,
+      "verdict": "pass",
+      "rationale": "A repeatedly visible destination, a looped traversal network, and optional environmental clue chains are common adventure structures rather than a distinctive commercial encounter. The five interlocking kiln districts, three draft values, costed neighborhood links, tactile clue chain, and late conversion of the ring into civic infrastructure form no concrete level layout or action sequence I can identify."
+    },
+    {
+      "caseId": "blind.combination.case.5a557d6d8c6db255d24e",
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "guessTitle": "Portal 2",
+      "guessEncounter": "Chapter 2: The Cold Boot test-chamber sequence",
+      "confidence": 0.31,
+      "verdict": "pass",
+      "rationale": "The safe introduction followed by practice, variation, reversal, combination, and a final application resembles Portal 2's instructional pacing. The actual pressure-sharing algebra, urgent care action, branching four-platform work loop, continuously visible Pollen Bell, and balancing exam do not map to a particular Cold Boot chamber, so this is a pedagogical analogy rather than encounter-level attribution."
+    },
+    {
+      "caseId": "blind.combination.case.5be839c267b45c60e90a",
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.14,
+      "verdict": "pass",
+      "rationale": "A mechanical action producing a large truth reveal and then changing routes and character knowledge is a broad dramatic pattern. The three hydration values, folded capillary loops, central recovery well, pollen-grain revelation, immediate witness rescue, and provenance-aware log sharing do not align with a specific commercial level I can name."
+    },
+    {
+      "caseId": "blind.combination.case.95161d0121a34108f85f",
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "guessTitle": "Dishonored 2",
+      "guessEncounter": "Mission 7: A Crack in the Slab at Aramis Stilton's Manor",
+      "confidence": 0.61,
+      "verdict": "pass",
+      "rationale": "Using a handheld overlay to compare recognizable anchors across two conditions and seeing situated social consequences makes A Crack in the Slab the strongest candidate. Confidence remains below the failure threshold because the player causes a one-way rainfall, comparison occurs at three dedicated vanes, evidence is inferred from multisensory discrepancies and physically shared, and the corkscrew topology is not a coordinate-matched past/present manor."
+    },
+    {
+      "caseId": "blind.combination.case.a016f5605c95e2d913a2",
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "guessTitle": "Death Stranding",
+      "guessEncounter": "Episode 2 delivery route to Port Knot City",
+      "confidence": 0.26,
+      "verdict": "pass",
+      "rationale": "Active route preview, cargo-dependent risk, recovery stops, and a visible destination loosely suggest Death Stranding's delivery approach structure. The stitch-bound walker, plucked seam responses, cadence control, depth-layered web, reroute edges, and final retensioning of a landmark do not reproduce the terrain, traversal verbs, or objective sequence of the Port Knot route."
+    },
+    {
+      "caseId": "blind.combination.case.a1b58443328199f9f9f7",
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "guessTitle": "The Legend of Zelda: Tears of the Kingdom",
+      "guessEncounter": null,
+      "confidence": 0.29,
+      "verdict": "pass",
+      "rationale": "Open-ended placement of materials with several valid causal constructions has a broad Tears of the Kingdom-like affordance, but no particular shrine or encounter is identifiable. The anchor, redirect, diffuse, and buffer roles; zone-level placement; six-beat humidity invariant; diagnostic role-category feedback; and workload consequences constitute a different and medically framed system."
+    },
+    {
+      "caseId": "blind.combination.case.beddb017d39a22f02925",
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "guessTitle": "Hollow Knight",
+      "guessEncounter": "Returning through Fungal Wastes after acquiring the Mantis Claw",
+      "confidence": 0.27,
+      "verdict": "pass",
+      "rationale": "Remembering an obstruction, gaining a reusable traversal ability, and returning through an old region are recognizable metroidvania conventions, with Hollow Knight only a tentative example. Alternating pressure-braiding, two diagonal return edges, a multi-entry corkscrew rescue, an optional rotating chamber, and a reallocatable three-way scaffold reward do not match the named area's route or reward structure."
+    },
+    {
+      "caseId": "blind.combination.case.e6c3335562ec921c9834",
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "guessTitle": "Prey",
+      "guessEncounter": "Hardware Labs maintenance routes using the GLOO Cannon",
+      "confidence": 0.24,
+      "verdict": "pass",
+      "rationale": "A reusable traversal capability exposing optional maintenance routes and systemic clues loosely evokes Prey's station exploration. However, reversible biofilm adhesion, the lint-tab-bubble clue triad, a safe hypothesis tray, the reconnecting crescent bypass, a forgotten quorum, and transferable civic mandates do not correspond to a specific Hardware Labs room or objective."
+    },
+    {
+      "caseId": "blind.combination.case.f2277fa2a0d339208209",
+      "mode": "blind-combination",
+      "reviewerBlind": true,
+      "guessTitle": "Portal",
+      "guessEncounter": "Aperture Science Test Chambers 00-18",
+      "confidence": 0.54,
+      "verdict": "pass",
+      "rationale": "The safe-reset teaching arc that introduces one relation, varies it, reverses it, combines familiar rules, and ends with an exam is recognizably Portal-like. It still does not identify a particular Portal chamber: the urgent habitat rescue, resonance transfer, carrying versus reflecting ducts, absorption timing, four-bay hub, mixed-frequency final loop, and always-reachable bleed valve are materially different mechanics and spatial relations."
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "reviewerId": "blind-reviewer-a",
+  "generatedAt": "2026-07-18",
+  "caseCount": 30,
+  "reviews": [
+    {
+      "caseId": "blind.case.0075bb0a6808a50b9d70",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.28,
+      "verdict": "pass",
+      "rationale": "共享状态轴同时改写多房间通路属于常见的状态切换谜题结构；三状态、回环恢复与远端反馈不足以锁定某一作品中的具体关卡。"
+    },
+    {
+      "caseId": "blind.case.0083be350d3fda8ced9a",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.17,
+      "verdict": "pass",
+      "rationale": "图面规划、途中改道、风险控制和到站评分可见于多种运输与护送玩法；没有独特路线、事件或角色组合可归到具体遭遇。"
+    },
+    {
+      "caseId": "blind.case.0876c381e8cbe2f3de82",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.12,
+      "verdict": "pass",
+      "rationale": "以求助、辨险、取回基础工具组成低惩罚开场，是广泛使用的教学节奏；虚构对象与空间关系没有指向已知的特定序章。"
+    },
+    {
+      "caseId": "blind.case.0d3eef974ea2d55f26ba",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.5,
+      "verdict": "pass",
+      "rationale": "记录功能后以容量上限重新部署，容易联想到以召唤复制物解谜的整作级机制，但垂直、水平、掩护三类构型仍无法定位到某个具体房间或遭遇。"
+    },
+    {
+      "caseId": "blind.case.224b7775b6bb85f4f8dc",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": "Dishonored 2",
+      "guessEncounter": "A Crack in the Slab",
+      "confidence": 0.58,
+      "verdict": "pass",
+      "rationale": "同坐标双布局及一侧行动改变另一侧结构，最接近 Stilton 庄园的时态切换任务；但双世界、时间切换和跨状态支撑变化也存在于多部作品，且这里没有保留该任务的独特目标或路线，未达高置信唯一归因。"
+    },
+    {
+      "caseId": "blind.case.3b1402213c068d52e260",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.2,
+      "verdict": "pass",
+      "rationale": "分层载具运输、风险与时限权衡、在安全站重规划及永久开边是运输冒险的通用组合，没有可识别的具体航程或任务脚本。"
+    },
+    {
+      "caseId": "blind.case.40ff7501c1ccd837ccd9",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.16,
+      "verdict": "pass",
+      "rationale": "地图、NPC 站位、服务和对白同步读取世界状态，是状态一致性的通用设计要求；缺少足以识别某一商业游戏遭遇的动作序列。"
+    },
+    {
+      "caseId": "blind.case.41335aad56aa02fb7750",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.15,
+      "verdict": "pass",
+      "rationale": "以持续可见远景引导自选目标，并让奖励开启下一段旅行，是开放世界常见的好奇链；没有唯一地标或具体遭遇指纹。"
+    },
+    {
+      "caseId": "blind.case.49d49aa1c2ba481216b1",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.19,
+      "verdict": "pass",
+      "rationale": "先满足 NPC 局部需求、远端改变环境、返程看到其行动与合作能力变化，属于通用的世界响应式任务结构，不能锁定具体支线。"
+    },
+    {
+      "caseId": "blind.case.51fdbd1ce696fc287bc4",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.13,
+      "verdict": "pass",
+      "rationale": "通过职业动作而非背景说明完成身份教学，是常见的冷开场手法；检查标签、移动与修理的小回路没有可归因的专属细节。"
+    },
+    {
+      "caseId": "blind.case.53b628ae74274b897540",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.18,
+      "verdict": "pass",
+      "rationale": "安全路径旁的两级秘密线索、能力奖励和永久落点是探索游戏常用的秘密设计，无法据此识别某个具体隐藏区域。"
+    },
+    {
+      "caseId": "blind.case.6d65f8861ed1bf06dcc5",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.4,
+      "verdict": "pass",
+      "rationale": "无新工具、只凭异地获得的知识回访并重释旧证据，明显属于知识门控探索；它会让人联想到多部推理与探索游戏，但三段痕迹和侧向入口不足以确定具体谜题。"
+    },
+    {
+      "caseId": "blind.case.7487b163a1e18870b6ef",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.27,
+      "verdict": "pass",
+      "rationale": "连续刻度统一驱动三个房间并开闭相反路径，仍是常见的多区状态机谜题；蜂群主题和反馈已形成独立语境，无法匹配唯一关卡。"
+    },
+    {
+      "caseId": "blind.case.788d8afca0b073fedc81",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.15,
+      "verdict": "pass",
+      "rationale": "从远景选择目标、沿多路线接近、取得旅行能力并看到下一问题，是通用开放世界引导结构，未保留任何可识别的具体地点或事件。"
+    },
+    {
+      "caseId": "blind.case.79d16d5fc3327f9eaf4a",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.25,
+      "verdict": "pass",
+      "rationale": "示范、练习、变式、组合、考试的五段教学梯度广泛存在于解谜和动作游戏；没有某部作品独有的机制或关卡拓扑。"
+    },
+    {
+      "caseId": "blind.case.7a62776e0f96d3be90f1",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.2,
+      "verdict": "pass",
+      "rationale": "事件赋予旧物新用途、回访旧路径并打开多个支路，是典型能力门控与回环设计；没有足够细节定位到某次能力获得事件。"
+    },
+    {
+      "caseId": "blind.case.92f38b9e0a229f1967c3",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.18,
+      "verdict": "pass",
+      "rationale": "可选异常、两级入口线索、非消耗试探和回环奖励是泛用秘密模板；灯塔与纸带没有对应到熟知的特定隐藏遭遇。"
+    },
+    {
+      "caseId": "blind.case.93fee44cd1d9f8e7db74",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.17,
+      "verdict": "pass",
+      "rationale": "隐藏支路同时给能力改善、永久捷径和人物补叙，是常见探索奖励组合；纸城构造没有暴露可唯一对应的商业关卡。"
+    },
+    {
+      "caseId": "blind.case.990c8b778b711efad08e",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.29,
+      "verdict": "pass",
+      "rationale": "获得新的身体或接触方式后穿过旧日只能观察的表面，是标准的能力回访结构；上下两层走廊不足以区分众多类银河城关卡。"
+    },
+    {
+      "caseId": "blind.case.a0aef5742f729817e45d",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": "Dishonored 2",
+      "guessEncounter": "A Crack in the Slab",
+      "confidence": 0.58,
+      "verdict": "pass",
+      "rationale": "对应坐标、双布局切换及一侧行动改变另一侧结构，与 Stilton 庄园任务相近；但同类时态和双世界关卡很多，盐壁谜题也未复现该任务的具体目标、人物或路线，故不作高置信归因。"
+    },
+    {
+      "caseId": "blind.case.a302189e8d6b29f69d96",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.24,
+      "verdict": "pass",
+      "rationale": "可计算补给、在安全节点决定深入或撤回、以发现换容量和捷径，是通用的推进行程循环；没有可识别的某次远征。"
+    },
+    {
+      "caseId": "blind.case.ace83c99e505bc6badf4",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.36,
+      "verdict": "pass",
+      "rationale": "按承重、传导和遮挡组合环境物件并允许多解，会联想到物理沙盒或沉浸式模拟玩法，但没有唯一装置、敌人或解法指向具体神庙或关卡。"
+    },
+    {
+      "caseId": "blind.case.aea0afb1f55f0744b9b8",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.22,
+      "verdict": "pass",
+      "rationale": "先安全教学、后反向使用同一关系保护角色、最终组合方向时机与对象，是通用的机制毕业考设计，没有特定作品的独有桥段。"
+    },
+    {
+      "caseId": "blind.case.b22c12c8e4360379055b",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.14,
+      "verdict": "pass",
+      "rationale": "越过阈值后用短镜头、声响和人物站位展示永久世界变化，是常见的关卡反馈语言，无法据此归到具体遭遇。"
+    },
+    {
+      "caseId": "blind.case.c1082c7dce4b426069ee",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.35,
+      "verdict": "pass",
+      "rationale": "观察角色在三种环境下的反应并把次序用于既有控制点，是知识型因果谜题；类似结构跨越多部观察和时间循环游戏，缺少唯一事件指纹。"
+    },
+    {
+      "caseId": "blind.case.cfabb32ffcf9dbea36dd",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.16,
+      "verdict": "pass",
+      "rationale": "互动、短表演、自由准备窗口循环三次，是广泛使用的互动戏剧节奏；每拍目标与具体表演内容均未对应到熟知关卡。"
+    },
+    {
+      "caseId": "blind.case.d3b9ba204b7810ba9d63",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.15,
+      "verdict": "pass",
+      "rationale": "远景承诺、抵达后的移动回报和从新视点延伸下一目标，是开放世界常见探索链，没有唯一可归因的地标序列。"
+    },
+    {
+      "caseId": "blind.case.e8423455232d943dd25a",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.5,
+      "verdict": "pass",
+      "rationale": "观察并登记有限功能、按容量在别处重新部署，较强地联想到复制或召唤型整作机制；但角色站位改变路线与对白的应用没有对应到可命名的具体关卡。"
+    },
+    {
+      "caseId": "blind.case.f79687cf5965cdf233ad",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.2,
+      "verdict": "pass",
+      "rationale": "支线奖励兼作局部能力、长期返回点和未来路程压缩，是常见探索经济；三个成本不同的回路不构成某一具体遭遇的独特结构。"
+    },
+    {
+      "caseId": "blind.case.fd3c3ba878029ef2def5",
+      "mode": "blind",
+      "reviewerBlind": true,
+      "guessTitle": null,
+      "guessEncounter": null,
+      "confidence": 0.36,
+      "verdict": "pass",
+      "rationale": "将普通物件的承重、传导、遮挡作用两两组合并提供多解，是物理沙盒的宽泛设计；风筝诊所未复现任何可识别的具体谜题房。"
+    }
+  ]
+}

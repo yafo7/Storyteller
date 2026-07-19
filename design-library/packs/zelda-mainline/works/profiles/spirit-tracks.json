@@ -1,0 +1,121 @@
+{
+  "workId": "work.spirit-tracks",
+  "author": "Corpus Analyst Rowan-C",
+  "reviewer": "Independent Reviewer Alder-C",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player acts as both field adventurer and responsible engineer, restoring a damaged rail network while coordinating closely with an embodied companion.",
+    "dimension.core-loop": "The cadence moves from tower guidance to route restoration, train travel, settlement or dungeon action, a returned map segment, and a larger rail network of destinations and services.",
+    "dimension.verbs": "Stylus movement, attacks, tool gestures, route drawing, train speed and whistle control, microphone flute play, and directed companion paths form a hardware-shaped verb set.",
+    "dimension.world-state": "Restored tracks persistently add reachable branches, tower progress changes regional access, and acquired tools or Phantom forms alter what coordinated actions are possible.",
+    "dimension.topology": "Settlements and challenge spaces are connected by constrained rail graphs whose junctions, hazards, gates, and alternate lines make route planning different from free overland motion.",
+    "dimension.gating-revisit": "New track segments, tools, songs, and companion capabilities open destinations and allow earlier routes or tower floors to be approached with broader options.",
+    "dimension.puzzle-information": "Puzzles externalize coordination through drawn companion paths, synchronized positions, item interactions, rail diagrams, audible melodies, and visible timing relationships.",
+    "dimension.dungeon-structure": "Regional temples teach item rules, while the central tower is revisited in newly available sections where Link and Phantom Zelda solve increasingly interdependent room chains.",
+    "dimension.exploration-reward": "New rail branches expose stations, errands, rabbits, treasure, optional challenge spaces, and faster connections that give network expansion value beyond the next mandatory stop.",
+    "dimension.growth-economy": "Health, tools, treasure, train parts, cargo and passenger rewards, and collectible upgrades support both personal progression and investment in the travel layer.",
+    "dimension.combat-boss": "Touch combat is joined by train cannon encounters and companion-assisted fights, while bosses synthesize item use, positioning, timing, and readable vulnerable phases.",
+    "dimension.npc-quest": "Passengers, townspeople, guardians, merchants, and Zelda provide requests and reactions; careful transport and restored access visibly connect service work to the world graph.",
+    "dimension.narrative-performance": "Zelda remains an active companion whose movement, fear, humor, possession of Phantoms, and joint puzzle actions perform the partnership during play rather than only in cutscenes.",
+    "dimension.camera-blocking": "The overhead field camera shows both partners and puzzle dependencies, while train framing and the upper display expose forward hazards and route context at travel scale.",
+    "dimension.teaching-feedback": "Drawn routes, partner movement, track restoration, whistle responses, passenger reactions, tool animations, and puzzle-completion cues make action consequences immediately visible or audible.",
+    "dimension.ui-input": "The touch screen handles avatar and route commands, the map holds planned rail lines, and the microphone becomes an explicit performance input for the Spirit Flute.",
+    "dimension.recovery-accessibility": "Failed coordination can be redrawn, route plans can be changed before danger, checkpoints bound repeated work, and optional preparation can reduce combat or travel pressure.",
+    "dimension.perspective-implementation": "A 2.5D overhead view supports precise drawn paths and partner readability, whereas forward train views make a one-dimensional rail graph feel spatial and hazardous.",
+    "dimension.hardware-multiplayer": "The DS dual screens, stylus, microphone, local wireless, and download play shape both the single-player adventure and a separate two-to-four-player competitive mode.",
+    "dimension.production-runtime": "The design depends on spline-like rail navigation, live route editing, companion pathfinding, possession states, microphone pitch input, passenger evaluation, and persistent network unlocks."
+  },
+  "observationThemes": [
+    {
+      "key": "restored-track-opens-network",
+      "dimensions": ["dimension.core-loop", "dimension.world-state", "dimension.topology", "dimension.gating-revisit"],
+      "context": "After resolving a regional objective, a missing portion of the Spirit Tracks is restored on the world map.",
+      "preconditions": ["A destination or branch is absent from the usable rail graph", "The linked tower or regional objective has been completed"],
+      "playerInput": ["Receive and inspect the restored map segment", "Draw a train route over the newly available track"],
+      "before": ["Stations beyond the missing track cannot be reached", "The train's route choices are limited to the current graph"],
+      "action": ["Apply the restored track state and select a route through it"],
+      "after": ["New rail edges and destinations become traversable", "Earlier junctions gain additional route choices"],
+      "feedback": ["The map visibly gains rails", "The train can enter the restored branch and arrive at a new location"],
+      "consequences": ["The tower-travel-local-objective loop advances", "Existing network space is reinterpreted through new connections and revisits"],
+      "factualDescription": "Completing progression objectives restores missing rail segments on the map, persistently adding routes that let the train reach new stations and branches.",
+      "interpretation": "Representing progression as an added graph edge makes world change concrete and lets a linear vehicle support meaningful route growth and return planning.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "engineer-plans-live-journey",
+      "dimensions": ["dimension.player-fantasy", "dimension.exploration-reward", "dimension.growth-economy", "dimension.npc-quest"],
+      "context": "Before and during a train journey, the player chooses a path that may include passengers, hazards, optional stations, or collectible opportunities.",
+      "preconditions": ["The train and at least one connected route are available", "A destination, passenger, cargo, or optional lead has been selected"],
+      "playerInput": ["Draw or revise the route", "Control speed and whistle in response to signs, traffic, and threats", "Stop at the intended station"],
+      "before": ["The request is incomplete", "Rewards and optional destinations on the route remain unclaimed"],
+      "action": ["Operate the train while honoring route and service conditions"],
+      "after": ["The train reaches the destination", "The request or detour can resolve and issue its reward"],
+      "feedback": ["The route line and approaching junctions remain visible", "Passengers, signs, enemies, and arrival scoring respond to driving behavior"],
+      "consequences": ["Treasure or payment supports equipment and train growth", "Optional errands make restored branches socially and economically meaningful"],
+      "factualDescription": "The player draws train routes and adjusts speed or whistle during travel; passenger and delivery tasks evaluate the trip and can grant rewards or expose optional content.",
+      "interpretation": "Giving travel operational duties turns a connector between levels into a service fantasy where route knowledge, care, and economy reinforce one another.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "phantom-path-enables-cooperation",
+      "dimensions": ["dimension.verbs", "dimension.puzzle-information", "dimension.dungeon-structure", "dimension.narrative-performance"],
+      "context": "In the tower, Zelda can inhabit a Phantom and receive a drawn route while Link remains independently controlled.",
+      "preconditions": ["A compatible Phantom has been made vulnerable", "Zelda is able to possess it", "The room requires two positions or complementary capabilities"],
+      "playerInput": ["Enable Zelda to enter the Phantom", "Draw a route for the Phantom", "Move Link and time the partners' actions"],
+      "before": ["The obstacle cannot be resolved by Link alone", "The hostile Phantom is not yet an allied body"],
+      "action": ["Convert the enemy body into a directed companion and coordinate both actors"],
+      "after": ["The Phantom follows the route and performs its form-specific role", "A joint path, switch, defense, or transfer becomes possible"],
+      "feedback": ["Possession visibly changes the Phantom's allegiance", "The drawn line, partner movement, and room response display the coordination chain"],
+      "consequences": ["The tower route advances", "Later Phantom types expand the partnership's puzzle vocabulary and embodied relationship"],
+      "factualDescription": "Zelda can possess vulnerable Phantoms; the player draws her route and coordinates that controlled body with Link to solve room dependencies neither can complete alone.",
+      "interpretation": "Turning a companion's narrative presence into a separately routed body lets relationship development and puzzle complexity share the same observable action system.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "dual-screen-and-microphone-externalize-rule",
+      "dimensions": ["dimension.camera-blocking", "dimension.ui-input", "dimension.perspective-implementation", "dimension.hardware-multiplayer"],
+      "context": "A route, partner command, or Spirit Flute phrase asks the player to coordinate touch or breath input with information distributed across the DS displays.",
+      "preconditions": ["The relevant tool or travel mode is active", "The game has presented a visible route, partner target, or melody cue"],
+      "playerInput": ["Draw or touch the requested spatial command", "For flute play, move the stylus and blow into the microphone in the shown sequence"],
+      "before": ["The route, partner action, or musical event is unresolved", "Reference information is visible but has not been performed"],
+      "action": ["Translate the displayed information into the hardware-specific input"],
+      "after": ["The avatar, partner, train, or musical state executes the command", "The linked obstacle or event can change"],
+      "feedback": ["Pointer paths and overhead blocking show spatial execution", "Audible notes and display changes confirm microphone and touch recognition"],
+      "consequences": ["Abstract instructions become embodied actions", "The same device supports both solitary coordination and a separate local competitive mode"],
+      "factualDescription": "The original separates active overhead action and reference information across two displays, uses stylus paths for spatial commands, and uses touch plus microphone breath for flute performance.",
+      "interpretation": "When hardware input closely resembles the represented act, interface feedback can teach an unusual verb through imitation instead of a long command explanation.",
+      "confidence": "high",
+      "disposition": "single-title"
+    },
+    {
+      "key": "hazard-readable-route-recovery",
+      "dimensions": ["dimension.combat-boss", "dimension.teaching-feedback", "dimension.recovery-accessibility", "dimension.production-runtime"],
+      "context": "During rail travel, hostile trains or enemies threaten the vehicle while their direction and the available junctions remain visible on the route map.",
+      "preconditions": ["The train is moving on a route with a live hazard", "At least one speed, junction, alternate-line, whistle, or cannon response is available"],
+      "playerInput": ["Inspect hazard direction", "Revise the route or adjust speed", "Use the cannon or whistle when appropriate"],
+      "before": ["The current trajectory risks collision or damage", "The journey has not yet failed"],
+      "action": ["Respond before the hazard reaches the same rail segment"],
+      "after": ["The train avoids, passes, or defeats the threat", "The journey continues toward its destination"],
+      "feedback": ["The map shows moving danger and junction structure", "Vehicle speed, impacts, enemy response, and route motion confirm the result"],
+      "consequences": ["Planning can recover a dangerous trip without restarting immediately", "Boss and vehicle encounters reuse the same readable timing-and-response foundation"],
+      "factualDescription": "Rail hazards expose their movement on the route display, and the player can alter course, speed, or weapon use to avoid collision and continue the journey.",
+      "interpretation": "A constrained network remains tactically expressive when threat intent is legible and the player can revise a plan before failure, but it requires reliable path simulation and junction state.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "Restoring edges to a visible travel graph can make world repair, access growth, and revisit value the same state change.",
+    "A companion becomes mechanically present when the player can route a distinct body whose capabilities complement the protagonist.",
+    "Constrained vehicle travel can remain interactive when route revision, service conditions, and readable hazards create decisions throughout the trip."
+  ],
+  "uniqueOrNonportable": [
+    "The Spirit Tracks cosmology, named tower and flute, train and Phantom designs, character identities, exact rail map, melodies, dialogue, and story events are nonportable.",
+    "Specific partner routes, dungeon layouts, boss answers, passenger scripts, and microphone melodies remain source evidence rather than reusable content."
+  ],
+  "openQuestions": [
+    "A later service-state review should document how the retired DS online functions affect reproducibility while keeping local and single-player observations distinct."
+  ]
+}

@@ -4,7 +4,7 @@
   "title": "V0.3 callable design pattern draft",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "patternId", "patternVersion", "name", "kind", "status", "supportClass", "autoSelectable", "flavorClass", "intent", "selection", "effectPrimitives", "hooks", "departmentContracts", "development", "implementation", "composition", "originality", "provenance", "tests", "governance"],
+  "required": ["schemaVersion", "patternId", "patternVersion", "name", "kind", "status", "supportClass", "autoSelectable", "quarantineReason", "quarantineIssueRefs", "quarantineEvidenceDisposition", "promotionRequirements", "flavorClass", "intent", "selection", "effectPrimitives", "hooks", "departmentContracts", "development", "implementation", "composition", "originality", "provenance", "tests", "governance"],
   "properties": {
     "schemaVersion": { "type": "string", "pattern": "^1\\.0\\.0$" },
     "patternId": { "type": "string", "pattern": "^pattern\\.[a-z0-9.-]+$" },
@@ -14,6 +14,10 @@
     "status": { "enum": ["candidate", "reviewed", "released", "deprecated"] },
     "supportClass": { "enum": ["cross-title", "single-title-research-only", "cross-pack-core"] },
     "autoSelectable": { "type": "boolean" },
+    "quarantineReason": { "type": ["string", "null"] },
+    "quarantineIssueRefs": { "type": "array", "items": { "type": "string", "pattern": "^G[0-9]{3}-[a-z0-9-]+$" }, "uniqueItems": true },
+    "quarantineEvidenceDisposition": { "enum": ["single-work-direct-only", "cross-title-partial-not-closed", "no-complete-single-work-trace", "plausible-cross-title-still-unadjudicated", "cross-title-evidence-runtime-blocked", "not-yet-reviewed", null] },
+    "promotionRequirements": { "type": ["string", "null"] },
     "flavorClass": { "enum": ["zelda-discriminative", "adventure-generic", "uncertain"] },
     "intent": {
       "type": "object",
@@ -28,8 +32,14 @@
     "selection": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["storySignals", "spatialSignals", "prerequisites", "contraindications", "abstainWhen"],
+      "required": ["familyId", "selectionRole", "subtypeId", "exclusiveWith", "precedence", "maxCoSelections", "storySignals", "spatialSignals", "prerequisites", "contraindications", "abstainWhen"],
       "properties": {
+        "familyId": { "type": "string", "pattern": "^family\\." },
+        "selectionRole": { "enum": ["core", "support", "specialization", "orchestration"] },
+        "subtypeId": { "type": ["string", "null"] },
+        "exclusiveWith": { "type": "array", "items": { "type": "string", "pattern": "^pattern\\." }, "uniqueItems": true },
+        "precedence": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "maxCoSelections": { "type": "integer", "minimum": 0, "maximum": 3 },
         "storySignals": { "type": "array", "items": { "$ref": "#/$defs/detectRule" }, "minItems": 1 },
         "spatialSignals": { "type": "array", "items": { "$ref": "#/$defs/detectRule" } },
         "prerequisites": { "type": "array", "items": { "type": "string" } },
@@ -46,7 +56,7 @@
         "required": ["effectId", "kind", "preconditions", "parameters", "postconditions", "observableFeedback", "rollback"],
         "properties": {
           "effectId": { "type": "string", "pattern": "^effect\\." },
-          "kind": { "enum": ["set-fact", "clear-fact", "grant-item", "consume-item", "toggle-map-layer", "unlock-route", "lock-route", "spawn-actor", "despawn-actor", "move-actor", "set-npc-state", "set-dialogue-gate", "emit-performance-cue", "set-checkpoint", "map-transition", "camera-transition"] },
+          "kind": { "enum": ["set-fact", "clear-fact", "grant-item", "consume-item", "toggle-map-layer", "set-map-layer", "unlock-route", "lock-route", "reveal-location", "spawn-actor", "despawn-actor", "move-actor", "set-npc-state", "set-dialogue-gate", "open-interaction-window", "emit-performance-cue", "performance-cue", "world-transaction", "set-checkpoint", "map-transition", "camera-transition"] },
           "preconditions": { "type": "array", "items": { "type": "string" } },
           "parameters": { "type": "array", "items": { "type": "string", "pattern": "^parameter\\." }, "uniqueItems": true },
           "postconditions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
@@ -204,13 +214,14 @@
     "originality": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["retainedPrinciples", "forbiddenSurfaceTransfers", "requiredTransformationAxes", "structuralDeltaAxes", "sourceFingerprintRefs", "blindSourceAttributionRequired", "cloneRiskChecks"],
+      "required": ["retainedPrinciples", "forbiddenSurfaceTransfers", "requiredTransformationAxes", "structuralDeltaAxes", "sourceFingerprintRefs", "compositionVetoRefs", "blindSourceAttributionRequired", "cloneRiskChecks"],
       "properties": {
         "retainedPrinciples": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
         "forbiddenSurfaceTransfers": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
         "requiredTransformationAxes": { "type": "array", "items": { "$ref": "#/$defs/transformationAxis" }, "minItems": 3, "uniqueItems": true },
         "structuralDeltaAxes": { "type": "array", "items": { "enum": ["topology-graph", "object-role-graph", "action-sequence", "feedback-signature", "narrative-function"] }, "minItems": 3, "uniqueItems": true },
         "sourceFingerprintRefs": { "type": "array", "items": { "type": "string", "pattern": "^fingerprint\\." }, "minItems": 1, "uniqueItems": true },
+        "compositionVetoRefs": { "type": "array", "items": { "type": "string", "pattern": "^fingerprint\\." }, "minItems": 1, "uniqueItems": true },
         "blindSourceAttributionRequired": { "const": true },
         "cloneRiskChecks": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
       }
@@ -218,12 +229,26 @@
     "provenance": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["originPackRefs", "observationRefs", "supportingWorkRefs", "counterEvidenceRefs", "confidence"],
+      "required": ["originPackRefs", "observationRefs", "supportingWorkRefs", "counterEvidenceRefs", "counterEvidenceBounds", "confidence"],
       "properties": {
         "originPackRefs": { "type": "array", "items": { "type": "string", "pattern": "^pack\\." }, "minItems": 1, "uniqueItems": true },
         "observationRefs": { "type": "array", "items": { "type": "string", "pattern": "^observation\\." }, "minItems": 1, "uniqueItems": true },
         "supportingWorkRefs": { "type": "array", "items": { "type": "string", "pattern": "^work\\." }, "minItems": 1, "uniqueItems": true },
         "counterEvidenceRefs": { "type": "array", "items": { "type": "string", "pattern": "^(observation|claim)\\." }, "uniqueItems": true },
+        "counterEvidenceBounds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["evidenceRef", "challengedAssumption", "observedBoundary", "derivedRule"],
+            "properties": {
+              "evidenceRef": { "type": "string", "pattern": "^(observation|claim)\\." },
+              "challengedAssumption": { "type": "string", "minLength": 20 },
+              "observedBoundary": { "type": "string", "minLength": 20 },
+              "derivedRule": { "type": "string", "minLength": 20 }
+            }
+          }
+        },
         "confidence": { "enum": ["low", "medium", "high"] }
       }
     },
@@ -264,7 +289,7 @@
       "properties": {
         "ruleId": { "type": "string", "pattern": "^rule\\." },
         "sourcePath": { "type": "string", "minLength": 1 },
-        "operator": { "enum": ["exists", "equals", "not-equals", "contains", "intersects", "greater-than", "less-than"] },
+        "operator": { "enum": ["exists", "equals", "not-equals", "contains", "contains-all", "intersects", "count-greater-or-equal", "greater-or-equal", "greater-than", "less-than", "requires-single-action-sequence"] },
         "valueType": { "enum": ["string", "number", "boolean", "string-array", "object"] },
         "expected": {}
       }
@@ -272,23 +297,25 @@
     "scoreCriterion": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["criterionId", "weight", "evidencePath"],
+      "required": ["criterionId", "weight", "evidencePath", "rule"],
       "properties": {
         "criterionId": { "type": "string", "pattern": "^criterion\\." },
         "weight": { "type": "number", "minimum": 0, "maximum": 1 },
-        "evidencePath": { "type": "string", "minLength": 1 }
+        "evidencePath": { "type": "string", "minLength": 1 },
+        "rule": { "type": "string", "minLength": 12 }
       }
     },
     "parameterBinding": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["parameterId", "valueType", "bindFrom", "sourcePath", "required"],
+      "required": ["parameterId", "valueType", "bindFrom", "sourcePath", "required", "constraints"],
       "properties": {
         "parameterId": { "type": "string", "pattern": "^parameter\\." },
-        "valueType": { "enum": ["actor-ref", "prop-ref", "location-ref", "fact-ref", "beat-ref", "capability-ref", "string", "number", "boolean"] },
-        "bindFrom": { "enum": ["story-model", "production-charter", "runtime-capabilities", "designer-decision"] },
+        "valueType": { "enum": ["actor-ref", "player-role-ref", "prop-ref", "prop-ref-array", "location-ref", "location-ref-array", "landmark-ref", "fact-ref", "fact-ref-array", "beat-ref", "capability-ref", "route-ref", "route-ref-array", "route-graph-ref", "route-network-ref", "route-decision-ref-array", "state-axis-ref", "anchor-ref", "solution-ref", "solution-path-ref-array", "object-role-ref", "object-role-ref-array", "vehicle-ref", "reward-ref", "reward-function-ref-array", "persistent-state-ref-array", "transaction-ref", "secret-ref", "region-ref", "lesson-ref", "lesson-ref-array", "cue-ref", "cue-ref-array", "knowledge-ref", "knowledge-ref-array", "verb-ref", "verb-ref-array", "affordance-ref", "causal-rule-ref", "checkpoint-ref", "choice-ref-array", "composition-rule-ref", "economy-rule-ref", "goal-ref", "interaction-ref", "interaction-window-ref", "reaction-plan-ref", "performance-sequence-ref", "world-state-transition-ref", "world-transaction-ref", "world-state-delta-ref", "npc-state-ref", "map-state-variant-ref", "state-delta-ref-array", "target-set-ref", "feedback-ref", "challenge-cell-ref-array", "string", "number", "boolean"] },
+        "bindFrom": { "enum": ["story-model", "production-charter", "runtime-capabilities", "product-profile", "gameplay-plan", "performance-plan", "stage-plan", "designer-decision"] },
         "sourcePath": { "type": "string", "minLength": 1 },
-        "required": { "type": "boolean" }
+        "required": { "type": "boolean" },
+        "constraints": { "type": "array", "items": { "type": "string", "minLength": 8 }, "minItems": 1, "uniqueItems": true }
       }
     },
     "emitMapping": {
@@ -311,7 +338,7 @@
       "properties": {
         "assertionId": { "type": "string", "pattern": "^assertion\\." },
         "evidencePath": { "type": "string", "minLength": 1 },
-        "operator": { "enum": ["equals", "not-equals", "contains", "not-contains", "greater-or-equal", "less-or-equal", "exists", "unique", "reachable"] },
+        "operator": { "enum": ["equals", "not-equals", "contains", "not-contains", "greater-or-equal", "less-than", "less-or-equal", "exists", "unique", "reachable"] },
         "expected": {},
         "hardGate": { "type": "boolean" }
       }
@@ -332,17 +359,51 @@
     },
     {
       "if": { "properties": { "status": { "const": "released" } }, "required": ["status"] },
-      "then": { "properties": { "autoSelectable": { "const": true } } }
+      "then": {
+        "properties": {
+          "autoSelectable": { "const": true },
+          "quarantineReason": { "type": "null" },
+          "quarantineIssueRefs": { "type": "array", "maxItems": 0 },
+          "quarantineEvidenceDisposition": { "type": "null" },
+          "promotionRequirements": { "type": "null" },
+          "hooks": { "type": "object", "properties": { "emit": { "type": "object", "properties": { "mappings": { "type": "array", "contains": { "type": "object", "properties": { "owner": { "const": "compile" } }, "required": ["owner"] }, "minContains": 1 } } } } },
+          "provenance": { "type": "object", "properties": { "counterEvidenceBounds": { "type": "array", "minItems": 1 } } },
+          "tests": {
+            "type": "array",
+            "allOf": [
+              { "contains": { "type": "object", "properties": { "kind": { "const": "selection" } }, "required": ["kind"] }, "minContains": 1 },
+              { "contains": { "type": "object", "properties": { "kind": { "const": "runtime" } }, "required": ["kind"] }, "minContains": 1 },
+              { "contains": { "type": "object", "properties": { "kind": { "const": "route" } }, "required": ["kind"] }, "minContains": 1 },
+              { "contains": { "type": "object", "properties": { "kind": { "const": "originality" } }, "required": ["kind"] }, "minContains": 1 }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "status": { "enum": ["candidate", "reviewed", "deprecated"] } }, "required": ["status"] },
+      "then": { "properties": { "autoSelectable": { "const": false }, "quarantineReason": { "type": "string", "minLength": 20 } } }
+    },
+    {
+      "if": { "properties": { "status": { "const": "reviewed" } }, "required": ["status"] },
+      "then": {
+        "properties": {
+          "quarantineIssueRefs": { "type": "array", "minItems": 1 },
+          "quarantineEvidenceDisposition": { "type": "string" },
+          "promotionRequirements": { "type": "string", "minLength": 20 }
+        }
+      }
     },
     {
       "if": { "properties": { "supportClass": { "enum": ["cross-title", "cross-pack-core"] } }, "required": ["supportClass"] },
       "then": {
         "properties": {
           "provenance": {
+            "type": "object",
             "properties": {
-              "observationRefs": { "minItems": 2 },
-              "supportingWorkRefs": { "minItems": 2 },
-              "counterEvidenceRefs": { "minItems": 1 }
+              "observationRefs": { "type": "array", "minItems": 2 },
+              "supportingWorkRefs": { "type": "array", "minItems": 2 },
+              "counterEvidenceRefs": { "type": "array", "minItems": 1 }
             }
           }
         }

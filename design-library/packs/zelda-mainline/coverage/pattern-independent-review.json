@@ -1,0 +1,397 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewId": "review.zelda-mainline.patterns-independent-20260717",
+  "reviewedArtifact": "design-library/packs/zelda-mainline/patterns/released-patterns.json",
+  "reviewedAt": "2026-07-17",
+  "reviewer": "role.reviewer.independent-originality-and-release",
+  "decision": "release-blocked",
+  "verdictDefinitions": {
+    "pass": "The record is safe in its current status and no criterion-level correction is required before that status is retained.",
+    "conditional": "The abstract principle is usable, but evidence, discrimination, callable detail, runtime, or originality proof must be corrected before release or auto-selection.",
+    "fail": "The current evidence or implementation contract does not substantiate the claimed released pattern, or clone risk requires quarantine."
+  },
+  "machineChecks": {
+    "patternCount": 36,
+    "releasedCount": 34,
+    "releasedAutoSelectableCount": 34,
+    "releasedWithAtLeastTwoSupportingWorkRefs": 34,
+    "releasedWithAtLeastOneCounterEvidenceRef": 34,
+    "disabledReviewedCount": 2,
+    "explicitSingleTitleResearchOnlyCount": 1,
+    "patternsWithFiveHooks": 36,
+    "patternsWithFourDepartmentContracts": 36,
+    "patternsWithCompleteDevelopmentArc": 36,
+    "effectPrimitiveCount": 106,
+    "genericEffectPostconditionCount": 106,
+    "uniqueNormalizedScoreShapes": 1,
+    "uniqueNormalizedInstantiationShapes": 1,
+    "compileEmitMappingCount": 0,
+    "nintendoSurfaceTermsOutsideFlavorMetadataProvenanceAndGovernance": 0,
+    "interpretation": "Structural counts pass, but counts alone do not prove causal support, callable specificity, independent originality, or safe pattern discrimination."
+  },
+  "globalIssues": [
+    {
+      "issueId": "G001-callable-hooks-are-template-shaped",
+      "severity": "release-blocker",
+      "finding": "All 36 records use one normalized score shape and one normalized actor/location/fact/optional-prop instantiation shape. Every one of the 106 effect postconditions merely says that a typed transaction changes approved state; none declares the pattern-specific state invariant, failure state, or measurable consequence.",
+      "requiredAction": "Give every pattern discriminating score criteria, type-appropriate parameters, concrete pre/postconditions, and emitted artifacts that can be evaluated without reading the prose intent."
+    },
+    {
+      "issueId": "G002-department-development-and-recovery-contracts-are-boilerplate",
+      "severity": "release-blocker",
+      "finding": "The performance reveal constraints, stage invariants, evaluation routes, fallbacks, accessibility list, recovery rules, transformation axes, and five-step development wording are repeated across all 36 patterns. They do not specify the characteristic cadence or failure/recovery contract of schedules, vehicles, bosses, multiplayer, map annotation, or world resets.",
+      "requiredAction": "Replace shared prose with pattern-specific gameplay, performance, stage, evaluation, development, recovery, and accessibility requirements."
+    },
+    {
+      "issueId": "G003-tests-do-not-close-runtime-or-originality",
+      "severity": "release-blocker",
+      "finding": "Each record has one selection test against one of four generic fixtures. There are no pattern-specific runtime, route, composition, experience, or blind-attribution test outcomes, even where the record changes topology, resets time, or coordinates players.",
+      "requiredAction": "Add positive, negative, abstention, route/recovery, composition, and blind-attribution fixtures appropriate to each pattern."
+    },
+    {
+      "issueId": "G004-blind-attribution-is-required-but-not-recorded",
+      "severity": "release-blocker",
+      "finding": "Every record requires independent blind attribution, but the artifact contains only the requirement and generic fingerprint IDs. It records no reviewer input, transformed output, attribution result, or veto closure.",
+      "requiredAction": "Attach independent attribution results for representative transformed applications and add combination-level fingerprint checks."
+    },
+    {
+      "issueId": "G005-detector-collisions-hide-duplicate-patterns",
+      "severity": "release-blocker",
+      "finding": "Several conceptually adjacent patterns use identical or near-identical story signals, the same two-match threshold, the same normalized score weights, and no mutual-exclusion rule. Auto-selection can return several labels for the same design move.",
+      "requiredAction": "Define discriminators, merge or parent-child relations, and selection precedence before these records remain auto-selectable."
+    },
+    {
+      "issueId": "G006-counterevidence-is-often-an-unexplained-unrelated-observation",
+      "severity": "release-blocker",
+      "finding": "The machine rule that a counterEvidenceRefs array is non-empty passes, but many cited observations neither contradict nor bound the pattern. Some are closer to supporting examples. No record explains the falsified assumption or boundary learned from its counterevidence.",
+      "requiredAction": "For every counterexample, record the assumption it challenges, the boundary it establishes, and the resulting contraindication or abstention rule."
+    },
+    {
+      "issueId": "G007-disabled-research-records-and-runtime-capabilities-are-inconsistent",
+      "severity": "release-blocker",
+      "finding": "Two records are disabled, but only asymmetric-screen-information is typed single-title-research-only. Cooperative-role-interdependence remains cross-title without a machine-readable quarantine reason. The frozen runtime taxonomy has no multiplayer synchronization, ownership, disconnect, multi-camera, or private-view capability.",
+      "requiredAction": "Classify both disabled records explicitly, add a quarantine reason, and add the missing runtime capability contracts before either can be selected."
+    }
+  ],
+  "patternReviews": [
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The principle is source-independent, and at least two cited works plausibly support changed meaning on revisit.", "Its detector is effectively duplicated by landmark-promises-future-use and reward-expands-future-possibility, while its effects never bind a capability to a specific unresolved affordance.", "The open-route Breath of the Wild citation can be a useful boundary, but that boundary is not encoded in scoring or abstention."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.knowledge-gated-revisit",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The cited Link's Awakening, Majora's Mask, and Oracle of Ages observations describe acquired capability, reset partition, or cross-era causality rather than a route that was physically available but blocked only by player knowledge.", "The Zelda II citation is closer to support for capability-gated revisit than counterevidence.", "The record needs two direct knowledge-only cases and a detector that rejects new-item, new-state, and new-route gates."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The seasons, eras, and paired-world observations provide credible cross-work support for one legible state axis changing routes.", "The wind citation is another directional state-axis example unless the record explains why its continuous directionality is a counter-boundary.", "The pattern needs precedence against parallel-state-comparison and a rollback matrix for routes that close as well as open."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["Two paired-state works clearly support comparison through stable anchors; the one-way province restoration is weaker but potentially useful contrast.", "The cooperative height observation is unrelated rather than counterevidence.", "Instantiation does not require anchor identity, comparable coordinates, or a visible delta, so it cannot distinguish comparison from a generic map-layer toggle."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.finite-schedule-loop",
+      "verdict": "fail",
+      "checks": {"abstraction":"conditional","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"fail","developmentRecoveryRuntime":"fail","originality":"fail"},
+      "issues": ["Only the Majora's Mask observation supports a finite resettable schedule; The Legend of Zelda tool-state and Breath of the Wild material-rule observations do not.", "The record is auto-selectable despite substantively single-work evidence and stable attribution to one source structure inside this corpus.", "It lacks typed reset scope, persistence whitelist, deadline behavior, missed-window recovery, and schedule simulation tests."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["Breath of the Wild and Tears of the Kingdom support visible landmarks that seed later routes; the Ocarina era citation supports revisit more than early promise.", "The Four Swords regroup citation does not establish the failure boundary.", "The detector duplicates capability-recontextualizes-old-space and reward-expands-future-possibility and lacks a required early-sighting-to-later-use trace."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.loop-shortcut-memory",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The three supporting observations concern a remote world event, province restoration, and revisited landforms; none records an opened shortcut that visibly compresses a previously traversed route.", "The Phantom Hourglass chart citation is a network expansion example, not explained counterevidence.", "A release needs before/after path length, player-authored unlock, and route-simulation assertions."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.hub-spoke-return",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The Wind Waker travel observation is only partial support; Skyward Sword directional combat and A Link Between Worlds rental order do not evidence meaningful hub returns.", "No cited observation traces a spoke departure, changed hub state, and next departure choice.", "The emitted NPC, dialogue, and route effects do not bind to a required return cadence or service delta."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.dungeon-macro-state-machine",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"fail","originality":"conditional"},
+      "issues": ["The cited era shift, global reset, and regional revisit observations are not bounded-challenge macro-state traces.", "The record never requires one state variable to alter multiple zones, nor does it test reversible route closure and softlock freedom inside the bounded graph.", "The current released label therefore overstates both provenance and runtime readiness."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.safe-rule-experiment",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["Only the A Link to the Past observation explicitly records a safe confirmation step; the Ocarina combat and Echo learning observations do not establish low failure cost or voluntary repetition.", "The Zelda II citation describes a local-to-regional capability exam and is not a counterexample to safe teaching.", "Selection and tests do not quantify risk, reset distance, or diagnostic feedback."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"fail","originality":"conditional"},
+      "issues": ["The cited onboarding, directional combat, and vocabulary observations do not each trace teach, practice, variation, combination or reversal, and exam.", "The pattern's own development object is the same boilerplate used by every other pattern, so it does not encode the sequence it claims to provide.", "It collides with boss-rule-synthesis and final-exam-recombination without a parent-child relation."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.environmental-chain-reaction",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"fail","originality":"conditional"},
+      "issues": ["The Breath of the Wild observation supports a material rule, but the Tears construction and Echo vocabulary observations do not demonstrate a propagating chain through nearby objects.", "The effect list has no ordered propagation, cycle cap, deterministic resolution, or rollback contract.", "The opening-cave counter citation is unrelated rather than a boundary on systemic propagation."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.multi-solution-state-graph",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The three systemic works plausibly support outcome-first solutions, and the single authored time verb can serve as a useful boundary if explained.", "The record does not instantiate multiple independent action paths or validate that they converge on the same invariant without hidden canonical ordering.", "Its detector is identical in substance to environmental-chain-reaction and systemic-verb-toolkit."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.object-role-composition",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["Construction, learned object roles, and scale-dependent affordances provide plausible cross-work support.", "The formation citation may bound object-only composition, but the record does not state that boundary.", "The primitive grant/consume/move/set list lacks a typed role algebra, legal-combination table, conflict resolution, and invalid-placement recovery."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.copy-redeploy-affordance",
+      "verdict": "fail",
+      "checks": {"abstraction":"conditional","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"fail","developmentRecoveryRuntime":"conditional","originality":"fail"},
+      "issues": ["Only Echoes of Wisdom directly supports observing, capturing, and redeploying a bounded affordance; Tears construction is composition, and Link's Awakening sword recovery is unrelated.", "The current spawn/despawn/catalog-like implementation remains stably attributable to the single source mechanic inside this corpus.", "Reclassify as single-title research-only until a distinct work supports the full capture-redeploy chain and blind attribution becomes unstable."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.perspective-shift-reframes-space",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The A Link Between Worlds wall-plane observation supports the principle, but the cited Minish fusion event and Twilight province restoration do not describe scale, plane, layer, or embodied-viewpoint shifts.", "The record could become cross-title by citing the existing shrink and alternate-body observations, but its current provenance does not meet the release claim.", "Camera, collision footprint, anchor correspondence, and return-orientation requirements are absent."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The Wind Waker and Spirit Tracks observations support constrained macro travel with player decisions; the Phantom Hourglass stylus citation is not vehicle-specific.", "The open-climb counterexample is a credible contrast but needs to become a hard abstention when free-route authorship is the core promise.", "Runtime has no vehicle state, route-switch, stop, derailment or disembark contract, and no route recovery test."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.player-authored-map-memory",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"fail","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["Breath of the Wild's observation includes a pin, but the cited Phantom Hourglass observation is about stylus movement and combat and the Tears observation is about vertical routes; two direct annotation traces are not present.", "The frozen runtime taxonomy and this record lack note, marker, edit, deletion, capacity, persistence, and accessibility capabilities.", "The set-fact effect incorrectly risks treating a player's hypothesis as authoritative world truth."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The cited acquisition, rental-order, and shrine-detour cases plausibly support rewards that change later choices.", "The costume-material citation appears to support role-changing rewards rather than counter the principle and needs an explicit boundary rationale.", "The detector duplicates capability-recontextualizes-old-space and landmark-promises-future-use and does not require a later-choice delta."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The Legend of Zelda and Link's Awakening observations support persistent tool-reading of old scenery; the Minish remote event is weaker but can support visible consequence.", "The Zelda II learned-capability revisit is not clearly counterevidence.", "The pattern needs salience bounds that keep a secret optional while ensuring at least one learnable cue channel and a non-walkthrough hint path."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.resource-expedition-return",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"fail","originality":"conditional"},
+      "issues": ["The opening weapon, landmark climb, and directional-combat observations do not trace a voluntary expedition-depth decision, supply pressure, return, preparation, and changed next attempt.", "The Majora loop citation is not explained as a counter-boundary.", "Inventory primitives alone do not define retreat availability, resource forecast, loss, banking, resupply, or checkpoint placement."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.boss-rule-synthesis",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"fail","originality":"conditional"},
+      "issues": ["The cited target lock, alternate-form investigation, and directional attack observations do not record boss encounters or synthesis of previously practiced rules.", "Runtime taxonomy has no encounter phase, telegraph, damage-window, reset, or anti-one-shot capability, and the pattern has no boss-route test.", "Its detector collides with local-rule-development-arc and final-exam-recombination."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.threat-as-navigation-teacher",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"fail","originality":"conditional"},
+      "issues": ["The cited learned-capability revisit, era shift, and landmark route observations do not show a threat teaching safe zones or route shape.", "The chart expansion counter citation is unrelated without a stated boundary.", "No threat-state, pursuit, aggro, safe-zone, disengage, or failure-recovery capability is declared."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.npc-schedule-as-information",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["Only the Majora work plausibly contains the claimed schedule system, and the cited observation is a reset contract rather than an actor routine; the other two citations concern item and landform revisits.", "The Four Swords route split is not a counterexample to schedule-readable NPCs.", "The hooks omit actor itinerary, deviation, observation window, player knowledge, and missed-window recovery bindings."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["Twilight restoration includes inhabitant return, but the Minish remote event and Breath material-rule citations do not directly record an NPC reading the same world fact.", "The original Zelda tool-state citation is not explained as a world-without-NPC-response boundary.", "Emission must bind NPC state and dialogue to the identical authoritative fact ID used by map state, then test both before and after."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.companion-contextual-verb",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The Twilight alternate-form observation partially includes a companion action, but the Spirit Tracks network and Skyward directional-combat citations do not evidence a companion verb or relationship development.", "The Breath material-rule citation is unrelated counterevidence.", "The record does not bind availability, consent, refusal, tactic change, relationship state, or fallback when the companion is absent."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["Twilight restoration directly supports visible world change, but the paired-coordinate and item-revisit observations do not establish synchronized reveal, actor tactics, and interaction return.", "The cooperative communication citation is unrelated counterevidence.", "The record needs one atomic reveal transaction that proves map, navigation, NPC, cue, and post-reveal control window agree on the same fact."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.threshold-performance-cue",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["Melody performance and expressive reactions show staging, but the cited observations do not establish a spatial threshold followed by readable return of agency; the material-rule citation is unrelated.", "The single-frame room-rule citation can be a useful counter-style, but no boundary rationale is encoded.", "The cue contract lacks maximum interruption, skip equivalence, next-action visibility, and camera-safe return conditions specific to thresholds."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.agency-performance-breathing",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The cited onboarding, alternate-body, and directional-combat observations do not trace an authored-performance and purposeful-interaction cadence.", "The open-landmark citation does not by itself define the counter-boundary between free agency and staged rhythm.", "The record needs beat durations, player-purpose assertions, input lock bounds, skip/replay parity, and a test that each performance is prepared or paid off by adjacent agency."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The A Link to the Past rescue observation is strong support, but the target-lock and open-landmark citations do not themselves establish an opening role-defining action before exposition.", "The Zelda II contact-expansion citation is not explained as counterevidence.", "The pattern needs a second direct onboarding trace and tests for role comprehension, local objective comprehension, safe retry, and delayed optional context."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.reversible-reset-knowledge-retention",
+      "verdict": "fail",
+      "checks": {"abstraction":"conditional","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"fail","developmentRecoveryRuntime":"fail","originality":"fail"},
+      "issues": ["Only the Majora observation supports deliberate reset with retained knowledge; chart expansion and landmark climbing do not.", "Composed with finite-schedule-loop and npc-schedule-as-information, this record can reconstruct a highly attributable source fingerprint while all three rely on generic per-pattern clone checks.", "The record lacks a reset manifest separating authoritative facts, learned information, inventory, actors, schedules, checkpoints, and migration behavior."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.final-exam-recombination",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"fail","originality":"conditional"},
+      "issues": ["The cited rescue onboarding and individual combat verbs do not document a final recombination of previously learned mechanics, spatial memories, relationships, and facts.", "The vertical-route citation is unrelated counterevidence.", "No hook binds a prerequisite lesson ledger to the exam, prohibits new hidden rules, or validates recovery without replaying unrelated finale content."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.systemic-verb-toolkit",
+      "verdict": "fail",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"fail","selectionStatus":"fail","hooksAndContracts":"conditional","developmentRecoveryRuntime":"fail","originality":"conditional"},
+      "issues": ["Target lock, landmark climbing, and Echo vocabulary each show useful verbs but do not jointly evidence a small orthogonal toolkit with several problem classes and meaningful combinations.", "The cooperative height citation is not an explained counterexample.", "The record lacks a verb-role matrix, overlap metric, combination table, dominance check, and content-coverage test and collides with multi-solution-state-graph and object-role-composition."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"conditional","developmentRecoveryRuntime":"conditional","originality":"conditional"},
+      "issues": ["The Skyward, Breath, and Tears observations plausibly support connecting space that teaches and examines movement or state rules.", "The constrained rail network is a useful contrast if the record states density and local agency thresholds.", "The current map-layer and checkpoint effects do not measure challenge spacing, landmark sightlines, optional density, route redundancy, or overworld-to-bounded-challenge distinction."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G005-detector-collisions-hide-duplicate-patterns","G006-counterevidence-is-often-an-unexplained-unrelated-observation"]
+    },
+    {
+      "patternId": "pattern.cooperative-role-interdependence",
+      "verdict": "conditional",
+      "checks": {"abstraction":"pass","evidenceAndCounterevidence":"conditional","selectionStatus":"conditional","hooksAndContracts":"fail","developmentRecoveryRuntime":"fail","originality":"conditional"},
+      "issues": ["Three multiplayer works support interdependent roles and the single-player citation is a plausible contrast, so the abstract evidence is stronger than many released records.", "The record is safely auto-disabled but is typed cross-title rather than research-only and gives no machine-readable quarantine reason.", "Runtime omits player ownership, synchronization, join/leave, disconnect recovery, latency, grief prevention, accessibility for unequal skill, and multiplayer route simulation."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G004-blind-attribution-is-required-but-not-recorded","G007-disabled-research-records-and-runtime-capabilities-are-inconsistent"]
+    },
+    {
+      "patternId": "pattern.asymmetric-screen-information",
+      "verdict": "pass",
+      "checks": {"abstraction":"conditional","evidenceAndCounterevidence":"pass","selectionStatus":"pass","hooksAndContracts":"fail","developmentRecoveryRuntime":"fail","originality":"pass"},
+      "issues": ["The record correctly declares single-title-research-only, status reviewed, and autoSelectable false, so it is safe in its current quarantine.", "It must not be promoted: the sole supporting observation does not directly describe the public-private screen transition, the Four Swords citation is not a clear counterexample, and stable source attribution remains likely.", "A future release needs a second distinct work plus multi-view ownership, privacy, communication, disconnect, passive-player prevention, and accessibility capabilities and tests."],
+      "issueRefs": ["G001-callable-hooks-are-template-shaped","G002-department-development-and-recovery-contracts-are-boilerplate","G003-tests-do-not-close-runtime-or-originality","G007-disabled-research-records-and-runtime-capabilities-are-inconsistent"]
+    }
+  ],
+  "duplicateClusters": [
+    {
+      "clusterId": "duplicate.revisit-and-future-use",
+      "members": ["pattern.capability-recontextualizes-old-space","pattern.landmark-promises-future-use","pattern.reward-expands-future-possibility","pattern.optional-secret-readability"],
+      "finding": "Capability, landmark promise, optional secret, and future-expanding reward use overlapping signals and effects. The selector lacks a discriminator for gate type, temporal position, optionality, and whether the reward or the place is primary.",
+      "requiredResolution": "Define a parent family with exclusive subtypes or merge records; add precedence and negative fixtures."
+    },
+    {
+      "clusterId": "duplicate.state-comparison-and-reset",
+      "members": ["pattern.state-axis-rewrites-routes","pattern.parallel-state-comparison","pattern.finite-schedule-loop","pattern.reversible-reset-knowledge-retention"],
+      "finding": "All manipulate or compare state variants, but the records do not formally distinguish reversible axis switching, observation-only comparison, clock-driven reset, and failure recovery.",
+      "requiredResolution": "Require explicit state cardinality, transition trigger, reset scope, persistence partition, and comparison anchor fields."
+    },
+    {
+      "clusterId": "duplicate.systemic-solutions-and-objects",
+      "members": ["pattern.environmental-chain-reaction","pattern.multi-solution-state-graph","pattern.object-role-composition","pattern.copy-redeploy-affordance","pattern.systemic-verb-toolkit"],
+      "finding": "The same transformable-environment and multi-causal signals select five patterns with nearly identical score and instantiation hooks.",
+      "requiredResolution": "Separate propagation, alternative-path graph, role algebra, acquisition method, and verb-portfolio scope; prevent automatic co-selection without a composition budget."
+    },
+    {
+      "clusterId": "duplicate.rule-arc-and-exam",
+      "members": ["pattern.safe-rule-experiment","pattern.local-rule-development-arc","pattern.boss-rule-synthesis","pattern.final-exam-recombination"],
+      "finding": "Teaching pocket, complete development arc, boss exam, and finale exam share generic rule signals and an identical development template.",
+      "requiredResolution": "Model them as different scales in one pedagogical hierarchy and require a lesson ledger linking each exam only to practiced rules."
+    },
+    {
+      "clusterId": "duplicate.performance-cue-and-cadence",
+      "members": ["pattern.embodied-world-change-reveal","pattern.threshold-performance-cue","pattern.agency-performance-breathing","pattern.action-first-onboarding"],
+      "finding": "All emit the same cue/dialogue/fact primitives but differ mainly in prose labels; beat position, input-lock duration, reveal transaction, and adjacent player purpose are not typed.",
+      "requiredResolution": "Add beat-position and agency-window contracts, then define composition rather than independent automatic selection."
+    }
+  ],
+  "cloneRiskBlockers": [
+    {
+      "blockerId": "clone.single-source-finite-schedule",
+      "patternRefs": ["pattern.finite-schedule-loop","pattern.reversible-reset-knowledge-retention","pattern.npc-schedule-as-information"],
+      "finding": "The evidence collapses to one work, and selecting the three together recreates a finite schedule, reset whitelist, retained knowledge, and actor timetable fingerprint.",
+      "requiredAction": "Quarantine the single-source records, add distinct cross-pack support, and run combination-level blind attribution with transformed timing, topology, narrative function, and feedback."
+    },
+    {
+      "blockerId": "clone.single-source-copy-redeploy",
+      "patternRefs": ["pattern.copy-redeploy-affordance"],
+      "finding": "The full learn-or-capture then spawn-or-redeploy chain is supported only by Echoes of Wisdom in the cited evidence and remains stably attributable.",
+      "requiredAction": "Reclassify as single-title research-only or broaden evidence beyond a single recognizable acquisition and deployment loop."
+    },
+    {
+      "blockerId": "clone.dual-state-composition",
+      "patternRefs": ["pattern.capability-recontextualizes-old-space","pattern.state-axis-rewrites-routes","pattern.parallel-state-comparison"],
+      "finding": "Co-selection can recreate a recognizable paired-world coordinate puzzle if topology, object roles, and transition cadence remain aligned, while current originality checks only inspect each pattern separately.",
+      "requiredAction": "Add combination fingerprints and require independent changes to topology graph, object-role graph, transition action, feedback signature, and narrative purpose."
+    },
+    {
+      "blockerId": "clone.asymmetric-multiscreen-quarantined",
+      "patternRefs": ["pattern.asymmetric-screen-information","pattern.cooperative-role-interdependence"],
+      "finding": "Private and shared displays plus four-role cooperation remain attributable to one narrow hardware-era expression, but both records are currently auto-disabled.",
+      "requiredAction": "Keep disabled until distinct evidence and a non-source-specific modern runtime expression pass blind attribution."
+    }
+  ],
+  "releaseBlockers": [
+    {"blockerId":"RB-P4-001","finding":"Twenty-four of the 34 released records fail substantive two-work causal support or counterevidence review despite passing array-count checks.","closure":"Repair provenance with direct atomic observations and explicit counter-boundary rationale, or demote the record."},
+    {"blockerId":"RB-P4-002","finding":"The 36 records have template-shaped hooks, contracts, development arcs, recovery rules, and shallow tests rather than pattern-specific callable behavior.","closure":"Specialize contracts and add positive, negative, abstention, route, recovery, runtime, composition, experience, and originality tests."},
+    {"blockerId":"RB-P4-003","finding":"Five duplicate clusters have no selector precedence, mutual exclusion, hierarchy, or composition budget.","closure":"Merge, subtype, or formally discriminate each cluster before auto-selection."},
+    {"blockerId":"RB-P4-004","finding":"No blind-attribution outcome is recorded and combination-level clone fingerprints are absent.","closure":"Run independent transformed-output reviews and record veto closure."},
+    {"blockerId":"RB-P4-005","finding":"Only one of the two disabled records is explicitly research-only, and multiplayer or multiscreen runtime capabilities do not exist in the frozen taxonomy.","closure":"Correct classification and add typed multiplayer capabilities before promotion."}
+  ],
+  "verdictCounts": {"pass":1,"conditional":11,"fail":24},
+  "releaseRecommendation": "Do not publish or auto-select the 34 released records as a P5 library release yet. Retain the abstract principles as candidates, correct provenance and duplicates first, then specialize callable contracts and close independent originality tests. Keep asymmetric-screen-information quarantined; keep cooperative-role-interdependence disabled until its classification and runtime contract are explicit."
+}

@@ -1,0 +1,121 @@
+{
+  "workId": "work.links-awakening",
+  "author": "Early Corpus Analyst Cedar",
+  "reviewer": "Independent Reviewer Juniper",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player is a castaway investigator whose practical search for escape gradually becomes an emotionally uncertain inquiry into the island's nature.",
+    "dimension.core-loop": "The cadence connects village guidance, compact overworld search, sequential dungeons, new item combinations, and instrument acquisition that advances both route and mystery.",
+    "dimension.verbs": "Sword, shield, lifting, jumping, dashing, swimming, pulling, ranged tools, and musical actions are freely assigned to two action buttons, allowing deliberate combinations.",
+    "dimension.world-state": "Dungeon instruments, opened passages, moved objects, completed trades, learned songs, and NPC events persist, progressively changing routes and the island's social texture.",
+    "dimension.topology": "A screen-grid island packs village, coast, forest, mountains, caves, and dungeons into short loops, while side-view passages provide discrete underground or interior links.",
+    "dimension.gating-revisit": "Strength, jumping, dashing, swimming, hook traversal, songs, and trade-chain knowledge reopen conspicuous obstacles across frequently revisited central routes.",
+    "dimension.puzzle-information": "Environmental patterns, stone messages, owl guidance, character needs, and item reactions distribute clues between rooms and across the island rather than in a quest checklist.",
+    "dimension.dungeon-structure": "Eight principal dungeons use room grids, keys, maps, compasses, a major item, a boss, and an instrument reward, with later layouts demanding more cross-room state reasoning.",
+    "dimension.exploration-reward": "Detours yield shells, heart pieces, rupees, tools, trade objects, shortcuts, and character moments, often making compact familiar spaces worth rechecking.",
+    "dimension.growth-economy": "Heart capacity, sword improvement, item capacity, rupees, ammunition, recovery resources, and a serial barter chain create overlapping growth and exchange tracks.",
+    "dimension.combat-boss": "Top-down encounters combine enemy-facing rules with equipped tools and movement abilities; bosses reinforce observation and item use inside compact arenas.",
+    "dimension.npc-quest": "Island residents have memorable needs and reactions, especially a barter chain in which each exchanged object changes who can help and what route information becomes available.",
+    "dimension.narrative-performance": "Dreamlike encounters, recurring owl guidance, songs, dungeon completions, and the accumulating implications of awakening pace the mystery through player-earned revelations.",
+    "dimension.camera-blocking": "Fixed top-down screens compose readable action tableaux; transitions to side-view passages, interiors, and close character moments vary rhythm and spatial interpretation.",
+    "dimension.teaching-feedback": "The lost sword creates an immediate recovery goal, early characters point toward it, and new items are followed by nearby obstacles that demonstrate their action clearly.",
+    "dimension.ui-input": "The original Game Boy maps any two carried tools to A and B, making the subscreen an active composition interface while hearts and counters remain continuously visible.",
+    "dimension.recovery-accessibility": "Persistent saves protect major progress, fairies and healing locations support preparation, and dungeon return routes limit total loss while still asking the player to repeat local traversal.",
+    "dimension.perspective-implementation": "Top-down exploration is punctuated by side-view platform passages, so the same equipped verbs must remain coherent across cardinal room movement and gravity-based traversal.",
+    "dimension.hardware-multiplayer": "The original monochrome Game Boy release is single-player; a small screen, directional pad, and two face buttons make item assignment and compact room composition central.",
+    "dimension.production-runtime": "Its model requires a dense screen graph, two-button equipment composition, mixed movement modes, persistent trades and songs, sequential instrument gates, and narrative state tied to exploration."
+  },
+  "observationThemes": [
+    {
+      "key": "recover-sword-establishes-castaway-loop",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.growth-economy"],
+      "context": "After waking in a village house without equipment, Link is directed toward the coast where his sword was lost in the shipwreck.",
+      "preconditions": ["A new game has begun", "The sword is absent from inventory"],
+      "playerInput": ["Speak with the household characters", "Travel from village to coast", "Reach and collect the sword"],
+      "before": ["The player can move and use the shield but lacks normal offense", "The island and route to escape are unknown"],
+      "action": ["Follow local guidance and recover the sword from the shoreline"],
+      "after": ["The sword becomes assignable to an action button", "Grass, ordinary enemies, and new paths become interactable through cutting and combat"],
+      "feedback": ["Character guidance and the shoreline landmark maintain the objective", "Item presentation and immediate sword animation confirm the restored verb"],
+      "consequences": ["The player begins exploring as an equipped castaway", "A personal recovery task grows naturally into the wider island mystery"],
+      "factualDescription": "The opening sends an unequipped Link from a village home to the coast to recover his sword, after which cutting and melee combat become available through button assignment.",
+      "interpretation": "Beginning with a missing familiar capability turns onboarding into a role-specific need: social direction, navigation, and equipment use all answer the castaway premise.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "new-item-combination-reframes-island",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.exploration-reward"],
+      "context": "Compact island routes repeatedly expose pits, heavy objects, deep water, long gaps, and other recognizable obstacles before all matching tools are owned.",
+      "preconditions": ["The player remembers a blocked location", "One or two compatible persistent items have been acquired"],
+      "playerInput": ["Assign the relevant items to A and B", "Return to the obstacle", "Use the required action or two-item sequence"],
+      "before": ["A screen exit, ledge, cave, or collectible is unreachable", "The compact route graph directs traffic past the obstacle repeatedly"],
+      "action": ["Apply the newly available movement or object interaction at the remembered site"],
+      "after": ["The obstacle is crossed or changed", "A reward, shortcut, or new island branch becomes reachable"],
+      "feedback": ["Jump, dash, lift, swim, or tool reaction visibly resolves the terrain rule", "The next screen or pickup confirms the route change"],
+      "consequences": ["The overworld is progressively re-read through equipment combinations", "Short revisits convert memory into material or narrative payoff"],
+      "factualDescription": "Persistent items enable jumping, dashing, lifting, swimming, and other obstacle-specific actions; equipping and combining them opens routes and rewards seen earlier on the compact island.",
+      "interpretation": "Frequent circulation past clear obstacles makes revisit intent memorable, while two-button composition lets capability growth create combinatorial rather than merely linear access.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "dungeon-instrument-advances-mystery",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.combat-boss", "dimension.teaching-feedback"],
+      "context": "A dungeon's room dependencies culminate in a boss and an instrument whose acquisition produces guidance toward the next stage of awakening.",
+      "preconditions": ["The dungeon tool and necessary keys have been found", "The boss route is reachable"],
+      "playerInput": ["Apply learned room and combat rules", "Defeat the boss", "Collect the instrument"],
+      "before": ["The local dungeon remains incomplete", "The larger escape condition is still missing one component"],
+      "action": ["Complete the dungeon dependency chain and take its instrument"],
+      "after": ["The instrument is recorded persistently", "A new clue or destination cue points back into the overworld"],
+      "feedback": ["Boss defeat, reward presentation, music, and text distinguish the objective from ordinary treasure", "The dungeon completion state is clear"],
+      "consequences": ["The next world-search cycle begins", "Mechanical success advances the story's central question about awakening"],
+      "factualDescription": "Each principal dungeon ends with a boss and an instrument reward; collecting it records campaign progress and is followed by guidance toward a subsequent island objective.",
+      "interpretation": "Making every closed challenge end in a musical story component lets repeated dungeon mastery accumulate dramatic meaning instead of functioning as an unrelated checklist.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "barter-chain-turns-npcs-into-route",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.ui-input"],
+      "context": "Residents in different island regions desire particular objects, and the player can carry the current trade object until finding its recipient.",
+      "preconditions": ["The current barter object has been obtained", "Its intended recipient has been found through exploration or remembered conversation"],
+      "playerInput": ["Approach and speak with the recipient", "Offer the held object", "Accept the next object in the sequence"],
+      "before": ["The NPC's need is unresolved", "The player's trade slot contains the preceding object"],
+      "action": ["Complete the object-for-object exchange in the character scene"],
+      "after": ["The NPC responds to the resolved need", "The next trade object replaces the previous one in persistent state"],
+      "feedback": ["A focused fixed-screen interaction, text, and item presentation show both social and inventory change", "The subscreen records the new object"],
+      "consequences": ["Another resident interaction becomes possible", "Later exchanges yield information or access relevant to campaign completion"],
+      "factualDescription": "A serial barter chain connects residents across the island: giving the current object to its matching character causes a response and produces the next persistent trade object.",
+      "interpretation": "A single evolving inventory token can turn a cast of small NPC scenes into a remembered social route, making character attention part of world progression.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "topdown-to-sideview-control-continuity",
+      "dimensions": ["dimension.recovery-accessibility", "dimension.perspective-implementation", "dimension.hardware-multiplayer", "dimension.production-runtime"],
+      "context": "A ladder or passage can move the single-player Game Boy adventure from a fixed top-down screen into a side-view section using the same two equipped item buttons.",
+      "preconditions": ["A mixed-perspective passage is entered", "The required movement or item capability is equipped"],
+      "playerInput": ["Traverse the side-view passage with directional movement and assigned items", "Exit back into the top-down screen graph"],
+      "before": ["Movement is cardinal and room-based", "Gravity is not the main traversal constraint"],
+      "action": ["Cross the transition and navigate under side-view gravity and platforms"],
+      "after": ["The player reaches another top-down location or dungeon room", "Inventory and campaign state remain continuous across modes"],
+      "feedback": ["The camera and movement physics change visibly while button assignments remain stable", "Returning through the exit restores the top-down framing"],
+      "consequences": ["A small-screen route gains spatial contrast without a separate character system", "Failure in the passage remains part of the same saved single-player campaign"],
+      "factualDescription": "The original Game Boy game includes side-view passages connected to its top-down screen graph, retaining the same character inventory and two assignable action buttons across the transition.",
+      "interpretation": "Stable verbs and inventory can preserve player understanding across perspective changes, allowing a compact runtime to vary traversal rhythm without fragmenting progression.",
+      "confidence": "high",
+      "disposition": "single-title"
+    }
+  ],
+  "contributionHypotheses": [
+    "A missing starting capability can make tutorial progression feel like an immediate character need rather than an abstract lesson.",
+    "A serial trade object can encode a social route through a dense world without requiring a separate quest ledger.",
+    "Repeated challenge rewards can carry narrative escalation when each one is also a component of the story's central transformation."
+  ],
+  "uniqueOrNonportable": [
+    "The island, awakening premise, named characters, exact barter objects, instruments, songs, dungeon layouts, dialogue, guest-character imagery, and ending are source-specific expression.",
+    "The precise two-button item combinations and side-view obstacle sequences are evidence rather than templates for direct reuse."
+  ],
+  "openQuestions": [
+    "Later variant research should keep the 1993 monochrome original distinct from the color edition and the structurally revised 2019 remake."
+  ]
+}

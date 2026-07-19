@@ -1,0 +1,431 @@
+{
+  "reportVersion": "1.0.0",
+  "reviewScope": "library-pattern-abstraction",
+  "generatedAt": "2026-07-18",
+  "passed": true,
+  "surfaceScan": {
+    "proprietaryNamesInPatternNames": 0,
+    "sourceRoomMapsStored": 0,
+    "sourcePuzzleScriptsStored": 0,
+    "sourceDialogueOrMusicStored": 0
+  },
+  "validationBoundary": {
+    "p1ThroughP6BlockingGate": "static-abstraction-and-source-isolation",
+    "historicalPatternBlindEvidence": {
+      "status": "diagnostic-nonblocking",
+      "individualApplications": 30,
+      "combinationCases": 11,
+      "releaseSetAligned": false,
+      "stalePatternRefs": [
+        "pattern.multi-solution-state-graph",
+        "pattern.knowledge-gated-revisit"
+      ],
+      "missingPatternRefs": [],
+      "staleCombinationRefs": [
+        "pattern.multi-solution-state-graph",
+        "pattern.knowledge-gated-revisit"
+      ],
+      "recordedVerdict": "pass"
+    },
+    "p8WholeGameBlindAttribution": "required-blocking"
+  },
+  "records": [
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.knowledge-gated-revisit",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 3,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 8,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 3,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 7,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.finite-schedule-loop",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 8,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.loop-shortcut-memory",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.hub-spoke-return",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.dungeon-macro-state-machine",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.safe-rule-experiment",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 7,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 4,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.environmental-chain-reaction",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.multi-solution-state-graph",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 3,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.object-role-composition",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 8,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.copy-redeploy-affordance",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.perspective-shift-reframes-space",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 3,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 8,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.player-authored-map-memory",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 8,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.resource-expedition-return",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.boss-rule-synthesis",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 3,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.threat-as-navigation-teacher",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.npc-schedule-as-information",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 7,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.companion-contextual-verb",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 3,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 7,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.threshold-performance-cue",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.agency-performance-breathing",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 8,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 2,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.reversible-reset-knowledge-retention",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.final-exam-recombination",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.systemic-verb-toolkit",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "status": "released",
+      "autoSelectable": true,
+      "transformationAxisCount": 7,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 3,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.cooperative-role-interdependence",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 3,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    },
+    {
+      "patternId": "pattern.asymmetric-screen-information",
+      "status": "reviewed",
+      "autoSelectable": false,
+      "transformationAxisCount": 6,
+      "structuralDeltaAxisCount": 5,
+      "supportingWorks": 1,
+      "counterEvidence": 1,
+      "libraryReview": "passed",
+      "productionBlindAttribution": "required-per-instance"
+    }
+  ],
+  "note": "Static abstraction and source-isolation gates pass for this Beta. Older pattern-level blind applications are preserved as diagnostics and may not align with the conservative 13-pattern release set. P8 alone owns the blocking blind attribution of the frozen whole game."
+}

@@ -1,0 +1,121 @@
+{
+  "workId": "work.oracle-of-seasons",
+  "author": "Early Corpus Analyst Cedar",
+  "reviewer": "Independent Reviewer Juniper",
+  "dimensionSummaries": {
+    "dimension.player-fantasy": "The player restores a disrupted land by becoming an agile fighter and environmental operator who can deliberately replace the active season around local terrain.",
+    "dimension.core-loop": "The cadence alternates action-heavy field traversal, seasonal route experiments, dungeon tool acquisition, boss completion, and searches for the next essence or world connection.",
+    "dimension.verbs": "Sword, shield, jumping, lifting, swimming, digging, ranged tools, seed effects, animal-companion movement, and season change form a layered top-down action vocabulary.",
+    "dimension.world-state": "The chosen local season changes terrain behavior, while dungeon progress, tools, essences, companion state, rings, opened paths, and linked-game secrets persist.",
+    "dimension.topology": "A screen-based overworld is paired with a distinct subterranean region; portals, seasonal terrain, dungeons, and companion routes connect their compact graphs.",
+    "dimension.gating-revisit": "Season powers, movement tools, companion traversal, keys, and portal knowledge reopen stumps, water, vegetation, cliffs, and passages seen during earlier circulation.",
+    "dimension.puzzle-information": "Seasonal scenery visibly changes water, plants, snow, leaves, and terrain access, letting players compare states and infer which environmental rule creates a route.",
+    "dimension.dungeon-structure": "Eight principal dungeons use keyed room dependencies, a major item, action and traversal tests, a boss, and an essence reward that advances the restoration sequence.",
+    "dimension.exploration-reward": "Optional screens, caves, seed trees, ring discoveries, companion routes, and seasonal detours provide resources, abilities, upgrades, secrets, and shortcuts.",
+    "dimension.growth-economy": "Hearts, rupees, bombs, seeds, rings, item upgrades, and collectable materials support both immediate field decisions and long-term equipment variation.",
+    "dimension.combat-boss": "Top-down combat emphasizes movement and tool execution, with enemy groups, hazards, action-focused dungeon rooms, and bosses testing controlled timing and positioning.",
+    "dimension.npc-quest": "Residents supply clues, trades, services, companion relationships, and password-based secrets; their responses can unlock items or connect the paired Oracle adventures.",
+    "dimension.narrative-performance": "The abduction of the seasonal oracle makes environmental disorder visible, while essence collection, region visits, character scenes, and linked continuation pace the restoration story.",
+    "dimension.camera-blocking": "Fixed top-down screens let a seasonal transformation redraw a complete local tableau; portals and room transitions clearly separate overworld, underground, and dungeon states.",
+    "dimension.teaching-feedback": "A season change immediately alters palette and terrain features around the player, while early stump placement and nearby obstacles make each acquired seasonal power testable.",
+    "dimension.ui-input": "Two action buttons accept items, the subscreen manages a broad tool and ring inventory, and counters communicate health, currency, bombs, and seed supplies.",
+    "dimension.recovery-accessibility": "Save and continue preserve campaign progress, healing and ring effects provide preparation options, and compact screen routes support local retry despite some repeated traversal.",
+    "dimension.perspective-implementation": "The 2D top-down view makes before-and-after seasonal layouts directly comparable, while discrete screen states limit how much altered terrain must be presented at once.",
+    "dimension.hardware-multiplayer": "The original Game Boy Color title is single-player but supports external cross-cartridge continuity through passwords and limited link features rather than simultaneous cooperative play.",
+    "dimension.production-runtime": "Its principles require multi-variant tile screens, legal season-change anchors, persistent progression, portal graphs, item assignment, companion traversal, link-secret flags, and anti-softlock validation."
+  },
+  "observationThemes": [
+    {
+      "key": "season-command-becomes-route-verb",
+      "dimensions": ["dimension.player-fantasy", "dimension.core-loop", "dimension.verbs", "dimension.growth-economy"],
+      "context": "At an eligible stump in the overworld, the player can use the Rod of Seasons after acquiring one or more seasonal powers.",
+      "preconditions": ["The Rod of Seasons is owned", "The relevant seasonal power has been acquired", "Link is standing on a valid stump"],
+      "playerInput": ["Select and use the rod", "Choose or invoke an available season", "Traverse the changed nearby terrain"],
+      "before": ["The current local season produces one arrangement of water, plants, snow, leaves, and paths", "A desired route may be blocked"],
+      "action": ["Change the active season from the stump"],
+      "after": ["The screen adopts the chosen seasonal state", "Compatible terrain becomes traversable while other terrain may close"],
+      "feedback": ["A transformation sequence, palette shift, music cue, and visibly changed tiles identify the new state", "Movement success or obstruction confirms the terrain rule"],
+      "consequences": ["The player advances or reaches a reward", "Each added seasonal power increases the environmental state vocabulary"],
+      "factualDescription": "Using the Rod of Seasons from designated stumps changes the local season, visibly altering terrain such as plants, water, snow, and leaf cover so routes can open or close.",
+      "interpretation": "A world-restoration fantasy becomes playable when a global-sounding theme is reduced to a repeatable local command with clear before-and-after navigation consequences.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "seasonal-comparison-solves-blocked-screen",
+      "dimensions": ["dimension.world-state", "dimension.topology", "dimension.gating-revisit", "dimension.exploration-reward"],
+      "context": "A familiar overworld screen contains a season-sensitive obstacle and is connected by short routes to a legal season-changing stump.",
+      "preconditions": ["The obstacle has been observed in at least one season", "A season with the compatible terrain effect is available"],
+      "playerInput": ["Reach the nearby stump", "Change season", "Return to the obstacle and test the new route"],
+      "before": ["The target exit or pickup is blocked by the active terrain state", "The player knows the screen's unchanged landmarks"],
+      "action": ["Replace the local seasonal layer and revisit the same screen"],
+      "after": ["The obstacle's tile behavior changes", "A route, cave, or collectible becomes reachable"],
+      "feedback": ["Stable landmarks remain while seasonal tiles and palette differ", "The fixed camera makes the new traversable connection easy to compare"],
+      "consequences": ["The player gains progression, resources, or a shortcut", "Prior screens become candidates for further state comparison"],
+      "factualDescription": "Returning to a season-sensitive screen after changing the area's season can replace blocking terrain with a traversable state and expose routes or optional rewards.",
+      "interpretation": "Keeping landmarks stable while changing a small set of causal tiles turns revisit into controlled comparison instead of blind repetition.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "dungeon-action-rule-escalates",
+      "dimensions": ["dimension.puzzle-information", "dimension.dungeon-structure", "dimension.combat-boss", "dimension.teaching-feedback"],
+      "context": "A principal dungeon presents a signature tool or movement rule in rooms that progress from isolated use to combinations with enemies, hazards, or timing.",
+      "preconditions": ["The dungeon has been entered", "The signature item or relevant movement ability is acquired during its dependency chain"],
+      "playerInput": ["Test the new action in a readable room", "Apply it under escalating timing or combat pressure", "Carry the rule to the guardian route"],
+      "before": ["Later dungeon branches are inaccessible", "The player has not yet demonstrated the rule under pressure"],
+      "action": ["Resolve increasingly demanding rooms and defeat the guardian"],
+      "after": ["The dungeon objective and essence are available", "The tool remains usable in the overworld"],
+      "feedback": ["Object reaction, enemy state, doors, and movement show each successful action", "Boss defeat and essence presentation close the challenge"],
+      "consequences": ["The restoration sequence advances", "The player can revisit matching field obstacles with tested execution"],
+      "factualDescription": "Principal dungeons grant persistent tools and arrange action or movement tests around them before a guardian and essence reward complete the local dependency chain.",
+      "interpretation": "Teaching a field-relevant verb under increasing action pressure makes the bounded dungeon both a progression lock and a rehearsal space for future exploration.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    },
+    {
+      "key": "password-connects-character-continuity",
+      "dimensions": ["dimension.npc-quest", "dimension.narrative-performance", "dimension.camera-blocking", "dimension.ui-input"],
+      "context": "Characters can communicate secrets whose codes are entered in the paired Oracle title or a linked continuation, causing recognized cross-game responses.",
+      "preconditions": ["A valid secret or linked-game code has been obtained", "The corresponding recipient or input context is available"],
+      "playerInput": ["Record the code outside the immediate scene", "Enter or relay it in the matching paired-game interaction"],
+      "before": ["The paired save contexts are separate", "The recipient has not recognized the external adventure state"],
+      "action": ["Submit the password through the character or menu interface"],
+      "after": ["A linked flag is accepted", "New dialogue, an item opportunity, or continuation content becomes available"],
+      "feedback": ["Focused text and code-entry UI confirm acceptance or rejection", "The character response makes the continuity diegetic"],
+      "consequences": ["Progress in one adventure can enrich the other without simultaneous play", "Players are encouraged to treat the two worlds as related campaigns"],
+      "factualDescription": "The Oracle pair uses passwords and character-delivered secrets to transfer recognized state between separate single-player cartridges, unlocking linked responses and rewards.",
+      "interpretation": "A portable code can make asynchronous continuity feel social when the state transfer is framed as information passed between characters rather than as a technical import screen alone.",
+      "confidence": "high",
+      "disposition": "single-title"
+    },
+    {
+      "key": "screen-variant-runtime-preserves-recovery",
+      "dimensions": ["dimension.recovery-accessibility", "dimension.perspective-implementation", "dimension.hardware-multiplayer", "dimension.production-runtime"],
+      "context": "The handheld game renders exploration as discrete top-down screens, each capable of several seasonal tile variants while persistent saves retain acquired powers.",
+      "preconditions": ["A campaign file contains season powers and other progression", "The player saves, stops, or fails during exploration"],
+      "playerInput": ["Resume the file", "Return to a season-changing anchor and reconstruct the needed local state"],
+      "before": ["The active attempt or session has ended", "A route may depend on a specific local season"],
+      "action": ["Reload persistent progression and reapply the environmental command when needed"],
+      "after": ["Key items, essences, and learned seasons remain owned", "The discrete screen can enter the required legal variant again"],
+      "feedback": ["Inventory and status confirm retained campaign state", "The fixed-screen seasonal transformation visibly reconstructs the route state"],
+      "consequences": ["Failure does not delete long-term capability growth", "Local world-state reasoning remains reproducible across handheld sessions"],
+      "factualDescription": "The single-player Game Boy Color campaign saves persistent powers and objectives, while top-down screens can be restored to different legal seasonal variants after resuming play.",
+      "interpretation": "Separating persistent capability from reconstructible local state supports recovery and testing: players can safely retry an environmental hypothesis without losing the larger campaign.",
+      "confidence": "high",
+      "disposition": "portable-candidate"
+    }
+  ],
+  "contributionHypotheses": [
+    "A thematic world power becomes reusable gameplay when it maps to a small set of visible local state substitutions with reversible consequences.",
+    "Stable landmarks plus changed causal terrain make multi-state comparison readable on a compact screen.",
+    "Asynchronous cross-game state can be made diegetic through character-mediated secrets."
+  ],
+  "uniqueOrNonportable": [
+    "The named oracle, worlds, rod, seasonal spirits, essences, characters, exact screen variants, dungeon solutions, codes, linked ending, and audiovisual identity are source-specific.",
+    "The particular four-season tile transformations are evidence; portable use requires a new fiction, different state set, and independently designed topology."
+  ],
+  "openQuestions": [
+    "A variant review should verify which link-cable functions belong to the original cartridge and which connectivity features are absent from later emulated releases."
+  ]
+}
