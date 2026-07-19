@@ -1,0 +1,47 @@
+{
+  "fixtureId": "fixture.selector.reward-2-missing-bindings",
+  "title": "The Unspecified Weather Relay Reward",
+  "originalityStatement": "A negative-control copy of the original weather-relay premise that deliberately omits all Reward 2.0 manual bindings so the selector must not invent them.",
+  "storyModel": {
+    "premise": "A field engineer restores a storm-damaged weather relay and may revisit its region later, but the design has not established what persistent reward state or future functions the restoration creates.",
+    "playerRole": "Field engineer responsible for a regional weather relay",
+    "storySignals": [
+      "signal.landmark-mystery",
+      "signal.capability-reveal",
+      "signal.revisited-place"
+    ],
+    "experienceGoals": [
+      "experience.self-directed-discovery",
+      "experience.world-recontextualization",
+      "experience.competence-growth"
+    ],
+    "spatialSignals": [
+      "signal.landmark-mystery",
+      "signal.revisited-place"
+    ],
+    "protectedCanon": [
+      "The evacuation convoy departs only after the scheduled storm warning",
+      "Restoring the relay does not reveal the missing observer's fate"
+    ]
+  },
+  "productProfile": {
+    "id": "product-profile.v021-topdown-pixel",
+    "spatialBudget": "one regional map with one relay"
+  },
+  "runtimeCapabilities": [
+    "capability.world-facts",
+    "capability.inventory",
+    "capability.route-gates",
+    "capability.save-migration",
+    "capability.route-simulation",
+    "capability.map-layers",
+    "capability.context-interaction",
+    "capability.performance-cues",
+    "capability.camera-cues",
+    "capability.grid-collision",
+    "capability.spatial-query",
+    "capability.checkpoints",
+    "capability.hint-ladder"
+  ],
+  "budget": "medium"
+}

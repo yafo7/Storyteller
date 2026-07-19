@@ -1,0 +1,8 @@
+{
+  "fixtureId":"fixture.selector.open-exploration","title":"Signals Across the Salt Plain",
+  "originalityStatement":"An original exploration benchmark about weather instruments and a salt plain, with no borrowed world, landmarks, or mechanics.",
+  "storyModel":{"premise":"A field engineer follows visible storm instruments across an open salt plain and learns to redirect local windbreaks before a rescue convoy arrives.","playerRole":"Field engineer carrying a configurable survey kit","storySignals":["signal.landmark-mystery","signal.transformable-environment","signal.multi-causal-problem","signal.capability-reveal","signal.revisited-place"],"experienceGoals":["experience.self-directed-discovery","experience.spatial-memory","experience.consequential-agency"],"spatialSignals":["signal.landmark-mystery","signal.transformable-environment","signal.revisited-place"],"protectedCanon":["The convoy route remains fixed","The engineer cannot prevent the storm, only make safe passages"]},
+  "productProfile":{"id":"product-profile.v021-topdown-pixel","spatialBudget":"one open map with six landmark zones"},
+  "runtimeCapabilities":["capability.world-facts","capability.map-layers","capability.route-gates","capability.inventory","capability.context-interaction","capability.performance-cues","capability.camera-cues","capability.grid-collision","capability.spatial-query","capability.object-placement","capability.object-composition","capability.checkpoints","capability.hint-ladder","capability.route-simulation"],
+  "budget":"medium"
+}

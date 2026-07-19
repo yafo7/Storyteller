@@ -1,0 +1,594 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.benchmark.selector.low-spatial-change",
+  "storyModelHash": "c3a6140332f0d8c3127942039845f1bc5435a47981c0f2753dd2c237fcfaf7eb",
+  "libraryLockRef": "lock.benchmark-unlocked",
+  "provenancePolicy": {
+    "enabledPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "blockedPackIds": [],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": [
+      "signal.capability-reveal",
+      "signal.embodied-secret",
+      "signal.confined-stage",
+      "signal.relationship-memory",
+      "signal.schedule-pressure"
+    ],
+    "experienceGoals": [
+      "experience.embodied-revelation",
+      "experience.social-recognition",
+      "experience.fair-recovery"
+    ],
+    "spatialConstraints": [
+      "signal.confined-stage"
+    ],
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.schedule-clock",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.telemetry",
+      "capability.route-simulation"
+    ],
+    "budget": {
+      "design": "medium",
+      "code": "medium",
+      "art": "medium",
+      "qa": "high"
+    },
+    "negativeSignals": []
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.42
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.997
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 1,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.847
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.787
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 1,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.637
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 1,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.487
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.object-role-composition",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 5,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.367
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.237
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 1,
+        "runtimeFit": 1,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.197
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 1,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.097
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 1,
+        "runtimeFit": 0,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.097
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "manual-binding-incomplete"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Reward 2.0 manual binding closure is incomplete: exactly one explicit acquisition transaction is required; the acquisition transaction must declare an atomic commit; one or more explicit persistent state refs are required; at least two explicit reward functions are required; reward functions must span at least two distinct functional dimensions; an explicit economy rule ref is required; a passed, evidenced protected-story-order check is required."
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 1,
+        "runtimeFit": 1,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 1.97
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    }
+  ],
+  "selectedApplications": [
+    {
+      "applicationId": "application.selector.low-spatial-change.1",
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "role": "core",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.facts",
+        "storyModel.locations",
+        "storyModel.revealOrder",
+        "storyModel.protectedCanon"
+      ],
+      "retainedPrinciples": [
+        "The opening should teach control, player role, and immediate story direction through one motivated chain of safe actions."
+      ],
+      "adaptationSummary": "Instantiate Action-first onboarding from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "source storm rescue and castle approach",
+        "source castaway weapon recovery",
+        "source first cave, mentor, or iconic item staging"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "storyModel",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.action-first-onboarding",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.0.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.action-first.selection",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.action-first.enter-motivated-control",
+          "parameterBindings": {
+            "parameter.action-first.player-role": "player-role-ref.action-first-onboarding.story-derived",
+            "parameter.action-first.immediate-need": "goal-ref.action-first-onboarding.story-derived",
+            "parameter.action-first.verb-chain": "verb-ref-array.action-first-onboarding.story-derived",
+            "parameter.action-first.consequence-cue": "performance-sequence-ref.action-first-onboarding.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.player.controlState must satisfy equals against \"meaningful-control\" before the authored transaction is accepted. This realizes the distinct role-and-goal-learned-through-action causal contract.",
+            "$.objectives.immediateNeed must satisfy equals-ref against reference parameter.action-first.immediate-need before the authored transaction is accepted. This realizes the distinct role-and-goal-learned-through-action causal contract.",
+            "$.verbs.available must satisfy contains-first-ref against reference parameter.action-first.verb-chain before the authored transaction is accepted. This realizes the distinct role-and-goal-learned-through-action causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.action-first.perform-role-bearing-action",
+          "parameterBindings": {
+            "parameter.action-first.player-role": "player-role-ref.action-first-onboarding.story-derived",
+            "parameter.action-first.immediate-need": "goal-ref.action-first-onboarding.story-derived",
+            "parameter.action-first.verb-chain": "verb-ref-array.action-first-onboarding.story-derived",
+            "parameter.action-first.consequence-cue": "performance-sequence-ref.action-first-onboarding.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.onboarding.verbStepsCompleted must satisfy increments against 1 before the authored transaction is accepted. This realizes the distinct role-and-goal-learned-through-action causal contract.",
+            "$.world.immediateNeedState must satisfy changes-toward-resolution against true before the authored transaction is accepted. This realizes the distinct role-and-goal-learned-through-action causal contract.",
+            "$.player.roleEvidenceExperienced must satisfy equals against true before the authored transaction is accepted. This realizes the distinct role-and-goal-learned-through-action causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.action-first.confirm-role-and-direction",
+          "parameterBindings": {
+            "parameter.action-first.player-role": "player-role-ref.action-first-onboarding.story-derived",
+            "parameter.action-first.immediate-need": "goal-ref.action-first-onboarding.story-derived",
+            "parameter.action-first.verb-chain": "verb-ref-array.action-first-onboarding.story-derived",
+            "parameter.action-first.consequence-cue": "performance-sequence-ref.action-first-onboarding.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.player.knownRoleFacts must satisfy contains-opening-facts-of-ref against reference parameter.action-first.player-role before the authored transaction is accepted. This realizes the distinct role-and-goal-learned-through-action causal contract.",
+            "$.objectives.nextDirection must satisfy exists against true before the authored transaction is accepted. This realizes the distinct role-and-goal-learned-through-action causal contract.",
+            "$.onboarding.actionFirstContractComplete must satisfy equals against true before the authored transaction is accepted. This realizes the distinct role-and-goal-learned-through-action causal contract."
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.context-interaction",
+        "capability.world-facts",
+        "capability.performance-cues",
+        "capability.checkpoints",
+        "capability.telemetry"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    }
+  ],
+  "composition": {
+    "corePatternRef": "pattern.action-first-onboarding",
+    "supportPatternRefs": [],
+    "sharedExperienceAxis": "experience.embodied-revelation",
+    "conflictsResolved": [
+      "Removed candidates that conflict with the selected core or duplicate an already represented pattern kind."
+    ],
+    "developmentArc": [
+      "teach",
+      "practice",
+      "variation",
+      "combine-or-reverse",
+      "exam"
+    ]
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [
+      "capability.context-interaction",
+      "capability.world-facts",
+      "capability.performance-cues",
+      "capability.checkpoints",
+      "capability.telemetry"
+    ],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "structuralDeltas": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "forbiddenTransfers": [
+      "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+    ],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": [
+      "A reviewer cannot reliably attribute the instance to one source encounter",
+      "At least four transformation axes materially change",
+      "Protected canon and reveal order remain unchanged"
+    ]
+  },
+  "abstention": {
+    "abstained": false,
+    "reason": null
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.selector.low-spatial-change.gameplay",
+      "owner": "gameplay",
+      "contractRef": "gameplay-design/v03",
+      "applicationRefs": [
+        "application.selector.low-spatial-change.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.action-first-onboarding",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.action-first-onboarding.selection.1",
+        "assertion.action-first-onboarding.selection.2",
+        "assertion.action-first-onboarding.runtime.1",
+        "assertion.action-first-onboarding.runtime.2",
+        "assertion.action-first-onboarding.runtime.3",
+        "assertion.action-first-onboarding.route.1",
+        "assertion.action-first-onboarding.route.2",
+        "assertion.action-first-onboarding.originality.1",
+        "assertion.action-first-onboarding.originality.2",
+        "assertion.action-first-onboarding.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.low-spatial-change.performance",
+      "owner": "performance",
+      "contractRef": "performance-design/v03",
+      "applicationRefs": [
+        "application.selector.low-spatial-change.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.action-first-onboarding",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.action-first-onboarding.selection.1",
+        "assertion.action-first-onboarding.selection.2",
+        "assertion.action-first-onboarding.runtime.1",
+        "assertion.action-first-onboarding.runtime.2",
+        "assertion.action-first-onboarding.runtime.3",
+        "assertion.action-first-onboarding.route.1",
+        "assertion.action-first-onboarding.route.2",
+        "assertion.action-first-onboarding.originality.1",
+        "assertion.action-first-onboarding.originality.2",
+        "assertion.action-first-onboarding.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.low-spatial-change.stage",
+      "owner": "stage",
+      "contractRef": "stage-plan/v03",
+      "applicationRefs": [
+        "application.selector.low-spatial-change.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.action-first-onboarding",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.action-first-onboarding.selection.1",
+        "assertion.action-first-onboarding.selection.2",
+        "assertion.action-first-onboarding.runtime.1",
+        "assertion.action-first-onboarding.runtime.2",
+        "assertion.action-first-onboarding.runtime.3",
+        "assertion.action-first-onboarding.route.1",
+        "assertion.action-first-onboarding.route.2",
+        "assertion.action-first-onboarding.originality.1",
+        "assertion.action-first-onboarding.originality.2",
+        "assertion.action-first-onboarding.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.low-spatial-change.evaluation",
+      "owner": "evaluation",
+      "contractRef": "acceptance/v03",
+      "applicationRefs": [
+        "application.selector.low-spatial-change.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.action-first-onboarding",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.action-first-onboarding.selection.1",
+        "assertion.action-first-onboarding.selection.2",
+        "assertion.action-first-onboarding.runtime.1",
+        "assertion.action-first-onboarding.runtime.2",
+        "assertion.action-first-onboarding.runtime.3",
+        "assertion.action-first-onboarding.route.1",
+        "assertion.action-first-onboarding.route.2",
+        "assertion.action-first-onboarding.originality.1",
+        "assertion.action-first-onboarding.originality.2",
+        "assertion.action-first-onboarding.originality.3"
+      ]
+    }
+  ],
+  "status": "draft"
+}

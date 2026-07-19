@@ -1,0 +1,59 @@
+{
+  "fixtureId": "fixture.migration.reward-expands-future-possibility.manual-reinstantiation-input",
+  "fixtureVersion": "1.0.0",
+  "patternRef": "pattern.reward-expands-future-possibility@1.1.0",
+  "scenarioId": "scenario.community-radio-cache",
+  "application": {
+    "subtype": "choice-generating-reward",
+    "bindings": {
+      "discoveryRef": "interaction.restore-hilltop-relay",
+      "rewardRef": "reward.relay-access-token",
+      "choiceSetRef": "choice-set.relay-followups",
+      "optionalDiscovery": true,
+      "laterChoiceCount": 2,
+      "nonDominatedCount": 2,
+      "unselectedOptionsPreserved": true,
+      "economyRuleRef": "economy.community-bandwidth"
+    }
+  },
+  "manualReinstantiation": {
+    "authorship": "designer-supplied-after-runtime-and-save-boundary-review",
+    "acquisitionTransactionRef": "transaction.restore-community-relay",
+    "commitsAtomically": true,
+    "persistentStateRefs": [
+      "state.relay.power-restored",
+      "state.relay.archive-indexed"
+    ],
+    "functions": [
+      {
+        "functionRef": "reward-function.relay-wayfinding",
+        "persistentStateRef": "state.relay.power-restored",
+        "functionalDimension": "navigation",
+        "futureUseContextRef": "context.flooded-service-tunnels",
+        "feedbackRef": "feedback.relay-wayfinding-pulses",
+        "actionabilityDelta": {
+          "metric": "reachable-safe-route-count",
+          "before": 1,
+          "after": 3
+        }
+      },
+      {
+        "functionRef": "reward-function.relay-archive-query",
+        "persistentStateRef": "state.relay.archive-indexed",
+        "functionalDimension": "information",
+        "futureUseContextRef": "context.missing-broadcast-investigation",
+        "feedbackRef": "feedback.archive-query-transcript",
+        "actionabilityDelta": {
+          "metric": "available-verified-clue-count",
+          "before": 0,
+          "after": 3
+        }
+      }
+    ],
+    "economyRuleRef": "economy.community-bandwidth",
+    "protectedStoryOrderCheck": {
+      "status": "pass",
+      "evidenceRef": "canon-check.community-radio-cache.reward-order"
+    }
+  }
+}

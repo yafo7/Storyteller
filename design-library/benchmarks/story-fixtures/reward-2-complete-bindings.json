@@ -1,0 +1,96 @@
+{
+  "fixtureId": "fixture.selector.reward-2-complete-bindings",
+  "title": "The Restored Weather Relay",
+  "originalityStatement": "An original benchmark about restoring a weather relay whose persistent signals support navigation and archive research, with no borrowed world, reward object, site, or acquisition staging.",
+  "storyModel": {
+    "premise": "A field engineer restores a storm-damaged weather relay, then uses its persistent signal in a floodplain and its indexed records during a later investigation.",
+    "playerRole": "Field engineer responsible for a regional weather relay",
+    "storySignals": [
+      "signal.landmark-mystery",
+      "signal.capability-reveal",
+      "signal.revisited-place"
+    ],
+    "experienceGoals": [
+      "experience.self-directed-discovery",
+      "experience.world-recontextualization",
+      "experience.competence-growth"
+    ],
+    "spatialSignals": [
+      "signal.landmark-mystery",
+      "signal.revisited-place"
+    ],
+    "protectedCanon": [
+      "The evacuation convoy departs only after the scheduled storm warning",
+      "Restoring the relay does not reveal the missing observer's fate"
+    ]
+  },
+  "rewardDesign": {
+    "acquisitionTransactions": [
+      {
+        "transactionRef": "transaction.restore-weather-relay",
+        "commitsPersistentStateRefs": [
+          "state.relay.signal-restored",
+          "state.relay.archive-indexed"
+        ],
+        "atomicCommit": true
+      }
+    ],
+    "persistentStateRefs": [
+      "state.relay.signal-restored",
+      "state.relay.archive-indexed"
+    ],
+    "rewardFunctions": [
+      {
+        "functionRef": "reward-function.relay-floodplain-wayfinding",
+        "persistentStateRef": "state.relay.signal-restored",
+        "functionalDimension": "navigation",
+        "futureUseContextRef": "context.floodplain-safe-route",
+        "feedbackRef": "feedback.relay-direction-pulses",
+        "actionabilityDelta": {
+          "metric": "reachable-safe-route-count",
+          "before": 1,
+          "after": 3
+        }
+      },
+      {
+        "functionRef": "reward-function.relay-archive-query",
+        "persistentStateRef": "state.relay.archive-indexed",
+        "functionalDimension": "information",
+        "futureUseContextRef": "context.missing-observer-investigation",
+        "feedbackRef": "feedback.archive-query-transcript",
+        "actionabilityDelta": {
+          "metric": "available-verified-clue-count",
+          "before": 0,
+          "after": 2
+        }
+      }
+    ]
+  },
+  "rewardEconomy": {
+    "economyRuleRef": "economy.relay-service-bandwidth",
+    "protectedStoryOrderCheck": {
+      "status": "pass",
+      "evidenceRef": "canon-check.weather-relay.reward-order"
+    }
+  },
+  "productProfile": {
+    "id": "product-profile.v021-topdown-pixel",
+    "spatialBudget": "one regional map with one relay and two later-use contexts"
+  },
+  "runtimeCapabilities": [
+    "capability.world-facts",
+    "capability.inventory",
+    "capability.route-gates",
+    "capability.save-migration",
+    "capability.route-simulation",
+    "capability.map-layers",
+    "capability.context-interaction",
+    "capability.performance-cues",
+    "capability.camera-cues",
+    "capability.grid-collision",
+    "capability.spatial-query",
+    "capability.checkpoints",
+    "capability.hint-ladder"
+  ],
+  "budget": "medium"
+}

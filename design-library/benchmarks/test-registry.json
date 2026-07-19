@@ -1,0 +1,17 @@
+{
+  "registryVersion": "1.1.0",
+  "tests": [
+    {"testId":"test.adapter.v021.map-state","owner":"adapter.2d-topdown-v021","fixtureRef":"fixture.adapter.map-collision-atomic","assertion":"Tile, collision, prop, interaction, portal, lighting, and route domains commit atomically and interrupted commits roll back exactly."},
+    {"testId":"test.adapter.v021.dynamic-route","owner":"adapter.2d-topdown-v021","fixtureRef":"fixture.adapter.route-recovery","assertion":"Every changed gate preserves required goal and recovery reachability; a trapping gate is rejected without mutation."},
+    {"testId":"test.adapter.v021.save-recovery","owner":"adapter.2d-topdown-v021","fixtureRef":"fixture.adapter.checkpoint-save-reload","assertion":"Checkpoint, save reload, and migration preserve every authoritative domain and transaction ledger exactly."},
+    {"testId":"test.adapter.v021.cue-readability","owner":"adapter.2d-topdown-v021","fixtureRef":"fixture.adapter.cue-idempotence","assertion":"Normal, replay, skip, and resume paths commit one durable cue effect and restore control."},
+    {"testId":"test.adapter.v021.domain-closure","owner":"adapter.2d-topdown-v021","fixtureRef":"fixture.adapter.world-composite-interruption","assertion":"Every released effect instance resolves through an effectId-specific typed transaction with complete parameter, precondition, postcondition, and rollback attestation."},
+    {"testId":"test.adapter.v021.npc-inventory","owner":"adapter.2d-topdown-v021","fixtureRef":"fixture.adapter.npc-dialogue-schedule","assertion":"NPC, dialogue, schedule, inventory, object placement, collision, and composition stay transactionally coherent."},
+    {"testId":"test.adapter.v021.portal-safe-return","owner":"adapter.2d-topdown-v021","fixtureRef":"fixture.adapter.portal-safe-return","assertion":"Portal target, spawn, facing, checkpoint, carried state, collision safety, and return route close before commit."},
+    {"testId":"test.adapter.v021.irreversible-gates","owner":"adapter.2d-topdown-v021","fixtureRef":"fixture.adapter.irreversible-gate","assertion":"Irreversible effects reject before their gates, commit once after the gate, and survive save reload without duplication."},
+    {"testId":"test.adapter.v021.capability-coverage","owner":"adapter.2d-topdown-v021","fixtureRef":"fixture.adapter.spatial-query-telemetry","assertion":"All capabilities required by released patterns have an explicit adapter mapping and executable or typed fallback contract."},
+    {"testId":"test.selector.positive-matrix","owner":"select-game-design-patterns","fixtureRef":"fixture.selector.locked-room","assertion":"Positive benchmarks return exactly one core, at most three supports, no hard-vetoed selection, and typed handoffs."},
+    {"testId":"test.selector.abstention","owner":"select-game-design-patterns","fixtureRef":"fixture.selector.low-fit-monologue","assertion":"Low-interaction and blocked-pack cases return a reasoned abstention with no selected application."},
+    {"testId":"test.selector.forward","owner":"select-game-design-patterns","fixtureRef":"fixture.selector.forward-unseen","assertion":"Held-out story produces a canon-safe, runtime-fit, original composition without a stored intended pattern ID."}
+  ]
+}

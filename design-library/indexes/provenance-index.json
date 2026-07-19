@@ -1,0 +1,510 @@
+{
+  "indexId": "index.pattern-provenance-review-only",
+  "indexVersion": "1.0.0",
+  "visibility": "evidence-review-only",
+  "records": [
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "supportingWorkRefs": [
+        "work.a-link-to-the-past",
+        "work.ocarina-of-time"
+      ],
+      "observationRefs": [
+        "observation.a-link-to-the-past.paired-world-coordinate-reframe",
+        "observation.ocarina-of-time.era-shift-rewrites-familiar-routes"
+      ],
+      "counterEvidenceRefs": [
+        "observation.breath-of-the-wild.landmark-climb-creates-self-route"
+      ]
+    },
+    {
+      "patternId": "pattern.knowledge-gated-revisit",
+      "supportingWorkRefs": [
+        "work.majoras-mask",
+        "work.breath-of-the-wild",
+        "work.the-legend-of-zelda"
+      ],
+      "observationRefs": [
+        "observation.majoras-mask.knowledge-converts-failed-cycle-into-progress",
+        "observation.breath-of-the-wild.memory-landmark-reveals-past",
+        "observation.the-legend-of-zelda.cave-message-redirects-search"
+      ],
+      "counterEvidenceRefs": [
+        "observation.zelda-ii-the-adventure-of-link.learned-capability-reopens-route"
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "supportingWorkRefs": [
+        "work.oracle-of-seasons",
+        "work.oracle-of-ages",
+        "work.a-link-to-the-past"
+      ],
+      "observationRefs": [
+        "observation.oracle-of-seasons.seasonal-comparison-solves-blocked-screen",
+        "observation.oracle-of-ages.cross-era-cause-opens-route",
+        "observation.a-link-to-the-past.paired-world-coordinate-reframe"
+      ],
+      "counterEvidenceRefs": [
+        "observation.the-wind-waker.wind-is-visible-global-route-state"
+      ]
+    },
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "supportingWorkRefs": [
+        "work.a-link-to-the-past",
+        "work.oracle-of-ages"
+      ],
+      "observationRefs": [
+        "observation.a-link-to-the-past.paired-world-coordinate-reframe",
+        "observation.oracle-of-ages.cross-era-cause-opens-route"
+      ],
+      "counterEvidenceRefs": [
+        "observation.tri-force-heroes.totem-converts-team-into-height"
+      ]
+    },
+    {
+      "patternId": "pattern.finite-schedule-loop",
+      "supportingWorkRefs": [
+        "work.majoras-mask"
+      ],
+      "observationRefs": [
+        "observation.majoras-mask.knowledge-converts-failed-cycle-into-progress",
+        "observation.majoras-mask.reset-contract-separates-world-and-player-state",
+        "observation.majoras-mask.scheduled-actors-make-waiting-readable",
+        "observation.majoras-mask.deadline-is-recoverable-but-not-costless"
+      ],
+      "counterEvidenceRefs": [
+        "observation.links-awakening.barter-chain-turns-npcs-into-route"
+      ]
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "supportingWorkRefs": [
+        "work.breath-of-the-wild",
+        "work.tears-of-the-kingdom"
+      ],
+      "observationRefs": [
+        "observation.breath-of-the-wild.landmark-climb-creates-self-route",
+        "observation.tears-of-the-kingdom.vertical-entry-links-world-layers"
+      ],
+      "counterEvidenceRefs": [
+        "observation.four-swords.separation-expands-search-then-chokepoint-regroups"
+      ]
+    },
+    {
+      "patternId": "pattern.loop-shortcut-memory",
+      "supportingWorkRefs": [
+        "work.phantom-hourglass"
+      ],
+      "observationRefs": [
+        "observation.phantom-hourglass.timed-temple-revisit-compounds"
+      ],
+      "counterEvidenceRefs": [
+        "observation.spirit-tracks.restored-track-opens-network"
+      ]
+    },
+    {
+      "patternId": "pattern.hub-spoke-return",
+      "supportingWorkRefs": [
+        "work.skyward-sword",
+        "work.phantom-hourglass"
+      ],
+      "observationRefs": [
+        "observation.skyward-sword.surface-discovery-pays-off-in-the-sky-hub",
+        "observation.phantom-hourglass.boss-resolution-funds-next-voyage"
+      ],
+      "counterEvidenceRefs": [
+        "observation.breath-of-the-wild.landmark-climb-creates-self-route"
+      ]
+    },
+    {
+      "patternId": "pattern.dungeon-macro-state-machine",
+      "supportingWorkRefs": [
+        "work.oracle-of-ages",
+        "work.skyward-sword"
+      ],
+      "observationRefs": [
+        "observation.oracle-of-ages.multi-room-state-puzzle-persists",
+        "observation.skyward-sword.local-time-field-rewrites-multiple-system-roles"
+      ],
+      "counterEvidenceRefs": [
+        "observation.the-legend-of-zelda.labyrinth-room-rule-chain"
+      ]
+    },
+    {
+      "patternId": "pattern.safe-rule-experiment",
+      "supportingWorkRefs": [
+        "work.a-link-to-the-past"
+      ],
+      "observationRefs": [
+        "observation.a-link-to-the-past.dungeon-tool-closes-local-dependency"
+      ],
+      "counterEvidenceRefs": [
+        "observation.ocarina-of-time.boss-recombines-readable-rule-under-risk"
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "supportingWorkRefs": [
+        "work.a-link-to-the-past",
+        "work.ocarina-of-time",
+        "work.oracle-of-seasons",
+        "work.the-minish-cap"
+      ],
+      "observationRefs": [
+        "observation.a-link-to-the-past.dungeon-tool-closes-local-dependency",
+        "observation.ocarina-of-time.dungeon-tool-becomes-local-grammar",
+        "observation.oracle-of-seasons.dungeon-action-rule-escalates",
+        "observation.the-minish-cap.tool-rule-scales-to-boss"
+      ],
+      "counterEvidenceRefs": [
+        "observation.breath-of-the-wild.environmental-property-changes-plan"
+      ]
+    },
+    {
+      "patternId": "pattern.environmental-chain-reaction",
+      "supportingWorkRefs": [
+        "work.breath-of-the-wild"
+      ],
+      "observationRefs": [
+        "observation.breath-of-the-wild.environmental-property-changes-plan"
+      ],
+      "counterEvidenceRefs": [
+        "observation.skyward-sword.local-time-field-rewrites-multiple-system-roles"
+      ]
+    },
+    {
+      "patternId": "pattern.multi-solution-state-graph",
+      "supportingWorkRefs": [
+        "work.breath-of-the-wild",
+        "work.tears-of-the-kingdom",
+        "work.echoes-of-wisdom"
+      ],
+      "observationRefs": [
+        "observation.breath-of-the-wild.environmental-property-changes-plan",
+        "observation.tears-of-the-kingdom.ultrahand-builds-local-solution",
+        "observation.echoes-of-wisdom.echo-learning-turns-observation-into-vocabulary"
+      ],
+      "counterEvidenceRefs": [
+        "observation.oracle-of-ages.harp-turns-time-into-player-verb"
+      ]
+    },
+    {
+      "patternId": "pattern.object-role-composition",
+      "supportingWorkRefs": [
+        "work.tears-of-the-kingdom",
+        "work.echoes-of-wisdom"
+      ],
+      "observationRefs": [
+        "observation.tears-of-the-kingdom.ultrahand-builds-local-solution",
+        "observation.echoes-of-wisdom.echo-learning-turns-observation-into-vocabulary"
+      ],
+      "counterEvidenceRefs": [
+        "observation.four-swords-adventures.four-bodies-become-one-configurable-verb"
+      ]
+    },
+    {
+      "patternId": "pattern.copy-redeploy-affordance",
+      "supportingWorkRefs": [
+        "work.echoes-of-wisdom"
+      ],
+      "observationRefs": [
+        "observation.echoes-of-wisdom.echo-learning-turns-observation-into-vocabulary",
+        "observation.echoes-of-wisdom.echo-combination-authors-a-route"
+      ],
+      "counterEvidenceRefs": [
+        "observation.tears-of-the-kingdom.ultrahand-builds-local-solution"
+      ]
+    },
+    {
+      "patternId": "pattern.perspective-shift-reframes-space",
+      "supportingWorkRefs": [
+        "work.the-minish-cap",
+        "work.a-link-between-worlds",
+        "work.twilight-princess"
+      ],
+      "observationRefs": [
+        "observation.the-minish-cap.shrink-reinterprets-ordinary-object",
+        "observation.a-link-between-worlds.wall-merge-rewrites-boundary",
+        "observation.twilight-princess.body-form-changes-the-investigation-question"
+      ],
+      "counterEvidenceRefs": [
+        "observation.ocarina-of-time.era-shift-rewrites-familiar-routes"
+      ]
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "supportingWorkRefs": [
+        "work.the-wind-waker",
+        "work.spirit-tracks"
+      ],
+      "observationRefs": [
+        "observation.the-wind-waker.horizon-curiosity-drives-the-travel-loop",
+        "observation.spirit-tracks.restored-track-opens-network"
+      ],
+      "counterEvidenceRefs": [
+        "observation.breath-of-the-wild.landmark-climb-creates-self-route"
+      ]
+    },
+    {
+      "patternId": "pattern.player-authored-map-memory",
+      "supportingWorkRefs": [
+        "work.phantom-hourglass",
+        "work.breath-of-the-wild"
+      ],
+      "observationRefs": [
+        "observation.phantom-hourglass.map-note-becomes-puzzle-memory",
+        "observation.breath-of-the-wild.landmark-climb-creates-self-route"
+      ],
+      "counterEvidenceRefs": [
+        "observation.spirit-tracks.restored-track-opens-network"
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "supportingWorkRefs": [
+        "work.breath-of-the-wild",
+        "work.tears-of-the-kingdom"
+      ],
+      "observationRefs": [
+        "observation.breath-of-the-wild.shrine-detour-converts-curiosity",
+        "observation.tears-of-the-kingdom.lightroot-turns-darkness-into-map"
+      ],
+      "counterEvidenceRefs": [
+        "observation.tri-force-heroes.materials-become-role-costume"
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "supportingWorkRefs": [
+        "work.breath-of-the-wild",
+        "work.skyward-sword"
+      ],
+      "observationRefs": [
+        "observation.breath-of-the-wild.memory-landmark-reveals-past",
+        "observation.skyward-sword.surface-discovery-pays-off-in-the-sky-hub"
+      ],
+      "counterEvidenceRefs": [
+        "observation.the-legend-of-zelda.tools-reveal-overworld-state"
+      ]
+    },
+    {
+      "patternId": "pattern.resource-expedition-return",
+      "supportingWorkRefs": [
+        "work.phantom-hourglass"
+      ],
+      "observationRefs": [
+        "observation.phantom-hourglass.timed-temple-revisit-compounds"
+      ],
+      "counterEvidenceRefs": [
+        "observation.zelda-ii-the-adventure-of-link.lives-and-unbanked-growth-on-failure"
+      ]
+    },
+    {
+      "patternId": "pattern.boss-rule-synthesis",
+      "supportingWorkRefs": [
+        "work.ocarina-of-time",
+        "work.the-minish-cap",
+        "work.phantom-hourglass"
+      ],
+      "observationRefs": [
+        "observation.ocarina-of-time.boss-recombines-readable-rule-under-risk",
+        "observation.the-minish-cap.tool-rule-scales-to-boss",
+        "observation.phantom-hourglass.boss-resolution-funds-next-voyage"
+      ],
+      "counterEvidenceRefs": [
+        "observation.a-link-between-worlds.height-puzzle-supports-optional-hint"
+      ]
+    },
+    {
+      "patternId": "pattern.threat-as-navigation-teacher",
+      "supportingWorkRefs": [
+        "work.spirit-tracks"
+      ],
+      "observationRefs": [
+        "observation.spirit-tracks.hazard-readable-route-recovery"
+      ],
+      "counterEvidenceRefs": [
+        "observation.breath-of-the-wild.fragile-equipment-prompts-preparation"
+      ]
+    },
+    {
+      "patternId": "pattern.npc-schedule-as-information",
+      "supportingWorkRefs": [
+        "work.majoras-mask"
+      ],
+      "observationRefs": [
+        "observation.majoras-mask.scheduled-actors-make-waiting-readable",
+        "observation.majoras-mask.deadline-is-recoverable-but-not-costless"
+      ],
+      "counterEvidenceRefs": [
+        "observation.links-awakening.barter-chain-turns-npcs-into-route"
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "supportingWorkRefs": [
+        "work.twilight-princess",
+        "work.ocarina-of-time"
+      ],
+      "observationRefs": [
+        "observation.twilight-princess.province-restoration-reframes-known-space",
+        "observation.ocarina-of-time.era-shift-rewrites-familiar-routes"
+      ],
+      "counterEvidenceRefs": [
+        "observation.the-legend-of-zelda.tools-reveal-overworld-state"
+      ]
+    },
+    {
+      "patternId": "pattern.companion-contextual-verb",
+      "supportingWorkRefs": [
+        "work.twilight-princess",
+        "work.spirit-tracks",
+        "work.tears-of-the-kingdom"
+      ],
+      "observationRefs": [
+        "observation.twilight-princess.body-form-changes-the-investigation-question",
+        "observation.spirit-tracks.phantom-path-enables-cooperation",
+        "observation.tears-of-the-kingdom.regional-partner-turns-vow-into-ability"
+      ],
+      "counterEvidenceRefs": [
+        "observation.the-wind-waker.expressive-reaction-serves-story-and-rule-reading"
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "supportingWorkRefs": [
+        "work.twilight-princess",
+        "work.echoes-of-wisdom"
+      ],
+      "observationRefs": [
+        "observation.twilight-princess.province-restoration-reframes-known-space",
+        "observation.echoes-of-wisdom.rift-expedition-converts-repair-into-story-state"
+      ],
+      "counterEvidenceRefs": [
+        "observation.the-legend-of-zelda.tools-reveal-overworld-state"
+      ]
+    },
+    {
+      "patternId": "pattern.threshold-performance-cue",
+      "supportingWorkRefs": [
+        "work.the-legend-of-zelda"
+      ],
+      "observationRefs": [
+        "observation.the-legend-of-zelda.cave-message-redirects-search"
+      ],
+      "counterEvidenceRefs": [
+        "observation.a-link-to-the-past.milestone-transition-reframes-campaign"
+      ]
+    },
+    {
+      "patternId": "pattern.agency-performance-breathing",
+      "supportingWorkRefs": [
+        "work.the-legend-of-zelda"
+      ],
+      "observationRefs": [
+        "observation.the-legend-of-zelda.cave-message-redirects-search"
+      ],
+      "counterEvidenceRefs": [
+        "observation.breath-of-the-wild.landmark-climb-creates-self-route"
+      ]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "supportingWorkRefs": [
+        "work.a-link-to-the-past",
+        "work.links-awakening"
+      ],
+      "observationRefs": [
+        "observation.a-link-to-the-past.storm-rescue-teaches-action-chain",
+        "observation.links-awakening.recover-sword-establishes-castaway-loop"
+      ],
+      "counterEvidenceRefs": [
+        "observation.ocarina-of-time.lock-on-turns-free-3d-into-readable-duels"
+      ]
+    },
+    {
+      "patternId": "pattern.reversible-reset-knowledge-retention",
+      "supportingWorkRefs": [
+        "work.majoras-mask"
+      ],
+      "observationRefs": [
+        "observation.majoras-mask.knowledge-converts-failed-cycle-into-progress",
+        "observation.majoras-mask.reset-contract-separates-world-and-player-state"
+      ],
+      "counterEvidenceRefs": [
+        "observation.the-legend-of-zelda.fixed-screen-failure-retry"
+      ]
+    },
+    {
+      "patternId": "pattern.final-exam-recombination",
+      "supportingWorkRefs": [
+        "work.ocarina-of-time"
+      ],
+      "observationRefs": [
+        "observation.ocarina-of-time.boss-recombines-readable-rule-under-risk"
+      ],
+      "counterEvidenceRefs": [
+        "observation.a-link-between-worlds.height-puzzle-supports-optional-hint"
+      ]
+    },
+    {
+      "patternId": "pattern.systemic-verb-toolkit",
+      "supportingWorkRefs": [
+        "work.tears-of-the-kingdom"
+      ],
+      "observationRefs": [
+        "observation.tears-of-the-kingdom.ultrahand-builds-local-solution",
+        "observation.tears-of-the-kingdom.fuse-converts-loot-into-function"
+      ],
+      "counterEvidenceRefs": [
+        "observation.echoes-of-wisdom.echo-learning-turns-observation-into-vocabulary"
+      ]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "supportingWorkRefs": [
+        "work.skyward-sword",
+        "work.breath-of-the-wild",
+        "work.tears-of-the-kingdom"
+      ],
+      "observationRefs": [
+        "observation.skyward-sword.revisited-landform-receives-a-new-rule",
+        "observation.breath-of-the-wild.landmark-climb-creates-self-route",
+        "observation.tears-of-the-kingdom.vertical-entry-links-world-layers"
+      ],
+      "counterEvidenceRefs": [
+        "observation.spirit-tracks.restored-track-opens-network"
+      ]
+    },
+    {
+      "patternId": "pattern.cooperative-role-interdependence",
+      "supportingWorkRefs": [
+        "work.four-swords",
+        "work.four-swords-adventures",
+        "work.tri-force-heroes"
+      ],
+      "observationRefs": [
+        "observation.four-swords.cooperation-and-score-share-one-action-space",
+        "observation.four-swords-adventures.four-bodies-become-one-configurable-verb",
+        "observation.tri-force-heroes.totem-converts-team-into-height"
+      ],
+      "counterEvidenceRefs": [
+        "observation.links-awakening.recover-sword-establishes-castaway-loop"
+      ]
+    },
+    {
+      "patternId": "pattern.asymmetric-screen-information",
+      "supportingWorkRefs": [
+        "work.four-swords-adventures"
+      ],
+      "observationRefs": [
+        "observation.four-swords-adventures.four-bodies-become-one-configurable-verb"
+      ],
+      "counterEvidenceRefs": [
+        "observation.four-swords.cooperation-and-score-share-one-action-space"
+      ]
+    }
+  ]
+}

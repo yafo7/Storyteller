@@ -1,0 +1,120 @@
+{
+  "reportVersion": "1.0.0",
+  "reportId": "report.p5.release-determinism",
+  "generatedAt": "2026-07-18",
+  "prerequisiteEvidence": {
+    "patternRegistryRegenerated": true,
+    "benchmarkCasesRegenerated": true,
+    "selectorBenchmarksRegenerated": true,
+    "adapterContractsRegenerated": true
+  },
+  "compilerRuns": 2,
+  "byteIdentical": true,
+  "first": {
+    "packBytes": 13334,
+    "packSha256": "077dda95d52c5bf38bd9faa32a035b0d66377dcf275e3ee8f374431f75cfd94f",
+    "releaseBytes": 46149,
+    "releaseSha256": "378578203006d571a9df20e1b6bc577f2e50c462556809bf9c95514af19ef435"
+  },
+  "second": {
+    "packBytes": 13334,
+    "packSha256": "077dda95d52c5bf38bd9faa32a035b0d66377dcf275e3ee8f374431f75cfd94f",
+    "releaseBytes": 46149,
+    "releaseSha256": "378578203006d571a9df20e1b6bc577f2e50c462556809bf9c95514af19ef435"
+  },
+  "releaseValidations": [
+    {
+      "compilerRun": 1,
+      "ok": true,
+      "metrics": {
+        "pack": {
+          "files": 53,
+          "treeHash": "888ff93a0897083efec9a76ff1394cabfb20a0a355506fdd4f4059818ed3b590",
+          "counts": {
+            "works": 21,
+            "sources": 42,
+            "observations": 105,
+            "claims": 210,
+            "dossiers": 21,
+            "patterns": 36,
+            "relations": 10,
+            "adapters": 0,
+            "benchmarks": 0
+          },
+          "releasedPatterns": 13
+        },
+        "library": {
+          "files": 233,
+          "treeHash": "ec216aaa8fd3a1af69c656405dd8003f4460f533e655eaeca498ebcd1cb218e6",
+          "indexes": 3,
+          "adapter": "adapter.2d-topdown-v021",
+          "benchmarkCases": 10
+        }
+      },
+      "errors": []
+    },
+    {
+      "compilerRun": 2,
+      "ok": true,
+      "metrics": {
+        "pack": {
+          "files": 53,
+          "treeHash": "888ff93a0897083efec9a76ff1394cabfb20a0a355506fdd4f4059818ed3b590",
+          "counts": {
+            "works": 21,
+            "sources": 42,
+            "observations": 105,
+            "claims": 210,
+            "dossiers": 21,
+            "patterns": 36,
+            "relations": 10,
+            "adapters": 0,
+            "benchmarks": 0
+          },
+          "releasedPatterns": 13
+        },
+        "library": {
+          "files": 233,
+          "treeHash": "ec216aaa8fd3a1af69c656405dd8003f4460f533e655eaeca498ebcd1cb218e6",
+          "indexes": 3,
+          "adapter": "adapter.2d-topdown-v021",
+          "benchmarkCases": 10
+        }
+      },
+      "errors": []
+    }
+  ],
+  "recursiveReleaseValidation": {
+    "ok": true,
+    "metrics": {
+      "pack": {
+        "files": 53,
+        "treeHash": "888ff93a0897083efec9a76ff1394cabfb20a0a355506fdd4f4059818ed3b590",
+        "counts": {
+          "works": 21,
+          "sources": 42,
+          "observations": 105,
+          "claims": 210,
+          "dossiers": 21,
+          "patterns": 36,
+          "relations": 10,
+          "adapters": 0,
+          "benchmarks": 0
+        },
+        "releasedPatterns": 13
+      },
+      "library": {
+        "files": 233,
+        "treeHash": "ec216aaa8fd3a1af69c656405dd8003f4460f533e655eaeca498ebcd1cb218e6",
+        "indexes": 3,
+        "adapter": "adapter.2d-topdown-v021",
+        "benchmarkCases": 10
+      }
+    },
+    "errors": []
+  },
+  "summary": {
+    "adjudication": "pass",
+    "blockers": []
+  }
+}

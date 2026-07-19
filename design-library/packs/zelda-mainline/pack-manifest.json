@@ -1,0 +1,382 @@
+{
+  "schemaVersion": "1.0.0",
+  "packId": "pack.zelda-mainline",
+  "packVersion": "0.3.0",
+  "status": "beta",
+  "hashPolicy": {
+    "algorithm": "canonical-tree-sha256/v1",
+    "canonicalizationVersion": "1",
+    "treeHash": "888ff93a0897083efec9a76ff1394cabfb20a0a355506fdd4f4059818ed3b590"
+  },
+  "scope": {
+    "scopeId": "scope.zelda-mainline",
+    "scopeVersion": "1.0.0",
+    "scopeHash": "1e118984e7315721f542bd59958f61ba7c9502b547577b9ef42b1e99a5cd00ab"
+  },
+  "schemaVersions": {
+    "scope": "1.0.0",
+    "work": "1.0.0",
+    "source": "1.0.0",
+    "claim": "1.0.0",
+    "observation": "1.0.0",
+    "dossier": "1.0.0",
+    "relation": "1.0.0",
+    "pattern": "1.0.0",
+    "selection": "1.0.0",
+    "lock": "1.0.0",
+    "benchmark": "1.0.0",
+    "pack": "1.0.0",
+    "taxonomy": "1.0.0",
+    "adapter": "1.0.0",
+    "migration": "1.0.0",
+    "libraryRelease": "1.0.0"
+  },
+  "content": {
+    "works": 21,
+    "sources": 42,
+    "observations": 105,
+    "claims": 210,
+    "dossiers": 21,
+    "patterns": 36,
+    "relations": 10,
+    "adapters": 0,
+    "benchmarks": 0
+  },
+  "coverage": {
+    "scopeCoverage": 1,
+    "workCoverage": 1,
+    "dimensionCoverage": 1,
+    "evidenceClosure": 1,
+    "observationDisposition": 1,
+    "patternReadiness": 1
+  },
+  "governance": {
+    "evidencePolicyVersion": "1.0.0",
+    "originalityPolicyVersion": "1.1.0",
+    "mergePolicyVersion": "1.0.0",
+    "migrationRefs": [
+      "migration.pattern.reward-expands-future-possibility.1.1.0-to-2.0.0"
+    ],
+    "releaseNotes": "Evidence-backed Zelda mainline design Pack Beta: 21 works, 13 callable patterns, 23 quarantined research records, bounded counterevidence, blocking static originality controls, historical blind diagnostics deferred to P8 whole-game review, a verified reward-pattern migration, and production-safe retrieval indexes."
+  },
+  "fileManifest": [
+    {
+      "path": "packs/zelda-mainline/catalog.json",
+      "kind": "scope",
+      "bytes": 6940,
+      "sha256": "65234bcc2b761abea9aa964794849fa4d59065d786c917a9f48cc054c8a89f8f"
+    },
+    {
+      "path": "packs/zelda-mainline/claims/claim-registry.json",
+      "kind": "claim",
+      "bytes": 237161,
+      "sha256": "bb6cb2e00a97b6e81e9e7c2c4e67800178944b91e66ec2ee0851dc5212123c29"
+    },
+    {
+      "path": "packs/zelda-mainline/corpus-scope.json",
+      "kind": "scope",
+      "bytes": 9824,
+      "sha256": "1e118984e7315721f542bd59958f61ba7c9502b547577b9ef42b1e99a5cd00ab"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/calibration-independent-review.json",
+      "kind": "report",
+      "bytes": 32425,
+      "sha256": "5d11506f453e0c10b433691cf94b1d5b2e4a3c57d06ff61bfab9047ad7a2b932"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/calibration-remediation-review.json",
+      "kind": "report",
+      "bytes": 10286,
+      "sha256": "a0f691114efe91be2651ce419314f47e164d3d61a5219b8793b0bb35db86838d"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/calibration-report.json",
+      "kind": "report",
+      "bytes": 1866,
+      "sha256": "a3a8d719e78b442c8ef48df8ca64de256df91775f9d3d76deb2cf00d8c2972d9"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/calibration-selection.json",
+      "kind": "report",
+      "bytes": 21636,
+      "sha256": "79d7b988d71008558c3670d3e96bf16d9eb50214ee175ee20c084bdc40848cde"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/calibration-vertical-slice.json",
+      "kind": "report",
+      "bytes": 8366,
+      "sha256": "9f818285b49c26cb2178a7ca16264f9319afd727797e4858d4e9c5176c1efe21"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/coverage-report.json",
+      "kind": "report",
+      "bytes": 5260,
+      "sha256": "8a5aad251d898ecbd6e7b95fed870a1e18620d9b0e7bd0c9d8717c38259c6f10"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/observation-disposition.json",
+      "kind": "report",
+      "bytes": 35212,
+      "sha256": "495f8d461834f9808907dd4142e68b5d6ad8e7b5652ad5918943a557cac54b3d"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/originality-review.json",
+      "kind": "report",
+      "bytes": 13894,
+      "sha256": "135ce3a3504ef1ebcd6e94bf28feefec202cfdd0ee316795005918ff52b3a4e9"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/p4-existing-evidence-review.json",
+      "kind": "report",
+      "bytes": 16061,
+      "sha256": "3a0785c7cd38806988d940a094e96b63c4c8e3a9f8854bc08737d969498fa256"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/p4-existing-rebind-review-c.json",
+      "kind": "report",
+      "bytes": 25684,
+      "sha256": "3fbedf94a9f31748d705c140c8681f4aa11b58f5745c4114b1bcdb45a17fa1c6"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/p4-supplemental-evidence-review.json",
+      "kind": "report",
+      "bytes": 20079,
+      "sha256": "d9134031ac73bed987fef0a1a10951542354445c33895e83c90899e55f84b519"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/pattern-contract-test-report.json",
+      "kind": "report",
+      "bytes": 4421,
+      "sha256": "0657855f7e5bfd076242279be72828dc5bc80a219ae97127a63346f60bd3964c"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/pattern-independent-review.json",
+      "kind": "report",
+      "bytes": 51678,
+      "sha256": "3534d1ea43a8461a677cc1b73d5d3026e5b384a992bd21572672a5b722fc5f9f"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/pattern-remediation-review.json",
+      "kind": "report",
+      "bytes": 20699,
+      "sha256": "7f832a79c4a5c4fc140c0e3599f1a8850a8bca6ee56320b7ba245cf694970e2a"
+    },
+    {
+      "path": "packs/zelda-mainline/flavor-profile.json",
+      "kind": "report",
+      "bytes": 2977,
+      "sha256": "2b7708e235e487e203c3b0ebce31cef813fbb9ad5297a48862ce9fa35c07cf60"
+    },
+    {
+      "path": "packs/zelda-mainline/observations/observation-registry.json",
+      "kind": "observation",
+      "bytes": 254082,
+      "sha256": "e7d484c4f65acb71a1e2fc8b29f75603cb5521af96704d6f8cdf935bd2082e49"
+    },
+    {
+      "path": "packs/zelda-mainline/originality-fingerprints.json",
+      "kind": "governance",
+      "bytes": 1172,
+      "sha256": "9df2273b01d5562a677b70528edf6ee00208455f0942811d10fa3abdc793d8a6"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/calibration/provisional-stateful-revisit.json",
+      "kind": "pattern",
+      "bytes": 26642,
+      "sha256": "120f166aa65ab460a3eca82ec743d70c33bc4be921199352b9ce6d91c3248a51"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/maturity-contracts.json",
+      "kind": "pattern",
+      "bytes": 204125,
+      "sha256": "607c1d1309ccafef60c4f7c2a63b22b7c8e24b1ae6a6329b42c19c18ad3de352"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/pattern-blueprints.json",
+      "kind": "pattern",
+      "bytes": 47166,
+      "sha256": "08894c840c4c1b058ded06ee5bab0fa1799d979bde7ff149c44c3d0650ac8dc2"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/provenance-remediation-map.json",
+      "kind": "pattern",
+      "bytes": 16199,
+      "sha256": "afa8d1be094f27437c28f12ebdbcaec62c0e8186678382ee5c3895302efa3bb5"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/quarantine-register.json",
+      "kind": "pattern",
+      "bytes": 25346,
+      "sha256": "288cc97789d218ff754ee2ab7e229e7abc8f6402149308485020f27fd835c678"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/released-patterns.json",
+      "kind": "pattern",
+      "bytes": 872656,
+      "sha256": "23aa61893a445c151d0acc8e122452fb0720f4e03b2694d729d279480d4da8b3"
+    },
+    {
+      "path": "packs/zelda-mainline/relations/relation-registry.json",
+      "kind": "relation",
+      "bytes": 6302,
+      "sha256": "e9252c955fb10bc90e66835b098fd16b920338f479a978d6051453573224bc3c"
+    },
+    {
+      "path": "packs/zelda-mainline/sources/source-registry.json",
+      "kind": "source",
+      "bytes": 35862,
+      "sha256": "eb6adfbbdc6e8793e03406ba10d108da986e881a3d19da39e3c244a68b73e735"
+    },
+    {
+      "path": "packs/zelda-mainline/works/TITLE_PROFILE_CONTRACT.md",
+      "kind": "work",
+      "bytes": 2374,
+      "sha256": "461334d729f868fc0d8f6134d8b645a0274617a136ff79d76f1d3b017e1c7cee"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/a-link-between-worlds.json",
+      "kind": "dossier",
+      "bytes": 14177,
+      "sha256": "71a984fbb8036a5c230bef3cb65ff5f306fc269072554a1ef88874977558d028"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/a-link-to-the-past.json",
+      "kind": "dossier",
+      "bytes": 14398,
+      "sha256": "0c2e89f06a54c3528caad22f246825c98ff957c6c4b89cfddb1c368930187c29"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/breath-of-the-wild.json",
+      "kind": "dossier",
+      "bytes": 14875,
+      "sha256": "490fae32316fcce3e1fd28595105f2f13bc8608e6128ea02b4ab2ac6184381ad"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/echoes-of-wisdom.json",
+      "kind": "dossier",
+      "bytes": 16405,
+      "sha256": "39b62c19ce03a694cab21959ca16cb1a231f39a48d08bdc295b5a12b4929919e"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/four-swords-adventures.json",
+      "kind": "dossier",
+      "bytes": 13815,
+      "sha256": "9d547ad839257b56ce8fbe020e9a626b4cd6bb62a8a8e98aa99c1f3aeb223f25"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/four-swords.json",
+      "kind": "dossier",
+      "bytes": 13641,
+      "sha256": "2a0c9ed0e49dc64497430bcdefc415b9911ce4804255d7f412d2661be3095adb"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/links-awakening.json",
+      "kind": "dossier",
+      "bytes": 14111,
+      "sha256": "fd97067c9f610691089e83ce3a8b6300124d8be97ed3813e5490ad7101798d6b"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/majoras-mask.json",
+      "kind": "dossier",
+      "bytes": 13606,
+      "sha256": "be624c90e4ffa343acbd1e0f2336d850ec310a3b517d78b306b8e83912f8b053"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/ocarina-of-time.json",
+      "kind": "dossier",
+      "bytes": 13044,
+      "sha256": "1b522be8d7fa580e5b28f192538a146126afaad90e847d2b2313d09fc7170bc6"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/oracle-of-ages.json",
+      "kind": "dossier",
+      "bytes": 14129,
+      "sha256": "8e6e54f0c3a919a0cca6660e0727b0ff7c9bb8b8e58cad51050d324d0a649c96"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/oracle-of-seasons.json",
+      "kind": "dossier",
+      "bytes": 14048,
+      "sha256": "28f1e1d622c136a6283801f27914e46ba9c9a4f85feeb58d9863601d1e3ef16b"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/phantom-hourglass.json",
+      "kind": "dossier",
+      "bytes": 14361,
+      "sha256": "7085724baea33dfcce6f410b0e262dba8200b4da4e484e727b9e9ff6dd696057"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/skyward-sword.json",
+      "kind": "dossier",
+      "bytes": 14415,
+      "sha256": "78a8c57b403e11b4398e4f5732f430e3e9de4877609b9d47e7ee5f0e8d46696f"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/spirit-tracks.json",
+      "kind": "dossier",
+      "bytes": 14179,
+      "sha256": "d83efcc984cd88d950ee9abff274ca7b3902fb7a1bd44cd2cd8afec68f53c6cd"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/tears-of-the-kingdom.json",
+      "kind": "dossier",
+      "bytes": 15162,
+      "sha256": "c70d4e314ea05338a215d93f101c578f00a0560392c458346b9ceeed51721cb2"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/the-legend-of-zelda.json",
+      "kind": "dossier",
+      "bytes": 13728,
+      "sha256": "0682f282638e735f5785e8e7f0d6cf857ee67ed69910f2b5e844810a8ba260e9"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/the-minish-cap.json",
+      "kind": "dossier",
+      "bytes": 14309,
+      "sha256": "59552873f4e0b4cb691592b3474fc861de7e7b57ca57fd8b22be49939092210c"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/the-wind-waker.json",
+      "kind": "dossier",
+      "bytes": 13483,
+      "sha256": "f7e877a600c54574ce1896e6053b9fe5f9f8b8807ade092d79c0fbcebb4d91be"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/tri-force-heroes.json",
+      "kind": "dossier",
+      "bytes": 14079,
+      "sha256": "5497a99cc5e86c76833cb802028ce92c3a35d25ec4b2c39b40140866e8cb304f"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/twilight-princess.json",
+      "kind": "dossier",
+      "bytes": 13696,
+      "sha256": "7ad2d91323093b0e0b1acfe774c36506a7184bcce4eef4c8f164d539fcc0bed7"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/zelda-ii-the-adventure-of-link.json",
+      "kind": "dossier",
+      "bytes": 14276,
+      "sha256": "b93bd18c050c0dcb47c0e2a5f9b7e51d11c9c6f2bd725bcc1ac8e57f76cc1846"
+    },
+    {
+      "path": "packs/zelda-mainline/works/title-dossier-registry.json",
+      "kind": "dossier",
+      "bytes": 216406,
+      "sha256": "d676f59a2ee1cb9f9a6f71e627036bac0dcfaef48e1d01e8a5c583afc1e673a4"
+    },
+    {
+      "path": "packs/zelda-mainline/works/work-families.json",
+      "kind": "work",
+      "bytes": 691,
+      "sha256": "a18f6a2f070acbb07479907c873df4a03e72a89180e7abdcf1b4af2490efd61d"
+    },
+    {
+      "path": "packs/zelda-mainline/works/work-registry.json",
+      "kind": "work",
+      "bytes": 51529,
+      "sha256": "363a14c624cfe0c70e5f5aac41a80f965cae40ba9856a7c9d9838a226fe01249"
+    }
+  ]
+}

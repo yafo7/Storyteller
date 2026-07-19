@@ -1,0 +1,31 @@
+{
+  "fixtureId": "fixture.migration.reward-expands-future-possibility.legacy-choice-input",
+  "fixtureVersion": "1.0.0",
+  "patternRef": "pattern.reward-expands-future-possibility@1.1.0",
+  "scenarioId": "scenario.community-radio-cache",
+  "application": {
+    "subtype": "choice-generating-reward",
+    "bindings": {
+      "discoveryRef": "interaction.restore-hilltop-relay",
+      "rewardRef": "reward.relay-access-token",
+      "choiceSetRef": "choice-set.relay-followups",
+      "optionalDiscovery": true,
+      "laterChoiceCount": 2,
+      "nonDominatedCount": 2,
+      "unselectedOptionsPreserved": true,
+      "economyRuleRef": "economy.community-bandwidth"
+    },
+    "effects": [
+      "effect.future-reward.grant-choice-resource",
+      "effect.future-reward.register-future-options",
+      "effect.future-reward.unlock-one-later-choice"
+    ]
+  },
+  "knownEvidenceBoundary": {
+    "acquisitionTransactionRef": null,
+    "persistentStateRefs": [],
+    "functions": [],
+    "actionabilityDeltas": [],
+    "statement": "The legacy application records optionality and a choice count, but it does not identify an atomic acquisition transaction, committed persistent states, function bindings, future-use contexts, feedback, or before-and-after actionability."
+  }
+}

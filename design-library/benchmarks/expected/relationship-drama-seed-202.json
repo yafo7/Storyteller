@@ -1,0 +1,780 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.benchmark.selector.relationship-drama",
+  "storyModelHash": "bb73116918038adae7b5bac14939a2ceda778d7e1768ffff49ab6f1322db7edc",
+  "libraryLockRef": "lock.benchmark-unlocked",
+  "provenancePolicy": {
+    "enabledPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "blockedPackIds": [],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": [
+      "signal.relationship-memory",
+      "signal.schedule-pressure",
+      "signal.revisited-place",
+      "signal.embodied-secret",
+      "signal.confined-stage"
+    ],
+    "experienceGoals": [
+      "experience.social-recognition",
+      "experience.embodied-revelation",
+      "experience.curiosity-tension"
+    ],
+    "spatialConstraints": [
+      "signal.revisited-place",
+      "signal.confined-stage"
+    ],
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.schedule-clock",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.route-simulation"
+    ],
+    "budget": {
+      "design": "medium",
+      "code": "medium",
+      "art": "medium",
+      "qa": "high"
+    },
+    "negativeSignals": []
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.813
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.663
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.553
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.telemetry"
+      ]
+    },
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.837
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.787
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 1,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.737
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.597
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 1,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.547
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.487
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 0,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.387
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 0,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.297
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "manual-binding-incomplete"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Reward 2.0 manual binding closure is incomplete: exactly one explicit acquisition transaction is required; the acquisition transaction must declare an atomic commit; one or more explicit persistent state refs are required; at least two explicit reward functions are required; reward functions must span at least two distinct functional dimensions; an explicit economy rule ref is required; a passed, evidenced protected-story-order check is required."
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.12
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    }
+  ],
+  "selectedApplications": [
+    {
+      "applicationId": "application.selector.relationship-drama.1",
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "role": "core",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.facts",
+        "storyModel.locations",
+        "storyModel.revealOrder",
+        "storyModel.protectedCanon"
+      ],
+      "retainedPrinciples": [
+        "Treat a player-completed world-state transition as one atomic change: stage a coordinated before-and-after cue and make at least one affected navigation, actor, or interaction state observable in subsequent play."
+      ],
+      "adaptationSummary": "Instantiate Embodied world-change reveal from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "source light-dark or corruption-restoration cosmology",
+        "source milestone cast and location sequence",
+        "source transition camera, music, and reward cadence"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "storyModel",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.embodied-world-change-reveal",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.0.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.embodied-reveal.selection",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.embodied-reveal.commit-transition",
+          "parameterBindings": {
+            "parameter.embodied-reveal.transition-fact": "No relative is a villain",
+            "parameter.embodied-reveal.before-variant": "map-state-variant-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.after-variant": "map-state-variant-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.performance-cue": "performance-sequence-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.changed-states": "state-delta-ref-array.embodied-world-change-reveal.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.world.activeFactRef must satisfy equals-ref against reference parameter.embodied-reveal.transition-fact before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract.",
+            "$.world.activeVariant must satisfy equals-ref against reference parameter.embodied-reveal.after-variant before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract.",
+            "$.world.changedStates must satisfy contains-all-ref against reference parameter.embodied-reveal.changed-states before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract.",
+            "$.world.transitionTransactionComplete must satisfy equals against true before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract.",
+            "$.routes.requiredRecovery must satisfy reachable against true before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.embodied-reveal.stage-before-after-cue",
+          "parameterBindings": {
+            "parameter.embodied-reveal.transition-fact": "No relative is a villain",
+            "parameter.embodied-reveal.before-variant": "map-state-variant-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.after-variant": "map-state-variant-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.performance-cue": "performance-sequence-ref.embodied-world-change-reveal.story-derived",
+            "parameter.embodied-reveal.changed-states": "state-delta-ref-array.embodied-world-change-reveal.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.performance.completedCue must satisfy equals-ref against reference parameter.embodied-reveal.performance-cue before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract.",
+            "$.performance.cueStateMatchesWorld must satisfy equals against true before the authored transaction is accepted. This realizes the distinct enacted-world-state-transition causal contract."
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.world-facts",
+        "capability.map-layers",
+        "capability.performance-cues",
+        "capability.camera-cues",
+        "capability.checkpoints",
+        "capability.route-simulation"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    },
+    {
+      "applicationId": "application.selector.relationship-drama.2",
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "role": "support",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.facts",
+        "storyModel.locations",
+        "storyModel.revealOrder",
+        "storyModel.protectedCanon"
+      ],
+      "retainedPrinciples": [
+        "Use one authoritative world fact to drive both a visible world-state delta and at least one situated NPC dialogue, availability, behavior, service, or access delta, so character response cannot contradict the state the player can observe."
+      ],
+      "adaptationSummary": "Instantiate NPC reacts to world state from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "source restoration cast roles",
+        "source town schedules and dialogue beats",
+        "source celebration or gratitude staging"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.1.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.1.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "storyModel",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.1.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.npc-reacts-to-world-state",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.1.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.npc-state.selection",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.1.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.npc-state.commit-visible-world-delta",
+          "parameterBindings": {
+            "parameter.npc-state.world-fact": "No relative is a villain",
+            "parameter.npc-state.world-delta": "world-state-delta-ref.npc-reacts-to-world-state.story-derived",
+            "parameter.npc-state.actor": "Returning family member who lacks the final decision’s context",
+            "parameter.npc-state.before-npc-state": "npc-state-ref.npc-reacts-to-world-state.story-derived",
+            "parameter.npc-state.after-npc-state": "npc-state-ref.npc-reacts-to-world-state.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.world.visibleStateDelta must satisfy matches-ref against reference parameter.npc-state.world-delta before the authored transaction is accepted. This realizes the distinct situated-social-reflection causal contract.",
+            "$.world.visibleStateSourceFactRef must satisfy equals-ref against reference parameter.npc-state.world-fact before the authored transaction is accepted. This realizes the distinct situated-social-reflection causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.npc-state.apply-shared-fact-npc-delta",
+          "parameterBindings": {
+            "parameter.npc-state.world-fact": "No relative is a villain",
+            "parameter.npc-state.world-delta": "world-state-delta-ref.npc-reacts-to-world-state.story-derived",
+            "parameter.npc-state.actor": "Returning family member who lacks the final decision’s context",
+            "parameter.npc-state.before-npc-state": "npc-state-ref.npc-reacts-to-world-state.story-derived",
+            "parameter.npc-state.after-npc-state": "npc-state-ref.npc-reacts-to-world-state.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.actors.target.currentState must satisfy equals-ref against reference parameter.npc-state.after-npc-state before the authored transaction is accepted. This realizes the distinct situated-social-reflection causal contract.",
+            "$.actors.target.stateSourceFactRef must satisfy equals-ref against reference parameter.npc-state.world-fact before the authored transaction is accepted. This realizes the distinct situated-social-reflection causal contract."
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.world-facts",
+        "capability.map-layers",
+        "capability.dialogue-gates",
+        "capability.npc-state",
+        "capability.schedule-clock",
+        "capability.performance-cues",
+        "capability.checkpoints",
+        "capability.route-simulation"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    }
+  ],
+  "composition": {
+    "corePatternRef": "pattern.embodied-world-change-reveal",
+    "supportPatternRefs": [
+      "pattern.npc-reacts-to-world-state"
+    ],
+    "sharedExperienceAxis": "experience.embodied-revelation",
+    "conflictsResolved": [
+      "Removed candidates that conflict with the selected core or duplicate an already represented pattern kind."
+    ],
+    "developmentArc": [
+      "teach",
+      "practice",
+      "variation",
+      "combine-or-reverse",
+      "exam"
+    ]
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.checkpoints",
+      "capability.route-simulation",
+      "capability.dialogue-gates",
+      "capability.npc-state",
+      "capability.schedule-clock"
+    ],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "structuralDeltas": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "forbiddenTransfers": [
+      "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+    ],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": [
+      "A reviewer cannot reliably attribute the instance to one source encounter",
+      "At least four transformation axes materially change",
+      "Protected canon and reveal order remain unchanged"
+    ]
+  },
+  "abstention": {
+    "abstained": false,
+    "reason": null
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.selector.relationship-drama.gameplay",
+      "owner": "gameplay",
+      "contractRef": "gameplay-design/v03",
+      "applicationRefs": [
+        "application.selector.relationship-drama.1",
+        "application.selector.relationship-drama.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.embodied-world-change-reveal",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.embodied-world-change-reveal.selection.1",
+        "assertion.embodied-world-change-reveal.selection.2",
+        "assertion.embodied-world-change-reveal.selection.3",
+        "assertion.embodied-world-change-reveal.runtime.1",
+        "assertion.embodied-world-change-reveal.runtime.2",
+        "assertion.embodied-world-change-reveal.runtime.3",
+        "assertion.embodied-world-change-reveal.runtime.4",
+        "assertion.embodied-world-change-reveal.runtime.5",
+        "assertion.embodied-world-change-reveal.runtime.6",
+        "assertion.embodied-world-change-reveal.route.1",
+        "assertion.embodied-world-change-reveal.route.2",
+        "assertion.embodied-world-change-reveal.route.3",
+        "assertion.embodied-world-change-reveal.originality.1",
+        "assertion.embodied-world-change-reveal.originality.2",
+        "assertion.embodied-world-change-reveal.originality.3",
+        "assertion.npc-reacts-to-world-state.selection.1",
+        "assertion.npc-reacts-to-world-state.selection.2",
+        "assertion.npc-reacts-to-world-state.selection.3",
+        "assertion.npc-reacts-to-world-state.runtime.1",
+        "assertion.npc-reacts-to-world-state.runtime.2",
+        "assertion.npc-reacts-to-world-state.runtime.3",
+        "assertion.npc-reacts-to-world-state.runtime.4",
+        "assertion.npc-reacts-to-world-state.runtime.5",
+        "assertion.npc-reacts-to-world-state.runtime.6",
+        "assertion.npc-reacts-to-world-state.runtime.7",
+        "assertion.npc-reacts-to-world-state.route.1",
+        "assertion.npc-reacts-to-world-state.route.2",
+        "assertion.npc-reacts-to-world-state.originality.1",
+        "assertion.npc-reacts-to-world-state.originality.2",
+        "assertion.npc-reacts-to-world-state.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.relationship-drama.performance",
+      "owner": "performance",
+      "contractRef": "performance-design/v03",
+      "applicationRefs": [
+        "application.selector.relationship-drama.1",
+        "application.selector.relationship-drama.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.embodied-world-change-reveal",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.embodied-world-change-reveal.selection.1",
+        "assertion.embodied-world-change-reveal.selection.2",
+        "assertion.embodied-world-change-reveal.selection.3",
+        "assertion.embodied-world-change-reveal.runtime.1",
+        "assertion.embodied-world-change-reveal.runtime.2",
+        "assertion.embodied-world-change-reveal.runtime.3",
+        "assertion.embodied-world-change-reveal.runtime.4",
+        "assertion.embodied-world-change-reveal.runtime.5",
+        "assertion.embodied-world-change-reveal.runtime.6",
+        "assertion.embodied-world-change-reveal.route.1",
+        "assertion.embodied-world-change-reveal.route.2",
+        "assertion.embodied-world-change-reveal.route.3",
+        "assertion.embodied-world-change-reveal.originality.1",
+        "assertion.embodied-world-change-reveal.originality.2",
+        "assertion.embodied-world-change-reveal.originality.3",
+        "assertion.npc-reacts-to-world-state.selection.1",
+        "assertion.npc-reacts-to-world-state.selection.2",
+        "assertion.npc-reacts-to-world-state.selection.3",
+        "assertion.npc-reacts-to-world-state.runtime.1",
+        "assertion.npc-reacts-to-world-state.runtime.2",
+        "assertion.npc-reacts-to-world-state.runtime.3",
+        "assertion.npc-reacts-to-world-state.runtime.4",
+        "assertion.npc-reacts-to-world-state.runtime.5",
+        "assertion.npc-reacts-to-world-state.runtime.6",
+        "assertion.npc-reacts-to-world-state.runtime.7",
+        "assertion.npc-reacts-to-world-state.route.1",
+        "assertion.npc-reacts-to-world-state.route.2",
+        "assertion.npc-reacts-to-world-state.originality.1",
+        "assertion.npc-reacts-to-world-state.originality.2",
+        "assertion.npc-reacts-to-world-state.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.relationship-drama.stage",
+      "owner": "stage",
+      "contractRef": "stage-plan/v03",
+      "applicationRefs": [
+        "application.selector.relationship-drama.1",
+        "application.selector.relationship-drama.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.embodied-world-change-reveal",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.embodied-world-change-reveal.selection.1",
+        "assertion.embodied-world-change-reveal.selection.2",
+        "assertion.embodied-world-change-reveal.selection.3",
+        "assertion.embodied-world-change-reveal.runtime.1",
+        "assertion.embodied-world-change-reveal.runtime.2",
+        "assertion.embodied-world-change-reveal.runtime.3",
+        "assertion.embodied-world-change-reveal.runtime.4",
+        "assertion.embodied-world-change-reveal.runtime.5",
+        "assertion.embodied-world-change-reveal.runtime.6",
+        "assertion.embodied-world-change-reveal.route.1",
+        "assertion.embodied-world-change-reveal.route.2",
+        "assertion.embodied-world-change-reveal.route.3",
+        "assertion.embodied-world-change-reveal.originality.1",
+        "assertion.embodied-world-change-reveal.originality.2",
+        "assertion.embodied-world-change-reveal.originality.3",
+        "assertion.npc-reacts-to-world-state.selection.1",
+        "assertion.npc-reacts-to-world-state.selection.2",
+        "assertion.npc-reacts-to-world-state.selection.3",
+        "assertion.npc-reacts-to-world-state.runtime.1",
+        "assertion.npc-reacts-to-world-state.runtime.2",
+        "assertion.npc-reacts-to-world-state.runtime.3",
+        "assertion.npc-reacts-to-world-state.runtime.4",
+        "assertion.npc-reacts-to-world-state.runtime.5",
+        "assertion.npc-reacts-to-world-state.runtime.6",
+        "assertion.npc-reacts-to-world-state.runtime.7",
+        "assertion.npc-reacts-to-world-state.route.1",
+        "assertion.npc-reacts-to-world-state.route.2",
+        "assertion.npc-reacts-to-world-state.originality.1",
+        "assertion.npc-reacts-to-world-state.originality.2",
+        "assertion.npc-reacts-to-world-state.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.relationship-drama.evaluation",
+      "owner": "evaluation",
+      "contractRef": "acceptance/v03",
+      "applicationRefs": [
+        "application.selector.relationship-drama.1",
+        "application.selector.relationship-drama.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.embodied-world-change-reveal",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.embodied-world-change-reveal.selection.1",
+        "assertion.embodied-world-change-reveal.selection.2",
+        "assertion.embodied-world-change-reveal.selection.3",
+        "assertion.embodied-world-change-reveal.runtime.1",
+        "assertion.embodied-world-change-reveal.runtime.2",
+        "assertion.embodied-world-change-reveal.runtime.3",
+        "assertion.embodied-world-change-reveal.runtime.4",
+        "assertion.embodied-world-change-reveal.runtime.5",
+        "assertion.embodied-world-change-reveal.runtime.6",
+        "assertion.embodied-world-change-reveal.route.1",
+        "assertion.embodied-world-change-reveal.route.2",
+        "assertion.embodied-world-change-reveal.route.3",
+        "assertion.embodied-world-change-reveal.originality.1",
+        "assertion.embodied-world-change-reveal.originality.2",
+        "assertion.embodied-world-change-reveal.originality.3",
+        "assertion.npc-reacts-to-world-state.selection.1",
+        "assertion.npc-reacts-to-world-state.selection.2",
+        "assertion.npc-reacts-to-world-state.selection.3",
+        "assertion.npc-reacts-to-world-state.runtime.1",
+        "assertion.npc-reacts-to-world-state.runtime.2",
+        "assertion.npc-reacts-to-world-state.runtime.3",
+        "assertion.npc-reacts-to-world-state.runtime.4",
+        "assertion.npc-reacts-to-world-state.runtime.5",
+        "assertion.npc-reacts-to-world-state.runtime.6",
+        "assertion.npc-reacts-to-world-state.runtime.7",
+        "assertion.npc-reacts-to-world-state.route.1",
+        "assertion.npc-reacts-to-world-state.route.2",
+        "assertion.npc-reacts-to-world-state.originality.1",
+        "assertion.npc-reacts-to-world-state.originality.2",
+        "assertion.npc-reacts-to-world-state.originality.3"
+      ]
+    }
+  ],
+  "status": "draft"
+}

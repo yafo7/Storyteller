@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "libraryId": "library.storyteller-game-design",
+  "libraryVersion": "0.3.0",
+  "status": "beta",
+  "authoritativeFormat": "json",
+  "defaultPackRef": "pack.zelda-mainline@0.3.0",
+  "defaultAdapterRef": "adapter.2d-topdown-v021@0.3.1",
+  "schemaRoot": "schemas",
+  "taxonomyRoot": "taxonomies",
+  "packRoots": ["packs/zelda-mainline"],
+  "indexRoot": "indexes",
+  "releaseRoot": "releases",
+  "governance": {
+    "scopePolicy": "governance/scope-policy.md",
+    "evidencePolicy": "governance/evidence-policy.md",
+    "originalityPolicy": "governance/originality-policy.md",
+    "mergePolicy": "governance/merge-policy.md",
+    "hashPolicy": "governance/hash-policy.md"
+  },
+  "productionRule": "A production may read only a locked release index and the selected released pattern records; raw title observations stay outside generation context.",
+  "stabilityNote": "This P5/P6 deliverable is a Skill and Library Beta. P7 must autonomously generate and freeze one playable candidate; Stable additionally requires P8 whole-game blind originality, cold-user, reproducibility, and rollback gates."
+}

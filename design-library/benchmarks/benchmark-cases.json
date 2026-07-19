@@ -1,0 +1,633 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "benchmarkId": "benchmark.locked-room",
+    "category": "locked-room",
+    "inputFixture": {
+      "path": "design-library/benchmarks/story-fixtures/locked-room.json",
+      "hash": "23048a06088753816826c1c38a594d5a7c497eb2b0f6cd9a093618552961d259",
+      "originalityStatement": "An original benchmark about a botanist and a climate-controlled conservatory, created without copying a source game."
+    },
+    "productProfile": "product-profile.v021-topdown-pixel",
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.inventory",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.grid-collision",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.route-simulation"
+    ],
+    "expectedProperties": [
+      "Select one stateful core with observable before/after world consequences",
+      "Include safe teaching and revisit development"
+    ],
+    "forbiddenProperties": [
+      "No cooperative-only or open-world scale pattern",
+      "No source-specific room or object sequence"
+    ],
+    "abstentionExpectation": "must-select",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "metrics": [
+      {
+        "metricId": "metric.hard-veto-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.core-count",
+        "comparator": "less-or-equal",
+        "threshold": 1,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.support-count",
+        "comparator": "less-or-equal",
+        "threshold": 3,
+        "unit": "count",
+        "hardGate": true
+      }
+    ],
+    "status": "active",
+    "failureOwner": "select-game-design-patterns"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "benchmarkId": "benchmark.relationship-drama",
+    "category": "relationship-drama",
+    "inputFixture": {
+      "path": "design-library/benchmarks/story-fixtures/relationship-drama.json",
+      "hash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+      "originalityStatement": "An original domestic drama benchmark; its characters, apartment, chronology, and conflicts were created for selector testing."
+    },
+    "productProfile": "product-profile.v021-topdown-pixel",
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.schedule-clock",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.route-simulation"
+    ],
+    "expectedProperties": [
+      "Prefer NPC state, schedule, or agency-performance patterns",
+      "Keep spatial mechanics subordinate to relationship revelation"
+    ],
+    "forbiddenProperties": [
+      "No combat boss or object-composition core",
+      "No forced high-area exploration"
+    ],
+    "abstentionExpectation": "must-select",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "metrics": [
+      {
+        "metricId": "metric.hard-veto-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.core-count",
+        "comparator": "less-or-equal",
+        "threshold": 1,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.support-count",
+        "comparator": "less-or-equal",
+        "threshold": 3,
+        "unit": "count",
+        "hardGate": true
+      }
+    ],
+    "status": "active",
+    "failureOwner": "select-game-design-patterns"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "benchmarkId": "benchmark.journey-chase",
+    "category": "journey-chase",
+    "inputFixture": {
+      "path": "design-library/benchmarks/story-fixtures/comedy-chase.json",
+      "hash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+      "originalityStatement": "An original comic chase benchmark set on a municipal tram, created for pattern-selection testing."
+    },
+    "productProfile": "product-profile.v021-topdown-pixel",
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.route-gates",
+      "capability.inventory",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.portal-transitions",
+      "capability.grid-collision",
+      "capability.spatial-query",
+      "capability.schedule-clock",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "expectedProperties": [
+      "Support route decisions under schedule pressure",
+      "Preserve comedy and passenger response"
+    ],
+    "forbiddenProperties": [
+      "No reset loop that erases comic continuity",
+      "No solitary contemplative core"
+    ],
+    "abstentionExpectation": "must-select",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "metrics": [
+      {
+        "metricId": "metric.hard-veto-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.core-count",
+        "comparator": "less-or-equal",
+        "threshold": 1,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.support-count",
+        "comparator": "less-or-equal",
+        "threshold": 3,
+        "unit": "count",
+        "hardGate": true
+      }
+    ],
+    "status": "active",
+    "failureOwner": "select-game-design-patterns"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "benchmarkId": "benchmark.open-exploration",
+    "category": "open-exploration",
+    "inputFixture": {
+      "path": "design-library/benchmarks/story-fixtures/open-exploration.json",
+      "hash": "50f5028d8da872c4961fda10f58852500c769af49ea34a089b7f485d6628d168",
+      "originalityStatement": "An original exploration benchmark about weather instruments and a salt plain, with no borrowed world, landmarks, or mechanics."
+    },
+    "productProfile": "product-profile.v021-topdown-pixel",
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.inventory",
+      "capability.context-interaction",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.grid-collision",
+      "capability.spatial-query",
+      "capability.object-placement",
+      "capability.object-composition",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.route-simulation"
+    ],
+    "expectedProperties": [
+      "Prefer landmark, systemic rule, or possibility-expanding reward patterns",
+      "Permit multiple causal routes within runtime budget"
+    ],
+    "forbiddenProperties": [
+      "No forced fixed-order puzzle solution",
+      "No long authored cutscene core"
+    ],
+    "abstentionExpectation": "must-select",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "metrics": [
+      {
+        "metricId": "metric.hard-veto-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.core-count",
+        "comparator": "less-or-equal",
+        "threshold": 1,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.support-count",
+        "comparator": "less-or-equal",
+        "threshold": 3,
+        "unit": "count",
+        "hardGate": true
+      }
+    ],
+    "status": "active",
+    "failureOwner": "select-game-design-patterns"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "benchmarkId": "benchmark.comedy",
+    "category": "comedy",
+    "inputFixture": {
+      "path": "design-library/benchmarks/story-fixtures/comedy-chase.json",
+      "hash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+      "originalityStatement": "An original comic chase benchmark set on a municipal tram, created for pattern-selection testing."
+    },
+    "productProfile": "product-profile.v021-topdown-pixel",
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.route-gates",
+      "capability.inventory",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.portal-transitions",
+      "capability.grid-collision",
+      "capability.spatial-query",
+      "capability.schedule-clock",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "expectedProperties": [
+      "Selected patterns must tolerate fast feedback and comic failure",
+      "At most one core and three supports"
+    ],
+    "forbiddenProperties": [
+      "No solemn source surface or boss-script transfer",
+      "No schedule system that makes recovery punitive"
+    ],
+    "abstentionExpectation": "must-select",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "metrics": [
+      {
+        "metricId": "metric.hard-veto-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.core-count",
+        "comparator": "less-or-equal",
+        "threshold": 1,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.support-count",
+        "comparator": "less-or-equal",
+        "threshold": 3,
+        "unit": "count",
+        "hardGate": true
+      }
+    ],
+    "status": "active",
+    "failureOwner": "select-game-design-patterns"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "benchmarkId": "benchmark.dialogue-heavy",
+    "category": "dialogue-heavy",
+    "inputFixture": {
+      "path": "design-library/benchmarks/story-fixtures/relationship-drama.json",
+      "hash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+      "originalityStatement": "An original domestic drama benchmark; its characters, apartment, chronology, and conflicts were created for selector testing."
+    },
+    "productProfile": "product-profile.v021-topdown-pixel",
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.schedule-clock",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.route-simulation"
+    ],
+    "expectedProperties": [
+      "Use interaction windows and NPC memory without rewriting authored facts",
+      "Preserve reveal order"
+    ],
+    "forbiddenProperties": [
+      "No dialogue dump disguised as a mechanic",
+      "No spatial transformation unrelated to character action"
+    ],
+    "abstentionExpectation": "may-abstain",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "metrics": [
+      {
+        "metricId": "metric.hard-veto-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.core-count",
+        "comparator": "less-or-equal",
+        "threshold": 1,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.support-count",
+        "comparator": "less-or-equal",
+        "threshold": 3,
+        "unit": "count",
+        "hardGate": true
+      }
+    ],
+    "status": "active",
+    "failureOwner": "select-game-design-patterns"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "benchmarkId": "benchmark.low-spatial-change",
+    "category": "low-spatial-change",
+    "inputFixture": {
+      "path": "design-library/benchmarks/story-fixtures/low-spatial-change.json",
+      "hash": "6e37002947466c1e378b94e073c3dd2d28e441a9b5b7da57c55f3b6fa298493b",
+      "originalityStatement": "An original single-room rehearsal benchmark created to test social and performance pacing without map replacement."
+    },
+    "productProfile": "product-profile.v021-topdown-pixel",
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.schedule-clock",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.telemetry",
+      "capability.route-simulation"
+    ],
+    "expectedProperties": [
+      "Prefer schedule, social response, or performance pacing over map replacement",
+      "Keep topology cost low"
+    ],
+    "forbiddenProperties": [
+      "No open-world or dense-overworld core",
+      "No multi-layer map requirement"
+    ],
+    "abstentionExpectation": "may-abstain",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "metrics": [
+      {
+        "metricId": "metric.hard-veto-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.core-count",
+        "comparator": "less-or-equal",
+        "threshold": 1,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.support-count",
+        "comparator": "less-or-equal",
+        "threshold": 3,
+        "unit": "count",
+        "hardGate": true
+      }
+    ],
+    "status": "active",
+    "failureOwner": "select-game-design-patterns"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "benchmarkId": "benchmark.negative-monologue",
+    "category": "negative-control",
+    "inputFixture": {
+      "path": "design-library/benchmarks/story-fixtures/low-fit-monologue.json",
+      "hash": "ce2b286aeeeae41657a1462d822a585eed1d8835f58461a662ae6117a14b4384",
+      "originalityStatement": "An original negative-control monologue written to test principled abstention rather than pattern selection."
+    },
+    "productProfile": "product-profile.v021-topdown-pixel",
+    "runtimeCapabilities": [
+      "capability.performance-cues",
+      "capability.dialogue-gates"
+    ],
+    "expectedProperties": [
+      "Abstain because uninterrupted fixed rhetoric has insufficient causal interaction fit"
+    ],
+    "forbiddenProperties": [
+      "No Zelda-derived core pattern",
+      "No invented spatial or inventory conflict"
+    ],
+    "abstentionExpectation": "must-abstain",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "metrics": [
+      {
+        "metricId": "metric.hard-veto-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.core-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.support-count",
+        "comparator": "less-or-equal",
+        "threshold": 3,
+        "unit": "count",
+        "hardGate": true
+      }
+    ],
+    "status": "active",
+    "failureOwner": "select-game-design-patterns"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "benchmarkId": "benchmark.reward-2-complete-bindings",
+    "category": "regression",
+    "inputFixture": {
+      "path": "design-library/benchmarks/story-fixtures/reward-2-complete-bindings.json",
+      "hash": "ae2f0fe1613aaad05d8e01c2ebf09b1e89dcc70135bbe7bf88d3e77af2b07073",
+      "originalityStatement": "An original benchmark about restoring a weather relay whose persistent signals support navigation and archive research, with no borrowed world, reward object, site, or acquisition staging."
+    },
+    "productProfile": "product-profile.v021-topdown-pixel",
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.inventory",
+      "capability.route-gates",
+      "capability.save-migration",
+      "capability.route-simulation",
+      "capability.map-layers",
+      "capability.context-interaction",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.grid-collision",
+      "capability.spatial-query",
+      "capability.checkpoints",
+      "capability.hint-ladder"
+    ],
+    "expectedProperties": [
+      "Select the Reward 2.0 pattern only with complete explicit bindings"
+    ],
+    "forbiddenProperties": [
+      "No synthesized placeholder may satisfy a Reward 2.0 manual binding"
+    ],
+    "abstentionExpectation": "must-select",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "metrics": [
+      {
+        "metricId": "metric.hard-veto-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.core-count",
+        "comparator": "less-or-equal",
+        "threshold": 1,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.support-count",
+        "comparator": "less-or-equal",
+        "threshold": 3,
+        "unit": "count",
+        "hardGate": true
+      }
+    ],
+    "status": "active",
+    "failureOwner": "select-game-design-patterns"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "benchmarkId": "benchmark.reward-2-missing-bindings",
+    "category": "regression",
+    "inputFixture": {
+      "path": "design-library/benchmarks/story-fixtures/reward-2-missing-bindings.json",
+      "hash": "744e8c1437d6a425203d8a35f7e3c47a83cc3d1436d8acd52a8aa17815257e5a",
+      "originalityStatement": "A negative-control copy of the original weather-relay premise that deliberately omits all Reward 2.0 manual bindings so the selector must not invent them."
+    },
+    "productProfile": "product-profile.v021-topdown-pixel",
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.inventory",
+      "capability.route-gates",
+      "capability.save-migration",
+      "capability.route-simulation",
+      "capability.map-layers",
+      "capability.context-interaction",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.grid-collision",
+      "capability.spatial-query",
+      "capability.checkpoints",
+      "capability.hint-ladder"
+    ],
+    "expectedProperties": [
+      "Reject Reward 2.0 when explicit bindings are absent"
+    ],
+    "forbiddenProperties": [
+      "No incomplete Reward 2.0 application may be emitted"
+    ],
+    "abstentionExpectation": "may-abstain",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "metrics": [
+      {
+        "metricId": "metric.hard-veto-count",
+        "comparator": "equals",
+        "threshold": 0,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.core-count",
+        "comparator": "less-or-equal",
+        "threshold": 1,
+        "unit": "count",
+        "hardGate": true
+      },
+      {
+        "metricId": "metric.support-count",
+        "comparator": "less-or-equal",
+        "threshold": 3,
+        "unit": "count",
+        "hardGate": true
+      }
+    ],
+    "status": "active",
+    "failureOwner": "select-game-design-patterns"
+  }
+]

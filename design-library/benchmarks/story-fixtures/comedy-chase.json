@@ -1,0 +1,8 @@
+{
+  "fixtureId":"fixture.selector.comedy-chase","title":"The Tram Full of Cakes",
+  "originalityStatement":"An original comic chase benchmark set on a municipal tram, created for pattern-selection testing.",
+  "storyModel":{"premise":"A courier on a runaway catering tram reroutes switches, protects unstable cakes, and recruits passengers while trying to reach a festival square.","playerRole":"Courier temporarily operating the tram","storySignals":["signal.schedule-pressure","signal.multi-causal-problem","signal.relationship-memory","signal.landmark-mystery"],"experienceGoals":["experience.competence-growth","experience.social-recognition","experience.curiosity-tension"],"spatialSignals":["signal.landmark-mystery","signal.schedule-pressure"],"protectedCanon":["No passenger is seriously harmed","The final cake survives only if two earlier passenger favors were completed"]},
+  "productProfile":{"id":"product-profile.v021-topdown-pixel","spatialBudget":"branching tram network and three short stop maps"},
+  "runtimeCapabilities":["capability.world-facts","capability.route-gates","capability.inventory","capability.context-interaction","capability.npc-state","capability.dialogue-gates","capability.performance-cues","capability.camera-cues","capability.portal-transitions","capability.grid-collision","capability.spatial-query","capability.schedule-clock","capability.checkpoints","capability.route-simulation"],
+  "budget":"medium"
+}

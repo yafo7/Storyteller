@@ -1,0 +1,8 @@
+{
+  "fixtureId":"fixture.selector.locked-room","title":"The Conservatory After Midnight",
+  "originalityStatement":"An original benchmark about a botanist and a climate-controlled conservatory, created without copying a source game.",
+  "storyModel":{"premise":"A junior botanist must prove why one sealed greenhouse changes its pathways when the irrigation pressure shifts.","playerRole":"Junior botanist on the final night shift","storySignals":["signal.hidden-causal-rule","signal.parallel-state","signal.revisited-place","signal.transformable-environment","signal.embodied-secret","signal.confined-stage"],"experienceGoals":["experience.rule-mastery","experience.world-recontextualization","experience.self-directed-discovery"],"spatialSignals":["signal.parallel-state","signal.revisited-place","signal.confined-stage"],"protectedCanon":["The missing mentor is alive","The pressure anomaly is revealed only after the player observes two plant responses"]},
+  "productProfile":{"id":"product-profile.v021-topdown-pixel","spatialBudget":"four rooms with two irrigation states"},
+  "runtimeCapabilities":["capability.world-facts","capability.map-layers","capability.route-gates","capability.inventory","capability.context-interaction","capability.npc-state","capability.dialogue-gates","capability.performance-cues","capability.camera-cues","capability.grid-collision","capability.checkpoints","capability.hint-ladder","capability.route-simulation"],
+  "budget":"medium"
+}

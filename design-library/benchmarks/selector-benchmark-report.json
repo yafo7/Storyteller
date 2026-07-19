@@ -1,0 +1,4028 @@
+{
+  "reportVersion": "2.0.0",
+  "generatedAt": "2026-07-18",
+  "selectorVersion": "0.3.0-beta.1",
+  "cases": 10,
+  "seedsPerCase": 3,
+  "runCount": 30,
+  "passedRuns": 30,
+  "failedRuns": 0,
+  "abstentionCases": 3,
+  "evaluatorCoverage": {
+    "declaredProperties": 35,
+    "registeredProperties": 35,
+    "unknownProperties": []
+  },
+  "inputAttestations": {
+    "coreInputs": {
+      "benchmarkCases": {
+        "path": "design-library/benchmarks/benchmark-cases.json",
+        "sha256": "e3fd4119094dcdfe137b242acef2f696f4518931e95c9377d81e9095ea9f3cdf",
+        "bytes": 19416
+      },
+      "patternRegistry": {
+        "path": "design-library/packs/zelda-mainline/patterns/released-patterns.json",
+        "sha256": "23aa61893a445c151d0acc8e122452fb0720f4e03b2694d729d279480d4da8b3",
+        "bytes": 872656
+      },
+      "retrievalIndex": {
+        "path": "design-library/indexes/retrieval-index.json",
+        "sha256": "ce19051dfe332611f9616485cc8c05be620195d730df73edd16634d6a34782aa",
+        "bytes": 27630
+      },
+      "selector": {
+        "path": "design-library/scripts/select-patterns.mjs",
+        "sha256": "756ff1488945d161f274a5b88fc2c3bd1e56a85a333853c2bee206424407ad3a",
+        "bytes": 26423
+      },
+      "selectionSchema": {
+        "path": "design-library/schemas/pattern-selection.schema.json",
+        "sha256": "f8c6dd32cfdac5d83f4c3c7ce9e1b3488a6a5b2472a2833fd2d05cf78cdb9594",
+        "bytes": 11348
+      },
+      "benchmarkRunner": {
+        "path": "design-library/scripts/run-selector-benchmarks.mjs",
+        "sha256": "013fcfb0fa75444eb46a860425f83c667f0543485346de39aab2c1df80996af4",
+        "bytes": 52262
+      }
+    },
+    "fixtures": [
+      {
+        "path": "design-library/benchmarks/story-fixtures/locked-room.json",
+        "sha256": "23048a06088753816826c1c38a594d5a7c497eb2b0f6cd9a093618552961d259",
+        "bytes": 1474,
+        "declaredHash": "23048a06088753816826c1c38a594d5a7c497eb2b0f6cd9a093618552961d259",
+        "hashMatches": true,
+        "benchmarkRefs": [
+          "benchmark.locked-room"
+        ],
+        "conflictingDeclaredHashes": []
+      },
+      {
+        "path": "design-library/benchmarks/story-fixtures/relationship-drama.json",
+        "sha256": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "bytes": 1445,
+        "declaredHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "hashMatches": true,
+        "benchmarkRefs": [
+          "benchmark.relationship-drama",
+          "benchmark.dialogue-heavy"
+        ],
+        "conflictingDeclaredHashes": []
+      },
+      {
+        "path": "design-library/benchmarks/story-fixtures/comedy-chase.json",
+        "sha256": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "bytes": 1447,
+        "declaredHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "hashMatches": true,
+        "benchmarkRefs": [
+          "benchmark.journey-chase",
+          "benchmark.comedy"
+        ],
+        "conflictingDeclaredHashes": []
+      },
+      {
+        "path": "design-library/benchmarks/story-fixtures/open-exploration.json",
+        "sha256": "50f5028d8da872c4961fda10f58852500c769af49ea34a089b7f485d6628d168",
+        "bytes": 1543,
+        "declaredHash": "50f5028d8da872c4961fda10f58852500c769af49ea34a089b7f485d6628d168",
+        "hashMatches": true,
+        "benchmarkRefs": [
+          "benchmark.open-exploration"
+        ],
+        "conflictingDeclaredHashes": []
+      },
+      {
+        "path": "design-library/benchmarks/story-fixtures/low-spatial-change.json",
+        "sha256": "6e37002947466c1e378b94e073c3dd2d28e441a9b5b7da57c55f3b6fa298493b",
+        "bytes": 1772,
+        "declaredHash": "6e37002947466c1e378b94e073c3dd2d28e441a9b5b7da57c55f3b6fa298493b",
+        "hashMatches": true,
+        "benchmarkRefs": [
+          "benchmark.low-spatial-change"
+        ],
+        "conflictingDeclaredHashes": []
+      },
+      {
+        "path": "design-library/benchmarks/story-fixtures/low-fit-monologue.json",
+        "sha256": "ce2b286aeeeae41657a1462d822a585eed1d8835f58461a662ae6117a14b4384",
+        "bytes": 922,
+        "declaredHash": "ce2b286aeeeae41657a1462d822a585eed1d8835f58461a662ae6117a14b4384",
+        "hashMatches": true,
+        "benchmarkRefs": [
+          "benchmark.negative-monologue"
+        ],
+        "conflictingDeclaredHashes": []
+      },
+      {
+        "path": "design-library/benchmarks/story-fixtures/reward-2-complete-bindings.json",
+        "sha256": "ae2f0fe1613aaad05d8e01c2ebf09b1e89dcc70135bbe7bf88d3e77af2b07073",
+        "bytes": 3347,
+        "declaredHash": "ae2f0fe1613aaad05d8e01c2ebf09b1e89dcc70135bbe7bf88d3e77af2b07073",
+        "hashMatches": true,
+        "benchmarkRefs": [
+          "benchmark.reward-2-complete-bindings"
+        ],
+        "conflictingDeclaredHashes": []
+      },
+      {
+        "path": "design-library/benchmarks/story-fixtures/reward-2-missing-bindings.json",
+        "sha256": "744e8c1437d6a425203d8a35f7e3c47a83cc3d1436d8acd52a8aa17815257e5a",
+        "bytes": 1773,
+        "declaredHash": "744e8c1437d6a425203d8a35f7e3c47a83cc3d1436d8acd52a8aa17815257e5a",
+        "hashMatches": true,
+        "benchmarkRefs": [
+          "benchmark.reward-2-missing-bindings"
+        ],
+        "conflictingDeclaredHashes": []
+      }
+    ]
+  },
+  "outputAttestations": [
+    {
+      "benchmarkId": "benchmark.locked-room",
+      "seed": 101,
+      "path": "design-library/benchmarks/expected/locked-room-seed-101.json",
+      "sha256": "d131090bd9d188b96051daec43b7009d8a7915ad32114a87b7a7ee8cf8f9d68d",
+      "bytes": 20000
+    },
+    {
+      "benchmarkId": "benchmark.locked-room",
+      "seed": 202,
+      "path": "design-library/benchmarks/expected/locked-room-seed-202.json",
+      "sha256": "d131090bd9d188b96051daec43b7009d8a7915ad32114a87b7a7ee8cf8f9d68d",
+      "bytes": 20000
+    },
+    {
+      "benchmarkId": "benchmark.locked-room",
+      "seed": 303,
+      "path": "design-library/benchmarks/expected/locked-room-seed-303.json",
+      "sha256": "d131090bd9d188b96051daec43b7009d8a7915ad32114a87b7a7ee8cf8f9d68d",
+      "bytes": 20000
+    },
+    {
+      "benchmarkId": "benchmark.relationship-drama",
+      "seed": 101,
+      "path": "design-library/benchmarks/expected/relationship-drama-seed-101.json",
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+      "bytes": 31124
+    },
+    {
+      "benchmarkId": "benchmark.relationship-drama",
+      "seed": 202,
+      "path": "design-library/benchmarks/expected/relationship-drama-seed-202.json",
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+      "bytes": 31124
+    },
+    {
+      "benchmarkId": "benchmark.relationship-drama",
+      "seed": 303,
+      "path": "design-library/benchmarks/expected/relationship-drama-seed-303.json",
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+      "bytes": 31124
+    },
+    {
+      "benchmarkId": "benchmark.journey-chase",
+      "seed": 101,
+      "path": "design-library/benchmarks/expected/journey-chase-seed-101.json",
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+      "bytes": 20088
+    },
+    {
+      "benchmarkId": "benchmark.journey-chase",
+      "seed": 202,
+      "path": "design-library/benchmarks/expected/journey-chase-seed-202.json",
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+      "bytes": 20088
+    },
+    {
+      "benchmarkId": "benchmark.journey-chase",
+      "seed": 303,
+      "path": "design-library/benchmarks/expected/journey-chase-seed-303.json",
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+      "bytes": 20088
+    },
+    {
+      "benchmarkId": "benchmark.open-exploration",
+      "seed": 101,
+      "path": "design-library/benchmarks/expected/open-exploration-seed-101.json",
+      "sha256": "f73755254e06ef1a43012c1d86b2640af637e91b98d240b76bacf9ff0e17a5b2",
+      "bytes": 27196
+    },
+    {
+      "benchmarkId": "benchmark.open-exploration",
+      "seed": 202,
+      "path": "design-library/benchmarks/expected/open-exploration-seed-202.json",
+      "sha256": "f73755254e06ef1a43012c1d86b2640af637e91b98d240b76bacf9ff0e17a5b2",
+      "bytes": 27196
+    },
+    {
+      "benchmarkId": "benchmark.open-exploration",
+      "seed": 303,
+      "path": "design-library/benchmarks/expected/open-exploration-seed-303.json",
+      "sha256": "f73755254e06ef1a43012c1d86b2640af637e91b98d240b76bacf9ff0e17a5b2",
+      "bytes": 27196
+    },
+    {
+      "benchmarkId": "benchmark.comedy",
+      "seed": 101,
+      "path": "design-library/benchmarks/expected/comedy-seed-101.json",
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+      "bytes": 20088
+    },
+    {
+      "benchmarkId": "benchmark.comedy",
+      "seed": 202,
+      "path": "design-library/benchmarks/expected/comedy-seed-202.json",
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+      "bytes": 20088
+    },
+    {
+      "benchmarkId": "benchmark.comedy",
+      "seed": 303,
+      "path": "design-library/benchmarks/expected/comedy-seed-303.json",
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+      "bytes": 20088
+    },
+    {
+      "benchmarkId": "benchmark.dialogue-heavy",
+      "seed": 101,
+      "path": "design-library/benchmarks/expected/dialogue-heavy-seed-101.json",
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+      "bytes": 31124
+    },
+    {
+      "benchmarkId": "benchmark.dialogue-heavy",
+      "seed": 202,
+      "path": "design-library/benchmarks/expected/dialogue-heavy-seed-202.json",
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+      "bytes": 31124
+    },
+    {
+      "benchmarkId": "benchmark.dialogue-heavy",
+      "seed": 303,
+      "path": "design-library/benchmarks/expected/dialogue-heavy-seed-303.json",
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+      "bytes": 31124
+    },
+    {
+      "benchmarkId": "benchmark.low-spatial-change",
+      "seed": 101,
+      "path": "design-library/benchmarks/expected/low-spatial-change-seed-101.json",
+      "sha256": "93d54cca6b9fcb05687e64006dcd4ff361f32a5b4bb14f3415ef9c1f58fe4f19",
+      "bytes": 21085
+    },
+    {
+      "benchmarkId": "benchmark.low-spatial-change",
+      "seed": 202,
+      "path": "design-library/benchmarks/expected/low-spatial-change-seed-202.json",
+      "sha256": "93d54cca6b9fcb05687e64006dcd4ff361f32a5b4bb14f3415ef9c1f58fe4f19",
+      "bytes": 21085
+    },
+    {
+      "benchmarkId": "benchmark.low-spatial-change",
+      "seed": 303,
+      "path": "design-library/benchmarks/expected/low-spatial-change-seed-303.json",
+      "sha256": "93d54cca6b9fcb05687e64006dcd4ff361f32a5b4bb14f3415ef9c1f58fe4f19",
+      "bytes": 21085
+    },
+    {
+      "benchmarkId": "benchmark.negative-monologue",
+      "seed": 101,
+      "path": "design-library/benchmarks/expected/negative-monologue-seed-101.json",
+      "sha256": "ce1459a76b82be0e81c357ed7881b355373987568300de404075f3103a39fc5e",
+      "bytes": 11591
+    },
+    {
+      "benchmarkId": "benchmark.negative-monologue",
+      "seed": 202,
+      "path": "design-library/benchmarks/expected/negative-monologue-seed-202.json",
+      "sha256": "ce1459a76b82be0e81c357ed7881b355373987568300de404075f3103a39fc5e",
+      "bytes": 11591
+    },
+    {
+      "benchmarkId": "benchmark.negative-monologue",
+      "seed": 303,
+      "path": "design-library/benchmarks/expected/negative-monologue-seed-303.json",
+      "sha256": "ce1459a76b82be0e81c357ed7881b355373987568300de404075f3103a39fc5e",
+      "bytes": 11591
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-complete-bindings",
+      "seed": 101,
+      "path": "design-library/benchmarks/expected/reward-2-complete-bindings-seed-101.json",
+      "sha256": "db7f950199fecc7d1e46645726915bce35230e85b13a7b0d9e697de476a67380",
+      "bytes": 23439
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-complete-bindings",
+      "seed": 202,
+      "path": "design-library/benchmarks/expected/reward-2-complete-bindings-seed-202.json",
+      "sha256": "db7f950199fecc7d1e46645726915bce35230e85b13a7b0d9e697de476a67380",
+      "bytes": 23439
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-complete-bindings",
+      "seed": 303,
+      "path": "design-library/benchmarks/expected/reward-2-complete-bindings-seed-303.json",
+      "sha256": "db7f950199fecc7d1e46645726915bce35230e85b13a7b0d9e697de476a67380",
+      "bytes": 23439
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-missing-bindings",
+      "seed": 101,
+      "path": "design-library/benchmarks/expected/reward-2-missing-bindings-seed-101.json",
+      "sha256": "df5fe73b475810def3d075d9c4bb6b5ffa1687fe4f99a50283cd5a81e9f1e04d",
+      "bytes": 19842
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-missing-bindings",
+      "seed": 202,
+      "path": "design-library/benchmarks/expected/reward-2-missing-bindings-seed-202.json",
+      "sha256": "df5fe73b475810def3d075d9c4bb6b5ffa1687fe4f99a50283cd5a81e9f1e04d",
+      "bytes": 19842
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-missing-bindings",
+      "seed": 303,
+      "path": "design-library/benchmarks/expected/reward-2-missing-bindings-seed-303.json",
+      "sha256": "df5fe73b475810def3d075d9c4bb6b5ffa1687fe4f99a50283cd5a81e9f1e04d",
+      "bytes": 19842
+    }
+  ],
+  "gateResults": {
+    "G6_selectionQuality": {
+      "passed": true,
+      "passedRuns": 30,
+      "failedRuns": 0,
+      "failureCount": 0,
+      "failures": []
+    },
+    "G7_compositionDiscipline": {
+      "passed": true,
+      "passedRuns": 30,
+      "failedRuns": 0,
+      "failureCount": 0,
+      "failures": []
+    },
+    "G8_canonSafetyContract": {
+      "passed": true,
+      "passedRuns": 30,
+      "failedRuns": 0,
+      "failureCount": 0,
+      "failures": []
+    },
+    "G9_runtimeFit": {
+      "passed": true,
+      "passedRuns": 30,
+      "failedRuns": 0,
+      "failureCount": 0,
+      "failures": []
+    }
+  },
+  "runRecords": [
+    {
+      "benchmarkId": "benchmark.locked-room",
+      "seed": 101,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/locked-room.json",
+        "declaredHash": "23048a06088753816826c1c38a594d5a7c497eb2b0f6cd9a093618552961d259",
+        "actualHash": "23048a06088753816826c1c38a594d5a7c497eb2b0f6cd9a093618552961d259",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/locked-room-seed-101.json",
+        "sha256": "d131090bd9d188b96051daec43b7009d8a7915ad32114a87b7a7ee8cf8f9d68d",
+        "bytes": 20000
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.state-axis-rewrites-routes",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Select one stateful core with observable before/after world consequences",
+          "evaluatorId": "selection.stateful-observable-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Exactly one core must expose a state mutation with observable feedback and emitted postconditions.",
+          "evidence": [
+            "core=pattern.state-axis-rewrites-routes",
+            "stateEffects=effect.state-axis.apply-value,effect.state-axis.recompute-routes,effect.state-axis.close-tradeoff-routes",
+            "observable=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Include safe teaching and revisit development",
+          "evaluatorId": "composition.safe-teach-and-revisit",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "The full development arc must be present, its teaching effects recoverable, and revisit intent grounded in both story and pattern.",
+          "evidence": [
+            "arc=teach,practice,variation,combine-or-reverse,exam",
+            "safe=true",
+            "revisit=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No cooperative-only or open-world scale pattern",
+          "evaluatorId": "selection.exclude-coop-open-scale",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "A compact single-player locked-room fixture may not select cooperative-only or dense-overworld patterns.",
+          "evidence": [
+            "forbiddenSelected=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No source-specific room or object sequence",
+          "evaluatorId": "canon.no-source-room-object-sequence",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Applications must bind to the fixture while meeting transformation floors and containing no protected source surface in emitted application content.",
+          "evidence": [
+            "transformationAxes=6",
+            "structuralDeltas=5",
+            "sourceSurfaceHits=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.locked-room",
+      "seed": 202,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/locked-room.json",
+        "declaredHash": "23048a06088753816826c1c38a594d5a7c497eb2b0f6cd9a093618552961d259",
+        "actualHash": "23048a06088753816826c1c38a594d5a7c497eb2b0f6cd9a093618552961d259",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/locked-room-seed-202.json",
+        "sha256": "d131090bd9d188b96051daec43b7009d8a7915ad32114a87b7a7ee8cf8f9d68d",
+        "bytes": 20000
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.state-axis-rewrites-routes",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Select one stateful core with observable before/after world consequences",
+          "evaluatorId": "selection.stateful-observable-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Exactly one core must expose a state mutation with observable feedback and emitted postconditions.",
+          "evidence": [
+            "core=pattern.state-axis-rewrites-routes",
+            "stateEffects=effect.state-axis.apply-value,effect.state-axis.recompute-routes,effect.state-axis.close-tradeoff-routes",
+            "observable=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Include safe teaching and revisit development",
+          "evaluatorId": "composition.safe-teach-and-revisit",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "The full development arc must be present, its teaching effects recoverable, and revisit intent grounded in both story and pattern.",
+          "evidence": [
+            "arc=teach,practice,variation,combine-or-reverse,exam",
+            "safe=true",
+            "revisit=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No cooperative-only or open-world scale pattern",
+          "evaluatorId": "selection.exclude-coop-open-scale",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "A compact single-player locked-room fixture may not select cooperative-only or dense-overworld patterns.",
+          "evidence": [
+            "forbiddenSelected=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No source-specific room or object sequence",
+          "evaluatorId": "canon.no-source-room-object-sequence",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Applications must bind to the fixture while meeting transformation floors and containing no protected source surface in emitted application content.",
+          "evidence": [
+            "transformationAxes=6",
+            "structuralDeltas=5",
+            "sourceSurfaceHits=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.locked-room",
+      "seed": 303,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/locked-room.json",
+        "declaredHash": "23048a06088753816826c1c38a594d5a7c497eb2b0f6cd9a093618552961d259",
+        "actualHash": "23048a06088753816826c1c38a594d5a7c497eb2b0f6cd9a093618552961d259",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/locked-room-seed-303.json",
+        "sha256": "d131090bd9d188b96051daec43b7009d8a7915ad32114a87b7a7ee8cf8f9d68d",
+        "bytes": 20000
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.state-axis-rewrites-routes",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Select one stateful core with observable before/after world consequences",
+          "evaluatorId": "selection.stateful-observable-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Exactly one core must expose a state mutation with observable feedback and emitted postconditions.",
+          "evidence": [
+            "core=pattern.state-axis-rewrites-routes",
+            "stateEffects=effect.state-axis.apply-value,effect.state-axis.recompute-routes,effect.state-axis.close-tradeoff-routes",
+            "observable=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Include safe teaching and revisit development",
+          "evaluatorId": "composition.safe-teach-and-revisit",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "The full development arc must be present, its teaching effects recoverable, and revisit intent grounded in both story and pattern.",
+          "evidence": [
+            "arc=teach,practice,variation,combine-or-reverse,exam",
+            "safe=true",
+            "revisit=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No cooperative-only or open-world scale pattern",
+          "evaluatorId": "selection.exclude-coop-open-scale",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "A compact single-player locked-room fixture may not select cooperative-only or dense-overworld patterns.",
+          "evidence": [
+            "forbiddenSelected=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No source-specific room or object sequence",
+          "evaluatorId": "canon.no-source-room-object-sequence",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Applications must bind to the fixture while meeting transformation floors and containing no protected source surface in emitted application content.",
+          "evidence": [
+            "transformationAxes=6",
+            "structuralDeltas=5",
+            "sourceSurfaceHits=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.relationship-drama",
+      "seed": 101,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/relationship-drama.json",
+        "declaredHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "actualHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/relationship-drama-seed-101.json",
+        "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+        "bytes": 31124
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.embodied-world-change-reveal",
+      "supportPatternRefs": [
+        "pattern.npc-reacts-to-world-state"
+      ],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Prefer NPC state, schedule, or agency-performance patterns",
+          "evaluatorId": "selection.prefer-social-performance",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "At least one selected pattern must provide NPC state, schedule, or performance agency.",
+          "evidence": [
+            "matching=pattern.embodied-world-change-reveal,pattern.npc-reacts-to-world-state"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Keep spatial mechanics subordinate to relationship revelation",
+          "evaluatorId": "composition.relationship-over-space",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "Relationship drama requires a non-spatial core or explicit social/performance support, not a spatial-level core.",
+          "evidence": [
+            "coreKind=performance-camera",
+            "socialSupport=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No combat boss or object-composition core",
+          "evaluatorId": "selection.exclude-combat-object-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The core may not be combat/boss or require object composition for this relationship fixture.",
+          "evidence": [
+            "core=pattern.embodied-world-change-reveal",
+            "kind=performance-camera"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No forced high-area exploration",
+          "evaluatorId": "runtime.exclude-high-area-exploration",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "The selected contract must not impose dense/open-world exploration on a bounded relationship fixture.",
+          "evidence": [
+            "forbidden=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.relationship-drama",
+      "seed": 202,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/relationship-drama.json",
+        "declaredHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "actualHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/relationship-drama-seed-202.json",
+        "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+        "bytes": 31124
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.embodied-world-change-reveal",
+      "supportPatternRefs": [
+        "pattern.npc-reacts-to-world-state"
+      ],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Prefer NPC state, schedule, or agency-performance patterns",
+          "evaluatorId": "selection.prefer-social-performance",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "At least one selected pattern must provide NPC state, schedule, or performance agency.",
+          "evidence": [
+            "matching=pattern.embodied-world-change-reveal,pattern.npc-reacts-to-world-state"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Keep spatial mechanics subordinate to relationship revelation",
+          "evaluatorId": "composition.relationship-over-space",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "Relationship drama requires a non-spatial core or explicit social/performance support, not a spatial-level core.",
+          "evidence": [
+            "coreKind=performance-camera",
+            "socialSupport=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No combat boss or object-composition core",
+          "evaluatorId": "selection.exclude-combat-object-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The core may not be combat/boss or require object composition for this relationship fixture.",
+          "evidence": [
+            "core=pattern.embodied-world-change-reveal",
+            "kind=performance-camera"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No forced high-area exploration",
+          "evaluatorId": "runtime.exclude-high-area-exploration",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "The selected contract must not impose dense/open-world exploration on a bounded relationship fixture.",
+          "evidence": [
+            "forbidden=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.relationship-drama",
+      "seed": 303,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/relationship-drama.json",
+        "declaredHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "actualHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/relationship-drama-seed-303.json",
+        "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+        "bytes": 31124
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.embodied-world-change-reveal",
+      "supportPatternRefs": [
+        "pattern.npc-reacts-to-world-state"
+      ],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Prefer NPC state, schedule, or agency-performance patterns",
+          "evaluatorId": "selection.prefer-social-performance",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "At least one selected pattern must provide NPC state, schedule, or performance agency.",
+          "evidence": [
+            "matching=pattern.embodied-world-change-reveal,pattern.npc-reacts-to-world-state"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Keep spatial mechanics subordinate to relationship revelation",
+          "evaluatorId": "composition.relationship-over-space",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "Relationship drama requires a non-spatial core or explicit social/performance support, not a spatial-level core.",
+          "evidence": [
+            "coreKind=performance-camera",
+            "socialSupport=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No combat boss or object-composition core",
+          "evaluatorId": "selection.exclude-combat-object-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The core may not be combat/boss or require object composition for this relationship fixture.",
+          "evidence": [
+            "core=pattern.embodied-world-change-reveal",
+            "kind=performance-camera"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No forced high-area exploration",
+          "evaluatorId": "runtime.exclude-high-area-exploration",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "The selected contract must not impose dense/open-world exploration on a bounded relationship fixture.",
+          "evidence": [
+            "forbidden=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.journey-chase",
+      "seed": 101,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/comedy-chase.json",
+        "declaredHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "actualHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/journey-chase-seed-101.json",
+        "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+        "bytes": 20088
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.constrained-vehicle-route",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Support route decisions under schedule pressure",
+          "evaluatorId": "selection.route-under-schedule",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Schedule pressure must be causally matched by a selected pattern that also maps route gates.",
+          "evidence": [
+            "storySchedule=true",
+            "patternSchedule=true",
+            "routeGates=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Preserve comedy and passenger response",
+          "evaluatorId": "canon.preserve-comedy-passengers",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Passenger/comedy facts must exist in the fixture and flow through all preserve-canon handoffs.",
+          "evidence": [
+            "passengerCanon=true",
+            "relationshipMemory=true",
+            "handoffPreservation=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No reset loop that erases comic continuity",
+          "evaluatorId": "canon.no-continuity-erasing-reset",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "No reset-loop pattern may be selected when continuity is a protected comic fact.",
+          "evidence": [
+            "resetPatterns=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No solitary contemplative core",
+          "evaluatorId": "selection.no-solitary-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The chase core must causally address pressure, multiple causes, or relationships rather than solitary contemplation.",
+          "evidence": [
+            "core=pattern.constrained-vehicle-route",
+            "activeSignals=signal.schedule-pressure,signal.multi-causal-problem"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.journey-chase",
+      "seed": 202,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/comedy-chase.json",
+        "declaredHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "actualHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/journey-chase-seed-202.json",
+        "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+        "bytes": 20088
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.constrained-vehicle-route",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Support route decisions under schedule pressure",
+          "evaluatorId": "selection.route-under-schedule",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Schedule pressure must be causally matched by a selected pattern that also maps route gates.",
+          "evidence": [
+            "storySchedule=true",
+            "patternSchedule=true",
+            "routeGates=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Preserve comedy and passenger response",
+          "evaluatorId": "canon.preserve-comedy-passengers",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Passenger/comedy facts must exist in the fixture and flow through all preserve-canon handoffs.",
+          "evidence": [
+            "passengerCanon=true",
+            "relationshipMemory=true",
+            "handoffPreservation=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No reset loop that erases comic continuity",
+          "evaluatorId": "canon.no-continuity-erasing-reset",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "No reset-loop pattern may be selected when continuity is a protected comic fact.",
+          "evidence": [
+            "resetPatterns=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No solitary contemplative core",
+          "evaluatorId": "selection.no-solitary-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The chase core must causally address pressure, multiple causes, or relationships rather than solitary contemplation.",
+          "evidence": [
+            "core=pattern.constrained-vehicle-route",
+            "activeSignals=signal.schedule-pressure,signal.multi-causal-problem"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.journey-chase",
+      "seed": 303,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/comedy-chase.json",
+        "declaredHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "actualHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/journey-chase-seed-303.json",
+        "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+        "bytes": 20088
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.constrained-vehicle-route",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Support route decisions under schedule pressure",
+          "evaluatorId": "selection.route-under-schedule",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Schedule pressure must be causally matched by a selected pattern that also maps route gates.",
+          "evidence": [
+            "storySchedule=true",
+            "patternSchedule=true",
+            "routeGates=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Preserve comedy and passenger response",
+          "evaluatorId": "canon.preserve-comedy-passengers",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Passenger/comedy facts must exist in the fixture and flow through all preserve-canon handoffs.",
+          "evidence": [
+            "passengerCanon=true",
+            "relationshipMemory=true",
+            "handoffPreservation=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No reset loop that erases comic continuity",
+          "evaluatorId": "canon.no-continuity-erasing-reset",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "No reset-loop pattern may be selected when continuity is a protected comic fact.",
+          "evidence": [
+            "resetPatterns=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No solitary contemplative core",
+          "evaluatorId": "selection.no-solitary-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The chase core must causally address pressure, multiple causes, or relationships rather than solitary contemplation.",
+          "evidence": [
+            "core=pattern.constrained-vehicle-route",
+            "activeSignals=signal.schedule-pressure,signal.multi-causal-problem"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.open-exploration",
+      "seed": 101,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/open-exploration.json",
+        "declaredHash": "50f5028d8da872c4961fda10f58852500c769af49ea34a089b7f485d6628d168",
+        "actualHash": "50f5028d8da872c4961fda10f58852500c769af49ea34a089b7f485d6628d168",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/open-exploration-seed-101.json",
+        "sha256": "f73755254e06ef1a43012c1d86b2640af637e91b98d240b76bacf9ff0e17a5b2",
+        "bytes": 27196
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.capability-recontextualizes-old-space",
+      "supportPatternRefs": [
+        "pattern.landmark-promises-future-use"
+      ],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Prefer landmark, systemic rule, or possibility-expanding reward patterns",
+          "evaluatorId": "selection.prefer-exploration-system",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Open exploration must select a landmark, systemic-rule, or future-possibility pattern.",
+          "evidence": [
+            "matching=pattern.capability-recontextualizes-old-space,pattern.landmark-promises-future-use"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Permit multiple causal routes within runtime budget",
+          "evaluatorId": "runtime.multiple-routes-in-budget",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Selected exploration patterns must support route gates plus route simulation and clear budget-fit scoring.",
+          "evidence": [
+            "routeCapable=true",
+            "budgetFailures=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No forced fixed-order puzzle solution",
+          "evaluatorId": "composition.no-fixed-order-solution",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "No selected principle may require one fixed solution sequence for the open-exploration fixture.",
+          "evidence": [
+            "forced=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No long authored cutscene core",
+          "evaluatorId": "composition.no-cutscene-core",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "A performance core is only legal when it declares interaction windows; an authored cutscene-only core is forbidden.",
+          "evidence": [
+            "coreKind=spatial-level",
+            "interactionWindows=2"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 5,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.open-exploration",
+      "seed": 202,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/open-exploration.json",
+        "declaredHash": "50f5028d8da872c4961fda10f58852500c769af49ea34a089b7f485d6628d168",
+        "actualHash": "50f5028d8da872c4961fda10f58852500c769af49ea34a089b7f485d6628d168",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/open-exploration-seed-202.json",
+        "sha256": "f73755254e06ef1a43012c1d86b2640af637e91b98d240b76bacf9ff0e17a5b2",
+        "bytes": 27196
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.capability-recontextualizes-old-space",
+      "supportPatternRefs": [
+        "pattern.landmark-promises-future-use"
+      ],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Prefer landmark, systemic rule, or possibility-expanding reward patterns",
+          "evaluatorId": "selection.prefer-exploration-system",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Open exploration must select a landmark, systemic-rule, or future-possibility pattern.",
+          "evidence": [
+            "matching=pattern.capability-recontextualizes-old-space,pattern.landmark-promises-future-use"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Permit multiple causal routes within runtime budget",
+          "evaluatorId": "runtime.multiple-routes-in-budget",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Selected exploration patterns must support route gates plus route simulation and clear budget-fit scoring.",
+          "evidence": [
+            "routeCapable=true",
+            "budgetFailures=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No forced fixed-order puzzle solution",
+          "evaluatorId": "composition.no-fixed-order-solution",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "No selected principle may require one fixed solution sequence for the open-exploration fixture.",
+          "evidence": [
+            "forced=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No long authored cutscene core",
+          "evaluatorId": "composition.no-cutscene-core",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "A performance core is only legal when it declares interaction windows; an authored cutscene-only core is forbidden.",
+          "evidence": [
+            "coreKind=spatial-level",
+            "interactionWindows=2"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 5,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.open-exploration",
+      "seed": 303,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/open-exploration.json",
+        "declaredHash": "50f5028d8da872c4961fda10f58852500c769af49ea34a089b7f485d6628d168",
+        "actualHash": "50f5028d8da872c4961fda10f58852500c769af49ea34a089b7f485d6628d168",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/open-exploration-seed-303.json",
+        "sha256": "f73755254e06ef1a43012c1d86b2640af637e91b98d240b76bacf9ff0e17a5b2",
+        "bytes": 27196
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.capability-recontextualizes-old-space",
+      "supportPatternRefs": [
+        "pattern.landmark-promises-future-use"
+      ],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Prefer landmark, systemic rule, or possibility-expanding reward patterns",
+          "evaluatorId": "selection.prefer-exploration-system",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Open exploration must select a landmark, systemic-rule, or future-possibility pattern.",
+          "evidence": [
+            "matching=pattern.capability-recontextualizes-old-space,pattern.landmark-promises-future-use"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Permit multiple causal routes within runtime budget",
+          "evaluatorId": "runtime.multiple-routes-in-budget",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Selected exploration patterns must support route gates plus route simulation and clear budget-fit scoring.",
+          "evidence": [
+            "routeCapable=true",
+            "budgetFailures=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No forced fixed-order puzzle solution",
+          "evaluatorId": "composition.no-fixed-order-solution",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "No selected principle may require one fixed solution sequence for the open-exploration fixture.",
+          "evidence": [
+            "forced=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No long authored cutscene core",
+          "evaluatorId": "composition.no-cutscene-core",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "A performance core is only legal when it declares interaction windows; an authored cutscene-only core is forbidden.",
+          "evidence": [
+            "coreKind=spatial-level",
+            "interactionWindows=2"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 5,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.comedy",
+      "seed": 101,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/comedy-chase.json",
+        "declaredHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "actualHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/comedy-seed-101.json",
+        "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+        "bytes": 20088
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.constrained-vehicle-route",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Selected patterns must tolerate fast feedback and comic failure",
+          "evaluatorId": "runtime.fast-feedback-recovery",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Every selected pattern must define observable feedback and bounded rollback/checkpoint recovery.",
+          "evidence": [
+            "recoveryFailures=none",
+            "allHaveFeedback=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "At most one core and three supports",
+          "evaluatorId": "composition.one-plus-three",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "Composition is bounded to one core and no more than three supports.",
+          "evidence": [
+            "coreCount=1",
+            "supportCount=0"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No solemn source surface or boss-script transfer",
+          "evaluatorId": "canon.no-boss-or-source-surface",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "The emitted application must pass the static source-surface scan and contain no combat/boss pattern.",
+          "evidence": [
+            "transformationAxes=6",
+            "structuralDeltas=5",
+            "sourceSurfaceHits=none",
+            "combatBossSelected=false"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No schedule system that makes recovery punitive",
+          "evaluatorId": "runtime.no-punitive-schedule",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Any selected schedule system must include checkpoints and only reversible/checkpoint rollback.",
+          "evidence": [
+            "schedulePatterns=none",
+            "punitive=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 6,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.comedy",
+      "seed": 202,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/comedy-chase.json",
+        "declaredHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "actualHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/comedy-seed-202.json",
+        "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+        "bytes": 20088
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.constrained-vehicle-route",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Selected patterns must tolerate fast feedback and comic failure",
+          "evaluatorId": "runtime.fast-feedback-recovery",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Every selected pattern must define observable feedback and bounded rollback/checkpoint recovery.",
+          "evidence": [
+            "recoveryFailures=none",
+            "allHaveFeedback=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "At most one core and three supports",
+          "evaluatorId": "composition.one-plus-three",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "Composition is bounded to one core and no more than three supports.",
+          "evidence": [
+            "coreCount=1",
+            "supportCount=0"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No solemn source surface or boss-script transfer",
+          "evaluatorId": "canon.no-boss-or-source-surface",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "The emitted application must pass the static source-surface scan and contain no combat/boss pattern.",
+          "evidence": [
+            "transformationAxes=6",
+            "structuralDeltas=5",
+            "sourceSurfaceHits=none",
+            "combatBossSelected=false"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No schedule system that makes recovery punitive",
+          "evaluatorId": "runtime.no-punitive-schedule",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Any selected schedule system must include checkpoints and only reversible/checkpoint rollback.",
+          "evidence": [
+            "schedulePatterns=none",
+            "punitive=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 6,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.comedy",
+      "seed": 303,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/comedy-chase.json",
+        "declaredHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "actualHash": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/comedy-seed-303.json",
+        "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307",
+        "bytes": 20088
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.constrained-vehicle-route",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Selected patterns must tolerate fast feedback and comic failure",
+          "evaluatorId": "runtime.fast-feedback-recovery",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Every selected pattern must define observable feedback and bounded rollback/checkpoint recovery.",
+          "evidence": [
+            "recoveryFailures=none",
+            "allHaveFeedback=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "At most one core and three supports",
+          "evaluatorId": "composition.one-plus-three",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "Composition is bounded to one core and no more than three supports.",
+          "evidence": [
+            "coreCount=1",
+            "supportCount=0"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No solemn source surface or boss-script transfer",
+          "evaluatorId": "canon.no-boss-or-source-surface",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "The emitted application must pass the static source-surface scan and contain no combat/boss pattern.",
+          "evidence": [
+            "transformationAxes=6",
+            "structuralDeltas=5",
+            "sourceSurfaceHits=none",
+            "combatBossSelected=false"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No schedule system that makes recovery punitive",
+          "evaluatorId": "runtime.no-punitive-schedule",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Any selected schedule system must include checkpoints and only reversible/checkpoint rollback.",
+          "evidence": [
+            "schedulePatterns=none",
+            "punitive=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 6,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.dialogue-heavy",
+      "seed": 101,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/relationship-drama.json",
+        "declaredHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "actualHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/dialogue-heavy-seed-101.json",
+        "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+        "bytes": 31124
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.embodied-world-change-reveal",
+      "supportPatternRefs": [
+        "pattern.npc-reacts-to-world-state"
+      ],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Use interaction windows and NPC memory without rewriting authored facts",
+          "evaluatorId": "canon.npc-memory-interaction-windows",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "At least one NPC-state pattern must declare interaction windows and every handoff must preserve protected facts.",
+          "evidence": [
+            "matching=pattern.npc-reacts-to-world-state",
+            "canonPreserved=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Preserve reveal order",
+          "evaluatorId": "canon.preserve-reveal-order",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Each application must bind the reveal-order story reference, state preservation in its adaptation summary, and retain the canon handoff guard.",
+          "evidence": [
+            "storyHasReveal=true",
+            "applicationsPreserve=true",
+            "canonPreserved=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No dialogue dump disguised as a mechanic",
+          "evaluatorId": "composition.no-dialogue-dump",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "The core must emit at least one non-dialogue/non-cue causal effect.",
+          "evidence": [
+            "core=pattern.embodied-world-change-reveal",
+            "embodiedEffect=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No spatial transformation unrelated to character action",
+          "evaluatorId": "canon.spatial-change-story-fit",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "A spatial/world change must match at least two causal story signals and retain a selected social/character consequence.",
+          "evidence": [
+            "matchedSignals=signal.embodied-secret,signal.revisited-place",
+            "socialConsequence=true"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 6,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 5,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.dialogue-heavy",
+      "seed": 202,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/relationship-drama.json",
+        "declaredHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "actualHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/dialogue-heavy-seed-202.json",
+        "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+        "bytes": 31124
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.embodied-world-change-reveal",
+      "supportPatternRefs": [
+        "pattern.npc-reacts-to-world-state"
+      ],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Use interaction windows and NPC memory without rewriting authored facts",
+          "evaluatorId": "canon.npc-memory-interaction-windows",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "At least one NPC-state pattern must declare interaction windows and every handoff must preserve protected facts.",
+          "evidence": [
+            "matching=pattern.npc-reacts-to-world-state",
+            "canonPreserved=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Preserve reveal order",
+          "evaluatorId": "canon.preserve-reveal-order",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Each application must bind the reveal-order story reference, state preservation in its adaptation summary, and retain the canon handoff guard.",
+          "evidence": [
+            "storyHasReveal=true",
+            "applicationsPreserve=true",
+            "canonPreserved=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No dialogue dump disguised as a mechanic",
+          "evaluatorId": "composition.no-dialogue-dump",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "The core must emit at least one non-dialogue/non-cue causal effect.",
+          "evidence": [
+            "core=pattern.embodied-world-change-reveal",
+            "embodiedEffect=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No spatial transformation unrelated to character action",
+          "evaluatorId": "canon.spatial-change-story-fit",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "A spatial/world change must match at least two causal story signals and retain a selected social/character consequence.",
+          "evidence": [
+            "matchedSignals=signal.embodied-secret,signal.revisited-place",
+            "socialConsequence=true"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 6,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 5,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.dialogue-heavy",
+      "seed": 303,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/relationship-drama.json",
+        "declaredHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "actualHash": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/dialogue-heavy-seed-303.json",
+        "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16",
+        "bytes": 31124
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.embodied-world-change-reveal",
+      "supportPatternRefs": [
+        "pattern.npc-reacts-to-world-state"
+      ],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Use interaction windows and NPC memory without rewriting authored facts",
+          "evaluatorId": "canon.npc-memory-interaction-windows",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "At least one NPC-state pattern must declare interaction windows and every handoff must preserve protected facts.",
+          "evidence": [
+            "matching=pattern.npc-reacts-to-world-state",
+            "canonPreserved=true"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Preserve reveal order",
+          "evaluatorId": "canon.preserve-reveal-order",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Each application must bind the reveal-order story reference, state preservation in its adaptation summary, and retain the canon handoff guard.",
+          "evidence": [
+            "storyHasReveal=true",
+            "applicationsPreserve=true",
+            "canonPreserved=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No dialogue dump disguised as a mechanic",
+          "evaluatorId": "composition.no-dialogue-dump",
+          "gate": "G7_compositionDiscipline",
+          "passed": true,
+          "explanation": "The core must emit at least one non-dialogue/non-cue causal effect.",
+          "evidence": [
+            "core=pattern.embodied-world-change-reveal",
+            "embodiedEffect=true"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No spatial transformation unrelated to character action",
+          "evaluatorId": "canon.spatial-change-story-fit",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "A spatial/world change must match at least two causal story signals and retain a selected social/character consequence.",
+          "evidence": [
+            "matchedSignals=signal.embodied-secret,signal.revisited-place",
+            "socialConsequence=true"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 6,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 5,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.low-spatial-change",
+      "seed": 101,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/low-spatial-change.json",
+        "declaredHash": "6e37002947466c1e378b94e073c3dd2d28e441a9b5b7da57c55f3b6fa298493b",
+        "actualHash": "6e37002947466c1e378b94e073c3dd2d28e441a9b5b7da57c55f3b6fa298493b",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/low-spatial-change-seed-101.json",
+        "sha256": "93d54cca6b9fcb05687e64006dcd4ff361f32a5b4bb14f3415ef9c1f58fe4f19",
+        "bytes": 21085
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.action-first-onboarding",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Prefer schedule, social response, or performance pacing over map replacement",
+          "evaluatorId": "selection.prefer-low-spatial-social",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "A low-spatial fixture requires a non-spatial core and at least one schedule/social/performance pattern.",
+          "evidence": [
+            "coreKind=tutorial-feedback",
+            "matching=pattern.action-first-onboarding"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Keep topology cost low",
+          "evaluatorId": "runtime.low-topology-cost",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Low topology cost forbids a spatial-level core and known high-topology patterns.",
+          "evidence": [
+            "spatialCore=false",
+            "heavy=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No open-world or dense-overworld core",
+          "evaluatorId": "selection.no-open-world-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The core may not impose open-world/dense-overworld structure.",
+          "evidence": [
+            "core=pattern.action-first-onboarding"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No multi-layer map requirement",
+          "evaluatorId": "runtime.no-map-layers",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "No selected application may require capability.map-layers for the low-spatial-change fixture.",
+          "evidence": [
+            "requiring=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.low-spatial-change",
+      "seed": 202,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/low-spatial-change.json",
+        "declaredHash": "6e37002947466c1e378b94e073c3dd2d28e441a9b5b7da57c55f3b6fa298493b",
+        "actualHash": "6e37002947466c1e378b94e073c3dd2d28e441a9b5b7da57c55f3b6fa298493b",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/low-spatial-change-seed-202.json",
+        "sha256": "93d54cca6b9fcb05687e64006dcd4ff361f32a5b4bb14f3415ef9c1f58fe4f19",
+        "bytes": 21085
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.action-first-onboarding",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Prefer schedule, social response, or performance pacing over map replacement",
+          "evaluatorId": "selection.prefer-low-spatial-social",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "A low-spatial fixture requires a non-spatial core and at least one schedule/social/performance pattern.",
+          "evidence": [
+            "coreKind=tutorial-feedback",
+            "matching=pattern.action-first-onboarding"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Keep topology cost low",
+          "evaluatorId": "runtime.low-topology-cost",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Low topology cost forbids a spatial-level core and known high-topology patterns.",
+          "evidence": [
+            "spatialCore=false",
+            "heavy=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No open-world or dense-overworld core",
+          "evaluatorId": "selection.no-open-world-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The core may not impose open-world/dense-overworld structure.",
+          "evidence": [
+            "core=pattern.action-first-onboarding"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No multi-layer map requirement",
+          "evaluatorId": "runtime.no-map-layers",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "No selected application may require capability.map-layers for the low-spatial-change fixture.",
+          "evidence": [
+            "requiring=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.low-spatial-change",
+      "seed": 303,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/low-spatial-change.json",
+        "declaredHash": "6e37002947466c1e378b94e073c3dd2d28e441a9b5b7da57c55f3b6fa298493b",
+        "actualHash": "6e37002947466c1e378b94e073c3dd2d28e441a9b5b7da57c55f3b6fa298493b",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/low-spatial-change-seed-303.json",
+        "sha256": "93d54cca6b9fcb05687e64006dcd4ff361f32a5b4bb14f3415ef9c1f58fe4f19",
+        "bytes": 21085
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.action-first-onboarding",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Prefer schedule, social response, or performance pacing over map replacement",
+          "evaluatorId": "selection.prefer-low-spatial-social",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "A low-spatial fixture requires a non-spatial core and at least one schedule/social/performance pattern.",
+          "evidence": [
+            "coreKind=tutorial-feedback",
+            "matching=pattern.action-first-onboarding"
+          ]
+        },
+        {
+          "expectation": "expected",
+          "property": "Keep topology cost low",
+          "evaluatorId": "runtime.low-topology-cost",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Low topology cost forbids a spatial-level core and known high-topology patterns.",
+          "evidence": [
+            "spatialCore=false",
+            "heavy=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No open-world or dense-overworld core",
+          "evaluatorId": "selection.no-open-world-core",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The core may not impose open-world/dense-overworld structure.",
+          "evidence": [
+            "core=pattern.action-first-onboarding"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No multi-layer map requirement",
+          "evaluatorId": "runtime.no-map-layers",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "No selected application may require capability.map-layers for the low-spatial-change fixture.",
+          "evidence": [
+            "requiring=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 8,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.negative-monologue",
+      "seed": 101,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/low-fit-monologue.json",
+        "declaredHash": "ce2b286aeeeae41657a1462d822a585eed1d8835f58461a662ae6117a14b4384",
+        "actualHash": "ce2b286aeeeae41657a1462d822a585eed1d8835f58461a662ae6117a14b4384",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/negative-monologue-seed-101.json",
+        "sha256": "ce1459a76b82be0e81c357ed7881b355373987568300de404075f3103a39fc5e",
+        "bytes": 11591
+      },
+      "selectorExitStatus": 0,
+      "abstained": true,
+      "corePatternRef": null,
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Abstain because uninterrupted fixed rhetoric has insufficient causal interaction fit",
+          "evaluatorId": "selection.fixed-rhetoric-abstention",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The low-interaction signal must produce an explicit fixed-rhetoric abstention.",
+          "evidence": [
+            "lowInteraction=true",
+            "abstained=true",
+            "reason=Interaction would damage the source’s fixed uninterrupted rhetorical form."
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No Zelda-derived core pattern",
+          "evaluatorId": "canon.no-pack-core-on-abstention",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "A principled abstention must emit no core or application from the inspiration pack.",
+          "evidence": [
+            "abstained=true",
+            "coreCount=0"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No invented spatial or inventory conflict",
+          "evaluatorId": "canon.no-invented-conflict-on-abstention",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Abstention must not synthesize spatial/inventory applications and must route all departments to story-derived no-Pack design.",
+          "evidence": [
+            "applications=0",
+            "spatialConstraints=0",
+            "noPackHandoffs=true"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.negative-monologue",
+      "seed": 202,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/low-fit-monologue.json",
+        "declaredHash": "ce2b286aeeeae41657a1462d822a585eed1d8835f58461a662ae6117a14b4384",
+        "actualHash": "ce2b286aeeeae41657a1462d822a585eed1d8835f58461a662ae6117a14b4384",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/negative-monologue-seed-202.json",
+        "sha256": "ce1459a76b82be0e81c357ed7881b355373987568300de404075f3103a39fc5e",
+        "bytes": 11591
+      },
+      "selectorExitStatus": 0,
+      "abstained": true,
+      "corePatternRef": null,
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Abstain because uninterrupted fixed rhetoric has insufficient causal interaction fit",
+          "evaluatorId": "selection.fixed-rhetoric-abstention",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The low-interaction signal must produce an explicit fixed-rhetoric abstention.",
+          "evidence": [
+            "lowInteraction=true",
+            "abstained=true",
+            "reason=Interaction would damage the source’s fixed uninterrupted rhetorical form."
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No Zelda-derived core pattern",
+          "evaluatorId": "canon.no-pack-core-on-abstention",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "A principled abstention must emit no core or application from the inspiration pack.",
+          "evidence": [
+            "abstained=true",
+            "coreCount=0"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No invented spatial or inventory conflict",
+          "evaluatorId": "canon.no-invented-conflict-on-abstention",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Abstention must not synthesize spatial/inventory applications and must route all departments to story-derived no-Pack design.",
+          "evidence": [
+            "applications=0",
+            "spatialConstraints=0",
+            "noPackHandoffs=true"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.negative-monologue",
+      "seed": 303,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/low-fit-monologue.json",
+        "declaredHash": "ce2b286aeeeae41657a1462d822a585eed1d8835f58461a662ae6117a14b4384",
+        "actualHash": "ce2b286aeeeae41657a1462d822a585eed1d8835f58461a662ae6117a14b4384",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/negative-monologue-seed-303.json",
+        "sha256": "ce1459a76b82be0e81c357ed7881b355373987568300de404075f3103a39fc5e",
+        "bytes": 11591
+      },
+      "selectorExitStatus": 0,
+      "abstained": true,
+      "corePatternRef": null,
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Abstain because uninterrupted fixed rhetoric has insufficient causal interaction fit",
+          "evaluatorId": "selection.fixed-rhetoric-abstention",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "The low-interaction signal must produce an explicit fixed-rhetoric abstention.",
+          "evidence": [
+            "lowInteraction=true",
+            "abstained=true",
+            "reason=Interaction would damage the source’s fixed uninterrupted rhetorical form."
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No Zelda-derived core pattern",
+          "evaluatorId": "canon.no-pack-core-on-abstention",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "A principled abstention must emit no core or application from the inspiration pack.",
+          "evidence": [
+            "abstained=true",
+            "coreCount=0"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No invented spatial or inventory conflict",
+          "evaluatorId": "canon.no-invented-conflict-on-abstention",
+          "gate": "G8_canonSafetyContract",
+          "passed": true,
+          "explanation": "Abstention must not synthesize spatial/inventory applications and must route all departments to story-derived no-Pack design.",
+          "evidence": [
+            "applications=0",
+            "spatialConstraints=0",
+            "noPackHandoffs=true"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 4,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-complete-bindings",
+      "seed": 101,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/reward-2-complete-bindings.json",
+        "declaredHash": "ae2f0fe1613aaad05d8e01c2ebf09b1e89dcc70135bbe7bf88d3e77af2b07073",
+        "actualHash": "ae2f0fe1613aaad05d8e01c2ebf09b1e89dcc70135bbe7bf88d3e77af2b07073",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/reward-2-complete-bindings-seed-101.json",
+        "sha256": "db7f950199fecc7d1e46645726915bce35230e85b13a7b0d9e697de476a67380",
+        "bytes": 23439
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.reward-expands-future-possibility",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Select the Reward 2.0 pattern only with complete explicit bindings",
+          "evaluatorId": "selection.reward-v2-complete-bindings",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Reward 2.0 may be selected only when every required binding resolves to explicit fixture data and the two-function contract is complete.",
+          "evidence": [
+            "emitted=true",
+            "version=2.0.0",
+            "missing=none",
+            "placeholders=none",
+            "notExplicit=none",
+            "fixtureFailures=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No synthesized placeholder may satisfy a Reward 2.0 manual binding",
+          "evaluatorId": "runtime.no-reward-binding-placeholder",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Designer-decision Reward 2.0 bindings must be copied from explicit fixture refs; generated placeholders are invalid.",
+          "evidence": [
+            "rewardEmitted=true",
+            "placeholders=none",
+            "notExplicit=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-complete-bindings",
+      "seed": 202,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/reward-2-complete-bindings.json",
+        "declaredHash": "ae2f0fe1613aaad05d8e01c2ebf09b1e89dcc70135bbe7bf88d3e77af2b07073",
+        "actualHash": "ae2f0fe1613aaad05d8e01c2ebf09b1e89dcc70135bbe7bf88d3e77af2b07073",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/reward-2-complete-bindings-seed-202.json",
+        "sha256": "db7f950199fecc7d1e46645726915bce35230e85b13a7b0d9e697de476a67380",
+        "bytes": 23439
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.reward-expands-future-possibility",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Select the Reward 2.0 pattern only with complete explicit bindings",
+          "evaluatorId": "selection.reward-v2-complete-bindings",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Reward 2.0 may be selected only when every required binding resolves to explicit fixture data and the two-function contract is complete.",
+          "evidence": [
+            "emitted=true",
+            "version=2.0.0",
+            "missing=none",
+            "placeholders=none",
+            "notExplicit=none",
+            "fixtureFailures=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No synthesized placeholder may satisfy a Reward 2.0 manual binding",
+          "evaluatorId": "runtime.no-reward-binding-placeholder",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Designer-decision Reward 2.0 bindings must be copied from explicit fixture refs; generated placeholders are invalid.",
+          "evidence": [
+            "rewardEmitted=true",
+            "placeholders=none",
+            "notExplicit=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-complete-bindings",
+      "seed": 303,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/reward-2-complete-bindings.json",
+        "declaredHash": "ae2f0fe1613aaad05d8e01c2ebf09b1e89dcc70135bbe7bf88d3e77af2b07073",
+        "actualHash": "ae2f0fe1613aaad05d8e01c2ebf09b1e89dcc70135bbe7bf88d3e77af2b07073",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/reward-2-complete-bindings-seed-303.json",
+        "sha256": "db7f950199fecc7d1e46645726915bce35230e85b13a7b0d9e697de476a67380",
+        "bytes": 23439
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.reward-expands-future-possibility",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Select the Reward 2.0 pattern only with complete explicit bindings",
+          "evaluatorId": "selection.reward-v2-complete-bindings",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "Reward 2.0 may be selected only when every required binding resolves to explicit fixture data and the two-function contract is complete.",
+          "evidence": [
+            "emitted=true",
+            "version=2.0.0",
+            "missing=none",
+            "placeholders=none",
+            "notExplicit=none",
+            "fixtureFailures=none"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No synthesized placeholder may satisfy a Reward 2.0 manual binding",
+          "evaluatorId": "runtime.no-reward-binding-placeholder",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Designer-decision Reward 2.0 bindings must be copied from explicit fixture refs; generated placeholders are invalid.",
+          "evidence": [
+            "rewardEmitted=true",
+            "placeholders=none",
+            "notExplicit=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-missing-bindings",
+      "seed": 101,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/reward-2-missing-bindings.json",
+        "declaredHash": "744e8c1437d6a425203d8a35f7e3c47a83cc3d1436d8acd52a8aa17815257e5a",
+        "actualHash": "744e8c1437d6a425203d8a35f7e3c47a83cc3d1436d8acd52a8aa17815257e5a",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/reward-2-missing-bindings-seed-101.json",
+        "sha256": "df5fe73b475810def3d075d9c4bb6b5ffa1687fe4f99a50283cd5a81e9f1e04d",
+        "bytes": 19842
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.capability-recontextualizes-old-space",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Reject Reward 2.0 when explicit bindings are absent",
+          "evaluatorId": "selection.reject-unbound-reward-v2",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "A fixture without explicit Reward 2.0 bindings must not emit the reward application.",
+          "evidence": [
+            "rewardEmitted=false"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No incomplete Reward 2.0 application may be emitted",
+          "evaluatorId": "runtime.no-incomplete-reward-v2",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Any emitted Reward 2.0 application must close all required bindings, fixture functions, postconditions, and economy data.",
+          "evidence": [
+            "rewardEmitted=false",
+            "complete=false",
+            "missing=none",
+            "fixtureFailures=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-missing-bindings",
+      "seed": 202,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/reward-2-missing-bindings.json",
+        "declaredHash": "744e8c1437d6a425203d8a35f7e3c47a83cc3d1436d8acd52a8aa17815257e5a",
+        "actualHash": "744e8c1437d6a425203d8a35f7e3c47a83cc3d1436d8acd52a8aa17815257e5a",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/reward-2-missing-bindings-seed-202.json",
+        "sha256": "df5fe73b475810def3d075d9c4bb6b5ffa1687fe4f99a50283cd5a81e9f1e04d",
+        "bytes": 19842
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.capability-recontextualizes-old-space",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Reject Reward 2.0 when explicit bindings are absent",
+          "evaluatorId": "selection.reject-unbound-reward-v2",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "A fixture without explicit Reward 2.0 bindings must not emit the reward application.",
+          "evidence": [
+            "rewardEmitted=false"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No incomplete Reward 2.0 application may be emitted",
+          "evaluatorId": "runtime.no-incomplete-reward-v2",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Any emitted Reward 2.0 application must close all required bindings, fixture functions, postconditions, and economy data.",
+          "evidence": [
+            "rewardEmitted=false",
+            "complete=false",
+            "missing=none",
+            "fixtureFailures=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "benchmarkId": "benchmark.reward-2-missing-bindings",
+      "seed": 303,
+      "passed": true,
+      "errors": [],
+      "inputFixture": {
+        "path": "design-library/benchmarks/story-fixtures/reward-2-missing-bindings.json",
+        "declaredHash": "744e8c1437d6a425203d8a35f7e3c47a83cc3d1436d8acd52a8aa17815257e5a",
+        "actualHash": "744e8c1437d6a425203d8a35f7e3c47a83cc3d1436d8acd52a8aa17815257e5a",
+        "hashMatches": true
+      },
+      "outputAttestation": {
+        "path": "design-library/benchmarks/expected/reward-2-missing-bindings-seed-303.json",
+        "sha256": "df5fe73b475810def3d075d9c4bb6b5ffa1687fe4f99a50283cd5a81e9f1e04d",
+        "bytes": 19842
+      },
+      "selectorExitStatus": 0,
+      "abstained": false,
+      "corePatternRef": "pattern.capability-recontextualizes-old-space",
+      "supportPatternRefs": [],
+      "propertyEvaluations": [
+        {
+          "expectation": "expected",
+          "property": "Reject Reward 2.0 when explicit bindings are absent",
+          "evaluatorId": "selection.reject-unbound-reward-v2",
+          "gate": "G6_selectionQuality",
+          "passed": true,
+          "explanation": "A fixture without explicit Reward 2.0 bindings must not emit the reward application.",
+          "evidence": [
+            "rewardEmitted=false"
+          ]
+        },
+        {
+          "expectation": "forbidden",
+          "property": "No incomplete Reward 2.0 application may be emitted",
+          "evaluatorId": "runtime.no-incomplete-reward-v2",
+          "gate": "G9_runtimeFit",
+          "passed": true,
+          "explanation": "Any emitted Reward 2.0 application must close all required bindings, fixture functions, postconditions, and economy data.",
+          "evidence": [
+            "rewardEmitted=false",
+            "complete=false",
+            "missing=none",
+            "fixtureFailures=none"
+          ]
+        }
+      ],
+      "metricEvaluations": [
+        {
+          "metricId": "metric.hard-veto-count",
+          "gate": "G6_selectionQuality",
+          "comparator": "equals",
+          "threshold": 0,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 equals 0"
+        },
+        {
+          "metricId": "metric.core-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 1,
+          "actual": 1,
+          "passed": true,
+          "explanation": "1 less-or-equal 1"
+        },
+        {
+          "metricId": "metric.support-count",
+          "gate": "G7_compositionDiscipline",
+          "comparator": "less-or-equal",
+          "threshold": 3,
+          "actual": 0,
+          "passed": true,
+          "explanation": "0 less-or-equal 3"
+        }
+      ],
+      "gateResults": {
+        "G6_selectionQuality": {
+          "passed": true,
+          "checkCount": 7,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G7_compositionDiscipline": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G8_canonSafetyContract": {
+          "passed": true,
+          "checkCount": 2,
+          "failureCount": 0,
+          "failures": []
+        },
+        "G9_runtimeFit": {
+          "passed": true,
+          "checkCount": 3,
+          "failureCount": 0,
+          "failures": []
+        }
+      }
+    }
+  ]
+}

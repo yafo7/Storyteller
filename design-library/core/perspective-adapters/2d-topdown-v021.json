@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "1.0.0",
+  "adapterId": "adapter.2d-topdown-v021",
+  "adapterVersion": "0.3.1",
+  "status": "beta",
+  "targetProfile": "product-profile.v021-topdown-pixel",
+  "supportedPatternKinds": [
+    "atomic-mechanic",
+    "interaction-prop",
+    "world-state-rule",
+    "spatial-level",
+    "puzzle-information",
+    "exploration-reward",
+    "combat-boss",
+    "npc-quest",
+    "tutorial-feedback",
+    "performance-camera",
+    "pacing-macro",
+    "orchestration"
+  ],
+  "requiredCapabilities": [
+    "capability.world-facts",
+    "capability.map-layers",
+    "capability.route-gates",
+    "capability.inventory",
+    "capability.context-interaction",
+    "capability.npc-state",
+    "capability.dialogue-gates",
+    "capability.performance-cues",
+    "capability.camera-cues",
+    "capability.portal-transitions",
+    "capability.grid-collision",
+    "capability.spatial-query",
+    "capability.object-placement",
+    "capability.object-composition",
+    "capability.schedule-clock",
+    "capability.checkpoints",
+    "capability.save-migration",
+    "capability.route-simulation",
+    "capability.telemetry"
+  ],
+  "mappings": [
+    {
+      "mappingId": "adapter-mapping.v021.world-fact",
+      "abstractPath": "effect.set-fact|effect.clear-fact",
+      "runtimePrimitive": "typed fact patch dispatched by effectId to the declared fact, knowledge, actor, objective, relationship, progression, or telemetry path; the patch is idempotent and save-state persistent",
+      "cost": "low",
+      "fallback": null,
+      "observableResult": "The interaction and every later consumer agree on the exact changed state reference after save and reload."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.world-transaction",
+      "abstractPath": "effect.world-transaction",
+      "runtimePrimitive": "typed multi-domain transaction with precondition validation, atomic commit, interruption rollback, explicit recovery assertion, and save boundary semantics",
+      "cost": "medium",
+      "fallback": "Lower to one authored transaction containing the same declared state paths; never collapse a multi-domain change into one inferred boolean.",
+      "observableResult": "No observer can see a partial world change, and an interrupted commit restores the exact prior legal state."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.map-layer",
+      "abstractPath": "effect.toggle-map-layer|effect.set-map-layer",
+      "runtimePrimitive": "atomic tile, collision, prop, interaction, portal, and lighting delta keyed by one authoritative world fact and validated as one route-graph transaction",
+      "cost": "high",
+      "fallback": "Use a bounded zone delta containing all six logic and presentation domains if a full-map layer exceeds the art budget.",
+      "observableResult": "Tiles, collision, props, interactions, portals, lighting, and route reachability change together and remain coherent after reload."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.location-reveal",
+      "abstractPath": "effect.reveal-location",
+      "runtimePrimitive": "effectId-dispatched location or optional-goal claim transaction that commits the reveal fact and any declared reward or route consequence atomically",
+      "cost": "medium",
+      "fallback": "Reveal a bounded story-derived marker and commit the same reward and claim facts without changing map topology.",
+      "observableResult": "The revealed goal, reward, navigation cue, and persisted claim state all identify the same completed transaction."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.route-gate",
+      "abstractPath": "effect.unlock-route|effect.lock-route",
+      "runtimePrimitive": "grid-collision blocker and portal condition transaction with before-and-after route simulation, declared recovery node, and rollback policy",
+      "cost": "medium",
+      "fallback": "Move the gate to a single-tile threshold while preserving its causal fact, recovery edge, and route assertions.",
+      "observableResult": "The intended edge changes traversability with redundant feedback while every required goal and recovery route remains reachable."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.actor-state",
+      "abstractPath": "effect.spawn-actor|effect.despawn-actor|effect.move-actor|effect.set-npc-state",
+      "runtimePrimitive": "effectId-dispatched movable-entity transaction: actor effects use a four-direction state machine and waypoint fallback; object-placement overrides use legal-cell occupancy and route-safe rollback",
+      "cost": "medium",
+      "fallback": "Use a short authored actor route or bounded object socket while preserving the same state and recovery contract.",
+      "observableResult": "Actor or object identity, position, facing or role, occupancy, availability, and dialogue state agree after rollback, save, and reload."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.inventory",
+      "abstractPath": "effect.grant-item|effect.consume-item",
+      "runtimePrimitive": "typed inventory transaction with item or role identity, visible count, underflow guard, idempotency key, persistence, checkpoint restore, and deterministic rollback",
+      "cost": "medium",
+      "fallback": "Represent the resource as a bounded persistent world fact only when no inventory presentation or consumption rule is required.",
+      "observableResult": "The item, role, or resource change is visible immediately, cannot duplicate on replay, and restores exactly at its declared recovery boundary."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.performance",
+      "abstractPath": "effect.emit-performance-cue|effect.performance-cue|effect.open-interaction-window",
+      "runtimePrimitive": "deterministic idempotent cue transaction for portrait, dialogue, sprite motion, sound, lighting, objective, and input gate with skip and replay parity",
+      "cost": "medium",
+      "fallback": "Keep one readable sprite action and concise text cue while committing the same authoritative effects.",
+      "observableResult": "The player sees the causal target and consequence before control returns, and skip, replay, and resume produce the same durable state."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.portal",
+      "abstractPath": "effect.map-transition",
+      "runtimePrimitive": "validated portal transaction resolved from the bound route network to target map, unblocked spawn cell, facing, checkpoint, carried facts and inventory, and a simulated safe return edge",
+      "cost": "medium",
+      "fallback": "Use a same-map threshold and camera fade with an explicit safe destination cell and return edge.",
+      "observableResult": "The player arrives at the declared unblocked cell with facing, facts, inventory, checkpoint, and return route intact after save and reload."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.camera",
+      "abstractPath": "effect.camera-transition",
+      "runtimePrimitive": "bounded pan, focus, shake, fade, and room transition with integer-pixel restoration and a deterministic timeout",
+      "cost": "low",
+      "fallback": "Flash the changed landmark and place a navigation pulse on the map edge.",
+      "observableResult": "Off-screen change is revealed without losing the player's return orientation or leaking input."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.checkpoint",
+      "abstractPath": "effect.set-checkpoint",
+      "runtimePrimitive": "versioned snapshot of map layers, collision, player, facts, inventory, objects, NPC state, dialogue gates, reveal gates, schedule, portals, objectives, and transaction ledger",
+      "cost": "medium",
+      "fallback": null,
+      "observableResult": "Retry and save reload restore an exact legal, reveal-consistent state and never cross an irreversible gate backwards."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.world-facts",
+      "abstractPath": "capability.world-facts",
+      "runtimePrimitive": "typed persistent fact store with stable references, transactional compare-and-set, idempotency ledger, and versioned serialization",
+      "cost": "low",
+      "fallback": null,
+      "observableResult": "Every declared fact has one authoritative value shared by interactions, actors, maps, saves, and evaluation."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.map-layers",
+      "abstractPath": "capability.map-layers",
+      "runtimePrimitive": "state-keyed tile and logic delta registry committed through the atomic map-layer transaction",
+      "cost": "high",
+      "fallback": "Use a bounded authored zone delta with the same collision, interaction, portal, prop, and lighting closure.",
+      "observableResult": "Each visible map state has one matching set of logic layers and route assertions."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.route-gates",
+      "abstractPath": "capability.route-gates",
+      "runtimePrimitive": "fact-conditioned collision and portal edges with rollback and recovery metadata",
+      "cost": "medium",
+      "fallback": "Use one authored threshold edge with the same fact condition and recovery node.",
+      "observableResult": "Gate feedback and route reachability always agree."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.inventory",
+      "abstractPath": "capability.inventory",
+      "runtimePrimitive": "typed persistent inventory and role ledger with grant, consume, preview, underflow rejection, idempotency, and migration",
+      "cost": "medium",
+      "fallback": "Use persistent facts only for non-presented and non-consumable roles.",
+      "observableResult": "Counts, roles, UI, save data, and recovery snapshots remain identical."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.context-interaction",
+      "abstractPath": "capability.context-interaction",
+      "runtimePrimitive": "facing-cell or bounded-cone target resolution against actor, prop, zone, fact, and available-verb predicates",
+      "cost": "low",
+      "fallback": "Use an authored single target at the same story-derived location.",
+      "observableResult": "The highlighted target is the target that receives the action, including wrong-way rejection."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.npc-state",
+      "abstractPath": "capability.npc-state",
+      "runtimePrimitive": "persistent NPC identity, position, facing, availability, tactic, relationship, service, belief, and state-source fact transaction",
+      "cost": "medium",
+      "fallback": "Use one before and one after authored NPC state that read the same authoritative fact.",
+      "observableResult": "Placement, behavior, relationship, service, and dialogue all reflect the same NPC state after reload."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.dialogue-gates",
+      "abstractPath": "capability.dialogue-gates",
+      "runtimePrimitive": "reveal-safe dialogue selector keyed by typed player knowledge, NPC state, and authoritative world facts",
+      "cost": "medium",
+      "fallback": "Select one concise before line and one after line from the same fact gate.",
+      "observableResult": "Dialogue never exposes an uncommitted fact and changes at the declared gate."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.performance-cues",
+      "abstractPath": "capability.performance-cues",
+      "runtimePrimitive": "ordered cue ledger with skip, replay, resume, timeout, snap fallback, and durable-effect idempotency",
+      "cost": "medium",
+      "fallback": "Use one sprite action and text cue with the same durable transaction.",
+      "observableResult": "Normal play, skip, replay, and resume end in the same authoritative state."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.camera-cues",
+      "abstractPath": "capability.camera-cues",
+      "runtimePrimitive": "bounded integer-pixel focus and transition queue that restores player framing and input state",
+      "cost": "low",
+      "fallback": "Use an on-map focus pulse without moving the camera.",
+      "observableResult": "The causal target is legible and control returns at the original navigation frame."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.portal-transitions",
+      "abstractPath": "capability.portal-transitions",
+      "runtimePrimitive": "conditioned portal table with target map, safe spawn cell, arrival facing, transition, checkpoint, carried state, and reverse-edge assertion",
+      "cost": "medium",
+      "fallback": "Use a same-map threshold with the same safe-cell and return-edge contract.",
+      "observableResult": "Every accepted transition lands safely and preserves a reachable return or declared onward recovery route."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.grid-collision",
+      "abstractPath": "capability.grid-collision",
+      "runtimePrimitive": "deterministic tile occupancy for player, blockers, placed objects, portals, and map-state deltas",
+      "cost": "medium",
+      "fallback": null,
+      "observableResult": "Rendered blockers, interaction targets, spawn cells, and simulated walkability agree."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.spatial-query",
+      "abstractPath": "capability.spatial-query",
+      "runtimePrimitive": "deterministic grid query for distance, facing, occupancy, zone, line of sight, and route membership",
+      "cost": "low",
+      "fallback": "Use authored bounded zones when free spatial queries exceed the product budget.",
+      "observableResult": "The same state always resolves the same nearby target, legal cell, and visible landmark."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.object-placement",
+      "abstractPath": "capability.object-placement",
+      "runtimePrimitive": "bounded legal-cell object placement with occupancy preview, effectId override from move-actor, route simulation, undo, and deterministic rollback",
+      "cost": "high",
+      "fallback": "Offer authored sockets derived from the same object-role rule.",
+      "observableResult": "Placement validity is visible before commit and every accepted position preserves required routes."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.object-composition",
+      "abstractPath": "capability.object-composition",
+      "runtimePrimitive": "bounded deterministic role-composition table with cycle cap, preview, declared consumption, and full reset",
+      "cost": "high",
+      "fallback": "Use two or more authored socket combinations that preserve the same role algebra.",
+      "observableResult": "The same placed roles always produce the same previewed result and recovery cost."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.schedule-clock",
+      "abstractPath": "capability.schedule-clock",
+      "runtimePrimitive": "finite logical schedule advanced only by declared game transactions and persisted with NPC state",
+      "cost": "medium",
+      "fallback": "Use authored before and after schedule windows keyed by the same world fact.",
+      "observableResult": "NPC availability and dialogue agree with the displayed logical schedule after save and reload."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.checkpoints",
+      "abstractPath": "capability.checkpoints",
+      "runtimePrimitive": "exact versioned full-state snapshot, restore, and transaction-boundary validation",
+      "cost": "medium",
+      "fallback": null,
+      "observableResult": "Restore produces byte-equivalent authoritative state for every captured gameplay domain."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.save-migration",
+      "abstractPath": "capability.save-migration",
+      "runtimePrimitive": "version-tagged deterministic migration pipeline with input preservation, explicit transforms, validation, and rollback copy",
+      "cost": "medium",
+      "fallback": "Reject an incompatible save with a recoverable message; never silently discard authoritative state.",
+      "observableResult": "A migrated save preserves facts, inventory, NPC, map, reveal, checkpoint, and transaction-ledger meaning."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.route-simulation",
+      "abstractPath": "capability.route-simulation",
+      "runtimePrimitive": "deterministic graph search over collision, portals, gates, map variants, inventory conditions, and recovery nodes",
+      "cost": "medium",
+      "fallback": null,
+      "observableResult": "Every required goal, return edge, and recovery node has machine-checked reachability evidence."
+    },
+    {
+      "mappingId": "adapter-mapping.v021.capability.telemetry",
+      "abstractPath": "capability.telemetry",
+      "runtimePrimitive": "privacy-safe local append-only event ledger with stable event IDs and no wall-clock dependency",
+      "cost": "low",
+      "fallback": "Omit metric-only events while preserving gameplay state; telemetry may never be a progression dependency.",
+      "observableResult": "Evaluation events are deterministic, non-authoritative, and cannot change the playable route."
+    }
+  ],
+  "constraints": {
+    "camera": [
+      "Keep player and current causal target visible whenever possible",
+      "Bound pans, provide timeout or snap fallback, and restore framing before input returns"
+    ],
+    "navigation": [
+      "Every dynamic blocker participates in grid collision and route simulation",
+      "Keep one verified recovery route before irreversible gates",
+      "Portals declare target map, unblocked spawn cell, facing, checkpoint, and safe return or onward recovery",
+      "Map-state transactions commit tile, collision, prop, interaction, portal, and lighting deltas atomically"
+    ],
+    "readability": [
+      "Use silhouette, motion, and contrast in addition to color",
+      "State variants change props and affordance cues, not only palette",
+      "Four-direction sprites preserve actor identity at gameplay scale"
+    ],
+    "accessibility": [
+      "Provide optional objective recap and escalating hints",
+      "Essential cues support replay, skip parity, and text-speed control",
+      "Avoid timing-only solutions without an alternate assist mode"
+    ]
+  },
+  "tests": [
+    "test.adapter.v021.map-state",
+    "test.adapter.v021.dynamic-route",
+    "test.adapter.v021.save-recovery",
+    "test.adapter.v021.cue-readability",
+    "test.adapter.v021.domain-closure",
+    "test.adapter.v021.npc-inventory",
+    "test.adapter.v021.portal-safe-return",
+    "test.adapter.v021.irreversible-gates",
+    "test.adapter.v021.capability-coverage"
+  ],
+  "governance": {
+    "owner": "Runtime adapter owner",
+    "reviewers": ["Stage designer", "Evaluator"],
+    "changelog": [
+      "0.3.0-beta.1 — mapped abstract pattern effects to the preserved 0.21 top-down pixel product profile without modifying the legacy Skill.",
+      "0.3.1-beta.1 — replaced prose-only evidence with effectId overrides, complete capability mappings, executable state transactions, negative fixtures, and save/recovery closure."
+    ]
+  }
+}

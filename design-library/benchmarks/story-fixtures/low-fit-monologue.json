@@ -1,0 +1,8 @@
+{
+  "fixtureId":"fixture.selector.low-fit-monologue","title":"A Voice Before the Vote",
+  "originalityStatement":"An original negative-control monologue written to test principled abstention rather than pattern selection.",
+  "storyModel":{"premise":"A councillor delivers one uninterrupted, precisely timed public statement whose rhetoric and fixed reveal order are the entire work.","playerRole":"The councillor speaking from a stationary lectern","storySignals":["signal.low-interaction-fit"],"experienceGoals":["experience.embodied-revelation"],"spatialSignals":[],"protectedCanon":["No interruption is permitted","Every sentence remains in the authored order","The audience makes no interactive response"]},
+  "productProfile":{"id":"product-profile.v021-topdown-pixel","spatialBudget":"single fixed lectern"},
+  "runtimeCapabilities":["capability.performance-cues","capability.dialogue-gates"],
+  "budget":"small"
+}

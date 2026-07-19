@@ -1,0 +1,400 @@
+{
+  "registryVersion": "1.0.0",
+  "fixtures": [
+    {
+      "fixtureId": "fixture.calibration.hidden-room",
+      "purpose": "P2 typed-hook vertical slice for a confined mystery with a state-changing reveal.",
+      "path": "story-fixtures/calibration-hidden-room.json"
+    },
+    {
+      "fixtureId": "fixture.maturity.aquarium-maintenance",
+      "purpose": "selection contract fixture for pattern.object-role-composition; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--aquarium-maintenance.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.aquarium-maintenance-route",
+      "purpose": "route contract fixture for pattern.object-role-composition; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--aquarium-maintenance-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.aquarium-maintenance-runtime",
+      "purpose": "runtime contract fixture for pattern.object-role-composition; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--aquarium-maintenance-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.archive-rubbing",
+      "purpose": "selection contract fixture for pattern.knowledge-gated-revisit; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--archive-rubbing.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.archive-rubbing-route",
+      "purpose": "route contract fixture for pattern.knowledge-gated-revisit; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--archive-rubbing-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.archive-rubbing-runtime",
+      "purpose": "runtime contract fixture for pattern.knowledge-gated-revisit; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--archive-rubbing-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.closed-archive",
+      "purpose": "selection contract fixture for pattern.capability-recontextualizes-old-space; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--closed-archive.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.closed-archive-route",
+      "purpose": "route contract fixture for pattern.capability-recontextualizes-old-space; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--closed-archive-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.closed-archive-runtime",
+      "purpose": "runtime contract fixture for pattern.capability-recontextualizes-old-space; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--closed-archive-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.community-radio-cache",
+      "purpose": "selection contract fixture for pattern.reward-expands-future-possibility; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--community-radio-cache.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.community-radio-cache-route",
+      "purpose": "route contract fixture for pattern.reward-expands-future-possibility; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--community-radio-cache-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.community-radio-cache-runtime",
+      "purpose": "runtime contract fixture for pattern.reward-expands-future-possibility; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--community-radio-cache-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.flooded-data-center",
+      "purpose": "selection contract fixture for pattern.multi-solution-state-graph; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--flooded-data-center.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.flooded-data-center-route",
+      "purpose": "route contract fixture for pattern.multi-solution-state-graph; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--flooded-data-center-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.flooded-data-center-runtime",
+      "purpose": "runtime contract fixture for pattern.multi-solution-state-graph; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--flooded-data-center-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.flooded-market-restored",
+      "purpose": "selection contract fixture for pattern.npc-reacts-to-world-state; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--flooded-market-restored.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.flooded-market-restored-route",
+      "purpose": "route contract fixture for pattern.npc-reacts-to-world-state; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--flooded-market-restored-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.flooded-market-restored-runtime",
+      "purpose": "runtime contract fixture for pattern.npc-reacts-to-world-state; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--flooded-market-restored-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.harbor-tide-covenant",
+      "purpose": "selection contract fixture for pattern.embodied-world-change-reveal; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--harbor-tide-covenant.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.harbor-tide-covenant-route",
+      "purpose": "route contract fixture for pattern.embodied-world-change-reveal; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--harbor-tide-covenant-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.harbor-tide-covenant-runtime",
+      "purpose": "runtime contract fixture for pattern.embodied-world-change-reveal; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--harbor-tide-covenant-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.night-shift-signal-failure",
+      "purpose": "selection contract fixture for pattern.action-first-onboarding; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--night-shift-signal-failure.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.night-shift-signal-failure-route",
+      "purpose": "route contract fixture for pattern.action-first-onboarding; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--night-shift-signal-failure-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.night-shift-signal-failure-runtime",
+      "purpose": "runtime contract fixture for pattern.action-first-onboarding; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--night-shift-signal-failure-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.quarantine-lab",
+      "purpose": "selection contract fixture for pattern.parallel-state-comparison; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--quarantine-lab.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.quarantine-lab-route",
+      "purpose": "route contract fixture for pattern.parallel-state-comparison; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--quarantine-lab-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.quarantine-lab-runtime",
+      "purpose": "runtime contract fixture for pattern.parallel-state-comparison; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--quarantine-lab-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.radio-observatory",
+      "purpose": "selection contract fixture for pattern.landmark-promises-future-use; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--radio-observatory.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.radio-observatory-route",
+      "purpose": "route contract fixture for pattern.landmark-promises-future-use; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--radio-observatory-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.radio-observatory-runtime",
+      "purpose": "runtime contract fixture for pattern.landmark-promises-future-use; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--radio-observatory-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.rooftop-waterworks-district",
+      "purpose": "selection contract fixture for pattern.dense-overworld-as-challenge-space; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--rooftop-waterworks-district.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.rooftop-waterworks-district-route",
+      "purpose": "route contract fixture for pattern.dense-overworld-as-challenge-space; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--rooftop-waterworks-district-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.rooftop-waterworks-district-runtime",
+      "purpose": "runtime contract fixture for pattern.dense-overworld-as-challenge-space; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--rooftop-waterworks-district-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.signal-workshop",
+      "purpose": "selection contract fixture for pattern.local-rule-development-arc; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--signal-workshop.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.signal-workshop-route",
+      "purpose": "route contract fixture for pattern.local-rule-development-arc; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--signal-workshop-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.signal-workshop-runtime",
+      "purpose": "runtime contract fixture for pattern.local-rule-development-arc; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--signal-workshop-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.tidal-library",
+      "purpose": "selection contract fixture for pattern.state-axis-rewrites-routes; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--tidal-library.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.tidal-library-route",
+      "purpose": "route contract fixture for pattern.state-axis-rewrites-routes; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--tidal-library-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.tidal-library-runtime",
+      "purpose": "runtime contract fixture for pattern.state-axis-rewrites-routes; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--tidal-library-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.underground-mail-line",
+      "purpose": "selection contract fixture for pattern.constrained-vehicle-route; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--underground-mail-line.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.underground-mail-line-route",
+      "purpose": "route contract fixture for pattern.constrained-vehicle-route; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--underground-mail-line-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.underground-mail-line-runtime",
+      "purpose": "runtime contract fixture for pattern.constrained-vehicle-route; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--underground-mail-line-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.weather-station-cache",
+      "purpose": "selection contract fixture for pattern.optional-secret-readability; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--weather-station-cache.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.weather-station-cache-route",
+      "purpose": "route contract fixture for pattern.optional-secret-readability; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--weather-station-cache-route.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.maturity.weather-station-cache-runtime",
+      "purpose": "runtime contract fixture for pattern.optional-secret-readability; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/maturity--weather-station-cache-runtime.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.aquarium-maintenance",
+      "purpose": "originality contract fixture for pattern.object-role-composition; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--aquarium-maintenance.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.community-radio-cache",
+      "purpose": "originality contract fixture for pattern.reward-expands-future-possibility; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--community-radio-cache.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.flooded-data-center",
+      "purpose": "originality contract fixture for pattern.multi-solution-state-graph; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--flooded-data-center.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.flooded-market-restored",
+      "purpose": "originality contract fixture for pattern.npc-reacts-to-world-state; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--flooded-market-restored.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.harbor-tide-covenant",
+      "purpose": "originality contract fixture for pattern.embodied-world-change-reveal; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--harbor-tide-covenant.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.night-shift-signal-failure",
+      "purpose": "originality contract fixture for pattern.action-first-onboarding; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--night-shift-signal-failure.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.quarantine-lab",
+      "purpose": "originality contract fixture for pattern.parallel-state-comparison; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--quarantine-lab.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.radio-observatory",
+      "purpose": "originality contract fixture for pattern.landmark-promises-future-use; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--radio-observatory.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.railway-archive-clue",
+      "purpose": "originality contract fixture for pattern.knowledge-gated-revisit; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--railway-archive-clue.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.revisit-weather-station",
+      "purpose": "originality contract fixture for pattern.capability-recontextualizes-old-space; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--revisit-weather-station.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.rooftop-waterworks-district",
+      "purpose": "originality contract fixture for pattern.dense-overworld-as-challenge-space; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--rooftop-waterworks-district.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.signal-workshop",
+      "purpose": "originality contract fixture for pattern.local-rule-development-arc; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--signal-workshop.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.tidal-library",
+      "purpose": "originality contract fixture for pattern.state-axis-rewrites-routes; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--tidal-library.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.underground-mail-line",
+      "purpose": "originality contract fixture for pattern.constrained-vehicle-route; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--underground-mail-line.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.originality.weather-station-cache",
+      "purpose": "originality contract fixture for pattern.optional-secret-readability; it defines an original scenario boundary and expected observable evidence, not a claim that a game runtime has already executed it.",
+      "path": "maturity-fixtures/originality--weather-station-cache.json",
+      "status": "authored-contract-fixture"
+    },
+    {
+      "fixtureId": "fixture.selector.comedy-chase",
+      "purpose": "Positive benchmark testing pace and avoiding tonal overfitting.",
+      "path": "story-fixtures/comedy-chase.json"
+    },
+    {
+      "fixtureId": "fixture.selector.forward-unseen",
+      "purpose": "Held-out original story fixture for P6 forward testing.",
+      "path": "story-fixtures/forward-unseen.json"
+    },
+    {
+      "fixtureId": "fixture.selector.locked-room",
+      "purpose": "Positive benchmark for rule discovery and stateful revisit.",
+      "path": "story-fixtures/locked-room.json"
+    },
+    {
+      "fixtureId": "fixture.selector.low-fit-monologue",
+      "purpose": "Negative benchmark requiring pack abstention.",
+      "path": "story-fixtures/low-fit-monologue.json"
+    },
+    {
+      "fixtureId": "fixture.selector.open-exploration",
+      "purpose": "Positive benchmark for landmark-led curiosity and systemic routes.",
+      "path": "story-fixtures/open-exploration.json"
+    },
+    {
+      "fixtureId": "fixture.selector.relationship-drama",
+      "purpose": "Positive benchmark for social response with restrained spatial mechanics.",
+      "path": "story-fixtures/relationship-drama.json"
+    }
+  ]
+}

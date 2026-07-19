@@ -1,0 +1,295 @@
+{
+  "fixtureVersion": "1.0.0",
+  "fixtures": [
+    {
+      "fixtureId": "fixture.adapter.map-collision-atomic",
+      "testId": "test.adapter.v021.map-state",
+      "concern": "A map-state change commits presentation, collision, interaction, portal, lighting, and routes as one transaction.",
+      "operation": "map-layer-atomic",
+      "initialState": {
+        "map": {"activeLayer":"dry","tiles":"dry","props":"dry","interactions":"dry","portals":"dry","lighting":"dry"},
+        "collision": {"version":"dry","blocked":["cell.b2"]},
+        "routes": {"goalReachable":true,"recoveryReachable":true},
+        "transactionLedger": []
+      },
+      "positiveInput": {"transactionId":"tx.map.storm","targetLayer":"storm","variants":{"tiles":"storm","collision":"storm","props":"storm","interactions":"storm","portals":"storm","lighting":"storm"}},
+      "positiveExpected": [
+        {"path":"map.activeLayer","equals":"storm"},
+        {"path":"map.tiles","equals":"storm"},
+        {"path":"map.props","equals":"storm"},
+        {"path":"map.interactions","equals":"storm"},
+        {"path":"map.portals","equals":"storm"},
+        {"path":"map.lighting","equals":"storm"},
+        {"path":"collision.version","equals":"storm"},
+        {"path":"routes.goalReachable","equals":true},
+        {"path":"routes.recoveryReachable","equals":true},
+        {"path":"transactionLedger.0","equals":"tx.map.storm"}
+      ],
+      "negativeInput": {"transactionId":"tx.map.interrupted","targetLayer":"storm","variants":{"tiles":"storm","collision":"storm","props":"storm","interactions":"storm","portals":"storm","lighting":"storm"},"interruptAfter":"collision"},
+      "negativeExpectedError": "transaction-interrupted",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.route-recovery",
+      "testId": "test.adapter.v021.dynamic-route",
+      "concern": "A route gate changes grid collision only when the goal and a recovery route remain reachable.",
+      "operation": "route-gate-recovery",
+      "initialState": {"routes":{"edgeOpen":false,"goalReachable":true,"recoveryReachable":true},"collision":{"gateBlocked":true},"transactionLedger":[]},
+      "positiveInput": {"transactionId":"tx.route.open","action":"unlock","goalReachableAfter":true,"recoveryReachableAfter":true},
+      "positiveExpected": [
+        {"path":"routes.edgeOpen","equals":true},
+        {"path":"collision.gateBlocked","equals":false},
+        {"path":"routes.goalReachable","equals":true},
+        {"path":"routes.recoveryReachable","equals":true}
+      ],
+      "negativeInput": {"transactionId":"tx.route.trap","action":"lock","goalReachableAfter":false,"recoveryReachableAfter":false},
+      "negativeExpectedError": "route-softlock",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.npc-dialogue-schedule",
+      "testId": "test.adapter.v021.npc-inventory",
+      "concern": "One authoritative fact atomically drives visible world, NPC, dialogue, and logical schedule state.",
+      "operation": "npc-dialogue-schedule",
+      "initialState": {
+        "facts":{"stormPassed":false},
+        "map":{"visibleVariant":"storm"},
+        "actors":{"keeper":{"state":"guarding","sourceFact":"stormPassed"}},
+        "dialogue":{"keeper":"before"},
+        "schedule":{"window":"night"},
+        "transactionLedger":[]
+      },
+      "positiveInput": {"transactionId":"tx.npc.after-storm","factRef":"stormPassed","factValue":true,"visibleVariant":"calm","actorId":"keeper","actorState":"helping","dialogueGate":"after","scheduleWindow":"dawn"},
+      "positiveExpected": [
+        {"path":"facts.stormPassed","equals":true},
+        {"path":"map.visibleVariant","equals":"calm"},
+        {"path":"actors.keeper.state","equals":"helping"},
+        {"path":"actors.keeper.sourceFact","equals":"stormPassed"},
+        {"path":"dialogue.keeper","equals":"after"},
+        {"path":"schedule.window","equals":"dawn"}
+      ],
+      "negativeInput": {"transactionId":"tx.npc.bad-fact","factRef":"unknownFact","factValue":true,"visibleVariant":"calm","actorId":"keeper","actorState":"helping","dialogueGate":"after","scheduleWindow":"dawn"},
+      "negativeExpectedError": "unknown-authoritative-fact",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.inventory-object-composition",
+      "testId": "test.adapter.v021.npc-inventory",
+      "concern": "Inventory, placement occupancy, deterministic composition, consumption, and exit recovery stay coherent.",
+      "operation": "inventory-object-composition",
+      "initialState": {
+        "inventory":{"objectCount":2,"roles":[]},
+        "objects":{"crate":{"cell":"a1","role":null}},
+        "collision":{"occupied":["a1"]},
+        "routes":{"exitReachable":true},
+        "composition":{"result":null,"iterations":0},
+        "transactionLedger":[]
+      },
+      "positiveInput": {"transactionId":"tx.object.bridge","role":"support","objectId":"crate","targetCell":"b1","legalCell":true,"exitReachableAfter":true,"consumption":1,"minimumRemaining":1,"compositionResult":"bridge","iterationCount":2},
+      "positiveExpected": [
+        {"path":"inventory.objectCount","equals":1},
+        {"path":"inventory.roles.0","equals":"support"},
+        {"path":"objects.crate.cell","equals":"b1"},
+        {"path":"objects.crate.role","equals":"support"},
+        {"path":"collision.occupied.0","equals":"b1"},
+        {"path":"routes.exitReachable","equals":true},
+        {"path":"composition.result","equals":"bridge"},
+        {"path":"composition.iterations","equals":2}
+      ],
+      "negativeInput": {"transactionId":"tx.object.trap","role":"support","objectId":"crate","targetCell":"exit","legalCell":true,"exitReachableAfter":false,"consumption":2,"minimumRemaining":1,"compositionResult":"bridge","iterationCount":2},
+      "negativeExpectedError": "placement-blocks-recovery",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.portal-safe-return",
+      "testId": "test.adapter.v021.portal-safe-return",
+      "concern": "A portal resolves target map, safe spawn, facing, checkpoint, carried state, and return edge before commit.",
+      "operation": "portal-safe-return",
+      "initialState": {
+        "player":{"map":"dock","cell":"a1","facing":"down"},
+        "map":{"blockedSpawns":["archive.c9"]},
+        "portals":{"returnEdges":{"archive->dock":true}},
+        "facts":{"doorOpened":true},
+        "inventory":{"key":1},
+        "checkpoint":null,
+        "routes":{"returnReachable":true},
+        "transactionLedger":[]
+      },
+      "positiveInput": {"transactionId":"tx.portal.archive","targetMap":"archive","spawnCell":"archive.b2","facing":"up","checkpointId":"checkpoint.archive-entry","returnEdge":"archive->dock"},
+      "positiveExpected": [
+        {"path":"player.map","equals":"archive"},
+        {"path":"player.cell","equals":"archive.b2"},
+        {"path":"player.facing","equals":"up"},
+        {"path":"checkpoint","equals":"checkpoint.archive-entry"},
+        {"path":"facts.doorOpened","equals":true},
+        {"path":"inventory.key","equals":1},
+        {"path":"routes.returnReachable","equals":true}
+      ],
+      "negativeInput": {"transactionId":"tx.portal.blocked","targetMap":"archive","spawnCell":"archive.c9","facing":"up","checkpointId":"checkpoint.archive-entry","returnEdge":"archive->dock"},
+      "negativeExpectedError": "blocked-spawn",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.checkpoint-save-reload",
+      "testId": "test.adapter.v021.save-recovery",
+      "concern": "Checkpoint and save reload restore every authoritative domain and transaction ledger exactly.",
+      "operation": "checkpoint-save-reload",
+      "initialState": {
+        "map":{"activeLayer":"before"},
+        "collision":{"version":"before"},
+        "player":{"cell":"a1","facing":"right"},
+        "facts":{"known":true},
+        "inventory":{"token":2},
+        "objects":{"crate":{"cell":"b1"}},
+        "actors":{"keeper":{"state":"before"}},
+        "dialogue":{"keeper":"before"},
+        "reveals":{"ending":false},
+        "schedule":{"window":1},
+        "portals":{"open":true},
+        "objectives":{"current":"inspect"},
+        "transactionLedger":["tx.before"]
+      },
+      "positiveInput": {"checkpointId":"checkpoint.full","saveVersion":2,"mutateBeforeRestore":true},
+      "positiveExpected": [
+        {"path":"map.activeLayer","equals":"before"},
+        {"path":"collision.version","equals":"before"},
+        {"path":"player.cell","equals":"a1"},
+        {"path":"facts.known","equals":true},
+        {"path":"inventory.token","equals":2},
+        {"path":"objects.crate.cell","equals":"b1"},
+        {"path":"actors.keeper.state","equals":"before"},
+        {"path":"dialogue.keeper","equals":"before"},
+        {"path":"reveals.ending","equals":false},
+        {"path":"schedule.window","equals":1},
+        {"path":"portals.open","equals":true},
+        {"path":"objectives.current","equals":"inspect"},
+        {"path":"transactionLedger.0","equals":"tx.before"}
+      ],
+      "negativeInput": {"checkpointId":"checkpoint.partial","saveVersion":2,"interruptAfterDomain":"inventory"},
+      "negativeExpectedError": "checkpoint-interrupted",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.irreversible-gate",
+      "testId": "test.adapter.v021.irreversible-gates",
+      "concern": "An irreversible effect is rejected before its gate, commits once after the gate, persists, and cannot be replay-duplicated.",
+      "operation": "irreversible-gate",
+      "initialState": {"gates":{"milestone":true},"facts":{"rewardCommitted":false},"inventory":{"reward":0},"save":{"persistent":false},"transactionLedger":[]},
+      "positiveInput": {"transactionId":"tx.reward.final","gateId":"milestone","factRef":"rewardCommitted","inventoryRef":"reward","amount":1},
+      "positiveExpected": [
+        {"path":"facts.rewardCommitted","equals":true},
+        {"path":"inventory.reward","equals":1},
+        {"path":"save.persistent","equals":true},
+        {"path":"transactionLedger.0","equals":"tx.reward.final"}
+      ],
+      "negativeInput": {"transactionId":"tx.reward.early","gateId":"closedGate","factRef":"rewardCommitted","inventoryRef":"reward","amount":1},
+      "negativeExpectedError": "irreversible-gate-closed",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.cue-idempotence",
+      "testId": "test.adapter.v021.cue-readability",
+      "concern": "Normal, replay, skip, and resume paths commit one durable cue effect and return control.",
+      "operation": "cue-idempotence",
+      "initialState": {"cues":[],"facts":{"consequenceShown":false},"interaction":{"controlEnabled":true},"transactionLedger":[]},
+      "positiveInput": {"transactionId":"tx.cue.change","cueId":"cue.change","durableFact":"consequenceShown","variants":["normal","replay","skip","resume"]},
+      "positiveExpected": [
+        {"path":"cues.0","equals":"cue.change"},
+        {"path":"facts.consequenceShown","equals":true},
+        {"path":"interaction.controlEnabled","equals":true},
+        {"path":"transactionLedger.0","equals":"tx.cue.change"}
+      ],
+      "negativeInput": {"transactionId":"tx.cue.no-fallback","cueId":"cue.change","durableFact":"consequenceShown","variants":[]},
+      "negativeExpectedError": "cue-has-no-completion-path",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.world-composite-interruption",
+      "testId": "test.adapter.v021.domain-closure",
+      "concern": "An embodied world transition commits the authoritative fact, all map domains, and recovery route atomically.",
+      "operation": "world-composite-atomic",
+      "initialState": {
+        "facts":{"variant":"before"},
+        "map":{"activeLayer":"before","tiles":"before","props":"before","interactions":"before","portals":"before","lighting":"before"},
+        "collision":{"version":"before"},
+        "routes":{"recoveryReachable":true},
+        "save":{"checkpointBeforeTransition":true},
+        "transactionLedger":[]
+      },
+      "positiveInput": {"transactionId":"tx.world.after","target":"after"},
+      "positiveExpected": [
+        {"path":"facts.variant","equals":"after"},
+        {"path":"map.activeLayer","equals":"after"},
+        {"path":"map.tiles","equals":"after"},
+        {"path":"map.props","equals":"after"},
+        {"path":"map.interactions","equals":"after"},
+        {"path":"map.portals","equals":"after"},
+        {"path":"map.lighting","equals":"after"},
+        {"path":"collision.version","equals":"after"},
+        {"path":"routes.recoveryReachable","equals":true}
+      ],
+      "negativeInput": {"transactionId":"tx.world.interrupted","target":"after","interruptAfter":"props"},
+      "negativeExpectedError": "transaction-interrupted",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.context-onboarding",
+      "testId": "test.adapter.v021.domain-closure",
+      "concern": "Facing interaction opens meaningful control, performs one role-bearing action, records telemetry, and reveals one next direction.",
+      "operation": "context-onboarding",
+      "initialState": {"player":{"facingTarget":"pump","controlState":"opening-ready","roleEvidence":false},"interaction":{"open":false},"objectives":{"immediateNeed":"drain","nextDirection":null},"onboarding":{"steps":0,"complete":false},"world":{"needState":"unresolved"},"telemetry":[],"transactionLedger":[]},
+      "positiveInput": {"transactionId":"tx.onboarding.pump","target":"pump","verb":"operate","nextDirection":"archive"},
+      "positiveExpected": [
+        {"path":"player.controlState","equals":"meaningful-control"},
+        {"path":"player.roleEvidence","equals":true},
+        {"path":"interaction.open","equals":true},
+        {"path":"objectives.nextDirection","equals":"archive"},
+        {"path":"onboarding.steps","equals":1},
+        {"path":"onboarding.complete","equals":true},
+        {"path":"world.needState","equals":"resolved-or-transformed"},
+        {"path":"telemetry.0","equals":"operate:pump"}
+      ],
+      "negativeInput": {"transactionId":"tx.onboarding.wrong","target":"window","verb":"operate","nextDirection":"archive"},
+      "negativeExpectedError": "wrong-context-target",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.save-migration",
+      "testId": "test.adapter.v021.save-recovery",
+      "concern": "A versioned save migration preserves every authoritative domain and retains a rollback copy.",
+      "operation": "save-migration",
+      "initialState": {"saveVersion":1,"map":{"layer":"rain"},"facts":{"seen":true},"inventory":{"token":1},"actors":{"keeper":"awake"},"dialogue":{"gate":"after"},"reveals":{"ledger":true},"checkpoint":"cp1","transactionLedger":["tx1"]},
+      "positiveInput": {"fromVersion":1,"toVersion":2,"rename":{"from":"map.layer","to":"map.activeLayer"}},
+      "positiveExpected": [
+        {"path":"saveVersion","equals":2},
+        {"path":"map.activeLayer","equals":"rain"},
+        {"path":"facts.seen","equals":true},
+        {"path":"inventory.token","equals":1},
+        {"path":"actors.keeper","equals":"awake"},
+        {"path":"dialogue.gate","equals":"after"},
+        {"path":"reveals.ledger","equals":true},
+        {"path":"checkpoint","equals":"cp1"},
+        {"path":"transactionLedger.0","equals":"tx1"}
+      ],
+      "negativeInput": {"fromVersion":9,"toVersion":10,"rename":{"from":"map.layer","to":"map.activeLayer"}},
+      "negativeExpectedError": "unsupported-save-version",
+      "negativeMustRollbackExactly": true
+    },
+    {
+      "fixtureId": "fixture.adapter.spatial-query-telemetry",
+      "testId": "test.adapter.v021.capability-coverage",
+      "concern": "Spatial query resolves deterministically and telemetry remains append-only and non-authoritative.",
+      "operation": "spatial-query-telemetry",
+      "initialState": {"grid":{"player":"a1","facing":"right","targets":{"b1":"curtain","a2":"desk"}},"interaction":{"target":null},"telemetry":[],"facts":{"progress":0},"transactionLedger":[]},
+      "positiveInput": {"transactionId":"tx.query.curtain","expectedCell":"b1","eventId":"inspect:curtain"},
+      "positiveExpected": [
+        {"path":"interaction.target","equals":"curtain"},
+        {"path":"telemetry.0","equals":"inspect:curtain"},
+        {"path":"facts.progress","equals":0}
+      ],
+      "negativeInput": {"transactionId":"tx.query.wrong-cell","expectedCell":"a2","eventId":"inspect:desk"},
+      "negativeExpectedError": "spatial-query-facing-mismatch",
+      "negativeMustRollbackExactly": true
+    }
+  ]
+}

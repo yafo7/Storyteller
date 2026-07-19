@@ -1,0 +1,47 @@
+{
+  "fixtureId": "fixture.selector.low-spatial-change",
+  "title": "The Last Rehearsal Bell",
+  "originalityStatement": "An original single-room rehearsal benchmark created to test social and performance pacing without map replacement.",
+  "storyModel": {
+    "premise": "A new stagehand learns why two performers keep missing the same entrance by handling one cue, observing their reactions, and choosing when to ring the final rehearsal bell.",
+    "playerRole": "New stagehand who does not yet understand the performers' shared history",
+    "storySignals": [
+      "signal.capability-reveal",
+      "signal.embodied-secret",
+      "signal.confined-stage",
+      "signal.relationship-memory",
+      "signal.schedule-pressure"
+    ],
+    "experienceGoals": [
+      "experience.embodied-revelation",
+      "experience.social-recognition",
+      "experience.fair-recovery"
+    ],
+    "spatialSignals": [
+      "signal.confined-stage"
+    ],
+    "protectedCanon": [
+      "The rehearsal remains in one unchanged room",
+      "Neither performer is deliberately sabotaging the other",
+      "The shared history is revealed only after the player has handled the cue and observed both reactions"
+    ]
+  },
+  "productProfile": {
+    "id": "product-profile.v021-topdown-pixel",
+    "spatialBudget": "one unchanged rehearsal room with no topology or map-layer variants"
+  },
+  "runtimeCapabilities": [
+    "capability.world-facts",
+    "capability.context-interaction",
+    "capability.npc-state",
+    "capability.dialogue-gates",
+    "capability.performance-cues",
+    "capability.camera-cues",
+    "capability.schedule-clock",
+    "capability.checkpoints",
+    "capability.hint-ladder",
+    "capability.telemetry",
+    "capability.route-simulation"
+  ],
+  "budget": "medium"
+}

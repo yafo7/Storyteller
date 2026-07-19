@@ -1,0 +1,8 @@
+{
+  "fixtureId":"fixture.selector.relationship-drama","title":"Three Cups Left Warm",
+  "originalityStatement":"An original domestic drama benchmark; its characters, apartment, chronology, and conflicts were created for selector testing.",
+  "storyModel":{"premise":"An adult child returns to a small apartment and reconstructs a family decision by noticing how two relatives change their routines and use of shared objects.","playerRole":"Returning family member who lacks the final decision’s context","storySignals":["signal.relationship-memory","signal.schedule-pressure","signal.revisited-place","signal.embodied-secret","signal.confined-stage"],"experienceGoals":["experience.social-recognition","experience.embodied-revelation","experience.curiosity-tension"],"spatialSignals":["signal.revisited-place","signal.confined-stage"],"protectedCanon":["No relative is a villain","The decision is disclosed by the elder only after the player understands both routines"]},
+  "productProfile":{"id":"product-profile.v021-topdown-pixel","spatialBudget":"one apartment across three schedule windows"},
+  "runtimeCapabilities":["capability.world-facts","capability.map-layers","capability.context-interaction","capability.npc-state","capability.dialogue-gates","capability.performance-cues","capability.camera-cues","capability.schedule-clock","capability.checkpoints","capability.hint-ladder","capability.route-simulation"],
+  "budget":"medium"
+}

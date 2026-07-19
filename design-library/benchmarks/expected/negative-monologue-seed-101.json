@@ -1,0 +1,412 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.benchmark.selector.low-fit-monologue",
+  "storyModelHash": "da6f2c80098a47ae2ed2ba81c840fdda40a09741b755abef12caa093f920bef8",
+  "libraryLockRef": "lock.benchmark-unlocked",
+  "provenancePolicy": {
+    "enabledPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "blockedPackIds": [],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": [
+      "signal.low-interaction-fit"
+    ],
+    "experienceGoals": [
+      "experience.embodied-revelation"
+    ],
+    "spatialConstraints": [],
+    "runtimeCapabilities": [
+      "capability.performance-cues",
+      "capability.dialogue-gates"
+    ],
+    "budget": {
+      "design": "low",
+      "code": "medium",
+      "art": "medium",
+      "qa": "high"
+    },
+    "negativeSignals": [
+      "signal.low-interaction-fit"
+    ]
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 2.12
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 1,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 2.03
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 2.02
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 1.93
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.object-role-composition",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 5,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 1.85
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 1,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 1.77
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 1.72
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 1.72
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 1.67
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 1.67
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 1,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 1.58
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 1,
+        "runtimeFit": 0,
+        "budgetFit": 1,
+        "originalityMargin": 5,
+        "weightedTotal": 1.58
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "budget-impossible",
+        "manual-binding-incomplete"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "The source explicitly requires uninterrupted fixed-order language, so systemic selection must abstain."
+      ]
+    }
+  ],
+  "selectedApplications": [],
+  "composition": {
+    "corePatternRef": null,
+    "supportPatternRefs": [],
+    "sharedExperienceAxis": "",
+    "conflictsResolved": [],
+    "developmentArc": []
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "structuralDeltas": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "forbiddenTransfers": [
+      "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+    ],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": [
+      "A reviewer cannot reliably attribute the instance to one source encounter",
+      "At least four transformation axes materially change",
+      "Protected canon and reveal order remain unchanged"
+    ]
+  },
+  "abstention": {
+    "abstained": true,
+    "reason": "Interaction would damage the source’s fixed uninterrupted rhetorical form."
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.selector.low-fit-monologue.gameplay",
+      "owner": "gameplay",
+      "contractRef": "gameplay-design/v03",
+      "applicationRefs": [],
+      "requirements": {
+        "abstained": true,
+        "useStoryDerivedNoPackDesign": true
+      },
+      "validationRefs": [
+        "assertion.selection.abstained"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.low-fit-monologue.performance",
+      "owner": "performance",
+      "contractRef": "performance-design/v03",
+      "applicationRefs": [],
+      "requirements": {
+        "abstained": true,
+        "useStoryDerivedNoPackDesign": true
+      },
+      "validationRefs": [
+        "assertion.selection.abstained"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.low-fit-monologue.stage",
+      "owner": "stage",
+      "contractRef": "stage-plan/v03",
+      "applicationRefs": [],
+      "requirements": {
+        "abstained": true,
+        "useStoryDerivedNoPackDesign": true
+      },
+      "validationRefs": [
+        "assertion.selection.abstained"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.low-fit-monologue.evaluation",
+      "owner": "evaluation",
+      "contractRef": "acceptance/v03",
+      "applicationRefs": [],
+      "requirements": {
+        "abstained": true,
+        "useStoryDerivedNoPackDesign": true
+      },
+      "validationRefs": [
+        "assertion.selection.abstained"
+      ]
+    }
+  ],
+  "status": "rejected"
+}

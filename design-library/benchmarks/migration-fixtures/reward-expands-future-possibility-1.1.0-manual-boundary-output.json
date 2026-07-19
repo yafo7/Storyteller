@@ -1,0 +1,85 @@
+{
+  "fixtureId": "fixture.migration.reward-expands-future-possibility.legacy-choice-manual-boundary-output",
+  "fixtureVersion": "1.0.0",
+  "migrationRef": "migration.pattern.reward-expands-future-possibility.1.1.0-to-2.0.0",
+  "sourcePatternRef": "pattern.reward-expands-future-possibility@1.1.0",
+  "targetPatternRef": "pattern.reward-expands-future-possibility@2.0.0",
+  "result": "manual-reinstantiation-required",
+  "automaticCarryForward": {
+    "patternId": "pattern.reward-expands-future-possibility",
+    "name": "Reward expands future possibility",
+    "kind": "exploration-reward"
+  },
+  "legacyDiagnostics": {
+    "optionalDiscovery": true,
+    "laterChoiceCount": 2,
+    "nonDominatedCount": 2,
+    "unselectedOptionsPreserved": true,
+    "targetEligibilityValue": false,
+    "statement": "Legacy choice properties are retained only for audit and rollback. They are not 2.0.0 bindings or evidence."
+  },
+  "nonMigratableBindings": [
+    {
+      "sourcePath": "$.application.bindings.discoveryRef",
+      "reason": "An interaction reference does not prove an atomic acquisition transaction or enumerate its committed state set.",
+      "requiredManualTarget": "$.manualReinstantiation.acquisitionTransactionRef"
+    },
+    {
+      "sourcePath": "$.application.bindings.rewardRef",
+      "reason": "A legacy reward reference cannot be split safely into one or more persistent state refs without inspecting implementation state and save boundaries.",
+      "requiredManualTarget": "$.manualReinstantiation.persistentStateRefs"
+    },
+    {
+      "sourcePath": "$.application.bindings.choiceSetRef",
+      "reason": "A choice set does not establish two distinct functional dimensions, per-function state dependencies, future-use contexts, feedback, or actionability deltas.",
+      "requiredManualTarget": "$.manualReinstantiation.functions"
+    },
+    {
+      "sourcePath": "$.application.bindings.optionalDiscovery",
+      "reason": "Optionality was removed from the 2.0.0 retained principle and has no target binding.",
+      "requiredManualTarget": null
+    },
+    {
+      "sourcePath": "$.application.bindings.laterChoiceCount",
+      "reason": "A choice count cannot be reinterpreted as a function count.",
+      "requiredManualTarget": null
+    },
+    {
+      "sourcePath": "$.application.bindings.nonDominatedCount",
+      "reason": "Non-domination is not evidence of persistent multi-function state.",
+      "requiredManualTarget": null
+    },
+    {
+      "sourcePath": "$.application.bindings.unselectedOptionsPreserved",
+      "reason": "Preservation of unselected choices is not part of the 2.0.0 contract.",
+      "requiredManualTarget": null
+    }
+  ],
+  "manualReinstantiationRequirements": {
+    "acquisitionTransactionRef": "required",
+    "persistentStateRefs": "one-or-more, all atomically committed by the acquisition transaction",
+    "functions": "two-or-more in distinct functional dimensions",
+    "eachFunctionRequires": [
+      "persistentStateRef",
+      "functionalDimension",
+      "futureUseContextRef",
+      "feedbackRef",
+      "actionabilityDelta.before",
+      "actionabilityDelta.after"
+    ],
+    "economyRuleRef": "required",
+    "protectedStoryOrderCheck": "required"
+  },
+  "targetApplication": null,
+  "validation": {
+    "canAutoMigrate": false,
+    "eligibleFor2_0_0": false,
+    "fabricatedBindings": 0,
+    "blockingReasons": [
+      "missing acquisitionTransactionRef",
+      "missing persistentStateRefs",
+      "missing function bindings",
+      "missing actionability deltas"
+    ]
+  }
+}

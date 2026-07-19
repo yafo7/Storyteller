@@ -1,0 +1,716 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.benchmark.selector.open-exploration",
+  "storyModelHash": "5df9fbebad0871748c05b10151d32105cbc345a429d61b781d60f54d34a0d18e",
+  "libraryLockRef": "lock.benchmark-unlocked",
+  "provenancePolicy": {
+    "enabledPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "blockedPackIds": [],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": [
+      "signal.landmark-mystery",
+      "signal.transformable-environment",
+      "signal.multi-causal-problem",
+      "signal.capability-reveal",
+      "signal.revisited-place"
+    ],
+    "experienceGoals": [
+      "experience.self-directed-discovery",
+      "experience.spatial-memory",
+      "experience.consequential-agency"
+    ],
+    "spatialConstraints": [
+      "signal.landmark-mystery",
+      "signal.transformable-environment",
+      "signal.revisited-place"
+    ],
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.inventory",
+      "capability.context-interaction",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.grid-collision",
+      "capability.spatial-query",
+      "capability.object-placement",
+      "capability.object-composition",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.route-simulation"
+    ],
+    "budget": {
+      "design": "medium",
+      "code": "medium",
+      "art": "medium",
+      "qa": "high"
+    },
+    "negativeSignals": []
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.32
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.npc-state"
+      ]
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 4,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.23
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.object-role-composition",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 5,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.15
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.08
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.88
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "manual-binding-incomplete"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Reward 2.0 manual binding closure is incomplete: exactly one explicit acquisition transaction is required; the acquisition transaction must declare an atomic commit; one or more explicit persistent state refs are required; at least two explicit reward functions are required; reward functions must span at least two distinct functional dimensions; an explicit economy rule ref is required; a passed, evidenced protected-story-order check is required."
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.863
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.853
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.403
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.portal-transitions"
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 4,
+        "runtimeFit": 0,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.263
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.dialogue-gates, capability.npc-state, capability.schedule-clock"
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.153
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 2 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.137
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.687
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    }
+  ],
+  "selectedApplications": [
+    {
+      "applicationId": "application.selector.open-exploration.1",
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "role": "core",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.facts",
+        "storyModel.locations",
+        "storyModel.revealOrder",
+        "storyModel.protectedCanon"
+      ],
+      "retainedPrinciples": [
+        "A later reusable capability changes the meaning of an earlier visible affordance."
+      ],
+      "adaptationSummary": "Instantiate Capability recontextualizes old space from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "paired source-world coordinate layouts",
+        "recognizable item-to-obstacle pairings",
+        "source transition rituals"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "storyModel",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.capability-recontextualizes-old-space",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.0.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.capability-revisit.selection",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.capability-revisit.unlock-old-affordance",
+          "parameterBindings": {
+            "parameter.capability-revisit.capability": "capability.world-facts",
+            "parameter.capability-revisit.location": "location-ref.capability-recontextualizes-old-space.story-derived",
+            "parameter.capability-revisit.affordance": "affordance-ref.capability-recontextualizes-old-space.story-derived",
+            "parameter.capability-revisit.route": "route.capability-recontextualizes-old-space.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.world.affordances[affordance].state must satisfy equals against \"actionable\" before the authored transaction is accepted. This realizes the distinct capability-gated-return causal contract.",
+            "$.navigation.routes[route].reachable must satisfy equals against true before the authored transaction is accepted. This realizes the distinct capability-gated-return causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.capability-revisit.commit-place-delta",
+          "parameterBindings": {
+            "parameter.capability-revisit.capability": "capability.world-facts",
+            "parameter.capability-revisit.location": "location-ref.capability-recontextualizes-old-space.story-derived",
+            "parameter.capability-revisit.affordance": "affordance-ref.capability-recontextualizes-old-space.story-derived",
+            "parameter.capability-revisit.route": "route.capability-recontextualizes-old-space.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.world.locations[location].revisitVariant must satisfy equals against \"capability-resolved\" before the authored transaction is accepted. This realizes the distinct capability-gated-return causal contract."
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.world-facts",
+        "capability.route-gates",
+        "capability.map-layers",
+        "capability.route-simulation"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    },
+    {
+      "applicationId": "application.selector.open-exploration.2",
+      "patternId": "pattern.landmark-promises-future-use",
+      "patternVersion": "1.1.0",
+      "role": "support",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.facts",
+        "storyModel.locations",
+        "storyModel.revealOrder",
+        "storyModel.protectedCanon"
+      ],
+      "retainedPrinciples": [
+        "A distinctive place seen early becomes meaningful when the player can act there later."
+      ],
+      "adaptationSummary": "Instantiate Landmark promises future use from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "source towers, temples, castles, or mountain silhouettes",
+        "source horizon compositions",
+        "source arrival music and camera moves"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.1.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.1.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "storyModel",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.1.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.landmark-promises-future-use",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.1.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.landmark-promise.selection",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.1.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.landmark-promise.record-sighting",
+          "parameterBindings": {
+            "parameter.landmark-promise.landmark": "landmark-ref.landmark-promises-future-use.story-derived",
+            "parameter.landmark-promise.first-sighting": "beat-ref.landmark-promises-future-use.story-derived",
+            "parameter.landmark-promise.payoff": "beat-ref.landmark-promises-future-use.story-derived",
+            "parameter.landmark-promise.later-action": "verb-ref.landmark-promises-future-use.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.player.spatialMemory.seenLandmarkRefs must satisfy contains-ref against reference parameter.landmark-promise.landmark before the authored transaction is accepted. This realizes the distinct early-sighting-later-payoff causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.landmark-promise.activate-payoff",
+          "parameterBindings": {
+            "parameter.landmark-promise.landmark": "landmark-ref.landmark-promises-future-use.story-derived",
+            "parameter.landmark-promise.first-sighting": "beat-ref.landmark-promises-future-use.story-derived",
+            "parameter.landmark-promise.payoff": "beat-ref.landmark-promises-future-use.story-derived",
+            "parameter.landmark-promise.later-action": "verb-ref.landmark-promises-future-use.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.world.landmarks[landmark].futureUseResolved must satisfy equals against true before the authored transaction is accepted. This realizes the distinct early-sighting-later-payoff causal contract.",
+            "$.interaction.availableVerb must satisfy equals-ref against reference parameter.landmark-promise.later-action before the authored transaction is accepted. This realizes the distinct early-sighting-later-payoff causal contract."
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.world-facts",
+        "capability.route-gates",
+        "capability.spatial-query",
+        "capability.camera-cues"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    }
+  ],
+  "composition": {
+    "corePatternRef": "pattern.capability-recontextualizes-old-space",
+    "supportPatternRefs": [
+      "pattern.landmark-promises-future-use"
+    ],
+    "sharedExperienceAxis": "experience.spatial-memory",
+    "conflictsResolved": [
+      "Removed candidates that conflict with the selected core or duplicate an already represented pattern kind."
+    ],
+    "developmentArc": [
+      "teach",
+      "practice",
+      "variation",
+      "combine-or-reverse",
+      "exam"
+    ]
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [
+      "capability.world-facts",
+      "capability.route-gates",
+      "capability.map-layers",
+      "capability.route-simulation",
+      "capability.spatial-query",
+      "capability.camera-cues"
+    ],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "structuralDeltas": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "forbiddenTransfers": [
+      "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+    ],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": [
+      "A reviewer cannot reliably attribute the instance to one source encounter",
+      "At least four transformation axes materially change",
+      "Protected canon and reveal order remain unchanged"
+    ]
+  },
+  "abstention": {
+    "abstained": false,
+    "reason": null
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.selector.open-exploration.gameplay",
+      "owner": "gameplay",
+      "contractRef": "gameplay-design/v03",
+      "applicationRefs": [
+        "application.selector.open-exploration.1",
+        "application.selector.open-exploration.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.capability-recontextualizes-old-space",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.capability-recontextualizes-old-space.selection.1",
+        "assertion.capability-recontextualizes-old-space.selection.2",
+        "assertion.capability-recontextualizes-old-space.selection.3",
+        "assertion.capability-recontextualizes-old-space.runtime.1",
+        "assertion.capability-recontextualizes-old-space.runtime.2",
+        "assertion.capability-recontextualizes-old-space.route.1",
+        "assertion.capability-recontextualizes-old-space.route.2",
+        "assertion.capability-recontextualizes-old-space.route.3",
+        "assertion.capability-recontextualizes-old-space.originality.1",
+        "assertion.capability-recontextualizes-old-space.originality.2",
+        "assertion.capability-recontextualizes-old-space.originality.3",
+        "assertion.landmark-promises-future-use.selection.1",
+        "assertion.landmark-promises-future-use.selection.2",
+        "assertion.landmark-promises-future-use.runtime.1",
+        "assertion.landmark-promises-future-use.runtime.2",
+        "assertion.landmark-promises-future-use.route.1",
+        "assertion.landmark-promises-future-use.route.2",
+        "assertion.landmark-promises-future-use.originality.1",
+        "assertion.landmark-promises-future-use.originality.2",
+        "assertion.landmark-promises-future-use.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.open-exploration.performance",
+      "owner": "performance",
+      "contractRef": "performance-design/v03",
+      "applicationRefs": [
+        "application.selector.open-exploration.1",
+        "application.selector.open-exploration.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.capability-recontextualizes-old-space",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.capability-recontextualizes-old-space.selection.1",
+        "assertion.capability-recontextualizes-old-space.selection.2",
+        "assertion.capability-recontextualizes-old-space.selection.3",
+        "assertion.capability-recontextualizes-old-space.runtime.1",
+        "assertion.capability-recontextualizes-old-space.runtime.2",
+        "assertion.capability-recontextualizes-old-space.route.1",
+        "assertion.capability-recontextualizes-old-space.route.2",
+        "assertion.capability-recontextualizes-old-space.route.3",
+        "assertion.capability-recontextualizes-old-space.originality.1",
+        "assertion.capability-recontextualizes-old-space.originality.2",
+        "assertion.capability-recontextualizes-old-space.originality.3",
+        "assertion.landmark-promises-future-use.selection.1",
+        "assertion.landmark-promises-future-use.selection.2",
+        "assertion.landmark-promises-future-use.runtime.1",
+        "assertion.landmark-promises-future-use.runtime.2",
+        "assertion.landmark-promises-future-use.route.1",
+        "assertion.landmark-promises-future-use.route.2",
+        "assertion.landmark-promises-future-use.originality.1",
+        "assertion.landmark-promises-future-use.originality.2",
+        "assertion.landmark-promises-future-use.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.open-exploration.stage",
+      "owner": "stage",
+      "contractRef": "stage-plan/v03",
+      "applicationRefs": [
+        "application.selector.open-exploration.1",
+        "application.selector.open-exploration.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.capability-recontextualizes-old-space",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.capability-recontextualizes-old-space.selection.1",
+        "assertion.capability-recontextualizes-old-space.selection.2",
+        "assertion.capability-recontextualizes-old-space.selection.3",
+        "assertion.capability-recontextualizes-old-space.runtime.1",
+        "assertion.capability-recontextualizes-old-space.runtime.2",
+        "assertion.capability-recontextualizes-old-space.route.1",
+        "assertion.capability-recontextualizes-old-space.route.2",
+        "assertion.capability-recontextualizes-old-space.route.3",
+        "assertion.capability-recontextualizes-old-space.originality.1",
+        "assertion.capability-recontextualizes-old-space.originality.2",
+        "assertion.capability-recontextualizes-old-space.originality.3",
+        "assertion.landmark-promises-future-use.selection.1",
+        "assertion.landmark-promises-future-use.selection.2",
+        "assertion.landmark-promises-future-use.runtime.1",
+        "assertion.landmark-promises-future-use.runtime.2",
+        "assertion.landmark-promises-future-use.route.1",
+        "assertion.landmark-promises-future-use.route.2",
+        "assertion.landmark-promises-future-use.originality.1",
+        "assertion.landmark-promises-future-use.originality.2",
+        "assertion.landmark-promises-future-use.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.open-exploration.evaluation",
+      "owner": "evaluation",
+      "contractRef": "acceptance/v03",
+      "applicationRefs": [
+        "application.selector.open-exploration.1",
+        "application.selector.open-exploration.2"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.capability-recontextualizes-old-space",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.capability-recontextualizes-old-space.selection.1",
+        "assertion.capability-recontextualizes-old-space.selection.2",
+        "assertion.capability-recontextualizes-old-space.selection.3",
+        "assertion.capability-recontextualizes-old-space.runtime.1",
+        "assertion.capability-recontextualizes-old-space.runtime.2",
+        "assertion.capability-recontextualizes-old-space.route.1",
+        "assertion.capability-recontextualizes-old-space.route.2",
+        "assertion.capability-recontextualizes-old-space.route.3",
+        "assertion.capability-recontextualizes-old-space.originality.1",
+        "assertion.capability-recontextualizes-old-space.originality.2",
+        "assertion.capability-recontextualizes-old-space.originality.3",
+        "assertion.landmark-promises-future-use.selection.1",
+        "assertion.landmark-promises-future-use.selection.2",
+        "assertion.landmark-promises-future-use.runtime.1",
+        "assertion.landmark-promises-future-use.runtime.2",
+        "assertion.landmark-promises-future-use.route.1",
+        "assertion.landmark-promises-future-use.route.2",
+        "assertion.landmark-promises-future-use.originality.1",
+        "assertion.landmark-promises-future-use.originality.2",
+        "assertion.landmark-promises-future-use.originality.3"
+      ]
+    }
+  ],
+  "status": "draft"
+}

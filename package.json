@@ -5,11 +5,25 @@
   "type": "commonjs",
   "scripts": {
     "dev": "node server.mjs",
-    "check": "node --check src/runtime.js && node --check src/game.js && node tests/project-contract.mjs && node tests/v02-contract.mjs && node .codex/skills/build-interactive-stage-game-v021/scripts/validate-pixel-profile.mjs tests/pixel-v021-fixture --strict && node planning/v03-zelda-mainline/scripts/validate-deployment.mjs",
+    "check": "node --check src/runtime.js && node --check src/game.js && node tests/project-contract.mjs && node tests/v02-contract.mjs && node .codex/skills/build-interactive-stage-game-v021/scripts/validate-pixel-profile.mjs tests/pixel-v021-fixture --strict && npm run check:v03",
     "check:v02": "node tests/v02-contract.mjs",
     "check:v021-skill": "node .codex/skills/build-interactive-stage-game-v021/scripts/validate-pixel-profile.mjs tests/pixel-v021-fixture --strict",
     "check:v03-plan": "node planning/v03-zelda-mainline/scripts/validate-deployment.mjs --expect-phase=P0",
     "check:v03-plan-freeze": "node planning/v03-zelda-mainline/scripts/validate-deployment.mjs --expect-phase=P0",
-    "check:v03-deployment": "node planning/v03-zelda-mainline/scripts/validate-deployment.mjs"
+    "check:v03-deployment": "node planning/v03-zelda-mainline/scripts/validate-deployment.mjs",
+    "check:v03-compile": "node design-library/scripts/compile-patterns.mjs && node design-library/scripts/compile-benchmarks.mjs",
+    "check:v03-patterns": "node design-library/scripts/run-pattern-contract-tests.mjs",
+    "check:v03-benchmarks": "node design-library/scripts/run-selector-benchmarks.mjs",
+    "check:v03-adapter": "node design-library/scripts/run-adapter-contract-tests.mjs",
+    "check:v03-release": "node design-library/scripts/validate-release.mjs",
+    "check:v03-determinism": "node design-library/scripts/verify-release-determinism.mjs",
+    "check:v03-skills": "node design-library/scripts/validate-skills.mjs --write-report",
+    "check:v03-run-state": "node .codex/skills/build-interactive-stage-game-v03/scripts/test-production-run-state.mjs",
+    "check:v03-forward": "node design-library/scripts/create-forward-locks.mjs && node design-library/scripts/run-forward-test.mjs",
+    "check:v03-library": "node design-library/scripts/validate-library.mjs --phase=P6",
+    "check:v03": "node planning/v03-zelda-mainline/scripts/validate-deployment.mjs --expect-phase=P6 && node design-library/scripts/compile-patterns.mjs && node design-library/scripts/compile-benchmarks.mjs && node design-library/scripts/run-pattern-contract-tests.mjs && node design-library/scripts/run-selector-benchmarks.mjs && node design-library/scripts/run-adapter-contract-tests.mjs && node design-library/scripts/verify-release-determinism.mjs && node design-library/scripts/validate-skills.mjs --write-report && node .codex/skills/build-interactive-stage-game-v03/scripts/test-production-run-state.mjs && node design-library/scripts/create-forward-locks.mjs && node design-library/scripts/run-forward-test.mjs && node design-library/scripts/validate-library.mjs --phase=P6"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
   }
 }

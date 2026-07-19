@@ -1,0 +1,651 @@
+{
+  "indexId": "index.faceted-patterns",
+  "indexVersion": "1.0.0",
+  "packRef": "pack.zelda-mainline@0.3.0",
+  "generatedAt": "2026-07-18",
+  "records": [
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "name": "Capability recontextualizes old space",
+      "kind": "spatial-level",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.revisit-recontextualization",
+      "selectionRole": "core",
+      "subtypeId": "capability-gated-return",
+      "experienceGoals": [
+        "experience.world-recontextualization",
+        "experience.spatial-memory",
+        "experience.competence-growth"
+      ],
+      "storySignals": [
+        "signal.revisited-place",
+        "signal.capability-reveal",
+        "signal.landmark-mystery"
+      ],
+      "spatialSignals": [
+        "signal.revisited-place",
+        "signal.landmark-mystery"
+      ],
+      "runtimeCapabilities": [
+        "capability.world-facts",
+        "capability.route-gates",
+        "capability.map-layers",
+        "capability.route-simulation"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "medium",
+        "code": "medium",
+        "art": "high",
+        "qa": "high"
+      },
+      "maxCoSelections": 2,
+      "exclusiveWith": [],
+      "dependencies": [],
+      "conflicts": [],
+      "synergies": [
+        "pattern.landmark-promises-future-use",
+        "pattern.optional-secret-readability"
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "name": "State axis rewrites routes",
+      "kind": "world-state-rule",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.stateful-space",
+      "selectionRole": "core",
+      "subtypeId": "discrete-route-axis",
+      "experienceGoals": [
+        "experience.rule-mastery",
+        "experience.world-recontextualization",
+        "experience.consequential-agency"
+      ],
+      "storySignals": [
+        "signal.parallel-state",
+        "signal.transformable-environment",
+        "signal.revisited-place"
+      ],
+      "spatialSignals": [
+        "signal.parallel-state",
+        "signal.transformable-environment",
+        "signal.revisited-place"
+      ],
+      "runtimeCapabilities": [
+        "capability.world-facts",
+        "capability.map-layers",
+        "capability.route-gates",
+        "capability.checkpoints",
+        "capability.route-simulation"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "high",
+        "art": "high",
+        "qa": "high"
+      },
+      "maxCoSelections": 2,
+      "exclusiveWith": [
+        "pattern.constrained-vehicle-route"
+      ],
+      "dependencies": [],
+      "conflicts": [
+        "pattern.constrained-vehicle-route"
+      ],
+      "synergies": [
+        "pattern.parallel-state-comparison",
+        "pattern.embodied-world-change-reveal"
+      ]
+    },
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "patternVersion": "1.1.0",
+      "name": "Parallel-state comparison",
+      "kind": "puzzle-information",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.stateful-space",
+      "selectionRole": "specialization",
+      "subtypeId": "anchor-preserving-comparison",
+      "experienceGoals": [
+        "experience.rule-mastery",
+        "experience.spatial-memory",
+        "experience.embodied-revelation"
+      ],
+      "storySignals": [
+        "signal.parallel-state",
+        "signal.hidden-causal-rule",
+        "signal.embodied-secret"
+      ],
+      "spatialSignals": [
+        "signal.parallel-state"
+      ],
+      "runtimeCapabilities": [
+        "capability.map-layers",
+        "capability.world-facts",
+        "capability.performance-cues",
+        "capability.save-migration",
+        "capability.route-simulation"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "high",
+        "art": "high",
+        "qa": "high"
+      },
+      "maxCoSelections": 1,
+      "exclusiveWith": [],
+      "dependencies": [
+        "pattern.state-axis-rewrites-routes"
+      ],
+      "conflicts": [],
+      "synergies": []
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "patternVersion": "1.1.0",
+      "name": "Landmark promises future use",
+      "kind": "exploration-reward",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.revisit-recontextualization",
+      "selectionRole": "support",
+      "subtypeId": "early-sighting-later-payoff",
+      "experienceGoals": [
+        "experience.self-directed-discovery",
+        "experience.spatial-memory",
+        "experience.curiosity-tension"
+      ],
+      "storySignals": [
+        "signal.landmark-mystery",
+        "signal.revisited-place",
+        "signal.capability-reveal"
+      ],
+      "spatialSignals": [
+        "signal.landmark-mystery",
+        "signal.revisited-place"
+      ],
+      "runtimeCapabilities": [
+        "capability.world-facts",
+        "capability.route-gates",
+        "capability.spatial-query",
+        "capability.camera-cues"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "medium",
+        "code": "low",
+        "art": "high",
+        "qa": "medium"
+      },
+      "maxCoSelections": 1,
+      "exclusiveWith": [],
+      "dependencies": [
+        "pattern.capability-recontextualizes-old-space"
+      ],
+      "conflicts": [],
+      "synergies": [
+        "pattern.reward-expands-future-possibility",
+        "pattern.dense-overworld-as-challenge-space"
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "patternVersion": "1.1.0",
+      "name": "Local rule development arc",
+      "kind": "tutorial-feedback",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.rule-pedagogy",
+      "selectionRole": "core",
+      "subtypeId": "teach-vary-combine-exam",
+      "experienceGoals": [
+        "experience.rule-mastery",
+        "experience.competence-growth",
+        "experience.fair-recovery"
+      ],
+      "storySignals": [
+        "signal.capability-reveal",
+        "signal.hidden-causal-rule",
+        "signal.multi-causal-problem"
+      ],
+      "spatialSignals": [],
+      "runtimeCapabilities": [
+        "capability.world-facts",
+        "capability.route-gates",
+        "capability.performance-cues",
+        "capability.checkpoints",
+        "capability.route-simulation"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "medium",
+        "art": "medium",
+        "qa": "high"
+      },
+      "maxCoSelections": 2,
+      "exclusiveWith": [],
+      "dependencies": [],
+      "conflicts": [],
+      "synergies": [
+        "pattern.action-first-onboarding"
+      ]
+    },
+    {
+      "patternId": "pattern.object-role-composition",
+      "patternVersion": "1.1.0",
+      "name": "Object-role composition",
+      "kind": "interaction-prop",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.systemic-solutions",
+      "selectionRole": "support",
+      "subtypeId": "bounded-role-algebra",
+      "experienceGoals": [
+        "experience.rule-mastery",
+        "experience.competence-growth",
+        "experience.consequential-agency"
+      ],
+      "storySignals": [
+        "signal.transformable-environment",
+        "signal.multi-causal-problem",
+        "signal.capability-reveal"
+      ],
+      "spatialSignals": [
+        "signal.transformable-environment"
+      ],
+      "runtimeCapabilities": [
+        "capability.inventory",
+        "capability.object-placement",
+        "capability.object-composition",
+        "capability.world-facts",
+        "capability.route-simulation"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "high",
+        "art": "high",
+        "qa": "high"
+      },
+      "maxCoSelections": 1,
+      "exclusiveWith": [],
+      "dependencies": [],
+      "conflicts": [],
+      "synergies": []
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "patternVersion": "1.1.0",
+      "name": "Constrained vehicle route",
+      "kind": "spatial-level",
+      "flavorClass": "adventure-generic",
+      "familyId": "family.traversal-network",
+      "selectionRole": "core",
+      "subtypeId": "route-bound-local-agency",
+      "experienceGoals": [
+        "experience.spatial-memory",
+        "experience.competence-growth",
+        "experience.curiosity-tension"
+      ],
+      "storySignals": [
+        "signal.landmark-mystery",
+        "signal.schedule-pressure",
+        "signal.multi-causal-problem"
+      ],
+      "spatialSignals": [
+        "signal.landmark-mystery"
+      ],
+      "runtimeCapabilities": [
+        "capability.portal-transitions",
+        "capability.route-gates",
+        "capability.performance-cues",
+        "capability.spatial-query",
+        "capability.checkpoints",
+        "capability.route-simulation"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "high",
+        "art": "high",
+        "qa": "high"
+      },
+      "maxCoSelections": 1,
+      "exclusiveWith": [
+        "pattern.dense-overworld-as-challenge-space",
+        "pattern.state-axis-rewrites-routes"
+      ],
+      "dependencies": [],
+      "conflicts": [
+        "pattern.dense-overworld-as-challenge-space",
+        "pattern.state-axis-rewrites-routes"
+      ],
+      "synergies": [
+        "pattern.landmark-promises-future-use"
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "name": "Reward expands future possibility",
+      "kind": "exploration-reward",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.exploration-reward",
+      "selectionRole": "core",
+      "subtypeId": "persistent-multi-function-payoff",
+      "experienceGoals": [
+        "experience.self-directed-discovery",
+        "experience.world-recontextualization",
+        "experience.competence-growth"
+      ],
+      "storySignals": [
+        "signal.landmark-mystery",
+        "signal.capability-reveal",
+        "signal.revisited-place"
+      ],
+      "spatialSignals": [
+        "signal.landmark-mystery",
+        "signal.revisited-place"
+      ],
+      "runtimeCapabilities": [
+        "capability.world-facts",
+        "capability.inventory",
+        "capability.route-gates",
+        "capability.save-migration",
+        "capability.route-simulation"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "medium",
+        "art": "medium",
+        "qa": "high"
+      },
+      "maxCoSelections": 2,
+      "exclusiveWith": [],
+      "dependencies": [],
+      "conflicts": [],
+      "synergies": [
+        "pattern.landmark-promises-future-use",
+        "pattern.optional-secret-readability"
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "patternVersion": "1.1.0",
+      "name": "Optional secret readability",
+      "kind": "exploration-reward",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.exploration-legibility",
+      "selectionRole": "support",
+      "subtypeId": "optional-affordance-clue-chain",
+      "experienceGoals": [
+        "experience.self-directed-discovery",
+        "experience.rule-mastery",
+        "experience.curiosity-tension"
+      ],
+      "storySignals": [
+        "signal.landmark-mystery",
+        "signal.hidden-causal-rule",
+        "signal.confined-stage"
+      ],
+      "spatialSignals": [
+        "signal.landmark-mystery",
+        "signal.confined-stage"
+      ],
+      "runtimeCapabilities": [
+        "capability.spatial-query",
+        "capability.world-facts",
+        "capability.context-interaction",
+        "capability.inventory",
+        "capability.performance-cues",
+        "capability.route-simulation"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "medium",
+        "art": "medium",
+        "qa": "high"
+      },
+      "maxCoSelections": 2,
+      "exclusiveWith": [],
+      "dependencies": [],
+      "conflicts": [],
+      "synergies": [
+        "pattern.reward-expands-future-possibility"
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "name": "NPC reacts to world state",
+      "kind": "npc-quest",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.world-state-reaction",
+      "selectionRole": "support",
+      "subtypeId": "situated-social-reflection",
+      "experienceGoals": [
+        "experience.social-recognition",
+        "experience.consequential-agency",
+        "experience.embodied-revelation"
+      ],
+      "storySignals": [
+        "signal.relationship-memory",
+        "signal.transformable-environment",
+        "signal.revisited-place"
+      ],
+      "spatialSignals": [
+        "signal.transformable-environment",
+        "signal.revisited-place"
+      ],
+      "runtimeCapabilities": [
+        "capability.world-facts",
+        "capability.map-layers",
+        "capability.dialogue-gates",
+        "capability.npc-state",
+        "capability.schedule-clock",
+        "capability.performance-cues",
+        "capability.checkpoints",
+        "capability.route-simulation"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "medium",
+        "art": "medium",
+        "qa": "high"
+      },
+      "maxCoSelections": 3,
+      "exclusiveWith": [],
+      "dependencies": [],
+      "conflicts": [],
+      "synergies": [
+        "pattern.embodied-world-change-reveal",
+        "pattern.state-axis-rewrites-routes"
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "name": "Embodied world-change reveal",
+      "kind": "performance-camera",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.reveal-performance",
+      "selectionRole": "core",
+      "subtypeId": "enacted-world-state-transition",
+      "experienceGoals": [
+        "experience.embodied-revelation",
+        "experience.consequential-agency",
+        "experience.world-recontextualization"
+      ],
+      "storySignals": [
+        "signal.embodied-secret",
+        "signal.transformable-environment",
+        "signal.revisited-place"
+      ],
+      "spatialSignals": [
+        "signal.transformable-environment",
+        "signal.revisited-place"
+      ],
+      "runtimeCapabilities": [
+        "capability.world-facts",
+        "capability.map-layers",
+        "capability.performance-cues",
+        "capability.camera-cues",
+        "capability.checkpoints",
+        "capability.route-simulation"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "high",
+        "art": "high",
+        "qa": "high"
+      },
+      "maxCoSelections": 1,
+      "exclusiveWith": [
+        "pattern.action-first-onboarding"
+      ],
+      "dependencies": [],
+      "conflicts": [
+        "pattern.action-first-onboarding"
+      ],
+      "synergies": [
+        "pattern.npc-reacts-to-world-state",
+        "pattern.parallel-state-comparison"
+      ]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "name": "Action-first onboarding",
+      "kind": "tutorial-feedback",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.onboarding",
+      "selectionRole": "core",
+      "subtypeId": "role-and-goal-learned-through-action",
+      "experienceGoals": [
+        "experience.embodied-revelation",
+        "experience.competence-growth",
+        "experience.fair-recovery"
+      ],
+      "storySignals": [
+        "signal.capability-reveal",
+        "signal.embodied-secret",
+        "signal.confined-stage"
+      ],
+      "spatialSignals": [
+        "signal.confined-stage"
+      ],
+      "runtimeCapabilities": [
+        "capability.context-interaction",
+        "capability.world-facts",
+        "capability.performance-cues",
+        "capability.checkpoints",
+        "capability.telemetry"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "medium",
+        "art": "medium",
+        "qa": "high"
+      },
+      "maxCoSelections": 1,
+      "exclusiveWith": [
+        "pattern.embodied-world-change-reveal"
+      ],
+      "dependencies": [],
+      "conflicts": [
+        "pattern.embodied-world-change-reveal"
+      ],
+      "synergies": [
+        "pattern.local-rule-development-arc"
+      ]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "patternVersion": "1.1.0",
+      "name": "Dense overworld as challenge space",
+      "kind": "spatial-level",
+      "flavorClass": "zelda-discriminative",
+      "familyId": "family.overworld-structure",
+      "selectionRole": "core",
+      "subtypeId": "interconnected-traversal-challenge-field",
+      "experienceGoals": [
+        "experience.spatial-memory",
+        "experience.rule-mastery",
+        "experience.self-directed-discovery"
+      ],
+      "storySignals": [
+        "signal.landmark-mystery",
+        "signal.transformable-environment",
+        "signal.revisited-place"
+      ],
+      "spatialSignals": [
+        "signal.landmark-mystery",
+        "signal.transformable-environment",
+        "signal.revisited-place"
+      ],
+      "runtimeCapabilities": [
+        "capability.spatial-query",
+        "capability.route-gates",
+        "capability.route-simulation",
+        "capability.world-facts",
+        "capability.map-layers",
+        "capability.context-interaction",
+        "capability.npc-state",
+        "capability.inventory"
+      ],
+      "perspectiveAdapters": [
+        "adapter.2d-topdown-v021"
+      ],
+      "productionCost": {
+        "design": "high",
+        "code": "high",
+        "art": "high",
+        "qa": "high"
+      },
+      "maxCoSelections": 1,
+      "exclusiveWith": [
+        "pattern.constrained-vehicle-route"
+      ],
+      "dependencies": [],
+      "conflicts": [
+        "pattern.constrained-vehicle-route"
+      ],
+      "synergies": [
+        "pattern.landmark-promises-future-use",
+        "pattern.optional-secret-readability",
+        "pattern.state-axis-rewrites-routes"
+      ]
+    }
+  ]
+}

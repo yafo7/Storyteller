@@ -1,0 +1,104 @@
+{
+  "fixtureId": "fixture.migration.reward-expands-future-possibility.reinstantiated-output",
+  "fixtureVersion": "1.0.0",
+  "migrationRef": "migration.pattern.reward-expands-future-possibility.1.1.0-to-2.0.0",
+  "sourcePatternRef": "pattern.reward-expands-future-possibility@1.1.0",
+  "targetPatternRef": "pattern.reward-expands-future-possibility@2.0.0",
+  "result": "reinstantiated-after-manual-evidence",
+  "targetApplication": {
+    "subtype": "persistent-multi-function-payoff",
+    "bindings": {
+      "acquisitionTransactionRef": "transaction.restore-community-relay",
+      "persistentStateRefs": [
+        "state.relay.power-restored",
+        "state.relay.archive-indexed"
+      ],
+      "functionRefs": [
+        "reward-function.relay-wayfinding",
+        "reward-function.relay-archive-query"
+      ],
+      "economyRuleRef": "economy.community-bandwidth"
+    },
+    "acquisitionTransaction": {
+      "transactionRef": "transaction.restore-community-relay",
+      "commitsPersistentStateRefs": [
+        "state.relay.power-restored",
+        "state.relay.archive-indexed"
+      ],
+      "atomicCommit": true
+    },
+    "functions": [
+      {
+        "functionRef": "reward-function.relay-wayfinding",
+        "persistentStateRef": "state.relay.power-restored",
+        "functionalDimension": "navigation",
+        "futureUseContextRef": "context.flooded-service-tunnels",
+        "feedbackRef": "feedback.relay-wayfinding-pulses",
+        "actionabilityDelta": {
+          "metric": "reachable-safe-route-count",
+          "before": 1,
+          "after": 3
+        }
+      },
+      {
+        "functionRef": "reward-function.relay-archive-query",
+        "persistentStateRef": "state.relay.archive-indexed",
+        "functionalDimension": "information",
+        "futureUseContextRef": "context.missing-broadcast-investigation",
+        "feedbackRef": "feedback.archive-query-transcript",
+        "actionabilityDelta": {
+          "metric": "available-verified-clue-count",
+          "before": 0,
+          "after": 3
+        }
+      }
+    ],
+    "effectPlan": [
+      {
+        "effectId": "effect.future-reward.commit-persistent-state-set",
+        "transactionRef": "transaction.restore-community-relay",
+        "stateRefs": [
+          "state.relay.power-restored",
+          "state.relay.archive-indexed"
+        ]
+      },
+      {
+        "effectId": "effect.future-reward.register-functional-breadth",
+        "functionRefs": [
+          "reward-function.relay-wayfinding",
+          "reward-function.relay-archive-query"
+        ]
+      }
+    ]
+  },
+  "migrationProvenance": {
+    "automaticCarryForward": [
+      "patternId",
+      "name",
+      "kind"
+    ],
+    "manualBindingsCopiedFrom": "$.manualReinstantiation",
+    "notDerivedFromLegacy": [
+      "acquisitionTransactionRef",
+      "persistentStateRefs",
+      "functions",
+      "actionabilityDeltas",
+      "protectedStoryOrderCheck"
+    ],
+    "legacyChoiceClaimsUsedAsTargetEvidence": false
+  },
+  "validation": {
+    "canAutoMigrate": false,
+    "manualReinstantiationComplete": true,
+    "eligibleFor2_0_0": true,
+    "atomicCommit": true,
+    "persistentStateRefCount": 2,
+    "functionCount": 2,
+    "distinctFunctionalDimensionCount": 2,
+    "everyFunctionStateIsCommitted": true,
+    "everyFunctionBindingComplete": true,
+    "everyAfterActionabilityGreaterThanBefore": true,
+    "protectedStoryOrderCheck": "pass",
+    "fabricatedBindings": 0
+  }
+}

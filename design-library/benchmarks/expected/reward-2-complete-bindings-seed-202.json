@@ -1,0 +1,615 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.benchmark.selector.reward-2-complete-bindings",
+  "storyModelHash": "c48db7b0ce317c97cd7a7f5fa78897360a618405137a5dfd98472ff43ac11945",
+  "libraryLockRef": "lock.benchmark-unlocked",
+  "provenancePolicy": {
+    "enabledPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "blockedPackIds": [],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": [
+      "signal.landmark-mystery",
+      "signal.capability-reveal",
+      "signal.revisited-place"
+    ],
+    "experienceGoals": [
+      "experience.self-directed-discovery",
+      "experience.world-recontextualization",
+      "experience.competence-growth"
+    ],
+    "spatialConstraints": [
+      "signal.landmark-mystery",
+      "signal.revisited-place"
+    ],
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.inventory",
+      "capability.route-gates",
+      "capability.save-migration",
+      "capability.route-simulation",
+      "capability.map-layers",
+      "capability.context-interaction",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.grid-collision",
+      "capability.spatial-query",
+      "capability.checkpoints",
+      "capability.hint-ladder"
+    ],
+    "budget": {
+      "design": "medium",
+      "code": "medium",
+      "art": "medium",
+      "qa": "high"
+    },
+    "negativeSignals": []
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.53
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.33
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 4,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.98
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 4,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.553
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.npc-state"
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.247
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.237
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.137
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.987
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.987
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.937
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.object-role-composition",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 5,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 1,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.717
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 0,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.397
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    }
+  ],
+  "selectedApplications": [
+    {
+      "applicationId": "application.selector.reward-2-complete-bindings.1",
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "role": "core",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.protectedCanon",
+        "rewardDesign.acquisitionTransactions",
+        "rewardDesign.persistentStateRefs",
+        "rewardDesign.rewardFunctions",
+        "rewardEconomy.protectedStoryOrderCheck"
+      ],
+      "retainedPrinciples": [
+        "An exploration payoff expands later possibility when its persistent state improves at least two distinct functional dimensions, such as traversal, capacity, information, perception, topology, preparation, relationship access, or recovery, instead of granting only immediate score or value."
+      ],
+      "adaptationSummary": "Instantiate Reward expands future possibility from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "source reward objects, silhouettes, names, or acquisition staging",
+        "source shrine, cave, root, tower, chest, or map-node composition",
+        "source health-growth, fast-travel, mapping, illumination, or recovery pairing",
+        "source UI, sound, reveal cadence, economy, or exact function bundle"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "rewardDesign+rewardEconomy",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.reward-expands-future-possibility",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.0.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.future-reward.selection",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.future-reward.commit-persistent-state-set",
+          "parameterBindings": {
+            "parameter.future-reward.acquisition-transaction": "transaction.restore-weather-relay",
+            "parameter.future-reward.persistent-state-set": "[\"state.relay.archive-indexed\",\"state.relay.signal-restored\"]",
+            "parameter.future-reward.function-set": "[\"reward-function.relay-archive-query\",\"reward-function.relay-floodplain-wayfinding\"]",
+            "parameter.future-reward.economy": "economy.relay-service-bandwidth"
+          },
+          "expectedPostconditions": [
+            "$.rewardAcquisition.committedPersistentStateRefs must satisfy contains-all-ref against reference parameter.future-reward.persistent-state-set before the authored transaction is accepted. This realizes the distinct persistent-multi-function-payoff causal contract.",
+            "$.rewardAcquisition.atomicCommit must satisfy equals against true before the authored transaction is accepted. This realizes the distinct persistent-multi-function-payoff causal contract.",
+            "$.save.persistentStateSetPreserved must satisfy equals against true before the authored transaction is accepted. This realizes the distinct persistent-multi-function-payoff causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.future-reward.register-functional-breadth",
+          "parameterBindings": {
+            "parameter.future-reward.acquisition-transaction": "transaction.restore-weather-relay",
+            "parameter.future-reward.persistent-state-set": "[\"state.relay.archive-indexed\",\"state.relay.signal-restored\"]",
+            "parameter.future-reward.function-set": "[\"reward-function.relay-archive-query\",\"reward-function.relay-floodplain-wayfinding\"]",
+            "parameter.future-reward.economy": "economy.relay-service-bandwidth"
+          },
+          "expectedPostconditions": [
+            "$.rewardFunctions.everyFunctionPersistentStateInCommittedSet must satisfy equals against true before the authored transaction is accepted. This realizes the distinct persistent-multi-function-payoff causal contract.",
+            "$.rewardFunctions.distinctFunctionalDimensionCount must satisfy greater-or-equal against 2 before the authored transaction is accepted. This realizes the distinct persistent-multi-function-payoff causal contract.",
+            "$.rewardFunctions.everyFunctionHasFutureUseContextFeedbackAndBeforeAfterDelta must satisfy equals against true before the authored transaction is accepted. This realizes the distinct persistent-multi-function-payoff causal contract.",
+            "$.rewardFunctions.noChoiceOrOptionalityInference must satisfy equals against true before the authored transaction is accepted. This realizes the distinct persistent-multi-function-payoff causal contract."
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.world-facts",
+        "capability.inventory",
+        "capability.route-gates",
+        "capability.save-migration",
+        "capability.route-simulation"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    }
+  ],
+  "composition": {
+    "corePatternRef": "pattern.reward-expands-future-possibility",
+    "supportPatternRefs": [],
+    "sharedExperienceAxis": "experience.self-directed-discovery",
+    "conflictsResolved": [
+      "Removed candidates that conflict with the selected core or duplicate an already represented pattern kind."
+    ],
+    "developmentArc": [
+      "teach",
+      "practice",
+      "variation",
+      "combine-or-reverse",
+      "exam"
+    ]
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [
+      "capability.world-facts",
+      "capability.inventory",
+      "capability.route-gates",
+      "capability.save-migration",
+      "capability.route-simulation"
+    ],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "structuralDeltas": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "forbiddenTransfers": [
+      "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+    ],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": [
+      "A reviewer cannot reliably attribute the instance to one source encounter",
+      "At least four transformation axes materially change",
+      "Protected canon and reveal order remain unchanged"
+    ]
+  },
+  "abstention": {
+    "abstained": false,
+    "reason": null
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.selector.reward-2-complete-bindings.gameplay",
+      "owner": "gameplay",
+      "contractRef": "gameplay-design/v03",
+      "applicationRefs": [
+        "application.selector.reward-2-complete-bindings.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.reward-expands-future-possibility",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.reward-expands-future-possibility.selection.1",
+        "assertion.reward-expands-future-possibility.selection.2",
+        "assertion.reward-expands-future-possibility.selection.3",
+        "assertion.reward-expands-future-possibility.selection.4",
+        "assertion.reward-expands-future-possibility.selection.5",
+        "assertion.reward-expands-future-possibility.selection.6",
+        "assertion.reward-expands-future-possibility.runtime.1",
+        "assertion.reward-expands-future-possibility.runtime.2",
+        "assertion.reward-expands-future-possibility.runtime.3",
+        "assertion.reward-expands-future-possibility.runtime.4",
+        "assertion.reward-expands-future-possibility.runtime.5",
+        "assertion.reward-expands-future-possibility.runtime.6",
+        "assertion.reward-expands-future-possibility.runtime.7",
+        "assertion.reward-expands-future-possibility.route.1",
+        "assertion.reward-expands-future-possibility.route.2",
+        "assertion.reward-expands-future-possibility.route.3",
+        "assertion.reward-expands-future-possibility.route.4",
+        "assertion.reward-expands-future-possibility.originality.1",
+        "assertion.reward-expands-future-possibility.originality.2",
+        "assertion.reward-expands-future-possibility.originality.3",
+        "assertion.reward-expands-future-possibility.originality.4"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.reward-2-complete-bindings.performance",
+      "owner": "performance",
+      "contractRef": "performance-design/v03",
+      "applicationRefs": [
+        "application.selector.reward-2-complete-bindings.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.reward-expands-future-possibility",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.reward-expands-future-possibility.selection.1",
+        "assertion.reward-expands-future-possibility.selection.2",
+        "assertion.reward-expands-future-possibility.selection.3",
+        "assertion.reward-expands-future-possibility.selection.4",
+        "assertion.reward-expands-future-possibility.selection.5",
+        "assertion.reward-expands-future-possibility.selection.6",
+        "assertion.reward-expands-future-possibility.runtime.1",
+        "assertion.reward-expands-future-possibility.runtime.2",
+        "assertion.reward-expands-future-possibility.runtime.3",
+        "assertion.reward-expands-future-possibility.runtime.4",
+        "assertion.reward-expands-future-possibility.runtime.5",
+        "assertion.reward-expands-future-possibility.runtime.6",
+        "assertion.reward-expands-future-possibility.runtime.7",
+        "assertion.reward-expands-future-possibility.route.1",
+        "assertion.reward-expands-future-possibility.route.2",
+        "assertion.reward-expands-future-possibility.route.3",
+        "assertion.reward-expands-future-possibility.route.4",
+        "assertion.reward-expands-future-possibility.originality.1",
+        "assertion.reward-expands-future-possibility.originality.2",
+        "assertion.reward-expands-future-possibility.originality.3",
+        "assertion.reward-expands-future-possibility.originality.4"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.reward-2-complete-bindings.stage",
+      "owner": "stage",
+      "contractRef": "stage-plan/v03",
+      "applicationRefs": [
+        "application.selector.reward-2-complete-bindings.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.reward-expands-future-possibility",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.reward-expands-future-possibility.selection.1",
+        "assertion.reward-expands-future-possibility.selection.2",
+        "assertion.reward-expands-future-possibility.selection.3",
+        "assertion.reward-expands-future-possibility.selection.4",
+        "assertion.reward-expands-future-possibility.selection.5",
+        "assertion.reward-expands-future-possibility.selection.6",
+        "assertion.reward-expands-future-possibility.runtime.1",
+        "assertion.reward-expands-future-possibility.runtime.2",
+        "assertion.reward-expands-future-possibility.runtime.3",
+        "assertion.reward-expands-future-possibility.runtime.4",
+        "assertion.reward-expands-future-possibility.runtime.5",
+        "assertion.reward-expands-future-possibility.runtime.6",
+        "assertion.reward-expands-future-possibility.runtime.7",
+        "assertion.reward-expands-future-possibility.route.1",
+        "assertion.reward-expands-future-possibility.route.2",
+        "assertion.reward-expands-future-possibility.route.3",
+        "assertion.reward-expands-future-possibility.route.4",
+        "assertion.reward-expands-future-possibility.originality.1",
+        "assertion.reward-expands-future-possibility.originality.2",
+        "assertion.reward-expands-future-possibility.originality.3",
+        "assertion.reward-expands-future-possibility.originality.4"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.reward-2-complete-bindings.evaluation",
+      "owner": "evaluation",
+      "contractRef": "acceptance/v03",
+      "applicationRefs": [
+        "application.selector.reward-2-complete-bindings.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.reward-expands-future-possibility",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.reward-expands-future-possibility.selection.1",
+        "assertion.reward-expands-future-possibility.selection.2",
+        "assertion.reward-expands-future-possibility.selection.3",
+        "assertion.reward-expands-future-possibility.selection.4",
+        "assertion.reward-expands-future-possibility.selection.5",
+        "assertion.reward-expands-future-possibility.selection.6",
+        "assertion.reward-expands-future-possibility.runtime.1",
+        "assertion.reward-expands-future-possibility.runtime.2",
+        "assertion.reward-expands-future-possibility.runtime.3",
+        "assertion.reward-expands-future-possibility.runtime.4",
+        "assertion.reward-expands-future-possibility.runtime.5",
+        "assertion.reward-expands-future-possibility.runtime.6",
+        "assertion.reward-expands-future-possibility.runtime.7",
+        "assertion.reward-expands-future-possibility.route.1",
+        "assertion.reward-expands-future-possibility.route.2",
+        "assertion.reward-expands-future-possibility.route.3",
+        "assertion.reward-expands-future-possibility.route.4",
+        "assertion.reward-expands-future-possibility.originality.1",
+        "assertion.reward-expands-future-possibility.originality.2",
+        "assertion.reward-expands-future-possibility.originality.3",
+        "assertion.reward-expands-future-possibility.originality.4"
+      ]
+    }
+  ],
+  "status": "draft"
+}

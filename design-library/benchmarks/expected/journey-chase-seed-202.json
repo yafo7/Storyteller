@@ -1,0 +1,586 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.benchmark.selector.comedy-chase",
+  "storyModelHash": "29380acec81fe45a481e449617fe576e85b7855e906be6e6356d62179cd3e242",
+  "libraryLockRef": "lock.benchmark-unlocked",
+  "provenancePolicy": {
+    "enabledPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "blockedPackIds": [],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": [
+      "signal.schedule-pressure",
+      "signal.multi-causal-problem",
+      "signal.relationship-memory",
+      "signal.landmark-mystery"
+    ],
+    "experienceGoals": [
+      "experience.competence-growth",
+      "experience.social-recognition",
+      "experience.curiosity-tension"
+    ],
+    "spatialConstraints": [
+      "signal.landmark-mystery",
+      "signal.schedule-pressure"
+    ],
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.route-gates",
+      "capability.inventory",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.portal-transitions",
+      "capability.grid-collision",
+      "capability.spatial-query",
+      "capability.schedule-clock",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "budget": {
+      "design": "medium",
+      "code": "medium",
+      "art": "medium",
+      "qa": "high"
+    },
+    "negativeSignals": []
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.constrained-vehicle-route",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 4,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.27
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.137
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.987
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.947
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.847
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.847
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "manual-binding-incomplete"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Reward 2.0 manual binding closure is incomplete: exactly one explicit acquisition transaction is required; the acquisition transaction must declare an atomic commit; one or more explicit persistent state refs are required; at least two explicit reward functions are required; reward functions must span at least two distinct functional dimensions; an explicit economy rule ref is required; a passed, evidenced protected-story-order check is required."
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.747
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.object-role-composition",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 5,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 1,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.717
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.687
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.52
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 2.5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 1,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.18
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 0,
+        "dramaticIntegration": 1.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 1,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.17
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    }
+  ],
+  "selectedApplications": [
+    {
+      "applicationId": "application.selector.comedy-chase.1",
+      "patternId": "pattern.constrained-vehicle-route",
+      "patternVersion": "1.1.0",
+      "role": "core",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.facts",
+        "storyModel.locations",
+        "storyModel.revealOrder",
+        "storyModel.protectedCanon"
+      ],
+      "retainedPrinciples": [
+        "A constrained travel network remains engaging through branches, hazards, timing, and local stops."
+      ],
+      "adaptationSummary": "Instantiate Constrained vehicle route from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "source sea grids or rail layouts",
+        "source boats, trains, charts, or track UI",
+        "source voyage and arrival staging"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "storyModel",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.constrained-vehicle-route",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.0.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.vehicle-route.selection",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.vehicle-route.travel-segment",
+          "parameterBindings": {
+            "parameter.vehicle-route.vehicle": "vehicle.constrained-vehicle-route.story-derived",
+            "parameter.vehicle-route.network": "route-network-ref.constrained-vehicle-route.story-derived",
+            "parameter.vehicle-route.decision-set": "route-decision-ref-array.constrained-vehicle-route.story-derived",
+            "parameter.vehicle-route.recovery-stop": "checkpoint-ref.constrained-vehicle-route.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.vehicle.position must satisfy equals against \"segment-destination\" before the authored transaction is accepted. This realizes the distinct route-bound-local-agency causal contract.",
+            "$.route.visitedSegments must satisfy contains against \"segment-id\" before the authored transaction is accepted. This realizes the distinct route-bound-local-agency causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.vehicle-route.open-network-edge",
+          "parameterBindings": {
+            "parameter.vehicle-route.vehicle": "vehicle.constrained-vehicle-route.story-derived",
+            "parameter.vehicle-route.network": "route-network-ref.constrained-vehicle-route.story-derived",
+            "parameter.vehicle-route.decision-set": "route-decision-ref-array.constrained-vehicle-route.story-derived",
+            "parameter.vehicle-route.recovery-stop": "checkpoint-ref.constrained-vehicle-route.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.routeNetwork.edge.reachable must satisfy equals against true before the authored transaction is accepted. This realizes the distinct route-bound-local-agency causal contract.",
+            "$.routeNetwork.map.edgeVisible must satisfy equals against true before the authored transaction is accepted. This realizes the distinct route-bound-local-agency causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.vehicle-route.cue-branch-pressure",
+          "parameterBindings": {
+            "parameter.vehicle-route.vehicle": "vehicle.constrained-vehicle-route.story-derived",
+            "parameter.vehicle-route.network": "route-network-ref.constrained-vehicle-route.story-derived",
+            "parameter.vehicle-route.decision-set": "route-decision-ref-array.constrained-vehicle-route.story-derived",
+            "parameter.vehicle-route.recovery-stop": "checkpoint-ref.constrained-vehicle-route.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.interaction.branchOptionsReadable must satisfy equals against true before the authored transaction is accepted. This realizes the distinct route-bound-local-agency causal contract.",
+            "$.player.controlEnabled must satisfy equals against true before the authored transaction is accepted. This realizes the distinct route-bound-local-agency causal contract."
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.portal-transitions",
+        "capability.route-gates",
+        "capability.performance-cues",
+        "capability.spatial-query",
+        "capability.checkpoints",
+        "capability.route-simulation"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    }
+  ],
+  "composition": {
+    "corePatternRef": "pattern.constrained-vehicle-route",
+    "supportPatternRefs": [],
+    "sharedExperienceAxis": "experience.competence-growth",
+    "conflictsResolved": [
+      "Removed candidates that conflict with the selected core or duplicate an already represented pattern kind."
+    ],
+    "developmentArc": [
+      "teach",
+      "practice",
+      "variation",
+      "combine-or-reverse",
+      "exam"
+    ]
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [
+      "capability.portal-transitions",
+      "capability.route-gates",
+      "capability.performance-cues",
+      "capability.spatial-query",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "structuralDeltas": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "forbiddenTransfers": [
+      "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+    ],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": [
+      "A reviewer cannot reliably attribute the instance to one source encounter",
+      "At least four transformation axes materially change",
+      "Protected canon and reveal order remain unchanged"
+    ]
+  },
+  "abstention": {
+    "abstained": false,
+    "reason": null
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.selector.comedy-chase.gameplay",
+      "owner": "gameplay",
+      "contractRef": "gameplay-design/v03",
+      "applicationRefs": [
+        "application.selector.comedy-chase.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.constrained-vehicle-route",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.constrained-vehicle-route.selection.1",
+        "assertion.constrained-vehicle-route.selection.2",
+        "assertion.constrained-vehicle-route.runtime.1",
+        "assertion.constrained-vehicle-route.runtime.2",
+        "assertion.constrained-vehicle-route.route.1",
+        "assertion.constrained-vehicle-route.route.2",
+        "assertion.constrained-vehicle-route.originality.1",
+        "assertion.constrained-vehicle-route.originality.2",
+        "assertion.constrained-vehicle-route.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.comedy-chase.performance",
+      "owner": "performance",
+      "contractRef": "performance-design/v03",
+      "applicationRefs": [
+        "application.selector.comedy-chase.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.constrained-vehicle-route",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.constrained-vehicle-route.selection.1",
+        "assertion.constrained-vehicle-route.selection.2",
+        "assertion.constrained-vehicle-route.runtime.1",
+        "assertion.constrained-vehicle-route.runtime.2",
+        "assertion.constrained-vehicle-route.route.1",
+        "assertion.constrained-vehicle-route.route.2",
+        "assertion.constrained-vehicle-route.originality.1",
+        "assertion.constrained-vehicle-route.originality.2",
+        "assertion.constrained-vehicle-route.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.comedy-chase.stage",
+      "owner": "stage",
+      "contractRef": "stage-plan/v03",
+      "applicationRefs": [
+        "application.selector.comedy-chase.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.constrained-vehicle-route",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.constrained-vehicle-route.selection.1",
+        "assertion.constrained-vehicle-route.selection.2",
+        "assertion.constrained-vehicle-route.runtime.1",
+        "assertion.constrained-vehicle-route.runtime.2",
+        "assertion.constrained-vehicle-route.route.1",
+        "assertion.constrained-vehicle-route.route.2",
+        "assertion.constrained-vehicle-route.originality.1",
+        "assertion.constrained-vehicle-route.originality.2",
+        "assertion.constrained-vehicle-route.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.comedy-chase.evaluation",
+      "owner": "evaluation",
+      "contractRef": "acceptance/v03",
+      "applicationRefs": [
+        "application.selector.comedy-chase.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.constrained-vehicle-route",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.constrained-vehicle-route.selection.1",
+        "assertion.constrained-vehicle-route.selection.2",
+        "assertion.constrained-vehicle-route.runtime.1",
+        "assertion.constrained-vehicle-route.runtime.2",
+        "assertion.constrained-vehicle-route.route.1",
+        "assertion.constrained-vehicle-route.route.2",
+        "assertion.constrained-vehicle-route.originality.1",
+        "assertion.constrained-vehicle-route.originality.2",
+        "assertion.constrained-vehicle-route.originality.3"
+      ]
+    }
+  ],
+  "status": "draft"
+}

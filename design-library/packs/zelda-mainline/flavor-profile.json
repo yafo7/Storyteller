@@ -1,0 +1,81 @@
+{
+  "profileId": "flavor-profile.zelda-mainline",
+  "profileVersion": "1.0.0",
+  "status": "beta",
+  "definition": "A behavioral design profile derived from cross-title patterns; it excludes proprietary Zelda expression and cannot override clone-risk vetoes.",
+  "dimensions": [
+    {
+      "id": "flavor.curiosity-led-direction",
+      "description": "Visible landmarks and anomalies invite voluntary route choice.",
+      "patternRefs": [
+        "pattern.landmark-promises-future-use",
+        "pattern.optional-secret-readability"
+      ]
+    },
+    {
+      "id": "flavor.consistent-experimentable-rules",
+      "description": "Environmental outcomes remain consistent enough for observation and experiment.",
+      "patternRefs": []
+    },
+    {
+      "id": "flavor.old-space-gains-new-meaning",
+      "description": "Capability, knowledge, or world state reinterprets previously known space.",
+      "patternRefs": [
+        "pattern.capability-recontextualizes-old-space",
+        "pattern.state-axis-rewrites-routes"
+      ]
+    },
+    {
+      "id": "flavor.memorable-loops-and-shortcuts",
+      "description": "Landmarks, loops, and player-opened shortcuts build spatial memory.",
+      "patternRefs": []
+    },
+    {
+      "id": "flavor.action-first-teaching",
+      "description": "Safe action and feedback teach before explanatory text.",
+      "patternRefs": [
+        "pattern.action-first-onboarding",
+        "pattern.local-rule-development-arc"
+      ]
+    },
+    {
+      "id": "flavor.rule-development-and-exam",
+      "description": "A core rule is practiced, varied, combined, and examined in the finale.",
+      "patternRefs": [
+        "pattern.local-rule-development-arc"
+      ]
+    },
+    {
+      "id": "flavor.reward-expands-possibility",
+      "description": "Rewards create future choices instead of only increasing completion count.",
+      "patternRefs": [
+        "pattern.reward-expands-future-possibility"
+      ]
+    },
+    {
+      "id": "flavor.self-authored-discovery",
+      "description": "The player can explain the solution as a personally tested inference.",
+      "patternRefs": []
+    },
+    {
+      "id": "flavor.world-and-people-respond",
+      "description": "Map state, NPC behavior, and performance cues share one causal fact model.",
+      "patternRefs": [
+        "pattern.npc-reacts-to-world-state",
+        "pattern.embodied-world-change-reveal"
+      ]
+    },
+    {
+      "id": "flavor.fair-recovery",
+      "description": "Failure communicates cause and preserves learning or a safe checkpoint.",
+      "patternRefs": []
+    }
+  ],
+  "cloneRiskVetoes": [
+    "Recognizable source topology",
+    "Same source objects in the same action sequence",
+    "Recognizable boss phase script",
+    "Proprietary names, lore, dialogue, visual identity, UI, music, or sound signatures"
+  ],
+  "scoringRule": "Score flavor only after canon, runtime, recovery, and clone-risk hard gates pass. A high flavor score cannot cancel a veto."
+}

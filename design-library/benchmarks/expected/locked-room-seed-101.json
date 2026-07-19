@@ -1,0 +1,586 @@
+{
+  "schemaVersion": "1.0.0",
+  "productionId": "production.benchmark.selector.locked-room",
+  "storyModelHash": "5fa182c3274a4a7c46240f7115549016ba0d00a9eb4f18d6af329a212e2ff39b",
+  "libraryLockRef": "lock.benchmark-unlocked",
+  "provenancePolicy": {
+    "enabledPackIds": [
+      "pack.zelda-mainline"
+    ],
+    "blockedPackIds": [],
+    "allowCorePromotedFromBlockedPack": false
+  },
+  "query": {
+    "storySignals": [
+      "signal.hidden-causal-rule",
+      "signal.parallel-state",
+      "signal.revisited-place",
+      "signal.transformable-environment",
+      "signal.embodied-secret",
+      "signal.confined-stage"
+    ],
+    "experienceGoals": [
+      "experience.rule-mastery",
+      "experience.world-recontextualization",
+      "experience.self-directed-discovery"
+    ],
+    "spatialConstraints": [
+      "signal.parallel-state",
+      "signal.revisited-place",
+      "signal.confined-stage"
+    ],
+    "runtimeCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.inventory",
+      "capability.context-interaction",
+      "capability.npc-state",
+      "capability.dialogue-gates",
+      "capability.performance-cues",
+      "capability.camera-cues",
+      "capability.grid-collision",
+      "capability.checkpoints",
+      "capability.hint-ladder",
+      "capability.route-simulation"
+    ],
+    "budget": {
+      "design": "medium",
+      "code": "medium",
+      "art": "medium",
+      "qa": "high"
+    },
+    "negativeSignals": []
+  },
+  "consideredCandidates": [
+    {
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 5,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.52
+      },
+      "hardVetoes": [],
+      "verdict": "selected",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.embodied-world-change-reveal",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 4.08
+      },
+      "hardVetoes": [],
+      "verdict": "deferred",
+      "reasons": [
+        "Matched 3 causal story signals and passed runtime/originality prefilters."
+      ]
+    },
+    {
+      "patternId": "pattern.parallel-state-comparison",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 5,
+        "dramaticIntegration": 3.75,
+        "systemicDepth": 3.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.87
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.save-migration"
+      ]
+    },
+    {
+      "patternId": "pattern.dense-overworld-as-challenge-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.603
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.spatial-query"
+      ]
+    },
+    {
+      "patternId": "pattern.optional-secret-readability",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.603
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.spatial-query"
+      ]
+    },
+    {
+      "patternId": "pattern.action-first-onboarding",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.5,
+        "systemicDepth": 3.8,
+        "stateCausality": 5,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.303
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.telemetry"
+      ]
+    },
+    {
+      "patternId": "pattern.npc-reacts-to-world-state",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 3.333,
+        "dramaticIntegration": 2.5,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.113
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Runtime gaps: capability.schedule-clock"
+      ]
+    },
+    {
+      "patternId": "pattern.reward-expands-future-possibility",
+      "patternVersion": "2.0.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 4,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.097
+      },
+      "hardVetoes": [
+        "runtime-impossible",
+        "manual-binding-incomplete"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Reward 2.0 manual binding closure is incomplete: exactly one explicit acquisition transaction is required; the acquisition transaction must declare an atomic commit; one or more explicit persistent state refs are required; at least two explicit reward functions are required; reward functions must span at least two distinct functional dimensions; an explicit economy rule ref is required; a passed, evidenced protected-story-order check is required."
+      ]
+    },
+    {
+      "patternId": "pattern.capability-recontextualizes-old-space",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 3,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 3.047
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.local-rule-development-arc",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 4.8,
+        "stateCausality": 4,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 5,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.987
+      },
+      "hardVetoes": [],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.landmark-promises-future-use",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 3.2,
+        "stateCausality": 4,
+        "spatialReinterpretation": 2,
+        "runtimeFit": 3,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.747
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    },
+    {
+      "patternId": "pattern.object-role-composition",
+      "patternVersion": "1.1.0",
+      "scores": {
+        "storyRelevance": 1.667,
+        "dramaticIntegration": 2.75,
+        "systemicDepth": 5,
+        "stateCausality": 5,
+        "spatialReinterpretation": 0,
+        "runtimeFit": 1,
+        "budgetFit": 3,
+        "originalityMargin": 5,
+        "weightedTotal": 2.717
+      },
+      "hardVetoes": [
+        "runtime-impossible"
+      ],
+      "verdict": "rejected",
+      "reasons": [
+        "Fewer than two causal story signals matched."
+      ]
+    }
+  ],
+  "selectedApplications": [
+    {
+      "applicationId": "application.selector.locked-room.1",
+      "patternId": "pattern.state-axis-rewrites-routes",
+      "patternVersion": "1.1.0",
+      "role": "core",
+      "originPackRefs": [
+        "pack.zelda-mainline"
+      ],
+      "storyRefs": [
+        "storyModel.facts",
+        "storyModel.locations",
+        "storyModel.revealOrder",
+        "storyModel.protectedCanon"
+      ],
+      "retainedPrinciples": [
+        "One visible, reversible state axis consistently changes route affordances across stable space."
+      ],
+      "adaptationSummary": "Instantiate State axis rewrites routes from the fixture’s own actors, locations, facts, and props while preserving its reveal order and changing all source-facing expression.",
+      "discardedSurfaceDetails": [
+        "source paired-map coordinates",
+        "source seasonal or era iconography",
+        "source transition songs and effects"
+      ],
+      "hookBindings": [
+        {
+          "hook": "detect",
+          "sourceRef": "storyModel.storySignals",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.detect"
+        },
+        {
+          "hook": "score",
+          "sourceRef": "productionCharter.experienceGoals",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.score"
+        },
+        {
+          "hook": "instantiate",
+          "sourceRef": "storyModel",
+          "targetOwner": "gameplay",
+          "targetContract": "gameplay-design/v03",
+          "targetPath": "$.patternApplications.0.parameters"
+        },
+        {
+          "hook": "emit",
+          "sourceRef": "pattern.state-axis-rewrites-routes",
+          "targetOwner": "stage",
+          "targetContract": "stage-plan/v03",
+          "targetPath": "$.patternApplications.0.effects"
+        },
+        {
+          "hook": "validate",
+          "sourceRef": "test.state-axis.selection",
+          "targetOwner": "evaluation",
+          "targetContract": "acceptance/v03",
+          "targetPath": "$.patternApplications.0.assertions"
+        }
+      ],
+      "effectApplications": [
+        {
+          "effectRef": "effect.state-axis.apply-value",
+          "parameterBindings": {
+            "parameter.state-axis.axis": "state-axis.state-axis-rewrites-routes.story-derived",
+            "parameter.state-axis.location": "location-ref.state-axis-rewrites-routes.story-derived",
+            "parameter.state-axis.route-set": "route-ref-array.state-axis-rewrites-routes.story-derived",
+            "parameter.state-axis.transition": "verb-ref.state-axis-rewrites-routes.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.world.locations[location].activeAxisValue must satisfy equals against \"requested-value\" before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract.",
+            "$.world.locations[location].visualCollisionInteractionVersion must satisfy internally-consistent against true before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.state-axis.recompute-routes",
+          "parameterBindings": {
+            "parameter.state-axis.axis": "state-axis.state-axis-rewrites-routes.story-derived",
+            "parameter.state-axis.location": "location-ref.state-axis-rewrites-routes.story-derived",
+            "parameter.state-axis.route-set": "route-ref-array.state-axis-rewrites-routes.story-derived",
+            "parameter.state-axis.transition": "verb-ref.state-axis-rewrites-routes.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.navigation.routeSet must satisfy matches-axis-table against true before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract.",
+            "$.navigation.requiredEscape must satisfy reachable against true before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract."
+          ]
+        },
+        {
+          "effectRef": "effect.state-axis.close-tradeoff-routes",
+          "parameterBindings": {
+            "parameter.state-axis.axis": "state-axis.state-axis-rewrites-routes.story-derived",
+            "parameter.state-axis.location": "location-ref.state-axis-rewrites-routes.story-derived",
+            "parameter.state-axis.route-set": "route-ref-array.state-axis-rewrites-routes.story-derived",
+            "parameter.state-axis.transition": "verb-ref.state-axis-rewrites-routes.story-derived"
+          },
+          "expectedPostconditions": [
+            "$.navigation.closedEdges must satisfy equals against \"axis-declared-closed-edges\" before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract.",
+            "$.navigation.requiredGoal must satisfy reachable against true before the authored transaction is accepted. This realizes the distinct discrete-route-axis causal contract."
+          ]
+        }
+      ],
+      "runtimeMapping": [
+        "capability.world-facts",
+        "capability.map-layers",
+        "capability.route-gates",
+        "capability.checkpoints",
+        "capability.route-simulation"
+      ],
+      "evidenceInOutput": [
+        "gameplay-design.json world-state transaction",
+        "performance-plan.json reveal-safe cue",
+        "stage-plan.json before/after topology",
+        "acceptance.json route and originality assertions"
+      ]
+    }
+  ],
+  "composition": {
+    "corePatternRef": "pattern.state-axis-rewrites-routes",
+    "supportPatternRefs": [],
+    "sharedExperienceAxis": "experience.rule-mastery",
+    "conflictsResolved": [
+      "Removed candidates that conflict with the selected core or duplicate an already represented pattern kind."
+    ],
+    "developmentArc": [
+      "teach",
+      "practice",
+      "variation",
+      "combine-or-reverse",
+      "exam"
+    ]
+  },
+  "runtimeAssessment": {
+    "satisfiedCapabilities": [
+      "capability.world-facts",
+      "capability.map-layers",
+      "capability.route-gates",
+      "capability.checkpoints",
+      "capability.route-simulation"
+    ],
+    "gaps": [],
+    "approvedFallbacks": []
+  },
+  "originalityPlan": {
+    "transformationAxes": [
+      "worldbuilding",
+      "characters",
+      "objects",
+      "topology",
+      "feedback",
+      "narrative-causality"
+    ],
+    "structuralDeltas": [
+      "topology-graph",
+      "object-role-graph",
+      "action-sequence",
+      "feedback-signature",
+      "narrative-function"
+    ],
+    "forbiddenTransfers": [
+      "Nintendo names, characters, lore, dialogue, maps, puzzle steps, boss scripts, UI, music, symbols, and visual signatures"
+    ],
+    "blindSourceAttributionReview": "required",
+    "reviewChecks": [
+      "A reviewer cannot reliably attribute the instance to one source encounter",
+      "At least four transformation axes materially change",
+      "Protected canon and reveal order remain unchanged"
+    ]
+  },
+  "abstention": {
+    "abstained": false,
+    "reason": null
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.selector.locked-room.gameplay",
+      "owner": "gameplay",
+      "contractRef": "gameplay-design/v03",
+      "applicationRefs": [
+        "application.selector.locked-room.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.state-axis-rewrites-routes",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.state-axis-rewrites-routes.selection.1",
+        "assertion.state-axis-rewrites-routes.selection.2",
+        "assertion.state-axis-rewrites-routes.runtime.1",
+        "assertion.state-axis-rewrites-routes.runtime.2",
+        "assertion.state-axis-rewrites-routes.route.1",
+        "assertion.state-axis-rewrites-routes.route.2",
+        "assertion.state-axis-rewrites-routes.originality.1",
+        "assertion.state-axis-rewrites-routes.originality.2",
+        "assertion.state-axis-rewrites-routes.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.locked-room.performance",
+      "owner": "performance",
+      "contractRef": "performance-design/v03",
+      "applicationRefs": [
+        "application.selector.locked-room.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.state-axis-rewrites-routes",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.state-axis-rewrites-routes.selection.1",
+        "assertion.state-axis-rewrites-routes.selection.2",
+        "assertion.state-axis-rewrites-routes.runtime.1",
+        "assertion.state-axis-rewrites-routes.runtime.2",
+        "assertion.state-axis-rewrites-routes.route.1",
+        "assertion.state-axis-rewrites-routes.route.2",
+        "assertion.state-axis-rewrites-routes.originality.1",
+        "assertion.state-axis-rewrites-routes.originality.2",
+        "assertion.state-axis-rewrites-routes.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.locked-room.stage",
+      "owner": "stage",
+      "contractRef": "stage-plan/v03",
+      "applicationRefs": [
+        "application.selector.locked-room.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.state-axis-rewrites-routes",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.state-axis-rewrites-routes.selection.1",
+        "assertion.state-axis-rewrites-routes.selection.2",
+        "assertion.state-axis-rewrites-routes.runtime.1",
+        "assertion.state-axis-rewrites-routes.runtime.2",
+        "assertion.state-axis-rewrites-routes.route.1",
+        "assertion.state-axis-rewrites-routes.route.2",
+        "assertion.state-axis-rewrites-routes.originality.1",
+        "assertion.state-axis-rewrites-routes.originality.2",
+        "assertion.state-axis-rewrites-routes.originality.3"
+      ]
+    },
+    {
+      "handoffId": "handoff.selector.locked-room.evaluation",
+      "owner": "evaluation",
+      "contractRef": "acceptance/v03",
+      "applicationRefs": [
+        "application.selector.locked-room.1"
+      ],
+      "requirements": {
+        "corePatternRef": "pattern.state-axis-rewrites-routes",
+        "preserveProtectedCanon": true,
+        "maximumSupportPatterns": 3
+      },
+      "validationRefs": [
+        "assertion.state-axis-rewrites-routes.selection.1",
+        "assertion.state-axis-rewrites-routes.selection.2",
+        "assertion.state-axis-rewrites-routes.runtime.1",
+        "assertion.state-axis-rewrites-routes.runtime.2",
+        "assertion.state-axis-rewrites-routes.route.1",
+        "assertion.state-axis-rewrites-routes.route.2",
+        "assertion.state-axis-rewrites-routes.originality.1",
+        "assertion.state-axis-rewrites-routes.originality.2",
+        "assertion.state-axis-rewrites-routes.originality.3"
+      ]
+    }
+  ],
+  "status": "draft"
+}

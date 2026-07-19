@@ -1,0 +1,1260 @@
+{
+  "schemaVersion": "1.0.0",
+  "libraryId": "library.storyteller-game-design",
+  "libraryVersion": "0.3.0",
+  "status": "beta",
+  "hashPolicy": {
+    "algorithm": "canonical-tree-sha256/v1",
+    "canonicalizationVersion": "1",
+    "treeHash": "ec216aaa8fd3a1af69c656405dd8003f4460f533e655eaeca498ebcd1cb218e6"
+  },
+  "schemaVersions": {
+    "scope": "1.0.0",
+    "work": "1.0.0",
+    "source": "1.0.0",
+    "claim": "1.0.0",
+    "observation": "1.0.0",
+    "dossier": "1.0.0",
+    "relation": "1.0.0",
+    "pattern": "1.0.0",
+    "selection": "1.0.0",
+    "lock": "1.0.0",
+    "benchmark": "1.0.0",
+    "pack": "1.0.0",
+    "taxonomy": "1.0.0",
+    "adapter": "1.0.0",
+    "migration": "1.0.0",
+    "libraryRelease": "1.0.0"
+  },
+  "packs": [
+    {
+      "packId": "pack.zelda-mainline",
+      "version": "0.3.0",
+      "manifestHash": "077dda95d52c5bf38bd9faa32a035b0d66377dcf275e3ee8f374431f75cfd94f"
+    }
+  ],
+  "core": {
+    "patternRefs": [
+      "pattern.capability-recontextualizes-old-space",
+      "pattern.state-axis-rewrites-routes",
+      "pattern.parallel-state-comparison",
+      "pattern.landmark-promises-future-use",
+      "pattern.local-rule-development-arc",
+      "pattern.object-role-composition",
+      "pattern.constrained-vehicle-route",
+      "pattern.reward-expands-future-possibility",
+      "pattern.optional-secret-readability",
+      "pattern.npc-reacts-to-world-state",
+      "pattern.embodied-world-change-reveal",
+      "pattern.action-first-onboarding",
+      "pattern.dense-overworld-as-challenge-space"
+    ],
+    "adapterRefs": [
+      "adapter.2d-topdown-v021"
+    ],
+    "compositionRuleRefs": [
+      "composition-rule.one-core-up-to-three-supports"
+    ],
+    "provenanceIndexHash": "9ae7f1bad7c560703f674844f02ec2ee0ddb0db186c6233e355e1275173bc73f"
+  },
+  "indexes": [
+    {
+      "indexId": "index.faceted-patterns",
+      "version": "1.0.0",
+      "hash": "2c18575cb1dd032b7427abd50a063bdc40bddbb728150f824ac36fd4d3a193f2"
+    },
+    {
+      "indexId": "index.pattern-retrieval",
+      "version": "1.0.0",
+      "hash": "ce19051dfe332611f9616485cc8c05be620195d730df73edd16634d6a34782aa"
+    },
+    {
+      "indexId": "index.pattern-provenance-review-only",
+      "version": "1.0.0",
+      "hash": "9ae7f1bad7c560703f674844f02ec2ee0ddb0db186c6233e355e1275173bc73f"
+    }
+  ],
+  "migrations": [
+    "migration.pattern.reward-expands-future-possibility.1.1.0-to-2.0.0"
+  ],
+  "qualityEvidence": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9",
+    "G13"
+  ],
+  "fileManifest": [
+    {
+      "path": "benchmarks/adapter-contract-report.json",
+      "bytes": 280112,
+      "sha256": "a5e3dc1a0a6451bf954a015a81c35f79381971de155321656539fe7512bd9f8e"
+    },
+    {
+      "path": "benchmarks/adapter-effect-contracts.json",
+      "bytes": 19462,
+      "sha256": "508aa8f9f9d5c8b9dc4a2a0b027127e4a721a5fb388d344db7eba2f72e2bf61b"
+    },
+    {
+      "path": "benchmarks/adapter-state-fixtures.json",
+      "bytes": 16830,
+      "sha256": "5f40d73dab0f5959edeb546bd4fef15c02b8fa8bd0f5b93f92a8cd43e3ea9d45"
+    },
+    {
+      "path": "benchmarks/benchmark-cases.json",
+      "bytes": 19416,
+      "sha256": "e3fd4119094dcdfe137b242acef2f696f4518931e95c9377d81e9095ea9f3cdf"
+    },
+    {
+      "path": "benchmarks/expected/comedy-seed-101.json",
+      "bytes": 20088,
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307"
+    },
+    {
+      "path": "benchmarks/expected/comedy-seed-202.json",
+      "bytes": 20088,
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307"
+    },
+    {
+      "path": "benchmarks/expected/comedy-seed-303.json",
+      "bytes": 20088,
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307"
+    },
+    {
+      "path": "benchmarks/expected/dialogue-heavy-seed-101.json",
+      "bytes": 31124,
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16"
+    },
+    {
+      "path": "benchmarks/expected/dialogue-heavy-seed-202.json",
+      "bytes": 31124,
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16"
+    },
+    {
+      "path": "benchmarks/expected/dialogue-heavy-seed-303.json",
+      "bytes": 31124,
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16"
+    },
+    {
+      "path": "benchmarks/expected/journey-chase-seed-101.json",
+      "bytes": 20088,
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307"
+    },
+    {
+      "path": "benchmarks/expected/journey-chase-seed-202.json",
+      "bytes": 20088,
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307"
+    },
+    {
+      "path": "benchmarks/expected/journey-chase-seed-303.json",
+      "bytes": 20088,
+      "sha256": "81c9c1541371662d87c475f0a67b5aa09f070dcfb795e02c2f21101320ba8307"
+    },
+    {
+      "path": "benchmarks/expected/locked-room-seed-101.json",
+      "bytes": 20000,
+      "sha256": "d131090bd9d188b96051daec43b7009d8a7915ad32114a87b7a7ee8cf8f9d68d"
+    },
+    {
+      "path": "benchmarks/expected/locked-room-seed-202.json",
+      "bytes": 20000,
+      "sha256": "d131090bd9d188b96051daec43b7009d8a7915ad32114a87b7a7ee8cf8f9d68d"
+    },
+    {
+      "path": "benchmarks/expected/locked-room-seed-303.json",
+      "bytes": 20000,
+      "sha256": "d131090bd9d188b96051daec43b7009d8a7915ad32114a87b7a7ee8cf8f9d68d"
+    },
+    {
+      "path": "benchmarks/expected/low-spatial-change-seed-101.json",
+      "bytes": 21085,
+      "sha256": "93d54cca6b9fcb05687e64006dcd4ff361f32a5b4bb14f3415ef9c1f58fe4f19"
+    },
+    {
+      "path": "benchmarks/expected/low-spatial-change-seed-202.json",
+      "bytes": 21085,
+      "sha256": "93d54cca6b9fcb05687e64006dcd4ff361f32a5b4bb14f3415ef9c1f58fe4f19"
+    },
+    {
+      "path": "benchmarks/expected/low-spatial-change-seed-303.json",
+      "bytes": 21085,
+      "sha256": "93d54cca6b9fcb05687e64006dcd4ff361f32a5b4bb14f3415ef9c1f58fe4f19"
+    },
+    {
+      "path": "benchmarks/expected/negative-monologue-seed-101.json",
+      "bytes": 11591,
+      "sha256": "ce1459a76b82be0e81c357ed7881b355373987568300de404075f3103a39fc5e"
+    },
+    {
+      "path": "benchmarks/expected/negative-monologue-seed-202.json",
+      "bytes": 11591,
+      "sha256": "ce1459a76b82be0e81c357ed7881b355373987568300de404075f3103a39fc5e"
+    },
+    {
+      "path": "benchmarks/expected/negative-monologue-seed-303.json",
+      "bytes": 11591,
+      "sha256": "ce1459a76b82be0e81c357ed7881b355373987568300de404075f3103a39fc5e"
+    },
+    {
+      "path": "benchmarks/expected/open-exploration-seed-101.json",
+      "bytes": 27196,
+      "sha256": "f73755254e06ef1a43012c1d86b2640af637e91b98d240b76bacf9ff0e17a5b2"
+    },
+    {
+      "path": "benchmarks/expected/open-exploration-seed-202.json",
+      "bytes": 27196,
+      "sha256": "f73755254e06ef1a43012c1d86b2640af637e91b98d240b76bacf9ff0e17a5b2"
+    },
+    {
+      "path": "benchmarks/expected/open-exploration-seed-303.json",
+      "bytes": 27196,
+      "sha256": "f73755254e06ef1a43012c1d86b2640af637e91b98d240b76bacf9ff0e17a5b2"
+    },
+    {
+      "path": "benchmarks/expected/relationship-drama-seed-101.json",
+      "bytes": 31124,
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16"
+    },
+    {
+      "path": "benchmarks/expected/relationship-drama-seed-202.json",
+      "bytes": 31124,
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16"
+    },
+    {
+      "path": "benchmarks/expected/relationship-drama-seed-303.json",
+      "bytes": 31124,
+      "sha256": "02f32d1960aa4a980dea7393f0c746714200ec3c0dc1fd81c41562958a8c2f16"
+    },
+    {
+      "path": "benchmarks/expected/reward-2-complete-bindings-seed-101.json",
+      "bytes": 23439,
+      "sha256": "db7f950199fecc7d1e46645726915bce35230e85b13a7b0d9e697de476a67380"
+    },
+    {
+      "path": "benchmarks/expected/reward-2-complete-bindings-seed-202.json",
+      "bytes": 23439,
+      "sha256": "db7f950199fecc7d1e46645726915bce35230e85b13a7b0d9e697de476a67380"
+    },
+    {
+      "path": "benchmarks/expected/reward-2-complete-bindings-seed-303.json",
+      "bytes": 23439,
+      "sha256": "db7f950199fecc7d1e46645726915bce35230e85b13a7b0d9e697de476a67380"
+    },
+    {
+      "path": "benchmarks/expected/reward-2-missing-bindings-seed-101.json",
+      "bytes": 19842,
+      "sha256": "df5fe73b475810def3d075d9c4bb6b5ffa1687fe4f99a50283cd5a81e9f1e04d"
+    },
+    {
+      "path": "benchmarks/expected/reward-2-missing-bindings-seed-202.json",
+      "bytes": 19842,
+      "sha256": "df5fe73b475810def3d075d9c4bb6b5ffa1687fe4f99a50283cd5a81e9f1e04d"
+    },
+    {
+      "path": "benchmarks/expected/reward-2-missing-bindings-seed-303.json",
+      "bytes": 19842,
+      "sha256": "df5fe73b475810def3d075d9c4bb6b5ffa1687fe4f99a50283cd5a81e9f1e04d"
+    },
+    {
+      "path": "benchmarks/fixture-registry.json",
+      "bytes": 26347,
+      "sha256": "42afe101f32361a00f33ea2eff910158a4bdac302653c1b3f502a88f297b9ecc"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--aquarium-maintenance-route.json",
+      "bytes": 1593,
+      "sha256": "1acb481b559ed8058d50c69cb5144ed437a7e85e0f24303782270eb5d1c2aaf3"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--aquarium-maintenance-runtime.json",
+      "bytes": 1614,
+      "sha256": "ff80066f813b253ef1d18b4d76f399eae4e132f99ce4ba34564f6b8c58100c2c"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--aquarium-maintenance.json",
+      "bytes": 1601,
+      "sha256": "61c35d7f2d8c9f9fa70993945fea39f9366526c350bab6327bb305b19a06292b"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--archive-rubbing-route.json",
+      "bytes": 1676,
+      "sha256": "6d107e07d07d169aa46b6de510491f33d6f7e9517f5ac7741502f55fda328b0d"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--archive-rubbing-runtime.json",
+      "bytes": 1784,
+      "sha256": "8b842816f8a62c5865c14779d8c3b4787b67414c87b4d90a4ba5cdfa8e7c260b"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--archive-rubbing.json",
+      "bytes": 1671,
+      "sha256": "e4f5aa864b7b6279042724d9592d7d3e408dab69cfc633903ca516e83e9feefb"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--closed-archive-route.json",
+      "bytes": 1769,
+      "sha256": "b0505a75aad174ac9569c35d98f045bb9defb708cc7824edf55b39969e8518b5"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--closed-archive-runtime.json",
+      "bytes": 1700,
+      "sha256": "98b9ccf531e7d5f55ccbc060eb7f5d2dcda80cf5baf94fa20ba91e654b3fd2b9"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--closed-archive.json",
+      "bytes": 1773,
+      "sha256": "3614e7ccdc030bf0aa5b224e7095ab01d2c6a0d1aceeb36923cf4ef87d51376b"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--community-radio-cache-route.json",
+      "bytes": 1643,
+      "sha256": "8c79d0320d3c996138eeb7a4fa9a902d25e9349e13e0862127a9300093e68878"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--community-radio-cache-runtime.json",
+      "bytes": 1640,
+      "sha256": "40de5bc1935c60601670b18bc415d838f2a24c856f9050a9d028b8245e470349"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--community-radio-cache.json",
+      "bytes": 1655,
+      "sha256": "5f09e17c9663207365a7bfe71c1aa411e5ebee0627ef60f08c313d103b7e3151"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--flooded-data-center-route.json",
+      "bytes": 1726,
+      "sha256": "16ce29092fb6703b2a4b66e071724b3ce8c7dc03d0834bf15ea8905b587b8e51"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--flooded-data-center-runtime.json",
+      "bytes": 1636,
+      "sha256": "ad2e1b1e49f5469749f0d60f2f0bc156853a8daa629c31de81ddffb5c9d5e395"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--flooded-data-center.json",
+      "bytes": 1634,
+      "sha256": "3cc747c7241e80ca596968ffaeda6741de9d5ab03b51157dd33fe0ca281fa3fc"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--flooded-market-restored-route.json",
+      "bytes": 1710,
+      "sha256": "9f81fb1597d41648e1521cdd026cfee5a276257dde900b69a1910027b4c1c142"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--flooded-market-restored-runtime.json",
+      "bytes": 1725,
+      "sha256": "aeda6f5b9a5bca40e19ae15dd6dc6d8b5c36044c028c5b6660de2c55595f3a77"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--flooded-market-restored.json",
+      "bytes": 1726,
+      "sha256": "3c42314cd3db123a6d9122be859d0f71d27b26ac3ddf54d8fa77d3c9603b5767"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--harbor-tide-covenant-route.json",
+      "bytes": 1805,
+      "sha256": "30c782d9d823610f2f8cf4611f5c7f4b86ce77e4d916a38fffad73521154c173"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--harbor-tide-covenant-runtime.json",
+      "bytes": 1921,
+      "sha256": "fef9646f2438917f80fcae9543cb8dd6eb1e693c0b2e700f0a5ce46ef4c80cb6"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--harbor-tide-covenant.json",
+      "bytes": 1804,
+      "sha256": "0d54a2ff6c790add670e062c5e00de64a0d2d084f2f106d6f3aa486f4bbc5eac"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--night-shift-signal-failure-route.json",
+      "bytes": 1742,
+      "sha256": "cea3d8cedc4c5b9343f029f5c980def99dd559a0121cce08c08c52231905dbc5"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--night-shift-signal-failure-runtime.json",
+      "bytes": 1878,
+      "sha256": "e23216d98344a4fd6ac94a25a8a95743493d3358eea6a843dee37b16c6a51c55"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--night-shift-signal-failure.json",
+      "bytes": 1743,
+      "sha256": "dc51e7a3a5435bda3a2a910e4dc74b68aee08d27f5582989b741d001102b311b"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--quarantine-lab-route.json",
+      "bytes": 1649,
+      "sha256": "f48cc20e2bfec50658b702f9b1834c162644ced44c65551509a4cfe8644a608e"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--quarantine-lab-runtime.json",
+      "bytes": 1644,
+      "sha256": "11bf9bf77b5f03e0d53bd3092ab9c54bd5a1984141d25741dca3a6ae8345b298"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--quarantine-lab.json",
+      "bytes": 1652,
+      "sha256": "82e45f7cf8fda2c7d16fea748215a63960c0656eeb71318210aa58fea422a9da"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--radio-observatory-route.json",
+      "bytes": 1605,
+      "sha256": "456e81c477cb36fdfbd675b68e8d95fe97c612734a7ea23ca63beaea21ce0458"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--radio-observatory-runtime.json",
+      "bytes": 1583,
+      "sha256": "1ff13575f6827bfe50f9aa78cdb2111316bdc360cd1d0fdc0522b92d6a852e45"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--radio-observatory.json",
+      "bytes": 1594,
+      "sha256": "3cba19e134ae8a973e258d70ef2528fa8f5d880eb3afdb997305f528d8e66566"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--rooftop-waterworks-district-route.json",
+      "bytes": 1970,
+      "sha256": "e4aa97dd1c6cebd8fd458ca33837ab4ab5ff29a838f488f2ca3d8dab5d96b0cc"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--rooftop-waterworks-district-runtime.json",
+      "bytes": 1961,
+      "sha256": "83a212694a46551217ab853e029bdabdf7ec645b457da597d704b68e0dfeb800"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--rooftop-waterworks-district.json",
+      "bytes": 1836,
+      "sha256": "ca696f2dd6ca8af1288f8c9838a3a827d1a6085939b0b6482397e8540d906ecc"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--signal-workshop-route.json",
+      "bytes": 1600,
+      "sha256": "2bc542385af2c916e62f84d20284058c59c9f3885741c75133a4cd9944872473"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--signal-workshop-runtime.json",
+      "bytes": 1618,
+      "sha256": "811e47ec4fc2dbc73b67ea8ef76f7a9f44e5268bd5319512a1b5251466705198"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--signal-workshop.json",
+      "bytes": 1616,
+      "sha256": "1f62ab9f18b9eacb4f2e1e6afec0683f2d632db04f9a4566128686bcc530de23"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--tidal-library-route.json",
+      "bytes": 1629,
+      "sha256": "3d8c6a1605fafe1aeb7553383b993ac2d642aa8028da79cdd561adb8f2774888"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--tidal-library-runtime.json",
+      "bytes": 1638,
+      "sha256": "ef86f5d02f895b9313af5e677657641f7009cd1be4c6f7f82373db01b6688ccb"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--tidal-library.json",
+      "bytes": 1624,
+      "sha256": "16c3ee7c34c1b47e8195d777d5862283f7ad1486d990d15dc4edd722b05b739c"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--underground-mail-line-route.json",
+      "bytes": 1663,
+      "sha256": "8d88ddf4ebc4e3e14608fbe33380eb061118a025055641bce7849afca786773b"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--underground-mail-line-runtime.json",
+      "bytes": 1669,
+      "sha256": "c8fa5364c85403c5741313d2b59b10c7769368cec07a9478fab71070c13049f0"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--underground-mail-line.json",
+      "bytes": 1659,
+      "sha256": "9f8dbb5e156d9361afea8e86d2e9d13d02dfa81986db8e9ed7968da6537487e6"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--weather-station-cache-route.json",
+      "bytes": 1693,
+      "sha256": "605528ab3e0e309bb2ef94940d64791bcb3c8c5dd688537ab5bab8b63fe188ff"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--weather-station-cache-runtime.json",
+      "bytes": 1802,
+      "sha256": "43458aa8a30a03a2aac4eb904a1152428f8bdcbb52b476a97988b4375e6ea42f"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/maturity--weather-station-cache.json",
+      "bytes": 1706,
+      "sha256": "fe5a7b86ddee8db4d2d576668ec3c038239d9b272df8e52d76fa3b0f5a1759be"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--aquarium-maintenance.json",
+      "bytes": 1754,
+      "sha256": "d86a30e712c50c5707aacad1cff94e30b96c3b3755b74e760aad4c979141aeaf"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--community-radio-cache.json",
+      "bytes": 1805,
+      "sha256": "12fcb8893460f19b3a50054c61c570eafc355d194a83116221416b7e3bc4215d"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--flooded-data-center.json",
+      "bytes": 1789,
+      "sha256": "98be004a8c1422dbfc5d6d2f9cd0934b8a121185b4d3e396bef3ecc742ce3b57"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--flooded-market-restored.json",
+      "bytes": 1866,
+      "sha256": "64db14b511b3770655961aa0e76a1ad67afa07aa9c56ea342b37f555e23ebf07"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--harbor-tide-covenant.json",
+      "bytes": 1950,
+      "sha256": "87661ade94e93e53dfc9dc97d2ad82e37cea41d1da8634d75135c9799eff8f49"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--night-shift-signal-failure.json",
+      "bytes": 1894,
+      "sha256": "026efdd9b60ec55eb654d7d7632ba576b0d63e675c5e8e4190d8087107b2e63f"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--quarantine-lab.json",
+      "bytes": 1776,
+      "sha256": "af49a91da058cead6d0975f2d5ed92432c6ee9b01d36500c1b2f230e20fef095"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--radio-observatory.json",
+      "bytes": 1763,
+      "sha256": "11ec8142eb033427e57eea95f9fd97a7b492cb43829cae23b147863b048acb8a"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--railway-archive-clue.json",
+      "bytes": 1830,
+      "sha256": "cd7be84bd052aceb80cccf1f062ea540c1b3d523ae98aba140407909f1226beb"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--revisit-weather-station.json",
+      "bytes": 1807,
+      "sha256": "96a889988c3e8d701bde531252d1fcdb0c0f62c9779a3f46fe592c9aab20b7c8"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--rooftop-waterworks-district.json",
+      "bytes": 1973,
+      "sha256": "45a47043f8107b33514402f428ff1c31510fadd91e9b021168c36451f6ed83fd"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--signal-workshop.json",
+      "bytes": 1782,
+      "sha256": "4fd6b217eb5dcc156cf3f29e6466320025390bf0049df1af72f287017db8e110"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--tidal-library.json",
+      "bytes": 1765,
+      "sha256": "b055c6a4e49940756b903160585b4b1ea29752148dc41b6450fddf1a3797bf1b"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--underground-mail-line.json",
+      "bytes": 1823,
+      "sha256": "3c5c25ef56f647ac0c4d14808ea8b73c8a36fa0401b7b47cee6614adf2bce035"
+    },
+    {
+      "path": "benchmarks/maturity-fixtures/originality--weather-station-cache.json",
+      "bytes": 1850,
+      "sha256": "303ea9714ab10f4074363f4548cc22172d09a5ee632408bcb9d4f28a8b857c20"
+    },
+    {
+      "path": "benchmarks/migration-fixtures/reward-expands-future-possibility-1.1.0-choice-input.json",
+      "bytes": 1272,
+      "sha256": "3054376b8a52a36c6bb8a7478f060eb054caa1b9f84ba5f278bb2910369b034f"
+    },
+    {
+      "path": "benchmarks/migration-fixtures/reward-expands-future-possibility-1.1.0-manual-boundary-output.json",
+      "bytes": 3546,
+      "sha256": "66ac6944c1142b49c887f135da4a3d15a45ff68d1b516a83586fb82123cb3be7"
+    },
+    {
+      "path": "benchmarks/migration-fixtures/reward-expands-future-possibility-1.1.0-with-manual-bindings-input.json",
+      "bytes": 2122,
+      "sha256": "e6b8a307d63a443cdff9bf6df8f22dce24607c6524898acf2deaff710497b49a"
+    },
+    {
+      "path": "benchmarks/migration-fixtures/reward-expands-future-possibility-2.0.0-reinstantiated-output.json",
+      "bytes": 3440,
+      "sha256": "51a6eb6c9a2eddc127c02875a48b854150be26a8573e51eee807e019a802e86a"
+    },
+    {
+      "path": "benchmarks/originality-blind-applications.json",
+      "bytes": 84040,
+      "sha256": "6f19229204767f7a75c6fed95aaa529def18cdcbb0279ad9b888144fa6053ff0"
+    },
+    {
+      "path": "benchmarks/originality-blind-combination-applications.json",
+      "bytes": 36612,
+      "sha256": "bd8b8daa5181261b86bb978451482dab2dea593bdbf9ce59b3d00583adde32be"
+    },
+    {
+      "path": "benchmarks/originality-blind-combination-review-a.json",
+      "bytes": 7601,
+      "sha256": "90e454a827cfe6c098f7d94ae7790b43b14816d5b7df1995baeeb32fa00386a8"
+    },
+    {
+      "path": "benchmarks/originality-blind-combination-review-b.json",
+      "bytes": 7541,
+      "sha256": "bf439551fe29d7cd9564aacd27c4a3f96361854289088a7a27bbf7b92e1fb684"
+    },
+    {
+      "path": "benchmarks/originality-blind-review-a.json",
+      "bytes": 12675,
+      "sha256": "b5c0a02d687addffeb97cf9c75c3af80f9709765a5329186dbde2ba876581252"
+    },
+    {
+      "path": "benchmarks/originality-blind-review-b.json",
+      "bytes": 15066,
+      "sha256": "912aab1f77d7ce879ded837972aa8a39cd9cce2dbe8e750fc3ec0744d14eecba"
+    },
+    {
+      "path": "benchmarks/originality-case-map.json",
+      "bytes": 3809,
+      "sha256": "987341d567f6e1ba0fb47ee6a29246c3fda783bbc5533718d2201e8ffd917bf9"
+    },
+    {
+      "path": "benchmarks/originality-case-registry.json",
+      "bytes": 211227,
+      "sha256": "66335bfcc96264796b301b7f60130d444710b1014f474fb22ac1aeba9d750555"
+    },
+    {
+      "path": "benchmarks/originality-combination-case-map.json",
+      "bytes": 7026,
+      "sha256": "89fafb466069f181ba982de162f7b49905db463f54cdc7899895aced5e47f1a5"
+    },
+    {
+      "path": "benchmarks/selector-benchmark-report.json",
+      "bytes": 139419,
+      "sha256": "9fd5784998097bccf83ec8254676ed8093ef21d167d9ad47c9412afc9ebb5016"
+    },
+    {
+      "path": "benchmarks/story-fixtures/calibration-hidden-room.json",
+      "bytes": 1873,
+      "sha256": "8b77b06256b5c0c636a9b724aa21195e3132aa7186d6f5a64bbb4ec861241329"
+    },
+    {
+      "path": "benchmarks/story-fixtures/comedy-chase.json",
+      "bytes": 1447,
+      "sha256": "a569fd289d5f8039b3475a7a77b8cfe1cff98ab6365c7ffc4a7a0b30ec06aff9"
+    },
+    {
+      "path": "benchmarks/story-fixtures/forward-unseen.json",
+      "bytes": 3308,
+      "sha256": "bb919335fb348f4b855fd40dbae1dfff182eaffb7bb31b74408de85c71935b7c"
+    },
+    {
+      "path": "benchmarks/story-fixtures/locked-room.json",
+      "bytes": 1474,
+      "sha256": "23048a06088753816826c1c38a594d5a7c497eb2b0f6cd9a093618552961d259"
+    },
+    {
+      "path": "benchmarks/story-fixtures/low-fit-monologue.json",
+      "bytes": 922,
+      "sha256": "ce2b286aeeeae41657a1462d822a585eed1d8835f58461a662ae6117a14b4384"
+    },
+    {
+      "path": "benchmarks/story-fixtures/low-spatial-change.json",
+      "bytes": 1772,
+      "sha256": "6e37002947466c1e378b94e073c3dd2d28e441a9b5b7da57c55f3b6fa298493b"
+    },
+    {
+      "path": "benchmarks/story-fixtures/open-exploration.json",
+      "bytes": 1543,
+      "sha256": "50f5028d8da872c4961fda10f58852500c769af49ea34a089b7f485d6628d168"
+    },
+    {
+      "path": "benchmarks/story-fixtures/relationship-drama.json",
+      "bytes": 1445,
+      "sha256": "5127a2648eeb1ada55da3aa4c97c51de772d154a1809b11014257540063bc1f8"
+    },
+    {
+      "path": "benchmarks/story-fixtures/reward-2-complete-bindings.json",
+      "bytes": 3347,
+      "sha256": "ae2f0fe1613aaad05d8e01c2ebf09b1e89dcc70135bbe7bf88d3e77af2b07073"
+    },
+    {
+      "path": "benchmarks/story-fixtures/reward-2-missing-bindings.json",
+      "bytes": 1773,
+      "sha256": "744e8c1437d6a425203d8a35f7e3c47a83cc3d1436d8acd52a8aa17815257e5a"
+    },
+    {
+      "path": "benchmarks/test-registry.json",
+      "bytes": 3246,
+      "sha256": "ebe54b10bb139eb4ed15a8a509c6dfa41cc405fc23fcac7aecb048f37957fa62"
+    },
+    {
+      "path": "core/composition-rules/default-1-plus-3.json",
+      "bytes": 970,
+      "sha256": "e1f77592b6b26e5d849f81313004f0c1bf268eb053e13458efd7445630197edd"
+    },
+    {
+      "path": "core/perspective-adapters/2d-topdown-v021.json",
+      "bytes": 19166,
+      "sha256": "2838345b8a3f2d378c42f2a9e917be2c85310d5034c6962ae60597add25a9add"
+    },
+    {
+      "path": "governance/coverage-policy.json",
+      "bytes": 1164,
+      "sha256": "86e173fbd30a35fae42c86a2edd6736e7bf17418a6ecba8c87fddbe3a46576eb"
+    },
+    {
+      "path": "governance/evidence-policy.md",
+      "bytes": 1361,
+      "sha256": "f0a600fb5856c3b6ee1c3cf0429786fc0592377aa69358d077e83a6faf705653"
+    },
+    {
+      "path": "governance/hash-policy.md",
+      "bytes": 1154,
+      "sha256": "5353805981eced2b9149e0a24fdf4e361aac8ffd090dd7a17f50ae54935c80d7"
+    },
+    {
+      "path": "governance/merge-policy.md",
+      "bytes": 991,
+      "sha256": "de1a08076711723c27395f7bc91d67f2458353e52bd9dfb457911971c38a616e"
+    },
+    {
+      "path": "governance/originality-policy.md",
+      "bytes": 1972,
+      "sha256": "aab86dee8ee6d40fa3a4ed0a9ac85177b4dd67dbf469becf70a3481b4bc19949"
+    },
+    {
+      "path": "governance/originality-validation-policy.json",
+      "bytes": 1313,
+      "sha256": "635f471565c53132fec0b1c01a055f32ba666cd247ce0ceab63e7ca003c0d0bd"
+    },
+    {
+      "path": "governance/scope-policy.md",
+      "bytes": 1450,
+      "sha256": "8764991013ef19cf0bc722514d4fdf32420154e88879b492257fd766d12d0f67"
+    },
+    {
+      "path": "governance/source-tier-matrix.json",
+      "bytes": 689,
+      "sha256": "d3cf7b70bc3e542ecb81e44941c867366afe4e274c59d556b03dba3ae10c3ada"
+    },
+    {
+      "path": "indexes/faceted-index.json",
+      "bytes": 19043,
+      "sha256": "2c18575cb1dd032b7427abd50a063bdc40bddbb728150f824ac36fd4d3a193f2"
+    },
+    {
+      "path": "indexes/provenance-index.json",
+      "bytes": 17482,
+      "sha256": "9ae7f1bad7c560703f674844f02ec2ee0ddb0db186c6233e355e1275173bc73f"
+    },
+    {
+      "path": "indexes/retrieval-index.json",
+      "bytes": 27630,
+      "sha256": "ce19051dfe332611f9616485cc8c05be620195d730df73edd16634d6a34782aa"
+    },
+    {
+      "path": "library-manifest.json",
+      "bytes": 1127,
+      "sha256": "df6de551c8629f8194c7dde883b8f9d1c93790042558ef4219e801a55a00697f"
+    },
+    {
+      "path": "migrations/pattern.reward-expands-future-possibility.1.1.0-to-2.0.0.json",
+      "bytes": 3880,
+      "sha256": "1a03de708c307a76204bc191732f234fb3396428a16b4eddeb97295da2732c6e"
+    },
+    {
+      "path": "packs/zelda-mainline/catalog.json",
+      "bytes": 6940,
+      "sha256": "65234bcc2b761abea9aa964794849fa4d59065d786c917a9f48cc054c8a89f8f"
+    },
+    {
+      "path": "packs/zelda-mainline/claims/claim-registry.json",
+      "bytes": 237161,
+      "sha256": "bb6cb2e00a97b6e81e9e7c2c4e67800178944b91e66ec2ee0851dc5212123c29"
+    },
+    {
+      "path": "packs/zelda-mainline/corpus-scope.json",
+      "bytes": 9824,
+      "sha256": "1e118984e7315721f542bd59958f61ba7c9502b547577b9ef42b1e99a5cd00ab"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/calibration-independent-review.json",
+      "bytes": 32425,
+      "sha256": "5d11506f453e0c10b433691cf94b1d5b2e4a3c57d06ff61bfab9047ad7a2b932"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/calibration-remediation-review.json",
+      "bytes": 10286,
+      "sha256": "a0f691114efe91be2651ce419314f47e164d3d61a5219b8793b0bb35db86838d"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/calibration-report.json",
+      "bytes": 1866,
+      "sha256": "a3a8d719e78b442c8ef48df8ca64de256df91775f9d3d76deb2cf00d8c2972d9"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/calibration-selection.json",
+      "bytes": 21636,
+      "sha256": "79d7b988d71008558c3670d3e96bf16d9eb50214ee175ee20c084bdc40848cde"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/calibration-vertical-slice.json",
+      "bytes": 8366,
+      "sha256": "9f818285b49c26cb2178a7ca16264f9319afd727797e4858d4e9c5176c1efe21"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/coverage-report.json",
+      "bytes": 5260,
+      "sha256": "8a5aad251d898ecbd6e7b95fed870a1e18620d9b0e7bd0c9d8717c38259c6f10"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/observation-disposition.json",
+      "bytes": 35212,
+      "sha256": "495f8d461834f9808907dd4142e68b5d6ad8e7b5652ad5918943a557cac54b3d"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/originality-review.json",
+      "bytes": 13894,
+      "sha256": "135ce3a3504ef1ebcd6e94bf28feefec202cfdd0ee316795005918ff52b3a4e9"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/p4-existing-evidence-review.json",
+      "bytes": 16061,
+      "sha256": "3a0785c7cd38806988d940a094e96b63c4c8e3a9f8854bc08737d969498fa256"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/p4-existing-rebind-review-c.json",
+      "bytes": 25684,
+      "sha256": "3fbedf94a9f31748d705c140c8681f4aa11b58f5745c4114b1bcdb45a17fa1c6"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/p4-supplemental-evidence-review.json",
+      "bytes": 20079,
+      "sha256": "d9134031ac73bed987fef0a1a10951542354445c33895e83c90899e55f84b519"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/pattern-contract-test-report.json",
+      "bytes": 4421,
+      "sha256": "0657855f7e5bfd076242279be72828dc5bc80a219ae97127a63346f60bd3964c"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/pattern-independent-review.json",
+      "bytes": 51678,
+      "sha256": "3534d1ea43a8461a677cc1b73d5d3026e5b384a992bd21572672a5b722fc5f9f"
+    },
+    {
+      "path": "packs/zelda-mainline/coverage/pattern-remediation-review.json",
+      "bytes": 20699,
+      "sha256": "7f832a79c4a5c4fc140c0e3599f1a8850a8bca6ee56320b7ba245cf694970e2a"
+    },
+    {
+      "path": "packs/zelda-mainline/flavor-profile.json",
+      "bytes": 2977,
+      "sha256": "2b7708e235e487e203c3b0ebce31cef813fbb9ad5297a48862ce9fa35c07cf60"
+    },
+    {
+      "path": "packs/zelda-mainline/observations/observation-registry.json",
+      "bytes": 254082,
+      "sha256": "e7d484c4f65acb71a1e2fc8b29f75603cb5521af96704d6f8cdf935bd2082e49"
+    },
+    {
+      "path": "packs/zelda-mainline/originality-fingerprints.json",
+      "bytes": 1172,
+      "sha256": "9df2273b01d5562a677b70528edf6ee00208455f0942811d10fa3abdc793d8a6"
+    },
+    {
+      "path": "packs/zelda-mainline/pack-manifest.json",
+      "bytes": 13334,
+      "sha256": "077dda95d52c5bf38bd9faa32a035b0d66377dcf275e3ee8f374431f75cfd94f"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/calibration/provisional-stateful-revisit.json",
+      "bytes": 26642,
+      "sha256": "120f166aa65ab460a3eca82ec743d70c33bc4be921199352b9ce6d91c3248a51"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/maturity-contracts.json",
+      "bytes": 204125,
+      "sha256": "607c1d1309ccafef60c4f7c2a63b22b7c8e24b1ae6a6329b42c19c18ad3de352"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/pattern-blueprints.json",
+      "bytes": 47166,
+      "sha256": "08894c840c4c1b058ded06ee5bab0fa1799d979bde7ff149c44c3d0650ac8dc2"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/provenance-remediation-map.json",
+      "bytes": 16199,
+      "sha256": "afa8d1be094f27437c28f12ebdbcaec62c0e8186678382ee5c3895302efa3bb5"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/quarantine-register.json",
+      "bytes": 25346,
+      "sha256": "288cc97789d218ff754ee2ab7e229e7abc8f6402149308485020f27fd835c678"
+    },
+    {
+      "path": "packs/zelda-mainline/patterns/released-patterns.json",
+      "bytes": 872656,
+      "sha256": "23aa61893a445c151d0acc8e122452fb0720f4e03b2694d729d279480d4da8b3"
+    },
+    {
+      "path": "packs/zelda-mainline/relations/relation-registry.json",
+      "bytes": 6302,
+      "sha256": "e9252c955fb10bc90e66835b098fd16b920338f479a978d6051453573224bc3c"
+    },
+    {
+      "path": "packs/zelda-mainline/sources/source-registry.json",
+      "bytes": 35862,
+      "sha256": "eb6adfbbdc6e8793e03406ba10d108da986e881a3d19da39e3c244a68b73e735"
+    },
+    {
+      "path": "packs/zelda-mainline/works/TITLE_PROFILE_CONTRACT.md",
+      "bytes": 2374,
+      "sha256": "461334d729f868fc0d8f6134d8b645a0274617a136ff79d76f1d3b017e1c7cee"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/a-link-between-worlds.json",
+      "bytes": 14177,
+      "sha256": "71a984fbb8036a5c230bef3cb65ff5f306fc269072554a1ef88874977558d028"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/a-link-to-the-past.json",
+      "bytes": 14398,
+      "sha256": "0c2e89f06a54c3528caad22f246825c98ff957c6c4b89cfddb1c368930187c29"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/breath-of-the-wild.json",
+      "bytes": 14875,
+      "sha256": "490fae32316fcce3e1fd28595105f2f13bc8608e6128ea02b4ab2ac6184381ad"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/echoes-of-wisdom.json",
+      "bytes": 16405,
+      "sha256": "39b62c19ce03a694cab21959ca16cb1a231f39a48d08bdc295b5a12b4929919e"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/four-swords-adventures.json",
+      "bytes": 13815,
+      "sha256": "9d547ad839257b56ce8fbe020e9a626b4cd6bb62a8a8e98aa99c1f3aeb223f25"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/four-swords.json",
+      "bytes": 13641,
+      "sha256": "2a0c9ed0e49dc64497430bcdefc415b9911ce4804255d7f412d2661be3095adb"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/links-awakening.json",
+      "bytes": 14111,
+      "sha256": "fd97067c9f610691089e83ce3a8b6300124d8be97ed3813e5490ad7101798d6b"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/majoras-mask.json",
+      "bytes": 13606,
+      "sha256": "be624c90e4ffa343acbd1e0f2336d850ec310a3b517d78b306b8e83912f8b053"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/ocarina-of-time.json",
+      "bytes": 13044,
+      "sha256": "1b522be8d7fa580e5b28f192538a146126afaad90e847d2b2313d09fc7170bc6"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/oracle-of-ages.json",
+      "bytes": 14129,
+      "sha256": "8e6e54f0c3a919a0cca6660e0727b0ff7c9bb8b8e58cad51050d324d0a649c96"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/oracle-of-seasons.json",
+      "bytes": 14048,
+      "sha256": "28f1e1d622c136a6283801f27914e46ba9c9a4f85feeb58d9863601d1e3ef16b"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/phantom-hourglass.json",
+      "bytes": 14361,
+      "sha256": "7085724baea33dfcce6f410b0e262dba8200b4da4e484e727b9e9ff6dd696057"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/skyward-sword.json",
+      "bytes": 14415,
+      "sha256": "78a8c57b403e11b4398e4f5732f430e3e9de4877609b9d47e7ee5f0e8d46696f"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/spirit-tracks.json",
+      "bytes": 14179,
+      "sha256": "d83efcc984cd88d950ee9abff274ca7b3902fb7a1bd44cd2cd8afec68f53c6cd"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/tears-of-the-kingdom.json",
+      "bytes": 15162,
+      "sha256": "c70d4e314ea05338a215d93f101c578f00a0560392c458346b9ceeed51721cb2"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/the-legend-of-zelda.json",
+      "bytes": 13728,
+      "sha256": "0682f282638e735f5785e8e7f0d6cf857ee67ed69910f2b5e844810a8ba260e9"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/the-minish-cap.json",
+      "bytes": 14309,
+      "sha256": "59552873f4e0b4cb691592b3474fc861de7e7b57ca57fd8b22be49939092210c"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/the-wind-waker.json",
+      "bytes": 13483,
+      "sha256": "f7e877a600c54574ce1896e6053b9fe5f9f8b8807ade092d79c0fbcebb4d91be"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/tri-force-heroes.json",
+      "bytes": 14079,
+      "sha256": "5497a99cc5e86c76833cb802028ce92c3a35d25ec4b2c39b40140866e8cb304f"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/twilight-princess.json",
+      "bytes": 13696,
+      "sha256": "7ad2d91323093b0e0b1acfe774c36506a7184bcce4eef4c8f164d539fcc0bed7"
+    },
+    {
+      "path": "packs/zelda-mainline/works/profiles/zelda-ii-the-adventure-of-link.json",
+      "bytes": 14276,
+      "sha256": "b93bd18c050c0dcb47c0e2a5f9b7e51d11c9c6f2bd725bcc1ac8e57f76cc1846"
+    },
+    {
+      "path": "packs/zelda-mainline/works/title-dossier-registry.json",
+      "bytes": 216406,
+      "sha256": "d676f59a2ee1cb9f9a6f71e627036bac0dcfaef48e1d01e8a5c583afc1e673a4"
+    },
+    {
+      "path": "packs/zelda-mainline/works/work-families.json",
+      "bytes": 691,
+      "sha256": "a18f6a2f070acbb07479907c873df4a03e72a89180e7abdcf1b4af2490efd61d"
+    },
+    {
+      "path": "packs/zelda-mainline/works/work-registry.json",
+      "bytes": 51529,
+      "sha256": "363a14c624cfe0c70e5f5aac41a80f965cae40ba9856a7c9d9838a226fe01249"
+    },
+    {
+      "path": "schemas/benchmark-case.schema.json",
+      "bytes": 2457,
+      "sha256": "0a8a42f684a456c7f2a216f1455de83b06a7b99eeb697f7ef5e35faed09c86ed"
+    },
+    {
+      "path": "schemas/claim.schema.json",
+      "bytes": 2272,
+      "sha256": "d5f89299b6967bc21c107ffa077ca6f0aadc80b1db9e5d845f03e1a346038215"
+    },
+    {
+      "path": "schemas/design-pattern.schema.json",
+      "bytes": 24000,
+      "sha256": "218fb55a546dca8a76b3b7e851960171c20a4317755232923fa00086f365ccdd"
+    },
+    {
+      "path": "schemas/library-lock.schema.json",
+      "bytes": 4684,
+      "sha256": "860bce0b0f27607a48500edc09016d2b89da84181e9a501b975f4e09140bcb22"
+    },
+    {
+      "path": "schemas/library-release.schema.json",
+      "bytes": 3817,
+      "sha256": "c62777273ef081891b951c7114ed7aaca68a76d9262cbaf989997b7ef14aedfd"
+    },
+    {
+      "path": "schemas/migration.schema.json",
+      "bytes": 2340,
+      "sha256": "ac2015bf3f888177c40386db59b0b19542bb78a875d0d6f27f104c0748ca316d"
+    },
+    {
+      "path": "schemas/observation.schema.json",
+      "bytes": 2496,
+      "sha256": "1652c50459f266ec0a9eef2ac870e1f1e0bef4925ac17264d63eb28a63f43a4e"
+    },
+    {
+      "path": "schemas/pack-manifest.schema.json",
+      "bytes": 6420,
+      "sha256": "a3f6777b03e0895c4ad59fa52584165c6c36b4dd60e696cc0b5c95144cc154dc"
+    },
+    {
+      "path": "schemas/pattern-selection.schema.json",
+      "bytes": 11348,
+      "sha256": "f8c6dd32cfdac5d83f4c3c7ce9e1b3488a6a5b2472a2833fd2d05cf78cdb9594"
+    },
+    {
+      "path": "schemas/perspective-adapter.schema.json",
+      "bytes": 2852,
+      "sha256": "dfd67c31d77b04bad301fa09cd2e81d17ece3f75995eefb18d4df6114bfc6aa3"
+    },
+    {
+      "path": "schemas/relation.schema.json",
+      "bytes": 1210,
+      "sha256": "34815c2f35f4088f6be4fcf3044630e6971c368723cf72c963df30b418f2190a"
+    },
+    {
+      "path": "schemas/scope-manifest.schema.json",
+      "bytes": 4647,
+      "sha256": "f4c8f169051b08b337b8cabaf101b56dfb406cf1d571f7487428480dd1d5a82e"
+    },
+    {
+      "path": "schemas/source-record.schema.json",
+      "bytes": 2267,
+      "sha256": "404b209f564c1ca36300a8ff86d877726eb72a22d10544d5c1284f1c9f289b9d"
+    },
+    {
+      "path": "schemas/taxonomy.schema.json",
+      "bytes": 1762,
+      "sha256": "1526e8fafe82b2d6c7d290f9fbab9fc5537be9bcf775ff6cb1dca31b0e0ee074"
+    },
+    {
+      "path": "schemas/title-dossier.schema.json",
+      "bytes": 2055,
+      "sha256": "4bd862976a68042f9049f7028904f242d6addddeedd1e83ae3652b3bccadca64"
+    },
+    {
+      "path": "schemas/work.schema.json",
+      "bytes": 6419,
+      "sha256": "6b2edcd15c4a2a3ebc79c1db34b133bbb01a92f5903a00d5365df25d3adb7f51"
+    },
+    {
+      "path": "scripts/compile-benchmarks.mjs",
+      "bytes": 5016,
+      "sha256": "895808989dd60c257704454b7f80f4102b447d671179c3e481d162197d036339"
+    },
+    {
+      "path": "scripts/compile-maturity-fixtures.mjs",
+      "bytes": 3803,
+      "sha256": "f253a147c80bc4327b3b5d3d0a294e151458132ed99ad6daff0dce70705dd0d5"
+    },
+    {
+      "path": "scripts/compile-originality-cases.mjs",
+      "bytes": 48151,
+      "sha256": "818e277b7513c1964fb4f4eec4bdda2c639db5651c6fc0262ee396c9fdcb8741"
+    },
+    {
+      "path": "scripts/compile-originality-review.mjs",
+      "bytes": 20065,
+      "sha256": "da8d1da185bef55126f4742c7f09416df497f9bac40b4abe2886223366096eb2"
+    },
+    {
+      "path": "scripts/compile-patterns.mjs",
+      "bytes": 34099,
+      "sha256": "fff517bcde76a066b71bc55182df4ef58eb3fef70041e35ecf737497b52564d0"
+    },
+    {
+      "path": "scripts/compile-release.mjs",
+      "bytes": 35089,
+      "sha256": "62ef4ad0b4d5a9c6bd4ac3a6794ca2874a7f206cf84c857d8126abf2d8e11a44"
+    },
+    {
+      "path": "scripts/compile-research.mjs",
+      "bytes": 10244,
+      "sha256": "304c74cdeec023f9c4081c767a2d8fc64e54ed38b1b0e254e6d3a940f1410f65"
+    },
+    {
+      "path": "scripts/compile-scope.mjs",
+      "bytes": 14763,
+      "sha256": "dfdb24b333701fccc4d00669fe7816077d10dd139aa4ffb7d24c6f6072a8ff17"
+    },
+    {
+      "path": "scripts/create-forward-locks.mjs",
+      "bytes": 9395,
+      "sha256": "8989ef8cf0d5fc616311e5b08228e4095ee23d91d3d11902371126e1bc889002"
+    },
+    {
+      "path": "scripts/lock-utils.mjs",
+      "bytes": 27177,
+      "sha256": "7740bd7f7a6f9b5ec1b3d538c5072b2d570112677f0270971e1215d2203a6160"
+    },
+    {
+      "path": "scripts/reconcile-combination-originality-cases.mjs",
+      "bytes": 5731,
+      "sha256": "a67ea7ccff9f9c74be663048b2ffe91fe7f564d1acea20a119ef24d7fe2f4b69"
+    },
+    {
+      "path": "scripts/run-adapter-contract-tests.mjs",
+      "bytes": 32170,
+      "sha256": "0796908c8dddd15f44a1487e34e6f2a711ae39bf478318afbeccfccb3d65c695"
+    },
+    {
+      "path": "scripts/run-calibration.mjs",
+      "bytes": 5814,
+      "sha256": "bd07fcb6375f78f7b5fd1118c191c52c20cdbeaebef2de07f9c442a2be156c4a"
+    },
+    {
+      "path": "scripts/run-forward-test.mjs",
+      "bytes": 14812,
+      "sha256": "4493602af11adff41f30cd3a939e2e28732e8dd5d73672827f99cab344390f80"
+    },
+    {
+      "path": "scripts/run-pattern-contract-tests.mjs",
+      "bytes": 43050,
+      "sha256": "359ef3e120f38b0b68435fa9e02dbbff703f5dd3ec66aa9dfaf65e4b843d8fa3"
+    },
+    {
+      "path": "scripts/run-selector-benchmarks.mjs",
+      "bytes": 52262,
+      "sha256": "013fcfb0fa75444eb46a860425f83c667f0543485346de39aab2c1df80996af4"
+    },
+    {
+      "path": "scripts/select-patterns.mjs",
+      "bytes": 26423,
+      "sha256": "756ff1488945d161f274a5b88fc2c3bd1e56a85a333853c2bee206424407ad3a"
+    },
+    {
+      "path": "scripts/validate-library.mjs",
+      "bytes": 49674,
+      "sha256": "bd426752201f629402abce469d5a9147195ca3f4d2ed86d0bdd8e9ba03cf719a"
+    },
+    {
+      "path": "scripts/validate-release.mjs",
+      "bytes": 11138,
+      "sha256": "139d1a8ad71fa3a7663c14013c048d4903aa47ebb268d23ade6a2795621f1dea"
+    },
+    {
+      "path": "scripts/validate-skills.mjs",
+      "bytes": 11876,
+      "sha256": "fcd79507c0f40715620765cd3d4fc8c261e0e2f5ee2f0776506668c207a0f97a"
+    },
+    {
+      "path": "scripts/verify-release-determinism.mjs",
+      "bytes": 4413,
+      "sha256": "38c70a9405a3a52432143d7eb0a561a2c0fbf005cac0151dcdd19a806964e18b"
+    },
+    {
+      "path": "taxonomies/dimensions.json",
+      "bytes": 5068,
+      "sha256": "8f2afa7b5172efe6fa410cf9e3bd578a05d4532e87ba6db9d63d2f257dfcae28"
+    },
+    {
+      "path": "taxonomies/experience-goals.json",
+      "bytes": 2637,
+      "sha256": "779bb650f3d368851ed6120162440cc161c1e1a6bc5fc544c0269bb788010c94"
+    },
+    {
+      "path": "taxonomies/pattern-kinds.json",
+      "bytes": 2931,
+      "sha256": "6d96fd8cc425e6e2cc7d645ede0cb935ffdc2645217838d659f5b32e11ae45f7"
+    },
+    {
+      "path": "taxonomies/relation-types.json",
+      "bytes": 2817,
+      "sha256": "32f3f03d1654350bbdfd2b857df62acece0bae142114a8c94288df5725f10624"
+    },
+    {
+      "path": "taxonomies/runtime-capabilities.json",
+      "bytes": 4767,
+      "sha256": "62561df4267e90284b100e71f81414c4716df615cf9e570ab4e1cd15903a55a5"
+    },
+    {
+      "path": "taxonomies/story-signals.json",
+      "bytes": 3067,
+      "sha256": "7dae38cce9a16c6ddb9976e35affc165dca3b900045bc9246b31fcc0e9cd4453"
+    },
+    {
+      "path": "taxonomies/verbs.json",
+      "bytes": 3439,
+      "sha256": "9aa0ff1f3cd4dd1ae4e32466ebae9556169f7ead075d54613f01cea9c682942d"
+    }
+  ]
+}

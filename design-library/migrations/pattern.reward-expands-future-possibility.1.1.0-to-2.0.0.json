@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0.0",
+  "migrationId": "migration.pattern.reward-expands-future-possibility.1.1.0-to-2.0.0",
+  "kind": "pattern",
+  "fromVersion": "1.1.0",
+  "toVersion": "2.0.0",
+  "status": "verified",
+  "changes": [
+    {
+      "operation": "deprecate",
+      "fromPath": "$.application.bindings.optionalDiscovery",
+      "toPath": null,
+      "transformer": "retain-as-legacy-diagnostic-only; never infer a 2.0.0 binding",
+      "reversible": true
+    },
+    {
+      "operation": "deprecate",
+      "fromPath": "$.application.bindings.laterChoiceCount",
+      "toPath": null,
+      "transformer": "retain-as-legacy-diagnostic-only; never reinterpret choice count as function count",
+      "reversible": true
+    },
+    {
+      "operation": "deprecate",
+      "fromPath": "$.application.bindings.nonDominatedCount",
+      "toPath": null,
+      "transformer": "retain-as-legacy-diagnostic-only; no 2.0.0 target semantic",
+      "reversible": true
+    },
+    {
+      "operation": "deprecate",
+      "fromPath": "$.application.bindings.unselectedOptionsPreserved",
+      "toPath": null,
+      "transformer": "retain-as-legacy-diagnostic-only; no 2.0.0 target semantic",
+      "reversible": true
+    },
+    {
+      "operation": "transform",
+      "fromPath": "$.application.bindings.discoveryRef",
+      "toPath": "$.manualReinstantiation.acquisitionTransactionRef",
+      "transformer": "require-designer-supplied-transaction-ref-after-runtime-review; do not infer from interaction reference",
+      "reversible": false
+    },
+    {
+      "operation": "split",
+      "fromPath": "$.application.bindings.rewardRef",
+      "toPath": "$.manualReinstantiation.persistentStateRefs",
+      "transformer": "require-designer-enumeration-of-all-persistent-state-refs-and-save-boundaries; do not split automatically",
+      "reversible": false
+    },
+    {
+      "operation": "transform",
+      "fromPath": "$.application.bindings.choiceSetRef",
+      "toPath": "$.manualReinstantiation.functions",
+      "transformer": "require-designer-authored-distinct-function-bindings-with-state-context-feedback-and-actionability-deltas; do not infer from choices",
+      "reversible": false
+    },
+    {
+      "operation": "split",
+      "fromPath": "$.application.effects",
+      "toPath": "$.targetApplication.effectPlan",
+      "transformer": "after-manual-binding-validation-emit-atomic-state-commit-and-functional-breadth-effects; otherwise emit no target application",
+      "reversible": false
+    },
+    {
+      "operation": "add",
+      "fromPath": null,
+      "toPath": "$.manualReinstantiation.protectedStoryOrderCheck",
+      "transformer": "require-explicit-canon-review-result-before-target-eligibility",
+      "reversible": false
+    }
+  ],
+  "fixtures": [
+    {
+      "inputRef": "benchmarks/migration-fixtures/reward-expands-future-possibility-1.1.0-choice-input.json",
+      "expectedOutputRef": "benchmarks/migration-fixtures/reward-expands-future-possibility-1.1.0-manual-boundary-output.json",
+      "expectedHash": "66ac6944c1142b49c887f135da4a3d15a45ff68d1b516a83586fb82123cb3be7"
+    },
+    {
+      "inputRef": "benchmarks/migration-fixtures/reward-expands-future-possibility-1.1.0-with-manual-bindings-input.json",
+      "expectedOutputRef": "benchmarks/migration-fixtures/reward-expands-future-possibility-2.0.0-reinstantiated-output.json",
+      "expectedHash": "51a6eb6c9a2eddc127c02875a48b854150be26a8573e51eee807e019a802e86a"
+    }
+  ],
+  "rollback": {
+    "supported": false,
+    "procedure": "Restore the immutable 1.1.0 pattern application and its production lock. Do not project 2.0.0 transaction, persistent-state, function, or actionability bindings back into the legacy optional-choice contract.",
+    "dataLossRisk": "documented"
+  },
+  "approvedBy": [
+    "review.p4-existing-rebind-c",
+    "verification.reward-pattern-manual-boundary-fixtures"
+  ]
+}
