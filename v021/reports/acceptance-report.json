@@ -1,0 +1,31 @@
+{
+  "$schema": "script-game-acceptance-report/v1",
+  "schemaVersion": "1.0.0",
+  "status": "pass",
+  "candidate": "the-others-v021",
+  "evaluatedAt": "2026-07-20",
+  "gates": [
+    {"id":"gate.workflow","status":"pass","evidence":"validate-workflow.mjs: 0 failures; all nine production phases present."},
+    {"id":"gate.pixel-profile","status":"pass","evidence":"validate-pixel-profile.mjs --strict: supported camera, grid, layers, atlas and renderer fields."},
+    {"id":"gate.canon","status":"pass","evidence":"Story model preserves recruitment-letter, Victor, overlap, daylight, servant-graves and family-death reveal order; final fact is only added at séance."},
+    {"id":"gate.onboarding","status":"pass","evidence":"Opening states player identity, children, light risk and first action before free exploration; the first curtain changes lighting, actors and portal access."},
+    {"id":"gate.gameplay","status":"pass","evidence":"20-step deterministic route exercises threshold, tuning and evidence mechanics; three permanent state changes affect maps and access."},
+    {"id":"gate.spatial","status":"pass","evidence":"Five traversable maps, eight route portal crossings, conditional doors and guaranteed return paths; route simulation reaches ending without soft lock."},
+    {"id":"gate.visual","status":"pass","evidence":"Four browser screenshots reviewed; tile, actor, portrait and UI atlases use hard pixels and a single 23-color production palette."},
+    {"id":"gate.input","status":"pass","evidence":"Keyboard movement/action/menu/journal plus pointer-based touch d-pad and action button are wired; prompts never depend on color alone."},
+    {"id":"gate.save","status":"pass","evidence":"Unique storyteller-v021-save namespace, automatic checkpoints and JSON state round-trip assertion pass."},
+    {"id":"gate.runtime","status":"pass","evidence":"Browser HTTP 200, JavaScript syntax check, project contract and production route all pass."},
+    {"id":"gate.originality","status":"pass","evidence":"Runtime assets are deterministically generated in-project; AI output is reference-only; product data contains no franchise prompt or copied map dependency."}
+  ],
+  "commands": [
+    "npm run check:v021",
+    "node .codex/skills/build-interactive-stage-game-v021/scripts/validate-workflow.mjs v021",
+    "node .codex/skills/build-interactive-stage-game-v021/scripts/validate-pixel-profile.mjs v021 --strict"
+  ],
+  "limitations": [
+    "0.21 is intentionally a compact baseline: it proves the pixel-profile production workflow, not the later 0.3 design-library breadth.",
+    "Audio is generated as minimal WebAudio feedback rather than a composed score.",
+    "Browser screenshots cover representative states; deterministic route simulation covers the complete critical path."
+  ],
+  "releaseDecision": "Accepted as the playable Skill 0.21 baseline at /v021/."
+}

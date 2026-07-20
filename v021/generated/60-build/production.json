@@ -1,0 +1,154 @@
+{
+  "$schema": "script-game-production/v1",
+  "schemaVersion": "1.0.0",
+  "title": "雾宅：另一扇门",
+  "subtitle": "《小岛惊魂》互动像素剧场 · Skill 0.21",
+  "rendererProfile": {"mode":"top-down-tilemap","logicalResolution":[320,180],"tileSize":16,"movement":"four-direction","sampling":"nearest-neighbor","cameraSnap":"integer-pixel"},
+  "saveKey": "storyteller-v021-save",
+  "assets": {"tileset":"assets/tileset.png","actors":"assets/actors.png","portraits":"assets/portraits.png","icons":"assets/ui-icons.png"},
+  "initialState": {
+    "map":"nursery","spawn":"start","stage":0,"worldLayer":"grace","curtainClosed":false,"curtainsRemoved":false,
+    "inventory":[],"knownFacts":[],"flags":{},"graveCount":0,"seanceSlots":0,"ending":"locked","playSeconds":0
+  },
+  "objectives": [
+    {"stage":0,"text":"合上育儿室的百叶窗帘，保护孩子。","hint":"走到北侧漏光的窗前，面朝窗帘按 E。"},
+    {"stage":1,"text":"去走廊门厅检查今天的信件。","hint":"南侧房门已打开。门链一次只允许一扇门开启。"},
+    {"stage":2,"text":"回育儿室，查明 Anne 所说的 Victor。","hint":"从门厅西侧原路返回；观察另一扇自行颤动的窗帘。"},
+    {"stage":3,"text":"去音乐室，循哭声调谐重叠的房间。","hint":"走廊东门已经出现紫色边光。"},
+    {"stage":4,"text":"在重叠层取走死者肖像册。","hint":"钢琴北侧的柜子刚刚显现。"},
+    {"stage":5,"text":"沿新出现的花园路，拓印三块墓碑。","hint":"大厅南门被晨光照亮；三座墓碑都要查看。"},
+    {"stage":6,"text":"前往北侧降灵室，把三件证物放上圆桌。","hint":"每次按 E 放下一件证物，世界会更加重叠。"},
+    {"stage":7,"text":"回到育儿室，与孩子一起拉开最后的窗帘。","hint":"走入北侧金色光斑，亲手接受晨光。"},
+    {"stage":8,"text":"故事已经结束。你仍可探索改变后的宅邸。","hint":"按 Esc 打开菜单，可从降灵会检查点重播结局。"}
+  ],
+  "items": {
+    "letter":{"label":"未寄出的招聘信","icon":3,"description":"五天前写下，却仍留在宅邸信箱。"},
+    "album":{"label":"死者肖像册","icon":4,"description":"照片中的人被摆成安睡姿态，日期早得异常。"},
+    "grave-rubbing":{"label":"三人墓碑拓片","icon":5,"description":"Mills、Tuttle、Lydia——死于 1891 年。"}
+  },
+  "cast": {
+    "grace":{"name":"Grace","spriteRow":0,"portrait":0},
+    "anne":{"name":"Anne","spriteRow":1,"portrait":1},
+    "nicholas":{"name":"Nicholas","spriteRow":2,"portrait":2},
+    "mills":{"name":"Mrs Mills","spriteRow":3,"portrait":3},
+    "victor":{"name":"Victor","spriteRow":4,"portrait":1},
+    "charles":{"name":"Charles","spriteRow":5,"portrait":0}
+  },
+  "maps": {
+    "nursery": {
+      "name":"育儿室","width":20,"height":12,"theme":"interior","floorTile":2,"wallTile":1,
+      "spawns":{"start":[10,8],"fromHall":[10,9],"ending":[10,8]},
+      "collisions":[[0,0,20,1],[0,11,20,1],[0,0,1,12],[19,0,1,12],[2,2,4,3],[14,2,4,3],[2,7,3,2],[15,7,3,2]],
+      "props":[[3,2,10],[15,2,10],[3,7,8],[16,7,8],[9,5,3],[10,5,3]],
+      "portals":[{"id":"nursery-hall","at":[9,10,3,1],"to":"hall","spawn":"fromNursery","requires":{"stageAtLeast":1},"lockedText":"孩子还在光里。我不能离开。"}],
+      "actors":[
+        {"id":"anne-nursery","cast":"anne","x":7,"y":6,"facing":"right","visible":{"stageMax":7},"talk":[
+          {"when":{"stageMax":0},"lines":["妈妈，光越来越亮了。","Nicholas 在发抖。先把窗帘合上吧。"]},
+          {"when":{"stage":2},"lines":["Victor 就站在另一张床旁边。","你总说我撒谎，可他也说这间房是他的。"]},
+          {"when":{"stageAtLeast":5,"stageMax":6},"lines":["妈妈，我们站在光里。你看——什么也没有发生。"]},
+          {"when":{"stage":7},"lines":["我记得那只枕头，也记得你醒来后抱住了我们。","我不想再躲。"]}
+        ]},
+        {"id":"nicholas-nursery","cast":"nicholas","x":8,"y":6,"facing":"left","visible":{"stageMax":7},"talk":[
+          {"when":{"stageMax":0},"lines":["妈妈，门会不会自己打开？"]},
+          {"when":{"stageAtLeast":2,"stageMax":4},"lines":["我看不见 Victor。但我能听见有人在哭。"]},
+          {"when":{"stageAtLeast":5},"lines":["阳光是暖的，不疼。"]}
+        ]},
+        {"id":"victor-echo","cast":"victor","x":5,"y":5,"facing":"down","visible":{"flag":"victorVisible"},"talk":[{"when":{},"lines":["这是我的房间……你们才是鬼。","妈妈说，这栋房子以前没有人住。"]}]}
+      ],
+      "interactions":[
+        {"id":"curtain-main","x":10,"y":1,"tile":7,"label":"百叶窗帘","steps":[
+          {"when":{"stage":0},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["我是 Grace。Anne 和 Nicholas 不能碰到强光。","在这栋房子里，秩序就是他们的性命。"]},{"type":"set","path":"curtainClosed","value":true},{"type":"setStage","value":1},{"type":"dialogue","speaker":"Anne","portrait":1,"lines":["光收回去了……门锁也响了。","妈妈，你看，走廊门现在能打开。"]},{"type":"save"}]},
+          {"when":{"stage":7},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["我记起来了。那天我用枕头夺走他们的呼吸，又把枪口对准自己。","可我们仍在这里。不是梦，也不是惩罚。","不管别人怎样叫这座房子——这是我们的家。"]},{"type":"set","path":"curtainClosed","value":false},{"type":"set","path":"ending","value":"complete"},{"type":"setStage","value":8},{"type":"dialogue","speaker":"Anne","portrait":1,"lines":["太阳出来了，妈妈。","这一次，我们不用躲。"]},{"type":"complete"},{"type":"save"}]},
+          {"when":{"stageAtLeast":1},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["窗帘后的光像一道边界。","我曾以为只要守住它，什么都不会改变。"]}]}
+        ]},
+        {"id":"curtain-victor","x":5,"y":1,"tile":7,"label":"颤动的窗帘","visible":{"stageAtLeast":2},"steps":[
+          {"when":{"stage":2},"ops":[{"type":"dialogue","speaker":"Anne","portrait":1,"lines":["就是这里。拉开它，你就会看见他留下的房间。"]},{"type":"set","path":"worldLayer","value":"echo"},{"type":"setFlag","key":"victorVisible","value":true},{"type":"setStage","value":3},{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["床、玩具、墙纸……都不是我们的。","那个男孩只出现了一瞬，却把我叫作鬼。"]},{"type":"save"}]},
+          {"when":{"stageAtLeast":3,"stageMax":6},"ops":[{"type":"toggle","path":"worldLayer","a":"grace","b":"echo"},{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["同一间房，像两张纸在风里短暂贴合。"]}]}
+        ]},
+        {"id":"prayer-book","x":3,"y":7,"tile":8,"label":"祷告书","steps":[{"when":{},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["我把规则写在祷告书的空白处：门、窗、光。","可没有一条告诉我，记忆该怎样锁住。"]}]}]}
+      ]
+    },
+    "hall": {
+      "name":"门厅与走廊","width":28,"height":18,"theme":"interior","floorTile":0,"wallTile":1,
+      "spawns":{"fromNursery":[3,5],"fromMusic":[24,5],"fromGarden":[14,15],"fromSeance":[14,2]},
+      "collisions":[[0,0,28,1],[0,17,28,1],[0,0,1,18],[27,0,1,18],[5,3,1,12],[22,3,1,12],[10,3,8,2],[10,12,8,2],[7,7,3,2],[18,7,3,2]],
+      "props":[[8,7,8],[19,7,8],[12,4,3],[13,4,3],[14,4,3],[15,4,3],[12,12,3],[13,12,3],[14,12,3],[15,12,3]],
+      "portals":[
+        {"id":"hall-nursery","at":[1,4,1,3],"to":"nursery","spawn":"fromHall"},
+        {"id":"hall-music","at":[26,4,1,3],"to":"music","spawn":"fromHall","requires":{"stageAtLeast":3},"lockedText":"东门后只有模糊的哭声。先回育儿室查明 Victor。"},
+        {"id":"hall-garden","at":[13,16,3,1],"to":"garden","spawn":"fromHall","requires":{"stageAtLeast":5},"lockedText":"南门被厚窗帘与雾封住。"},
+        {"id":"hall-seance","at":[13,1,3,1],"to":"seance","spawn":"fromHall","requires":{"stageAtLeast":6},"lockedText":"楼梯尽头仍是一堵墙。还有某个名字没有被看见。"}
+      ],
+      "actors":[
+        {"id":"mills-hall","cast":"mills","x":12,"y":7,"facing":"left","visible":{"stageAtLeast":1,"stageMax":5},"talk":[
+          {"when":{"stage":1},"lines":["夫人，我以前在这里工作过。比您想的还要久。","信箱在前面。也许您该亲自看看。"]},
+          {"when":{"stage":2},"lines":["有时两个世界会像呼吸一样靠近。","看见什么，不等于已经知道它是什么。"]},
+          {"when":{"stageAtLeast":5},"lines":["窗帘不在了，孩子却仍好好的。","花园的雾正在退。去看看它藏住的名字吧。"]}
+        ]}
+      ],
+      "interactions":[
+        {"id":"mail-letter","x":8,"y":6,"tile":8,"label":"门厅信箱","steps":[
+          {"when":{"stage":1},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["这是我写的招聘信……五天前的日期。","封口完整。它从未离开这栋房子。"]},{"type":"addItem","item":"letter"},{"type":"addFact","fact":"fact.letter-unposted"},{"type":"setStage","value":2},{"type":"dialogue","speaker":"Mrs Mills","portrait":3,"lines":["可我们还是来了，夫人。","Anne 正在楼上等您。她说那个男孩又出现了。"]},{"type":"save"}]},
+          {"when":{},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["空信箱。那封未寄出的信已经在我的口袋里。"]}]}
+        ]},
+        {"id":"door-chain","x":4,"y":5,"tile":6,"label":"门链闩","steps":[{"when":{},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["开下一扇门前，先关好上一扇。","门链让房子变得可控，也把每个房间变成牢笼。"]},{"type":"setFlag","key":"doorLesson","value":true}]}]},
+        {"id":"empty-hooks","x":14,"y":4,"tile":7,"label":"窗帘挂钩","visible":{"stageAtLeast":5},"steps":[{"when":{},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["所有窗帘同时消失了。孩子们却站在光里。","我守了那么久的规则，第一次没有给我答案。"]}]}]}
+      ]
+    },
+    "music": {
+      "name":"音乐室","width":20,"height":14,"theme":"interior","floorTile":2,"wallTile":1,
+      "spawns":{"fromHall":[2,10]},
+      "collisions":[[0,0,20,1],[0,13,20,1],[0,0,1,14],[19,0,1,14],[12,3,6,3],[3,3,3,2],[7,8,4,2]],
+      "props":[[14,3,9],[15,3,9],[16,3,9],[17,3,9],[4,3,8],[8,8,15],[9,8,15]],
+      "portals":[{"id":"music-hall","at":[1,9,1,3],"to":"hall","spawn":"fromMusic"}],
+      "actors":[{"id":"charles-echo","cast":"charles","x":10,"y":6,"facing":"down","visible":{"flag":"charlesVisible"},"talk":[{"when":{},"lines":["战争没有在我回家时结束。","Grace，我只是来告别。我不能再留下。"]}]}],
+      "interactions":[
+        {"id":"piano","x":15,"y":6,"tile":9,"label":"自行鸣响的钢琴","steps":[
+          {"when":{"stage":3},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["左边是孩子的哭声，右边是陌生女人的脚步。","当琴音落在两者之间，房间的轮廓重合了。"]},{"type":"set","path":"worldLayer","value":"overlap"},{"type":"setFlag","key":"charlesVisible","value":true},{"type":"setFlag","key":"albumVisible","value":true},{"type":"setStage","value":4},{"type":"save"}]},
+          {"when":{},"ops":[{"type":"toggle","path":"worldLayer","a":"grace","b":"overlap"},{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["琴弦像一把钥匙，让另一个房间贴近。"]}]}
+        ]},
+        {"id":"album","x":15,"y":2,"tile":10,"label":"死者肖像册","visible":{"flag":"albumVisible"},"steps":[
+          {"when":{"stage":4},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["照片里的人闭着眼，像被安排成安睡的姿势。","Mills 说：我们不总能分清哪边属于过去。"]},{"type":"addItem","item":"album"},{"type":"addFact","fact":"fact.worlds-overlap"},{"type":"set","path":"curtainsRemoved","value":true},{"type":"set","path":"worldLayer","value":"grace"},{"type":"setStage","value":5},{"type":"dialogue","speaker":"Anne","portrait":1,"lines":["妈妈，整栋房子的窗帘都不见了。","光照进来了——可我们还在这里。"]},{"type":"save"}]},
+          {"when":{},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["柜子空了。肖像册已随我带走。"]}]}
+        ]}
+      ]
+    },
+    "garden": {
+      "name":"花园与墓地","width":24,"height":18,"theme":"garden","floorTile":4,"wallTile":4,
+      "spawns":{"fromHall":[12,2]},
+      "collisions":[[0,0,24,1],[0,17,24,1],[0,0,1,18],[23,0,1,18],[2,3,5,3],[17,3,5,3],[2,12,5,4],[17,12,5,4],[7,9,3,3],[11,9,3,3],[15,9,3,3]],
+      "props":[[3,3,4],[4,4,4],[19,3,4],[20,4,4],[3,13,4],[20,13,4],[8,10,11],[12,10,11],[16,10,11]],
+      "portals":[{"id":"garden-hall","at":[11,1,3,1],"to":"hall","spawn":"fromGarden"}],
+      "actors":[{"id":"mills-garden","cast":"mills","x":12,"y":13,"facing":"up","visible":{"stageAtLeast":5},"talk":[
+        {"when":{"stage":5},"lines":["别只看石头，夫人。把三个名字放在一起。","我们一直等着您自己走到这里。"]},
+        {"when":{"stageAtLeast":6},"lines":["是的，我们早已死去。","但最后那个答案，必须由您在楼上的圆桌旁听见。"]}
+      ]}],
+      "interactions":[
+        {"id":"grave-mills","x":8,"y":9,"tile":11,"label":"Bertha Mills 的墓碑","steps":[{"when":{"flagNot":"graveMills"},"ops":[{"type":"setFlag","key":"graveMills","value":true},{"type":"increment","path":"graveCount","amount":1},{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["Bertha Mills。1891。","这不可能是现在站在树下的那个人。"]},{"type":"checkGraves"}]},{"when":{},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["Mills 的名字已经印在纸上。"]}]}]},
+        {"id":"grave-tuttle","x":12,"y":9,"tile":11,"label":"Edmund Tuttle 的墓碑","steps":[{"when":{"flagNot":"graveTuttle"},"ops":[{"type":"setFlag","key":"graveTuttle","value":true},{"type":"increment","path":"graveCount","amount":1},{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["Edmund Tuttle。同一年。","他说自己只是园丁，却记得每条消失的路。"]},{"type":"checkGraves"}]},{"when":{},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["Tuttle 的名字已经印在纸上。"]}]}]},
+        {"id":"grave-lydia","x":16,"y":9,"tile":11,"label":"Lydia 的墓碑","steps":[{"when":{"flagNot":"graveLydia"},"ops":[{"type":"setFlag","key":"graveLydia","value":true},{"type":"increment","path":"graveCount","amount":1},{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["Lydia。死于肺结核。","她不是哑巴。她只是没有再对活人开口。"]},{"type":"checkGraves"}]},{"when":{},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["Lydia 的名字已经印在纸上。"]}]}]}
+      ]
+    },
+    "seance": {
+      "name":"降灵室","width":20,"height":14,"theme":"seance","floorTile":0,"wallTile":1,
+      "spawns":{"fromHall":[10,11]},
+      "collisions":[[0,0,20,1],[0,13,20,1],[0,0,1,14],[19,0,1,14],[7,4,6,4],[3,3,3,3],[14,3,3,3]],
+      "props":[[8,5,12],[9,5,12],[10,5,12],[11,5,12],[8,6,12],[9,6,12],[10,6,12],[11,6,12]],
+      "portals":[{"id":"seance-hall","at":[9,12,3,1],"to":"hall","spawn":"fromSeance","requires":{"stageMax":6},"lockedText":"声音已经合拢。现在只能面对圆桌。"}],
+      "actors":[],
+      "interactions":[
+        {"id":"seance-table","x":10,"y":8,"tile":12,"label":"降灵圆桌","steps":[
+          {"when":{"stage":6,"seanceSlots":0},"ops":[{"type":"set","path":"seanceSlots","value":1},{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["我放下未寄出的信。","活人的声音说：房子里有个女人，不肯让我们进门。"]},{"type":"save"}]},
+          {"when":{"stage":6,"seanceSlots":1},"ops":[{"type":"set","path":"seanceSlots","value":2},{"type":"dialogue","speaker":"Anne","portrait":1,"lines":["我放下肖像册。","那个老妇人问我：你死的时候发生了什么？"]}]},
+          {"when":{"stage":6,"seanceSlots":2},"ops":[{"type":"set","path":"seanceSlots","value":3},{"type":"set","path":"worldLayer","value":"living"},{"type":"addFact","fact":"fact.family-dead"},{"type":"dialogue","speaker":"Anne","portrait":1,"lines":["妈妈用枕头捂住我们。然后外面响了一枪。","后来她哭着抱住我们，说上帝给了她第二次机会。"]},{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["没有第二次机会。只有一段被我锁在门后的记忆。","我们不是在等待 Charles 回来。我们全都没能离开。"]},{"type":"set","path":"ending","value":"unlocked"},{"type":"setStage","value":7},{"type":"transition","map":"nursery","spawn":"ending"},{"type":"save"}]},
+          {"when":{},"ops":[{"type":"dialogue","speaker":"Grace","portrait":0,"lines":["三件证物把同一段时间钉在桌上。"]}]}
+        ]}
+      ]
+    }
+  },
+  "ending": {
+    "title":"晨光之后",
+    "summary":"活人一家离开了岛上的宅邸。Grace、Anne 与 Nicholas 留下，但不再把光当作敌人。",
+    "credits":["总导演工作流：Skill 0.21","剧本来源：本地 data/script.txt","运行时、美术与地图：本项目原创生成","无联网运行 · 无实时 AI · 无外部商业素材"]
+  }
+}

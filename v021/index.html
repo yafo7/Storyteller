@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090c10">
+  <title>雾宅：另一扇门 · Skill 0.21</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" aria-label="雾宅：另一扇门">
+    <header class="topbar">
+      <div><span class="version">SKILL 0.21</span><strong id="map-name">育儿室</strong></div>
+      <div class="top-actions"><button id="journal-button" type="button">J 日志</button><button id="menu-button" type="button">Esc 菜单</button></div>
+    </header>
+    <section class="game-shell">
+      <canvas id="game" width="320" height="180" aria-label="俯视角像素游戏画面"></canvas>
+      <div id="loading" class="screen active"><div class="crest">◇</div><p>正在整理宅邸的门与光……</p></div>
+      <div id="title-screen" class="screen" role="dialog" aria-modal="true">
+        <div class="title-card">
+          <p class="eyebrow">1945 · JERSEY</p>
+          <h1>雾宅<br><small>另一扇门</small></h1>
+          <p>一个关于门、光、记忆与两个家庭的互动像素剧场</p>
+          <button id="new-game" class="primary" type="button">开始故事</button>
+          <button id="continue-game" type="button">继续上次进度</button>
+          <p class="fine">WASD / 方向键移动 · E 互动 · J 日志 · Esc 菜单</p>
+        </div>
+      </div>
+      <div id="objective" class="objective" aria-live="polite"><span>当前目标</span><strong id="objective-text"></strong></div>
+      <div id="prompt" class="prompt" aria-live="polite"><kbd>E</kbd><span></span></div>
+      <div id="dialogue" class="dialogue" role="dialog" aria-live="polite">
+        <canvas id="portrait" width="64" height="64"></canvas>
+        <div><strong id="speaker"></strong><p id="dialogue-text"></p><span class="advance">E / 点击继续 ▾</span></div>
+      </div>
+      <div id="toast" class="toast" aria-live="assertive"></div>
+      <div id="fade" class="fade"></div>
+      <div id="debug-panel" class="debug-panel"></div>
+    </section>
+    <section class="statusbar">
+      <div id="evidence"><span class="label">证物</span><span class="empty">尚未取得</span></div>
+      <div class="door-status"><span aria-hidden="true">⌑</span><span id="world-label">封闭层</span></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true">
+    <div class="panel">
+      <button id="modal-close" class="close" type="button" aria-label="关闭">×</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <div id="touch-controls" aria-label="触屏操作">
+    <div class="dpad"><button data-key="ArrowUp">▲</button><button data-key="ArrowLeft">◀</button><button data-key="ArrowDown">▼</button><button data-key="ArrowRight">▶</button></div>
+    <button id="touch-action" class="touch-action">E<br><small>互动</small></button>
+  </div>
+  <script type="module" src="src/game.js"></script>
+</body>
+</html>

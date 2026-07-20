@@ -1,0 +1,54 @@
+{
+  "$schema": "script-game-performance-plan/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "playerKnowledgeAtStart": ["你是 Grace", "Anne 与 Nicholas 是你的孩子", "他们惧怕强光", "丈夫尚未从战争归来"],
+  "onboarding": {
+    "firstImage": "雨雾中的宅邸切入育儿室，晨光从未合拢的窗帘刺入。",
+    "firstLine": "我是 Grace。天亮前，我得先把孩子们从光里护住。",
+    "firstAction": "四向移动到窗帘前，按 E 合拢窗帘。",
+    "firstConsequence": "房间转暗，孩子停止喘息，通往走廊的门锁弹开。",
+    "guidanceRule": "每个新动词先由环境和角色反应示范，再由目标文字简短确认。"
+  },
+  "pacingRules": [
+    "每段不可跳过的演出不超过 28 秒。",
+    "连续两段表演之间至少留出一次可移动、可观察的玩家行动。",
+    "证物文字最多三屏，每屏不超过 48 个汉字。",
+    "重大揭示后先让玩家走回已经改变的旧场景，再推进下一揭示。",
+    "降灵会前不使用亡者、自杀、闷死等确定性身份词描述 Grace 一家。"
+  ],
+  "beats": [
+    {
+      "id":"beat.onboarding","mapId":"map.nursery","objective":"合上百叶窗帘，保护孩子。","entryKnowledge":["孩子怕光"],"interactionWindow":"玩家可立即移动；窗帘是唯一高亮目标。","performance":["Anne 抱住 Nicholas 躲在床边","冷白光束覆盖门口","Grace 的独白说明身份和即时目标"],"exitCondition":"curtain.nursery=closed","revealIds":[],"breathingSpace":"可与两个孩子交谈并检查祷告书。"
+    },
+    {
+      "id":"beat.door-lesson","mapId":"map.hall","objective":"遵守门链规则，去门厅查看信件。","entryKnowledge":["一次只开一扇门"],"interactionWindow":"先关闭育儿室门闩，再开启门厅栅门。","performance":["错误顺序时门把震动但不打开","Mills 在远处光圈中等待","声源箭头指向信箱"],"exitCondition":"inventory contains letter","revealIds":["reveal.letter"],"breathingSpace":"读信后玩家必须步行返回育儿室。"
+    },
+    {
+      "id":"beat.victor","mapId":"map.nursery","objective":"查明自行颤动的窗帘后有什么。","entryKnowledge":["信从未寄出","仆人却熟悉宅邸"],"interactionWindow":"拉开窗帘会短暂切换房间层，合上则恢复。","performance":["Anne 指向空床","另一张床与 Victor 的剪影叠入","Nicholas 只听见哭声"],"exitCondition":"worldLayer=echo","revealIds":["reveal.victor"],"breathingSpace":"玩家可在两个世界层之间切换并与 Anne 对质。"
+    },
+    {
+      "id":"beat.music","mapId":"map.music","objective":"跟随哭声，在钢琴旁调谐重叠的房间。","entryKnowledge":["Victor 的家庭与宅邸重叠"],"interactionWindow":"依次聆听左、右声源，再在钢琴按 E 对齐。","performance":["琴键无人自响","墙纸与家具出现双重轮廓","Charles 的雾中剪影只留下半句告别"],"exitCondition":"inventory contains album","revealIds":["reveal.overlap"],"breathingSpace":"拿起肖像册后，玩家走回白昼化的大厅。"
+    },
+    {
+      "id":"beat.daylight","mapId":"map.hall","objective":"穿过失去窗帘的宅邸，找到新出现的花园路。","entryKnowledge":["两个世界可能共处"],"interactionWindow":"永久日光改变全部室内配色、NPC 站位和南侧碰撞。","performance":["窗帘挂钩空荡","Anne 与 Nicholas 走入光斑却没有受伤","Mills 打开通向花园的门"],"exitCondition":"map=garden","revealIds":["reveal.daylight"],"breathingSpace":"允许玩家返回育儿室确认孩子状态。"
+    },
+    {
+      "id":"beat.graves","mapId":"map.garden","objective":"沿三块刻名墓碑制作一张完整拓片。","entryKnowledge":["阳光不再构成原先的威胁"],"interactionWindow":"依次触摸三块墓碑，名字逐个显现，第三块生成拓片。","performance":["雾随每个名字后退一格","Mills 在树下出现并承认他们等待了很久","宅邸西翼窗口亮起"],"exitCondition":"inventory contains grave-rubbing","revealIds":["reveal.servants"],"breathingSpace":"可与 Mills 交谈，但她拒绝代替 Grace 说出最终答案。"
+    },
+    {
+      "id":"beat.seance","mapId":"map.seance","objective":"把信件、肖像册与墓碑拓片放上降灵桌。","entryKnowledge":["仆人是亡者","另一家庭是活人还是亡者仍未确定"],"interactionWindow":"每次放置一件证物，房间在两个家庭视角之间更稳定地重叠。","performance":["活人的声音把 Grace 称为入侵者","Anne 复述枕头与枪声","Grace 的记忆以三段短句恢复"],"exitCondition":"ending=unlocked","revealIds":["reveal.family"],"breathingSpace":"最终演出后玩家仍须自己走向晨光出口。"
+    },
+    {
+      "id":"beat.dawn","mapId":"map.nursery","objective":"与孩子一起走入晨光。","entryKnowledge":["Grace 一家已经死亡","宅邸同时容纳活人与亡者"],"interactionWindow":"玩家可与 Anne、Nicholas 分别交谈，再开启不再危险的窗帘。","performance":["Grace 承认未知但不再否认","孩子站入金色光斑","远处汽车带着活人一家离开"],"exitCondition":"ending=complete","revealIds":[],"breathingSpace":"结局画面可自由停留、重读日志或从检查点重播。"
+    }
+  ],
+  "npcDirections": [
+    {"characterId":"character.anne","tacticArc":["试探母亲","用 Victor 挑战规则","在终局坚持记忆"],"movementLanguage":"比 Nicholas 更接近异常热点，常先于对白转身。"},
+    {"characterId":"character.nicholas","tacticArc":["服从","跟随 Anne","接受晨光"],"movementLanguage":"先躲在家具阴影，日光后逐渐走近窗边。"},
+    {"characterId":"character.mills","tacticArc":["服务","暗示","让出解释权"],"movementLanguage":"总站在下一条路线的边缘，从不直接堵路。"}
+  ],
+  "accessibility": {"textSpeedOptions":["instant","normal","slow"],"skipSeenDialogue":true,"objectiveAlwaysAvailable":true,"nonColorCues":true},
+  "decisions": [],
+  "unresolved": []
+}

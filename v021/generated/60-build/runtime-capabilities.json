@@ -1,0 +1,9 @@
+{
+  "schemaVersion":"1.0.0","status":"approved",
+  "renderer":["orthographic tile map","integer camera","nearest-neighbor atlas","six visual layers"],
+  "navigation":["four-direction movement","grid collision","conditional portals","facing-tile interaction"],
+  "state":["path set/toggle/increment","inventory","facts","flags","map variants","checkpoint save"],
+  "performance":["portrait dialogue","objective and hint","actor state variants","skippable text","ending tableau"],
+  "input":["keyboard","touch","gamepad-ready key map"],
+  "debug":["collision overlay","portal overlay","interaction overlay","state inspector"]
+}

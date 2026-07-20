@@ -1,0 +1,32 @@
+{
+  "$schema": "script-game-art-bible/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "style": "原创的战后孤岛哥特宅邸像素绘本：俯视空间使用大块暗色几何，角色以朝向、发色和领口形成身份差异；晨光是唯一高饱和事件色。",
+  "palette": ["#090c10","#111922","#1b2930","#263b40","#385052","#526567","#71807b","#9a9a86","#d9cda9","#f2dfaa","#5b4135","#7b5540","#9b7048","#c48a45","#e4b55a","#432b35","#674051","#765f72","#325059","#47707a","#648c8f","#263927","#405b36","#718253"],
+  "styleAnchor": {"path":"style-anchor.png","role":"mood-and-identity-reference-only","productionUse":false,"promptRecord":"reports/art-generation.json"},
+  "pixelRules": {
+    "nativeTileSize": 16,
+    "actorFrame": [16, 24],
+    "paletteBudget": 24,
+    "nearestNeighbor": true,
+    "integerScale": true,
+    "prohibited": ["smoothing", "subpixel placement", "mixed pixel density", "franchise imitation", "continuous gradients"]
+  },
+  "characterRules": [
+    "Grace：黑色高领长裙与高髻，站姿笔直，轮廓最高。",
+    "Anne：蓝灰裙与深色蝴蝶结，动作领先、朝向异常源。",
+    "Nicholas：灰褐背心，轮廓较小，常靠近 Anne。",
+    "Mills：灰发、黑裙与浅围裙，在低光中仍有明亮胸前三角。",
+    "Victor 与活人层角色使用紫灰边缘光，不使用透明平滑效果。"
+  ],
+  "environmentRules": [
+    "墙体至少占两像素厚度，门洞与可走地面形成明确负形。",
+    "可交互物使用一像素暖色高光和非颜色的闪烁菱形。",
+    "Grace 层以暗青灰为主，重叠层增加紫灰双轮廓，晨光层替换为金灰。",
+    "装饰不进入碰撞逻辑；所有碰撞边界服从 16×16 网格。",
+    "雾只用离散抖动簇，不用半透明模糊。"
+  ],
+  "uiRules": ["面板使用九宫格深色边框", "正文白金色，目标使用琥珀色", "交互键提示同时显示图形和文字", "状态变化使用图标、文字与场景动画三重反馈"],
+  "assetProduction": "生产 tileset、四向角色、肖像和 UI 图标均由项目内确定性像素脚本生成；AI 图只保留为风格锚点。"
+}

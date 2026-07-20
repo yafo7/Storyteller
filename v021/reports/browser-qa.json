@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "pass",
+  "date": "2026-07-20",
+  "browser": "Microsoft Edge headless",
+  "server": "http://127.0.0.1:5175/v021/",
+  "httpStatus": 200,
+  "screenshots": [
+    {"path":"screenshots/nursery.png","state":"dawn","checked":["320x180 integer-scaled scene","player and two children readable","permanent daylight variant","objective and inventory UI"]},
+    {"path":"screenshots/hall-daylight.png","state":"daylight","checked":["large scrolling map","warm-light map delta","conditional doors","pixel snapping"]},
+    {"path":"screenshots/garden-debug.png","state":"garden + debug","checked":["outdoor palette","three grave route","collision red","portals green","interactions blue"]},
+    {"path":"screenshots/seance-debug.png","state":"seance + debug","checked":["evidence table blocking","return portal","facing interaction target","debug state inspector"]}
+  ],
+  "notes": [
+    "All four pages loaded production JSON and PNG atlases without a visible missing-resource state.",
+    "Debug screenshots are development evidence and are not enabled in ordinary play.",
+    "The art intentionally uses a compact baseline vocabulary so 0.21 remains a clean profile comparison against later workflows."
+  ]
+}

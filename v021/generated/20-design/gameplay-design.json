@@ -1,0 +1,41 @@
+{
+  "$schema": "script-game-gameplay-design/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "sourceHash": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5",
+  "experienceGoals": [
+    {"id":"experience.control","goal":"先因掌控门窗而安心，再因规则失效而不安。","evidence":"玩家亲手改变光、道路与孩子状态。"},
+    {"id":"experience.overlap","goal":"把另一个家庭感受为同一空间中的邻近存在。","evidence":"调谐会替换家具、热点、NPC 与出口。"},
+    {"id":"experience.doubt","goal":"在揭底前主动怀疑 Grace 的解释。","evidence":"信件、肖像册、墓碑与光照结果形成矛盾链。"},
+    {"id":"experience.acceptance","goal":"结局从控制转向承认未知。","evidence":"最终操作是放下证物并主动走入晨光。"}
+  ],
+  "coreLoop": {"id":"loop.threshold-memory","steps":["观察光与门的状态","配置门窗获得通路","沿声音进入新空间","调谐世界或取得证物","返回旧地图观察永久后果","用新证据重新解释规则"]},
+  "mechanics": [
+    {"id":"mechanic.threshold","label":"门窗阈值编舞","verbs":["open","close","cross"],"stateDimensions":["access","topology","light","actor-state"],"teachingSequence":["关育儿室窗帘","关身后门再开走廊门","利用光显露路径","面对无法恢复的窗帘消失"],"failureRecovery":"错误顺序只会发出门锁与光照警告，当前房间始终保留返回路。"},
+    {"id":"mechanic.tuning","label":"声音调谐世界层","verbs":["listen","tune","switch-layer"],"stateDimensions":["world-layer","topology","actor-state","audio-visual"],"teachingSequence":["听见哭声方向","在钢琴调谐","在降灵桌保持重叠"],"failureRecovery":"可在终局前随时调回 Grace 层。"},
+    {"id":"mechanic.evidence","label":"证物时间拼图","verbs":["take","inspect","place"],"stateDimensions":["inventory","knowledge","world-layer"],"teachingSequence":["取得未寄信","取得死者肖像册","制作墓碑拓片","在降灵桌依次放置"],"failureRecovery":"关键证物自动保留且跨地图存在。"}
+  ],
+  "verbGrammar": ["移动","查看","开","关","聆听","调谐","拿取","放置","交谈","进入"],
+  "worldState": {
+    "dimensions": ["currentMap","curtainState","doorChain","worldLayer","inventory","knownFacts","curtainsRemoved","seanceSlots","ending"],
+    "invariants": ["关键证物不可丢失","最终揭示前世界层不得命名生死身份","任何门链状态均保留返回路线","永久状态跨地图与存档保持"]
+  },
+  "inventoryRules": ["letter、album、grave-rubbing 是关键证物", "证物跨地图保留", "放置证物不销毁物件，只改变展示状态"],
+  "interactionTransactions": [
+    {"id":"interaction.close-nursery-curtain","mechanicId":"mechanic.threshold","preconditions":["curtain.nursery=open"],"effects":["curtain.nursery=closed","light.nursery=safe","portal.nursery-hall=enabled","anne=calm"],"consequenceChannels":["access","light","actor-state"],"reversible":true,"recovery":"再次互动可打开，但门会在危险光下锁住。"},
+    {"id":"interaction.read-letter","mechanicId":"mechanic.evidence","preconditions":["beat=hall-search"],"effects":["inventory+=letter","known+=fact.letter-unposted","npc.mills=watchful","portal.hall-nursery=enabled"],"consequenceChannels":["inventory","knowledge","actor-state"],"reversible":false,"recovery":"信件自动保留。"},
+    {"id":"interaction.open-victor-curtain","mechanicId":"mechanic.threshold","preconditions":["inventory contains letter"],"effects":["worldLayer=echo","npc.victor=visible","portal.hall-music=enabled"],"consequenceChannels":["world-layer","access","actor-state"],"reversible":true,"recovery":"再次拉帘恢复原层。"},
+    {"id":"interaction.tune-piano","mechanicId":"mechanic.tuning","preconditions":["map=music"],"effects":["worldLayer=overlap","album=visible","npc.charles=echo"],"consequenceChannels":["world-layer","knowledge","actor-state"],"reversible":true,"recovery":"重复调谐可返回。"},
+    {"id":"interaction.take-album","mechanicId":"mechanic.evidence","preconditions":["worldLayer=overlap"],"effects":["inventory+=album","known+=fact.worlds-overlap","curtainsRemoved=true","portal.hall-garden=enabled"],"consequenceChannels":["inventory","knowledge","topology","light"],"reversible":false,"recovery":"永久日光状态开启后仍有阴影安全路。"},
+    {"id":"interaction.rub-graves","mechanicId":"mechanic.evidence","preconditions":["map=garden","curtainsRemoved=true"],"effects":["inventory+=grave-rubbing","known+=fact.servants-dead","portal.hall-seance=enabled"],"consequenceChannels":["inventory","knowledge","access"],"reversible":false,"recovery":"拓片自动保留。"},
+    {"id":"interaction.place-evidence","mechanicId":"mechanic.evidence","preconditions":["inventory contains letter,album,grave-rubbing"],"effects":["seanceSlots=3","worldLayer=living","known+=fact.family-dead","ending=unlocked"],"consequenceChannels":["world-layer","knowledge","access","performance"],"reversible":false,"recovery":"可从终局检查点重播演出。"}
+  ],
+  "onboardingRequirements": ["30 秒内说明 Grace 是母亲且孩子怕光", "90 秒内完成关闭窗帘", "首次操作同时改变光、孩子反应和出口", "门链规则通过真实过门教学"],
+  "runtimeRequirements": [
+    {"id":"runtime.threshold","requiredVerbs":["open","close","cross"],"requiredEffects":["entity-state","portal","collision","light","actor-state"]},
+    {"id":"runtime.layer","requiredVerbs":["listen","tune","switch-layer"],"requiredEffects":["world-layer","visibility","audio","portal"]},
+    {"id":"runtime.evidence","requiredVerbs":["take","inspect","place"],"requiredEffects":["inventory","fact","entity-state","beat-transition"]}
+  ],
+  "decisions": [{"id":"decision.no-combat","choice":"无战斗与追逐","reason":"冲突来自误认与控制，不把另一个家庭扁平化成敌人。"}],
+  "unresolved": []
+}

@@ -1,0 +1,6 @@
+{
+  "schemaVersion":"1.0.0","status":"approved","target":"/v021/","entry":"index.html",
+  "inputs":["generated/10-story/story-model.json","generated/20-design/gameplay-design.json","generated/30-performance/performance-plan.json","generated/40-world/stage-plan.json","generated/50-art/asset-manifest.json"],
+  "outputs":["data/production.json","assets/tileset.png","assets/actors.png","assets/portraits.png","assets/ui-icons.png","src/game.js"],
+  "saveKey":"storyteller-v021-save","deterministic":true,"knownGaps":[]
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "script-game-stage-plan/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "renderProfile": {"view":"orthographic-top-down","logicalResolution":[320,180],"tileSize":16,"integerScale":true,"cameraSnap":"integer-pixel"},
+  "maps": [
+    {"id":"map.nursery","label":"育儿室","tileGrid":{"tileSize":16,"width":20,"height":12},"tileLayers":["ground","terrain","structure","props","overhead","lighting"],"logicLayers":["collision","portals","triggers","interaction","spawns","npc-routes"],"zones":["beds","curtain","prayer-corner","hall-threshold"],"spawn":{"x":9,"y":8,"facing":"up"}},
+    {"id":"map.hall","label":"门厅与走廊","tileGrid":{"tileSize":16,"width":28,"height":18},"tileLayers":["ground","terrain","structure","props","overhead","lighting"],"logicLayers":["collision","portals","triggers","interaction","spawns","npc-routes"],"zones":["nursery-door","mail-table","music-door","garden-door","seance-stairs"],"spawn":{"x":3,"y":5,"facing":"right"}},
+    {"id":"map.music","label":"音乐室","tileGrid":{"tileSize":16,"width":20,"height":14},"tileLayers":["ground","terrain","structure","props","overhead","lighting"],"logicLayers":["collision","portals","triggers","interaction","spawns","npc-routes"],"zones":["piano","listening-left","listening-right","album-cabinet","hall-door"],"spawn":{"x":2,"y":10,"facing":"right"}},
+    {"id":"map.garden","label":"花园与墓地","tileGrid":{"tileSize":16,"width":24,"height":18},"tileLayers":["ground","terrain","structure","props","overhead","lighting"],"logicLayers":["collision","portals","triggers","interaction","spawns","npc-routes"],"zones":["house-step","yew-path","three-graves","mills-tree"],"spawn":{"x":12,"y":2,"facing":"down"}},
+    {"id":"map.seance","label":"降灵室","tileGrid":{"tileSize":16,"width":20,"height":14},"tileLayers":["ground","terrain","structure","props","overhead","lighting"],"logicLayers":["collision","portals","triggers","interaction","spawns","npc-routes"],"zones":["entry","table","living-layer","memory-gate","dawn-exit"],"spawn":{"x":10,"y":11,"facing":"up"}}
+  ],
+  "portals": [
+    {"id":"portal.nursery-hall","from":"map.nursery","to":"map.hall","fromTile":[10,10],"toTile":[3,5],"condition":"curtain.nursery=closed","returnGuaranteed":true},
+    {"id":"portal.hall-nursery","from":"map.hall","to":"map.nursery","fromTile":[2,5],"toTile":[10,9],"condition":"always","returnGuaranteed":true},
+    {"id":"portal.hall-music","from":"map.hall","to":"map.music","fromTile":[25,5],"toTile":[2,10],"condition":"reveal.victor=known","returnGuaranteed":true},
+    {"id":"portal.music-hall","from":"map.music","to":"map.hall","fromTile":[1,10],"toTile":[24,5],"condition":"always","returnGuaranteed":true},
+    {"id":"portal.hall-garden","from":"map.hall","to":"map.garden","fromTile":[14,16],"toTile":[12,2],"condition":"curtainsRemoved=true","returnGuaranteed":true},
+    {"id":"portal.garden-hall","from":"map.garden","to":"map.hall","fromTile":[12,1],"toTile":[14,15],"condition":"always","returnGuaranteed":true},
+    {"id":"portal.hall-seance","from":"map.hall","to":"map.seance","fromTile":[14,1],"toTile":[10,11],"condition":"inventory contains grave-rubbing","returnGuaranteed":true},
+    {"id":"portal.seance-hall","from":"map.seance","to":"map.hall","fromTile":[10,12],"toTile":[14,2],"condition":"ending!=complete","returnGuaranteed":true}
+  ],
+  "stateVariants": [
+    {"id":"variant.nursery-safe","maps":["map.nursery"],"condition":"curtain.nursery=closed","deltas":{"lighting":"remove cold beam","collision":"enable hall portal","npc":"children calm"}},
+    {"id":"variant.echo","maps":["map.nursery","map.music"],"condition":"worldLayer=echo|overlap","deltas":{"props":"overlay living-family furniture","interaction":"enable Victor and album","lighting":"violet edge shimmer"}},
+    {"id":"variant.daylight","maps":["map.nursery","map.hall","map.music"],"condition":"curtainsRemoved=true","deltas":{"lighting":"warm daylight","props":"remove all curtain tiles","collision":"open garden threshold","npc":"children enter light"}},
+    {"id":"variant.graves-known","maps":["map.garden","map.hall"],"condition":"inventory contains grave-rubbing","deltas":{"terrain":"fog retreats","lighting":"seance window lit","portal":"enable seance stairs"}},
+    {"id":"variant.living-layer","maps":["map.seance"],"condition":"seanceSlots=3","deltas":{"props":"living family tableau","lighting":"split warm/cold rooms","npc":"medium and family visible"}},
+    {"id":"variant.dawn","maps":["map.nursery"],"condition":"ending=unlocked","deltas":{"lighting":"gold dawn","collision":"open final window path","npc":"children at window"}}
+  ],
+  "interactionPlacement": [
+    {"id":"curtain.nursery","mapId":"map.nursery","tile":[10,1],"facing":"up","verb":"开关"},
+    {"id":"letter","mapId":"map.hall","tile":[8,6],"facing":"up","verb":"查看"},
+    {"id":"victor-curtain","mapId":"map.nursery","tile":[5,1],"facing":"up","verb":"拉开"},
+    {"id":"piano","mapId":"map.music","tile":[15,4],"facing":"up","verb":"调谐"},
+    {"id":"album","mapId":"map.music","tile":[15,2],"facing":"up","verb":"拿取"},
+    {"id":"grave.mills","mapId":"map.garden","tile":[8,10],"facing":"up","verb":"拓印"},
+    {"id":"grave.tuttle","mapId":"map.garden","tile":[12,10],"facing":"up","verb":"拓印"},
+    {"id":"grave.lydia","mapId":"map.garden","tile":[16,10],"facing":"up","verb":"拓印"},
+    {"id":"seance-table","mapId":"map.seance","tile":[10,6],"facing":"up","verb":"放置"}
+  ],
+  "recoveryRoutes": [
+    {"risk":"门链顺序错误","recovery":"门保持关闭并给出声画提示，玩家仍在原房间。"},
+    {"risk":"世界层切换后迷路","recovery":"调谐点持续发光，地图日志显示返回方向。"},
+    {"risk":"遗漏证物","recovery":"目标栏标出缺少的证物及所在地图；所有回程门保持可用。"},
+    {"risk":"终局中断","recovery":"保存于三件证物放置前，可完整重播。"}
+  ],
+  "decisions": [{"id":"decision.five-maps","choice":"五张紧凑地图反复变体","reason":"用返回与变化建立宅邸记忆，而非用大量一次性房间稀释剧情。"}],
+  "unresolved": []
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "script-game-production-charter/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "projectId": "the-others-v021",
+  "title": "雾宅：另一扇门",
+  "sourcePaths": ["../data/script.txt"],
+  "sourceHash": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5",
+  "targetPath": "/v021/",
+  "runtimeProfile": "offline-top-down-pixel-narrative",
+  "visualProfile": "original-classic-handheld-pixel-rpg",
+  "cameraProfile": "orthographic-top-down-with-frontal-faces",
+  "gridProfile": {
+    "logicalResolution": [320, 180],
+    "tileSize": 16,
+    "integerScaleOnly": true,
+    "movement": "four-direction",
+    "interaction": "facing-tile"
+  },
+  "playerContract": {
+    "role": "Grace，一位在战后孤岛宅邸中保护两个孩子的母亲",
+    "initialKnowledge": "玩家只知道孩子惧怕强光、丈夫尚未归来、仆人刚刚到任",
+    "autonomy": "用户不参与玩法、地图、演出或美术的个案设计",
+    "targetMinutes": 28
+  },
+  "contentConstraints": {
+    "canonFirst": true,
+    "preserveRevealOrder": true,
+    "noLiveAi": true,
+    "singleDeterministicCriticalRoute": true,
+    "saveNamespace": "storyteller-v021-save",
+    "preserveVersions": ["0.1", "0.2", "0.3"]
+  },
+  "originalityPolicy": {
+    "allowBroadEraGrammar": true,
+    "allowFranchiseAssetImitation": false,
+    "requireOriginalCharactersMapsTilesUi": true,
+    "prohibited": ["franchise characters", "copied maps", "copied puzzles", "copied tiles", "copied UI", "copied music"]
+  },
+  "acceptanceTargets": [
+    "complete keyboard and touch route",
+    "five traversable tile maps with return paths",
+    "at least three permanent world-state changes",
+    "four-direction animated player sprite",
+    "canon-safe final reveal",
+    "reloadable checkpoint save"
+  ]
+}

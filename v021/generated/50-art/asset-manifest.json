@@ -1,0 +1,12 @@
+{
+  "$schema": "script-game-asset-manifest/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "assets": [
+    {"id":"asset.style-anchor","kind":"reference","path":"style-anchor.png","status":"approved","productionUse":false,"provenance":"OpenAI image generation; original project prompt","pixelSpec":{"nativeDimensions":[1536,1024],"nearestNeighbor":true,"role":"reference-only"}},
+    {"id":"asset.tileset.mansion","kind":"tileset","path":"../../assets/tileset.png","status":"approved","provenance":"deterministic project generator","pixelSpec":{"nativeDimensions":[128,64],"nearestNeighbor":true,"tileSize":16}},
+    {"id":"asset.sprites.cast","kind":"four-direction-sprite-atlas","path":"../../assets/actors.png","status":"approved","provenance":"deterministic project generator","pixelSpec":{"nativeDimensions":[192,144],"nearestNeighbor":true,"frameSize":[16,24],"directions":4,"walkFrames":3}},
+    {"id":"asset.portraits.cast","kind":"portrait-atlas","path":"../../assets/portraits.png","status":"approved","provenance":"deterministic project generator","pixelSpec":{"nativeDimensions":[256,64],"nearestNeighbor":true,"frameSize":[64,64]}},
+    {"id":"asset.ui.icons","kind":"ui-atlas","path":"../../assets/ui-icons.png","status":"approved","provenance":"deterministic project generator","pixelSpec":{"nativeDimensions":[128,16],"nearestNeighbor":true,"frameSize":[16,16]}}
+  ]
+}

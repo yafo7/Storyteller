@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "pass",
+  "generatedAt": "2026-07-20",
+  "toolRole": "style-anchor-only",
+  "sourceOutput": "C:/Users/yafo777/.codex/generated_images/019f6577-810f-70f0-8f1a-b9c9b94bdbbf/exec-d605b649-17bf-42cb-9a64-29bf84628f2d.png",
+  "projectPath": "generated/50-art/style-anchor.png",
+  "productionAssetsGeneratedBy": "scripts/generate-pixel-assets.mjs",
+  "originalityNotes": ["No franchise names or designs were requested.", "The image is not sampled at runtime.", "All runtime pixels are redrawn by deterministic project code."]
+}

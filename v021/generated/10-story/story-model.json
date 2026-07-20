@@ -1,0 +1,80 @@
+{
+  "$schema": "script-game-story-model/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "sourceHash": "40185e9e9bc585dd4bc98690e503dccb3db3caf3bd280fa9eefbca1bee3406f5",
+  "dramaticPromise": "你越努力用门、黑暗与秩序保护孩子，宅邸越会迫使你看见被自己隔绝的真相。",
+  "dramaticSpine": [
+    "Grace 用门窗规则维持家庭安全。",
+    "未寄出的招聘信和熟悉宅邸的仆人制造因果裂缝。",
+    "Anne 看见 Victor，两个家庭开始在同一空间互相误认。",
+    "音乐、肖像册与消失的窗帘令保护规则逐渐失效。",
+    "墓碑证明仆人早已死去，却仍未揭破 Grace 一家的身份。",
+    "降灵会恢复 Grace 的记忆：她闷死孩子后自杀，一家人才是留下的亡者。",
+    "Grace 接受光与未知，重新理解这座房子。"
+  ],
+  "playerRole": {
+    "characterId": "character.grace",
+    "immediateNeed": "在晨光增强前关好育儿室窗帘，安抚 Anne 与 Nicholas。",
+    "initialBeliefs": ["孩子接触强光会死", "闯入者是鬼魂", "门窗规则能够维持安全"],
+    "knowledgeLimits": ["不知道自己和孩子已经死亡", "不知道 Victor 一家是活人", "无法正视自己杀死孩子后自杀的记忆"],
+    "availableVerbs": ["移动", "查看", "开关", "聆听", "调谐", "拿取", "放置", "交谈"],
+    "selectionReason": "Grace 同时拥有宅邸控制权与最深的认知盲区，玩家的空间操作可直接表现控制、否认与接受。"
+  },
+  "facts": [
+    {"id":"fact.door-rule","text":"打开下一扇门前必须关闭上一扇门。","immutable":true,"confidence":1,"sourceRefs":[{"sourceId":"source.main","startLine":106,"endLine":122}]},
+    {"id":"fact.children-light","text":"Grace 坚信孩子对强光致命过敏。","immutable":true,"confidence":1,"sourceRefs":[{"sourceId":"source.main","startLine":205,"endLine":220}]},
+    {"id":"fact.letter-unposted","text":"招聘信仍在信箱中，从未寄出。","immutable":true,"confidence":1,"sourceRefs":[{"sourceId":"source.main","startLine":262,"endLine":284}]},
+    {"id":"fact.servants-returned","text":"Mills、Tuttle 与 Lydia 很久以前曾在宅邸工作。","immutable":true,"confidence":1,"sourceRefs":[{"sourceId":"source.main","startLine":288,"endLine":314}]},
+    {"id":"fact.victor-seen","text":"Anne 看见 Victor 和参观房子的另一个家庭。","immutable":true,"confidence":1,"sourceRefs":[{"sourceId":"source.main","startLine":529,"endLine":592}]},
+    {"id":"fact.worlds-overlap","text":"活人与亡者的世界会在同一空间重叠。","immutable":true,"confidence":0.98,"sourceRefs":[{"sourceId":"source.main","startLine":1119,"endLine":1154}]},
+    {"id":"fact.charles-dead","text":"Charles 已死于战争，只短暂回家告别。","immutable":true,"confidence":1,"sourceRefs":[{"sourceId":"source.main","startLine":1219,"endLine":1258}]},
+    {"id":"fact.curtains-removed","text":"活人取下宅邸全部窗帘，日光涌入。","immutable":true,"confidence":1,"sourceRefs":[{"sourceId":"source.main","startLine":1556,"endLine":1619}]},
+    {"id":"fact.servants-dead","text":"三名仆人半个多世纪前死于肺结核。","immutable":true,"confidence":1,"sourceRefs":[{"sourceId":"source.main","startLine":1702,"endLine":1750}]},
+    {"id":"fact.family-dead","text":"Grace 闷死孩子后开枪自杀，一家人仍留在宅邸。","immutable":true,"confidence":1,"sourceRefs":[{"sourceId":"source.main","startLine":1892,"endLine":1947}]},
+    {"id":"fact.light-safe-now","text":"结局时阳光不再伤害孩子。","immutable":true,"confidence":1,"sourceRefs":[{"sourceId":"source.main","startLine":1984,"endLine":1987}]}
+  ],
+  "characters": [
+    {"id":"character.grace","name":"Grace","objectives":["保护孩子","维持秩序","驱逐入侵者"],"obstacles":["断裂记忆","世界重叠","对 Anne 的不信任"],"tactics":["制定规则","搜查","祈祷","否认"],"knowledge":["fact.door-rule","fact.children-light"]},
+    {"id":"character.anne","name":"Anne","objectives":["让母亲相信自己","保护 Nicholas"],"obstacles":["惩罚","Victor 的侵入"],"tactics":["观察","画画","说出真相"],"knowledge":["fact.victor-seen"]},
+    {"id":"character.nicholas","name":"Nicholas","objectives":["不与家人分离"],"obstacles":["恐惧","对惩罚的想象"],"tactics":["服从","跟随 Anne"],"knowledge":[]},
+    {"id":"character.mills","name":"Mrs Mills","objectives":["让 Grace 接受新处境"],"obstacles":["Grace 的否认"],"tactics":["暗示","延迟揭示","安排证据"],"knowledge":["fact.worlds-overlap","fact.servants-dead","fact.family-dead"]},
+    {"id":"character.charles","name":"Charles","objectives":["向家人告别"],"obstacles":["战争与死亡记忆"],"tactics":["回避","离开"],"knowledge":["fact.charles-dead"]},
+    {"id":"character.victor","name":"Victor","objectives":["夺回自己的房间"],"obstacles":["看不见的 Grace 一家"],"tactics":["哭泣","触摸窗帘"],"knowledge":[]}
+  ],
+  "relationships": [
+    {"from":"character.grace","to":"character.anne","state":"爱、控制与不信任并存"},
+    {"from":"character.grace","to":"character.mills","state":"雇主与知情引导者之间逐渐倒置的权力"},
+    {"from":"character.anne","to":"character.victor","state":"互为入侵者的两个孩子"}
+  ],
+  "reveals": [
+    {"id":"reveal.letter","factIds":["fact.letter-unposted","fact.servants-returned"],"prerequisites":["fact.door-rule"],"earliestBeatHint":"beat.letter","dramaticFunction":"首次破坏正常因果。"},
+    {"id":"reveal.victor","factIds":["fact.victor-seen"],"prerequisites":["reveal.letter"],"earliestBeatHint":"beat.victor","dramaticFunction":"将异响推进为另一个家庭。"},
+    {"id":"reveal.overlap","factIds":["fact.worlds-overlap"],"prerequisites":["reveal.victor"],"earliestBeatHint":"beat.album","dramaticFunction":"提出世界重叠，但不判定哪边是亡者。"},
+    {"id":"reveal.daylight","factIds":["fact.curtains-removed","fact.light-safe-now"],"prerequisites":["reveal.overlap"],"earliestBeatHint":"beat.daylight","dramaticFunction":"令核心保护规则失效。"},
+    {"id":"reveal.servants","factIds":["fact.servants-dead"],"prerequisites":["reveal.daylight"],"earliestBeatHint":"beat.graves","dramaticFunction":"证明亡者存在，同时保留主角身份反转。"},
+    {"id":"reveal.family","factIds":["fact.family-dead","fact.charles-dead"],"prerequisites":["reveal.servants"],"earliestBeatHint":"beat.seance","dramaticFunction":"完成身份反转并恢复 Grace 的记忆。"}
+  ],
+  "motifs": [
+    {"id":"motif.threshold","label":"依次关闭的门","emotionalMeaning":"控制、隔绝与家庭边界","affordances":["门链状态","通路重排","声音换向"]},
+    {"id":"motif.light","label":"改变一切的光","emotionalMeaning":"被压抑的事实与失效的恐惧","affordances":["窗帘开关","地图状态变化","安全意义反转"]},
+    {"id":"motif.voice","label":"隔墙的声音","emotionalMeaning":"在同一空间中互相误认的家庭","affordances":["方向聆听","切换世界层","声音引路"]},
+    {"id":"motif.portrait","label":"死者肖像与记忆","emotionalMeaning":"无法直面的死亡被物件保存","affordances":["证物收集","图像叠层","记忆重组"]}
+  ],
+  "locations": [
+    {"id":"location.nursery","label":"育儿室","functions":["教学保护规则","Victor 接触","最终降灵"],"connections":["location.hall"]},
+    {"id":"location.hall","label":"门厅与走廊","functions":["门链规则","搜查","世界交叉"],"connections":["location.nursery","location.music","location.garden"]},
+    {"id":"location.music","label":"音乐室","functions":["无形演奏","世界调谐","肖像册"],"connections":["location.hall"]},
+    {"id":"location.garden","label":"花园与墓地","functions":["墓碑证据","仆人揭示"],"connections":["location.hall"]},
+    {"id":"location.seance","label":"重叠的降灵室","functions":["身份反转","记忆恢复","接受光"],"connections":["location.hall"]}
+  ],
+  "interactionOpportunities": [
+    {"id":"opportunity.shutter","sourceAction":"开关窗帘","possibleStateChange":"光照、通路、NPC 反应与世界层同步改变"},
+    {"id":"opportunity.door-chain","sourceAction":"依次关门","possibleStateChange":"互斥门、区域可达性和声源改变"},
+    {"id":"opportunity.tune","sourceAction":"聆听并调谐钢琴","possibleStateChange":"切换可见热点、角色与出口"},
+    {"id":"opportunity.evidence","sourceAction":"收集并放置信件、肖像和墓碑拓片","possibleStateChange":"降灵桌成形并解锁最终重叠"}
+  ],
+  "adaptationLimits": ["墓碑揭示前不得确认仆人死亡", "降灵会前不得确认 Grace 一家死亡", "不得让 Grace 改写原作结局", "新增互动只能翻译原有行动、规则与意象"],
+  "decisions": [],
+  "unresolved": []
+}

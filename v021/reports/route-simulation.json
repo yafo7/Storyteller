@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "pass",
+  "routeId": "critical-route-v021",
+  "steps": 20,
+  "assertions": {
+    "endingComplete": true,
+    "allMapsVisited": true,
+    "evidenceComplete": true,
+    "revealPreserved": true,
+    "saveRoundTrip": true,
+    "routeReturns": true
+  },
+  "finalState": {
+    "map": "nursery",
+    "spawn": "start",
+    "stage": 8,
+    "worldLayer": "living",
+    "curtainClosed": false,
+    "curtainsRemoved": true,
+    "inventory": [
+      "letter",
+      "album",
+      "grave-rubbing"
+    ],
+    "knownFacts": [
+      "fact.letter-unposted",
+      "fact.worlds-overlap",
+      "fact.servants-dead",
+      "fact.family-dead"
+    ],
+    "flags": {
+      "victorVisible": true,
+      "charlesVisible": true,
+      "albumVisible": true,
+      "graveMills": true,
+      "graveTuttle": true,
+      "graveLydia": true
+    },
+    "graveCount": 3,
+    "seanceSlots": 3,
+    "ending": "complete",
+    "playSeconds": 0
+  },
+  "trace": [
+    {
+      "type": "interaction",
+      "map": "nursery",
+      "id": "curtain-main",
+      "beforeStage": 0,
+      "afterStage": 1,
+      "inventory": []
+    },
+    {
+      "type": "portal",
+      "id": "nursery-hall",
+      "to": "hall",
+      "stage": 1
+    },
+    {
+      "type": "interaction",
+      "map": "hall",
+      "id": "mail-letter",
+      "beforeStage": 1,
+      "afterStage": 2,
+      "inventory": [
+        "letter"
+      ]
+    },
+    {
+      "type": "portal",
+      "id": "hall-nursery",
+      "to": "nursery",
+      "stage": 2
+    },
+    {
+      "type": "interaction",
+      "map": "nursery",
+      "id": "curtain-victor",
+      "beforeStage": 2,
+      "afterStage": 3,
+      "inventory": [
+        "letter"
+      ]
+    },
+    {
+      "type": "portal",
+      "id": "nursery-hall",
+      "to": "hall",
+      "stage": 3
+    },
+    {
+      "type": "portal",
+      "id": "hall-music",
+      "to": "music",
+      "stage": 3
+    },
+    {
+      "type": "interaction",
+      "map": "music",
+      "id": "piano",
+      "beforeStage": 3,
+      "afterStage": 4,
+      "inventory": [
+        "letter"
+      ]
+    },
+    {
+      "type": "interaction",
+      "map": "music",
+      "id": "album",
+      "beforeStage": 4,
+      "afterStage": 5,
+      "inventory": [
+        "letter",
+        "album"
+      ]
+    },
+    {
+      "type": "portal",
+      "id": "music-hall",
+      "to": "hall",
+      "stage": 5
+    },
+    {
+      "type": "portal",
+      "id": "hall-garden",
+      "to": "garden",
+      "stage": 5
+    },
+    {
+      "type": "interaction",
+      "map": "garden",
+      "id": "grave-mills",
+      "beforeStage": 5,
+      "afterStage": 5,
+      "inventory": [
+        "letter",
+        "album"
+      ]
+    },
+    {
+      "type": "interaction",
+      "map": "garden",
+      "id": "grave-tuttle",
+      "beforeStage": 5,
+      "afterStage": 5,
+      "inventory": [
+        "letter",
+        "album"
+      ]
+    },
+    {
+      "type": "interaction",
+      "map": "garden",
+      "id": "grave-lydia",
+      "beforeStage": 5,
+      "afterStage": 6,
+      "inventory": [
+        "letter",
+        "album",
+        "grave-rubbing"
+      ]
+    },
+    {
+      "type": "portal",
+      "id": "garden-hall",
+      "to": "hall",
+      "stage": 6
+    },
+    {
+      "type": "portal",
+      "id": "hall-seance",
+      "to": "seance",
+      "stage": 6
+    },
+    {
+      "type": "interaction",
+      "map": "seance",
+      "id": "seance-table",
+      "beforeStage": 6,
+      "afterStage": 6,
+      "inventory": [
+        "letter",
+        "album",
+        "grave-rubbing"
+      ]
+    },
+    {
+      "type": "interaction",
+      "map": "seance",
+      "id": "seance-table",
+      "beforeStage": 6,
+      "afterStage": 6,
+      "inventory": [
+        "letter",
+        "album",
+        "grave-rubbing"
+      ]
+    },
+    {
+      "type": "interaction",
+      "map": "seance",
+      "id": "seance-table",
+      "beforeStage": 6,
+      "afterStage": 7,
+      "inventory": [
+        "letter",
+        "album",
+        "grave-rubbing"
+      ]
+    },
+    {
+      "type": "interaction",
+      "map": "nursery",
+      "id": "curtain-main",
+      "beforeStage": 7,
+      "afterStage": 8,
+      "inventory": [
+        "letter",
+        "album",
+        "grave-rubbing"
+      ]
+    }
+  ]
+}
