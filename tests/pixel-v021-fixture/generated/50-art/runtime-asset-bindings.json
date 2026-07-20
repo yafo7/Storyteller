@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "requiredCharacterIds": ["character.fixture"],
+  "requiredInteractableIds": ["interaction.fixture"],
+  "characters": [
+    {
+      "characterId": "character.fixture",
+      "identityAssetId": "asset.identity.fixture",
+      "runtimeSpriteAssetId": "asset.sprite.fixture",
+      "directVisualDerivative": true,
+      "runtimeBinding": {"atlasAssetId":"asset.sprite.fixture","frameSize":[24,32],"fourDirections":true,"inEngineScreenshot":"generated/50-art/fixture.asset"},
+      "identityComparison": {"status":"pass","preserved":["silhouette","face-hair masses","costume blocks","palette","proportions"]}
+    }
+  ],
+  "interactables": [
+    {
+      "interactionId": "interaction.fixture",
+      "environmentAssetId": "asset.environment.fixture",
+      "stateAssetIds": ["asset.prop.fixture"],
+      "alwaysComposited": true,
+      "backgroundContainsCriticalObject": false,
+      "alphaSeparated": true,
+      "focusTreatment": {"type":"outline-and-pulse","nonColorCue":true},
+      "placement": {"socketId":"socket.fixture","registrationId":"registration.fixture-prop","logicalBounds":[144,64,32,32]},
+      "runtimeBinding": {"inEngineScreenshot":"generated/50-art/fixture.asset"}
+    }
+  ]
+}

@@ -44,6 +44,10 @@ Generate in this dependency order:
 
 Store each source asset at a stable individual path. An atlas is a build artifact and cannot be the only source for a character, scene, or critical prop.
 
+Generate each critical interactable as an isolated asset job rather than cropping it from the environment plate or treating a mixed prop board as its only source. Record the separate environment and prop generation job IDs. Background plates reserve interaction sockets; the runtime composites the correct prop state into those sockets.
+
+For every primary, speaking, or moving actor, an AI-original individual identity or turnaround must feed the production sprite directly. Record AI source IDs and the conversion method. Procedural cleanup, palette reduction, animation spacing, and atlas packing are allowed; replacing the identity with an unrelated generic template is not.
+
 AI-generated raster art may be used directly for a base scene or portrait only after crop, perspective, identity, palette, pixel-density, and in-engine readability checks. Keep collision, portals, triggers, routes, and light masks as data even when a scene image is used as the ground layer.
 
 ## Enforce manifest lineage
@@ -54,6 +58,8 @@ Every non-reference asset in `asset-manifest.json` declares:
 - `generationMethod`, provenance, rights, and approval status;
 - nonempty `referenceAssetIds` resolving to approved assets;
 - nonempty `qaEvidence` resolving to contact sheets or in-engine screenshots.
+
+AI character sources also declare `originType: ai-original-generation` and a stable `generationJobId`. Their runtime sprite derivatives declare `aiSourceAssetIds` and `directVisualDerivative: true`. Interactive prop sources declare a generation job different from the owning environment plate.
 
 Reject final assets whose method or state contains `placeholder`, whose source file is missing, or whose only evidence is a schema validator. Do not waive a story-required character, map, map state, interactive prop, or UI state.
 
@@ -66,5 +72,7 @@ approved style or identity anchor -> separate production sources -> compiled run
 ```
 
 For every map and primary character, record explicit results for perspective, palette, identity or material language, detail density, interaction readability, state contrast, pixel integrity, and native-scale readability. All must pass.
+
+Character evidence must show the individual AI source beside the compiled runtime frame in an actual scene. Interaction evidence must show the independent prop already composited into the scene before targeting, then its non-color-only focus treatment and changed state.
 
 Reject and regenerate when production art is materially flatter, emptier, more generic, or less identifiable than its approved anchor. A technically valid but visibly placeholder-like screenshot fails Art and returns to asset production.

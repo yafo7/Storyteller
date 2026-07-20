@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "sequences": [
+    {
+      "id": "sequence.arrival.fixture",
+      "sourceOrder": 1,
+      "sourceSpan": "fixture:1-20",
+      "sequenceType": "arrival",
+      "transitionIn": "The player finishes a situated task before the visitor signal interrupts it.",
+      "transitionOut": "The introduced visitor is oriented in the room and creates the next local objective.",
+      "nextDramaticQuestion": "Why did the visitor know the house before entering?",
+      "phases": [
+        {"phase":"setup","deliveryMode":"enacted","actorIds":["character.player"],"playerWitness":true,"physicalAction":"The player completes the current household task.","dialogueIntent":"Establish routine."},
+        {"phase":"signal","deliveryMode":"enacted","actorIds":["character.visitor"],"playerWitness":true,"physicalAction":"A bell rings at the closed front door.","dialogueIntent":"Interrupt routine."},
+        {"phase":"response","deliveryMode":"interactive","actorIds":["character.player"],"playerWitness":true,"physicalAction":"The player walks to the entrance.","dialogueIntent":"Acknowledge the interruption."},
+        {"phase":"threshold-action","deliveryMode":"interactive","actorIds":["character.player","character.visitor"],"playerWitness":true,"physicalAction":"The player opens the door and the visitor crosses the threshold.","dialogueIntent":"Request entry."},
+        {"phase":"introduction","deliveryMode":"enacted","actorIds":["character.player","character.visitor"],"playerWitness":true,"physicalAction":"The actors face one another.","dialogueIntent":"Exchange names and roles."},
+        {"phase":"orientation","deliveryMode":"enacted","actorIds":["character.player","character.visitor"],"playerWitness":true,"physicalAction":"The player leads the visitor to the assigned room.","dialogueIntent":"Explain immediate house rules."},
+        {"phase":"consequence","deliveryMode":"enacted","actorIds":["character.visitor"],"playerWitness":true,"physicalAction":"The visitor takes position beside the next objective.","dialogueIntent":"Create a concrete question rather than a riddle."}
+      ]
+    }
+  ]
+}

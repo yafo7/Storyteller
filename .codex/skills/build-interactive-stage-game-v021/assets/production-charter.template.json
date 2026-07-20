@@ -37,6 +37,13 @@
     "separateSourceAssetsRequired": true,
     "styleLineageRequired": true,
     "inEngineVisualComparisonRequired": true,
+    "sourceEventLedgerRequired": true,
+    "enactedPhysicalEventsRequired": true,
+    "sceneLogicRegistrationRequired": true,
+    "separateInteractableGenerationJobsRequired": true,
+    "persistentWorldInteractablesRequired": true,
+    "aiCharacterToRuntimeLineageRequired": true,
+    "minimumPrimaryActorFrame": [24, 32],
     "nativeResolutionReadable": true,
     "collisionOverlayRequired": true,
     "integerScaleScreenshotsRequired": true

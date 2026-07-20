@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "maps": [
+    {
+      "mapId": "map.fixture",
+      "sceneAssetId": "asset.environment.fixture",
+      "sourceImageSize": [1024, 576],
+      "logicalSize": [320, 180],
+      "tileSize": 16,
+      "fitTransform": {"mode":"contain-crop","scale":0.3125,"offset":[0,0]},
+      "interactionSockets": [
+        {"id":"socket.fixture","logicalBounds":[144,64,32,32]}
+      ],
+      "requiredFeatureIds": ["registration.fixture-prop", "registration.fixture-wall"],
+      "registrations": [
+        {"id":"registration.fixture-prop","kind":"interactable","visualBounds":[144,64,32,32],"logicBounds":[144,64,32,32],"maxErrorPx":4,"measuredErrorPx":1,"overlayScreenshot":"generated/50-art/fixture.asset","status":"pass"},
+        {"id":"registration.fixture-wall","kind":"collision","visualBounds":[0,0,320,16],"logicBounds":[0,0,320,16],"maxErrorPx":4,"measuredErrorPx":0,"overlayScreenshot":"generated/50-art/fixture.asset","status":"pass"}
+      ]
+    }
+  ]
+}

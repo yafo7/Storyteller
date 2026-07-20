@@ -61,7 +61,7 @@ Recommended defaults:
 
 - 16–32 colors per map state, plus reserved UI and effect colors;
 - 16×16 environment tiles;
-- 16×24 or 16×32 actor frames;
+- 24×32 or 32×48 primary and speaking actor frames; permit 16×24 only for minor non-speaking actors with recorded native-scale evidence;
 - 32×32 hero props or effects when required;
 - 64×64 or 96×96 optional dialogue portraits, still pixel-authored and palette-related;
 - 9-slice pixel UI panels and a readable CJK bitmap or pixel-compatible font with license evidence.
@@ -75,6 +75,10 @@ Recommended defaults:
 5. Build collision, portal, trigger, and occlusion overlays.
 6. Produce map-state delta tiles, NPC sprite sheets, props, portraits, UI, and effects.
 7. Validate seams, transparency, palette, identity, native-size readability, and integer-scaled screenshots.
+
+The four-direction proof must be a direct visual derivative of an individual AI-original identity or turnaround when the charter requires AI character production. Do not satisfy that requirement with an AI concept board plus an unrelated procedural sprite.
+
+Produce critical interactive objects independently from scene plates. Reserve their placement sockets during environment composition, preserve alpha in their source states, composite them persistently in the runtime, and add outline or motion focus without relying on color alone.
 
 AI generation may establish mood, palette, identities, portraits, or a style frame. Do not accept an AI-generated raster as a production tileset or sprite sheet until it has exact tile boundaries, seamless edges, correct frame counts, transparent backgrounds, stable identities, limited palette, and intentional pixel clusters. Rebuild failed assets with pixel-native tooling or code rather than hiding defects with filtering.
 
