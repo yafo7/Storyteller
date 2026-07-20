@@ -2,9 +2,9 @@
   "$schema": "script-game-art-bible/v1",
   "schemaVersion": "1.0.0",
   "status": "approved",
-  "style": "原创的战后孤岛哥特宅邸像素绘本：俯视空间使用大块暗色几何，角色以朝向、发色和领口形成身份差异；晨光是唯一高饱和事件色。",
+  "style": "原创的战后孤岛哥特宅邸像素绘本：高密度正交俯视场景、清晰的家具与门窗正面、可追溯的独立人物和道具源资产；晨光是唯一高饱和事件色。",
   "palette": ["#090c10","#111922","#1b2930","#263b40","#385052","#526567","#71807b","#9a9a86","#d9cda9","#f2dfaa","#5b4135","#7b5540","#9b7048","#c48a45","#e4b55a","#432b35","#674051","#765f72","#325059","#47707a","#648c8f","#263927","#405b36","#718253"],
-  "styleAnchor": {"path":"style-anchor.png","role":"mood-and-identity-reference-only","productionUse":false,"promptRecord":"reports/art-generation.json"},
+  "styleAnchor": {"path":"style-anchor.png","role":"locked upstream visual dependency","productionUse":false,"styleContract":"style-contract.json","promptRecord":"reports/art-generation.json"},
   "pixelRules": {
     "nativeTileSize": 16,
     "actorFrame": [16, 24],
@@ -28,5 +28,7 @@
     "雾只用离散抖动簇，不用半透明模糊。"
   ],
   "uiRules": ["面板使用九宫格深色边框", "正文白金色，目标使用琥珀色", "交互键提示同时显示图形和文字", "状态变化使用图标、文字与场景动画三重反馈"],
-  "assetProduction": "生产 tileset、四向角色、肖像和 UI 图标均由项目内确定性像素脚本生成；AI 图只保留为风格锚点。"
+  "assetProduction": "风格母版约束六名角色身份板、五张独立场景和九种交互道具状态；角色、场景和道具先保存为独立源文件，再以确定性脚本生成对齐变体、像素缩放和运行时图集。",
+  "productionHierarchy": ["style frame", "character identity sources", "environment base sources", "aligned map-state variants", "individual portraits and four-direction sprites", "interactive prop states", "UI", "runtime atlases"],
+  "hardGates": ["no final placeholders", "all production assets cite approved references", "all story owners have coverage", "contact sheet and in-engine comparisons required"]
 }

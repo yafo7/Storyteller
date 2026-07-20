@@ -1,0 +1,5 @@
+{
+  "schemaVersion":"1.0.0","status":"approved","requirements":[
+    {"id":"coverage.fixture","ownerId":"fixture","requiredStates":["base"],"coveredStates":["base"],"producedAssetIds":["asset.identity.fixture","asset.portrait.fixture","asset.sprite.fixture","asset.environment.fixture","asset.variant.fixture","asset.prop.fixture","asset.ui.fixture"],"status":"approved"}
+  ]
+}

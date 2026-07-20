@@ -1,10 +1,15 @@
 {
-  "schemaVersion": "1.0.0",
-  "status": "pass",
-  "generatedAt": "2026-07-20",
-  "toolRole": "style-anchor-only",
-  "sourceOutput": "C:/Users/yafo777/.codex/generated_images/019f6577-810f-70f0-8f1a-b9c9b94bdbbf/exec-d605b649-17bf-42cb-9a64-29bf84628f2d.png",
-  "projectPath": "generated/50-art/style-anchor.png",
-  "productionAssetsGeneratedBy": "scripts/generate-pixel-assets.mjs",
-  "originalityNotes": ["No franchise names or designs were requested.", "The image is not sampled at runtime.", "All runtime pixels are redrawn by deterministic project code."]
+  "schemaVersion":"2.0.0","status":"pass","generatedAt":"2026-07-20","toolRole":"style-locked production source generation",
+  "styleAnchor":{"sourceOutput":"C:/Users/yafo777/.codex/generated_images/019f6577-810f-70f0-8f1a-b9c9b94bdbbf/exec-d605b649-17bf-42cb-9a64-29bf84628f2d.png","projectPath":"generated/50-art/style-anchor.png"},
+  "productions":[
+    {"kind":"cast-identity-board","output":"exec-88be9640-1682-494a-844d-caa935e0737a.png","projectPath":"generated/50-art/source/characters/cast-identity-board.png","reference":"asset.style-anchor"},
+    {"kind":"environment-base","ownerId":"map.nursery","output":"exec-f1a981a4-af55-4f31-bd8b-148175d3ad3d.png","projectPath":"generated/50-art/source/environments/nursery-base.png","reference":"asset.style-anchor"},
+    {"kind":"environment-base","ownerId":"map.hall","output":"exec-18470a66-5a67-4c44-8a93-4228fb6c535d.png","projectPath":"generated/50-art/source/environments/hall-base.png","reference":"asset.style-anchor"},
+    {"kind":"environment-base","ownerId":"map.music","output":"exec-924e6e14-a58a-491c-b0e3-db0b02f6167f.png","projectPath":"generated/50-art/source/environments/music-base.png","reference":"asset.style-anchor"},
+    {"kind":"environment-base","ownerId":"map.garden","output":"exec-908fc96d-dc1f-4eaf-8708-d28f1baafa82.png","projectPath":"generated/50-art/source/environments/garden-base.png","reference":"asset.style-anchor"},
+    {"kind":"environment-base","ownerId":"map.seance","output":"exec-f775c4c6-82d8-4578-9e06-75bbc602e9b8.png","projectPath":"generated/50-art/source/environments/seance-base.png","reference":"asset.style-anchor"},
+    {"kind":"interactive-prop-state-board","output":"exec-b4b67e60-4daa-4947-aa2d-a4d5d74e8ef9.png","projectPath":"generated/50-art/source/props/interaction-prop-board.png","reference":"asset.style-anchor"}
+  ],
+  "derivativePipeline":["crop independent identities and prop states","generate individual portraits and sprite sources","resize base scenes at nearest-neighbor","derive aligned state variants","compile runtime atlases","build contact sheet"],
+  "originalityNotes":["All prompts requested original people, maps and props.","No actor likeness or franchise asset was requested.","Every runtime scene now derives from a separately stored approved source image."]
 }

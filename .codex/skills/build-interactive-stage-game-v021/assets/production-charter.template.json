@@ -34,6 +34,9 @@
     "requiredInteractionConsequences": 2,
     "requiredEndingCoverage": 1,
     "placeholderAssetsAllowedAtAcceptance": false,
+    "separateSourceAssetsRequired": true,
+    "styleLineageRequired": true,
+    "inEngineVisualComparisonRequired": true,
     "nativeResolutionReadable": true,
     "collisionOverlayRequired": true,
     "integerScaleScreenshotsRequired": true

@@ -9,7 +9,7 @@
 | Design | Gameplay design | `generated/20-design/gameplay-design.json` | Mechanics and world-state rules |
 | Performance | Drama direction | `generated/30-performance/performance-plan.json` | Onboarding, beats, dialogue intent, pacing |
 | World | Stage design | `generated/40-world/stage-plan.json` | Maps, topology, blocking, staging |
-| Art | Art direction | `generated/50-art/art-bible.json`, `asset-manifest.json` | Visual specification and assets |
+| Art | Art direction | `generated/50-art/art-bible.json`, `style-contract.json`, `asset-coverage.json`, `asset-manifest.json`, `visual-validation.json` | Locked visual specification, separately usable source assets, coverage, provenance, and in-engine comparison |
 | Build | Compiler | `generated/60-build/production.json` | Runtime representation only |
 | Evaluation | Evaluator | `reports/acceptance-report.json` | Findings, evidence, and routing |
 

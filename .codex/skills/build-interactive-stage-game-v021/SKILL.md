@@ -1,6 +1,6 @@
 ---
 name: build-interactive-stage-game-v021
-description: Orchestrate autonomous production of a complete, playable top-down 2D pixel-art narrative game from a screenplay, transcript, subtitle file, stage play, prose scene, or story outline. Use when Codex must run the 0.21 script-to-game workflow with classic handheld-era RPG readability, tile maps, four-direction sprites, grid-aware collision, stateful world changes, original pixel assets, deterministic compilation, route simulation, browser QA, and typed specialist handoffs.
+description: Orchestrate autonomous production of a complete, playable top-down 2D pixel-art narrative game from a screenplay, transcript, subtitle file, stage play, prose scene, or story outline. Use when Codex must run or regenerate the 0.21 script-to-game workflow with a locked visual style, separately produced characters, scenes and interactive props, traceable production art, classic handheld-era RPG readability, tile maps, four-direction sprites, stateful world changes, deterministic compilation, route simulation, and browser QA.
 ---
 
 # Build a Top-Down Pixel Narrative Game — 0.21
@@ -9,7 +9,7 @@ Act as the production director. Preserve `$build-interactive-stage-game` as 0.2 
 
 ## Establish the pixel production
 
-1. Read [product-constitution.md](references/product-constitution.md), [workflow-contract.md](references/workflow-contract.md), and [top-down-pixel-profile.md](references/top-down-pixel-profile.md).
+1. Read [product-constitution.md](references/product-constitution.md), [workflow-contract.md](references/workflow-contract.md), [top-down-pixel-profile.md](references/top-down-pixel-profile.md), and [art-production-gates.md](references/art-production-gates.md).
 2. Inspect every narrative source with `scripts/inspect-source.mjs`.
 3. Create `generated/00-brief/production-charter.json` from `assets/production-charter.template.json`.
 4. Keep `visualProfile`, `cameraProfile`, `gridProfile`, and `originalityPolicy` locked unless the user explicitly requests another product class.
@@ -23,7 +23,7 @@ Run the phases in order and preserve artifact ownership.
 2. Use `$design-narrative-gameplay` to create `generated/20-design/gameplay-design.json`. Prefer verbs that become spatial tile actions, map changes, NPC schedules, inventory transactions, or layer changes.
 3. Use `$direct-interactive-drama` to create `generated/30-performance/performance-plan.json`. Alternate free movement with short, player-paced tile cutscenes.
 4. Use `$design-stage-and-levels` to create `generated/40-world/stage-plan.json`. Add the tile-map extensions required by the pixel profile: grid, layer stack, collision, portals, triggers, spawns, actor routes, occlusion, and state deltas.
-5. Use `$art-direct-game-assets` to create the art bible, manifest, tilesets, four-direction sprites, props, portraits when needed, UI, and map variants. Follow the originality boundary in the pixel profile.
+5. Use `$art-direct-game-assets` to freeze a style contract, enumerate complete asset coverage, and separately produce identity sheets, portraits, four-direction sprites, base scenes, aligned map-state variants, interactive-prop states, UI, and compiled atlases. Every production asset must cite an approved upstream style or identity reference. Follow the originality boundary in the pixel profile and the hard gates in `art-production-gates.md`.
 6. Use `$compile-script-game` to create `generated/60-build/production.json` and a deterministic tile-map runtime. Do not ship the side-view 0.2 renderer under pixel styling.
 7. Use `$evaluate-script-game` to simulate required routes, inspect collision overlays and representative browser states, and create `reports/acceptance-report.json`.
 8. Route every failed gate back to its owning phase, rebuild downstream artifacts, and re-evaluate.
@@ -39,6 +39,9 @@ Run the phases in order and preserve artifact ownership.
 - Express world transformation through tile, collision, portal, NPC-route, lighting, or map-layer deltas in addition to text.
 - Use nearest-neighbor rendering, integer camera positions, pixel snapping, and `image-rendering: pixelated`; reject blur and subpixel shimmer.
 - Use AI images as style or identity anchors unless they pass exact sprite, tile, transparency, seam, palette, and pixel-grid checks.
+- Treat a style frame as an upstream dependency, never as completion evidence. Generate each required character, scene, and interactive prop as a separately addressable source asset before atlas compilation.
+- Never approve geometric or procedural placeholder art as final production art. Procedural pixel-native output is permitted only when it meets the locked detail-density, identity, state-contrast, and in-engine comparison gates.
+- Require `style-contract.json`, `asset-coverage.json`, and `visual-validation.json`; block Build when any required owner, state variant, reference chain, or in-engine comparison is missing.
 - Create original characters, maps, tiles, UI, and naming. Borrow only broad handheld-era visual grammar; never reproduce franchise characters, creatures, maps, tiles, badges, logos, fonts, or interface layouts.
 
 ## Validate the build
@@ -48,11 +51,13 @@ Run after every downstream phase:
 ```bash
 node <skill-root>/scripts/validate-workflow.mjs <project-root>
 node <skill-root>/scripts/validate-pixel-profile.mjs <project-root>
+node <skill-root>/scripts/validate-art-production.mjs <project-root>
 ```
 
 Before completion, also require:
 
 - `node <skill-root>/scripts/validate-pixel-profile.mjs <project-root> --strict` with zero failures;
+- `node <skill-root>/scripts/validate-art-production.mjs <project-root> --strict` with zero failures;
 - capability negotiation for tile maps, four-direction movement, collision, triggers, save state, dialogue, inventory, and world-state deltas;
 - a collision-overlay screenshot for every map and state that changes topology;
 - native-resolution and integer-scaled screenshots with no smoothing;

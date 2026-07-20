@@ -1,0 +1,13 @@
+{
+  "schemaVersion":"2.0.0","status":"pass","date":"2026-07-20","browser":"Microsoft Edge headless","server":"http://127.0.0.1:5175/v021/","httpStatus":200,
+  "screenshots":[
+    {"path":"screenshots/r2-title.png","state":"title","checked":["approved style anchor visibly used","title UI remains readable","no external asset request"]},
+    {"path":"screenshots/r2-nursery-dawn.png","state":"dawn","checked":["independent nursery scene loaded","dawn aligned variant","player and children readable","objective and inventory UI"]},
+    {"path":"screenshots/r2-hall-daylight.png","state":"daylight","checked":["independent hall scene loaded","scrolling camera","daylight state contrast","south and north landmarks"]},
+    {"path":"screenshots/r2-music-overlap.png","state":"overlap","checked":["independent music scene loaded","piano and album cabinet landmarks","violet overlap treatment","Charles echo sprite"]},
+    {"path":"screenshots/r2-garden-debug.png","state":"garden + debug","checked":["independent garden scene loaded","three graves visually distinct","collision and portal overlay aligned","path remains readable"]},
+    {"path":"screenshots/r2-seance-debug.png","state":"seance + debug","checked":["independent seance scene loaded","table blocking aligned","evidence-table landmark","return portal"]},
+    {"path":"screenshots/r2-cast-prop-gallery.png","state":"validation gallery","checked":["six separate portrait sources compiled and loaded","nine prop states compiled and loaded","palette and identity consistency"]}
+  ],
+  "notes":["Debug and gallery queries are validation-only and not shown during ordinary play.","Every production scene is directly sampled by the runtime; fallback tiles are not visible in accepted screenshots."]
+}

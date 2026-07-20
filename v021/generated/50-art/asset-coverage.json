@@ -1,0 +1,319 @@
+{
+  "$schema": "script-game-asset-coverage/v1",
+  "schemaVersion": "1.0.0",
+  "status": "approved",
+  "requirements": [
+    {
+      "id": "coverage.character.grace",
+      "ownerId": "character.grace",
+      "requiredKinds": [
+        "identity-sheet",
+        "portrait",
+        "four-direction-sprite"
+      ],
+      "requiredStates": [
+        "base"
+      ],
+      "coveredStates": [
+        "base"
+      ],
+      "producedAssetIds": [
+        "asset.identity.grace",
+        "asset.portrait.grace",
+        "asset.sprite.grace"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.character.anne",
+      "ownerId": "character.anne",
+      "requiredKinds": [
+        "identity-sheet",
+        "portrait",
+        "four-direction-sprite"
+      ],
+      "requiredStates": [
+        "base"
+      ],
+      "coveredStates": [
+        "base"
+      ],
+      "producedAssetIds": [
+        "asset.identity.anne",
+        "asset.portrait.anne",
+        "asset.sprite.anne"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.character.nicholas",
+      "ownerId": "character.nicholas",
+      "requiredKinds": [
+        "identity-sheet",
+        "portrait",
+        "four-direction-sprite"
+      ],
+      "requiredStates": [
+        "base"
+      ],
+      "coveredStates": [
+        "base"
+      ],
+      "producedAssetIds": [
+        "asset.identity.nicholas",
+        "asset.portrait.nicholas",
+        "asset.sprite.nicholas"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.character.mills",
+      "ownerId": "character.mills",
+      "requiredKinds": [
+        "identity-sheet",
+        "portrait",
+        "four-direction-sprite"
+      ],
+      "requiredStates": [
+        "base"
+      ],
+      "coveredStates": [
+        "base"
+      ],
+      "producedAssetIds": [
+        "asset.identity.mills",
+        "asset.portrait.mills",
+        "asset.sprite.mills"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.character.victor",
+      "ownerId": "character.victor",
+      "requiredKinds": [
+        "identity-sheet",
+        "portrait",
+        "four-direction-sprite"
+      ],
+      "requiredStates": [
+        "echo"
+      ],
+      "coveredStates": [
+        "echo"
+      ],
+      "producedAssetIds": [
+        "asset.identity.victor",
+        "asset.portrait.victor",
+        "asset.sprite.victor"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.character.charles",
+      "ownerId": "character.charles",
+      "requiredKinds": [
+        "identity-sheet",
+        "portrait",
+        "four-direction-sprite"
+      ],
+      "requiredStates": [
+        "echo"
+      ],
+      "coveredStates": [
+        "echo"
+      ],
+      "producedAssetIds": [
+        "asset.identity.charles",
+        "asset.portrait.charles",
+        "asset.sprite.charles"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.map.nursery",
+      "ownerId": "map.nursery",
+      "requiredKinds": [
+        "environment-base",
+        "map-state-variant"
+      ],
+      "requiredStates": [
+        "base",
+        "echo",
+        "daylight",
+        "dawn"
+      ],
+      "coveredStates": [
+        "base",
+        "echo",
+        "daylight",
+        "dawn"
+      ],
+      "producedAssetIds": [
+        "asset.environment.nursery.base",
+        "asset.scene.nursery.base",
+        "asset.scene.nursery.echo",
+        "asset.scene.nursery.daylight",
+        "asset.scene.nursery.dawn"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.map.hall",
+      "ownerId": "map.hall",
+      "requiredKinds": [
+        "environment-base",
+        "map-state-variant"
+      ],
+      "requiredStates": [
+        "base",
+        "daylight",
+        "seance-open"
+      ],
+      "coveredStates": [
+        "base",
+        "daylight",
+        "seance-open"
+      ],
+      "producedAssetIds": [
+        "asset.environment.hall.base",
+        "asset.scene.hall.base",
+        "asset.scene.hall.daylight",
+        "asset.scene.hall.seance-open"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.map.music",
+      "ownerId": "map.music",
+      "requiredKinds": [
+        "environment-base",
+        "map-state-variant"
+      ],
+      "requiredStates": [
+        "base",
+        "overlap",
+        "daylight"
+      ],
+      "coveredStates": [
+        "base",
+        "overlap",
+        "daylight"
+      ],
+      "producedAssetIds": [
+        "asset.environment.music.base",
+        "asset.scene.music.base",
+        "asset.scene.music.overlap",
+        "asset.scene.music.daylight"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.map.garden",
+      "ownerId": "map.garden",
+      "requiredKinds": [
+        "environment-base",
+        "map-state-variant"
+      ],
+      "requiredStates": [
+        "fog",
+        "graves-known"
+      ],
+      "coveredStates": [
+        "fog",
+        "graves-known"
+      ],
+      "producedAssetIds": [
+        "asset.environment.garden.base",
+        "asset.scene.garden.fog",
+        "asset.scene.garden.graves-known"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.map.seance",
+      "ownerId": "map.seance",
+      "requiredKinds": [
+        "environment-base",
+        "map-state-variant"
+      ],
+      "requiredStates": [
+        "base",
+        "living-overlap"
+      ],
+      "coveredStates": [
+        "base",
+        "living-overlap"
+      ],
+      "producedAssetIds": [
+        "asset.environment.seance.base",
+        "asset.scene.seance.base",
+        "asset.scene.seance.living-overlap"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.props",
+      "ownerId": "props.critical",
+      "requiredKinds": [
+        "interactive-prop"
+      ],
+      "requiredStates": [
+        "curtain-closed",
+        "curtain-open",
+        "letter",
+        "piano",
+        "album",
+        "grave-unread",
+        "grave-read",
+        "seance-empty",
+        "seance-complete"
+      ],
+      "coveredStates": [
+        "curtain-closed",
+        "curtain-open",
+        "letter",
+        "piano",
+        "album",
+        "grave-unread",
+        "grave-read",
+        "seance-empty",
+        "seance-complete"
+      ],
+      "producedAssetIds": [
+        "asset.prop.curtain-closed",
+        "asset.prop.curtain-open",
+        "asset.prop.letter",
+        "asset.prop.piano",
+        "asset.prop.album",
+        "asset.prop.grave-unread",
+        "asset.prop.grave-read",
+        "asset.prop.seance-empty",
+        "asset.prop.seance-complete"
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "coverage.ui",
+      "ownerId": "ui.v021",
+      "requiredKinds": [
+        "ui"
+      ],
+      "requiredStates": [
+        "objective",
+        "interaction",
+        "evidence",
+        "dialogue"
+      ],
+      "coveredStates": [
+        "objective",
+        "interaction",
+        "evidence",
+        "dialogue"
+      ],
+      "producedAssetIds": [
+        "asset.ui.icons"
+      ],
+      "status": "approved"
+    }
+  ]
+}

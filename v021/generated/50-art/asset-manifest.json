@@ -1,12 +1,1860 @@
 {
-  "$schema": "script-game-asset-manifest/v1",
-  "schemaVersion": "1.0.0",
+  "$schema": "script-game-asset-manifest/v2",
+  "schemaVersion": "2.0.0",
   "status": "approved",
+  "styleContractId": "style.mist-manor-handheld-gothic-r2",
   "assets": [
-    {"id":"asset.style-anchor","kind":"reference","path":"style-anchor.png","status":"approved","productionUse":false,"provenance":"OpenAI image generation; original project prompt","pixelSpec":{"nativeDimensions":[1536,1024],"nearestNeighbor":true,"role":"reference-only"}},
-    {"id":"asset.tileset.mansion","kind":"tileset","path":"../../assets/tileset.png","status":"approved","provenance":"deterministic project generator","pixelSpec":{"nativeDimensions":[128,64],"nearestNeighbor":true,"tileSize":16}},
-    {"id":"asset.sprites.cast","kind":"four-direction-sprite-atlas","path":"../../assets/actors.png","status":"approved","provenance":"deterministic project generator","pixelSpec":{"nativeDimensions":[192,144],"nearestNeighbor":true,"frameSize":[16,24],"directions":4,"walkFrames":3}},
-    {"id":"asset.portraits.cast","kind":"portrait-atlas","path":"../../assets/portraits.png","status":"approved","provenance":"deterministic project generator","pixelSpec":{"nativeDimensions":[256,64],"nearestNeighbor":true,"frameSize":[64,64]}},
-    {"id":"asset.ui.icons","kind":"ui-atlas","path":"../../assets/ui-icons.png","status":"approved","provenance":"deterministic project generator","pixelSpec":{"nativeDimensions":[128,16],"nearestNeighbor":true,"frameSize":[16,16]}}
+    {
+      "id": "asset.style-anchor",
+      "ownerId": "style.mist-manor-handheld-gothic-r2",
+      "category": "reference",
+      "kind": "style-frame",
+      "state": "approved-anchor",
+      "path": "style-anchor.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": false,
+      "generationMethod": "OpenAI image generation from original brief",
+      "referenceAssetIds": [],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.visual-contact",
+      "ownerId": "style.mist-manor-handheld-gothic-r2",
+      "category": "reference",
+      "kind": "contact-sheet",
+      "state": "validation",
+      "path": "visual-contact-sheet.png",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": false,
+      "generationMethod": "deterministic Pillow composition",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          1280,
+          900
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.identity.grace",
+      "ownerId": "character.grace",
+      "category": "character-identity",
+      "kind": "identity-sheet",
+      "state": "base",
+      "path": "source/characters/grace-identity.png",
+      "dimensions": [
+        295,
+        887
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original cast identity board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          295,
+          887
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.portrait.grace",
+      "ownerId": "character.grace",
+      "category": "portrait",
+      "kind": "portrait",
+      "state": "base",
+      "path": "source/characters/grace-portrait.png",
+      "dimensions": [
+        64,
+        64
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "pixel-native crop, resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.identity.grace"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          64,
+          64
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.sprite.grace",
+      "ownerId": "character.grace",
+      "category": "four-direction-sprite",
+      "kind": "four-direction-sprite",
+      "state": "base",
+      "path": "source/characters/grace-sprite.png",
+      "dimensions": [
+        192,
+        24
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic pixel-native four-direction animation",
+      "referenceAssetIds": [
+        "asset.identity.grace"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          192,
+          24
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.identity.anne",
+      "ownerId": "character.anne",
+      "category": "character-identity",
+      "kind": "identity-sheet",
+      "state": "base",
+      "path": "source/characters/anne-identity.png",
+      "dimensions": [
+        295,
+        887
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original cast identity board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          295,
+          887
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.portrait.anne",
+      "ownerId": "character.anne",
+      "category": "portrait",
+      "kind": "portrait",
+      "state": "base",
+      "path": "source/characters/anne-portrait.png",
+      "dimensions": [
+        64,
+        64
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "pixel-native crop, resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.identity.anne"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          64,
+          64
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.sprite.anne",
+      "ownerId": "character.anne",
+      "category": "four-direction-sprite",
+      "kind": "four-direction-sprite",
+      "state": "base",
+      "path": "source/characters/anne-sprite.png",
+      "dimensions": [
+        192,
+        24
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic pixel-native four-direction animation",
+      "referenceAssetIds": [
+        "asset.identity.anne"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          192,
+          24
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.identity.nicholas",
+      "ownerId": "character.nicholas",
+      "category": "character-identity",
+      "kind": "identity-sheet",
+      "state": "base",
+      "path": "source/characters/nicholas-identity.png",
+      "dimensions": [
+        295,
+        887
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original cast identity board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          295,
+          887
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.portrait.nicholas",
+      "ownerId": "character.nicholas",
+      "category": "portrait",
+      "kind": "portrait",
+      "state": "base",
+      "path": "source/characters/nicholas-portrait.png",
+      "dimensions": [
+        64,
+        64
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "pixel-native crop, resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.identity.nicholas"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          64,
+          64
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.sprite.nicholas",
+      "ownerId": "character.nicholas",
+      "category": "four-direction-sprite",
+      "kind": "four-direction-sprite",
+      "state": "base",
+      "path": "source/characters/nicholas-sprite.png",
+      "dimensions": [
+        192,
+        24
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic pixel-native four-direction animation",
+      "referenceAssetIds": [
+        "asset.identity.nicholas"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          192,
+          24
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.identity.mills",
+      "ownerId": "character.mills",
+      "category": "character-identity",
+      "kind": "identity-sheet",
+      "state": "base",
+      "path": "source/characters/mills-identity.png",
+      "dimensions": [
+        295,
+        887
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original cast identity board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          295,
+          887
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.portrait.mills",
+      "ownerId": "character.mills",
+      "category": "portrait",
+      "kind": "portrait",
+      "state": "base",
+      "path": "source/characters/mills-portrait.png",
+      "dimensions": [
+        64,
+        64
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "pixel-native crop, resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.identity.mills"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          64,
+          64
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.sprite.mills",
+      "ownerId": "character.mills",
+      "category": "four-direction-sprite",
+      "kind": "four-direction-sprite",
+      "state": "base",
+      "path": "source/characters/mills-sprite.png",
+      "dimensions": [
+        192,
+        24
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic pixel-native four-direction animation",
+      "referenceAssetIds": [
+        "asset.identity.mills"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          192,
+          24
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.identity.victor",
+      "ownerId": "character.victor",
+      "category": "character-identity",
+      "kind": "identity-sheet",
+      "state": "base",
+      "path": "source/characters/victor-identity.png",
+      "dimensions": [
+        295,
+        887
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original cast identity board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          295,
+          887
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.portrait.victor",
+      "ownerId": "character.victor",
+      "category": "portrait",
+      "kind": "portrait",
+      "state": "base",
+      "path": "source/characters/victor-portrait.png",
+      "dimensions": [
+        64,
+        64
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "pixel-native crop, resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.identity.victor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          64,
+          64
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.sprite.victor",
+      "ownerId": "character.victor",
+      "category": "four-direction-sprite",
+      "kind": "four-direction-sprite",
+      "state": "echo",
+      "path": "source/characters/victor-sprite.png",
+      "dimensions": [
+        192,
+        24
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic pixel-native four-direction animation",
+      "referenceAssetIds": [
+        "asset.identity.victor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          192,
+          24
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.identity.charles",
+      "ownerId": "character.charles",
+      "category": "character-identity",
+      "kind": "identity-sheet",
+      "state": "base",
+      "path": "source/characters/charles-identity.png",
+      "dimensions": [
+        299,
+        887
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original cast identity board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          299,
+          887
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.portrait.charles",
+      "ownerId": "character.charles",
+      "category": "portrait",
+      "kind": "portrait",
+      "state": "base",
+      "path": "source/characters/charles-portrait.png",
+      "dimensions": [
+        64,
+        64
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "pixel-native crop, resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.identity.charles"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          64,
+          64
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.sprite.charles",
+      "ownerId": "character.charles",
+      "category": "four-direction-sprite",
+      "kind": "four-direction-sprite",
+      "state": "echo",
+      "path": "source/characters/charles-sprite.png",
+      "dimensions": [
+        192,
+        24
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic pixel-native four-direction animation",
+      "referenceAssetIds": [
+        "asset.identity.charles"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          192,
+          24
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.environment.nursery.base",
+      "ownerId": "map.nursery",
+      "category": "environment-base",
+      "kind": "environment-source",
+      "state": "base",
+      "path": "source/environments/nursery-base.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "OpenAI image generation using approved style-frame reference",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          1672,
+          941
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.nursery.base",
+      "ownerId": "map.nursery",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "base",
+      "path": "../../assets/scenes/nursery-base.png",
+      "dimensions": [
+        320,
+        192
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned pixel-native resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.environment.nursery.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          320,
+          192
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.nursery.echo",
+      "ownerId": "map.nursery",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "echo",
+      "path": "../../assets/scenes/nursery-echo.png",
+      "dimensions": [
+        320,
+        192
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned color-layer transformation from approved base composition",
+      "referenceAssetIds": [
+        "asset.environment.nursery.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          320,
+          192
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.nursery.daylight",
+      "ownerId": "map.nursery",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "daylight",
+      "path": "../../assets/scenes/nursery-daylight.png",
+      "dimensions": [
+        320,
+        192
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned color-layer transformation from approved base composition",
+      "referenceAssetIds": [
+        "asset.environment.nursery.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          320,
+          192
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.nursery.dawn",
+      "ownerId": "map.nursery",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "dawn",
+      "path": "../../assets/scenes/nursery-dawn.png",
+      "dimensions": [
+        320,
+        192
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned color-layer transformation from approved base composition",
+      "referenceAssetIds": [
+        "asset.environment.nursery.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          320,
+          192
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.environment.hall.base",
+      "ownerId": "map.hall",
+      "category": "environment-base",
+      "kind": "environment-source",
+      "state": "base",
+      "path": "source/environments/hall-base.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "OpenAI image generation using approved style-frame reference",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          1672,
+          941
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.hall.base",
+      "ownerId": "map.hall",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "base",
+      "path": "../../assets/scenes/hall-base.png",
+      "dimensions": [
+        448,
+        288
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned pixel-native resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.environment.hall.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          448,
+          288
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.hall.daylight",
+      "ownerId": "map.hall",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "daylight",
+      "path": "../../assets/scenes/hall-daylight.png",
+      "dimensions": [
+        448,
+        288
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned color-layer transformation from approved base composition",
+      "referenceAssetIds": [
+        "asset.environment.hall.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          448,
+          288
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.hall.seance-open",
+      "ownerId": "map.hall",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "seance-open",
+      "path": "../../assets/scenes/hall-seance-open.png",
+      "dimensions": [
+        448,
+        288
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned color-layer transformation from approved base composition",
+      "referenceAssetIds": [
+        "asset.environment.hall.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          448,
+          288
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.environment.music.base",
+      "ownerId": "map.music",
+      "category": "environment-base",
+      "kind": "environment-source",
+      "state": "base",
+      "path": "source/environments/music-base.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "OpenAI image generation using approved style-frame reference",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          1672,
+          941
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.music.base",
+      "ownerId": "map.music",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "base",
+      "path": "../../assets/scenes/music-base.png",
+      "dimensions": [
+        320,
+        224
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned pixel-native resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.environment.music.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          320,
+          224
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.music.overlap",
+      "ownerId": "map.music",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "overlap",
+      "path": "../../assets/scenes/music-overlap.png",
+      "dimensions": [
+        320,
+        224
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned color-layer transformation from approved base composition",
+      "referenceAssetIds": [
+        "asset.environment.music.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          320,
+          224
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.music.daylight",
+      "ownerId": "map.music",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "daylight",
+      "path": "../../assets/scenes/music-daylight.png",
+      "dimensions": [
+        320,
+        224
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned color-layer transformation from approved base composition",
+      "referenceAssetIds": [
+        "asset.environment.music.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          320,
+          224
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.environment.garden.base",
+      "ownerId": "map.garden",
+      "category": "environment-base",
+      "kind": "environment-source",
+      "state": "base",
+      "path": "source/environments/garden-base.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "OpenAI image generation using approved style-frame reference",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          1672,
+          941
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.garden.fog",
+      "ownerId": "map.garden",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "fog",
+      "path": "../../assets/scenes/garden-fog.png",
+      "dimensions": [
+        384,
+        288
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned pixel-native resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.environment.garden.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          384,
+          288
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.garden.fog",
+      "ownerId": "map.garden",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "fog",
+      "path": "../../assets/scenes/garden-fog.png",
+      "dimensions": [
+        384,
+        288
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned color-layer transformation from approved base composition",
+      "referenceAssetIds": [
+        "asset.environment.garden.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          384,
+          288
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.garden.graves-known",
+      "ownerId": "map.garden",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "graves-known",
+      "path": "../../assets/scenes/garden-graves-known.png",
+      "dimensions": [
+        384,
+        288
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned color-layer transformation from approved base composition",
+      "referenceAssetIds": [
+        "asset.environment.garden.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          384,
+          288
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.environment.seance.base",
+      "ownerId": "map.seance",
+      "category": "environment-base",
+      "kind": "environment-source",
+      "state": "base",
+      "path": "source/environments/seance-base.png",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "OpenAI image generation using approved style-frame reference",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          1672,
+          941
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.seance.base",
+      "ownerId": "map.seance",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "base",
+      "path": "../../assets/scenes/seance-base.png",
+      "dimensions": [
+        320,
+        224
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned pixel-native resize and palette reduction",
+      "referenceAssetIds": [
+        "asset.environment.seance.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          320,
+          224
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.scene.seance.living-overlap",
+      "ownerId": "map.seance",
+      "category": "map-state-variant",
+      "kind": "runtime-scene",
+      "state": "living-overlap",
+      "path": "../../assets/scenes/seance-living-overlap.png",
+      "dimensions": [
+        320,
+        224
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "aligned color-layer transformation from approved base composition",
+      "referenceAssetIds": [
+        "asset.environment.seance.base"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          320,
+          224
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.prop.curtain-closed",
+      "ownerId": "props.critical",
+      "category": "interactive-prop",
+      "kind": "prop-state",
+      "state": "curtain-closed",
+      "path": "source/props/curtain-closed.png",
+      "dimensions": [
+        408,
+        408
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original prop state board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          408,
+          408
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.prop.curtain-open",
+      "ownerId": "props.critical",
+      "category": "interactive-prop",
+      "kind": "prop-state",
+      "state": "curtain-open",
+      "path": "source/props/curtain-open.png",
+      "dimensions": [
+        408,
+        408
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original prop state board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          408,
+          408
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.prop.letter",
+      "ownerId": "props.critical",
+      "category": "interactive-prop",
+      "kind": "prop-state",
+      "state": "letter",
+      "path": "source/props/letter.png",
+      "dimensions": [
+        408,
+        408
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original prop state board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          408,
+          408
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.prop.piano",
+      "ownerId": "props.critical",
+      "category": "interactive-prop",
+      "kind": "prop-state",
+      "state": "piano",
+      "path": "source/props/piano.png",
+      "dimensions": [
+        408,
+        408
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original prop state board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          408,
+          408
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.prop.album",
+      "ownerId": "props.critical",
+      "category": "interactive-prop",
+      "kind": "prop-state",
+      "state": "album",
+      "path": "source/props/album.png",
+      "dimensions": [
+        408,
+        408
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original prop state board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          408,
+          408
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.prop.grave-unread",
+      "ownerId": "props.critical",
+      "category": "interactive-prop",
+      "kind": "prop-state",
+      "state": "grave-unread",
+      "path": "source/props/grave-unread.png",
+      "dimensions": [
+        408,
+        408
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original prop state board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          408,
+          408
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.prop.grave-read",
+      "ownerId": "props.critical",
+      "category": "interactive-prop",
+      "kind": "prop-state",
+      "state": "grave-read",
+      "path": "source/props/grave-read.png",
+      "dimensions": [
+        408,
+        408
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original prop state board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          408,
+          408
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.prop.seance-empty",
+      "ownerId": "props.critical",
+      "category": "interactive-prop",
+      "kind": "prop-state",
+      "state": "seance-empty",
+      "path": "source/props/seance-empty.png",
+      "dimensions": [
+        408,
+        408
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original prop state board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          408,
+          408
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.prop.seance-complete",
+      "ownerId": "props.critical",
+      "category": "interactive-prop",
+      "kind": "prop-state",
+      "state": "seance-complete",
+      "path": "source/props/seance-complete.png",
+      "dimensions": [
+        408,
+        408
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "cropped from approved AI-original prop state board",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          408,
+          408
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.ui.icons",
+      "ownerId": "ui.v021",
+      "category": "ui",
+      "kind": "ui-atlas",
+      "state": "objective-interaction-evidence-dialogue",
+      "path": "../../assets/ui-icons.png",
+      "dimensions": [
+        128,
+        16
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic pixel-native atlas",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          128,
+          16
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.atlas.actors",
+      "ownerId": "build.art",
+      "category": "compiled-atlas",
+      "kind": "sprite-atlas",
+      "state": "compiled",
+      "path": "../../assets/actors.png",
+      "dimensions": [
+        192,
+        144
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic compilation from separate sprite sources",
+      "referenceAssetIds": [
+        "asset.sprite.grace",
+        "asset.sprite.anne",
+        "asset.sprite.nicholas",
+        "asset.sprite.mills",
+        "asset.sprite.victor",
+        "asset.sprite.charles"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          192,
+          144
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.atlas.portraits",
+      "ownerId": "build.art",
+      "category": "compiled-atlas",
+      "kind": "portrait-atlas",
+      "state": "compiled",
+      "path": "../../assets/portraits.png",
+      "dimensions": [
+        384,
+        64
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic compilation from separate portrait sources",
+      "referenceAssetIds": [
+        "asset.portrait.grace",
+        "asset.portrait.anne",
+        "asset.portrait.nicholas",
+        "asset.portrait.mills",
+        "asset.portrait.victor",
+        "asset.portrait.charles"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          384,
+          64
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.atlas.props",
+      "ownerId": "build.art",
+      "category": "compiled-atlas",
+      "kind": "prop-atlas",
+      "state": "compiled",
+      "path": "../../assets/props.png",
+      "dimensions": [
+        288,
+        32
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic compilation from separate prop sources",
+      "referenceAssetIds": [
+        "asset.prop.curtain-closed",
+        "asset.prop.curtain-open",
+        "asset.prop.letter",
+        "asset.prop.piano",
+        "asset.prop.album",
+        "asset.prop.grave-unread",
+        "asset.prop.grave-read",
+        "asset.prop.seance-empty",
+        "asset.prop.seance-complete"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          288,
+          32
+        ],
+        "nearestNeighbor": true
+      }
+    },
+    {
+      "id": "asset.tileset.fallback",
+      "ownerId": "build.art",
+      "category": "compiled-atlas",
+      "kind": "fallback-tileset",
+      "state": "fallback-only",
+      "path": "../../assets/tileset.png",
+      "dimensions": [
+        128,
+        64
+      ],
+      "alpha": "binary-or-opaque",
+      "productionUse": true,
+      "generationMethod": "deterministic pixel-native fallback",
+      "referenceAssetIds": [
+        "asset.style-anchor"
+      ],
+      "source": "project-owned AI-original or pixel-native derivative",
+      "author": "Storyteller 0.21-R2 art workflow",
+      "license": "project-owned",
+      "attribution": "none required",
+      "status": "approved",
+      "qaEvidence": [
+        "visual-contact-sheet.png",
+        "../../reports/browser-qa-r2.json"
+      ],
+      "pixelSpec": {
+        "nativeDimensions": [
+          128,
+          64
+        ],
+        "nearestNeighbor": true
+      }
+    }
   ]
 }

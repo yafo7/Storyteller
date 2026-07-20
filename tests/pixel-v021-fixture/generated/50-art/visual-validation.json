@@ -1,0 +1,5 @@
+{
+  "schemaVersion":"1.0.0","status":"pass","comparisons":[
+    {"id":"comparison.fixture","anchorAssetId":"asset.style.fixture","productionAssetIds":["asset.identity.fixture","asset.portrait.fixture","asset.sprite.fixture","asset.environment.fixture","asset.variant.fixture","asset.prop.fixture","asset.ui.fixture"],"inEngineScreenshot":"generated/50-art/fixture.asset","criteria":{"perspective":"pass","palette":"pass","identityOrMaterial":"pass","detailDensity":"pass","interactionReadability":"pass","stateContrast":"pass","pixelIntegrity":"pass","nativeScaleReadability":"pass"}}
+  ]
+}

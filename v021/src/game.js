@@ -25,6 +25,7 @@ let portalCooldown = 0;
 let toastTimer = 0;
 let actionTarget = null;
 let audioContext = null;
+let gallery = false;
 const keys = new Set();
 const player = { x: 0, y: 0, facing: 'up', moving: false, frame: 0, frameClock: 0 };
 const dialogue = { active: false, lines: [], index: 0, after: null, portrait: 0, speaker: '' };
@@ -240,6 +241,34 @@ function camera() {
   return { x: Math.round(clamp(player.x - 160, 0, Math.max(0, map.width * 16 - 320))), y: Math.round(clamp(player.y - 90, 0, Math.max(0, map.height * 16 - 180))) };
 }
 function tile(index, x, y, cam) { ctx.drawImage(images.tileset, (index % 8) * 16, Math.floor(index / 8) * 16, 16, 16, Math.round(x - cam.x), Math.round(y - cam.y), 16, 16); }
+function scenePathForMap() {
+  if (!map.sceneStates) return null;
+  if (state.map === 'nursery') {
+    if (state.stage >= 7) return map.sceneStates.dawn;
+    if (state.curtainsRemoved) return map.sceneStates.daylight;
+    if (state.worldLayer === 'echo' || state.worldLayer === 'overlap') return map.sceneStates.echo;
+  }
+  if (state.map === 'hall') {
+    if (state.stage >= 6) return map.sceneStates['seance-open'];
+    if (state.curtainsRemoved) return map.sceneStates.daylight;
+  }
+  if (state.map === 'music') {
+    if (state.worldLayer === 'overlap') return map.sceneStates.overlap;
+    if (state.curtainsRemoved) return map.sceneStates.daylight;
+  }
+  if (state.map === 'garden' && state.stage >= 6) return map.sceneStates['graves-known'];
+  if (state.map === 'seance' && state.seanceSlots >= 3) return map.sceneStates['living-overlap'];
+  return map.sceneStates.base;
+}
+function propFrameFor(interaction) {
+  if (interaction.id === 'curtain-main') return state.curtainClosed ? 0 : 1;
+  if (interaction.id.startsWith('grave-')) {
+    const key = { 'grave-mills': 'graveMills', 'grave-tuttle': 'graveTuttle', 'grave-lydia': 'graveLydia' }[interaction.id];
+    return state.flags[key] ? 6 : 5;
+  }
+  if (interaction.id === 'seance-table') return state.seanceSlots >= 3 ? 8 : 7;
+  return interaction.propFrame;
+}
 function drawActor(actor, cam, isPlayer = false) {
   const cast = isPlayer ? game.cast.grace : game.cast[actor.cast]; const direction = { down: 0, left: 1, right: 2, up: 3 }[isPlayer ? player.facing : actor.facing];
   const frame = isPlayer ? player.frame : 1; const sx = (direction * 3 + frame) * 16; const sy = cast.spriteRow * 24;
@@ -249,30 +278,41 @@ function drawActor(actor, cam, isPlayer = false) {
 
 function renderMap() {
   const cam = camera(); ctx.fillStyle = '#090c10'; ctx.fillRect(0, 0, 320, 180);
-  const startX = Math.floor(cam.x / 16), endX = Math.min(map.width, startX + 22), startY = Math.floor(cam.y / 16), endY = Math.min(map.height, startY + 14);
-  for (let y = startY; y < endY; y++) for (let x = startX; x < endX; x++) {
-    let base = map.floorTile; if (map.theme === 'garden' && ((x * 7 + y * 11) % 9 === 0)) base = 5; tile(base, x * 16, y * 16, cam);
+  const scenePath = scenePathForMap();
+  if (scenePath && images.scenes?.[scenePath]) {
+    ctx.drawImage(images.scenes[scenePath], -cam.x, -cam.y, map.width * 16, map.height * 16);
+  } else {
+    const startX = Math.floor(cam.x / 16), endX = Math.min(map.width, startX + 22), startY = Math.floor(cam.y / 16), endY = Math.min(map.height, startY + 14);
+    for (let y = startY; y < endY; y++) for (let x = startX; x < endX; x++) {
+      let base = map.floorTile; if (map.theme === 'garden' && ((x * 7 + y * 11) % 9 === 0)) base = 5; tile(base, x * 16, y * 16, cam);
+    }
+    for (const rect of map.collisions) for (let y = rect[1]; y < rect[1] + rect[3]; y++) for (let x = rect[0]; x < rect[0] + rect[2]; x++) tile(map.wallTile, x * 16, y * 16, cam);
+    for (const [x, y, index] of map.props) tile(index, x * 16, y * 16, cam);
+    for (const portal of map.portals) {
+      const x = portal.at[0] * 16, y = portal.at[1] * 16; tile(conditionMatches(portal.requires) ? 6 : 1, x, y, cam);
+    }
   }
-  for (const rect of map.collisions) for (let y = rect[1]; y < rect[1] + rect[3]; y++) for (let x = rect[0]; x < rect[0] + rect[2]; x++) tile(map.wallTile, x * 16, y * 16, cam);
-  for (const [x, y, index] of map.props) tile(index, x * 16, y * 16, cam);
-  for (const portal of map.portals) {
-    const x = portal.at[0] * 16, y = portal.at[1] * 16; tile(conditionMatches(portal.requires) ? 6 : 1, x, y, cam);
-  }
-  for (const interaction of map.interactions) if (conditionMatches(interaction.visible)) tile(interaction.tile, interaction.x * 16, interaction.y * 16, cam);
-  if (state.worldLayer !== 'grace') {
-    ctx.fillStyle = state.worldLayer === 'living' ? '#e4b55a22' : '#765f7230'; ctx.fillRect(0, 0, 320, 180);
-    for (let i = 0; i < 18; i++) tile(13, ((i * 83) % (map.width * 16)), ((i * 47) % (map.height * 16)), cam);
-  }
-  if (state.curtainsRemoved || state.ending !== 'locked') {
-    ctx.fillStyle = '#f2dfaa16'; ctx.fillRect(0, 0, 320, 180);
-    if (map.theme !== 'garden') for (let x = 16; x < map.width * 16; x += 80) tile(14, x, 16, cam);
-  } else if (map.theme !== 'garden') { ctx.fillStyle = '#02070b42'; ctx.fillRect(0, 0, 320, 180); }
   const actors = map.actors.filter((actor) => conditionMatches(actor.visible)).sort((a, b) => a.y - b.y);
   let drewPlayer = false;
   for (const actor of actors) { if (!drewPlayer && actor.y * 16 + 13 > player.y) { drawActor(null, cam, true); drewPlayer = true; } drawActor(actor, cam); }
   if (!drewPlayer) drawActor(null, cam, true);
   if (actionTarget && !dialogue.active) {
-    const bob = Math.floor(performance.now() / 240) % 2; ctx.fillStyle = '#f2dfaa'; ctx.fillRect(Math.round(actionTarget.x - cam.x) - 2, Math.round(actionTarget.y - cam.y) - 18 - bob, 4, 4);
+    const bob = Math.floor(performance.now() / 240) % 2;
+    if (actionTarget.kind === 'interaction') {
+      const frame = propFrameFor(actionTarget.data);
+      if (Number.isInteger(frame) && images.props) {
+        ctx.fillStyle = '#090c10cc'; ctx.fillRect(Math.round(actionTarget.x - cam.x) - 12, Math.round(actionTarget.y - cam.y) - 42 - bob, 24, 24);
+        ctx.strokeStyle = '#e4b55a'; ctx.strokeRect(Math.round(actionTarget.x - cam.x) - 12.5, Math.round(actionTarget.y - cam.y) - 42.5 - bob, 25, 25);
+        ctx.drawImage(images.props, frame * 32, 0, 32, 32, Math.round(actionTarget.x - cam.x) - 10, Math.round(actionTarget.y - cam.y) - 40 - bob, 20, 20);
+      }
+    }
+    ctx.fillStyle = '#f2dfaa'; ctx.fillRect(Math.round(actionTarget.x - cam.x) - 2, Math.round(actionTarget.y - cam.y) - 18 - bob, 4, 4);
+  }
+  if (gallery) {
+    ctx.fillStyle = '#090c10ee'; ctx.fillRect(4, 48, 312, 124);
+    ctx.strokeStyle = '#c48a45'; ctx.strokeRect(4.5, 48.5, 311, 123);
+    for (let index = 0; index < 6; index++) ctx.drawImage(images.portraits, index * 64, 0, 64, 64, 10 + index * 51, 54, 46, 46);
+    for (let index = 0; index < 9; index++) ctx.drawImage(images.props, index * 32, 0, 32, 32, 15 + index * 33, 115, 26, 26);
   }
   if (debug) drawDebug(cam);
 }
@@ -330,6 +370,7 @@ function handleKeyUp(event) { keys.delete(event.code); }
 function applyDevState(name) {
   const presets = {
     daylight: { stage: 5, map: 'hall', spawn: 'fromGarden', inventory: ['letter','album'], curtainsRemoved: true, flags: { victorVisible: true, albumVisible: true } },
+    music: { stage: 4, map: 'music', spawn: 'fromHall', inventory: ['letter'], worldLayer: 'overlap', flags: { victorVisible: true, albumVisible: true, charlesVisible: true } },
     garden: { stage: 5, map: 'garden', spawn: 'fromHall', inventory: ['letter','album'], curtainsRemoved: true, flags: { victorVisible: true, albumVisible: true } },
     seance: { stage: 6, map: 'seance', spawn: 'fromHall', inventory: ['letter','album','grave-rubbing'], curtainsRemoved: true, graveCount: 3, flags: { graveMills:true, graveTuttle:true, graveLydia:true } },
     dawn: { stage: 7, map: 'nursery', spawn: 'ending', inventory: ['letter','album','grave-rubbing'], curtainsRemoved: true, seanceSlots: 3, ending: 'unlocked', worldLayer: 'living', flags: {} }
@@ -348,10 +389,13 @@ function loop(now) {
 
 async function init() {
   game = await fetch('data/production.json').then((response) => { if (!response.ok) throw new Error(`production.json ${response.status}`); return response.json(); });
-  [images.tileset, images.actors, images.portraits, images.icons] = await Promise.all([loadImage(game.assets.tileset), loadImage(game.assets.actors), loadImage(game.assets.portraits), loadImage(game.assets.icons)]);
+  [images.tileset, images.actors, images.portraits, images.icons, images.props] = await Promise.all([loadImage(game.assets.tileset), loadImage(game.assets.actors), loadImage(game.assets.portraits), loadImage(game.assets.icons), loadImage(game.assets.props)]);
+  const scenePaths = [...new Set(Object.values(game.maps).flatMap((entry) => Object.values(entry.sceneStates || {})))];
+  images.scenes = Object.fromEntries(await Promise.all(scenePaths.map(async (scenePath) => [scenePath, await loadImage(scenePath)])));
   state = deepClone(game.initialState); map = game.maps[state.map]; spawnAt(state.map, 'start');
   ui.loading.classList.remove('active'); ui.title.classList.add('active'); ui.continueGame.disabled = !localStorage.getItem(game.saveKey);
   const params = new URLSearchParams(location.search); debug = params.get('debug') === '1'; ui.debug.classList.toggle('active', debug);
+  gallery = params.get('gallery') === '1';
   if (params.get('state')) applyDevState(params.get('state'));
   requestAnimationFrame(loop);
 }

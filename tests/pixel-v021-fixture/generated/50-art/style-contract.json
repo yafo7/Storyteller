@@ -1,0 +1,6 @@
+{
+  "schemaVersion":"1.0.0","status":"approved","styleId":"style.fixture","styleFrameAssetId":"asset.style.fixture",
+  "perspective":"orthographic-top-down","nativeDimensions":{"tile":[16,16],"actor":[16,24]},"palette":{"globalBudget":24},
+  "pixelLanguage":{"clusters":"intentional","smoothing":false},"detailDensity":{"minimum":"production"},"lighting":{"states":["base"]},
+  "prohibitedDrift":["placeholder final art"],"placeholderPolicy":{"allowAtAcceptance":false}
+}

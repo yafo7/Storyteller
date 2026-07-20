@@ -11,7 +11,10 @@ const specs = [
   ['performance', 'generated/30-performance/performance-plan.json', ['schemaVersion', 'status', 'playerKnowledgeAtStart', 'onboarding', 'beats']],
   ['world', 'generated/40-world/stage-plan.json', ['schemaVersion', 'status', 'maps', 'portals', 'stateVariants']],
   ['artBible', 'generated/50-art/art-bible.json', ['schemaVersion', 'status', 'style', 'palette', 'characterRules', 'environmentRules']],
+  ['artStyle', 'generated/50-art/style-contract.json', ['schemaVersion', 'status', 'styleId', 'styleFrameAssetId']],
+  ['artCoverage', 'generated/50-art/asset-coverage.json', ['schemaVersion', 'status', 'requirements']],
   ['assets', 'generated/50-art/asset-manifest.json', ['schemaVersion', 'status', 'assets']],
+  ['artValidation', 'generated/50-art/visual-validation.json', ['schemaVersion', 'status', 'comparisons']],
   ['build', 'generated/60-build/production.json', ['$schema', 'schemaVersion']],
   ['acceptance', 'reports/acceptance-report.json', ['schemaVersion', 'status', 'gates']]
 ];

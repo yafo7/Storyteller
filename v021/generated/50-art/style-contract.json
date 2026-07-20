@@ -1,0 +1,18 @@
+{
+  "$schema":"script-game-style-contract/v1",
+  "schemaVersion":"1.0.0",
+  "status":"approved",
+  "styleId":"style.mist-manor-handheld-gothic-r2",
+  "styleFrameAssetId":"asset.style-anchor",
+  "perspective":"orthographic top-down rooms with readable frontal wall, door, window and furniture faces",
+  "nativeDimensions":{"logicalViewport":[320,180],"tile":[16,16],"actorFrame":[16,24],"portrait":[64,64],"heroPropState":[32,32]},
+  "palette":{"globalBudget":32,"interior":"desaturated blue-green, walnut, bone and candle amber","overlap":"violet-gray edge clusters","daylight":"pale gold replacing cold white","garden":"yew green, wet stone and sea mist"},
+  "pixelLanguage":{"edges":"hard clusters without antialiasing","shading":"two value steps plus one event highlight","outlines":"dark selective outlines, never uniform vector contours","dithering":"sparse ordered clusters only in fog and aged walls","alpha":"binary transparency for sprites and props"},
+  "detailDensity":{"environment":"30-45 percent of visible room area carries authored furniture, trim, material or landmark detail","character":"hair, costume collar, body proportion and posture remain identifiable at native scale","interaction":"critical prop has silhouette and warm one-pixel marker distinct from decoration"},
+  "characterIdentity":{"grace":"tall black high-collar dress, severe bun, straight posture","anne":"blue-gray dress, dark ribbon, forward posture","nicholas":"small brown-gray waistcoat, guarded posture","mills":"silver hair, black dress, pale apron triangle","victor":"violet-gray living-layer edge light","charles":"military-dark coat, tired lowered shoulders"},
+  "environmentMaterials":["dark walnut floorboards","aged teal patterned wallpaper","carved doors and thresholds","heavy curtains and empty brass hooks","bone linen","wet yew and lichen stone"],
+  "lighting":{"base":"low slate ambient with small amber lamps","overlap":"cool violet double image without blur","daylight":"aligned warm shafts with preserved navigation contrast","ending":"gold light becomes safe and removes hostile edge contrast"},
+  "ui":{"frame":"dark carved 9-slice panel","objective":"amber rule and serif-like title","interactionMarker":"small gold diamond plus text","evidence":"individual object icon and label"},
+  "prohibitedDrift":["empty procedural rooms","flat checkerboard floors as final art","generic block characters","smooth gradients","mixed pixel density","unaligned map variants","concept collage used as the only production asset","franchise imitation"],
+  "placeholderPolicy":{"allowDuringBuild":true,"allowAtAcceptance":false,"waiveStoryRequiredAssets":false}
+}

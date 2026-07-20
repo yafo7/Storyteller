@@ -19,7 +19,8 @@
     "tileset": "assets/tileset.png",
     "actors": "assets/actors.png",
     "portraits": "assets/portraits.png",
-    "icons": "assets/ui-icons.png"
+    "icons": "assets/ui-icons.png",
+    "props": "assets/props.png"
   },
   "initialState": {
     "map": "nursery",
@@ -124,12 +125,12 @@
     "victor": {
       "name": "Victor",
       "spriteRow": 4,
-      "portrait": 1
+      "portrait": 4
     },
     "charles": {
       "name": "Charles",
       "spriteRow": 5,
-      "portrait": 0
+      "portrait": 5
     }
   },
   "maps": {
@@ -140,6 +141,12 @@
       "theme": "interior",
       "floorTile": 2,
       "wallTile": 1,
+      "sceneStates": {
+        "base": "assets/scenes/nursery-base.png",
+        "echo": "assets/scenes/nursery-echo.png",
+        "daylight": "assets/scenes/nursery-daylight.png",
+        "dawn": "assets/scenes/nursery-dawn.png"
+      },
       "spawns": {
         "start": [
           10,
@@ -365,6 +372,7 @@
           "x": 10,
           "y": 1,
           "tile": 7,
+          "propFrame": 0,
           "label": "百叶窗帘",
           "steps": [
             {
@@ -473,6 +481,7 @@
           "x": 5,
           "y": 1,
           "tile": 7,
+          "propFrame": 1,
           "label": "颤动的窗帘",
           "visible": {
             "stageAtLeast": 2
@@ -575,14 +584,19 @@
       "theme": "interior",
       "floorTile": 0,
       "wallTile": 1,
+      "sceneStates": {
+        "base": "assets/scenes/hall-base.png",
+        "daylight": "assets/scenes/hall-daylight.png",
+        "seance-open": "assets/scenes/hall-seance-open.png"
+      },
       "spawns": {
         "fromNursery": [
           3,
-          5
+          9
         ],
         "fromMusic": [
           24,
-          5
+          9
         ],
         "fromGarden": [
           14,
@@ -619,28 +633,16 @@
           18
         ],
         [
-          5,
-          3,
+          11,
           1,
-          12
+          2,
+          3
         ],
         [
-          22,
-          3,
+          16,
           1,
-          12
-        ],
-        [
-          10,
-          3,
-          8,
-          2
-        ],
-        [
-          10,
-          12,
-          8,
-          2
+          2,
+          3
         ],
         [
           7,
@@ -712,7 +714,7 @@
           "id": "hall-nursery",
           "at": [
             1,
-            4,
+            8,
             1,
             3
           ],
@@ -723,7 +725,7 @@
           "id": "hall-music",
           "at": [
             26,
-            4,
+            8,
             1,
             3
           ],
@@ -813,6 +815,7 @@
           "x": 8,
           "y": 6,
           "tile": 8,
+          "propFrame": 2,
           "label": "门厅信箱",
           "steps": [
             {
@@ -933,6 +936,11 @@
       "theme": "interior",
       "floorTile": 2,
       "wallTile": 1,
+      "sceneStates": {
+        "base": "assets/scenes/music-base.png",
+        "overlap": "assets/scenes/music-overlap.png",
+        "daylight": "assets/scenes/music-daylight.png"
+      },
       "spawns": {
         "fromHall": [
           2,
@@ -1060,6 +1068,7 @@
           "x": 15,
           "y": 6,
           "tile": 9,
+          "propFrame": 3,
           "label": "自行鸣响的钢琴",
           "steps": [
             {
@@ -1126,6 +1135,7 @@
           "x": 15,
           "y": 2,
           "tile": 10,
+          "propFrame": 4,
           "label": "死者肖像册",
           "visible": {
             "flag": "albumVisible"
@@ -1205,6 +1215,10 @@
       "theme": "garden",
       "floorTile": 4,
       "wallTile": 4,
+      "sceneStates": {
+        "base": "assets/scenes/garden-fog.png",
+        "graves-known": "assets/scenes/garden-graves-known.png"
+      },
       "spawns": {
         "fromHall": [
           12,
@@ -1534,6 +1548,10 @@
       "theme": "seance",
       "floorTile": 0,
       "wallTile": 1,
+      "sceneStates": {
+        "base": "assets/scenes/seance-base.png",
+        "living-overlap": "assets/scenes/seance-living-overlap.png"
+      },
       "spawns": {
         "fromHall": [
           10,
@@ -1650,6 +1668,7 @@
           "x": 10,
           "y": 8,
           "tile": 12,
+          "propFrame": 7,
           "label": "降灵圆桌",
           "steps": [
             {
